@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'scripts'))
 import newsroom
 class T(unittest.TestCase):
- def test_sources(self): self.assertEqual(len(newsroom.load(ROOT/'newsroom/sources.json')['sources']),10)
+ def test_sources(self): self.assertEqual(len(newsroom.load(ROOT/'newsroom/sources.json')['sources']),11)
  def test_policy_locked(self):
   p=newsroom.load(ROOT/'newsroom/policy.json'); self.assertEqual(p['publication_mode'],'candidate_only'); self.assertFalse(p['auto_publish'])
  def test_risk(self):
