@@ -1,0 +1,32 @@
+{
+  "name": "VÂLCEA CLAR",
+  "domain": "valceaclar.ro",
+  "tagline": "Știrile Vâlcii, fără zgomot.",
+  "email": "redactie@valceaclar.ro",
+  "nav": [
+    [
+      "Acasă",
+      "/"
+    ],
+    [
+      "Ultimele știri",
+      "/stiri/"
+    ],
+    [
+      "Bani publici",
+      "/stiri/#bani-publici"
+    ],
+    [
+      "Oameni",
+      "/oameni/"
+    ],
+    [
+      "Cultură & Evenimente",
+      "/stiri/#evenimente"
+    ],
+    [
+      "Foto",
+      "/foto/"
+    ]
+  ]
+}

@@ -5,7 +5,7 @@ Standalone static news publication repository. No ChatGPT Sites, no CMS bridge, 
 ## Architecture
 
 - `content/` — canonical editorial/site data
-- `media/` — curated, optimized local images committed to Git
+- `media_source/` — curated local WebP assets, base64-fragmented only for connector-safe Git transport; build reconstructs ordinary `/media/*.webp` files and validates their hashes
 - `scripts/build.py` — deterministic stdlib static build
 - `scripts/verify.py` — fail-closed public-media and route validation
 - `_site/` — generated output (not canonical source)
@@ -25,7 +25,7 @@ Push to `main`, enable GitHub Pages with **Source: GitHub Actions**, configure `
 
 ## Migration policy
 
-Drive may remain an editorial archive/source inbox, but anything displayed publicly must first be copied into `media/`, attributed in `content/media.json`, and pass `scripts/verify.py`.
+Drive may remain an editorial archive/source inbox, but anything displayed publicly must first be registered in `content/media.json`, encoded into `media_source/` with a SHA-256 manifest, and pass `scripts/verify.py`. The public build contains ordinary WebP files; no base64 is embedded in pages.
 
 ## Current scope
 

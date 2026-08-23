@@ -1,0 +1,8 @@
+{
+  "publication_mode": "candidate_only",
+  "auto_publish": false,
+  "risk_terms": ["decedat","deces","mort","rănit","ranit","victim","arestat","reținut","retinut","anchet","dosar penal","acuza","suspect"],
+  "material_terms": ["buget","milioane","lei","investi","hotăr","hotar","ședin","sedin","trafic","incend","accident","spital","școal","scoal","transport","proiect"],
+  "ready_score_t1": 55,
+  "ready_score_t2": 68
+}

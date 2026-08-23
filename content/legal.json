@@ -1,0 +1,26 @@
+{
+  "termeni": {
+    "title": "Termeni și condiții",
+    "dek": "Regulile de utilizare a publicației VÂLCEA CLAR și a site-ului valceaclar.ro.",
+    "sections": [
+      ["Rolul publicației","VÂLCEA CLAR este o publicație locală de informare. Publicăm știri, explicații, analize, documente, ghiduri și materiale multimedia pe baza informațiilor disponibile și a standardelor editoriale proprii."],
+      ["Acuratețe, actualizări și corecții","Urmărim să publicăm informații corecte și suficient verificate la momentul publicării. Erorile materiale confirmate sunt corectate cât mai repede; semnalările pot fi trimise la redactie@valceaclar.ro."],
+      ["Proprietate intelectuală","Textele, elementele grafice, fotografiile și celelalte creații originale VÂLCEA CLAR sunt protejate de legislația aplicabilă. Materialele terților rămân supuse drepturilor titularilor și sunt utilizate cu atribuirea ori baza juridică relevantă."],
+      ["Linkuri externe","Articolele pot include linkuri către instituții, documente publice și servicii externe. Nu controlăm disponibilitatea ori modificările operate de terți după publicare."],
+      ["Disponibilitate și răspundere","Site-ul poate fi actualizat sau întrerupt temporar pentru mentenanță, securitate ori dezvoltare. Conținutul jurnalistic are caracter informativ."],
+      ["Legea aplicabilă și contact","Acești termeni se interpretează potrivit legislației române și dreptului Uniunii Europene aplicabil. Contact: redactie@valceaclar.ro."]
+    ]
+  },
+  "confidentialitate": {
+    "title": "Politica de confidențialitate",
+    "dek": "Cum tratează VÂLCEA CLAR datele cu caracter personal pe valceaclar.ro.",
+    "sections": [
+      ["Date și scop","Putem prelucra date pe care ni le transmiți voluntar și date tehnice strict necesare funcționării și securității site-ului. Nu solicităm date care nu sunt necesare scopului declarat."],
+      ["Temei și utilizare","Datele pot fi folosite pentru răspunsuri către cititori și surse, administrarea corecțiilor, securitate, prevenirea abuzurilor și respectarea obligațiilor legale."],
+      ["Cookie-uri","Versiunea curată a site-ului nu introduce instrumente neesențiale de analiză, publicitate sau profilare. Dacă acestea vor fi adăugate și necesită consimțământ, acordul va fi cerut înainte de activare."],
+      ["Furnizori","Putem utiliza furnizori pentru găzduire, e-mail, securitate și distribuție editorială. Credențialele și tokenurile nu sunt publicate în site."],
+      ["Drepturile tale","În condițiile GDPR poți avea drepturi de acces, rectificare, ștergere, restricționare, opoziție și portabilitate. Cereri: redactie@valceaclar.ro."],
+      ["Contact","Pentru întrebări privind protecția datelor: redactie@valceaclar.ro."]
+    ]
+  }
+}
