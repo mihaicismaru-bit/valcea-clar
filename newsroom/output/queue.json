@@ -1,4 +1,10 @@
 {
   "status": "LOCKED_CANDIDATE_ONLY",
-  "queue": []
+  "queue": [
+    {
+      "id": "isu_valcea_comunicate-a7929315be101313",
+      "headline": "ISU Vâlcea: 78 misiuni în ultimele 48 de ore, 58 pentru prim ajutor, 13 pentru incendii",
+      "status": "LOCKED_CANDIDATE_ONLY"
+    }
+  ]
 }

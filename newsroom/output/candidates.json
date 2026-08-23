@@ -2,48 +2,15 @@
   "status": "candidate_only",
   "candidates": [
     {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/persoana-cercetata-pentru-trafic-de-minori1785823896",
-      "title": "PERSOANĂ CERCETATĂ PENTRU TRAFIC DE MINORI",
-      "score": 56,
-      "decision": "READY",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/proiecte-educative-extrașcolare",
-      "title": "Proiecte Educative Extrașcolare",
-      "score": 56,
-      "decision": "READY",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/proiecte-educaționale",
-      "title": "Proiecte educaționale",
-      "score": 56,
-      "decision": "READY",
-      "risks": [],
-      "seen_before": false
-    },
-    {
       "source_id": "isu_valcea_comunicate",
       "source_name": "ISU Vâlcea",
       "tier": "T1",
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-756",
       "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
-      "score": 50,
-      "decision": "WATCH",
+      "score": 62,
+      "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "isu_valcea_comunicate",
@@ -51,10 +18,10 @@
       "tier": "T1",
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-72-de-ore-752",
       "title": "Misiunile pompierilor vâlceni în ultimele 72 de ore",
-      "score": 50,
-      "decision": "WATCH",
+      "score": 62,
+      "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "isu_valcea_comunicate",
@@ -62,10 +29,47 @@
       "tier": "T1",
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-745",
       "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
-      "score": 50,
+      "score": 62,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "isu_valcea_comunicate",
+      "source_name": "ISU Vâlcea",
+      "tier": "T1",
+      "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
+      "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
+      "score": 62,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "ipj_valcea_comunicate",
+      "source_name": "IPJ Vâlcea",
+      "tier": "T1",
+      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/persoana-cercetata-pentru-trafic-de-minori1785823896",
+      "title": "PERSOANĂ CERCETATĂ PENTRU TRAFIC DE MINORI",
+      "score": 56,
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "cercetat",
+        "cercetată",
+        "trafic de minori"
+      ],
+      "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/22/valcea-a-trimis-cinci-pompieri-in-misiunea-din-serbia-pentru-stingerea-incendiilor-de-padure/",
+      "title": "Vâlcea a trimis cinci pompieri în misiunea din Serbia pentru stingerea incendiilor de pădure",
+      "score": 54,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "isu_valcea_comunicate",
@@ -76,73 +80,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isu_valcea_comunicate",
-      "source_name": "ISU Vâlcea",
-      "tier": "T1",
-      "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
-      "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate",
-      "title": "Măreste font",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/purtator-de-cuvant",
-      "title": "Purtător de cuvânt",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/buletine-de-presa",
-      "title": "Buletine de presă",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/conferinte-de-presa",
-      "title": "Conferințe de presă",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/agenda-conducerii",
-      "title": "Agenda conducerii",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -151,9 +89,11 @@
       "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/retinuti-pentru-24-de-ore1786599748",
       "title": "REȚINUȚI PENTRU 24 DE ORE",
       "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "rețin"
+      ],
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -162,9 +102,11 @@
       "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/persoane-prinse-in-flagrant-delict-de-catre-politisti-si-procurori1785995553",
       "title": "PERSOANE PRINSE ÎN FLAGRANT DELICT, DE CĂTRE POLIȚIȘTI ȘI PROCURORI",
       "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "flagrant"
+      ],
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -175,7 +117,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -184,9 +126,11 @@
       "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/retinuti-pentru-24-de-ore1785914124",
       "title": "REȚINUȚI PENTRU 24 DE ORE",
       "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "rețin"
+      ],
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -195,9 +139,13 @@
       "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/perchezitii-domiciliare-intr-un-dosar-privind-nerespectarea-regimului-armelor-si-al-munitiilor-si-braconajul",
       "title": "PERCHEZIȚII DOMICILIARE ÎNTR-UN DOSAR PRIVIND NERESPECTAREA REGIMULUI ARMELOR ȘI AL MUNIȚIILOR ȘI BRACONAJUL",
       "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "braconaj",
+        "dosar",
+        "perchezi"
+      ],
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -208,7 +156,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -219,9 +167,9 @@
       "score": 50,
       "decision": "REVIEW_REQUIRED",
       "risks": [
-        "arestat"
+        "arest"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -232,7 +180,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -243,84 +191,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate&page=2",
-      "title": "Pagina următoare",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/buletin-informativ",
-      "title": "BULETIN INFORMATIV",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/comunicate-de-presă",
-      "title": "COMUNICATE DE PRESĂ",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/brosura-admitere",
-      "title": "BROSURA ADMITERE",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/documente-informative",
-      "title": "Documente informative",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/suport-educațional-refugiați-ucraina",
-      "title": "Suport educațional refugiați UCRAINA",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "isj_valcea_comunicate",
-      "source_name": "Inspectoratul Școlar Județean Vâlcea",
-      "tier": "T1",
-      "url": "https://www.isjvalcea.ro/avizier/masa-sanatoasa",
-      "title": "MASA SANATOASA",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -331,7 +202,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -342,7 +213,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -353,7 +224,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -364,7 +235,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -375,7 +246,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -386,7 +257,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -397,7 +268,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -408,7 +279,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -419,7 +290,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ajofm_valcea_feed",
@@ -430,18 +301,18 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/22/valcea-a-trimis-cinci-pompieri-in-misiunea-din-serbia-pentru-stingerea-incendiilor-de-padure/",
-      "title": "Vâlcea a trimis cinci pompieri în misiunea din Serbia pentru stingerea incendiilor de pădure",
-      "score": 42,
+      "url": "https://evenimentvalcean.ro/pompierii-valceni-pleaca-in-serbia-romania-intervine-pentru-stingerea-incendiilor-de-padure/",
+      "title": "Pompierii vâlceni pleacă în Serbia! România intervine pentru stingerea incendiilor de pădure",
+      "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -452,7 +323,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -463,7 +334,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -474,18 +345,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/pompierii-valceni-pleaca-in-serbia-romania-intervine-pentru-stingerea-incendiilor-de-padure/",
-      "title": "Pompierii vâlceni pleacă în Serbia! România intervine pentru stingerea incendiilor de pădure",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -496,7 +356,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -507,7 +367,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -518,7 +378,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -529,7 +389,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -540,7 +400,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -551,9 +411,9 @@
       "score": 36,
       "decision": "REVIEW_REQUIRED",
       "risks": [
-        "reținut"
+        "rețin"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -564,7 +424,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -575,7 +435,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -586,7 +446,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -595,9 +455,11 @@
       "url": "https://seintamplainvalcea.ro/2026/08/22/controale-in-valcea-amenzi-tigari-confiscate-si-un-dosar-de-evaziune-fiscala/",
       "title": "Controale în Vâlcea: amenzi, țigări confiscate și un dosar de evaziune fiscală",
       "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": false
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "dosar"
+      ],
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -608,7 +470,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -619,7 +481,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -630,7 +492,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -641,7 +503,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -652,9 +514,9 @@
       "score": 36,
       "decision": "REVIEW_REQUIRED",
       "risks": [
-        "reținut"
+        "rețin"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -665,7 +527,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -676,7 +538,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -687,7 +549,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -698,7 +560,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -709,7 +571,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -720,7 +582,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -731,7 +593,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -742,7 +604,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -753,7 +615,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -764,7 +626,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -775,7 +637,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -786,7 +648,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -797,7 +659,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -808,7 +670,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     }
   ],
   "source_health": [
@@ -835,12 +697,12 @@
     {
       "id": "ipj_valcea_comunicate",
       "ok": true,
-      "items": 16
+      "items": 10
     },
     {
       "id": "isj_valcea_comunicate",
       "ok": true,
-      "items": 8
+      "items": 0
     },
     {
       "id": "ajofm_valcea_feed",
