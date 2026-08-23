@@ -28,3 +28,39 @@ jobs:
             echo 'publisher unexpectedly unlocked' >&2
             exit 1
           fi
+  network-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run real network cycle in candidate-only mode
+        run: python3 scripts/newsroom.py cycle
+      - name: Verify fail-closed policy
+        run: python3 scripts/newsroom.py verify
+      - name: Print network-cycle summary
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          c=json.loads(Path('newsroom/output/candidates.json').read_text())
+          s=json.loads(Path('newsroom/output/stories.json').read_text())
+          q=json.loads(Path('newsroom/output/queue.json').read_text())
+          print('CANDIDATES',len(c.get('candidates',[])))
+          print('STRUCTURED_DRAFTS',len(s.get('stories',[])))
+          print('HOLDS',len(s.get('holds',[])))
+          print('QUEUE',len(q.get('queue',[])),q.get('status'))
+          for h in c.get('source_health',[]): print('SOURCE',h)
+          for x in c.get('candidates',[])[:20]: print('CANDIDATE',x.get('source_id'),x.get('decision'),x.get('score'),x.get('title'))
+          for x in s.get('stories',[]): print('DRAFT',x.get('section'),x.get('headline'))
+          for x in s.get('holds',[]): print('HOLD',x)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-network-candidate
+          path: |
+            newsroom/output/candidates.json
+            newsroom/output/stories.json
+            newsroom/output/queue.json
+            newsroom/output/review.html
