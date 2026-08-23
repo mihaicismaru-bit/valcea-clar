@@ -1,52 +1,22 @@
 {
   "status": "candidate_only",
-  "stories": [
-    {
-      "id": "isu_valcea_comunicate-a7929315be101313",
-      "section": "ACTUALITATE",
-      "headline": "ISU Vâlcea: 78 misiuni în ultimele 48 de ore, 58 pentru prim ajutor, 13 pentru incendii",
-      "dek": "Bilanț operativ extras din comunicatul oficial ISU Vâlcea.",
-      "paragraphs": [
-        "ISU Vâlcea raportează 78 misiuni în intervalul prezentat de instituție.",
-        "Din total, 58 intervenții au vizat acordarea primului ajutor calificat și transportul către unități medicale.",
-        "Potrivit comunicatului, echipajele au asistat 62 persoane.",
-        "În același bilanț sunt menționate 13 intervenții pentru stingerea incendiilor.",
-        "Incidentele individuale care implică victime, acuzații sau alte elemente sensibile nu sunt transformate automat în articole fără review editorial."
-      ],
-      "sources": [
-        {
-          "name": "ISU Vâlcea",
-          "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-756",
-          "tier": "T1"
-        }
-      ],
-      "source_candidate": {
-        "source_id": "isu_valcea_comunicate",
-        "source_name": "ISU Vâlcea",
-        "tier": "T1",
-        "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-756",
-        "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
-        "score": 62,
-        "decision": "READY",
-        "risks": [],
-        "seen_before": true
-      },
-      "status": "DRAFT_CANDIDATE_ONLY",
-      "image": null
-    }
-  ],
+  "stories": [],
   "holds": [
     {
+      "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-756",
+      "reason": "STALE_DETAIL:2026-08-19:5d"
+    },
+    {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-72-de-ore-752",
-      "reason": "STALE_DETAIL:2026-08-17:6d"
+      "reason": "STALE_DETAIL:2026-08-17:7d"
     },
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-745",
-      "reason": "STALE_DETAIL:2026-08-14:9d"
+      "reason": "STALE_DETAIL:2026-08-14:10d"
     },
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
-      "reason": "STALE_DETAIL:2026-08-12:11d"
+      "reason": "STALE_DETAIL:2026-08-12:12d"
     }
   ]
 }
