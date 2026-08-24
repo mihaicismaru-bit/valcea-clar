@@ -2,6 +2,17 @@
   "status": "candidate_only",
   "candidates": [
     {
+      "source_id": "cj_valcea_sedinte_publice",
+      "source_name": "Consiliul Județean Vâlcea — ședințe publice",
+      "tier": "T1",
+      "url": "https://cjvalcea.ro/avn_sedinte_cj/26-08-2026/",
+      "title": "26.08.2026",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
       "source_id": "isu_valcea_comunicate",
       "source_name": "ISU Vâlcea",
       "tier": "T1",
@@ -676,13 +687,13 @@
   "source_health": [
     {
       "id": "cj_valcea_atom",
-      "ok": false,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      "ok": true,
+      "items": 0
     },
     {
       "id": "cj_valcea_sedinte_publice",
-      "ok": false,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      "ok": true,
+      "items": 1
     },
     {
       "id": "primaria_rmvl_comunicate",
