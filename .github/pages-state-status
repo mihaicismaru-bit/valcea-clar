@@ -1,0 +1,29 @@
+status=PAGES_STATE
+checked_at=2026-08-24T11:42:19Z
+[PAGES]
+HTTP/2 200 
+{
+  "url": "https://api.github.com/repos/mihaicismaru-bit/valcea-clar/pages",
+  "status": null,
+  "cname": null,
+  "custom_404": false,
+  "html_url": "https://mihaicismaru-bit.github.io/valcea-clar/",
+  "build_type": "workflow",
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "public": true,
+  "protected_domain_state": null,
+  "pending_domain_unverified_at": null,
+  "https_enforced": true
+}
+
+[HEALTH]
+HTTP/2 403 
+{
+  "message": "Resource not accessible by integration",
+  "documentation_url": "https://docs.github.com/rest/pages/pages#get-a-dns-health-check-for-github-pages",
+  "status": "403"
+}
+
