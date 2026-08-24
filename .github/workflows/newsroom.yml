@@ -1,4 +1,4 @@
-name: newsroom-candidate-radar
+name: newsroom-auto-publish
 on:
   workflow_dispatch:
   schedule:
@@ -8,8 +8,10 @@ on:
       - 'newsroom/run-now'
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
-  group: newsroom-candidate-radar
+  group: newsroom-auto-publish
   cancel-in-progress: false
 jobs:
   cycle:
@@ -25,15 +27,74 @@ jobs:
           cat /etc/ssl/certs/ca-certificates.crt "$RUNNER_TEMP/sectigo-dv-r36-chain.pem" > "$RUNNER_TEMP/newsroom-ca.pem"
           echo "SSL_CERT_FILE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
           echo "CURL_CA_BUNDLE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
-      - run: python3 scripts/newsroom_network.py
-      - name: persist material newsroom state
+      - name: Run bounded candidate radar
+        run: python3 scripts/newsroom_network.py
+      - name: Verify auto-publication authority
+        run: python3 scripts/auto_publish.py --verify
+      - id: promote
+        name: Promote only vetted stories
         run: |
+          python3 scripts/auto_publish.py
+          if git diff --quiet -- content/articles.json; then
+            echo 'published=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'published=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Unit tests before live publish
+        if: steps.promote.outputs.published == 'true'
+        run: python3 -m unittest discover -s tests -v
+      - name: Build production site
+        if: steps.promote.outputs.published == 'true'
+        run: python3 scripts/build.py
+      - name: Verify production artifact
+        if: steps.promote.outputs.published == 'true'
+        run: python3 scripts/verify.py
+      - uses: actions/configure-pages@v5
+        if: steps.promote.outputs.published == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.promote.outputs.published == 'true'
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        if: steps.promote.outputs.published == 'true'
+      - name: Verify newly published routes over HTTPS
+        if: steps.promote.outputs.published == 'true'
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' > /tmp/published_ids
+          import json
+          from pathlib import Path
+          data=json.loads(Path('newsroom/output/publish.json').read_text(encoding='utf-8'))
+          for row in data.get('published',[]): print(row['id'])
+          PY
+          while IFS= read -r id; do
+            ok=0
+            for i in $(seq 1 12); do
+              if curl -fsSL --max-time 20 "https://valceaclar.ro/stiri/${id}/" -o /tmp/article.html && grep -q '<h1>' /tmp/article.html; then
+                ok=1
+                break
+              fi
+              sleep 5
+            done
+            test "$ok" = 1
+          done < /tmp/published_ids
+          curl -fsSL --max-time 20 https://valceaclar.ro/ -o /tmp/home.html
+          grep -q 'VÂLCEA CLAR' /tmp/home.html
+      - name: Persist newsroom and publication state
+        run: |
+          set -euo pipefail
           git config user.name 'valcea-clar-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add newsroom/output newsroom/state
+          git add newsroom/output newsroom/state content/articles.json
           if git diff --cached --quiet; then
             echo 'No material newsroom change.'
             exit 0
           fi
-          git commit -m 'newsroom: persist candidate-only radar state'
-          git push
+          if git diff --cached --name-only | grep -q '^content/articles.json$'; then
+            git commit -m 'newsroom: auto-publish vetted local stories'
+          else
+            git commit -m 'newsroom: persist candidate radar state'
+          fi
+          git pull --rebase origin main
+          git push origin HEAD:main
