@@ -36,19 +36,19 @@
   "holds": [
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-756",
-      "reason": "STALE_DETAIL:2026-08-19:5d"
+      "reason": "STALE_DETAIL:2026-08-19:6d"
     },
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-72-de-ore-752",
-      "reason": "STALE_DETAIL:2026-08-17:7d"
+      "reason": "STALE_DETAIL:2026-08-17:8d"
     },
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-745",
-      "reason": "STALE_DETAIL:2026-08-14:10d"
+      "reason": "STALE_DETAIL:2026-08-14:11d"
     },
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
-      "reason": "STALE_DETAIL:2026-08-12:12d"
+      "reason": "STALE_DETAIL:2026-08-12:13d"
     }
   ]
 }
