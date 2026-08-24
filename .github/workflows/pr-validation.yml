@@ -35,6 +35,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Diagnose CJ TLS chain without bypassing ingestion verification
+        continue-on-error: true
+        run: |
+          echo | openssl s_client -connect cjvalcea.ro:443 -servername cjvalcea.ro -showcerts 2>&1 | sed -n '1,160p'
       - name: Run real network cycle in candidate-only mode
         run: python3 scripts/newsroom.py cycle
       - name: Verify fail-closed policy
