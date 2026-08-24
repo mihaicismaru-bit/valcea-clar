@@ -35,14 +35,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Diagnose official Sectigo chain bundle
-        continue-on-error: true
+      - name: Supplement TLS trust with official Sectigo DV chain
         run: |
-          echo | openssl s_client -connect cjvalcea.ro:443 -servername cjvalcea.ro -showcerts 2>&1 | sed -n '1,45p'
-          curl -fsSL 'https://support.sectigo.com/sfc/servlet.shepherd/version/download/068Uj00000XusPJ' -o /tmp/sectigo-dv-bundle
-          file /tmp/sectigo-dv-bundle
-          unzip -l /tmp/sectigo-dv-bundle 2>/dev/null || true
-          grep -a -m1 -E 'BEGIN CERTIFICATE|Sectigo' /tmp/sectigo-dv-bundle || true
+          curl -fsSL 'https://support.sectigo.com/sfc/servlet.shepherd/version/download/068Uj00000XusPJ' -o "$RUNNER_TEMP/sectigo-dv-r36-chain.pem"
+          cat /etc/ssl/certs/ca-certificates.crt "$RUNNER_TEMP/sectigo-dv-r36-chain.pem" > "$RUNNER_TEMP/newsroom-ca.pem"
+          echo "SSL_CERT_FILE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
+          echo "CURL_CA_BUNDLE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
       - name: Run real network cycle in candidate-only mode
         run: python3 scripts/newsroom.py cycle
       - name: Verify fail-closed policy
