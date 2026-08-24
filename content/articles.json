@@ -1,6 +1,34 @@
 {
-  "updated_local": "2026-08-23T16:46:00+03:00",
+  "updated_local": "2026-08-24T21:47:28+03:00",
   "articles": [
+    {
+      "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
+      "section": "ADMINISTRAȚIE",
+      "priority": 100,
+      "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei",
+      "dek": "Ce intră în discuția consilierilor județeni și ce nu poate fi prezentat încă drept decizie.",
+      "paragraphs": [
+        "Consiliul Județean Vâlcea a publicat ordinea de zi a unei ședințe. VÂLCEA CLAR tratează documentul ca proiect de lucru, nu ca hotărâri deja adoptate.",
+        "Cea mai mare sumă identificată automat în document este 43.793.000 lei. Valoarea trebuie citită în contextul proiectului și al anexelor sale.",
+        "Adoptarea, modificarea sau respingerea proiectelor se confirmă numai după ședință, din hotărârile și documentele oficiale publicate ulterior."
+      ],
+      "sources": [
+        {
+          "name": "Consiliul Județean Vâlcea — ședințe publice",
+          "url": "https://cjvalcea.ro/avn_sedinte_cj/26-08-2026/"
+        }
+      ],
+      "published": "2026-08-24T21:47:28+03:00",
+      "image": "administratie-ramnicu-valcea-20260819.webp",
+      "publication_mode": "AUTO_PUBLISHED",
+      "automation": {
+        "source_id": "cj_valcea_sedinte_publice",
+        "source_tier": "T1",
+        "candidate_score": 68,
+        "authority": "OWNER_APPROVED_AUTO_PUBLICATION"
+      },
+      "image_caption": "Imagine de context din arhiva VÂLCEA CLAR; nu surprinde în mod necesar evenimentul relatat."
+    },
     {
       "id": "buila-vanturarita-accident-20260822",
       "section": "ACTUALITATE",
@@ -14,17 +42,145 @@
         "INCENDIUL. După arderea autoturismului, focul s-a extins și la vegetația uscată din apropiere. VÂLCEA CLAR nu atribuie o cauză accidentului până la apariția unei concluzii oficiale."
       ],
       "sources": [
-        {"name":"TVR Info — relatare 22.08.2026, informații atribuite ISU Vâlcea","url":"https://tvrinfo.ro/valcea-un-barbat-a-murit-si-doi-au-fost-raniti-dupa-ce-masina-lor-s-a-rasturnat-intr-o-prapastie-si-a-luat-foc/"},
-        {"name":"Digi24 — relatare 22.08.2026","url":"https://www.digi24.ro/stiri/actualitate/accident-grav-in-valcea-un-mort-si-doi-raniti-dupa-ce-au-cazut-cu-masina-300-de-metri-intr-o-prapastie-autoturismul-a-luat-foc-3916843"}
+        {
+          "name": "TVR Info — relatare 22.08.2026, informații atribuite ISU Vâlcea",
+          "url": "https://tvrinfo.ro/valcea-un-barbat-a-murit-si-doi-au-fost-raniti-dupa-ce-masina-lor-s-a-rasturnat-intr-o-prapastie-si-a-luat-foc/"
+        },
+        {
+          "name": "Digi24 — relatare 22.08.2026",
+          "url": "https://www.digi24.ro/stiri/actualitate/accident-grav-in-valcea-un-mort-si-doi-raniti-dupa-ce-au-cazut-cu-masina-300-de-metri-intr-o-prapastie-autoturismul-a-luat-foc-3916843"
+        }
       ],
       "published": "2026-08-23T09:47:11+03:00",
       "image": null
     },
     {
-      "id":"cantecele-oltului-2026-parada-concurs-20260822","section":"EVENIMENTE","priority":100,"headline":"Cântecele Oltului 2026: jurizarea, premierea și gala închid festivalul pe 23 august la Călimănești","dek":"Ultima zi a ediției a 58-a a Festivalului Național de Folclor „Cântecele Oltului” include reunirea juriului, festivitatea de premiere, spectacolul de gală și recitalul Aurora și Săndel Mihai.","paragraphs":["PROGRAMUL DIN 23 AUGUST. Festivalul Național de Folclor „Cântecele Oltului” ajunge la ultima zi a ediției a 58-a. Programul public anunță reunirea juriului, animație stradală, festivitatea de premiere și spectacolul de gală al ansamblurilor participante.","CE S-A ÎNTÂMPLAT ÎNAINTEA FINALEI. Pe 22 august, programul central a inclus parada portului popular, festivitatea de deschidere și spectacolul-concurs al ansamblurilor participante.","CINE PARTICIPĂ. În program sunt anunțate ansambluri din Harghita, Covasna, Brașov, Sibiu, Olt, Teleorman și Vâlcea.","ORGANIZAREA ESTE OFICIALĂ. Consiliul Local Călimănești a adoptat HCL nr. 70 din 31 iulie 2026 pentru protocoalele de cooperare necesare organizării ediției a 58-a.","PENTRU PUBLIC. Reperul zilei de 23 august este programul de final — jurizare, premiere, gală și recital."],"sources":[{"name":"Primăria Călimănești — HCL nr. 70/31.07.2026","url":"https://primaria-calimanesti.ro/consiliul-local/hotarari-adoptate/22106-hcl-nr-70-31-07-2026-privind-incheierea-unui-protocol-de-cooperare-in-vederea-organizarii-festivalului-national-de-folclor-cantecele-oltului-editia-a-58-a.html"},{"name":"Se întâmplă în Vâlcea — program ediția 58","url":"https://seintamplainvalcea.ro/2026/08/11/cantecele-oltului-revine-la-calimanesti-trei-zile-de-folclor-tarafuri-si-spectacole-pe-scena-festivalului/"}],"published":"2026-08-22T09:32:38+03:00","image":null},
-    {"id":"cet-govora-cine-a-decis-oprirea-20260821","section":"ENERGIE","priority":100,"headline":"CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului","dek":"Documentele oficiale indică un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de unele cifre vehiculate public.","paragraphs":["CE SPUNE LEGEA. OUG nr. 20 din 26 martie 2026 modifică explicit calendarul național de decarbonizare și prevede scoaterea din exploatare până la 31 august 2026 a unor capacități pe lignit și huilă, incluzând grupurile 3 și 4 ale CET Govora.","CE A NOTIFICAT CET GOVORA. HCL Râmnicu Vâlcea nr. 225/2026 consemnează adresa CET Govora din 22 ianuarie 2026, prin care operatorul anunța încetarea definitivă a producției cel târziu la 31 august 2026, în legătură cu dispozițiile legale privind eliminarea producției pe bază de cărbune.","EXISTĂ O CENTRALĂ PRIVATĂ. Același document descrie un producător privat care dezvoltă o centrală de cogenerare pe gaze naturale, integrată în soluția de tranziție alături de echipamentele proiectului Consiliului Județean.","CINE VA OPERA SISTEMUL. Documentația municipală separă rolul producătorilor de rolul operatorului sistemului de transport și distribuție.","CÂT COSTĂ GIGACALORIA ÎN 2026. HCL nr. 5/2026 stabilește tarifele pentru populație și componentele de subvenție locală. Estimările politice privind prețurile viitoare nu sunt tratate drept tarife aprobate."],"sources":[{"name":"OUG nr. 20/26.03.2026","url":"https://legislatie.just.ro/"},{"name":"HCL Râmnicu Vâlcea nr. 225/2026","url":"https://hcl.usr.ro/ramnicu_valcea/2026/h225"},{"name":"HCL Râmnicu Vâlcea nr. 5/2026","url":"https://hcl.usr.ro/ramnicu_valcea/2026/h5"}],"published":"2026-08-21T12:27:59+03:00","image":null},
-    {"id":"musiclover-festival-2026-dosar-complet-20260818","section":"EVENIMENTE","priority":99,"headline":"Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei","dek":"Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.","paragraphs":["EDIȚIA 2026. Musiclover Festival s-a desfășurat pe Platoul Fețeni din Râmnicu Vâlcea între 14 și 16 august 2026.","PROGRAMUL. În cele trei zile au fost anunțați, între alții, Puya, Johny Romano, Delia, Connect-R, Leo de la Roșiori și Marcel Ștefăneț & Ethno Republic.","CINE ORGANIZEAZĂ. HCL Râmnicu Vâlcea nr. 159/2026 identifică organizatorul drept MusicLover Life Experience SRL în parteneriat cu Municipiul Râmnicu Vâlcea.","BANII PUBLICI ÎN 2026. Anexa HCL 159/2026 stabilește pentru Music Lover Festival un buget estimat de 650.000 lei, TVA inclus. Suma este un buget estimat aprobat, nu dovada automată a unei plăți integrale către organizator."],"sources":[{"name":"HCL Râmnicu Vâlcea nr. 159/2026","url":"https://hcl.usr.ro/ramnicu_valcea/2026/h159"},{"name":"Digi FM — Musiclover Festival 2026","url":"https://www.digifm.ro/stiri/muzica/digi-fm-este-cu-siguranta-music-lover-festival-in-weekendul-de-sfanta-maria-delia-puya-si-connect-r-vin-la-music-lover-festival-352923"}],"published":"2026-08-18T23:43:05+03:00","image":null},
-    {"id":"arutela-restaurare-controversa-pnrr-20260820","section":"PATRIMONIU","priority":98,"headline":"Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații","dek":"Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului și existența avizelor.","paragraphs":["IMAGINEA CARE A APRINS INTERNETUL. Fotografii cu Castrul Roman Arutela după reabilitare au provocat numeroase comentarii ironice și critice online.","CÂT A COSTAT. UAT Orașul Călimănești indică pentru proiectul „Reabilitare Castru Roman Arutela și Amenajarea de Spații Multifuncționale” o valoare totală de 12.402.922 lei.","CE SPUNE MINISTERUL CULTURII. Potrivit precizărilor instituției, proiectul a primit aviz la faza DTAC după analizarea sa de organismele cu competențe în domeniu.","CE TREBUIE SEPARAT ÎN DISCUȚIE. Existența avizelor nu anulează dreptul publicului de a critica rezultatul vizual, după cum reacțiile de pe rețelele sociale nu demonstrează, singure, încălcarea normelor tehnice."],"sources":[{"name":"Primăria Călimănești — comunicat PNRR Castrul Roman Arutela","url":"https://www.primaria-calimanesti.ro/anunturi/comunicate/21596-comunicat-de-presa-pnrr-fonduri-pentru-romania-moderna-si-reformata-4.html"}],"published":"2026-08-20T22:20:18+03:00","image":null},
-    {"id":"jazz-cave-festival-2026-review-bani-publici-20260818","section":"EVENIMENTE","priority":98,"headline":"The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului","dek":"Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei.","paragraphs":["EDIȚIA 2026. A șasea ediție The Jazz Cave Festival s-a desfășurat între 2 și 5 iulie 2026 pe trei scene: INNERLAND în Salina Ocnele Mari, ARTS DISTRICT la Muzeul de Artă din Râmnicu Vâlcea și DREAMLAND în Parcul Zăvoi.","CINE ORGANIZEAZĂ. UCIMR indică Uniunea de Creație Interpretativă a Muzicienilor din România și XCS Music drept organizatori, cu autorități și instituții locale între parteneri.","BANII PUBLICI. HCL Râmnicu Vâlcea nr. 128 din 8 mai 2026 înscrie festivalul în calendarul cultural municipal cu un buget estimat de 20.000 lei.","REȚEAUA DE RESURSE. Festivalul utilizează spații și instituții publice sau cu participare publică; o analiză completă separă transferurile în numerar de utilizarea spațiilor, logistica și promovarea."],"sources":[{"name":"The Jazz Cave Festival — site oficial 2026","url":"https://jazzcave.ro/"},{"name":"HCL Râmnicu Vâlcea nr. 128/2026","url":"https://hcl.usr.ro/ramnicu_valcea/2026/h128"}],"published":"2026-08-18T23:43:05+03:00","image":"centru-urban-20260819.webp","image_caption":"Cadru urban central din Râmnicu Vâlcea, 19 august 2026. Imagine de context; nu surprinde festivalul."}
+      "id": "cantecele-oltului-2026-parada-concurs-20260822",
+      "section": "EVENIMENTE",
+      "priority": 100,
+      "headline": "Cântecele Oltului 2026: jurizarea, premierea și gala închid festivalul pe 23 august la Călimănești",
+      "dek": "Ultima zi a ediției a 58-a a Festivalului Național de Folclor „Cântecele Oltului” include reunirea juriului, festivitatea de premiere, spectacolul de gală și recitalul Aurora și Săndel Mihai.",
+      "paragraphs": [
+        "PROGRAMUL DIN 23 AUGUST. Festivalul Național de Folclor „Cântecele Oltului” ajunge la ultima zi a ediției a 58-a. Programul public anunță reunirea juriului, animație stradală, festivitatea de premiere și spectacolul de gală al ansamblurilor participante.",
+        "CE S-A ÎNTÂMPLAT ÎNAINTEA FINALEI. Pe 22 august, programul central a inclus parada portului popular, festivitatea de deschidere și spectacolul-concurs al ansamblurilor participante.",
+        "CINE PARTICIPĂ. În program sunt anunțate ansambluri din Harghita, Covasna, Brașov, Sibiu, Olt, Teleorman și Vâlcea.",
+        "ORGANIZAREA ESTE OFICIALĂ. Consiliul Local Călimănești a adoptat HCL nr. 70 din 31 iulie 2026 pentru protocoalele de cooperare necesare organizării ediției a 58-a.",
+        "PENTRU PUBLIC. Reperul zilei de 23 august este programul de final — jurizare, premiere, gală și recital."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Călimănești — HCL nr. 70/31.07.2026",
+          "url": "https://primaria-calimanesti.ro/consiliul-local/hotarari-adoptate/22106-hcl-nr-70-31-07-2026-privind-incheierea-unui-protocol-de-cooperare-in-vederea-organizarii-festivalului-national-de-folclor-cantecele-oltului-editia-a-58-a.html"
+        },
+        {
+          "name": "Se întâmplă în Vâlcea — program ediția 58",
+          "url": "https://seintamplainvalcea.ro/2026/08/11/cantecele-oltului-revine-la-calimanesti-trei-zile-de-folclor-tarafuri-si-spectacole-pe-scena-festivalului/"
+        }
+      ],
+      "published": "2026-08-22T09:32:38+03:00",
+      "image": null
+    },
+    {
+      "id": "cet-govora-cine-a-decis-oprirea-20260821",
+      "section": "ENERGIE",
+      "priority": 100,
+      "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
+      "dek": "Documentele oficiale indică un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de unele cifre vehiculate public.",
+      "paragraphs": [
+        "CE SPUNE LEGEA. OUG nr. 20 din 26 martie 2026 modifică explicit calendarul național de decarbonizare și prevede scoaterea din exploatare până la 31 august 2026 a unor capacități pe lignit și huilă, incluzând grupurile 3 și 4 ale CET Govora.",
+        "CE A NOTIFICAT CET GOVORA. HCL Râmnicu Vâlcea nr. 225/2026 consemnează adresa CET Govora din 22 ianuarie 2026, prin care operatorul anunța încetarea definitivă a producției cel târziu la 31 august 2026, în legătură cu dispozițiile legale privind eliminarea producției pe bază de cărbune.",
+        "EXISTĂ O CENTRALĂ PRIVATĂ. Același document descrie un producător privat care dezvoltă o centrală de cogenerare pe gaze naturale, integrată în soluția de tranziție alături de echipamentele proiectului Consiliului Județean.",
+        "CINE VA OPERA SISTEMUL. Documentația municipală separă rolul producătorilor de rolul operatorului sistemului de transport și distribuție.",
+        "CÂT COSTĂ GIGACALORIA ÎN 2026. HCL nr. 5/2026 stabilește tarifele pentru populație și componentele de subvenție locală. Estimările politice privind prețurile viitoare nu sunt tratate drept tarife aprobate."
+      ],
+      "sources": [
+        {
+          "name": "OUG nr. 20/26.03.2026",
+          "url": "https://legislatie.just.ro/"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 225/2026",
+          "url": "https://hcl.usr.ro/ramnicu_valcea/2026/h225"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 5/2026",
+          "url": "https://hcl.usr.ro/ramnicu_valcea/2026/h5"
+        }
+      ],
+      "published": "2026-08-21T12:27:59+03:00",
+      "image": null
+    },
+    {
+      "id": "musiclover-festival-2026-dosar-complet-20260818",
+      "section": "EVENIMENTE",
+      "priority": 99,
+      "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
+      "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
+      "paragraphs": [
+        "EDIȚIA 2026. Musiclover Festival s-a desfășurat pe Platoul Fețeni din Râmnicu Vâlcea între 14 și 16 august 2026.",
+        "PROGRAMUL. În cele trei zile au fost anunțați, între alții, Puya, Johny Romano, Delia, Connect-R, Leo de la Roșiori și Marcel Ștefăneț & Ethno Republic.",
+        "CINE ORGANIZEAZĂ. HCL Râmnicu Vâlcea nr. 159/2026 identifică organizatorul drept MusicLover Life Experience SRL în parteneriat cu Municipiul Râmnicu Vâlcea.",
+        "BANII PUBLICI ÎN 2026. Anexa HCL 159/2026 stabilește pentru Music Lover Festival un buget estimat de 650.000 lei, TVA inclus. Suma este un buget estimat aprobat, nu dovada automată a unei plăți integrale către organizator."
+      ],
+      "sources": [
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 159/2026",
+          "url": "https://hcl.usr.ro/ramnicu_valcea/2026/h159"
+        },
+        {
+          "name": "Digi FM — Musiclover Festival 2026",
+          "url": "https://www.digifm.ro/stiri/muzica/digi-fm-este-cu-siguranta-music-lover-festival-in-weekendul-de-sfanta-maria-delia-puya-si-connect-r-vin-la-music-lover-festival-352923"
+        }
+      ],
+      "published": "2026-08-18T23:43:05+03:00",
+      "image": null
+    },
+    {
+      "id": "arutela-restaurare-controversa-pnrr-20260820",
+      "section": "PATRIMONIU",
+      "priority": 98,
+      "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
+      "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului și existența avizelor.",
+      "paragraphs": [
+        "IMAGINEA CARE A APRINS INTERNETUL. Fotografii cu Castrul Roman Arutela după reabilitare au provocat numeroase comentarii ironice și critice online.",
+        "CÂT A COSTAT. UAT Orașul Călimănești indică pentru proiectul „Reabilitare Castru Roman Arutela și Amenajarea de Spații Multifuncționale” o valoare totală de 12.402.922 lei.",
+        "CE SPUNE MINISTERUL CULTURII. Potrivit precizărilor instituției, proiectul a primit aviz la faza DTAC după analizarea sa de organismele cu competențe în domeniu.",
+        "CE TREBUIE SEPARAT ÎN DISCUȚIE. Existența avizelor nu anulează dreptul publicului de a critica rezultatul vizual, după cum reacțiile de pe rețelele sociale nu demonstrează, singure, încălcarea normelor tehnice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Călimănești — comunicat PNRR Castrul Roman Arutela",
+          "url": "https://www.primaria-calimanesti.ro/anunturi/comunicate/21596-comunicat-de-presa-pnrr-fonduri-pentru-romania-moderna-si-reformata-4.html"
+        }
+      ],
+      "published": "2026-08-20T22:20:18+03:00",
+      "image": null
+    },
+    {
+      "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
+      "section": "EVENIMENTE",
+      "priority": 98,
+      "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
+      "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei.",
+      "paragraphs": [
+        "EDIȚIA 2026. A șasea ediție The Jazz Cave Festival s-a desfășurat între 2 și 5 iulie 2026 pe trei scene: INNERLAND în Salina Ocnele Mari, ARTS DISTRICT la Muzeul de Artă din Râmnicu Vâlcea și DREAMLAND în Parcul Zăvoi.",
+        "CINE ORGANIZEAZĂ. UCIMR indică Uniunea de Creație Interpretativă a Muzicienilor din România și XCS Music drept organizatori, cu autorități și instituții locale între parteneri.",
+        "BANII PUBLICI. HCL Râmnicu Vâlcea nr. 128 din 8 mai 2026 înscrie festivalul în calendarul cultural municipal cu un buget estimat de 20.000 lei.",
+        "REȚEAUA DE RESURSE. Festivalul utilizează spații și instituții publice sau cu participare publică; o analiză completă separă transferurile în numerar de utilizarea spațiilor, logistica și promovarea."
+      ],
+      "sources": [
+        {
+          "name": "The Jazz Cave Festival — site oficial 2026",
+          "url": "https://jazzcave.ro/"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 128/2026",
+          "url": "https://hcl.usr.ro/ramnicu_valcea/2026/h128"
+        }
+      ],
+      "published": "2026-08-18T23:43:05+03:00",
+      "image": "centru-urban-20260819.webp",
+      "image_caption": "Cadru urban central din Râmnicu Vâlcea, 19 august 2026. Imagine de context; nu surprinde festivalul."
+    }
   ]
 }
