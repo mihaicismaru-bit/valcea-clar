@@ -10,7 +10,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "isu_valcea_comunicate",
@@ -696,9 +696,9 @@
       "items": 1
     },
     {
-      "id": "primaria_rmvl_comunicate",
-      "ok": false,
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "id": "primaria_rmvl_hcl",
+      "ok": true,
+      "items": 0
     },
     {
       "id": "isu_valcea_comunicate",

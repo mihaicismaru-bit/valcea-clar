@@ -4,7 +4,7 @@
     {
       "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
       "section": "ADMINISTRAȚIE",
-      "headline": "CJ Vâlcea: pe ordinea de zi. proiecte care includ 43.793.000 lei",
+      "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei",
       "dek": "Ce intră în discuția consilierilor județeni și ce nu poate fi prezentat încă drept decizie.",
       "paragraphs": [
         "Consiliul Județean Vâlcea a publicat ordinea de zi a unei ședințe. VÂLCEA CLAR tratează documentul ca proiect de lucru, nu ca hotărâri deja adoptate.",
@@ -27,7 +27,7 @@
         "score": 68,
         "decision": "READY",
         "risks": [],
-        "seen_before": false
+        "seen_before": true
       },
       "status": "DRAFT_CANDIDATE_ONLY",
       "image": "administratie-ramnicu-valcea-20260819.webp"
