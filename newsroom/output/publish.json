@@ -1,18 +1,13 @@
 {
   "status": "AUTO_PUBLISH_ACTIVE",
   "authority": "OWNER_APPROVED_AUTO_PUBLICATION",
-  "checked_local": "2026-08-24T21:47:28+03:00",
-  "selected": [
+  "checked_local": "2026-08-24T21:49:21+03:00",
+  "selected": [],
+  "published": [],
+  "skipped": [
     {
       "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
-      "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei"
+      "reason": "already_published"
     }
-  ],
-  "published": [
-    {
-      "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
-      "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei"
-    }
-  ],
-  "skipped": []
+  ]
 }
