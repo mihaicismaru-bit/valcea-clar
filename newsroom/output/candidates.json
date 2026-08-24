@@ -334,7 +334,7 @@
       "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -345,7 +345,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -364,28 +364,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/istorie-pentru-voleiul-romanesc-romania-victorie-spectaculoasa-la-mondialul-u17/",
       "title": "Istorie pentru voleiul românesc! România, victorie spectaculoasă la Mondialul U17",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/valcea-nu-pierde-bani-din-pnrr-subprefectul-victor-stanculescu-22-de-proiecte-mai-sunt-de-receptionat/",
-      "title": "Vâlcea nu pierde bani din PNRR. Subprefectul Victor Stănculescu: „22 de proiecte mai sunt de recepționat”",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/incendiu-puternic-la-un-autocar-pe-strada-remus-bellu-din-ramnicu-valcea-flacarile-s-au-extins-la-doua-autoutilitare/",
-      "title": "Incendiu puternic la un autocar, pe strada Remus Bellu din Râmnicu Vâlcea. Flăcările s-au extins la două autoutilitare",
       "score": 42,
       "decision": "WATCH",
       "risks": [],
@@ -531,12 +509,36 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-video-salvamarul-valcean-care-nu-oboseste-sa-salveze-vieti-costi-tilvanoiu-la-62-de-ani-a-scos-deja-patru-oameni-din-valurile-marii-negre/",
+      "title": "FOTO/VIDEO Salvamarul vâlcean care nu obosește să salveze vieți. Costi Tîlvănoiu, la 62 de ani, a scos deja patru oameni din valurile Mării Negre",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/lovituri-cu-cutitul-si-toporul-asupra-sotiei-un-barbat-de-79-de-ani-arestat-preventiv-pentru-tentativa-de-omor/",
+      "title": "Lovituri cu cuțitul și toporul asupra soției! Un bărbat de 79 de ani arestat preventiv pentru tentativă de omor",
+      "score": 36,
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "arest"
+      ],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
       "url": "https://evenimentvalcean.ro/foto-tanar-de-16-ani-amendat-dupa-ce-a-mers-pe-o-singura-roata-cu-trotineta-in-ramnicu-valcea/",
       "title": "FOTO Tânăr de 16 ani amendat, după ce a mers pe o singură roată cu trotineta, în Râmnicu Vâlcea",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
