@@ -1,10 +1,10 @@
 {
-  "status": "LOCKED_CANDIDATE_ONLY",
+  "status": "AUTO_PUBLISH_ACTIVE",
   "queue": [
     {
       "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
       "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei",
-      "status": "LOCKED_CANDIDATE_ONLY"
+      "status": "PUBLISHED_AUTO"
     }
   ]
 }
