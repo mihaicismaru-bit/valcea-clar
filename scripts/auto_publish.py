@@ -107,6 +107,21 @@ def select(stories, existing_ids, cfg):
     return selected, skipped
 
 
+def sync_queue(stories, existing_ids, published_ids, cfg):
+    queue = load(OUT / "queue.json")
+    story_by_id = {story.get("id"): story for story in stories}
+    queue["status"] = "AUTO_PUBLISH_ACTIVE"
+    for row in queue.get("queue", []):
+        ident = row.get("id")
+        if ident in published_ids or ident in existing_ids:
+            row["status"] = "PUBLISHED_AUTO"
+            continue
+        story = story_by_id.get(ident)
+        ok, _ = eligible(story, cfg) if story else (False, "missing_story")
+        row["status"] = "AUTO_PUBLISH_READY" if ok else "CANDIDATE_ONLY"
+    dump(OUT / "queue.json", queue)
+
+
 def run(dry_run=False):
     errs = authority_errors()
     if errs:
@@ -114,9 +129,10 @@ def run(dry_run=False):
 
     cfg = load(NR / "publication.json")
     story_doc = load(OUT / "stories.json")
+    stories = story_doc.get("stories", [])
     article_doc = load(CONTENT / "articles.json")
     existing = {a["id"] for a in article_doc.get("articles", [])}
-    selected, skipped = select(story_doc.get("stories", []), existing, cfg)
+    selected, skipped = select(stories, existing, cfg)
     now = datetime.now(ZoneInfo("Europe/Bucharest")).isoformat(timespec="seconds")
     articles = [to_article(s, cfg, now) for s in selected]
 
@@ -129,17 +145,13 @@ def run(dry_run=False):
         "skipped": skipped,
     }
 
-    if not dry_run and articles:
-        article_doc["updated_local"] = now
-        article_doc["articles"] = articles + article_doc.get("articles", [])
-        dump(CONTENT / "articles.json", article_doc)
-        queue = load(OUT / "queue.json")
+    if not dry_run:
         published_ids = {a["id"] for a in articles}
-        queue["status"] = "AUTO_PUBLISH_ACTIVE"
-        for row in queue.get("queue", []):
-            if row.get("id") in published_ids:
-                row["status"] = "PUBLISHED_AUTO"
-        dump(OUT / "queue.json", queue)
+        if articles:
+            article_doc["updated_local"] = now
+            article_doc["articles"] = articles + article_doc.get("articles", [])
+            dump(CONTENT / "articles.json", article_doc)
+        sync_queue(stories, existing, published_ids, cfg)
 
     dump(OUT / "publish.json", report)
     print(f"AUTO PUBLISH {'DRY RUN' if dry_run else 'PASS'}: {len(articles)} new article(s); authority={cfg.get('authority')}")
