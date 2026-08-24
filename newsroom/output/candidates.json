@@ -72,17 +72,6 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/22/valcea-a-trimis-cinci-pompieri-in-misiunea-din-serbia-pentru-stingerea-incendiilor-de-padure/",
-      "title": "Vâlcea a trimis cinci pompieri în misiunea din Serbia pentru stingerea incendiilor de pădure",
-      "score": 54,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "isu_valcea_comunicate",
       "source_name": "ISU Vâlcea",
       "tier": "T1",
@@ -337,6 +326,17 @@
       "seen_before": true
     },
     {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/24/dsvsa-valcea-amenzi-de-aproape-17-000-de-lei-si-zeci-de-controale-intr-o-singura-saptamana/",
+      "title": "DSVSA Vâlcea: Amenzi de aproape 17.000 de lei și zeci de controale într-o singură săptămână",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
@@ -412,6 +412,19 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/24/crima-in-valcea-barbat-acuzat-ca-si-a-omorat-concubina-in-bataie/",
+      "title": "Crimă în Vâlcea. Bărbat acuzat că și-a omorât concubina în bătaie",
+      "score": 36,
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "acuza"
+      ],
+      "seen_before": false
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -495,17 +508,6 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/22/ro-alert-la-horezu-urs-semnalat-intr-o-gospodarie-din-olari-patru-capre-au-fost-ucise/",
-      "title": "FOTO/UPDATE: RO-ALERT la HOREZU Urs într-o gospodărie din Olari. Patru capre au fost ucise",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
@@ -514,7 +516,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -527,7 +529,7 @@
       "risks": [
         "arest"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
