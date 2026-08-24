@@ -21,14 +21,15 @@ def bounded_items(src, text):
         return rows
 
     today = datetime.now(ZoneInfo("Europe/Bucharest")).date()
-    max_age = int(src.get("max_age_days") or 21)
     fresh = []
     for title, url in rows:
         d = nr.extract_date({"url": url}, title)
         if d is None:
             continue
         age = (today - d).days
-        if -45 <= age <= max_age:
+        # Agenda copy is valid only immediately around or before the meeting.
+        # Past meetings require a different adopted-decision adapter, not future-tense agenda copy.
+        if -45 <= age <= 1:
             label = title
             if title.strip().lower() == "detalii":
                 label = f"Ședința CJ Vâlcea din {d.strftime('%d.%m.%Y')}"
