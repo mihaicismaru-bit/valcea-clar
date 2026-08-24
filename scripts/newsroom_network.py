@@ -13,6 +13,7 @@ sys.path.insert(0, str(SCRIPTS))
 import newsroom as nr  # noqa: E402
 
 _ORIGINAL_ITEMS = nr.items
+_ORIGINAL_CJ_STORY = nr.cj_story
 
 
 def bounded_items(src, text):
@@ -37,8 +38,17 @@ def bounded_items(src, text):
     return fresh[:8]
 
 
+def cj_story_with_safe_punctuation(candidate, detail):
+    story = _ORIGINAL_CJ_STORY(candidate, detail)
+    story["headline"] = story.get("headline", "").replace(
+        "pe ordinea de zi. proiecte", "pe ordinea de zi, proiecte"
+    )
+    return story
+
+
 def main() -> int:
     nr.items = bounded_items
+    nr.cj_story = cj_story_with_safe_punctuation
     nr.cycle(False)
     return nr.verify()
 
