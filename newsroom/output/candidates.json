@@ -307,8 +307,30 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/24/cum-incearca-autoritatile-sa-salveze-termoficarea-din-ramnicu-valcea-de-ce-are-nevoie-cet-govora-de-40-de-milioane-de-lei-de-la-guvern/",
+      "title": "Cum încearcă autoritățile să salveze termoficarea din Râmnicu Vâlcea: de ce are nevoie CET Govora de 40 de milioane de lei de la Guvern",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/24/foto-accident-la-mihaesti-pe-dn-64-trafic-blocat-partial/",
       "title": "FOTO: ACCIDENT la MIHĂEȘTI, pe DN 64. Trafic blocat parțial…",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/scoala-din-vladesti-modernizata-prin-pnrr-investitie-importanta-pentru-elevii-din-comuna-condusa-de-primarul-adrian-cosac/",
+      "title": "Școala din Vlădești, modernizată prin PNRR. Investiție importantă pentru elevii din comuna condusă de primarul Adrian Cosac",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
@@ -495,15 +517,15 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/22/video-autocar-cuprins-de-flacari-langa-shopping-city-ramnicu-valcea-focul-s-a-extins-la-doua-autoutilitare/",
-      "title": "VIDEO. Autocar cuprins de flăcări lângă Shopping City Râmnicu Vâlcea. Focul s-a extins la două autoutilitare",
+      "url": "https://evenimentvalcean.ro/tinere-condeie-aduce-la-calimanesti-40-de-tineri-pasionati-de-literatura/",
+      "title": "„Tinere condeie” aduce la Călimănești 40 de tineri pasionați de literatură",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -609,28 +631,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/ati-vazut-o-tanara-de-18-ani-din-ramnicu-valcea-cautata-de-politisti-dupa-ce-a-plecat-de-acasa/",
-      "title": "AȚI VĂZUT-O? Tânără de 18 ani din Râmnicu Vâlcea căutată de polițiști, după ce a plecat de acasă",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/tinerii-din-valcea-invitati-sa-devina-arbitri-de-baschet/",
-      "title": "Tinerii din Vâlcea, invitați să devină arbitri de baschet",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -683,7 +683,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     }
   ],
   "source_health": [
