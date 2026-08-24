@@ -1,13 +1,13 @@
 status=PAGES_STATE
-checked_at=2026-08-24T11:42:19Z
+checked_at=2026-08-24T11:53:56Z
 [PAGES]
 HTTP/2 200 
 {
   "url": "https://api.github.com/repos/mihaicismaru-bit/valcea-clar/pages",
   "status": null,
-  "cname": null,
+  "cname": "valceaclar.ro",
   "custom_404": false,
-  "html_url": "https://mihaicismaru-bit.github.io/valcea-clar/",
+  "html_url": "http://valceaclar.ro/",
   "build_type": "workflow",
   "source": {
     "branch": "main",
@@ -16,7 +16,16 @@ HTTP/2 200
   "public": true,
   "protected_domain_state": null,
   "pending_domain_unverified_at": null,
-  "https_enforced": true
+  "https_certificate": {
+    "state": "approved",
+    "description": "The certificate has been approved.",
+    "domains": [
+      "valceaclar.ro",
+      "www.valceaclar.ro"
+    ],
+    "expires_at": "2026-11-22"
+  },
+  "https_enforced": false
 }
 
 [HEALTH]
