@@ -1,0 +1,11 @@
+status=DEPLOY_VERIFY
+deployment_id=6062494729
+deployment_sha=f47f079c86e76fd3c3960399c7f5454f1f5075fe
+deployment_created_at=2026-08-24T12:16:55Z
+deployment_state=success
+deployment_environment_url=http://valceaclar.ro/
+deployment_status_created_at=2026-08-24T12:17:13Z
+live_url=https://valceaclar.ro/
+live_continuous_story_first=PASS
+live_headline_strip=PASS
+live_valcea_now=PASS
