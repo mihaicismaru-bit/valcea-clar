@@ -19,8 +19,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 scripts/newsroom.py cycle
-      - run: python3 scripts/newsroom.py verify
+      - name: Supplement TLS trust with official Sectigo DV chain
+        run: |
+          curl -fsSL 'https://support.sectigo.com/sfc/servlet.shepherd/version/download/068Uj00000XusPJ' -o "$RUNNER_TEMP/sectigo-dv-r36-chain.pem"
+          cat /etc/ssl/certs/ca-certificates.crt "$RUNNER_TEMP/sectigo-dv-r36-chain.pem" > "$RUNNER_TEMP/newsroom-ca.pem"
+          echo "SSL_CERT_FILE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
+          echo "CURL_CA_BUNDLE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
+      - run: python3 scripts/newsroom_network.py
       - name: persist material newsroom state
         run: |
           git config user.name 'valcea-clar-bot'
