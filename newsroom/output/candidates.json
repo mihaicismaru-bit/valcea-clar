@@ -102,7 +102,7 @@
       "score": 50,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -323,18 +323,29 @@
       "score": 48,
       "decision": "WATCH",
       "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "ziarul_de_valcea",
+      "source_name": "Ziarul de Vâlcea",
+      "tier": "T2",
+      "url": "https://ziaruldevalcea.ro/2026/08/alerta-la-ramnicu-valcea-orasul-risca-sa-ramana-fara-apa-calda-si-caldura-guvernul-trebuie-sa-aloce-urgent-40-de-milioane-de-lei-buican-bolojan-lasati-gargara-politica-si-ajutati-valcea/?utm_source=rss&utm_medium=rss&utm_campaign=alerta-la-ramnicu-valcea-orasul-risca-sa-ramana-fara-apa-calda-si-caldura-guvernul-trebuie-sa-aloce-urgent-40-de-milioane-de-lei-buican-bolojan-lasati-gargara-politica-si-ajutati-valcea",
+      "title": "ALERTĂ la Râmnicu Vâlcea: Orașul riscă să rămână fără apă caldă și căldură. Guvernul trebuie să aloce urgent 40 de milioane de lei! Buican, Bolojan - lasati gargara politica si AJUTATI VÂLCEA!",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
       "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://evenimentvalcean.ro/pompierii-valceni-pleaca-in-serbia-romania-intervine-pentru-stingerea-incendiilor-de-padure/",
-      "title": "Pompierii vâlceni pleacă în Serbia! România intervine pentru stingerea incendiilor de pădure",
-      "score": 48,
+      "url": "https://evenimentvalcean.ro/slatioara-investeste-in-energie-verde-si-transport-public-modern/",
+      "title": "Slătioara investește în energie verde și transport public modern",
+      "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -345,7 +356,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -425,17 +436,6 @@
       "seen_before": true
     },
     {
-      "source_id": "ziarul_de_valcea",
-      "source_name": "Ziarul de Vâlcea",
-      "tier": "T2",
-      "url": "https://ziaruldevalcea.ro/2026/08/ce-proportie-de-ulei-pui-in-benzina-de-la-motocoasa/?utm_source=rss&utm_medium=rss&utm_campaign=ce-proportie-de-ulei-pui-in-benzina-de-la-motocoasa",
-      "title": "Ce proporție de ulei pui în benzina de la motocoasă",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
@@ -444,7 +444,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -455,7 +455,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -531,12 +531,23 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-tanar-de-16-ani-amendat-dupa-ce-a-mers-pe-o-singura-roata-cu-trotineta-in-ramnicu-valcea/",
+      "title": "FOTO Tânăr de 16 ani amendat, după ce a mers pe o singură roată cu trotineta, în Râmnicu Vâlcea",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
       "url": "https://evenimentvalcean.ro/24-august-1787-ziua-in-care-un-razboi-european-avea-sa-ajunga-si-la-cozia/",
       "title": "24 august 1787. Ziua în care un război european avea să ajungă și la Cozia",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -547,7 +558,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -612,17 +623,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/tinerii-din-valcea-invitati-sa-devina-arbitri-de-baschet/",
       "title": "Tinerii din Vâlcea, invitați să devină arbitri de baschet",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/stefan-ovidiu-popa-cere-solutii-pentru-cet-govora-nu-mai-este-timpul-pentru-rafuieli-politice/",
-      "title": "Ștefan Ovidiu Popa cere soluții pentru CET Govora: „Nu mai este timpul pentru răfuieli politice”",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
