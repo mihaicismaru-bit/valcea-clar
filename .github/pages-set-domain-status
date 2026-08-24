@@ -1,0 +1,29 @@
+status=SET_DOMAIN
+checked_at=2026-08-24T11:43:07Z
+[PUT]
+HTTP/2 403 
+{
+  "message": "Resource not accessible by integration",
+  "documentation_url": "https://docs.github.com/rest/pages/pages#update-information-about-a-apiname-pages-site",
+  "status": "403"
+}
+
+[GET]
+HTTP/2 200 
+{
+  "url": "https://api.github.com/repos/mihaicismaru-bit/valcea-clar/pages",
+  "status": null,
+  "cname": null,
+  "custom_404": false,
+  "html_url": "https://mihaicismaru-bit.github.io/valcea-clar/",
+  "build_type": "workflow",
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "public": true,
+  "protected_domain_state": null,
+  "pending_domain_unverified_at": null,
+  "https_enforced": true
+}
+
