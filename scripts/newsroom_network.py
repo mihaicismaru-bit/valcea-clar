@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -14,6 +15,30 @@ import newsroom as nr  # noqa: E402
 
 _ORIGINAL_ITEMS = nr.items
 _ORIGINAL_CJ_STORY = nr.cj_story
+_ORIGINAL_FETCH = nr.fetch
+
+
+def fetch_with_verified_ipv4(url, timeout=18):
+    try:
+        return _ORIGINAL_FETCH(url, timeout)
+    except Exception as first:
+        if "primariavl.ro" not in url.lower():
+            raise
+        # The municipal host is reachable from some networks only over IPv4.
+        # Force IPv4 while preserving normal CA/hostname verification; never use -k.
+        try:
+            proc = subprocess.run(
+                [
+                    "curl", "-4", "-fsSL", "--max-time", str(timeout),
+                    "-A", "ValceaClarNewsroom/1.0 (+https://valceaclar.ro)", url,
+                ],
+                capture_output=True,
+                check=True,
+                timeout=timeout + 3,
+            )
+            return proc.stdout.decode("utf-8", "replace")
+        except Exception:
+            raise first
 
 
 def bounded_items(src, text):
@@ -47,6 +72,7 @@ def cj_story_with_safe_punctuation(candidate, detail):
 
 
 def main() -> int:
+    nr.fetch = fetch_with_verified_ipv4
     nr.items = bounded_items
     nr.cj_story = cj_story_with_safe_punctuation
     nr.cycle(False)
