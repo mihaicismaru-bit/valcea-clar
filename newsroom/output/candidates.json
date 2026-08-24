@@ -304,6 +304,17 @@
       "seen_before": true
     },
     {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/24/foto-accident-la-mihaesti-pe-dn-64-trafic-blocat-partial/",
+      "title": "FOTO: ACCIDENT la MIHĂEȘTI, pe DN 64. Trafic blocat parțial…",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
@@ -334,7 +345,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -424,7 +435,7 @@
       "risks": [
         "acuza"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -492,19 +503,6 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/22/controale-in-valcea-amenzi-tigari-confiscate-si-un-dosar-de-evaziune-fiscala/",
-      "title": "Controale în Vâlcea: amenzi, țigări confiscate și un dosar de evaziune fiscală",
-      "score": 36,
-      "decision": "REVIEW_REQUIRED",
-      "risks": [
-        "dosar"
-      ],
       "seen_before": true
     },
     {
@@ -680,12 +678,12 @@
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
-      "url": "https://ziaruldevalcea.ro/2026/08/cum-tii-relieful-3d-pe-unghie-fara-sa-se-aplatizeze-in-lampa/?utm_source=rss&utm_medium=rss&utm_campaign=cum-tii-relieful-3d-pe-unghie-fara-sa-se-aplatizeze-in-lampa",
-      "title": "Cum ții relieful 3D pe unghie fără să se aplatizeze în lampă",
+      "url": "https://ziaruldevalcea.ro/2026/08/informare-solicitare-aviz-de-gospodarire-a-apelor-2/?utm_source=rss&utm_medium=rss&utm_campaign=informare-solicitare-aviz-de-gospodarire-a-apelor-2",
+      "title": "INFORMARE SOLICITARE AVIZ DE GOSPODĂRIRE A APELOR",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     }
   ],
   "source_health": [
