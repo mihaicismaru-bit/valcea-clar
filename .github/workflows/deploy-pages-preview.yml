@@ -5,7 +5,7 @@ on:
     paths:
       - '.github/preview-deploy-trigger'
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -43,3 +43,44 @@ jobs:
           path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify deployed preview over HTTP
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          SITE_URL="${SITE_URL%/}/"
+          ok=0
+          for i in $(seq 1 12); do
+            if curl -fsSL --max-time 15 "$SITE_URL" -o /tmp/home.html; then
+              ok=1
+              break
+            fi
+            sleep 5
+          done
+          test "$ok" = 1
+          grep -q 'VÂLCEA CLAR' /tmp/home.html
+          grep -q 'noindex,nofollow' /tmp/home.html
+          grep -q 'href="/valcea-clar/stiri/"' /tmp/home.html
+          ! grep -q 'ChatGPT Sites' /tmp/home.html
+          ! grep -q 'Unde ieșim' /tmp/home.html
+          curl -fsSL --max-time 15 "${SITE_URL}stiri/" -o /tmp/stiri.html
+          grep -q '<h1>Știri</h1>' /tmp/stiri.html
+          curl -fsSL --max-time 15 "${SITE_URL}stiri/buila-vanturarita-accident-20260822/" -o /tmp/article.html
+          grep -q 'Buila' /tmp/article.html
+          curl -fsSL --max-time 15 "${SITE_URL}assets/site.css" -o /tmp/site.css
+          test -s /tmp/site.css
+          curl -fsSL --max-time 15 "${SITE_URL}robots.txt" -o /tmp/robots.txt
+          grep -q 'Disallow: /' /tmp/robots.txt
+      - name: Persist verified preview marker
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          git config user.name 'valcea-clar-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git fetch origin main
+          git checkout -B preview-status origin/main
+          printf 'status=VERIFIED_PREVIEW\nurl=%s\nsource_sha=%s\nverified_at=%s\n' "$SITE_URL" "$GITHUB_SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > .github/preview-deploy-status
+          git add .github/preview-deploy-status
+          git commit -m 'ops: record verified Pages preview'
+          git push origin HEAD:main
