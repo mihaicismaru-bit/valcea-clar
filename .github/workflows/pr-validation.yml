@@ -39,6 +39,9 @@ jobs:
         continue-on-error: true
         run: |
           echo | openssl s_client -connect cjvalcea.ro:443 -servername cjvalcea.ro -showcerts 2>&1 | sed -n '1,160p'
+          curl -fsSL 'https://crt.sh/?d=4267304690' -o /tmp/sectigo-dv-r36.crt
+          echo 'INTERMEDIATE_SHA256'
+          openssl x509 -inform DER -in /tmp/sectigo-dv-r36.crt -noout -subject -issuer -fingerprint -sha256 || openssl x509 -in /tmp/sectigo-dv-r36.crt -noout -subject -issuer -fingerprint -sha256
       - name: Run real network cycle in candidate-only mode
         run: python3 scripts/newsroom.py cycle
       - name: Verify fail-closed policy
