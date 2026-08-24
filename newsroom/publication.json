@@ -1,0 +1,16 @@
+{
+  "mode": "live",
+  "auto_publish": true,
+  "allowed_tiers": ["T1"],
+  "allowed_source_ids": [
+    "cj_valcea_sedinte_publice",
+    "isu_valcea_comunicate"
+  ],
+  "require_candidate_status": "DRAFT_CANDIDATE_ONLY",
+  "require_candidate_decision": "READY",
+  "require_zero_risks": true,
+  "max_per_cycle": 3,
+  "default_priority": 100,
+  "owner_approval": "2026-08-24T21:40:00+03:00",
+  "authority": "OWNER_APPROVED_AUTO_PUBLICATION"
+}
