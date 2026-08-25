@@ -24,6 +24,116 @@
       "seen_before": true
     },
     {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_cazanesti1008.pdf",
+      "title": "Anunț întrerupere furnizare alimentare cu apa potabila a consumatorilor existenți din municipiul Râmnicu Vâlcea, străzile: Căzănești (tronson cuprins de la imobilul cu nr. 156 până la stațiunea Pomicolă), Gura Văii (parțial), Mărului, Cireșului, Molidului, Ulmului, Valea lui Naneș. în data de 10.08.2026, în intervalul 09:00 – 15:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_rm_vl_300726.pdf",
+      "title": "Anunț întrerupere furnizare apă potabilă către consumatorii din municipiul Râmnicu Vâlcea,strada Henri Coandă – bl.E1, bl. H6, bl. H7, bl. I11, bl. M4, bl. N10, bl. N11, bl. N12, bl. N13, bl. N14, bl. R12, bl. S1, bl. S2, bl. S3, bl. S4, bl. S6. bl. 132, bl. 133 și PT 39, în data de 30.07.2026, în intervalul orar 8:00–17:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_Rm_Valcea_06.07.2026.pdf",
+      "title": "Anunț întrerupere furnizare apă potabilă către consumatorii din municipiul Râmnicu Vâlcea, strada Dacia, respectiv: Blocul 86, Blocul 19 (toate scările aferente), sediul APAVIL S.A., spațiile comerciale ale societății NOIL, precum și imobilele din zonele adiacente, în data de 07.07.2026, în intervalul orar 9:00–17:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_Pausesti_Maglasi 24.06.2026.pdf",
+      "title": "Anunț întrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in comuna Păușești Măglași, străzile: Principală, Valea Cheii, Zanfirești, Cheia, Satul Nou, Chiciora, Armoniei, Mutuligești, Coasta, Valea de Case, Crinilor, Dealul Pleșii, Merilor, Drumul Pietrarilor, Castanilor, Vlăduceni, Calea Mare, Teiului și zonele adiacente acestora în data de 24.06.2026, în intervalul 09:00 – 18:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire Vladesti 11 iun 26.pdf",
+      "title": "Anunț întrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in comuna Vlădești, strada Principală DN64A (de la intersecția cu Municipiul Râmnicu Vâlcea până la strada Valea Ursului – partea dreapta de mers dinspre Râmnicu Vâlcea către Păușești Măglași) și străzile: Valea Ursului, Bogoslovești, David, Garoafelor, Zootehniei, Orasel și Tintulești) în data de 11.06.2026, în intervalul 09:00 – 16:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/2026,anunt oprire Energetic,Doru Popian,Barajului.pdf",
+      "title": "Anunț întrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in localitatea Râmnicu Vâlcea – strada Calea lui Traian – SC Riviera SRL, strada Sergiu Purece – Colegiul Energetic, Strada Decebal – SC Hidroelectrica SA, Lidl (Nord), strada Doru Popian – Imobile nr. 3, 2 și 11, strada Nicolae Labiș – blocurile B2, B3 și B1, strada Barajului – Kaufland România, strada Barajului nr. 9 și nr. 27, Pensiunea VFM și Spălătorie VFM, în data de 28.05.2026, în intervalul 08:00 – 18:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/intrerupere Timis - 13.05.2026.pdf",
+      "title": "Anunț întrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in localitatea Râmnicu Vâlcea, strada Timiș nr. 8, în data de 13.05.2026, în intervalul 11:00 – 16:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/intrerupere_horezu_240426.pdf",
+      "title": "Anunt intrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in localitatea Horezu, în intervalul 24.04.2026 ora 09:00 – 25.04.2026, ora 19:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/anunt oprire Timis.pdf",
+      "title": "Anunt intrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in municipiul Ramnicu Valcea pe strada Timis, în data de 11.03.2026, în intervalul 10:00 – 14:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "apavil_valcea_outages",
+      "source_name": "APAVIL — opriri programate apă Vâlcea",
+      "tier": "T1",
+      "url": "https://apavil.ro/materiale/anunturi/2026/intrerupere _14012026.pdf",
+      "title": "Anunt intrerupere furnizare alimentare cu apa potabila a consumatorilor existenți in municipiul Ramnicu Valcea pe strada Ion Referendaru (blocurile A13 și A14, fostul sediu Vamă, Biserica Greco –Catolică, blocurile I2, I3, A18/1, A18 și imobile) și strada Eroilor (blocurile A16 și A17, bloc Percom, PT 25 Libertății și imobile), în data de 14.01.2026, în intervalul 10:00 – 16:00",
+      "score": 68,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
       "source_id": "isu_valcea_comunicate",
       "source_name": "ISU Vâlcea",
       "tier": "T1",
@@ -63,6 +173,17 @@
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
       "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
       "score": 62,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-4-din-25-08-2026/",
+      "title": "AVERTIZARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 4 DIN 25.08.2026",
+      "score": 56,
       "decision": "READY",
       "risks": [],
       "seen_before": true
@@ -439,17 +560,6 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/24/cum-incearca-autoritatile-sa-salveze-termoficarea-din-ramnicu-valcea-de-ce-are-nevoie-cet-govora-de-40-de-milioane-de-lei-de-la-guvern/",
-      "title": "Cum încearcă autoritățile să salveze termoficarea din Râmnicu Vâlcea: de ce are nevoie CET Govora de 40 de milioane de lei de la Guvern",
-      "score": 48,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
@@ -497,6 +607,17 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/acum-accident-pe-valea-oltului-la-lotrisor-impact-intre-un-tir-si-un-microbuz/",
+      "title": "FOTO/UPDATE – ACCIDENT pe VALEA OLTULUI, la Lotrișor. Impact între un TIR și un microbuz",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/25/foto-pericol-de-explozie-evitat-la-bujoreni-o-butelie-a-fost-evacuata-din-locuinta-cuprinsa-de-incendiu/",
       "title": "FOTO – Pericol de explozie evitat la Bujoreni. O butelie a fost evacuată din locuința cuprinsă de incendiu",
       "score": 42,
@@ -510,6 +631,17 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/foto-video-32-de-milioane-de-euro-pentru-dezvoltarea-judetului-valcea-14-contracte-europene-pentru-11-localitati/",
       "title": "FOTO/VIDEO 32 de milioane de euro pentru dezvoltarea județului Vâlcea! 14 contracte europene pentru 11 localități",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "ziarul_de_valcea",
+      "source_name": "Ziarul de Vâlcea",
+      "tier": "T2",
+      "url": "https://ziaruldevalcea.ro/2026/08/claudia-joica-presedinta-organizatiei-judetene-de-femei-aur-valcea-schimbarea-incepe-prin-dialog-iar-fiecare-voce-conteaza/?utm_source=rss&utm_medium=rss&utm_campaign=claudia-joica-presedinta-organizatiei-judetene-de-femei-aur-valcea-schimbarea-incepe-prin-dialog-iar-fiecare-voce-conteaza",
+      "title": "Claudia Joica, președinta Organizației Județene de Femei AUR Vâlcea: „Schimbarea începe prin dialog, iar fiecare voce contează”",
       "score": 42,
       "decision": "WATCH",
       "risks": [],
@@ -797,17 +929,6 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
-    },
-    {
-      "source_id": "ziarul_de_valcea",
-      "source_name": "Ziarul de Vâlcea",
-      "tier": "T2",
-      "url": "https://ziaruldevalcea.ro/2026/08/tragedie-la-baile-olanesti-tanarul-de-31-de-ani-din-budesti-care-si-a-pierdut-viata-era-tatal-a-trei-copii/?utm_source=rss&utm_medium=rss&utm_campaign=tragedie-la-baile-olanesti-tanarul-de-31-de-ani-din-budesti-care-si-a-pierdut-viata-era-tatal-a-trei-copii",
-      "title": "Tragedie la Băile Olănești: tânărul de 31 de ani din Budești, care și-a pierdut viața, era tatăl a trei copii",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
     }
   ],
   "source_health": [
@@ -849,12 +970,17 @@
     {
       "id": "inhga_hydrological_warnings",
       "ok": true,
-      "items": 7
+      "items": 8
     },
     {
       "id": "distributie_oltenia_valcea_planned",
       "ok": true,
       "items": 2
+    },
+    {
+      "id": "apavil_valcea_outages",
+      "ok": true,
+      "items": 10
     },
     {
       "id": "se_intampla_in_valcea",

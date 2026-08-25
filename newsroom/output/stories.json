@@ -108,6 +108,46 @@
   ],
   "holds": [
     {
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_cazanesti1008.pdf",
+      "reason": "APAVIL_EXPIRED:2026-08-10T15:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_rm_vl_300726.pdf",
+      "reason": "APAVIL_EXPIRED:2026-07-30T17:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_Rm_Valcea_06.07.2026.pdf",
+      "reason": "APAVIL_EXPIRED:2026-07-07T17:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire_Pausesti_Maglasi 24.06.2026.pdf",
+      "reason": "APAVIL_EXPIRED:2026-06-24T18:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/oprire Vladesti 11 iun 26.pdf",
+      "reason": "APAVIL_EXPIRED:2026-06-11T16:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/2026,anunt oprire Energetic,Doru Popian,Barajului.pdf",
+      "reason": "APAVIL_EXPIRED:2026-05-28T18:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/intrerupere Timis - 13.05.2026.pdf",
+      "reason": "APAVIL_EXPIRED:2026-05-13T16:00:00+03:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/intrerupere_horezu_240426.pdf",
+      "reason": "APAVIL_UNRESOLVED:DATE,INTERVAL"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/anunt oprire Timis.pdf",
+      "reason": "APAVIL_EXPIRED:2026-03-11T14:00:00+02:00"
+    },
+    {
+      "url": "https://apavil.ro/materiale/anunturi/2026/intrerupere _14012026.pdf",
+      "reason": "APAVIL_EXPIRED:2026-01-14T16:00:00+02:00"
+    },
+    {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-756",
       "reason": "STALE_DETAIL:2026-08-19:6d"
     },
@@ -122,6 +162,10 @@
     {
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
       "reason": "STALE_DETAIL:2026-08-12:13d"
+    },
+    {
+      "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-4-din-25-08-2026/",
+      "reason": "INHGA_NOT_VALCEA"
     },
     {
       "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-3-din-25-08-2026/",

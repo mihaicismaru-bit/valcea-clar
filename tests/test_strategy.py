@@ -17,6 +17,10 @@ class StrategyCoverageTests(unittest.TestCase):
   self.assertEqual(src['publication_scope'],'candidate_only'); pub=json.loads((ROOT/'newsroom/publication.json').read_text(encoding='utf-8')); self.assertNotIn(src['id'],pub['allowed_source_ids'])
  def test_growth_inventory_tracks_utility_calendar(self):
   methods=json.loads((ROOT/'strategy/growth_inventory.json').read_text(encoding='utf-8'))['methods']; row=next(x for x in methods if x['id']=='planned_utility_calendar')
-  self.assertEqual(row['status'],'IMPLEMENTAT_PARTIAL'); self.assertEqual(row['editorial_risk'],'low')
+  self.assertEqual(row['status'],'TESTAT'); self.assertEqual(row['editorial_risk'],'low'); self.assertIn('APAVIL',row['evidence'])
+ def test_apavil_closes_water_gap_only_in_candidate_mode(self):
+  matrix=json.loads((ROOT/'strategy/source_coverage_matrix.json').read_text(encoding='utf-8'))
+  self.assertEqual(matrix['coverage_profiles']['county_default']['water_sewer'],'STRUCTURED_CANDIDATE')
+  self.assertTrue(any(x['source_id']=='apavil_valcea_outages' and x['status']=='structured_candidate' for x in matrix['source_scope']))
 
 if __name__=='__main__': unittest.main()

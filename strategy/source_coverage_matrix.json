@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_local": "2026-08-25T21:42:00+03:00",
+  "updated_local": "2026-08-25T22:38:00+03:00",
   "objective": "Măsurarea acoperirii editoriale oficiale pentru fiecare UAT și fiecare nevoie informațională, fără a confunda raza județeană a unei surse cu existența unei surse locale directe.",
   "county_structure": {"total_uats": 89, "municipalities": 2, "towns": 9, "communes": 78},
   "status_legend": {
@@ -8,6 +8,7 @@
     "COUNTY_T1": "sursă oficială județeană cu mandat relevant pentru toate UAT-urile",
     "COUNTY_T1_PARTIAL": "sursă oficială județeană care acoperă numai o parte din nevoie",
     "OFFICIAL_DISCOVERY": "index oficial integrat în candidate mode; încă fără parser/publicare",
+    "STRUCTURED_CANDIDATE": "sursă oficială cu extragere structurată și expiry gate testate; publicarea rămâne neautorizată",
     "GAP": "nu există încă o sursă canonică suficientă"
   },
   "needs": [
@@ -30,7 +31,7 @@
       "emergency_safety":"COUNTY_T1",
       "weather_hydrology":"COUNTY_T1_PARTIAL",
       "electricity":"OFFICIAL_DISCOVERY",
-      "water_sewer":"GAP",
+      "water_sewer":"STRUCTURED_CANDIDATE",
       "roads_transport":"GAP",
       "education":"COUNTY_T1_PARTIAL",
       "health":"GAP",
@@ -44,7 +45,7 @@
       "emergency_safety":"COUNTY_T1",
       "weather_hydrology":"COUNTY_T1_PARTIAL",
       "electricity":"OFFICIAL_DISCOVERY",
-      "water_sewer":"GAP",
+      "water_sewer":"STRUCTURED_CANDIDATE",
       "roads_transport":"GAP",
       "education":"COUNTY_T1_PARTIAL",
       "health":"GAP",
@@ -153,11 +154,12 @@
     {"source_id":"inhga_hydrological_warnings","needs":["weather_hydrology"],"uat_scope":"affected_areas_only"},
     {"source_id":"isj_valcea_comunicate","needs":["education"],"uat_scope":"county_partial"},
     {"source_id":"ajofm_valcea_feed","needs":["jobs_economy"],"uat_scope":"county_partial"},
-    {"source_id":"distributie_oltenia_valcea_planned","needs":["electricity"],"uat_scope":"affected_localities_weekly","status":"candidate_discovery"}
+    {"source_id":"distributie_oltenia_valcea_planned","needs":["electricity"],"uat_scope":"affected_localities_weekly","status":"candidate_discovery"},
+    {"source_id":"apavil_valcea_outages","needs":["water_sewer"],"uat_scope":"affected_localities_per_notice","status":"structured_candidate"}
   ],
   "ranked_gaps": [
     {"rank":1,"need":"electricity","action":"Integrate weekly official index","status":"IMPLEMENTED_DISCOVERY","impact":"high","editorial_risk":"low","cost":"low","effort":"low_medium","measurability":"high"},
-    {"rank":2,"need":"water_sewer","action":"Identify APAVIL/ADI APA outage and works surface with locality extraction","status":"NEXT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high"},
+    {"rank":2,"need":"water_sewer","action":"Integrate APAVIL outage index with date, interval, UAT and expiry gates","status":"IMPLEMENTED_STRUCTURED_CANDIDATE","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high"},
     {"rank":3,"need":"roads_transport","action":"Map CNAIR/DRDP/CJ road restrictions and public transport notices","status":"GAP","impact":"high","editorial_risk":"low_medium","cost":"low","effort":"medium_high","measurability":"high"},
     {"rank":4,"need":"weather_hydrology","action":"Add ANM structured warnings with explicit Vâlcea relevance and expiry","status":"GAP_PARTIAL","impact":"high","editorial_risk":"low_medium","cost":"low","effort":"medium","measurability":"high"},
     {"rank":5,"need":"health","action":"Add DSP Vâlcea alerts and service notices","status":"GAP","impact":"high","editorial_risk":"medium","cost":"low","effort":"medium","measurability":"medium_high"}

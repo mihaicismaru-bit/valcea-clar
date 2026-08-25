@@ -57,9 +57,10 @@ def items(src,text):
             if not title: continue
             tl=title.lower()
             if tl in GLOBAL_NAV or tl in excluded: continue
-            u=urllib.parse.urljoin(base,url); path=urllib.parse.urlparse(u).path.lower(); inc=src.get('include_path_contains') or []
+            u=urllib.parse.urljoin(base,url); parsed=urllib.parse.urlparse(u); path=parsed.path.lower(); query=parsed.query.lower(); inc=src.get('include_path_contains') or []; qinc=src.get('include_query_contains') or []
             if len(title)<src.get('min_title_length',12): continue
             if inc and not any(x.lower() in path for x in inc): continue
+            if qinc and not any(x.lower() in query for x in qinc): continue
             if src.get('same_host_only') and urllib.parse.urlparse(u).netloc!=urllib.parse.urlparse(base).netloc: continue
             out.append((title,u))
     seen=set(); rows=[]
@@ -177,6 +178,46 @@ def inhga_story(c,detail,now=None):
     story['structured_facts']=facts; story['source_candidate']['structured_facts']=facts
     return story,None
 
+def parse_apavil_outage(detail):
+    txt=clean(detail); low=fold(txt)
+    m=re.search(r'(?:în\s+)?data\s+de\s+(\d{1,2})[.\-/](\d{1,2})[.\-/](20\d{2})',txt,re.I)
+    outage_date=date(int(m.group(3)),int(m.group(2)),int(m.group(1))) if m else None
+    tm=re.search(r'interval(?:ul)?(?:\s+orar)?\s+(\d{1,2})[:.]?(\d{2})\s*[–—-]\s*(\d{1,2})[:.]?(\d{2})',txt,re.I)
+    start=end=None
+    if outage_date and tm:
+        try:
+            start=datetime(outage_date.year,outage_date.month,outage_date.day,int(tm.group(1)),int(tm.group(2)),tzinfo=ZoneInfo('Europe/Bucharest'))
+            end=datetime(outage_date.year,outage_date.month,outage_date.day,int(tm.group(3)),int(tm.group(4)),tzinfo=ZoneInfo('Europe/Bucharest'))
+            if end<=start: end+=timedelta(days=1)
+        except ValueError: start=end=None
+    uats=[]
+    matrix=load(ROOT/'strategy/source_coverage_matrix.json')
+    for row in matrix.get('uats',[]):
+        name=row['name']
+        name_pattern=re.escape(fold(name)).replace(r'\-',r'[-\s]+')
+        if re.search(r'(?<!\w)'+name_pattern+r'(?!\w)',low): uats.append(name)
+    reason='planned_work'
+    if any(x in low for x in ('avarie','remediere','defectiuni','pierderii de apa')): reason='repair_or_fault'
+    return {'outage_date':outage_date.isoformat() if outage_date else None,'valid_from':start.isoformat() if start else None,'valid_until':end.isoformat() if end else None,'uats':uats,'reason':reason}
+
+def apavil_story(c,detail,now=None):
+    facts=parse_apavil_outage(detail); missing=[]
+    if not facts['outage_date']: missing.append('DATE')
+    if not facts['valid_from'] or not facts['valid_until']: missing.append('INTERVAL')
+    if not facts['uats']: missing.append('UAT')
+    if missing: return None,'APAVIL_UNRESOLVED:'+','.join(missing)
+    now=now or datetime.now(ZoneInfo('Europe/Bucharest')); start=datetime.fromisoformat(facts['valid_from']); end=datetime.fromisoformat(facts['valid_until'])
+    if end<=now: return None,'APAVIL_EXPIRED:'+facts['valid_until']
+    if start>now+timedelta(days=7): return None,'APAVIL_FUTURE_OUT_OF_WINDOW:'+facts['valid_from']
+    where=' și '.join(facts['uats'][:2]) if len(facts['uats'])<=2 else f'{len(facts["uats"])} localități din Vâlcea'
+    head=f'APAVIL: apă oprită în {where}, pe {start.strftime("%d.%m")}, între {start.strftime("%H:%M")} și {end.strftime("%H:%M")}'
+    p=[f'APAVIL anunță întreruperea furnizării apei în {where}, în intervalul {start.strftime("%d.%m.%Y, %H:%M")}–{end.strftime("%H:%M")}.',
+       'Lista exactă a străzilor, imobilelor și zonelor afectate trebuie consultată în anunțul oficial, deoarece alimentarea poate fi întreruptă doar parțial în unele localități.',
+       'După reluarea furnizării pot apărea temporar impurități sau variații de presiune; recomandările operatorului din anunțul oficial au prioritate.']
+    story=product(c,head,'Întrerupere de apă extrasă din anunțul oficial APAVIL și păstrată în candidate mode.',p,'UTILITĂȚI')
+    story['structured_facts']=facts; story['source_candidate']['structured_facts']=facts
+    return story,None
+
 def product(c,h,d,p,section):
     ident=(c['source_id']+'-'+hashlib.sha1(c['url'].encode()).hexdigest()[:16])[:80]
     return {'id':ident,'section':section,'headline':h,'dek':d,'paragraphs':p,'sources':[{'name':c['source_name'],'url':c['url'],'tier':c['tier']}],'source_candidate':c,'status':'DRAFT_CANDIDATE_ONLY','image':None}
@@ -247,13 +288,14 @@ def cycle(fixtures=False):
         if c['decision']!='READY': continue
         src=next((s for s in cfg['sources'] if s['id']==c['source_id']),{}); adapter=src.get('structured_detail_adapter')
         if not adapter: continue
-        try: detail=c.get('detail') or fetch(c['url'])
+        try: detail=c.get('detail') or (c['title'] if adapter=='apavil_outage_index_title' else fetch(c['url']))
         except Exception as e: holds.append({'url':c['url'],'reason':'DETAIL_FETCH:'+str(e)[:120]}); continue
         stale=freshness_hold(src,c,detail)
         if stale: holds.append({'url':c['url'],'reason':stale}); continue
         if adapter=='cj_agenda': s=cj_story(c,detail); hold=None
         elif adapter=='isu_release': s,hold=isu_story(c,detail,pol)
         elif adapter=='inhga_warning': s,hold=inhga_story(c,detail)
+        elif adapter=='apavil_outage_index_title': s,hold=apavil_story(c,detail)
         else: s=None; hold='NO_ADAPTER'
         if hold: holds.append({'url':c['url'],'reason':hold}); continue
         if s: s['image']=choose_media(s); stories.append(s)
