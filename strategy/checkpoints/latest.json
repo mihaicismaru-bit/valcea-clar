@@ -1,18 +1,20 @@
 {
-  "checkpoint_id": "VC-AUTO-006",
-  "checked_local": "2026-08-26T00:40:00+03:00",
+  "checkpoint_id": "VC-AUTO-007",
+  "checked_local": "2026-08-26T01:38:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
-    "working_branch": "automation/vc-auto-003",
-    "draft_pr": 13,
+    "working_branch": "automation/vc-auto-007-integration",
+    "draft_pr": 14,
+    "superseded_pr": 13,
+    "base_main": "2bf6ecfcb8b07a8552e5163d95e8991e0f4aaab0",
     "core_publication_mode": "candidate_only",
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "No publication authority was broadened. Distribuție Oltenia, APAVIL and INHGA remain outside the live allow-list."
+    "note": "The source-coverage work was rebuilt on current main without copying stale dynamic outputs. No production merge or publication-authority change was made."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T00:36:11+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T01:30:48+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -21,47 +23,29 @@
       "Distribuție Oltenia next-week schedule: 27/27 rows parsed; 12 rows in the seven-day horizon across ten localities on 31.08 and 01.09",
       "INHGA warning 92 remains candidate-only through 26.08.2026 24:00"
     ],
+    "tomorrow_locality_brief": "For 27.08: Călimănești 09:30–14:30 and Stroești 09:00–17:00",
     "new_signals": [],
-    "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts were rejected by the live promoter because their source IDs are not authorized."
+    "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list."
   },
   "development_micro_lot": {
-    "name": "UTILITY STRUCTURE 02",
+    "name": "REPOSITORY INTEGRATION 01",
     "result": "completed",
-    "selected_source": "distributie_oltenia_valcea_planned",
-    "official_surface": "https://www.distributieoltenia.ro/en/support/planned-maintenance-and-fault-correction/valcea.html",
-    "live_result": "The complex next-week PDF advanced from 13/27 to 27/27 structured rows with exact day grouping: 5, 7, 3, 6 and 6 rows from 31.08 through 04.09. Seven rows are short-duration interruption pairs.",
-    "optimization": "Switched PDF extraction to semantic content-stream order and added support for merged date cells, wrapped locality names, split localities, short-duration pairs, canonical UAT normalization, row-level deduplication and expiry.",
-    "retention_product": "Generated candidate-only tomorrow_locality_brief.json. For 27.08 it contains only Călimănești and Stroești, with interval, zone, interruption type and official source.",
-    "verification": "37 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed."
+    "old_pr": 13,
+    "new_pr": 14,
+    "integration_method": "Started from current main, applied only canonical source/code/strategy/test changes, then regenerated newsroom outputs and seen state through a fresh live scan.",
+    "conflict_treatment": "Newer main radar state was not overwritten manually. The old conflicting PR is superseded and preserved as evidence.",
+    "verification": "37 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed before opening the replacement draft PR."
   },
   "growth_inventory": {
     "mechanisms_total": 24,
-    "changed": [
-      {
-        "id": "planned_utility_calendar",
-        "status": "TESTAT",
-        "impact": "high_county",
-        "editorial_risk": "low",
-        "measurability": "high",
-        "evidence": "10/10 simple-week and 27/27 complex-week electricity rows parsed; unresolved or incomplete tables still fail closed"
-      },
-      {
-        "id": "tomorrow_locality_brief",
-        "previous_status": "DE_TESTAT",
-        "status": "TESTAT",
-        "impact": "high_county",
-        "editorial_risk": "low",
-        "cost": "low",
-        "effort": "medium",
-        "measurability": "high"
-      }
-    ]
+    "changed": [],
+    "note": "No acquisition or retention status changed in this integration-only micro-lot."
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
     "No certified or first-party County Reach baseline exists yet.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
-    "Draft PR #13 conflicts with independently advanced main at 9506c71; production remains unchanged and no forced merge was attempted."
+    "Draft PR #14 must remain unmerged until GitHub CI and mergeability checks confirm the reconstructed branch."
   ],
-  "next_micro_lot": "REPOSITORY INTEGRATION 01 — reconstruct PR #13 cleanly on current main without overwriting independent changes or merging production; after a green conflict-free PR, continue with DISCOVER/SEO 01 (NewsArticle, max-image-preview:large and article image policy)."
+  "next_micro_lot": "DISCOVER/SEO 01 — add validated NewsArticle structured data, max-image-preview:large, canonical article image rules and tests, without changing editorial or publication gates."
 }
