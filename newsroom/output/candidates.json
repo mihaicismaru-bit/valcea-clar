@@ -60,6 +60,17 @@
       "source_id": "inhga_hydrological_warnings",
       "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
       "tier": "T1",
+      "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-4-din-25-08-2026/",
+      "title": "AVERTIZARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 4 DIN 25.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
       "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-3-din-25-08-2026/",
       "title": "AVERTIZARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 3 DIN 25.08.2026",
       "score": 56,
@@ -428,17 +439,6 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/24/cum-incearca-autoritatile-sa-salveze-termoficarea-din-ramnicu-valcea-de-ce-are-nevoie-cet-govora-de-40-de-milioane-de-lei-de-la-guvern/",
-      "title": "Cum încearcă autoritățile să salveze termoficarea din Râmnicu Vâlcea: de ce are nevoie CET Govora de 40 de milioane de lei de la Guvern",
-      "score": 48,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
@@ -481,6 +481,17 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/acum-accident-pe-valea-oltului-la-lotrisor-impact-intre-un-tir-si-un-microbuz/",
+      "title": "FOTO/UPDATE – ACCIDENT pe VALEA OLTULUI, la Lotrișor. Impact între un TIR și un microbuz",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -541,6 +552,17 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/ro-alert-in-mai-multe-localitati-din-valcea-cod-portocaliu-de-ploi-torentiale-grindina-si-rafale-puternice/",
+      "title": "RO-Alert în mai multe localități din Vâlcea: Cod portocaliu de ploi torențiale, grindină și rafale puternice",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/25/expozitie-cu-15-artisti-la-centrul-cultural-valcea-vernisajul-are-loc-joi/",
       "title": "Expoziție cu 15 artiști la Centrul Cultural Vâlcea. Vernisajul are loc joi",
       "score": 36,
@@ -596,15 +618,15 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/25/foto-casa-mistuita-de-flacari-intr-o-comuna-din-valcea-risc-de-explozie/",
-      "title": "FOTO – Casă mistuită de flăcări într-o comună din Vâlcea. Risc de explozie…",
+      "url": "https://evenimentvalcean.ro/foto-tragedie-pe-dn-7-la-lotrisor-un-sofer-a-murit-dupa-ce-autoutilitara-sa-a-intrat-sub-semiremorca-unui-tir/",
+      "title": "FOTO Tragedie pe DN 7 la Lotrișor! Un șofer a murit după ce autoutilitara sa a intrat sub semiremorca unui TIR",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -722,17 +744,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/fanfara-in-concert-la-baile-olanesti-muzica-de-promenada-in-parcul-unirii/",
-      "title": "Fanfară în concert la Băile Olănești. Muzică de promenadă în Parcul Unirii",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -838,7 +849,7 @@
     {
       "id": "inhga_hydrological_warnings",
       "ok": true,
-      "items": 7
+      "items": 8
     },
     {
       "id": "se_intampla_in_valcea",
