@@ -329,6 +329,17 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-incendiu-la-o-casa-din-pesceana-trei-butelii-cu-gaz-scoase-de-pompieri/",
+      "title": "FOTO Incendiu la o casă din Pesceana. Trei butelii cu gaz, scoase de pompieri",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
       "url": "https://evenimentvalcean.ro/cet-govora-la-un-pas-de-marea-schimbare-40-de-milioane-de-lei-pentru-ca-ramnicul-sa-aiba-apa-calda-si-caldura/",
       "title": "CET Govora, la un pas de marea schimbare! 40 de milioane de lei pentru ca Râmnicul să aibă apă caldă și căldură",
       "score": 48,
@@ -403,17 +414,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/istorie-pentru-voleiul-romanesc-romania-victorie-spectaculoasa-la-mondialul-u17/",
-      "title": "Istorie pentru voleiul românesc! România, victorie spectaculoasă la Mondialul U17",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -445,6 +445,28 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/prins-drogat-prin-ramnicu-valcea-vezi-ce-a-consumat/",
+      "title": "Prins DROGAT prin RÂMNICU VÂLCEA. Vezi ce a consumat!",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/foto-casa-mistuita-de-flacari-intr-o-comuna-din-valcea-risc-de-explozie/",
+      "title": "FOTO – Casă mistuită de flăcări într-o comună din Vâlcea. Risc de explozie…",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -495,26 +517,50 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/23/foto-video-o-femeie-din-ramnicu-valcea-a-fost-injunghiata-de-sot/",
-      "title": "FOTO/VIDEO. O femeie din Râmnicu Vâlcea a fost înjunghiată de soțul septuagenar",
+      "url": "https://evenimentvalcean.ro/sofer-din-budesti-depistat-drogat-la-volan-in-ramnicu-valcea-analizele-au-confirmat-prezenta-unei-substante-psihoactive/",
+      "title": "Șofer din Budești, depistat drogat la volan în Râmnicu Vâlcea. Analizele au confirmat prezența unei substanțe psihoactive",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/23/tanara-plecata-de-acasa-din-ramnicu-valcea-parintii-au-dat-o-disparuta/",
-      "title": "Tânără plecată de acasă, din Râmnicu Vâlcea. Părinții au dat-o dispărută",
+      "url": "https://evenimentvalcean.ro/doua-amicale-de-gala-pentru-cs-valcea-1924-lupii-negri-primele-teste-ale-pauzei-cu-u-bt-cluj-napoca/",
+      "title": "Două amicale de gală pentru CS Vâlcea 1924. Lupii Negri, primele teste ale pauzei, cu U-BT Cluj-Napoca",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/fanfara-in-concert-la-baile-olanesti-muzica-de-promenada-in-parcul-unirii/",
+      "title": "Fanfară în concert la Băile Olănești. Muzică de promenadă în Parcul Unirii",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/si-a-batut-concubina-pana-a-murit-un-barbat-de-40-de-ani-din-berbesti-propus-pentru-arestare-preventiva/",
+      "title": "Și-a bătut concubina până a murit. Un bărbat de 40 de ani din Berbești propus pentru arestare preventivă",
+      "score": 36,
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "arest"
+      ],
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -568,52 +614,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/24-august-1787-ziua-in-care-un-razboi-european-avea-sa-ajunga-si-la-cozia/",
       "title": "24 august 1787. Ziua în care un război european avea să ajungă și la Cozia",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/cs-valcea-1924-in-lupta-pentru-titlul-national-la-u12/",
-      "title": "CS Vâlcea 1924, în lupta pentru titlul național la U12",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/scm-ramnicu-valcea-la-un-pas-de-bronzul-supercupei-csm-bucuresti-a-castigat-dramatic-dupa-prelungiri/",
-      "title": "SCM Râmnicu Vâlcea, la un pas de bronzul Supercupei! CSM București a câștigat dramatic, după prelungiri",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/barbat-din-gusoeni-retinut-dupa-ce-si-a-agresat-mama-si-si-a-amenintat-tatal/",
-      "title": "Bărbat din Gușoeni reținut după ce și-a agresat mama și și-a amenințat tatăl",
-      "score": 36,
-      "decision": "REVIEW_REQUIRED",
-      "risks": [
-        "rețin"
-      ],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/23-august-la-valcea-ziua-in-care-orasul-era-cuprins-de-defilari-lozinci-si-sarbatoare/",
-      "title": "23 August la Vâlcea! Ziua în care orașul era cuprins de defilări, lozinci și sărbătoare",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
