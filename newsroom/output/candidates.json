@@ -359,17 +359,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/lapusata-merge-inainte-investitii-proiecte-si-o-administratie-preocupata-de-dezvoltarea-comunei/",
-      "title": "Lăpușata merge înainte! Investiții, proiecte și o administrație preocupată de dezvoltarea comunei",
-      "score": 48,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -389,7 +378,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -455,7 +444,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -469,7 +458,7 @@
         "acuza",
         "arest"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -510,6 +499,19 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-alerta-in-nordul-ramnicului-barbat-acuzat-ca-urmarea-si-hartuia-fete-identificat-si-internat-de-politisti/",
+      "title": "FOTO Alertă în Nordul Râmnicului! Bărbat acuzat că urmărea și hărțuia fete, identificat și internat de polițiști",
+      "score": 36,
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "acuza"
+      ],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
       "url": "https://evenimentvalcean.ro/foto-cine-este-barbatul-acuzat-ca-si-a-ucis-concubina-in-berbesti-arestat-preventiv/",
       "title": "FOTO Cine este bărbatul acuzat că și-a ucis concubina în Berbești, arestat preventiv",
       "score": 36,
@@ -518,7 +520,7 @@
         "acuza",
         "arest"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -632,7 +634,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -654,7 +656,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
