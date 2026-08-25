@@ -2,6 +2,11 @@
   "status": "AUTO_PUBLISH_ACTIVE",
   "queue": [
     {
+      "id": "distributie_oltenia_valcea_planned-f925c0ab75a52530",
+      "headline": "Întreruperi programate de curent în 6 localități din Vâlcea, între 26.08 și 28.08",
+      "status": "CANDIDATE_ONLY"
+    },
+    {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",
       "headline": "Cod galben hidrologic pentru râuri din Vâlcea, până la 26.08, ora 24:00",
       "status": "CANDIDATE_ONLY"

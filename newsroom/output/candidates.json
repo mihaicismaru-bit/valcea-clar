@@ -21,7 +21,55 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": true
+      "seen_before": true,
+      "structured_facts": {
+        "parsed_rows": 10,
+        "total_time_rows": 10,
+        "active_rows": [
+          {
+            "id": "79feaa3a32366104",
+            "uat": "Drăgășani",
+            "valid_from": "2026-08-26T09:00:00+03:00",
+            "valid_until": "2026-08-26T17:00:00+03:00",
+            "zone": "PTCZ Bloc D2 Drăgăşani, PTCZ Policlinică Drăgăşani"
+          },
+          {
+            "id": "d3d04f67a93ce880",
+            "uat": "Nicolae Bălcescu",
+            "valid_from": "2026-08-26T09:00:00+03:00",
+            "valid_until": "2026-08-26T17:00:00+03:00",
+            "zone": "LEA JT PTA Dosul Râului 2"
+          },
+          {
+            "id": "8b763820d23faeab",
+            "uat": "Stroești",
+            "valid_from": "2026-08-27T09:00:00+03:00",
+            "valid_until": "2026-08-27T17:00:00+03:00",
+            "zone": "LEA JT PTA Pojogi"
+          },
+          {
+            "id": "9f5d3c0d041aa548",
+            "uat": "Călimănești",
+            "valid_from": "2026-08-27T09:30:00+03:00",
+            "valid_until": "2026-08-27T14:30:00+03:00",
+            "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5"
+          },
+          {
+            "id": "7dc9ba5ea55f3582",
+            "uat": "Râmnicu Vâlcea",
+            "valid_from": "2026-08-28T09:00:00+03:00",
+            "valid_until": "2026-08-28T17:00:00+03:00",
+            "zone": "PTCZ Mihai Bravu 2"
+          },
+          {
+            "id": "c1febb011bcf861d",
+            "uat": "Stoenești",
+            "valid_from": "2026-08-28T09:00:00+03:00",
+            "valid_until": "2026-08-28T17:00:00+03:00",
+            "zone": "LEA JT PTA Mogoşeşti, LEA JT PTA Gruieri"
+          }
+        ]
+      }
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -32,7 +80,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -43,7 +91,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -54,7 +102,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -65,7 +113,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -76,7 +124,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -87,7 +135,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -98,7 +146,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -109,7 +157,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -120,7 +168,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "apavil_valcea_outages",
@@ -131,7 +179,7 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "isu_valcea_comunicate",
@@ -684,6 +732,17 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/ro-alert-in-mai-multe-localitati-din-valcea-cod-portocaliu-de-ploi-torentiale-grindina-si-rafale-puternice/",
+      "title": "RO-Alert în mai multe localități din Vâlcea: Cod portocaliu de ploi torențiale, grindină și rafale puternice",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/25/expozitie-cu-15-artisti-la-centrul-cultural-valcea-vernisajul-are-loc-joi/",
       "title": "Expoziție cu 15 artiști la Centrul Cultural Vâlcea. Vernisajul are loc joi",
       "score": 36,
@@ -739,11 +798,11 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/25/foto-casa-mistuita-de-flacari-intr-o-comuna-din-valcea-risc-de-explozie/",
-      "title": "FOTO – Casă mistuită de flăcări într-o comună din Vâlcea. Risc de explozie…",
+      "url": "https://evenimentvalcean.ro/foto-tragedie-pe-dn-7-la-lotrisor-un-sofer-a-murit-dupa-ce-autoutilitara-sa-a-intrat-sub-semiremorca-unui-tir/",
+      "title": "FOTO Tragedie pe DN 7 la Lotrișor! Un șofer a murit după ce autoutilitara sa a intrat sub semiremorca unui TIR",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
@@ -859,17 +918,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/doua-amicale-de-gala-pentru-cs-valcea-1924-lupii-negri-primele-teste-ale-pauzei-cu-u-bt-cluj-napoca/",
       "title": "Două amicale de gală pentru CS Vâlcea 1924. Lupii Negri, primele teste ale pauzei, cu U-BT Cluj-Napoca",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/fanfara-in-concert-la-baile-olanesti-muzica-de-promenada-in-parcul-unirii/",
-      "title": "Fanfară în concert la Băile Olănești. Muzică de promenadă în Parcul Unirii",
       "score": 36,
       "decision": "WATCH",
       "risks": [],

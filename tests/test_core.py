@@ -41,6 +41,17 @@ class T(unittest.TestCase):
   detail=(ROOT/'tests/fixtures/distributie_oltenia_valcea_index.html').read_text(encoding='utf-8'); rows=newsroom.items(src,detail)
   self.assertEqual(len(rows),2); self.assertIn('31.08 - 06.09.2026',rows[0][0]); self.assertIn('24.08 - 30.08.2026',rows[1][0])
   pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn(src['id'],pub['allowed_source_ids'])
+ def test_distributie_schedule_rows_deduplicate_expire_and_stay_candidate(self):
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_schedule.txt').read_text(encoding='utf-8'); facts=newsroom.parse_distributie_schedule(detail,'https://example.test/week.pdf')
+  self.assertEqual(facts['total_time_rows'],10); self.assertEqual(facts['parsed_rows'],10); self.assertEqual(len({x['id'] for x in facts['rows']}),10)
+  candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'Valcea - Intreruperi 24.08 - 30.08.2026','score':68,'decision':'READY','risks':[]}
+  story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,25,23,30,tzinfo=newsroom.ZoneInfo('Europe/Bucharest')))
+  self.assertIsNone(hold); self.assertEqual(len(story['structured_facts']['active_rows']),6); self.assertIn('6 localități',story['headline'])
+  story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,31,0,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'DISTRIBUTIE_NO_ACTIVE_ROWS')
+ def test_distributie_partial_table_fails_closed(self):
+  detail='SĂPTĂMÂNA 31.08 - 06.09.2026 - VÂLCEA\n 31.08\n 09:00 - 17:00  Drăgășani  Zona A\n 09:00 - 17:00\n 09:00 - 17:00\n'
+  candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'test','score':68,'decision':'READY','risks':[]}
+  story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,25,23,30,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'DISTRIBUTIE_PARTIAL_TABLE:1/3')
  def test_apavil_index_and_structured_expiry_gate(self):
   cfg=newsroom.load(ROOT/'newsroom/sources.json'); src=next(x for x in cfg['sources'] if x['id']=='apavil_valcea_outages')
   index=(ROOT/'tests/fixtures/apavil_outages_index.html').read_text(encoding='utf-8'); rows=newsroom.items(src,index)

@@ -198,6 +198,7 @@
       ],
       "local_by_definition": true,
       "material_by_definition": true,
+      "structured_detail_adapter": "distributie_schedule_pdf",
       "publication_scope": "candidate_only",
       "relevance_rule": "valcea_weekly_schedule_index"
     },

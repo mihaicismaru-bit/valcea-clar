@@ -2,6 +2,209 @@
   "status": "candidate_only",
   "stories": [
     {
+      "id": "distributie_oltenia_valcea_planned-f925c0ab75a52530",
+      "section": "UTILITĂȚI",
+      "headline": "Întreruperi programate de curent în 6 localități din Vâlcea, între 26.08 și 28.08",
+      "dek": "Calendar oficial de lucrări, structurat pe localitate și interval și păstrat în candidate mode.",
+      "paragraphs": [
+        "Distribuție Oltenia a programat lucrări care întrerup temporar alimentarea cu energie electrică în zone din Călimănești, Drăgășani, Nicolae Bălcescu, Râmnicu Vâlcea, Stoenești, Stroești.",
+        "26.08.2026: Drăgășani (09:00–17:00), Nicolae Bălcescu (09:00–17:00).",
+        "27.08.2026: Stroești (09:00–17:00), Călimănești (09:30–14:30).",
+        "28.08.2026: Râmnicu Vâlcea (09:00–17:00), Stoenești (09:00–17:00).",
+        "Lucrările pot fi reprogramate dacă vremea este nefavorabilă; programul actualizat al operatorului are prioritate."
+      ],
+      "sources": [
+        {
+          "name": "Distribuție Oltenia — întreruperi programate Vâlcea",
+          "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Faugust%2F24.08-30.08%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2024_08%20-%2030_08_2026%20-%20Valcea.pdf",
+          "tier": "T1"
+        }
+      ],
+      "source_candidate": {
+        "source_id": "distributie_oltenia_valcea_planned",
+        "source_name": "Distribuție Oltenia — întreruperi programate Vâlcea",
+        "tier": "T1",
+        "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Faugust%2F24.08-30.08%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2024_08%20-%2030_08_2026%20-%20Valcea.pdf",
+        "title": "Valcea - Intreruperi 24.08 - 30.08.2026",
+        "score": 68,
+        "decision": "READY",
+        "risks": [],
+        "seen_before": true,
+        "structured_facts": {
+          "parsed_rows": 10,
+          "total_time_rows": 10,
+          "active_rows": [
+            {
+              "id": "79feaa3a32366104",
+              "uat": "Drăgășani",
+              "valid_from": "2026-08-26T09:00:00+03:00",
+              "valid_until": "2026-08-26T17:00:00+03:00",
+              "zone": "PTCZ Bloc D2 Drăgăşani, PTCZ Policlinică Drăgăşani"
+            },
+            {
+              "id": "d3d04f67a93ce880",
+              "uat": "Nicolae Bălcescu",
+              "valid_from": "2026-08-26T09:00:00+03:00",
+              "valid_until": "2026-08-26T17:00:00+03:00",
+              "zone": "LEA JT PTA Dosul Râului 2"
+            },
+            {
+              "id": "8b763820d23faeab",
+              "uat": "Stroești",
+              "valid_from": "2026-08-27T09:00:00+03:00",
+              "valid_until": "2026-08-27T17:00:00+03:00",
+              "zone": "LEA JT PTA Pojogi"
+            },
+            {
+              "id": "9f5d3c0d041aa548",
+              "uat": "Călimănești",
+              "valid_from": "2026-08-27T09:30:00+03:00",
+              "valid_until": "2026-08-27T14:30:00+03:00",
+              "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5"
+            },
+            {
+              "id": "7dc9ba5ea55f3582",
+              "uat": "Râmnicu Vâlcea",
+              "valid_from": "2026-08-28T09:00:00+03:00",
+              "valid_until": "2026-08-28T17:00:00+03:00",
+              "zone": "PTCZ Mihai Bravu 2"
+            },
+            {
+              "id": "c1febb011bcf861d",
+              "uat": "Stoenești",
+              "valid_from": "2026-08-28T09:00:00+03:00",
+              "valid_until": "2026-08-28T17:00:00+03:00",
+              "zone": "LEA JT PTA Mogoşeşti, LEA JT PTA Gruieri"
+            }
+          ]
+        }
+      },
+      "status": "DRAFT_CANDIDATE_ONLY",
+      "image": null,
+      "structured_facts": {
+        "year": 2026,
+        "total_time_rows": 10,
+        "parsed_rows": 10,
+        "unresolved_rows": [],
+        "rows": [
+          {
+            "id": "4b8f9e66c0d51679",
+            "uat": "Drăgășani",
+            "valid_from": "2026-08-24T09:00:00+03:00",
+            "valid_until": "2026-08-24T17:00:00+03:00",
+            "zone": "PTCZ Spital Drăgăşani, PTCZ Uzină Drăgăşani"
+          },
+          {
+            "id": "72c8693d4be0aa4f",
+            "uat": "Stoenești",
+            "valid_from": "2026-08-24T09:00:00+03:00",
+            "valid_until": "2026-08-24T17:00:00+03:00",
+            "zone": "LEA JT PTA Bârlogu"
+          },
+          {
+            "id": "e8f75cbe2f010489",
+            "uat": "Berbești",
+            "valid_from": "2026-08-25T09:00:00+03:00",
+            "valid_until": "2026-08-25T17:00:00+03:00",
+            "zone": "LEA JT PTA Berbeşti 3"
+          },
+          {
+            "id": "0d6207817fd73221",
+            "uat": "Drăgășani",
+            "valid_from": "2026-08-25T09:00:00+03:00",
+            "valid_until": "2026-08-25T17:00:00+03:00",
+            "zone": "PTCZ Rahova 1, PTCZ Rahova 2"
+          },
+          {
+            "id": "79feaa3a32366104",
+            "uat": "Drăgășani",
+            "valid_from": "2026-08-26T09:00:00+03:00",
+            "valid_until": "2026-08-26T17:00:00+03:00",
+            "zone": "PTCZ Bloc D2 Drăgăşani, PTCZ Policlinică Drăgăşani"
+          },
+          {
+            "id": "d3d04f67a93ce880",
+            "uat": "Nicolae Bălcescu",
+            "valid_from": "2026-08-26T09:00:00+03:00",
+            "valid_until": "2026-08-26T17:00:00+03:00",
+            "zone": "LEA JT PTA Dosul Râului 2"
+          },
+          {
+            "id": "8b763820d23faeab",
+            "uat": "Stroești",
+            "valid_from": "2026-08-27T09:00:00+03:00",
+            "valid_until": "2026-08-27T17:00:00+03:00",
+            "zone": "LEA JT PTA Pojogi"
+          },
+          {
+            "id": "9f5d3c0d041aa548",
+            "uat": "Călimănești",
+            "valid_from": "2026-08-27T09:30:00+03:00",
+            "valid_until": "2026-08-27T14:30:00+03:00",
+            "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5"
+          },
+          {
+            "id": "7dc9ba5ea55f3582",
+            "uat": "Râmnicu Vâlcea",
+            "valid_from": "2026-08-28T09:00:00+03:00",
+            "valid_until": "2026-08-28T17:00:00+03:00",
+            "zone": "PTCZ Mihai Bravu 2"
+          },
+          {
+            "id": "c1febb011bcf861d",
+            "uat": "Stoenești",
+            "valid_from": "2026-08-28T09:00:00+03:00",
+            "valid_until": "2026-08-28T17:00:00+03:00",
+            "zone": "LEA JT PTA Mogoşeşti, LEA JT PTA Gruieri"
+          }
+        ],
+        "active_rows": [
+          {
+            "id": "79feaa3a32366104",
+            "uat": "Drăgășani",
+            "valid_from": "2026-08-26T09:00:00+03:00",
+            "valid_until": "2026-08-26T17:00:00+03:00",
+            "zone": "PTCZ Bloc D2 Drăgăşani, PTCZ Policlinică Drăgăşani"
+          },
+          {
+            "id": "d3d04f67a93ce880",
+            "uat": "Nicolae Bălcescu",
+            "valid_from": "2026-08-26T09:00:00+03:00",
+            "valid_until": "2026-08-26T17:00:00+03:00",
+            "zone": "LEA JT PTA Dosul Râului 2"
+          },
+          {
+            "id": "8b763820d23faeab",
+            "uat": "Stroești",
+            "valid_from": "2026-08-27T09:00:00+03:00",
+            "valid_until": "2026-08-27T17:00:00+03:00",
+            "zone": "LEA JT PTA Pojogi"
+          },
+          {
+            "id": "9f5d3c0d041aa548",
+            "uat": "Călimănești",
+            "valid_from": "2026-08-27T09:30:00+03:00",
+            "valid_until": "2026-08-27T14:30:00+03:00",
+            "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5"
+          },
+          {
+            "id": "7dc9ba5ea55f3582",
+            "uat": "Râmnicu Vâlcea",
+            "valid_from": "2026-08-28T09:00:00+03:00",
+            "valid_until": "2026-08-28T17:00:00+03:00",
+            "zone": "PTCZ Mihai Bravu 2"
+          },
+          {
+            "id": "c1febb011bcf861d",
+            "uat": "Stoenești",
+            "valid_from": "2026-08-28T09:00:00+03:00",
+            "valid_until": "2026-08-28T17:00:00+03:00",
+            "zone": "LEA JT PTA Mogoşeşti, LEA JT PTA Gruieri"
+          }
+        ]
+      }
+    },
+    {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",
       "section": "VREME ȘI ALERTE",
       "headline": "Cod galben hidrologic pentru râuri din Vâlcea, până la 26.08, ora 24:00",
@@ -107,6 +310,10 @@
     }
   ],
   "holds": [
+    {
+      "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Fseptembrie%2F31.08-06.09.2026%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2031_08%20-%2006_09_2026%20-%20Valcea.pdf",
+      "reason": "DISTRIBUTIE_PARTIAL_TABLE:13/27"
+    },
     {
       "url": "https://apavil.ro/materiale/anunturi/2026/oprire_cazanesti1008.pdf",
       "reason": "APAVIL_EXPIRED:2026-08-10T15:00:00+03:00"

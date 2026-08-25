@@ -1,6 +1,6 @@
 {
-  "checkpoint_id": "VC-AUTO-004",
-  "checked_local": "2026-08-25T22:41:00+03:00",
+  "checkpoint_id": "VC-AUTO-005",
+  "checked_local": "2026-08-25T23:42:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-003",
@@ -9,51 +9,62 @@
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "No publication authority was broadened. APAVIL, Distribuție Oltenia and INHGA remain outside the live allow-list."
+    "note": "No publication authority was broadened. Distribuție Oltenia, APAVIL and INHGA remain outside the live allow-list."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-25T22:34:54+03:00",
+    "latest_verified_publish_check_local": "2026-08-25T23:40:06+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
-    "structured_drafts": 1,
-    "current_draft": "INHGA warning 92 remains candidate-only through 26.08.2026 24:00",
-    "new_signals": [
-      "INHGA immediate warning no. 4 was new to the radar but correctly held as not relevant to Vâlcea",
-      "The reported DN7 Lotrișor collision appeared in local media without a matching official IPJ/ISU publication and remains WATCH only",
-      "A new local political statement was classified WATCH and not converted into news"
+    "structured_drafts": 2,
+    "current_drafts": [
+      "INHGA warning 92 remains candidate-only through 26.08.2026 24:00",
+      "Distribuție Oltenia current-week schedule: six future locality rows from 26.08 through 28.08.2026"
     ],
-    "treatment": "FAIL_CLOSED: zero live articles. No fresh event passed both verification and publication-authority gates."
+    "new_signals": [
+      "A local report of an orange RO-Alert for several Vâlcea localities was no longer present on the current official ANM nowcasting surface when checked; the time-limited signal was not published.",
+      "The reported fatal DN7 Lotrișor collision still lacked a matching official IPJ/ISU web publication and remains WATCH only."
+    ],
+    "treatment": "FAIL_CLOSED: zero live articles. Both structured drafts were rejected by the live promoter because their source IDs are not authorized."
   },
   "development_micro_lot": {
-    "name": "SOURCE COVERAGE 03",
+    "name": "UTILITY STRUCTURE 01",
     "result": "completed",
-    "selected_source": "apavil_valcea_outages",
-    "official_surface": "https://apavil.ro/?page_id=962",
-    "live_result": "10 official outage notices discovered; nine expired automatically and one non-standard multi-day title remained unresolved; zero active water-outage drafts",
-    "optimization": "Added bounded official PDF-index discovery plus structured date, interval and Vâlcea UAT extraction from official link titles. Expired, unresolved or more-than-seven-days-ahead notices fail closed.",
-    "coverage_change": "water_sewer advanced from GAP to STRUCTURED_CANDIDATE for county and Râmnicu profiles",
-    "verification": "31 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed."
+    "selected_source": "distributie_oltenia_valcea_planned",
+    "official_surface": "https://www.distributieoltenia.ro/en/support/planned-maintenance-and-fault-correction/valcea.html",
+    "live_result": "The current-week PDF produced 10/10 structured rows; six non-expired rows across six UATs remained. The next-week complex PDF produced only 13/27 rows and was held as partial.",
+    "optimization": "Added cookie-aware official PDF retrieval, layout-preserving text extraction, UAT/date/time/zone parsing, deterministic row IDs, deduplication, expiry, a seven-day horizon and a fail-closed 85% completeness gate.",
+    "coverage_change": "electricity advanced from OFFICIAL_DISCOVERY to STRUCTURED_CANDIDATE for county and Râmnicu profiles",
+    "verification": "35 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed."
   },
   "growth_inventory": {
-    "mechanisms_total": 23,
-    "changed": {
-      "id": "planned_utility_calendar",
-      "previous_status": "IMPLEMENTAT_PARTIAL",
-      "status": "TESTAT",
-      "impact": "high_county",
-      "editorial_risk": "low",
-      "measurability": "high",
-      "evidence": "Electricity discovery plus structured APAVIL date/interval/UAT extraction and expiry gate"
-    }
+    "mechanisms_total": 24,
+    "changed": [
+      {
+        "id": "planned_utility_calendar",
+        "status": "TESTAT",
+        "impact": "high_county",
+        "editorial_risk": "low",
+        "measurability": "high",
+        "evidence": "10/10 current-week electricity rows parsed and six future rows retained; incomplete 13/27 next-week table rejected"
+      },
+      {
+        "id": "tomorrow_locality_brief",
+        "status": "DE_TESTAT",
+        "impact": "high_county",
+        "editorial_risk": "low",
+        "cost": "low",
+        "effort": "medium",
+        "measurability": "high"
+      }
+    ]
   },
   "blockers": [
-    "The official APAVIL outage index currently ends at 10.08.2026; no active notice was available to validate against a live future event.",
-    "One APAVIL multi-day title uses a different date syntax and is intentionally held as unresolved until that syntax is supported by tests.",
-    "Distribuție Oltenia still needs structured PDF table extraction, locality tagging and row-level expiry before article or alert generation.",
-    "The DN7 Lotrișor collision lacks a matching official IPJ/ISU web publication in the current scan.",
+    "The next-week Distribuție Oltenia PDF uses wrapped and multi-line rows; only 13 of 27 time rows can be resolved, so the entire table is intentionally held.",
+    "The DN7 Lotrișor fatality report lacks a matching official IPJ/ISU web publication in the current scan.",
+    "The time-limited orange RO-Alert signal had expired or disappeared from the official current ANM nowcasting surface before canonical verification.",
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
     "No certified or first-party County Reach baseline exists yet.",
-    "Draft PR #13 is not merged into main; production remains unchanged."
+    "Draft PR #13 is not merged into main and main has advanced independently; production remains unchanged."
   ],
-  "next_micro_lot": "UTILITY STRUCTURE 01 — parse the official Distribuție Oltenia weekly PDF table into locality/date/time rows, deduplicate and expire each row, and test the 'mâine în localitatea ta' candidate product without broadening publication authority."
+  "next_micro_lot": "UTILITY STRUCTURE 02 — support wrapped and multi-line Distribuție Oltenia table rows, including short-duration interruptions, while retaining completeness, UAT, expiry and candidate-only gates; then expose a deterministic 'Mâine în localitatea ta' candidate view."
 }

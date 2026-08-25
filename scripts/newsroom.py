@@ -33,6 +33,21 @@ def fetch(url,timeout=18):
     except Exception:
         raise first
 
+def fetch_bytes(url,warmup_url=None,timeout=30):
+    jar=http.cookiejar.CookieJar(); opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
+    headers={'User-Agent':'ValceaClarNewsroom/1.0 (+https://valceaclar.ro)'}
+    if warmup_url:
+        with opener.open(urllib.request.Request(warmup_url,headers=headers),timeout=timeout) as r: r.read()
+    with opener.open(urllib.request.Request(url,headers=headers),timeout=timeout) as r: return r.read()
+
+def pdf_text(url,warmup_url=None):
+    raw=fetch_bytes(url,warmup_url)
+    if not raw.startswith(b'%PDF'): raise ValueError('PDF_SIGNATURE_MISSING')
+    try: p=subprocess.run(['pdftotext','-layout','-','-'],input=raw,capture_output=True,check=True,timeout=30)
+    except FileNotFoundError as exc: raise RuntimeError('PDFTOTEXT_UNAVAILABLE') from exc
+    except subprocess.SubprocessError as exc: raise RuntimeError('PDF_TEXT_EXTRACTION_FAILED') from exc
+    return p.stdout.decode('utf-8','replace')
+
 class Links(HTMLParser):
     def __init__(self): super().__init__(); self.rows=[]; self.a=None; self.buf=[]
     def handle_starttag(self,t,a):
@@ -218,6 +233,55 @@ def apavil_story(c,detail,now=None):
     story['structured_facts']=facts; story['source_candidate']['structured_facts']=facts
     return story,None
 
+def parse_distributie_schedule(detail,source_url=''):
+    lines=detail.replace('\f','\n').splitlines(); year_match=re.search(r'S[ĂA]PT[ĂA]M[ÂA]NA[^\n]*(20\d{2})',detail,re.I); year=int(year_match.group(1)) if year_match else None
+    markers=[]
+    for i,line in enumerate(lines):
+        m=re.match(r'^\s*(\d{1,2})\.(\d{1,2})\s*$',line)
+        if m and year:
+            try: markers.append((i,date(year,int(m.group(2)),int(m.group(1)))))
+            except ValueError: pass
+    matrix=load(ROOT/'strategy/source_coverage_matrix.json'); uat_map={fold(x['name']).replace('-',' '):x['name'] for x in matrix.get('uats',[])}
+    time_line=re.compile(r'(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})'); total_time_rows=sum(bool(time_line.search(x)) for x in lines); rows=[]; unresolved=[]
+    for i,line in enumerate(lines):
+        m=re.match(r'^\s*(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})\s{2,}(.+?)\s{2,}(.+?)\s*$',line)
+        if not m: continue
+        locality_raw=clean(m.group(3)); key=re.sub(r'\s+',' ',fold(locality_raw).replace('-',' ')).strip(); uat=uat_map.get(key)
+        if not uat:
+            unresolved.append({'line':clean(line),'reason':'UAT'}); continue
+        if not markers:
+            unresolved.append({'line':clean(line),'reason':'DATE'}); continue
+        day=min(markers,key=lambda x:abs(x[0]-i))[1]
+        try:
+            sh,sm=map(int,m.group(1).split(':')); eh,em=map(int,m.group(2).split(':'))
+            start=datetime(day.year,day.month,day.day,sh,sm,tzinfo=ZoneInfo('Europe/Bucharest')); end=datetime(day.year,day.month,day.day,eh,em,tzinfo=ZoneInfo('Europe/Bucharest'))
+            if end<=start: end+=timedelta(days=1)
+        except ValueError:
+            unresolved.append({'line':clean(line),'reason':'TIME'}); continue
+        zone=clean(m.group(4)); ident=hashlib.sha1(f'{source_url}|{start.isoformat()}|{end.isoformat()}|{uat}|{zone}'.encode()).hexdigest()[:16]
+        rows.append({'id':ident,'uat':uat,'valid_from':start.isoformat(),'valid_until':end.isoformat(),'zone':zone})
+    unique={x['id']:x for x in rows}
+    return {'year':year,'total_time_rows':total_time_rows,'parsed_rows':len(unique),'unresolved_rows':unresolved,'rows':sorted(unique.values(),key=lambda x:(x['valid_from'],x['uat'],x['zone']))}
+
+def distributie_story(c,detail,now=None):
+    facts=parse_distributie_schedule(detail,c.get('url','')); total=facts['total_time_rows']; parsed=facts['parsed_rows']
+    if not facts['year'] or total==0: return None,'DISTRIBUTIE_TABLE_UNRESOLVED'
+    if parsed/total < 0.85: return None,f'DISTRIBUTIE_PARTIAL_TABLE:{parsed}/{total}'
+    now=now or datetime.now(ZoneInfo('Europe/Bucharest')); horizon=now+timedelta(days=7)
+    active=[x for x in facts['rows'] if datetime.fromisoformat(x['valid_until'])>now and datetime.fromisoformat(x['valid_from'])<=horizon]
+    if not active: return None,'DISTRIBUTIE_NO_ACTIVE_ROWS'
+    uats=sorted({x['uat'] for x in active}); starts=[datetime.fromisoformat(x['valid_from']) for x in active]; ends=[datetime.fromisoformat(x['valid_until']) for x in active]
+    head=f'Întreruperi programate de curent în {len(uats)} localități din Vâlcea, între {min(starts).strftime("%d.%m")} și {max(ends).strftime("%d.%m")}'
+    paragraphs=['Distribuție Oltenia a programat lucrări care întrerup temporar alimentarea cu energie electrică în zone din '+', '.join(uats)+'.']
+    for day in sorted({x.date() for x in starts}):
+        day_rows=[x for x in active if datetime.fromisoformat(x['valid_from']).date()==day]
+        labels=[f'{x["uat"]} ({datetime.fromisoformat(x["valid_from"]).strftime("%H:%M")}–{datetime.fromisoformat(x["valid_until"]).strftime("%H:%M")})' for x in day_rows]
+        paragraphs.append(day.strftime('%d.%m.%Y')+': '+', '.join(labels)+'.')
+    paragraphs.append('Lucrările pot fi reprogramate dacă vremea este nefavorabilă; programul actualizat al operatorului are prioritate.')
+    story=product(c,head,'Calendar oficial de lucrări, structurat pe localitate și interval și păstrat în candidate mode.',paragraphs,'UTILITĂȚI')
+    story['structured_facts']={**facts,'active_rows':active}; story['source_candidate']['structured_facts']={'parsed_rows':parsed,'total_time_rows':total,'active_rows':active}
+    return story,None
+
 def product(c,h,d,p,section):
     ident=(c['source_id']+'-'+hashlib.sha1(c['url'].encode()).hexdigest()[:16])[:80]
     return {'id':ident,'section':section,'headline':h,'dek':d,'paragraphs':p,'sources':[{'name':c['source_name'],'url':c['url'],'tier':c['tier']}],'source_candidate':c,'status':'DRAFT_CANDIDATE_ONLY','image':None}
@@ -288,7 +352,11 @@ def cycle(fixtures=False):
         if c['decision']!='READY': continue
         src=next((s for s in cfg['sources'] if s['id']==c['source_id']),{}); adapter=src.get('structured_detail_adapter')
         if not adapter: continue
-        try: detail=c.get('detail') or (c['title'] if adapter=='apavil_outage_index_title' else fetch(c['url']))
+        try:
+            if c.get('detail'): detail=c['detail']
+            elif adapter=='apavil_outage_index_title': detail=c['title']
+            elif adapter=='distributie_schedule_pdf': detail=pdf_text(c['url'],src.get('url'))
+            else: detail=fetch(c['url'])
         except Exception as e: holds.append({'url':c['url'],'reason':'DETAIL_FETCH:'+str(e)[:120]}); continue
         stale=freshness_hold(src,c,detail)
         if stale: holds.append({'url':c['url'],'reason':stale}); continue
@@ -296,6 +364,7 @@ def cycle(fixtures=False):
         elif adapter=='isu_release': s,hold=isu_story(c,detail,pol)
         elif adapter=='inhga_warning': s,hold=inhga_story(c,detail)
         elif adapter=='apavil_outage_index_title': s,hold=apavil_story(c,detail)
+        elif adapter=='distributie_schedule_pdf': s,hold=distributie_story(c,detail)
         else: s=None; hold='NO_ADAPTER'
         if hold: holds.append({'url':c['url'],'reason':hold}); continue
         if s: s['image']=choose_media(s); stories.append(s)
