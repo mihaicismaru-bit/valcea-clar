@@ -1,6 +1,6 @@
 {
-  "checkpoint_id": "VC-AUTO-005",
-  "checked_local": "2026-08-25T23:42:00+03:00",
+  "checkpoint_id": "VC-AUTO-006",
+  "checked_local": "2026-08-26T00:40:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-003",
@@ -12,29 +12,27 @@
     "note": "No publication authority was broadened. Distribuție Oltenia, APAVIL and INHGA remain outside the live allow-list."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-25T23:40:06+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T00:36:11+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
-    "structured_drafts": 2,
+    "structured_drafts": 3,
     "current_drafts": [
-      "INHGA warning 92 remains candidate-only through 26.08.2026 24:00",
-      "Distribuție Oltenia current-week schedule: six future locality rows from 26.08 through 28.08.2026"
+      "Distribuție Oltenia current-week schedule: six active rows from 26.08 through 28.08.2026",
+      "Distribuție Oltenia next-week schedule: 27/27 rows parsed; 12 rows in the seven-day horizon across ten localities on 31.08 and 01.09",
+      "INHGA warning 92 remains candidate-only through 26.08.2026 24:00"
     ],
-    "new_signals": [
-      "A local report of an orange RO-Alert for several Vâlcea localities was no longer present on the current official ANM nowcasting surface when checked; the time-limited signal was not published.",
-      "The reported fatal DN7 Lotrișor collision still lacked a matching official IPJ/ISU web publication and remains WATCH only."
-    ],
-    "treatment": "FAIL_CLOSED: zero live articles. Both structured drafts were rejected by the live promoter because their source IDs are not authorized."
+    "new_signals": [],
+    "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts were rejected by the live promoter because their source IDs are not authorized."
   },
   "development_micro_lot": {
-    "name": "UTILITY STRUCTURE 01",
+    "name": "UTILITY STRUCTURE 02",
     "result": "completed",
     "selected_source": "distributie_oltenia_valcea_planned",
     "official_surface": "https://www.distributieoltenia.ro/en/support/planned-maintenance-and-fault-correction/valcea.html",
-    "live_result": "The current-week PDF produced 10/10 structured rows; six non-expired rows across six UATs remained. The next-week complex PDF produced only 13/27 rows and was held as partial.",
-    "optimization": "Added cookie-aware official PDF retrieval, layout-preserving text extraction, UAT/date/time/zone parsing, deterministic row IDs, deduplication, expiry, a seven-day horizon and a fail-closed 85% completeness gate.",
-    "coverage_change": "electricity advanced from OFFICIAL_DISCOVERY to STRUCTURED_CANDIDATE for county and Râmnicu profiles",
-    "verification": "35 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed."
+    "live_result": "The complex next-week PDF advanced from 13/27 to 27/27 structured rows with exact day grouping: 5, 7, 3, 6 and 6 rows from 31.08 through 04.09. Seven rows are short-duration interruption pairs.",
+    "optimization": "Switched PDF extraction to semantic content-stream order and added support for merged date cells, wrapped locality names, split localities, short-duration pairs, canonical UAT normalization, row-level deduplication and expiry.",
+    "retention_product": "Generated candidate-only tomorrow_locality_brief.json. For 27.08 it contains only Călimănești and Stroești, with interval, zone, interruption type and official source.",
+    "verification": "37 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed."
   },
   "growth_inventory": {
     "mechanisms_total": 24,
@@ -45,11 +43,12 @@
         "impact": "high_county",
         "editorial_risk": "low",
         "measurability": "high",
-        "evidence": "10/10 current-week electricity rows parsed and six future rows retained; incomplete 13/27 next-week table rejected"
+        "evidence": "10/10 simple-week and 27/27 complex-week electricity rows parsed; unresolved or incomplete tables still fail closed"
       },
       {
         "id": "tomorrow_locality_brief",
-        "status": "DE_TESTAT",
+        "previous_status": "DE_TESTAT",
+        "status": "TESTAT",
         "impact": "high_county",
         "editorial_risk": "low",
         "cost": "low",
@@ -59,12 +58,10 @@
     ]
   },
   "blockers": [
-    "The next-week Distribuție Oltenia PDF uses wrapped and multi-line rows; only 13 of 27 time rows can be resolved, so the entire table is intentionally held.",
-    "The DN7 Lotrișor fatality report lacks a matching official IPJ/ISU web publication in the current scan.",
-    "The time-limited orange RO-Alert signal had expired or disappeared from the official current ANM nowcasting surface before canonical verification.",
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
     "No certified or first-party County Reach baseline exists yet.",
-    "Draft PR #13 is not merged into main and main has advanced independently; production remains unchanged."
+    "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
+    "Draft PR #13 conflicts with independently advanced main at 9506c71; production remains unchanged and no forced merge was attempted."
   ],
-  "next_micro_lot": "UTILITY STRUCTURE 02 — support wrapped and multi-line Distribuție Oltenia table rows, including short-duration interruptions, while retaining completeness, UAT, expiry and candidate-only gates; then expose a deterministic 'Mâine în localitatea ta' candidate view."
+  "next_micro_lot": "REPOSITORY INTEGRATION 01 — reconstruct PR #13 cleanly on current main without overwriting independent changes or merging production; after a green conflict-free PR, continue with DISCOVER/SEO 01 (NewsArticle, max-image-preview:large and article image policy)."
 }

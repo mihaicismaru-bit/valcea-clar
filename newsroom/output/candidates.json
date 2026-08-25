@@ -10,7 +10,109 @@
       "score": 68,
       "decision": "READY",
       "risks": [],
-      "seen_before": true
+      "seen_before": true,
+      "structured_facts": {
+        "parsed_rows": 27,
+        "total_time_rows": 27,
+        "active_rows": [
+          {
+            "id": "d828a27316139aed",
+            "uat": "Băile Olănești",
+            "valid_from": "2026-08-31T08:30:00+03:00",
+            "valid_until": "2026-08-31T16:30:00+03:00",
+            "zone": "PTA Tisa, PTA Gurguiata",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "890f5700147df492",
+            "uat": "Nicolae Bălcescu",
+            "valid_from": "2026-08-31T09:00:00+03:00",
+            "valid_until": "2026-08-31T17:00:00+03:00",
+            "zone": "LEA JT PTA Predeşti 1 - circuitul 2",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "d3dc0321133ddc9e",
+            "uat": "Drăgășani",
+            "valid_from": "2026-08-31T09:30:00+03:00",
+            "valid_until": "2026-08-31T17:30:00+03:00",
+            "zone": "PTA Zărneni ,PTAB Avincis Drăgăşani (terț)",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "a79c7e61e26759fa",
+            "uat": "Prundeni",
+            "valid_from": "2026-08-31T09:30:00+03:00",
+            "valid_until": "2026-08-31T17:30:00+03:00",
+            "zone": "PTA Prundeni 1, PTA Prundeni 2, PTA Prundeni 3, PTA Prundeni 4, PTA CAP Călina (terţ), PTAB CEF DFG Prundeni PTAB IAS Prundeni (terţ)",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "89a560ebb22e5031",
+            "uat": "Ștefănești",
+            "valid_from": "2026-08-31T09:30:00+03:00",
+            "valid_until": "2026-08-31T17:30:00+03:00",
+            "zone": "PTA Dobrușa 2, PTA Dobrușa 3, PTA Dobrușa 4",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "f4261bb2a7b37667",
+            "uat": "Bujoreni",
+            "valid_from": "2026-09-01T08:30:00+03:00",
+            "valid_until": "2026-09-01T16:30:00+03:00",
+            "zone": "PTA Bogdăneşti 1, PTA Bogdăneşti 4, PTA Distilărie Bogdăneşti, PTA OS Drăgi Dăeşti (terţ), PTAM Panouri Gura Văii",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "1b0a68b465f18b8b",
+            "uat": "Băile Olănești",
+            "valid_from": "2026-09-01T08:30:00+03:00",
+            "valid_until": "2026-09-01T16:30:00+03:00",
+            "zone": "PTA Epureşti, PTA Tratare Olăneşti, PTA Tisa, PTA Gurguiata, PTA Captare Olăneşti, PTA Pietriş, PTA Comanca, PTA",
+            "interruption_kind": "short_duration_pair"
+          },
+          {
+            "id": "6845ddd53c8549a1",
+            "uat": "Muereasca",
+            "valid_from": "2026-09-01T08:30:00+03:00",
+            "valid_until": "2026-09-01T16:30:00+03:00",
+            "zone": "Hotarele",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "11c165f503136cde",
+            "uat": "Muereasca",
+            "valid_from": "2026-09-01T08:30:00+03:00",
+            "valid_until": "2026-09-01T16:30:00+03:00",
+            "zone": "PTAB Muereasca de Jos, PTA Muereasca de Sus, PTA Frânceşti Coasta, PTA Andreeşti 1, PTA Andreeşti 2, PTA PTA Frăsinei 2, PTA Şuta",
+            "interruption_kind": "short_duration_pair"
+          },
+          {
+            "id": "acd03d49fc9608cd",
+            "uat": "Budești",
+            "valid_from": "2026-09-01T09:00:00+03:00",
+            "valid_until": "2026-09-01T17:00:00+03:00",
+            "zone": "LEA JT PTA Barza 1 - circuitul 3",
+            "interruption_kind": "scheduled_interval"
+          },
+          {
+            "id": "40d0e19163a8061b",
+            "uat": "Frâncești",
+            "valid_from": "2026-09-01T09:00:00+03:00",
+            "valid_until": "2026-09-01T17:00:00+03:00",
+            "zone": "PTA Viişoara, PTA UM Frânceşti, PTA Frânceşti 1, PTA Frânceşti 2, PTA Frânceşti 3, PTA Frânceşti 4, PTAM PTA Balastieră Frânceşti (terţ), PTA Mănăileşti 1, PTA Mănăileşti 2, PTA Genuneni 1, PTA Genuneni 2, PTA Negreni, PTA Coşani, PTA Mănăstire Lemn, PTA Dezrobiţi 1, PTA Dezrobiţi 2, PTA Lunca, PTA Moşteni, PTAB PTCZ Fermă Pui Frânceşti, PC Frânceşti 6, PTAB Abator Păsări Frânceşti (terţ), PC Frânceşti 7 (terţ), PTAB PTCZ ISCIP Băbeni (terţ)",
+            "interruption_kind": "short_duration_pair"
+          },
+          {
+            "id": "a2b3bc11076acf8e",
+            "uat": "Mihăești",
+            "valid_from": "2026-09-01T09:00:00+03:00",
+            "valid_until": "2026-09-01T17:00:00+03:00",
+            "zone": "PTA Fabrică Cherestea Mihăeşti (terţ), PTAB CEF Energy Mihăeşti (terţ), PTAB CEF Agroexpert SRL (terţ)",
+            "interruption_kind": "short_duration_pair"
+          }
+        ]
+      }
     },
     {
       "source_id": "distributie_oltenia_valcea_planned",
@@ -27,46 +129,52 @@
         "total_time_rows": 10,
         "active_rows": [
           {
-            "id": "79feaa3a32366104",
+            "id": "6dae206d0d6e09c4",
             "uat": "Drăgășani",
             "valid_from": "2026-08-26T09:00:00+03:00",
             "valid_until": "2026-08-26T17:00:00+03:00",
-            "zone": "PTCZ Bloc D2 Drăgăşani, PTCZ Policlinică Drăgăşani"
+            "zone": "PTCZ Bloc D2 Drăgăşani, PTCZ Policlinică Drăgăşani",
+            "interruption_kind": "scheduled_interval"
           },
           {
-            "id": "d3d04f67a93ce880",
+            "id": "196b9105af8b15d4",
             "uat": "Nicolae Bălcescu",
             "valid_from": "2026-08-26T09:00:00+03:00",
             "valid_until": "2026-08-26T17:00:00+03:00",
-            "zone": "LEA JT PTA Dosul Râului 2"
+            "zone": "LEA JT PTA Dosul Râului 2",
+            "interruption_kind": "scheduled_interval"
           },
           {
-            "id": "8b763820d23faeab",
+            "id": "4a8744ce15b811c2",
             "uat": "Stroești",
             "valid_from": "2026-08-27T09:00:00+03:00",
             "valid_until": "2026-08-27T17:00:00+03:00",
-            "zone": "LEA JT PTA Pojogi"
+            "zone": "LEA JT PTA Pojogi",
+            "interruption_kind": "scheduled_interval"
           },
           {
-            "id": "9f5d3c0d041aa548",
+            "id": "15fe25ba5d063e49",
             "uat": "Călimănești",
             "valid_from": "2026-08-27T09:30:00+03:00",
             "valid_until": "2026-08-27T14:30:00+03:00",
-            "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5"
+            "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5",
+            "interruption_kind": "scheduled_interval"
           },
           {
-            "id": "7dc9ba5ea55f3582",
+            "id": "6c27a7b21554e89e",
             "uat": "Râmnicu Vâlcea",
             "valid_from": "2026-08-28T09:00:00+03:00",
             "valid_until": "2026-08-28T17:00:00+03:00",
-            "zone": "PTCZ Mihai Bravu 2"
+            "zone": "PTCZ Mihai Bravu 2",
+            "interruption_kind": "scheduled_interval"
           },
           {
-            "id": "c1febb011bcf861d",
+            "id": "66f7a29ec46a96e7",
             "uat": "Stoenești",
             "valid_from": "2026-08-28T09:00:00+03:00",
             "valid_until": "2026-08-28T17:00:00+03:00",
-            "zone": "LEA JT PTA Mogoşeşti, LEA JT PTA Gruieri"
+            "zone": "LEA JT PTA Mogoşeşti, LEA JT PTA Gruieri",
+            "interruption_kind": "scheduled_interval"
           }
         ]
       }
@@ -801,8 +909,19 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-tragedie-pe-dn-7-la-lotrisor-un-sofer-a-murit-dupa-ce-autoutilitara-sa-a-intrat-sub-semiremorca-unui-tir/",
-      "title": "FOTO Tragedie pe DN 7 la Lotrișor! Un șofer a murit după ce autoutilitara sa a intrat sub semiremorca unui TIR",
+      "url": "https://evenimentvalcean.ro/25-august-o-zi-cu-doua-personalitati-care-au-marcat-valcea-vartolomeu-stanescu-si-sergiu-saliste/",
+      "title": "25 august, o zi cu două personalități care au marcat Vâlcea: Vartolomeu Stănescu și Sergiu Săliște",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-video-tragedie-pe-dn-7-la-lotrisor-un-sofer-a-murit-dupa-ce-autoutilitara-sa-a-intrat-sub-semiremorca-unui-tir/",
+      "title": "FOTO/VIDEO Tragedie pe DN 7 la Lotrișor! Un șofer a murit după ce autoutilitara sa a intrat sub semiremorca unui TIR",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
@@ -907,17 +1026,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/sofer-din-budesti-depistat-drogat-la-volan-in-ramnicu-valcea-analizele-au-confirmat-prezenta-unei-substante-psihoactive/",
       "title": "Șofer din Budești, depistat drogat la volan în Râmnicu Vâlcea. Analizele au confirmat prezența unei substanțe psihoactive",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/doua-amicale-de-gala-pentru-cs-valcea-1924-lupii-negri-primele-teste-ale-pauzei-cu-u-bt-cluj-napoca/",
-      "title": "Două amicale de gală pentru CS Vâlcea 1924. Lupii Negri, primele teste ale pauzei, cu U-BT Cluj-Napoca",
       "score": 36,
       "decision": "WATCH",
       "risks": [],

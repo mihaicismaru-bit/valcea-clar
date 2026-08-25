@@ -1,4 +1,5 @@
 import subprocess,sys,unittest
+from collections import Counter
 from datetime import timedelta
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'scripts'))
@@ -52,6 +53,16 @@ class T(unittest.TestCase):
   detail='SĂPTĂMÂNA 31.08 - 06.09.2026 - VÂLCEA\n 31.08\n 09:00 - 17:00  Drăgășani  Zona A\n 09:00 - 17:00\n 09:00 - 17:00\n'
   candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'test','score':68,'decision':'READY','risks':[]}
   story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,25,23,30,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'DISTRIBUTIE_PARTIAL_TABLE:1/3')
+ def test_distributie_raw_multiline_table_is_complete_and_date_safe(self):
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_multiline_raw.txt').read_text(encoding='utf-8'); facts=newsroom.parse_distributie_schedule(detail,'https://example.test/next-week.pdf')
+  self.assertEqual((facts['parsed_rows'],facts['total_time_rows'],facts['unresolved_rows']),(27,27,[]))
+  by_day=Counter(x['valid_from'][:10] for x in facts['rows']); self.assertEqual(by_day,{'2026-08-31':5,'2026-09-01':7,'2026-09-02':3,'2026-09-03':6,'2026-09-04':6})
+  self.assertEqual(sum(x['interruption_kind']=='short_duration_pair' for x in facts['rows']),7)
+  self.assertTrue(any(x['uat']=='Nicolae Bălcescu' for x in facts['rows'])); self.assertTrue(any(x['uat']=='Zătreni' for x in facts['rows']))
+ def test_tomorrow_locality_brief_is_candidate_only_and_localized(self):
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_schedule.txt').read_text(encoding='utf-8'); candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'test','score':68,'decision':'READY','risks':[]}
+  now=newsroom.datetime(2026,8,26,0,5,tzinfo=newsroom.ZoneInfo('Europe/Bucharest')); story,hold=newsroom.distributie_story(candidate,detail,now); self.assertIsNone(hold)
+  brief=newsroom.tomorrow_locality_brief([story],now); self.assertEqual(brief['status'],'candidate_only'); self.assertEqual(brief['target_date'],'2026-08-27'); self.assertEqual(brief['total_localities'],2); self.assertEqual({x['uat'] for x in brief['localities']},{'Călimănești','Stroești'})
  def test_apavil_index_and_structured_expiry_gate(self):
   cfg=newsroom.load(ROOT/'newsroom/sources.json'); src=next(x for x in cfg['sources'] if x['id']=='apavil_valcea_outages')
   index=(ROOT/'tests/fixtures/apavil_outages_index.html').read_text(encoding='utf-8'); rows=newsroom.items(src,index)

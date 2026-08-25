@@ -1,0 +1,34 @@
+{
+  "status": "candidate_only",
+  "product_id": "tomorrow_locality_brief",
+  "target_date": "2026-08-27",
+  "total_localities": 2,
+  "localities": [
+    {
+      "uat": "Călimănești",
+      "alerts": [
+        {
+          "utility": "electricity",
+          "valid_from": "2026-08-27T09:30:00+03:00",
+          "valid_until": "2026-08-27T14:30:00+03:00",
+          "zone": "LES JT PTA Mănăstirea Cozia - circuitul 5",
+          "interruption_kind": "scheduled_interval",
+          "source_url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Faugust%2F24.08-30.08%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2024_08%20-%2030_08_2026%20-%20Valcea.pdf"
+        }
+      ]
+    },
+    {
+      "uat": "Stroești",
+      "alerts": [
+        {
+          "utility": "electricity",
+          "valid_from": "2026-08-27T09:00:00+03:00",
+          "valid_until": "2026-08-27T17:00:00+03:00",
+          "zone": "LEA JT PTA Pojogi",
+          "interruption_kind": "scheduled_interval",
+          "source_url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Faugust%2F24.08-30.08%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2024_08%20-%2030_08_2026%20-%20Valcea.pdf"
+        }
+      ]
+    }
+  ]
+}

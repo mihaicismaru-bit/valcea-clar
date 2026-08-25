@@ -2,6 +2,11 @@
   "status": "AUTO_PUBLISH_ACTIVE",
   "queue": [
     {
+      "id": "distributie_oltenia_valcea_planned-ca500d4a2ecc12d5",
+      "headline": "Întreruperi programate de curent în 10 localități din Vâlcea, între 31.08 și 01.09",
+      "status": "CANDIDATE_ONLY"
+    },
+    {
       "id": "distributie_oltenia_valcea_planned-f925c0ab75a52530",
       "headline": "Întreruperi programate de curent în 6 localități din Vâlcea, între 26.08 și 28.08",
       "status": "CANDIDATE_ONLY"

@@ -1,10 +1,14 @@
 {
   "status": "AUTO_PUBLISH_ACTIVE",
   "authority": "OWNER_APPROVED_AUTO_PUBLICATION",
-  "checked_local": "2026-08-25T23:40:06+03:00",
+  "checked_local": "2026-08-26T00:36:11+03:00",
   "selected": [],
   "published": [],
   "skipped": [
+    {
+      "id": "distributie_oltenia_valcea_planned-ca500d4a2ecc12d5",
+      "reason": "source"
+    },
     {
       "id": "distributie_oltenia_valcea_planned-f925c0ab75a52530",
       "reason": "source"
