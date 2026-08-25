@@ -307,19 +307,19 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/24/cum-incearca-autoritatile-sa-salveze-termoficarea-din-ramnicu-valcea-de-ce-are-nevoie-cet-govora-de-40-de-milioane-de-lei-de-la-guvern/",
-      "title": "Cum încearcă autoritățile să salveze termoficarea din Râmnicu Vâlcea: de ce are nevoie CET Govora de 40 de milioane de lei de la Guvern",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/foto-accident-grav-pe-valea-oltului-trafic-blocat-complet-la-iesirea-din-boita/",
+      "title": "FOTO – ACCIDENT GRAV pe VALEA OLTULUI: trafic blocat complet la ieșirea din Boița",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/24/foto-accident-la-mihaesti-pe-dn-64-trafic-blocat-partial/",
-      "title": "FOTO: ACCIDENT la MIHĂEȘTI, pe DN 64. Trafic blocat parțial…",
+      "url": "https://seintamplainvalcea.ro/2026/08/24/cum-incearca-autoritatile-sa-salveze-termoficarea-din-ramnicu-valcea-de-ce-are-nevoie-cet-govora-de-40-de-milioane-de-lei-de-la-guvern/",
+      "title": "Cum încearcă autoritățile să salveze termoficarea din Râmnicu Vâlcea: de ce are nevoie CET Govora de 40 de milioane de lei de la Guvern",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
@@ -364,17 +364,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/cet-govora-la-un-pas-de-marea-schimbare-40-de-milioane-de-lei-pentru-ca-ramnicul-sa-aiba-apa-calda-si-caldura/",
       "title": "CET Govora, la un pas de marea schimbare! 40 de milioane de lei pentru ca Râmnicul să aibă apă caldă și căldură",
-      "score": 48,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/scoala-din-vladesti-modernizata-prin-pnrr-investitie-importanta-pentru-elevii-din-comuna-condusa-de-primarul-adrian-cosac/",
-      "title": "Școala din Vlădești, modernizată prin PNRR. Investiție importantă pentru elevii din comuna condusă de primarul Adrian Cosac",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
@@ -444,7 +433,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -503,6 +492,50 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/doliu-in-invatamantul-valcean-carmen-maria-sima-un-ultim-omagiu-unei-profesoare-dedicate-si-unui-suflet-ales/",
+      "title": "Doliu în învățământul vâlcean. Carmen Maria Sima – un ultim omagiu unei profesoare dedicate și unui suflet ales",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-video-vesti-bune-pentru-soferii-de-pe-valea-oltului-lucrarile-de-pe-dn7-au-trecut-de-75/",
+      "title": "FOTO/VIDEO Vești bune pentru șoferii de pe Valea Oltului! Lucrările de pe DN7 au trecut de 75%",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-elevii-din-valcea-intra-in-lumea-laserelor-de-mare-putere-experienta-de-cinci-zile-la-eli-np-magurele/",
+      "title": "FOTO Elevii din Vâlcea intră în lumea laserelor de mare putere! Experiență de cinci zile la ELI-NP Măgurele",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-ramnicu-valcea-se-umple-de-culoare-15-artisti-isi-expun-lucrarile-la-centrul-cultural-valcea/",
+      "title": "FOTO Râmnicu Vâlcea se umple de culoare! 15 artiști își expun lucrările la Centrul Cultural Vâlcea",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -581,41 +614,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/si-a-batut-concubina-pana-a-murit-un-barbat-de-40-de-ani-din-berbesti-propus-pentru-arestare-preventiva/",
       "title": "Și-a bătut concubina până a murit. Un bărbat de 40 de ani din Berbești propus pentru arestare preventivă",
-      "score": 36,
-      "decision": "REVIEW_REQUIRED",
-      "risks": [
-        "arest"
-      ],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/tinere-condeie-aduce-la-calimanesti-40-de-tineri-pasionati-de-literatura/",
-      "title": "„Tinere condeie” aduce la Călimănești 40 de tineri pasionați de literatură",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-video-salvamarul-valcean-care-nu-oboseste-sa-salveze-vieti-costi-tilvanoiu-la-62-de-ani-a-scos-deja-patru-oameni-din-valurile-marii-negre/",
-      "title": "FOTO/VIDEO Salvamarul vâlcean care nu obosește să salveze vieți. Costi Tîlvănoiu, la 62 de ani, a scos deja patru oameni din valurile Mării Negre",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/lovituri-cu-cutitul-si-toporul-asupra-sotiei-un-barbat-de-79-de-ani-arestat-preventiv-pentru-tentativa-de-omor/",
-      "title": "Lovituri cu cuțitul și toporul asupra soției! Un bărbat de 79 de ani arestat preventiv pentru tentativă de omor",
       "score": 36,
       "decision": "REVIEW_REQUIRED",
       "risks": [
