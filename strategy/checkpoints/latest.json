@@ -1,0 +1,48 @@
+{
+  "checkpoint_id": "VC-AUTO-001",
+  "checked_local": "2026-08-25T18:26:00+03:00",
+  "canonical_state": {
+    "repository": "mihaicismaru-bit/valcea-clar",
+    "core_publication_mode": "candidate_only",
+    "live_promoter": "owner_authorized_T1_structured_only",
+    "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
+    "production_gate": "fail_closed",
+    "note": "policy.json remains candidate-only by design; publication.json is the separate owner-authorized promoter. README wording is stale and should be clarified, not used as runtime authority."
+  },
+  "edition": {
+    "latest_verified_publish_check_local": "2026-08-25T17:08:42+03:00",
+    "new_auto_published_in_that_check": 0,
+    "skipped": ["CJ 26.08 agenda story already published"],
+    "current_material_signal": "INHGA hydrological yellow warning no. 92 is active 25.08 16:00 through 26.08 24:00 and explicitly includes Olt tributaries in Vâlcea and upper/middle Olteț.",
+    "treatment": "HOLD_FOR_T1_INTEGRATION: official signal verified externally, but INHGA is not yet in the canonical source registry and is not authorized for auto-publish. Do not promote a T2 rewrite through the T1 live gate."
+  },
+  "market_intelligence": {
+    "romania_2026": {
+      "internet_penetration": "94.0% at end-2025 (DataReportal Digital 2026 Romania)",
+      "social_media_identities": "12.9m / 68.3% population (DataReportal; not unique-person audited reach)",
+      "facebook_ad_reach": "10.3m; 67.1% of Romanian adults 18+ (Meta planning data via DataReportal)",
+      "instagram_ad_reach": "6.0m; 39.6% of adults 18+",
+      "tiktok_ad_reach_18plus": "8.71m"
+    },
+    "news_behavior": {
+      "trust_in_news_romania": "23%",
+      "news_avoidance_romania": "47% sometimes/often",
+      "global_online_news_entry": "social/video networks 54% vs publisher sites/apps 51% in 2026",
+      "implication": "Distribution must be platform-native while valceaclar.ro stays the canonical, verifiable source. Retention must be utility-led, not volume-led."
+    },
+    "certification": {
+      "sati": "BRAT SATI measures technical traffic plus monthly online audience profiling and weighted audience estimates; this is the target independent web-audience standard, complemented by first-party analytics."
+    }
+  },
+  "optimization_applied": {
+    "artifact": "strategy/growth_inventory.json",
+    "change": "Created live inventory of 21 acquisition, viral, direct, retention, habit, UGC, offline and measurement mechanisms with impact/risk/cost/effort/measurability and next action."
+  },
+  "blockers": [
+    "INHGA is absent from newsroom/sources.json, so a currently relevant verified hydrological warning cannot enter the T1 pipeline.",
+    "Build lacks explicit NewsArticle structured data and no max-image-preview:large/representative og:image path was found; Discover upside is therefore underused.",
+    "No certified or first-party County Reach baseline exists yet.",
+    "Current source registry is strongly Râmnicu/CJ-centric and lacks systematic UAT-level coverage for the whole county."
+  ],
+  "next_micro_lot": "SOURCE COVERAGE 01 — add INHGA as T1 discovery source without expanding auto-publish authority; then map missing official source categories and locality coverage."
+}
