@@ -1,13 +1,17 @@
 {
   "status": "AUTO_PUBLISH_ACTIVE",
   "authority": "OWNER_APPROVED_AUTO_PUBLICATION",
-  "checked_local": "2026-08-26T00:59:00+03:00",
+  "checked_local": "2026-08-26T01:33:32+03:00",
   "selected": [],
   "published": [],
   "skipped": [
     {
-      "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
-      "reason": "already_published"
+      "id": "distributie_oltenia_valcea_planned-ca500d4a2ecc12d5",
+      "reason": "source"
+    },
+    {
+      "id": "distributie_oltenia_valcea_planned-f925c0ab75a52530",
+      "reason": "source"
     },
     {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",

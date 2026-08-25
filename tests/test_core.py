@@ -1,10 +1,11 @@
 import subprocess,sys,unittest
+from collections import Counter
 from datetime import timedelta
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'scripts'))
 import newsroom
 class T(unittest.TestCase):
- def test_sources(self): self.assertEqual(len(newsroom.load(ROOT/'newsroom/sources.json')['sources']),11)
+ def test_sources(self): self.assertEqual(len(newsroom.load(ROOT/'newsroom/sources.json')['sources']),13)
  def test_policy_locked(self):
   p=newsroom.load(ROOT/'newsroom/policy.json'); self.assertEqual(p['publication_mode'],'candidate_only'); self.assertFalse(p['auto_publish'])
  def test_risk(self):
@@ -36,6 +37,42 @@ class T(unittest.TestCase):
   story,hold=newsroom.inhga_story(candidate,detail,newsroom.datetime(2026,8,25,20,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'INHGA_NOT_VALCEA')
  def test_inhga_is_not_live_authorized(self):
   pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn('inhga_hydrological_warnings',pub['allowed_source_ids'])
+ def test_distributie_oltenia_index_is_bounded_and_not_live_authorized(self):
+  cfg=newsroom.load(ROOT/'newsroom/sources.json'); src=next(x for x in cfg['sources'] if x['id']=='distributie_oltenia_valcea_planned')
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_valcea_index.html').read_text(encoding='utf-8'); rows=newsroom.items(src,detail)
+  self.assertEqual(len(rows),2); self.assertIn('31.08 - 06.09.2026',rows[0][0]); self.assertIn('24.08 - 30.08.2026',rows[1][0])
+  pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn(src['id'],pub['allowed_source_ids'])
+ def test_distributie_schedule_rows_deduplicate_expire_and_stay_candidate(self):
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_schedule.txt').read_text(encoding='utf-8'); facts=newsroom.parse_distributie_schedule(detail,'https://example.test/week.pdf')
+  self.assertEqual(facts['total_time_rows'],10); self.assertEqual(facts['parsed_rows'],10); self.assertEqual(len({x['id'] for x in facts['rows']}),10)
+  candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'Valcea - Intreruperi 24.08 - 30.08.2026','score':68,'decision':'READY','risks':[]}
+  story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,25,23,30,tzinfo=newsroom.ZoneInfo('Europe/Bucharest')))
+  self.assertIsNone(hold); self.assertEqual(len(story['structured_facts']['active_rows']),6); self.assertIn('6 localități',story['headline'])
+  story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,31,0,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'DISTRIBUTIE_NO_ACTIVE_ROWS')
+ def test_distributie_partial_table_fails_closed(self):
+  detail='SĂPTĂMÂNA 31.08 - 06.09.2026 - VÂLCEA\n 31.08\n 09:00 - 17:00  Drăgășani  Zona A\n 09:00 - 17:00\n 09:00 - 17:00\n'
+  candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'test','score':68,'decision':'READY','risks':[]}
+  story,hold=newsroom.distributie_story(candidate,detail,newsroom.datetime(2026,8,25,23,30,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'DISTRIBUTIE_PARTIAL_TABLE:1/3')
+ def test_distributie_raw_multiline_table_is_complete_and_date_safe(self):
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_multiline_raw.txt').read_text(encoding='utf-8'); facts=newsroom.parse_distributie_schedule(detail,'https://example.test/next-week.pdf')
+  self.assertEqual((facts['parsed_rows'],facts['total_time_rows'],facts['unresolved_rows']),(27,27,[]))
+  by_day=Counter(x['valid_from'][:10] for x in facts['rows']); self.assertEqual(by_day,{'2026-08-31':5,'2026-09-01':7,'2026-09-02':3,'2026-09-03':6,'2026-09-04':6})
+  self.assertEqual(sum(x['interruption_kind']=='short_duration_pair' for x in facts['rows']),7)
+  self.assertTrue(any(x['uat']=='Nicolae Bălcescu' for x in facts['rows'])); self.assertTrue(any(x['uat']=='Zătreni' for x in facts['rows']))
+ def test_tomorrow_locality_brief_is_candidate_only_and_localized(self):
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_schedule.txt').read_text(encoding='utf-8'); candidate={'source_id':'distributie_oltenia_valcea_planned','source_name':'Distribuție Oltenia','tier':'T1','url':'https://example.test/week.pdf','title':'test','score':68,'decision':'READY','risks':[]}
+  now=newsroom.datetime(2026,8,26,0,5,tzinfo=newsroom.ZoneInfo('Europe/Bucharest')); story,hold=newsroom.distributie_story(candidate,detail,now); self.assertIsNone(hold)
+  brief=newsroom.tomorrow_locality_brief([story],now); self.assertEqual(brief['status'],'candidate_only'); self.assertEqual(brief['target_date'],'2026-08-27'); self.assertEqual(brief['total_localities'],2); self.assertEqual({x['uat'] for x in brief['localities']},{'Călimănești','Stroești'})
+ def test_apavil_index_and_structured_expiry_gate(self):
+  cfg=newsroom.load(ROOT/'newsroom/sources.json'); src=next(x for x in cfg['sources'] if x['id']=='apavil_valcea_outages')
+  index=(ROOT/'tests/fixtures/apavil_outages_index.html').read_text(encoding='utf-8'); rows=newsroom.items(src,index)
+  self.assertEqual(len(rows),2); self.assertTrue(all('/materiale/anunturi/' in url for _,url in rows))
+  detail=(ROOT/'tests/fixtures/apavil_outage_future.html').read_text(encoding='utf-8'); facts=newsroom.parse_apavil_outage(detail)
+  self.assertEqual(facts['outage_date'],'2026-08-26'); self.assertEqual(facts['uats'],['Râmnicu Vâlcea','Mihăești'])
+  candidate={'source_id':src['id'],'source_name':src['name'],'tier':'T1','url':rows[0][1],'title':rows[0][0],'score':68,'decision':'READY','risks':[]}
+  story,hold=newsroom.apavil_story(candidate,detail,newsroom.datetime(2026,8,25,22,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(hold); self.assertEqual(story['section'],'UTILITĂȚI')
+  story,hold=newsroom.apavil_story(candidate,detail,newsroom.datetime(2026,8,26,16,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertTrue(hold.startswith('APAVIL_EXPIRED'))
+  pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn(src['id'],pub['allowed_source_ids'])
  def test_verify_and_publish_lock(self):
   newsroom.cycle(True); self.assertEqual(newsroom.verify(),0); p=subprocess.run([sys.executable,str(ROOT/'scripts/newsroom.py'),'publish']); self.assertNotEqual(p.returncode,0)
 if __name__=='__main__':unittest.main()
