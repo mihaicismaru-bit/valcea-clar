@@ -334,7 +334,7 @@
       "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -345,7 +345,7 @@
       "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -403,17 +403,6 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/24/dsvsa-valcea-amenzi-de-aproape-17-000-de-lei-si-zeci-de-controale-intr-o-singura-saptamana/",
-      "title": "DSVSA Vâlcea: Amenzi de aproape 17.000 de lei și zeci de controale într-o singură săptămână",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -450,12 +439,23 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/expozitie-cu-15-artisti-la-centrul-cultural-valcea-vernisajul-are-loc-joi/",
+      "title": "Expoziție cu 15 artiști la Centrul Cultural Vâlcea. Vernisajul are loc joi",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/25/cod-galben-de-viituri-in-valcea-raurile-pot-creste-rapid-pana-miercuri-noapte/",
       "title": "Cod galben de viituri în Vâlcea. Râurile pot crește rapid până miercuri noapte",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -513,7 +513,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -632,7 +632,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ziarul_de_valcea",
