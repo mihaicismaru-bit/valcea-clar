@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "updated_local": "2026-08-25T18:26:00+03:00",
+  "north_star": "County Reach: ponderea populației județului Vâlcea atinsă lunar, măsurată independent și first-party, cu acoperire pe localități și segmente comportamentale.",
+  "segments": ["news_lovers", "daily_briefers", "casual_users"],
+  "methods": [
+    {"id":"google_search","channel":"acquisition","status":"IMPLEMENTAT_PARTIAL","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"NewsArticle schema + Search Console coverage"},
+    {"id":"google_discover","channel":"acquisition","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"max-image-preview:large, og:image relevant, 1200px+ assets, Discover reporting"},
+    {"id":"google_news","channel":"acquisition","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"publisher eligibility audit, article metadata, news sitemap assessment"},
+    {"id":"facebook_native","channel":"social","status":"DE_TESTAT","impact":"high","editorial_risk":"medium","cost":"low","effort":"medium","measurability":"high","next":"native posts + link variants; UTM cohort"},
+    {"id":"instagram_reels","channel":"social_video","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"medium","cost":"low_medium","effort":"medium","measurability":"high","next":"30-60s local explainers; source card at end"},
+    {"id":"tiktok_short_video","channel":"social_video","status":"DE_TESTAT","impact":"high_young","editorial_risk":"medium","cost":"low_medium","effort":"medium","measurability":"high","next":"local utility/explainer pilot; no sensational crime packaging"},
+    {"id":"youtube_shorts","channel":"social_video","status":"DE_TESTAT","impact":"medium","editorial_risk":"low_medium","cost":"low_medium","effort":"medium","measurability":"high","next":"repurpose verified vertical explainers"},
+    {"id":"whatsapp_share","channel":"referral","status":"IMPLEMENTAT","impact":"medium_high","editorial_risk":"low","cost":"none","effort":"low","measurability":"medium","next":"instrument outbound share clicks and referral return"},
+    {"id":"whatsapp_direct_channel","channel":"direct","status":"DE_TESTAT","impact":"high_local","editorial_risk":"low_medium","cost":"low","effort":"medium","measurability":"medium_high","next":"daily brief + urgent alerts only; explicit opt-in"},
+    {"id":"newsletter_morning","channel":"direct","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"Vâlcea dimineața; 5-7 items + what changes today"},
+    {"id":"web_push","channel":"direct","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"medium","cost":"low","effort":"medium","measurability":"high","next":"opt-in after demonstrated value; strict frequency cap"},
+    {"id":"topic_follow","channel":"retention","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low_medium","effort":"medium_high","measurability":"high","next":"follow CJ decisions, roads, schools, utilities, localities"},
+    {"id":"story_followup","channel":"retention","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"link preview -> decision/result/correction on same-event timeline"},
+    {"id":"locality_pages","channel":"search_retention","status":"DE_TESTAT","impact":"high_county","editorial_risk":"low","cost":"low","effort":"medium_high","measurability":"high","next":"coverage pages for every UAT; freshness and gap KPI"},
+    {"id":"morning_evening_briefs","channel":"habit","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"AM what matters today + PM what changed"},
+    {"id":"share_cards","channel":"viral","status":"DE_TESTAT","impact":"medium","editorial_risk":"low_medium","cost":"low","effort":"medium","measurability":"high","next":"automated factual quote/stat/map cards with source label"},
+    {"id":"reader_tips","channel":"ugc","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"high","cost":"low","effort":"high","measurability":"medium","next":"tip inbox only; never publish UGC without verification"},
+    {"id":"local_partnerships","channel":"distribution","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"medium","cost":"low_medium","effort":"high","measurability":"medium","next":"schools, events, associations, businesses; editorial independence contract"},
+    {"id":"qr_offline_to_online","channel":"offline","status":"DE_TESTAT","impact":"medium","editorial_risk":"low","cost":"medium","effort":"medium","measurability":"high","next":"QR to locality/event utility pages with campaign IDs"},
+    {"id":"sati_brat","channel":"measurement","status":"DE_TESTAT","impact":"high_certification","editorial_risk":"low","cost":"unknown","effort":"medium_high","measurability":"certified","next":"eligibility, commercial terms, tagging requirements, county-level usefulness"},
+    {"id":"first_party_analytics","channel":"measurement","status":"DE_TESTAT","impact":"critical","editorial_risk":"low","cost":"low","effort":"medium","measurability":"critical","next":"define unique users, returning users, locality reach proxy, source/UTM, cohort retention"}
+  ]
+}
