@@ -329,6 +329,28 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
+      "url": "https://evenimentvalcean.ro/investitii-importante-pentru-comuna-costesti-canalizarea-infrastructura-inteligenta-si-bugetul-local-pe-masa-consiliului-local/",
+      "title": "Investiții importante pentru comuna Costești! Canalizarea, infrastructura inteligentă și bugetul local, pe masa Consiliului Local",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-incendiu-la-o-casa-din-bujoreni-pompierii-au-intervenit-cu-doua-autospeciale/",
+      "title": "FOTO Incendiu la o casă din Bujoreni. Pompierii au intervenit cu două autospeciale",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
       "url": "https://evenimentvalcean.ro/foto-incendiu-la-o-casa-din-pesceana-trei-butelii-cu-gaz-scoase-de-pompieri/",
       "title": "FOTO Incendiu la o casă din Pesceana. Trei butelii cu gaz, scoase de pompieri",
       "score": 48,
@@ -392,17 +414,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/slatioara-investeste-in-energie-verde-si-transport-public-modern/",
-      "title": "Slătioara investește în energie verde și transport public modern",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -434,6 +445,17 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/25/cod-galben-de-viituri-in-valcea-raurile-pot-creste-rapid-pana-miercuri-noapte/",
+      "title": "Cod galben de viituri în Vâlcea. Râurile pot crește rapid până miercuri noapte",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -483,17 +505,15 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/24/crima-in-valcea-barbat-acuzat-ca-si-a-omorat-concubina-in-bataie/",
-      "title": "Crimă în Vâlcea. Bărbat acuzat că și-a omorât concubina în bătaie",
+      "url": "https://evenimentvalcean.ro/dispare-politia-de-pe-waze-soferii-romani-au-gasit-deja-codurile-secrete-pentru-a-anunta-radarele/",
+      "title": "Dispare „Poliția” de pe Waze? Șoferii români au găsit deja „codurile secrete” pentru a anunța radarele",
       "score": 36,
-      "decision": "REVIEW_REQUIRED",
-      "risks": [
-        "acuza"
-      ],
-      "seen_before": true
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -506,7 +526,7 @@
       "risks": [
         "acuza"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -604,26 +624,15 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
+      "source_id": "ziarul_de_valcea",
+      "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-tanar-de-16-ani-amendat-dupa-ce-a-mers-pe-o-singura-roata-cu-trotineta-in-ramnicu-valcea/",
-      "title": "FOTO Tânăr de 16 ani amendat, după ce a mers pe o singură roată cu trotineta, în Râmnicu Vâlcea",
+      "url": "https://ziaruldevalcea.ro/2026/08/nicolae-mindrescu-deputat-aur-de-valcea-siguranta-alimentara-a-romaniei-se-face-prin-sustinerea-producatorilor-locali/?utm_source=rss&utm_medium=rss&utm_campaign=nicolae-mindrescu-deputat-aur-de-valcea-siguranta-alimentara-a-romaniei-se-face-prin-sustinerea-producatorilor-locali",
+      "title": "Nicolae Mîndrescu, deputat AUR de Vâlcea: „Siguranța alimentară a României se face prin susținerea producătorilor locali”",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/24-august-1787-ziua-in-care-un-razboi-european-avea-sa-ajunga-si-la-cozia/",
-      "title": "24 august 1787. Ziua în care un război european avea să ajungă și la Cozia",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -675,17 +684,6 @@
       "tier": "T2",
       "url": "https://ziaruldevalcea.ro/2026/08/tragedie-la-baile-olanesti-tanarul-de-31-de-ani-din-budesti-care-si-a-pierdut-viata-era-tatal-a-trei-copii/?utm_source=rss&utm_medium=rss&utm_campaign=tragedie-la-baile-olanesti-tanarul-de-31-de-ani-din-budesti-care-si-a-pierdut-viata-era-tatal-a-trei-copii",
       "title": "Tragedie la Băile Olănești: tânărul de 31 de ani din Budești, care și-a pierdut viața, era tatăl a trei copii",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "ziarul_de_valcea",
-      "source_name": "Ziarul de Vâlcea",
-      "tier": "T2",
-      "url": "https://ziaruldevalcea.ro/2026/08/laurentiu-andrei-director-operatiuni-chimcomplex-daca-nu-se-reduc-preturile-la-energie-industria-pleaca-in-exil/?utm_source=rss&utm_medium=rss&utm_campaign=laurentiu-andrei-director-operatiuni-chimcomplex-daca-nu-se-reduc-preturile-la-energie-industria-pleaca-in-exil",
-      "title": "Laurențiu Andrei, Director operațiuni Chimcomplex: Dacă nu se reduc prețurile la energie, industria pleacă în exil",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
