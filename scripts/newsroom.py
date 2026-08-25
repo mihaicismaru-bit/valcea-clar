@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, hashlib, html, json, re, subprocess, sys, urllib.parse, urllib.request
-from datetime import date, datetime
+import argparse, hashlib, html, json, re, subprocess, sys, unicodedata, urllib.parse, urllib.request
+from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -10,10 +10,12 @@ ROOT=Path(__file__).resolve().parents[1]
 NR=ROOT/'newsroom'; OUT=NR/'output'; STATE=NR/'state'
 RO_MONTHS={'ianuarie':1,'februarie':2,'martie':3,'aprilie':4,'mai':5,'iunie':6,'iulie':7,'august':8,'septembrie':9,'octombrie':10,'noiembrie':11,'decembrie':12}
 GLOBAL_NAV={'măreste font','mărește font','pagina următoare','pagina urmatoare','purtător de cuvânt','purtator de cuvant','conferințe de presă','conferinte de presa','agenda conducerii'}
+COUNTIES=('Alba','Arad','Argeș','Bacău','Bihor','Bistrița-Năsăud','Botoșani','Brașov','Brăila','Buzău','Caraș-Severin','Călărași','Cluj','Constanța','Covasna','Dâmbovița','Dolj','Galați','Giurgiu','Gorj','Harghita','Hunedoara','Ialomița','Iași','Ilfov','Maramureș','Mehedinți','Mureș','Neamț','Olt','Prahova','Satu Mare','Sălaj','Sibiu','Suceava','Teleorman','Timiș','Tulcea','Vaslui','Vâlcea','Vrancea')
 
 def load(p): return json.loads(Path(p).read_text(encoding='utf-8'))
 def dump(p,x): Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def clean(s): return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',s or ''))).strip()
+def fold(s): return ''.join(x for x in unicodedata.normalize('NFKD',s or '') if not unicodedata.combining(x)).lower()
 
 def fetch(url,timeout=18):
     req=urllib.request.Request(url,headers={'User-Agent':'ValceaClarNewsroom/1.0 (+https://valceaclar.ro)'})
@@ -110,6 +112,70 @@ def freshness_hold(src,candidate,detail):
     if age < -45: return f'FUTURE_DATE_IMPLAUSIBLE:{d.isoformat()}'
     return None
 
+def ro_datetime(day,month,year,clock):
+    hour,minute=map(int,clock.split(':')); base=datetime(int(year),int(month),int(day),tzinfo=ZoneInfo('Europe/Bucharest'))
+    if hour==24 and minute==0: return base+timedelta(days=1)
+    if hour>23 or minute>59: raise ValueError('invalid Romanian warning time')
+    return base.replace(hour=hour,minute=minute)
+
+def parse_inhga_warning(detail):
+    txt=clean(detail); low=fold(txt)
+    m=re.search(r'Num[ăa]rul mesajului:\s*(\d+)',txt,re.I) or re.search(r'(?:ATEN[ŢȚT]IONARE|AVERTIZARE)\s+HIDROLOGIC[ĂA]\s+NR\.?\s*(\d+)',txt,re.I)
+    number=int(m.group(1)) if m else None
+    m=re.search(r'Ziua/luna/anul:\s*(\d{1,2})[.\-/](\d{1,2})[.\-/](20\d{2})',txt,re.I) or re.search(r'\bDIN\s+(\d{1,2})[.\-/](\d{1,2})[.\-/](20\d{2})',txt,re.I)
+    issue_date=date(int(m.group(3)),int(m.group(2)),int(m.group(1))) if m else None
+    vm=re.search(r'(\d{1,2})[.\-/](\d{1,2})[.\-/](20\d{2})\s+ora\s+(\d{1,2}:\d{2})\s*[–—-]\s*(\d{1,2})[.\-/](\d{1,2})[.\-/](20\d{2})\s+ora\s+(\d{1,2}:\d{2})',txt,re.I)
+    try:
+        start=ro_datetime(*vm.group(1,2,3,4)) if vm else None
+        end=ro_datetime(*vm.group(5,6,7,8)) if vm else None
+    except ValueError: start=end=None
+    active=txt
+    marker=re.search(r'dup[ăa]\s+cum\s+urmeaz[ăa]\s*:',active,re.I)
+    if marker: active=active[marker.end():]
+    active=re.split(r'Direc[țţt]ie emitent[ăa]\s*:',active,maxsplit=1,flags=re.I)[0]
+    levels=[]
+    for raw in re.findall(r'COD\s+(GALBEN|PORTOCALIU|RO[ȘŞS]U)',active,re.I):
+        level=fold(raw).upper()
+        if level not in levels: levels.append(level)
+    active_fold=fold(active)
+    counties=[name for name in COUNTIES if fold(name) in active_fold]
+    segments=[]
+    basin_clause=r'[A-ZĂÂÎȘŞȚŢ][A-Za-zĂÂÎȘŞȚŢăâîșşțţ]+\s*[–—-]\s*[^()]{1,320}\([^)]*V[âa]lcea[^)]*\)'
+    for match in re.finditer(basin_clause,active):
+        segment=clean(match.group(0)).strip(' ,')
+        if segment and segment not in segments: segments.append(segment)
+    phenomena=''
+    pm=re.search(r'FENOMENELE VIZATE:\s*(.*?)\s*BAZINELE HIDROGRAFICE VIZATE:',txt,re.I)
+    if pm: phenomena=clean(pm.group(1)).strip(' :')
+    basins=''
+    bm=re.search(r'BAZINELE HIDROGRAFICE VIZATE:\s*(.*?)\s*MOMENTUL PRODUCERII FENOMENELOR VIZATE:',txt,re.I)
+    if bm: basins=clean(bm.group(1)).strip(' :')
+    return {'number':number,'issue_date':issue_date.isoformat() if issue_date else None,'valid_from':start.isoformat() if start else None,'valid_until':end.isoformat() if end else None,'levels':levels,'counties':counties,'valcea_relevant':'valcea' in active_fold,'valcea_segments':segments,'phenomena':phenomena,'basins':basins}
+
+def inhga_story(c,detail,now=None):
+    facts=parse_inhga_warning(detail); missing=[]
+    if facts['number'] is None: missing.append('NUMBER')
+    if facts['issue_date'] is None: missing.append('ISSUE_DATE')
+    if not facts['valid_from'] or not facts['valid_until']: missing.append('VALIDITY')
+    if not facts['levels']: missing.append('LEVEL')
+    if missing: return None,'INHGA_UNRESOLVED:'+','.join(missing)
+    if not facts['valcea_relevant']: return None,'INHGA_NOT_VALCEA'
+    now=now or datetime.now(ZoneInfo('Europe/Bucharest')); start=datetime.fromisoformat(facts['valid_from']); end=datetime.fromisoformat(facts['valid_until'])
+    if end<=now: return None,'INHGA_EXPIRED:'+facts['valid_until']
+    if start>now+timedelta(hours=72): return None,'INHGA_FUTURE_OUT_OF_WINDOW:'+facts['valid_from']
+    level=' / '.join(x.lower() for x in facts['levels'])
+    local_end=end.astimezone(ZoneInfo('Europe/Bucharest'))
+    end_label=(local_end-timedelta(days=1)).strftime('%d.%m, ora 24:00') if local_end.hour==0 and local_end.minute==0 else local_end.strftime('%d.%m, ora %H:%M')
+    head=f'Cod {level} hidrologic pentru râuri din Vâlcea, până la {end_label}'
+    p=[f'INHGA a emis mesajul hidrologic nr. {facts["number"]}, valabil de la {start.strftime("%d.%m.%Y, ora %H:%M")} până la {end.strftime("%d.%m.%Y, ora %H:%M")} pentru sectoarele indicate în documentul oficial.']
+    if facts['valcea_segments']: p.append('Pentru județul Vâlcea, textul oficial include: '+'; '.join(facts['valcea_segments'])+'.')
+    elif facts['basins']: p.append('Avertizarea include Vâlcea în aria descrisă de INHGA; sectoarele trebuie consultate în mesajul oficial: '+facts['basins']+'.')
+    if facts['phenomena']: p.append('Fenomene vizate: '+facts['phenomena'].rstrip(' .')+'.')
+    p.append('Codul indică un risc hidrologic pentru sectoarele menționate, nu confirmarea că inundațiile se vor produce în toate localitățile județului.')
+    story=product(c,head,'Avertizare oficială INHGA, păstrată în candidate mode până la o autorizare separată a sursei.',p,'VREME ȘI ALERTE')
+    story['structured_facts']=facts; story['source_candidate']['structured_facts']=facts
+    return story,None
+
 def product(c,h,d,p,section):
     ident=(c['source_id']+'-'+hashlib.sha1(c['url'].encode()).hexdigest()[:16])[:80]
     return {'id':ident,'section':section,'headline':h,'dek':d,'paragraphs':p,'sources':[{'name':c['source_name'],'url':c['url'],'tier':c['tier']}],'source_candidate':c,'status':'DRAFT_CANDIDATE_ONLY','image':None}
@@ -186,6 +252,7 @@ def cycle(fixtures=False):
         if stale: holds.append({'url':c['url'],'reason':stale}); continue
         if adapter=='cj_agenda': s=cj_story(c,detail); hold=None
         elif adapter=='isu_release': s,hold=isu_story(c,detail,pol)
+        elif adapter=='inhga_warning': s,hold=inhga_story(c,detail)
         else: s=None; hold='NO_ADAPTER'
         if hold: holds.append({'url':c['url'],'reason':hold}); continue
         if s: s['image']=choose_media(s); stories.append(s)

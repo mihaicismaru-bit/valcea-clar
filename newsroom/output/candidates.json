@@ -2,17 +2,6 @@
   "status": "candidate_only",
   "candidates": [
     {
-      "source_id": "cj_valcea_sedinte_publice",
-      "source_name": "Consiliul Județean Vâlcea — ședințe publice",
-      "tier": "T1",
-      "url": "https://cjvalcea.ro/avn_sedinte_cj/26-08-2026/",
-      "title": "26.08.2026",
-      "score": 68,
-      "decision": "READY",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "isu_valcea_comunicate",
       "source_name": "ISU Vâlcea",
       "tier": "T1",
@@ -52,6 +41,119 @@
       "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-739",
       "title": "Misiunile pompierilor vâlceni în ultimele 48 de ore",
       "score": 62,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-3-din-25-08-2026/",
+      "title": "AVERTIZARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 3 DIN 25.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-2-din-25-08-2026/",
+      "title": "AVERTIZARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 2 DIN 25.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-25-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 1 DIN 25.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-nr-92-din-25-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ NR. 92 DIN 25.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true,
+      "structured_facts": {
+        "number": 92,
+        "issue_date": "2026-08-25",
+        "valid_from": "2026-08-25T16:00:00+03:00",
+        "valid_until": "2026-08-27T00:00:00+03:00",
+        "levels": [
+          "GALBEN"
+        ],
+        "counties": [
+          "Alba",
+          "Arad",
+          "Argeș",
+          "Bihor",
+          "Botoșani",
+          "Cluj",
+          "Gorj",
+          "Harghita",
+          "Hunedoara",
+          "Iași",
+          "Maramureș",
+          "Mureș",
+          "Neamț",
+          "Olt",
+          "Sibiu",
+          "Suceava",
+          "Timiș",
+          "Vâlcea"
+        ],
+        "valcea_relevant": true,
+        "valcea_segments": [
+          "Olt – afluenții aferenți sectorului aval confluenţă cu râul Lotru – amonte Ac. Ionești (județele: Vâlcea și Argeș)",
+          "Olteţ – bazin superior și afluenţi bazin mijlociu (județele: Gorj şi Vâlcea)"
+        ],
+        "phenomena": "Scurgeri importante pe versanți, torenți și pâraie, viituri rapide pe râurile mici cu posibile efecte de inundații locale și creșteri de debite și niveluri pe unele râuri din bazinele hidrografice menționate, cu posibile depășiri ale COTELOR DE ATENŢIE.",
+        "basins": "Vişeu, Iza, Someş, Crişul Repede, Crişul Negru, Crişul Alb, Mureş, Bega, Timiş, Jiu, Olt, Bistriţa, Moldova, Suceava și Jijia."
+      }
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-24-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 1 DIN 24.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-2-din-22-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 2 DIN 22.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-22-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 1 DIN 22.08.2026",
+      "score": 56,
       "decision": "READY",
       "risks": [],
       "seen_before": true
@@ -312,7 +414,7 @@
       "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -320,6 +422,17 @@
       "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/24/cum-incearca-autoritatile-sa-salveze-termoficarea-din-ramnicu-valcea-de-ce-are-nevoie-cet-govora-de-40-de-milioane-de-lei-de-la-guvern/",
       "title": "Cum încearcă autoritățile să salveze termoficarea din Râmnicu Vâlcea: de ce are nevoie CET Govora de 40 de milioane de lei de la Guvern",
+      "score": 48,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-accident-grav-pe-dn-7-la-boita-un-sofer-a-ajuns-la-spital-dupa-ce-a-intrat-pe-contrasens/",
+      "title": "FOTO Accident grav pe DN 7, la Boița. Un șofer a ajuns la spital după ce a intrat pe contrasens",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
@@ -348,28 +461,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-incendiu-la-o-casa-din-pesceana-trei-butelii-cu-gaz-scoase-de-pompieri/",
-      "title": "FOTO Incendiu la o casă din Pesceana. Trei butelii cu gaz, scoase de pompieri",
-      "score": 48,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/cet-govora-la-un-pas-de-marea-schimbare-40-de-milioane-de-lei-pentru-ca-ramnicul-sa-aiba-apa-calda-si-caldura/",
-      "title": "CET Govora, la un pas de marea schimbare! 40 de milioane de lei pentru ca Râmnicul să aibă apă caldă și căldură",
-      "score": 48,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -386,6 +477,17 @@
       "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/25/foto-pericol-de-explozie-evitat-la-bujoreni-o-butelie-a-fost-evacuata-din-locuinta-cuprinsa-de-incendiu/",
       "title": "FOTO – Pericol de explozie evitat la Bujoreni. O butelie a fost evacuată din locuința cuprinsă de incendiu",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-video-32-de-milioane-de-euro-pentru-dezvoltarea-judetului-valcea-14-contracte-europene-pentru-11-localitati/",
+      "title": "FOTO/VIDEO 32 de milioane de euro pentru dezvoltarea județului Vâlcea! 14 contracte europene pentru 11 localități",
       "score": 42,
       "decision": "WATCH",
       "risks": [],
@@ -497,12 +599,23 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
+      "url": "https://evenimentvalcean.ro/a-murit-crisan-popian-un-apropiat-al-artistilor-valceni-uap-valcea-mesaj-de-adio-pentru-un-mare-iubitor-de-arta/",
+      "title": "A murit Crișan Popian, un apropiat al artiștilor vâlceni. UAP Vâlcea, mesaj de adio pentru un mare iubitor de artă",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": true
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
       "url": "https://evenimentvalcean.ro/doliu-in-invatamantul-valcean-carmen-maria-sima-un-ultim-omagiu-unei-profesoare-dedicate-si-unui-suflet-ales/",
       "title": "Doliu în învățământul vâlcean. Carmen Maria Sima – un ultim omagiu unei profesoare dedicate și unui suflet ales",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -513,7 +626,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -524,7 +637,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -535,7 +648,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -609,19 +722,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/si-a-batut-concubina-pana-a-murit-un-barbat-de-40-de-ani-din-berbesti-propus-pentru-arestare-preventiva/",
-      "title": "Și-a bătut concubina până a murit. Un bărbat de 40 de ani din Berbești propus pentru arestare preventivă",
-      "score": 36,
-      "decision": "REVIEW_REQUIRED",
-      "risks": [
-        "arest"
-      ],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -691,13 +791,13 @@
   "source_health": [
     {
       "id": "cj_valcea_atom",
-      "ok": true,
-      "items": 0
+      "ok": false,
+      "error": "HTTP Error 502: Bad Gateway"
     },
     {
       "id": "cj_valcea_sedinte_publice",
-      "ok": true,
-      "items": 1
+      "ok": false,
+      "error": "HTTP Error 502: Bad Gateway"
     },
     {
       "id": "primaria_rmvl_hcl",
@@ -723,6 +823,11 @@
       "id": "ajofm_valcea_feed",
       "ok": true,
       "items": 10
+    },
+    {
+      "id": "inhga_hydrological_warnings",
+      "ok": true,
+      "items": 7
     },
     {
       "id": "se_intampla_in_valcea",

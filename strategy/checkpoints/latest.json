@@ -1,6 +1,6 @@
 {
-  "checkpoint_id": "VC-AUTO-001",
-  "checked_local": "2026-08-25T18:26:00+03:00",
+  "checkpoint_id": "VC-AUTO-002",
+  "checked_local": "2026-08-25T20:37:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "core_publication_mode": "candidate_only",
@@ -10,11 +10,11 @@
     "note": "policy.json remains candidate-only by design; publication.json is the separate owner-authorized promoter. README wording is stale and should be clarified, not used as runtime authority."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-25T17:08:42+03:00",
+    "latest_verified_publish_check_local": "2026-08-25T20:35:05+03:00",
     "new_auto_published_in_that_check": 0,
-    "skipped": ["CJ 26.08 agenda story already published"],
+    "skipped": ["INHGA warning 92 candidate rejected by live promoter because the source is not in the owner-authorized publication allow-list"],
     "current_material_signal": "INHGA hydrological yellow warning no. 92 is active 25.08 16:00 through 26.08 24:00 and explicitly includes Olt tributaries in Vâlcea and upper/middle Olteț.",
-    "treatment": "HOLD_FOR_T1_INTEGRATION: official signal verified externally, but INHGA is not yet in the canonical source registry and is not authorized for auto-publish. Do not promote a T2 rewrite through the T1 live gate."
+    "treatment": "DRAFT_CANDIDATE_ONLY: INHGA warning 92 now enters the canonical T1 candidate pipeline with explicit Vâlcea relevance and expiry facts. It is still not authorized for live auto-publication; the promoter correctly rejected it."
   },
   "market_intelligence": {
     "romania_2026": {
@@ -35,14 +35,15 @@
     }
   },
   "optimization_applied": {
-    "artifact": "strategy/growth_inventory.json",
-    "change": "Created live inventory of 21 acquisition, viral, direct, retention, habit, UGC, offline and measurement mechanisms with impact/risk/cost/effort/measurability and next action."
+    "artifacts": ["newsroom/sources.json", "scripts/newsroom.py", "tests/fixtures/inhga_warning_92.html", "tests/fixtures/inhga_warning_non_valcea.html", "strategy/growth_inventory.json"],
+    "change": "Implemented the INHGA candidate adapter with structured number/date/validity/level/county/basin extraction, explicit Vâlcea relevance, automatic expiry and negative coverage tests. Added locality-scoped alert following to the growth inventory."
   },
   "blockers": [
-    "INHGA is absent from newsroom/sources.json, so a currently relevant verified hydrological warning cannot enter the T1 pipeline.",
+    "INHGA is proven in candidate mode but remains intentionally outside the live publication allow-list pending a separate authority decision.",
+    "CJ Vâlcea endpoints returned transient HTTP 502 during this cycle; the pipeline failed closed and did not infer a CJ update from secondary sources.",
     "Build lacks explicit NewsArticle structured data and no max-image-preview:large/representative og:image path was found; Discover upside is therefore underused.",
     "No certified or first-party County Reach baseline exists yet.",
     "Current source registry is strongly Râmnicu/CJ-centric and lacks systematic UAT-level coverage for the whole county."
   ],
-  "next_micro_lot": "SOURCE COVERAGE 01 — add INHGA as T1 discovery source without expanding auto-publish authority; then map missing official source categories and locality coverage."
+  "next_micro_lot": "SOURCE COVERAGE 02 — build a UAT × information-need coverage matrix for all Vâlcea localities, rank the highest-impact source gaps, and add the next safe official discovery source without broadening live publication authority."
 }
