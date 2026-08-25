@@ -65,7 +65,7 @@
       "score": 56,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "inhga_hydrological_warnings",
@@ -491,7 +491,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -514,6 +514,17 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "ziarul_de_valcea",
+      "source_name": "Ziarul de Vâlcea",
+      "tier": "T2",
+      "url": "https://ziaruldevalcea.ro/2026/08/claudia-joica-presedinta-organizatiei-judetene-de-femei-aur-valcea-schimbarea-incepe-prin-dialog-iar-fiecare-voce-conteaza/?utm_source=rss&utm_medium=rss&utm_campaign=claudia-joica-presedinta-organizatiei-judetene-de-femei-aur-valcea-schimbarea-incepe-prin-dialog-iar-fiecare-voce-conteaza",
+      "title": "Claudia Joica, președinta Organizației Județene de Femei AUR Vâlcea: „Schimbarea începe prin dialog, iar fiecare voce contează”",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "ziarul_de_valcea",
@@ -557,7 +568,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -621,8 +632,19 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-tragedie-pe-dn-7-la-lotrisor-un-sofer-a-murit-dupa-ce-autoutilitara-sa-a-intrat-sub-semiremorca-unui-tir/",
-      "title": "FOTO Tragedie pe DN 7 la Lotrișor! Un șofer a murit după ce autoutilitara sa a intrat sub semiremorca unui TIR",
+      "url": "https://evenimentvalcean.ro/25-august-o-zi-cu-doua-personalitati-care-au-marcat-valcea-vartolomeu-stanescu-si-sergiu-saliste/",
+      "title": "25 august, o zi cu două personalități care au marcat Vâlcea: Vartolomeu Stănescu și Sergiu Săliște",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/foto-video-tragedie-pe-dn-7-la-lotrisor-un-sofer-a-murit-dupa-ce-autoutilitara-sa-a-intrat-sub-semiremorca-unui-tir/",
+      "title": "FOTO/VIDEO Tragedie pe DN 7 la Lotrișor! Un șofer a murit după ce autoutilitara sa a intrat sub semiremorca unui TIR",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
@@ -733,17 +755,6 @@
       "seen_before": true
     },
     {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/doua-amicale-de-gala-pentru-cs-valcea-1924-lupii-negri-primele-teste-ale-pauzei-cu-u-bt-cluj-napoca/",
-      "title": "Două amicale de gală pentru CS Vâlcea 1924. Lupii Negri, primele teste ale pauzei, cu U-BT Cluj-Napoca",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ziarul_de_valcea",
       "source_name": "Ziarul de Vâlcea",
       "tier": "T2",
@@ -793,17 +804,6 @@
       "tier": "T2",
       "url": "https://ziaruldevalcea.ro/2026/08/soc-in-ramnicu-valcea-femeie-de-71-de-ani-injunghiata-de-sot-in-propria-locuinta/?utm_source=rss&utm_medium=rss&utm_campaign=soc-in-ramnicu-valcea-femeie-de-71-de-ani-injunghiata-de-sot-in-propria-locuinta",
       "title": "ȘOC în Râmnicu Vâlcea: femeie de 71 de ani, înjunghiată de soț în propria locuință",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "ziarul_de_valcea",
-      "source_name": "Ziarul de Vâlcea",
-      "tier": "T2",
-      "url": "https://ziaruldevalcea.ro/2026/08/tragedie-la-baile-olanesti-tanarul-de-31-de-ani-din-budesti-care-si-a-pierdut-viata-era-tatal-a-trei-copii/?utm_source=rss&utm_medium=rss&utm_campaign=tragedie-la-baile-olanesti-tanarul-de-31-de-ani-din-budesti-care-si-a-pierdut-viata-era-tatal-a-trei-copii",
-      "title": "Tragedie la Băile Olănești: tânărul de 31 de ani din Budești, care și-a pierdut viața, era tatăl a trei copii",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
