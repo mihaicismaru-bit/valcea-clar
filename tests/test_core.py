@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'scripts'))
 import newsroom
 class T(unittest.TestCase):
- def test_sources(self): self.assertEqual(len(newsroom.load(ROOT/'newsroom/sources.json')['sources']),11)
+ def test_sources(self): self.assertEqual(len(newsroom.load(ROOT/'newsroom/sources.json')['sources']),12)
  def test_policy_locked(self):
   p=newsroom.load(ROOT/'newsroom/policy.json'); self.assertEqual(p['publication_mode'],'candidate_only'); self.assertFalse(p['auto_publish'])
  def test_risk(self):
@@ -36,6 +36,11 @@ class T(unittest.TestCase):
   story,hold=newsroom.inhga_story(candidate,detail,newsroom.datetime(2026,8,25,20,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertEqual(hold,'INHGA_NOT_VALCEA')
  def test_inhga_is_not_live_authorized(self):
   pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn('inhga_hydrological_warnings',pub['allowed_source_ids'])
+ def test_distributie_oltenia_index_is_bounded_and_not_live_authorized(self):
+  cfg=newsroom.load(ROOT/'newsroom/sources.json'); src=next(x for x in cfg['sources'] if x['id']=='distributie_oltenia_valcea_planned')
+  detail=(ROOT/'tests/fixtures/distributie_oltenia_valcea_index.html').read_text(encoding='utf-8'); rows=newsroom.items(src,detail)
+  self.assertEqual(len(rows),2); self.assertIn('31.08 - 06.09.2026',rows[0][0]); self.assertIn('24.08 - 30.08.2026',rows[1][0])
+  pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn(src['id'],pub['allowed_source_ids'])
  def test_verify_and_publish_lock(self):
   newsroom.cycle(True); self.assertEqual(newsroom.verify(),0); p=subprocess.run([sys.executable,str(ROOT/'scripts/newsroom.py'),'publish']); self.assertNotEqual(p.returncode,0)
 if __name__=='__main__':unittest.main()

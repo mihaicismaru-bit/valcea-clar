@@ -2,37 +2,6 @@
   "status": "candidate_only",
   "stories": [
     {
-      "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
-      "section": "ADMINISTRAȚIE",
-      "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei",
-      "dek": "Ce intră în discuția consilierilor județeni și ce nu poate fi prezentat încă drept decizie.",
-      "paragraphs": [
-        "Consiliul Județean Vâlcea a publicat ordinea de zi a unei ședințe. VÂLCEA CLAR tratează documentul ca proiect de lucru, nu ca hotărâri deja adoptate.",
-        "Cea mai mare sumă identificată automat în document este 43.793.000 lei. Valoarea trebuie citită în contextul proiectului și al anexelor sale.",
-        "Adoptarea, modificarea sau respingerea proiectelor se confirmă numai după ședință, din hotărârile și documentele oficiale publicate ulterior."
-      ],
-      "sources": [
-        {
-          "name": "Consiliul Județean Vâlcea — ședințe publice",
-          "url": "https://cjvalcea.ro/avn_sedinte_cj/26-08-2026/",
-          "tier": "T1"
-        }
-      ],
-      "source_candidate": {
-        "source_id": "cj_valcea_sedinte_publice",
-        "source_name": "Consiliul Județean Vâlcea — ședințe publice",
-        "tier": "T1",
-        "url": "https://cjvalcea.ro/avn_sedinte_cj/26-08-2026/",
-        "title": "26.08.2026",
-        "score": 68,
-        "decision": "READY",
-        "risks": [],
-        "seen_before": true
-      },
-      "status": "DRAFT_CANDIDATE_ONLY",
-      "image": "administratie-ramnicu-valcea-20260819.webp"
-    },
-    {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",
       "section": "VREME ȘI ALERTE",
       "headline": "Cod galben hidrologic pentru râuri din Vâlcea, până la 26.08, ora 24:00",

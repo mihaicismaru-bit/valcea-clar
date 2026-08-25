@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, hashlib, html, json, re, subprocess, sys, unicodedata, urllib.parse, urllib.request
+import argparse, hashlib, html, http.cookiejar, json, re, subprocess, sys, unicodedata, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
@@ -21,7 +21,8 @@ def fetch(url,timeout=18):
     req=urllib.request.Request(url,headers={'User-Agent':'ValceaClarNewsroom/1.0 (+https://valceaclar.ro)'})
     first=None
     try:
-        with urllib.request.urlopen(req,timeout=timeout) as r:
+        opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+        with opener.open(req,timeout=timeout) as r:
             return r.read().decode(r.headers.get_content_charset() or 'utf-8','replace')
     except Exception as exc:
         first=exc
@@ -65,7 +66,7 @@ def items(src,text):
     for t,u in out:
         u=u.split('#')[0]
         if u not in seen: rows.append((t,u)); seen.add(u)
-    return rows[:40]
+    return rows[:int(src.get('max_items',40))]
 
 def risk(text,pol):
     low=text.lower()

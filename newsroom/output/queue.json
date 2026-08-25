@@ -2,11 +2,6 @@
   "status": "AUTO_PUBLISH_ACTIVE",
   "queue": [
     {
-      "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
-      "headline": "CJ Vâlcea: pe ordinea de zi, proiecte care includ 43.793.000 lei",
-      "status": "PUBLISHED_AUTO"
-    },
-    {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",
       "headline": "Cod galben hidrologic pentru râuri din Vâlcea, până la 26.08, ora 24:00",
       "status": "CANDIDATE_ONLY"

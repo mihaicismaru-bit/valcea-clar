@@ -1,14 +1,10 @@
 {
   "status": "AUTO_PUBLISH_ACTIVE",
   "authority": "OWNER_APPROVED_AUTO_PUBLICATION",
-  "checked_local": "2026-08-25T20:53:02+03:00",
+  "checked_local": "2026-08-25T21:40:01+03:00",
   "selected": [],
   "published": [],
   "skipped": [
-    {
-      "id": "cj_valcea_sedinte_publice-e1942667857ec69d",
-      "reason": "already_published"
-    },
     {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",
       "reason": "source"

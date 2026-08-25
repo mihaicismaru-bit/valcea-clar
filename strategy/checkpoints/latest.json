@@ -1,49 +1,69 @@
 {
-  "checkpoint_id": "VC-AUTO-002",
-  "checked_local": "2026-08-25T20:37:00+03:00",
+  "checkpoint_id": "VC-AUTO-003",
+  "checked_local": "2026-08-25T21:44:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "core_publication_mode": "candidate_only",
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "policy.json remains candidate-only by design; publication.json is the separate owner-authorized promoter. README wording is stale and should be clarified, not used as runtime authority."
+    "note": "No publication authority was broadened. Distribuție Oltenia and INHGA remain candidate-only discovery sources."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-25T20:35:05+03:00",
+    "latest_verified_publish_check_local": "2026-08-25T21:36:49+03:00",
     "new_auto_published_in_that_check": 0,
-    "skipped": ["INHGA warning 92 candidate rejected by live promoter because the source is not in the owner-authorized publication allow-list"],
-    "current_material_signal": "INHGA hydrological yellow warning no. 92 is active 25.08 16:00 through 26.08 24:00 and explicitly includes Olt tributaries in Vâlcea and upper/middle Olteț.",
-    "treatment": "DRAFT_CANDIDATE_ONLY: INHGA warning 92 now enters the canonical T1 candidate pipeline with explicit Vâlcea relevance and expiry facts. It is still not authorized for live auto-publication; the promoter correctly rejected it."
+    "source_health": "10/12 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
+    "skipped": [
+      "INHGA warning 92 was rejected by the live promoter because the source is not owner-authorized for publication",
+      "Distribuție Oltenia schedules were retained as discovery candidates because structured PDF extraction and live authority are intentionally absent"
+    ],
+    "current_material_signals": [
+      "INHGA hydrological yellow warning no. 92 remains active through 26.08.2026 24:00 for Vâlcea-relevant sectors",
+      "The official electricity schedule lists planned works on 26.08 in Nicolae Bălcescu and Drăgășani, on 27.08 in Stroești and Călimănești, and on 28.08 in Stoenești and Râmnicu Vâlcea"
+    ],
+    "treatment": "DISCOVERY_ONLY: zero live articles were created. The electricity schedule is material local utility information, but publication fails closed until PDF facts, locality tagging and expiry are handled by a tested structured adapter."
   },
-  "market_intelligence": {
-    "romania_2026": {
-      "internet_penetration": "94.0% at end-2025 (DataReportal Digital 2026 Romania)",
-      "social_media_identities": "12.9m / 68.3% population (DataReportal; not unique-person audited reach)",
-      "facebook_ad_reach": "10.3m; 67.1% of Romanian adults 18+ (Meta planning data via DataReportal)",
-      "instagram_ad_reach": "6.0m; 39.6% of adults 18+",
-      "tiktok_ad_reach_18plus": "8.71m"
+  "development_micro_lot": {
+    "name": "SOURCE COVERAGE 02",
+    "result": "completed",
+    "coverage_model": {
+      "uats": 89,
+      "municipalities": 2,
+      "towns": 9,
+      "communes": 78,
+      "information_needs": 12
     },
-    "news_behavior": {
-      "trust_in_news_romania": "23%",
-      "news_avoidance_romania": "47% sometimes/often",
-      "global_online_news_entry": "social/video networks 54% vs publisher sites/apps 51% in 2026",
-      "implication": "Distribution must be platform-native while valceaclar.ro stays the canonical, verifiable source. Retention must be utility-led, not volume-led."
-    },
-    "certification": {
-      "sati": "BRAT SATI measures technical traffic plus monthly online audience profiling and weighted audience estimates; this is the target independent web-audience standard, complemented by first-party analytics."
+    "intelligence": "Planned utility schedules create a predictable, low-editorial-risk habit product: 'mâine în localitatea ta'. The official operator exposes both current-week and next-week Vâlcea schedules, enabling advance alerts rather than reactive articles.",
+    "selected_source": "distributie_oltenia_valcea_planned",
+    "selection_reason": "Official T1 operator, county-wide recurring utility value, predictable cadence, high measurability and low editorial risk.",
+    "artifacts": [
+      "strategy/source_coverage_matrix.json",
+      "newsroom/sources.json",
+      "scripts/newsroom.py",
+      "tests/fixtures/distributie_oltenia_valcea_index.html",
+      "tests/test_core.py",
+      "tests/test_strategy.py",
+      "strategy/growth_inventory.json"
+    ],
+    "verification": "29 unit tests, build, site verification, fixture newsroom cycle and live fail-closed publication check passed."
+  },
+  "growth_inventory": {
+    "mechanisms_total": 23,
+    "changed": {
+      "id": "planned_utility_calendar",
+      "status": "IMPLEMENTAT_PARTIAL",
+      "impact": "high_county",
+      "editorial_risk": "low",
+      "measurability": "high"
     }
   },
-  "optimization_applied": {
-    "artifacts": ["newsroom/sources.json", "scripts/newsroom.py", "tests/fixtures/inhga_warning_92.html", "tests/fixtures/inhga_warning_non_valcea.html", "strategy/growth_inventory.json"],
-    "change": "Implemented the INHGA candidate adapter with structured number/date/validity/level/county/basin extraction, explicit Vâlcea relevance, automatic expiry and negative coverage tests. Added locality-scoped alert following to the growth inventory."
-  },
   "blockers": [
-    "INHGA is proven in candidate mode but remains intentionally outside the live publication allow-list pending a separate authority decision.",
-    "CJ Vâlcea endpoints returned transient HTTP 502 during this cycle; the pipeline failed closed and did not infer a CJ update from secondary sources.",
-    "Build lacks explicit NewsArticle structured data and no max-image-preview:large/representative og:image path was found; Discover upside is therefore underused.",
+    "Distribuție Oltenia discovery is proven, but structured PDF row extraction, locality tagging, deduplication and automatic expiry are still required before article or alert generation.",
+    "INHGA remains intentionally outside the live publication allow-list pending a separate authority decision.",
+    "The next county-wide coverage gaps are water/sewer outages, roads/transport disruptions, ANM weather and DSP health notices.",
+    "Both CJ Vâlcea endpoints returned transient HTTP 502 during this cycle; no secondary source was substituted.",
     "No certified or first-party County Reach baseline exists yet.",
-    "Current source registry is strongly Râmnicu/CJ-centric and lacks systematic UAT-level coverage for the whole county."
+    "Build still lacks the identified NewsArticle, representative-image and max-image-preview:large Discover package."
   ],
-  "next_micro_lot": "SOURCE COVERAGE 02 — build a UAT × information-need coverage matrix for all Vâlcea localities, rank the highest-impact source gaps, and add the next safe official discovery source without broadening live publication authority."
+  "next_micro_lot": "SOURCE COVERAGE 03 — map and test APAVIL/ADI APA Vâlcea official water-outage surfaces, then implement structured extraction for the selected recurring utility source without broadening live publication authority."
 }
