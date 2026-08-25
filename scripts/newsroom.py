@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, hashlib, html, json, re, subprocess, sys, unicodedata, urllib.parse, urllib.request
+import argparse, hashlib, html, http.cookiejar, json, re, subprocess, sys, unicodedata, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
@@ -21,7 +21,8 @@ def fetch(url,timeout=18):
     req=urllib.request.Request(url,headers={'User-Agent':'ValceaClarNewsroom/1.0 (+https://valceaclar.ro)'})
     first=None
     try:
-        with urllib.request.urlopen(req,timeout=timeout) as r:
+        opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+        with opener.open(req,timeout=timeout) as r:
             return r.read().decode(r.headers.get_content_charset() or 'utf-8','replace')
     except Exception as exc:
         first=exc
@@ -31,6 +32,23 @@ def fetch(url,timeout=18):
         return p.stdout.decode('utf-8','replace')
     except Exception:
         raise first
+
+def fetch_bytes(url,warmup_url=None,timeout=30):
+    jar=http.cookiejar.CookieJar(); opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
+    headers={'User-Agent':'ValceaClarNewsroom/1.0 (+https://valceaclar.ro)'}
+    if warmup_url:
+        with opener.open(urllib.request.Request(warmup_url,headers=headers),timeout=timeout) as r: r.read()
+    with opener.open(urllib.request.Request(url,headers=headers),timeout=timeout) as r: return r.read()
+
+def pdf_text(url,warmup_url=None):
+    raw=fetch_bytes(url,warmup_url)
+    if not raw.startswith(b'%PDF'): raise ValueError('PDF_SIGNATURE_MISSING')
+    # Raw content-stream order preserves the semantic row order of merged table
+    # cells: a date is emitted before all rows governed by that date.
+    try: p=subprocess.run(['pdftotext','-raw','-','-'],input=raw,capture_output=True,check=True,timeout=30)
+    except FileNotFoundError as exc: raise RuntimeError('PDFTOTEXT_UNAVAILABLE') from exc
+    except subprocess.SubprocessError as exc: raise RuntimeError('PDF_TEXT_EXTRACTION_FAILED') from exc
+    return p.stdout.decode('utf-8','replace')
 
 class Links(HTMLParser):
     def __init__(self): super().__init__(); self.rows=[]; self.a=None; self.buf=[]
@@ -56,16 +74,17 @@ def items(src,text):
             if not title: continue
             tl=title.lower()
             if tl in GLOBAL_NAV or tl in excluded: continue
-            u=urllib.parse.urljoin(base,url); path=urllib.parse.urlparse(u).path.lower(); inc=src.get('include_path_contains') or []
+            u=urllib.parse.urljoin(base,url); parsed=urllib.parse.urlparse(u); path=parsed.path.lower(); query=parsed.query.lower(); inc=src.get('include_path_contains') or []; qinc=src.get('include_query_contains') or []
             if len(title)<src.get('min_title_length',12): continue
             if inc and not any(x.lower() in path for x in inc): continue
+            if qinc and not any(x.lower() in query for x in qinc): continue
             if src.get('same_host_only') and urllib.parse.urlparse(u).netloc!=urllib.parse.urlparse(base).netloc: continue
             out.append((title,u))
     seen=set(); rows=[]
     for t,u in out:
         u=u.split('#')[0]
         if u not in seen: rows.append((t,u)); seen.add(u)
-    return rows[:40]
+    return rows[:int(src.get('max_items',40))]
 
 def risk(text,pol):
     low=text.lower()
@@ -176,6 +195,192 @@ def inhga_story(c,detail,now=None):
     story['structured_facts']=facts; story['source_candidate']['structured_facts']=facts
     return story,None
 
+def parse_apavil_outage(detail):
+    txt=clean(detail); low=fold(txt)
+    m=re.search(r'(?:în\s+)?data\s+de\s+(\d{1,2})[.\-/](\d{1,2})[.\-/](20\d{2})',txt,re.I)
+    outage_date=date(int(m.group(3)),int(m.group(2)),int(m.group(1))) if m else None
+    tm=re.search(r'interval(?:ul)?(?:\s+orar)?\s+(\d{1,2})[:.]?(\d{2})\s*[–—-]\s*(\d{1,2})[:.]?(\d{2})',txt,re.I)
+    start=end=None
+    if outage_date and tm:
+        try:
+            start=datetime(outage_date.year,outage_date.month,outage_date.day,int(tm.group(1)),int(tm.group(2)),tzinfo=ZoneInfo('Europe/Bucharest'))
+            end=datetime(outage_date.year,outage_date.month,outage_date.day,int(tm.group(3)),int(tm.group(4)),tzinfo=ZoneInfo('Europe/Bucharest'))
+            if end<=start: end+=timedelta(days=1)
+        except ValueError: start=end=None
+    uats=[]
+    matrix=load(ROOT/'strategy/source_coverage_matrix.json')
+    for row in matrix.get('uats',[]):
+        name=row['name']
+        name_pattern=re.escape(fold(name)).replace(r'\-',r'[-\s]+')
+        if re.search(r'(?<!\w)'+name_pattern+r'(?!\w)',low): uats.append(name)
+    reason='planned_work'
+    if any(x in low for x in ('avarie','remediere','defectiuni','pierderii de apa')): reason='repair_or_fault'
+    return {'outage_date':outage_date.isoformat() if outage_date else None,'valid_from':start.isoformat() if start else None,'valid_until':end.isoformat() if end else None,'uats':uats,'reason':reason}
+
+def apavil_story(c,detail,now=None):
+    facts=parse_apavil_outage(detail); missing=[]
+    if not facts['outage_date']: missing.append('DATE')
+    if not facts['valid_from'] or not facts['valid_until']: missing.append('INTERVAL')
+    if not facts['uats']: missing.append('UAT')
+    if missing: return None,'APAVIL_UNRESOLVED:'+','.join(missing)
+    now=now or datetime.now(ZoneInfo('Europe/Bucharest')); start=datetime.fromisoformat(facts['valid_from']); end=datetime.fromisoformat(facts['valid_until'])
+    if end<=now: return None,'APAVIL_EXPIRED:'+facts['valid_until']
+    if start>now+timedelta(days=7): return None,'APAVIL_FUTURE_OUT_OF_WINDOW:'+facts['valid_from']
+    where=' și '.join(facts['uats'][:2]) if len(facts['uats'])<=2 else f'{len(facts["uats"])} localități din Vâlcea'
+    head=f'APAVIL: apă oprită în {where}, pe {start.strftime("%d.%m")}, între {start.strftime("%H:%M")} și {end.strftime("%H:%M")}'
+    p=[f'APAVIL anunță întreruperea furnizării apei în {where}, în intervalul {start.strftime("%d.%m.%Y, %H:%M")}–{end.strftime("%H:%M")}.',
+       'Lista exactă a străzilor, imobilelor și zonelor afectate trebuie consultată în anunțul oficial, deoarece alimentarea poate fi întreruptă doar parțial în unele localități.',
+       'După reluarea furnizării pot apărea temporar impurități sau variații de presiune; recomandările operatorului din anunțul oficial au prioritate.']
+    story=product(c,head,'Întrerupere de apă extrasă din anunțul oficial APAVIL și păstrată în candidate mode.',p,'UTILITĂȚI')
+    story['structured_facts']=facts; story['source_candidate']['structured_facts']=facts
+    return story,None
+
+def _schedule_date_groups(record_starts,anchors,markers):
+    """Partition ordered records around the vertically centred date cells."""
+    n=len(record_starts); k=len(markers)
+    if not n or not k or k>n: return None
+    dp={(0,0):(0.0,[])}
+    for group,(marker_line,day) in enumerate(markers,1):
+        for end in range(group,n-(k-group)+1):
+            best=None
+            for begin in range(group-1,end):
+                prev=dp.get((group-1,begin))
+                if not prev: continue
+                start_line=record_starts[begin]
+                end_line=(record_starts[end]-1) if end<n else anchors[-1]+2
+                if not (start_line<=marker_line<=end_line): continue
+                cost=prev[0]+(marker_line-(start_line+end_line)/2)**2
+                if best is None or cost<best[0]: best=(cost,prev[1]+[(begin,end,day)])
+            if best: dp[(group,end)]=best
+    result=dp.get((k,n))
+    if not result: return None
+    days=[None]*n
+    for begin,end,day in result[1]:
+        for i in range(begin,end): days[i]=day
+    return days
+
+def _schedule_uat(lines,start,end,anchor,uat_map):
+    candidates=[]
+    for line_no in range(start,end+1):
+        value=fold(clean(lines[line_no])).replace('-',' ')
+        value=re.sub(r'^\d{1,2}\.\d{1,2}\s*','',value)
+        value=re.sub(r'^\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}\s*','',value)
+        equipment=min([x for x in (value.find('pta '),value.find('ptab '),value.find('ptam '),value.find('ptcz '),value.find('lea '),value.find('les '),value.find('pc ')) if x>=0] or [10**6])
+        for key,name in uat_map.items():
+            match=re.search(r'(?<!\w)'+re.escape(key)+r'(?!\w)',value)
+            if not match: continue
+            if value.strip()==key: score=120
+            elif match.start()<equipment: score=100 if line_no==anchor else 90
+            else: score=20
+            candidates.append((score,-abs(line_no-anchor),len(key),name))
+    if candidates and max(candidates)[0]>=90: return max(candidates)[3]
+    # Handles a locality split around the interval line, e.g. "Nicolae" / "Bălcescu".
+    expanded=fold(' '.join(lines[max(0,start-1):end+1])).replace('-',' ')
+    split=[]
+    for key,name in uat_map.items():
+        tokens=key.split()
+        if len(tokens)>1 and all(re.search(r'(?<!\w)'+re.escape(token)+r'(?!\w)',expanded) for token in tokens): split.append((len(tokens),len(key),name))
+    if split: return max(split)[2]
+    return max(candidates)[3] if candidates else None
+
+def _schedule_zone(lines,start,end,anchor,uat):
+    parts=[]; uat_key=fold(uat).replace('-',' ') if uat else ''
+    for line_no in range(start,end+1):
+        raw=clean(lines[line_no]); value=fold(raw).replace('-',' ')
+        if line_no==anchor and uat_key:
+            match=re.search(r'(?<!\w)'+re.escape(uat_key)+r'(?!\w)',value)
+            if match:
+                tail=clean(raw[match.end():]).strip(' ,-')
+                if tail: parts.append(tail)
+        equipment=re.search(r'\b(?:PTA|PTAB|PTAM|PTCZ|LEA|LES|PC)\b',raw,re.I)
+        if equipment: parts.append(clean(raw[equipment.start():]))
+    if not parts and start>0:
+        raw=clean(lines[start-1]); equipment=re.search(r'\b(?:PTA|PTAB|PTAM|PTCZ|LEA|LES|PC)\b',raw,re.I)
+        if equipment: parts.append(clean(raw[equipment.start():]))
+    unique=[]
+    for part in parts:
+        if part and part not in unique: unique.append(part)
+    return ' '.join(unique)
+
+def parse_distributie_schedule(detail,source_url=''):
+    lines=detail.replace('\f','\n').splitlines(); year_match=re.search(r'S[ĂA]PT[ĂA]M[ÂA]NA[^\n]*(20\d{2})',detail,re.I); year=int(year_match.group(1)) if year_match else None
+    markers=[]
+    for i,line in enumerate(lines):
+        m=re.match(r'^\s*(\d{1,2})\.(\d{1,2})(?:\s|$)',line)
+        if m and year:
+            try: markers.append((i,date(year,int(m.group(2)),int(m.group(1)))))
+            except ValueError: pass
+    time_line=re.compile(r'(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})'); anchors=[i for i,line in enumerate(lines) if time_line.search(line)]
+    record_starts=[]
+    for pos,anchor in enumerate(anchors):
+        previous=anchors[pos-1] if pos else -1
+        short=[i for i in range(max(previous+1,anchor-9),anchor+1) if 'doua intreruperi' in fold(lines[i])]
+        record_starts.append(short[-1] if short else anchor)
+    if markers and anchors and markers[0][0]<anchors[0]:
+        # `pdftotext -raw` exposes merged date cells before their logical rows.
+        days=[]
+        for anchor in anchors:
+            prior=[day for line_no,day in markers if line_no<anchor]
+            days.append(prior[-1] if prior else None)
+    else:
+        # Retained for deterministic layout-text fixtures and older Poppler output.
+        days=_schedule_date_groups(record_starts,anchors,markers)
+    matrix=load(ROOT/'strategy/source_coverage_matrix.json'); uat_map={re.sub(r'\s+',' ',fold(x['name']).replace('-',' ')).strip():x['name'] for x in matrix.get('uats',[])}
+    rows=[]; unresolved=[]
+    for pos,anchor in enumerate(anchors):
+        match=time_line.search(lines[anchor]); start_line=record_starts[pos]; end_line=(record_starts[pos+1]-1) if pos+1<len(record_starts) else min(len(lines)-1,anchor+2)
+        uat=_schedule_uat(lines,start_line,end_line,anchor,uat_map); day=days[pos] if days else None
+        if not uat or not day:
+            unresolved.append({'line':clean(lines[anchor]),'reason':'UAT' if not uat else 'DATE'}); continue
+        try:
+            sh,sm=map(int,match.group(1).split(':')); eh,em=map(int,match.group(2).split(':'))
+            start=datetime(day.year,day.month,day.day,sh,sm,tzinfo=ZoneInfo('Europe/Bucharest')); end=datetime(day.year,day.month,day.day,eh,em,tzinfo=ZoneInfo('Europe/Bucharest'))
+            if end<=start: end+=timedelta(days=1)
+        except ValueError:
+            unresolved.append({'line':clean(lines[anchor]),'reason':'TIME'}); continue
+        kind='short_duration_pair' if any('doua intreruperi' in fold(lines[x]) for x in range(start_line,anchor+1)) else 'scheduled_interval'
+        zone=_schedule_zone(lines,start_line,end_line,anchor,uat)
+        if not zone:
+            unresolved.append({'line':clean(lines[anchor]),'reason':'ZONE'}); continue
+        ident=hashlib.sha1(f'{source_url}|{start.isoformat()}|{end.isoformat()}|{uat}|{kind}|{zone}'.encode()).hexdigest()[:16]
+        rows.append({'id':ident,'uat':uat,'valid_from':start.isoformat(),'valid_until':end.isoformat(),'zone':zone,'interruption_kind':kind})
+    unique={x['id']:x for x in rows}
+    return {'year':year,'total_time_rows':len(anchors),'parsed_rows':len(unique),'unresolved_rows':unresolved,'rows':sorted(unique.values(),key=lambda x:(x['valid_from'],x['uat'],x['zone']))}
+
+def distributie_story(c,detail,now=None):
+    facts=parse_distributie_schedule(detail,c.get('url','')); total=facts['total_time_rows']; parsed=facts['parsed_rows']
+    if not facts['year'] or total==0: return None,'DISTRIBUTIE_TABLE_UNRESOLVED'
+    if parsed/total < 0.85: return None,f'DISTRIBUTIE_PARTIAL_TABLE:{parsed}/{total}'
+    now=now or datetime.now(ZoneInfo('Europe/Bucharest')); horizon=now+timedelta(days=7)
+    active=[x for x in facts['rows'] if datetime.fromisoformat(x['valid_until'])>now and datetime.fromisoformat(x['valid_from'])<=horizon]
+    if not active: return None,'DISTRIBUTIE_NO_ACTIVE_ROWS'
+    uats=sorted({x['uat'] for x in active}); starts=[datetime.fromisoformat(x['valid_from']) for x in active]; ends=[datetime.fromisoformat(x['valid_until']) for x in active]
+    head=f'Întreruperi programate de curent în {len(uats)} localități din Vâlcea, între {min(starts).strftime("%d.%m")} și {max(ends).strftime("%d.%m")}'
+    paragraphs=['Distribuție Oltenia a programat lucrări care întrerup temporar alimentarea cu energie electrică în zone din '+', '.join(uats)+'.']
+    for day in sorted({x.date() for x in starts}):
+        day_rows=[x for x in active if datetime.fromisoformat(x['valid_from']).date()==day]
+        labels=[f'{x["uat"]} ({datetime.fromisoformat(x["valid_from"]).strftime("%H:%M")}–{datetime.fromisoformat(x["valid_until"]).strftime("%H:%M")})' for x in day_rows]
+        paragraphs.append(day.strftime('%d.%m.%Y')+': '+', '.join(labels)+'.')
+    paragraphs.append('Lucrările pot fi reprogramate dacă vremea este nefavorabilă; programul actualizat al operatorului are prioritate.')
+    story=product(c,head,'Calendar oficial de lucrări, structurat pe localitate și interval și păstrat în candidate mode.',paragraphs,'UTILITĂȚI')
+    story['structured_facts']={**facts,'active_rows':active}; story['source_candidate']['structured_facts']={'parsed_rows':parsed,'total_time_rows':total,'active_rows':active}
+    return story,None
+
+def tomorrow_locality_brief(stories,now=None):
+    now=now or datetime.now(ZoneInfo('Europe/Bucharest')); target=now.date()+timedelta(days=1); grouped={}
+    for story in stories:
+        source=(story.get('sources') or [{}])[0]
+        for row in story.get('structured_facts',{}).get('active_rows',[]):
+            start=datetime.fromisoformat(row['valid_from']); end=datetime.fromisoformat(row['valid_until'])
+            if start.date()!=target: continue
+            alert={'utility':'electricity','valid_from':start.isoformat(),'valid_until':end.isoformat(),'zone':row['zone'],'interruption_kind':row.get('interruption_kind','scheduled_interval'),'source_url':source.get('url')}
+            grouped.setdefault(row['uat'],[]).append(alert)
+    localities=[]
+    for uat in sorted(grouped):
+        alerts=sorted(grouped[uat],key=lambda x:(x['valid_from'],x['valid_until'],x['zone']))
+        localities.append({'uat':uat,'alerts':alerts})
+    return {'status':'candidate_only','product_id':'tomorrow_locality_brief','target_date':target.isoformat(),'total_localities':len(localities),'localities':localities}
+
 def product(c,h,d,p,section):
     ident=(c['source_id']+'-'+hashlib.sha1(c['url'].encode()).hexdigest()[:16])[:80]
     return {'id':ident,'section':section,'headline':h,'dek':d,'paragraphs':p,'sources':[{'name':c['source_name'],'url':c['url'],'tier':c['tier']}],'source_candidate':c,'status':'DRAFT_CANDIDATE_ONLY','image':None}
@@ -246,18 +451,24 @@ def cycle(fixtures=False):
         if c['decision']!='READY': continue
         src=next((s for s in cfg['sources'] if s['id']==c['source_id']),{}); adapter=src.get('structured_detail_adapter')
         if not adapter: continue
-        try: detail=c.get('detail') or fetch(c['url'])
+        try:
+            if c.get('detail'): detail=c['detail']
+            elif adapter=='apavil_outage_index_title': detail=c['title']
+            elif adapter=='distributie_schedule_pdf': detail=pdf_text(c['url'],src.get('url'))
+            else: detail=fetch(c['url'])
         except Exception as e: holds.append({'url':c['url'],'reason':'DETAIL_FETCH:'+str(e)[:120]}); continue
         stale=freshness_hold(src,c,detail)
         if stale: holds.append({'url':c['url'],'reason':stale}); continue
         if adapter=='cj_agenda': s=cj_story(c,detail); hold=None
         elif adapter=='isu_release': s,hold=isu_story(c,detail,pol)
         elif adapter=='inhga_warning': s,hold=inhga_story(c,detail)
+        elif adapter=='apavil_outage_index_title': s,hold=apavil_story(c,detail)
+        elif adapter=='distributie_schedule_pdf': s,hold=distributie_story(c,detail)
         else: s=None; hold='NO_ADAPTER'
         if hold: holds.append({'url':c['url'],'reason':hold}); continue
         if s: s['image']=choose_media(s); stories.append(s)
     queue=[{'id':s['id'],'headline':s['headline'],'status':'LOCKED_CANDIDATE_ONLY'} for s in stories]
-    dump(OUT/'candidates.json',{'status':'candidate_only','candidates':candidates,'source_health':health}); dump(OUT/'stories.json',{'status':'candidate_only','stories':stories,'holds':holds}); dump(OUT/'queue.json',{'status':'LOCKED_CANDIDATE_ONLY','queue':queue})
+    dump(OUT/'candidates.json',{'status':'candidate_only','candidates':candidates,'source_health':health}); dump(OUT/'stories.json',{'status':'candidate_only','stories':stories,'holds':holds}); dump(OUT/'queue.json',{'status':'LOCKED_CANDIDATE_ONLY','queue':queue}); dump(OUT/'locality_brief.json',tomorrow_locality_brief(stories))
     if not fixtures: dump(STATE/'seen.json',{'urls':sorted(seen|{x['url'] for x in candidates})[-2500:]})
     review(stories,holds); return candidates,stories,holds
 
@@ -270,9 +481,10 @@ def review(stories=None,holds=None):
     (OUT/'review.html').write_text('<!doctype html><meta charset="utf-8"><title>VÂLCEA CLAR Newsroom Review</title><style>body{font:16px Arial;max-width:1000px;margin:40px auto;padding:0 20px}article{border-top:2px solid #111;padding:18px 0}.hold{background:#fff2f2}</style><h1>Newsroom Review — candidate only</h1>'+''.join(cards),encoding='utf-8')
 
 def verify():
-    pol=load(NR/'policy.json'); q=load(OUT/'queue.json'); s=load(OUT/'stories.json'); errs=[]
+    pol=load(NR/'policy.json'); q=load(OUT/'queue.json'); s=load(OUT/'stories.json'); brief=load(OUT/'locality_brief.json'); errs=[]
     if pol.get('publication_mode')!='candidate_only' or pol.get('auto_publish') is not False: errs.append('publication authority unlocked')
     if q.get('status')!='LOCKED_CANDIDATE_ONLY': errs.append('queue unlocked')
+    if brief.get('status')!='candidate_only' or brief.get('product_id')!='tomorrow_locality_brief': errs.append('locality brief unlocked or malformed')
     for x in s.get('stories',[]):
         if not x.get('sources') or any(not y.get('url') for y in x['sources']): errs.append('story without source')
         if x.get('image') and x['section']!='ADMINISTRAȚIE': errs.append('unsafe contextual media assignment')

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "updated_local": "2026-08-26T02:33:00+03:00",
+  "status": "TESTAT_CANDIDATE_NOT_DEPLOYED",
+  "official_basis": [
+    "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "https://developers.google.com/search/docs/appearance/google-discover",
+    "https://developers.google.com/search/docs/appearance/google-images"
+  ],
+  "page_contract": {
+    "robots_production": "max-image-preview:large",
+    "robots_preview": "noindex,nofollow",
+    "article_type": "NewsArticle",
+    "required_internal_fields": [
+      "headline",
+      "description",
+      "canonical_url",
+      "datePublished",
+      "dateModified",
+      "author",
+      "publisher"
+    ]
+  },
+  "preferred_image_gate": {
+    "treatment": "FAIL_CLOSED",
+    "minimum_width_px": 1200,
+    "minimum_total_pixels_exclusive": 300000,
+    "aspect_ratio_min": 1.65,
+    "aspect_ratio_max": 1.9,
+    "must_be_local": true,
+    "must_have_rights_basis": true,
+    "must_have_credit": true,
+    "must_be_relevant_to_article": true,
+    "on_failure": "omit NewsArticle.image and og:image; never substitute a generic logo or upscale a low-resolution context image"
+  },
+  "current_asset_audit": {
+    "registered_images": 2,
+    "eligible_preferred_images": 0,
+    "finding": "Both registered context images are 286x380 px and remain usable in-page, but are ineligible as preferred Search/Discover images."
+  },
+  "measurement": {
+    "technical": ["build tests", "JSON-LD parse", "canonical consistency", "image gate"],
+    "post_deploy": ["Rich Results Test", "Search Console indexing", "Discover report availability", "CTR by page and image policy"]
+  }
+}
