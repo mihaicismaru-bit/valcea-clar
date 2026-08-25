@@ -76,6 +76,7 @@ articles = sorted(
     reverse=True,
 )
 legal = load('legal.json')
+media = {item['file']: item for item in load('media.json')}
 css = (C / 'site.css').read_text(encoding='utf-8')
 sections = []
 for article in articles:
@@ -104,9 +105,56 @@ nav = (
 )
 
 
-def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_path='/', body_class=''):
-    robots = '<meta name="robots" content="noindex,nofollow">' if PREVIEW else ''
+def canonical_article_image(article):
+    """Return a crawlable image only when it meets the canonical Discover policy."""
+    name = article.get('image')
+    asset = media.get(name) if name else None
+    if not asset or not asset.get('local_only') or not asset.get('rights_basis') or not asset.get('credit'):
+        return None
+    width = int(asset.get('width') or 0)
+    height = int(asset.get('height') or 0)
+    ratio = (width / height) if height else 0
+    if width < 1200 or width * height <= 300_000 or not 1.65 <= ratio <= 1.9:
+        return None
+    return SITE + '/media/' + quote(name)
+
+
+def news_article_schema(article, canonical, image_url=None):
+    published = article.get('published')
+    modified = article.get('updated') or published
+    data = {
+        '@context': 'https://schema.org',
+        '@type': 'NewsArticle',
+        'mainEntityOfPage': {'@type': 'WebPage', '@id': canonical},
+        'url': canonical,
+        'headline': article['headline'],
+        'description': article['dek'],
+        'datePublished': published,
+        'dateModified': modified,
+        'articleSection': article.get('section', 'ȘTIRI'),
+        'inLanguage': 'ro-RO',
+        'isAccessibleForFree': True,
+        'author': {
+            '@type': 'Organization',
+            'name': 'Redacția VÂLCEA CLAR',
+            'url': route_url('/despre/'),
+        },
+        'publisher': {
+            '@type': 'Organization',
+            'name': 'VÂLCEA CLAR',
+            'url': route_url('/'),
+        },
+    }
+    if image_url:
+        data['image'] = [image_url]
+    return json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
+
+
+def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_path='/', body_class='', og_type='website', og_image=None, extra_head=''):
+    robots_value = 'noindex,nofollow' if PREVIEW else 'max-image-preview:large'
+    robots = f'<meta name="robots" content="{robots_value}">'
     canonical = route_url(canonical_path)
+    image_meta = f'<meta property="og:image" content="{h(og_image)}">' if og_image else ''
     return f'''<!doctype html>
 <html lang="ro">
 <head>
@@ -117,9 +165,12 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
 {robots}
 <link rel="canonical" href="{h(canonical)}">
 <meta property="og:site_name" content="VÂLCEA CLAR">
+<meta property="og:type" content="{h(og_type)}">
 <meta property="og:title" content="{h(title)}">
 <meta property="og:description" content="{h(desc)}">
 <meta property="og:url" content="{h(canonical)}">
+{image_meta}
+{extra_head}
 <link rel="stylesheet" href="{u('/assets/site.css')}">
 </head>
 <body class="{h(body_class)}">
@@ -251,6 +302,14 @@ write_route('stiri', shell('Știri — VÂLCEA CLAR', stiri_body, canonical_path
 for article in articles:
     canonical_path = '/stiri/' + article['id'] + '/'
     canonical = route_url(canonical_path)
+    canonical_image = canonical_article_image(article)
+    published = article.get('published', '')
+    modified = article.get('updated') or published
+    article_head = (
+        f'<meta property="article:published_time" content="{h(published)}">\n'
+        f'<meta property="article:modified_time" content="{h(modified)}">\n'
+        f'<script type="application/ld+json">{news_article_schema(article, canonical, canonical_image)}</script>'
+    )
     fb = 'https://www.facebook.com/sharer/sharer.php?u=' + quote(canonical, safe='')
     wa = 'https://wa.me/?text=' + quote(article['headline'] + ' ' + canonical, safe='')
     mail = 'mailto:?subject=' + quote(article['headline']) + '&body=' + quote(canonical)
@@ -277,7 +336,16 @@ for article in articles:
     )
     write_route(
         'stiri/' + article['id'],
-        shell(article['headline'] + ' — VÂLCEA CLAR', body, article['dek'], canonical_path, 'article-page'),
+        shell(
+            article['headline'] + ' — VÂLCEA CLAR',
+            body,
+            article['dek'],
+            canonical_path,
+            'article-page',
+            'article',
+            canonical_image,
+            article_head,
+        ),
     )
 
 about = (

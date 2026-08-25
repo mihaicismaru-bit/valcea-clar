@@ -1,6 +1,6 @@
 {
-  "checkpoint_id": "VC-AUTO-007",
-  "checked_local": "2026-08-26T01:40:00+03:00",
+  "checkpoint_id": "VC-AUTO-008",
+  "checked_local": "2026-08-26T02:40:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-007-integration",
@@ -11,10 +11,10 @@
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "The source-coverage work was rebuilt on current main without copying stale dynamic outputs. No production merge or publication-authority change was made."
+    "note": "Source coverage remains on the clean draft integration branch. DISCOVER/SEO 01 adds only reversible presentation metadata and does not change production or publication authority."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T01:30:48+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T02:39:41+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -28,24 +28,31 @@
     "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list."
   },
   "development_micro_lot": {
-    "name": "REPOSITORY INTEGRATION 01",
+    "name": "DISCOVER/SEO 01",
     "result": "completed",
-    "old_pr": 13,
-    "new_pr": 14,
-    "integration_method": "Started from current main, applied only canonical source/code/strategy/test changes, then regenerated newsroom outputs and seen state through a fresh live scan.",
-    "conflict_treatment": "Newer main radar state was not overwritten manually. The old conflicting PR was closed without merge as superseded and remains preserved as evidence.",
-    "verification": "37 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed before opening the replacement draft PR. GitHub quality run 32906976487 and PR validation run 32906976365 both completed successfully; PR #14 is mergeable and remains intentionally draft."
+    "draft_pr": 14,
+    "implementation": "All production pages emit max-image-preview:large. Article pages emit canonical NewsArticle JSON-LD, matching publication/update dates, organization author and publisher, og:type=article and article timestamps.",
+    "image_treatment": "Preferred image metadata is fail-closed: an asset must be local, rights-cleared, credited, at least 1200px wide, over 300,000 pixels and landscape. Both current 286x380 context assets were correctly excluded from NewsArticle.image and og:image.",
+    "official_basis": [
+      "https://developers.google.com/search/docs/appearance/structured-data/article",
+      "https://developers.google.com/search/docs/appearance/google-discover",
+      "https://developers.google.com/search/docs/appearance/google-images"
+    ],
+    "verification": "41 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed. No production deployment was made."
   },
   "growth_inventory": {
     "mechanisms_total": 24,
-    "changed": [],
-    "note": "No acquisition or retention status changed in this integration-only micro-lot."
+    "changed": [
+      "google_discover: DE_TESTAT -> TESTAT"
+    ],
+    "note": "The technical contract is tested; actual Discover eligibility and traffic remain unproven until deployment, eligible large imagery and Search Console observation."
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
     "No certified or first-party County Reach baseline exists yet.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
-    "Draft PR #14 remains intentionally unmerged pending owner review; its conflict and CI blockers are resolved."
+    "Draft PR #14 remains intentionally unmerged pending owner review.",
+    "No registered image currently meets the canonical 1200px landscape Search/Discover gate; current context images are 286x380 px."
   ],
-  "next_micro_lot": "DISCOVER/SEO 01 — add validated NewsArticle structured data, max-image-preview:large, canonical article image rules and tests, without changing editorial or publication gates."
+  "next_micro_lot": "ANALYTICS 01 — define a privacy-safe first-party event contract, locality and behavioral-segment dimensions, and a County Reach baseline pipeline that needs no repository secrets."
 }

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated_local": "2026-08-26T00:35:00+03:00",
+  "updated_local": "2026-08-26T02:33:00+03:00",
   "north_star": "County Reach: ponderea populației județului Vâlcea atinsă lunar, măsurată independent și first-party, cu acoperire pe localități și segmente comportamentale.",
   "segments": ["news_lovers", "daily_briefers", "casual_users"],
   "methods": [
-    {"id":"google_search","channel":"acquisition","status":"IMPLEMENTAT_PARTIAL","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"NewsArticle schema + Search Console coverage"},
-    {"id":"google_discover","channel":"acquisition","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"max-image-preview:large, og:image relevant, 1200px+ assets, Discover reporting"},
+    {"id":"google_search","channel":"acquisition","status":"IMPLEMENTAT_PARTIAL","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","evidence":"NewsArticle JSON-LD, canonical URL, byline dates and author/publisher identity are generated and covered by build tests in draft PR #14.","next":"deploy after owner review, validate representative URLs in Rich Results Test and measure Search Console coverage"},
+    {"id":"google_discover","channel":"acquisition","status":"TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","dependencies":["draft PR #14 deployment","relevant 1200px+ landscape article assets","Search Console Discover eligibility/reporting"],"evidence":"max-image-preview:large and article Open Graph metadata are generated; NewsArticle image/og:image fail closed unless the asset is local, rights-cleared, credited, at least 1200px wide, over 300,000 pixels and landscape. Current 286x380 context images were correctly excluded.","next":"produce rights-cleared 1200px+ 16:9 article images, deploy, validate URLs and observe Discover reporting rather than assuming eligibility"},
     {"id":"google_news","channel":"acquisition","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"publisher eligibility audit, article metadata, news sitemap assessment"},
     {"id":"facebook_native","channel":"social","status":"DE_TESTAT","impact":"high","editorial_risk":"medium","cost":"low","effort":"medium","measurability":"high","next":"native posts + link variants; UTM cohort"},
     {"id":"instagram_reels","channel":"social_video","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"medium","cost":"low_medium","effort":"medium","measurability":"high","next":"30-60s local explainers; source card at end"},

@@ -30,5 +30,12 @@ class StrategyCoverageTests(unittest.TestCase):
   matrix=json.loads((ROOT/'strategy/source_coverage_matrix.json').read_text(encoding='utf-8'))
   self.assertEqual(matrix['coverage_profiles']['county_default']['electricity'],'STRUCTURED_CANDIDATE')
   self.assertTrue(any(x['source_id']=='distributie_oltenia_valcea_planned' and x['status']=='structured_candidate' for x in matrix['source_scope']))
+ def test_discover_policy_is_tested_but_fails_closed_on_current_images(self):
+  methods=json.loads((ROOT/'strategy/growth_inventory.json').read_text(encoding='utf-8'))['methods']; row=next(x for x in methods if x['id']=='google_discover')
+  policy=json.loads((ROOT/'strategy/seo_discover_policy.json').read_text(encoding='utf-8'))
+  self.assertEqual(row['status'],'TESTAT'); self.assertEqual(row['editorial_risk'],'low')
+  self.assertEqual(policy['preferred_image_gate']['treatment'],'FAIL_CLOSED')
+  self.assertEqual(policy['preferred_image_gate']['minimum_width_px'],1200)
+  self.assertEqual(policy['current_asset_audit']['eligible_preferred_images'],0)
 
 if __name__=='__main__': unittest.main()
