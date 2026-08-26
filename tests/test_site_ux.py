@@ -69,7 +69,37 @@ class SiteUXContract(unittest.TestCase):
     def test_all_routes_allow_large_previews(self):
         for page in (ROOT / '_site').rglob('*.html'):
             with self.subTest(page=page):
-                self.assertIn('<meta name="robots" content="max-image-preview:large">', page.read_text(encoding='utf-8'))
+                text = page.read_text(encoding='utf-8')
+                if 'utility-candidate-page' in text:
+                    self.assertIn('<meta name="robots" content="noindex,nofollow">', text)
+                else:
+                    self.assertIn('<meta name="robots" content="max-image-preview:large">', text)
+
+    def test_candidate_locality_utility_is_fail_closed(self):
+        page = self.read('instrumente/maine-in-localitatea-ta/index.html')
+        self.assertIn('Instrument în test', page)
+        self.assertIn('candidate_only', page)
+        self.assertIn('nu este o știre publicată', page)
+        self.assertIn('<meta name="robots" content="noindex,nofollow">', page)
+
+    def test_candidate_locality_selector_covers_all_uats(self):
+        page = self.read('instrumente/maine-in-localitatea-ta/index.html')
+        options = re.findall(r'<option value="([^"]+)" data-uat-type=', page)
+        self.assertEqual(len(options), 89)
+        self.assertEqual(len(set(options)), 89)
+        self.assertIn('Râmnicu Vâlcea', options)
+        self.assertIn('Drăgășani', options)
+
+    def test_locality_preference_is_session_only(self):
+        page = self.read('instrumente/maine-in-localitatea-ta/index.html')
+        self.assertIn('sessionStorage', page)
+        self.assertNotIn('localStorage', page)
+        self.assertNotIn('visitor_id', page)
+        self.assertIn('nu creăm un identificator persistent', page)
+
+    def test_candidate_route_is_excluded_from_sitemap(self):
+        sitemap = self.read('sitemap.xml')
+        self.assertNotIn('/instrumente/maine-in-localitatea-ta/', sitemap)
 
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
