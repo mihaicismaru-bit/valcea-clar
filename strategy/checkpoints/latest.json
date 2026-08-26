@@ -1,6 +1,6 @@
 {
-  "checkpoint_id": "VC-AUTO-011",
-  "checked_local": "2026-08-26T05:31:00+03:00",
+  "checkpoint_id": "VC-AUTO-012",
+  "checked_local": "2026-08-26T06:32:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-008-clean",
@@ -10,10 +10,10 @@
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "No publication authority, allow-list, provider credential or production send state changed. Dynamic newsroom outputs remain excluded from the feature commit."
+    "note": "No publication authority, allow-list, social destination, provider credential or auto-post state changed. Dynamic newsroom and card outputs remain excluded from the feature commit."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T05:29:32+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T06:29:41+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -24,40 +24,44 @@
     ],
     "today_utility_signal": "For 26.08: Drăgășani and Nicolae Bălcescu, both 09:00–17:00",
     "tomorrow_locality_brief": "For 27.08: Călimănești 09:30–14:30 and Stroești 09:00–17:00",
-    "new_signals": ["INHGA immediate warning 2 from 26.08.2026 was detected and rejected as not relevant to Vâlcea"],
+    "new_signals": [],
     "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list."
   },
   "development_micro_lot": {
-    "name": "UX/UTILITY 01",
+    "name": "SOCIAL NATIVE 01",
     "result": "completed",
     "draft_pr": 15,
-    "implementation": "Added a candidate-only «Mâine în localitatea ta» route with a selector covering all 89 Vâlcea UATs and deterministic rendering of structured official utility alerts when the dynamic brief is available.",
-    "privacy_and_authority": "The selected locality is stored only in sessionStorage. The route creates no visitor identifier, uses no localStorage, sends no event, is noindex/nofollow and is excluded from the sitemap.",
-    "editorial_boundary": "The page labels itself Instrument în test and candidate_only, explicitly says it is not published news, does not trigger alerts and links every rendered alert to the official operator document.",
-    "resilience": "The build succeeds when the dynamic locality brief is absent, enabling CI and feature review without committing live newsroom output.",
-    "verification": "62 unit tests, static build, site verification, newsroom verification, promoter authority verification, promoter run and post-promoter verification passed. Zero article or message was published."
+    "implementation": "Added a deterministic social-card generator for feed portrait 1080×1350 and story vertical 1080×1920, with canonical SVG output and optional local PNG rendering without a repository dependency.",
+    "input_authority": "Published/verified cards require AUTO_PUBLISHED, OWNER_APPROVED_AUTO_PUBLICATION, T1 and HTTPS provenance. Candidate utility cards require the locked tomorrow_locality_brief contract.",
+    "editorial_boundary": "Published cards say PUBLICAT · VERIFICAT T1. Utility cards say CANDIDAT · NU ESTE ȘTIRE PUBLICATĂ. Every variant names the source and tells the operator to verify it before distribution.",
+    "distribution_boundary": "The manifest status is CANDIDATE_NO_POST with auto_post=false. It contains no account, destination, token, provider call or posting adapter.",
+    "live_generation": "One verified published CJ agenda input and two candidate utility inputs produced six SVG and six PNG variants; generated files remain dynamic and uncommitted.",
+    "verification": "67 unit tests, deterministic hash comparison, exact-dimension checks, visual inspection, static build, site verification, newsroom verification and promoter run passed. Zero article, message or social card was distributed."
   },
   "growth_inventory": {
     "mechanisms_total": 26,
-    "changed": ["saved_locality_selector: new -> TESTAT", "tomorrow_locality_brief: TESTAT evidence extended with candidate UX"],
-    "note": "The UX is technically tested but remains unimplemented in production until draft PR #15 is approved and merged."
+    "changed": ["share_cards: DE_TESTAT -> TESTAT"],
+    "note": "Generation and editorial-state separation are tested; channel distribution, referral attribution and reach remain untested."
   },
   "kpi_signals": {
-    "uat_selector_coverage": "89/89",
-    "candidate_alert_localities_for_27_08": 2,
-    "real_selector_usage": "NOT_MEASURED",
+    "verified_published_inputs": 1,
+    "candidate_utility_inputs": 2,
+    "generated_variants": 6,
+    "generated_png": 6,
+    "auto_posts": 0,
+    "real_social_reach": "NOT_MEASURED",
     "county_reach": null,
     "independent_certification": null,
-    "repository_tests": 62,
+    "repository_tests": 67,
     "unsafe_publications": 0
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
-    "The candidate utility UX has no production usage data until PR #15 is approved and merged.",
-    "Persistent locality preferences require an approved consent UX and deployed first-party analytics.",
+    "No social destination, auto-post authority or channel adapter is configured.",
+    "No real share-click, referral-return or social reach baseline exists.",
     "No real first-party County Reach baseline exists and BRAT/SATI certification is absent.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
     "Draft PR #15 remains intentionally unmerged pending owner review."
   ],
-  "next_micro_lot": "SOCIAL NATIVE 01 — generate deterministic candidate share cards in 1080×1350 and 1080×1920 for verified published stories and clearly labelled utility candidates, with source/time/UAT provenance and no auto-post authority."
+  "next_micro_lot": "MARKET INTELLIGENCE 01 — build a dated competitor baseline for local Vâlcea publishers: update cadence, geographic breadth, utility coverage, format mix, direct channels and trust signals; convert gaps into ranked reversible experiments."
 }
