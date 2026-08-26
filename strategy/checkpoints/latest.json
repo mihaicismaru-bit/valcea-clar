@@ -5,7 +5,7 @@
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-008-clean",
     "draft_pr": 15,
-    "base_main": "40d1194d674586cce45f6e19717f7f5e33ff1956",
+    "base_main": "7b775990b8a6638720ceef853ef0b35c9c89ed7f",
     "core_publication_mode": "candidate_only",
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
