@@ -1,19 +1,20 @@
 {
-  "checkpoint_id": "VC-AUTO-012",
-  "checked_local": "2026-08-26T06:32:00+03:00",
+  "checkpoint_id": "VC-AUTO-013",
+  "checked_local": "2026-08-26T07:34:15+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-008-clean",
     "draft_pr": 15,
-    "base_main": "7b775990b8a6638720ceef853ef0b35c9c89ed7f",
+    "base_main_observed": "c23095515ab801cbdf2f936345509d6ede7cd0fd",
+    "previous_remote_head": "5b736eadf76a4996cba14a4d0b346d2dc8c49c14",
     "core_publication_mode": "candidate_only",
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "No publication authority, allow-list, social destination, provider credential or auto-post state changed. Dynamic newsroom and card outputs remain excluded from the feature commit."
+    "note": "No publication authority, allow-list, direct-channel destination, provider credential or auto-post state changed. Dynamic newsroom and social-card outputs remain excluded from the feature changes."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T06:29:41+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T07:33:50+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -24,44 +25,45 @@
     ],
     "today_utility_signal": "For 26.08: Drăgășani and Nicolae Bălcescu, both 09:00–17:00",
     "tomorrow_locality_brief": "For 27.08: Călimănești 09:30–14:30 and Stroești 09:00–17:00",
-    "new_signals": [],
-    "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list."
+    "new_signals": [
+      "A new T2 report alleges that a Vâlcea family lost an airport transfer on a Turkey package holiday; it has no T1/operator corroboration in the canonical scan and remains WATCH, not a publishable fact."
+    ],
+    "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list; the new T2 consumer complaint remains WATCH."
   },
   "development_micro_lot": {
-    "name": "SOCIAL NATIVE 01",
+    "name": "MARKET INTELLIGENCE 01",
     "result": "completed",
     "draft_pr": 15,
-    "implementation": "Added a deterministic social-card generator for feed portrait 1080×1350 and story vertical 1080×1920, with canonical SVG output and optional local PNG rendering without a repository dependency.",
-    "input_authority": "Published/verified cards require AUTO_PUBLISHED, OWNER_APPROVED_AUTO_PUBLICATION, T1 and HTTPS provenance. Candidate utility cards require the locked tomorrow_locality_brief contract.",
-    "editorial_boundary": "Published cards say PUBLICAT · VERIFICAT T1. Utility cards say CANDIDAT · NU ESTE ȘTIRE PUBLICATĂ. Every variant names the source and tells the operator to verify it before distribution.",
-    "distribution_boundary": "The manifest status is CANDIDATE_NO_POST with auto_post=false. It contains no account, destination, token, provider call or posting adapter.",
-    "live_generation": "One verified published CJ agenda input and two candidate utility inputs produced six SVG and six PNG variants; generated files remain dynamic and uncommitted.",
-    "verification": "67 unit tests, deterministic hash comparison, exact-dimension checks, visual inspection, static build, site verification, newsroom verification and promoter run passed. Zero article, message or social card was distributed."
+    "artifact": "strategy/market_intelligence_valcea.json",
+    "scope": "Dated baseline for Se întâmplă în Vâlcea, Eveniment Vâlcean and Ziarul de Vâlcea using their live RSS feeds, homepages and public trust/contact surfaces.",
+    "measured_dimensions": ["24h update cadence", "named Vâlcea UAT breadth", "utility/service coverage", "format mix", "direct channels", "trust signals"],
+    "key_result": "Two competitors published 9–15 feed items in 24h, so raw volume is not a defensible advantage. The reversible opportunity is structured all-UAT utility plus visible source, verification and corrections state.",
+    "safety": "The baseline explicitly scopes absence claims to checked surfaces, does not rank audience, invent unique users or claim certification, and does not validate every competitor article as fact.",
+    "verification": "72 unit tests, JSON validation, static build, site verification, newsroom verification and promoter authority checks passed. Zero article, message or card was distributed."
   },
   "growth_inventory": {
     "mechanisms_total": 26,
-    "changed": ["share_cards: DE_TESTAT -> TESTAT"],
-    "note": "Generation and editorial-state separation are tested; channel distribution, referral attribution and reach remain untested."
+    "changed": ["locality_pages: evidence and next action updated from dated competitor baseline; status remains DE_TESTAT"],
+    "note": "No genuinely new mechanism was added. The baseline validates existing all-UAT utility, direct opt-in, social-native and trust work rather than inflating the inventory."
   },
   "kpi_signals": {
-    "verified_published_inputs": 1,
-    "candidate_utility_inputs": 2,
-    "generated_variants": 6,
-    "generated_png": 6,
-    "auto_posts": 0,
+    "competitors_sampled": 3,
+    "competitor_feed_items_24h": {"se_intampla_in_valcea": 9, "eveniment_valcean": 15, "ziarul_de_valcea": 4},
+    "new_t2_watch_items": 1,
+    "structured_drafts": 3,
+    "auto_publications": 0,
     "real_social_reach": "NOT_MEASURED",
     "county_reach": null,
     "independent_certification": null,
-    "repository_tests": 67,
+    "repository_tests": 72,
     "unsafe_publications": 0
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
-    "No social destination, auto-post authority or channel adapter is configured.",
-    "No real share-click, referral-return or social reach baseline exists.",
+    "The new consumer complaint is a T2 report without canonical T1/operator corroboration and cannot be promoted as verified fact.",
     "No real first-party County Reach baseline exists and BRAT/SATI certification is absent.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
-    "Draft PR #15 remains intentionally unmerged pending owner review."
+    "Draft PR #15 remains intentionally unmerged pending owner review; production behavior and real KPI collection are unchanged."
   ],
-  "next_micro_lot": "MARKET INTELLIGENCE 01 — build a dated competitor baseline for local Vâlcea publishers: update cadence, geographic breadth, utility coverage, format mix, direct channels and trust signals; convert gaps into ranked reversible experiments."
+  "next_micro_lot": "TRUST/TRANSPARENCY 01 — define and implement a public corrections/source/ownership contract plus machine-readable verification state for manually published articles; keep incomplete legacy articles fail-closed for verified distribution."
 }
