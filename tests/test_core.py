@@ -15,17 +15,20 @@ class T(unittest.TestCase):
  def test_same_title_different_url(self):
   r=newsroom.fixture_rows(); self.assertNotEqual(r[1]['url'],r[2]['url']); self.assertTrue(r[1]['title'].startswith('Misiunile')); self.assertTrue(r[2]['title'].startswith('Misiunile'))
  def test_fixture_cycle(self):
-  c,s,h=newsroom.cycle(True); self.assertEqual((len(c),len(s),len(h)),(3,2,1))
+  c,s,h=newsroom.cycle(True,persist=False); self.assertEqual((len(c),len(s),len(h)),(3,2,1))
+ def test_fixture_cycle_does_not_overwrite_live_outputs(self):
+  paths=[ROOT/'newsroom/output/candidates.json',ROOT/'newsroom/output/stories.json',ROOT/'newsroom/output/queue.json',ROOT/'newsroom/output/locality_brief.json',ROOT/'newsroom/output/review.html']
+  before={path:path.read_bytes() for path in paths}; newsroom.cycle(True,persist=False); after={path:path.read_bytes() for path in paths}; self.assertEqual(before,after)
  def test_cj_money(self):
-  _,s,_=newsroom.cycle(True); self.assertIn('43.793.000',s[0]['headline'])
+  _,s,_=newsroom.cycle(True,persist=False); self.assertIn('43.793.000',s[0]['headline'])
  def test_isu(self):
-  _,s,_=newsroom.cycle(True); self.assertTrue(any('54 misiuni' in x['headline'] for x in s))
+  _,s,_=newsroom.cycle(True,persist=False); self.assertTrue(any('54 misiuni' in x['headline'] for x in s))
  def test_tragic_hold(self):
-  _,_,h=newsroom.cycle(True); self.assertTrue(any('REVIEW_REQUIRED_DETAIL' in x['reason'] for x in h))
+  _,_,h=newsroom.cycle(True,persist=False); self.assertTrue(any('REVIEW_REQUIRED_DETAIL' in x['reason'] for x in h))
  def test_freshness_gate(self):
   old=newsroom.datetime.now(newsroom.ZoneInfo('Europe/Bucharest')).date()-timedelta(days=5); c={'url':f'https://example.test/{old.day:02d}-{old.month:02d}-{old.year}/'}; self.assertTrue(newsroom.freshness_hold({'max_age_days':4},c,'').startswith('STALE_DETAIL'))
  def test_media(self):
-  _,s,_=newsroom.cycle(True); cj=[x for x in s if x['section']=='ADMINISTRAȚIE'][0]; isu=[x for x in s if x['section']=='ACTUALITATE'][0]; self.assertTrue(cj['image']); self.assertIsNone(isu['image'])
+  _,s,_=newsroom.cycle(True,persist=False); cj=[x for x in s if x['section']=='ADMINISTRAȚIE'][0]; isu=[x for x in s if x['section']=='ACTUALITATE'][0]; self.assertTrue(cj['image']); self.assertIsNone(isu['image'])
  def test_inhga_92_extracts_and_matches_valcea(self):
   detail=(ROOT/'tests/fixtures/inhga_warning_92.html').read_text(encoding='utf-8'); facts=newsroom.parse_inhga_warning(detail)
   self.assertEqual(facts['number'],92); self.assertEqual(facts['issue_date'],'2026-08-25'); self.assertEqual(facts['levels'],['GALBEN']); self.assertIn('Vâlcea',facts['counties']); self.assertTrue(facts['valcea_relevant']); self.assertTrue(facts['valcea_segments']); self.assertEqual(facts['valid_until'],'2026-08-27T00:00:00+03:00')
@@ -74,5 +77,5 @@ class T(unittest.TestCase):
   story,hold=newsroom.apavil_story(candidate,detail,newsroom.datetime(2026,8,26,16,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertTrue(hold.startswith('APAVIL_EXPIRED'))
   pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn(src['id'],pub['allowed_source_ids'])
  def test_verify_and_publish_lock(self):
-  newsroom.cycle(True); self.assertEqual(newsroom.verify(),0); p=subprocess.run([sys.executable,str(ROOT/'scripts/newsroom.py'),'publish']); self.assertNotEqual(p.returncode,0)
+  self.assertEqual(newsroom.verify(),0); p=subprocess.run([sys.executable,str(ROOT/'scripts/newsroom.py'),'publish']); self.assertNotEqual(p.returncode,0)
 if __name__=='__main__':unittest.main()

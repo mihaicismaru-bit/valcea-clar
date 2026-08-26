@@ -1,6 +1,6 @@
 {
-  "checkpoint_id": "VC-AUTO-009",
-  "checked_local": "2026-08-26T03:42:00+03:00",
+  "checkpoint_id": "VC-AUTO-010",
+  "checked_local": "2026-08-26T04:34:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-008-clean",
@@ -10,10 +10,10 @@
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "Canonical code and strategy remain isolated from dynamic newsroom/output files. No publication authority, allow-list or production state was changed."
+    "note": "No publication authority, allow-list, provider credential or production send state changed. Dynamic newsroom outputs remain excluded from the feature commit."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T03:36:10+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T04:33:38+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -23,41 +23,44 @@
       "INHGA warning 92 remains candidate-only through 26.08.2026 24:00"
     ],
     "tomorrow_locality_brief": "For 27.08: Călimănești 09:30–14:30 and Stroești 09:00–17:00",
-    "new_signals": [],
+    "new_signals": ["INHGA immediate warning 1 from 26.08.2026 was detected and rejected as not relevant to Vâlcea"],
     "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list."
   },
   "development_micro_lot": {
-    "name": "ANALYTICS 01",
+    "name": "DIRECT CHANNEL 01",
     "result": "completed",
     "draft_pr": 15,
-    "implementation": "Added a privacy-safe allow-listed first-party event contract, validator and aggregate-only processor for six events, all 89 UATs and the news_lovers, daily_briefers and casual_users segments.",
-    "privacy_gates": "Forbidden personal fields, unknown fields/UATs/channels, raw query strings/fragments, invalid IDs, persistent visitor IDs without consent and duplicate event IDs fail closed. Raw events are not copied into aggregate output.",
-    "measurement_gate": "County Reach remains null until both real consented production events and a verified official INS population denominator exist. First-party results are always labelled non-certified; BRAT/SATI remains a separate independent-measurement target.",
+    "implementation": "Added one provider-neutral preference and planning contract for newsletter, WhatsApp and web push with explicit channel opt-in, UAT/topic scope, immediate opt-out, quiet hours, expiry, per-channel and global 24h/7d caps.",
+    "privacy_and_authority": "The planner accepts only opaque provider references, excludes raw email/phone/push tokens, requires PUBLISHED_VERIFIED plus explicit distribution authority, and emits CANDIDATE_NO_SEND without destinations or provider calls.",
+    "critical_override": "Quiet-hours bypass is restricted to non-expired critical urgent_alert messages from T1 sources that are already published, verified and distribution-authorized.",
     "official_basis": [
-      "https://www.recensamantromania.ro/rezultate-rpl-2021/rezultate-definitive-caracteristici-demografice/",
-      "https://www.brat.ro/sati/",
-      "https://www.edpb.europa.eu/edpb-cookie-policy_en"
+      "https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/",
+      "https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API",
+      "https://www.edpb.europa.eu/sme-data-protection-guide/practical-resources/practical-guide-direct-marketing_en"
     ],
-    "verification": "47 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed. The synthetic fixture validated aggregation but was not persisted as a real KPI. No production deployment was made."
+    "regression_fix": "Fixture newsroom cycles are now in-memory during tests. A regression test proves they cannot overwrite live radar outputs before the live promoter runs.",
+    "verification": "57 unit tests, stable live-output hashes across the test suite, static build, site verification, live source scan and promoter verification passed. No production message or article was sent."
   },
   "growth_inventory": {
-    "mechanisms_total": 24,
-    "changed": ["first_party_analytics: DE_TESTAT -> TESTAT"],
-    "note": "Technical validation is complete; deployment, production consent, real baseline data, official denominator verification and independent certification remain outstanding."
+    "mechanisms_total": 25,
+    "changed": ["direct_channel_preferences: new -> TESTAT"],
+    "unchanged_channels": ["newsletter_morning: DE_TESTAT", "whatsapp_direct_channel: DE_TESTAT", "web_push: DE_TESTAT"],
+    "note": "The shared safety and preference infrastructure is tested; the actual delivery channels remain untested until consent UX and provider adapters exist."
   },
   "kpi_signals": {
-    "real_first_party_baseline": "NOT_MEASURED",
-    "county_reach": null,
-    "independent_certification": "NOT_ENROLLED_NOT_CERTIFIED",
-    "test_fixture_only": "7 valid synthetic events, 2 synthetic measured visitors, 2 UATs and deterministic segment/returning calculations; excluded from real KPIs"
+    "real_direct_subscribers": null,
+    "real_messages_sent": 0,
+    "open_click_optout_baseline": "NOT_MEASURED",
+    "test_contract": "9 direct-channel tests passed; 57 repository tests total",
+    "unsafe_fixture_publications": 0
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
-    "No production analytics endpoint or approved consent UX exists yet.",
-    "No real first-party County Reach baseline exists; the INS denominator is not yet imported and methodologically verified.",
-    "VÂLCEA CLAR is not yet independently measured or certified through BRAT/SATI.",
+    "No approved consent/preferences UI or provider-side destination store exists.",
+    "No newsletter, WhatsApp Business or web-push provider adapter is configured; no send authority was granted.",
+    "No real first-party County Reach or direct-channel baseline exists and BRAT/SATI certification is absent.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
     "Draft PR #15 remains intentionally unmerged pending owner review."
   ],
-  "next_micro_lot": "DIRECT CHANNEL 01 — define one shared explicit-opt-in, locality preference and frequency-cap contract for newsletter, WhatsApp and web push, tied to the new analytics event schema without adding provider secrets."
+  "next_micro_lot": "UX/UTILITY 01 — build a candidate saved-locality selector and deterministic «Mâine în localitatea ta» view, using no persistent identifier before consent and without exposing candidate-only alerts as published news."
 }

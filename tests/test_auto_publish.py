@@ -20,7 +20,7 @@ class AutoPublishTests(unittest.TestCase):
         self.assertFalse(core['auto_publish'])
 
     def test_fixture_safe_stories_are_eligible(self):
-        _, stories, holds = newsroom.cycle(True)
+        _, stories, holds = newsroom.cycle(True, persist=False)
         cfg = auto_publish.load(ROOT / 'newsroom/publication.json')
         self.assertEqual(len(stories), 2)
         self.assertTrue(any('REVIEW_REQUIRED_DETAIL' in h['reason'] for h in holds))
@@ -61,7 +61,7 @@ class AutoPublishTests(unittest.TestCase):
         self.assertEqual(reason, 'tier')
 
     def test_existing_article_is_not_republished(self):
-        _, stories, _ = newsroom.cycle(True)
+        _, stories, _ = newsroom.cycle(True, persist=False)
         cfg = auto_publish.load(ROOT / 'newsroom/publication.json')
         selected, skipped = auto_publish.select(stories, {stories[0]['id']}, cfg)
         self.assertEqual(len(selected), 1)

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "TESTAT_CANDIDATE_NO_SEND",
+  "objective": "Un singur contract fail-closed pentru distribuția directă relevantă pe canal, localitate și subiect, fără expediere automată în această etapă.",
+  "authority": {
+    "planning_allowed": true,
+    "sending_allowed": false,
+    "required_publication_status": "PUBLISHED_VERIFIED",
+    "note": "Contractul nu extinde allow-list-ul editorial și nu autorizează un provider extern sau trimiterea mesajelor."
+  },
+  "privacy": {
+    "explicit_channel_specific_opt_in": true,
+    "immediate_opt_out_required": true,
+    "prechecked_consent_forbidden": true,
+    "raw_destination_in_repository_forbidden": true,
+    "destination_ref_policy": "Referință opacă generată de provider și păstrată în afara repository-ului; emailul, telefonul și tokenul push brut nu intră în plan sau în analytics.",
+    "forbidden_fields": ["email", "phone", "phone_number", "push_token", "name", "address", "ip", "user_agent", "free_text"]
+  },
+  "topics": ["urgent_alert", "utility_alert", "morning_brief", "evening_recap", "story_followup"],
+  "locality_scope": {
+    "county_value": "ALL_VALCEA",
+    "uat_source": "strategy/source_coverage_matrix.json",
+    "multiple_localities_allowed": true
+  },
+  "channels": {
+    "newsletter": {
+      "topics": ["morning_brief", "evening_recap", "story_followup"],
+      "max_per_24h": 1,
+      "max_per_7d": 7,
+      "provider_requirement": "confirmed subscription and visible unsubscribe"
+    },
+    "whatsapp": {
+      "topics": ["urgent_alert", "utility_alert", "morning_brief", "story_followup"],
+      "max_per_24h": 2,
+      "max_per_7d": 7,
+      "provider_requirement": "documented opt-in and approved templates whenever the platform requires them"
+    },
+    "web_push": {
+      "topics": ["urgent_alert", "utility_alert", "morning_brief", "evening_recap", "story_followup"],
+      "max_per_24h": 3,
+      "max_per_7d": 12,
+      "provider_requirement": "browser permission requested only after a clear user action and demonstrated value"
+    }
+  },
+  "global_frequency_cap": {"max_per_24h": 4, "max_per_7d": 14},
+  "quiet_hours": {
+    "timezone": "Europe/Bucharest",
+    "start_hour": 22,
+    "end_hour": 7,
+    "critical_override": "Only urgent_alert with priority=critical, source_tier=T1, authorized_for_distribution=true and a future expires_at may bypass quiet hours."
+  },
+  "required_subscription_fields": [
+    "subscriber_id", "destination_ref", "channel", "consent_state", "consented_at",
+    "contract_version", "localities", "topics"
+  ],
+  "required_message_fields": [
+    "message_id", "event_id", "channel", "topic", "publication_status", "source_tier",
+    "authorized_for_distribution", "scheduled_at", "expires_at", "priority", "source_url"
+  ],
+  "analytics_mapping": {
+    "delivery_plan_created": "internal operational count; not a user event",
+    "brief_open": "analytics_contract.json/brief_open",
+    "article_click": "analytics_contract.json/article_read with source_channel",
+    "opt_out": "aggregate channel KPI only; never include raw destination"
+  },
+  "official_references": [
+    "https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/",
+    "https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API",
+    "https://www.edpb.europa.eu/sme-data-protection-guide/practical-resources/practical-guide-direct-marketing_en"
+  ]
+}

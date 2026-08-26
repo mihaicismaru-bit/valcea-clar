@@ -434,7 +434,7 @@ def fixture_rows():
       {'source_id':'isu_valcea_comunicate','source_name':'ISU Vâlcea','tier':'T1','url':'https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-test-2','title':'Misiunile pompierilor în ultimele 72 de ore','score':70,'decision':'READY','risks':[],'detail':'23 august 2026. 60 misiuni. 44 intervenții medicale. un bărbat decedat. 5 intervenții au fost pentru stingerea incendiilor.'}
     ]
 
-def cycle(fixtures=False):
+def cycle(fixtures=False, persist=True):
     cfg=load(NR/'sources.json'); pol=load(NR/'policy.json'); seen=set(load(STATE/'seen.json').get('urls',[])); candidates=[]; health=[]
     if fixtures: candidates=fixture_rows()
     else:
@@ -467,10 +467,12 @@ def cycle(fixtures=False):
         else: s=None; hold='NO_ADAPTER'
         if hold: holds.append({'url':c['url'],'reason':hold}); continue
         if s: s['image']=choose_media(s); stories.append(s)
-    queue=[{'id':s['id'],'headline':s['headline'],'status':'LOCKED_CANDIDATE_ONLY'} for s in stories]
-    dump(OUT/'candidates.json',{'status':'candidate_only','candidates':candidates,'source_health':health}); dump(OUT/'stories.json',{'status':'candidate_only','stories':stories,'holds':holds}); dump(OUT/'queue.json',{'status':'LOCKED_CANDIDATE_ONLY','queue':queue}); dump(OUT/'locality_brief.json',tomorrow_locality_brief(stories))
-    if not fixtures: dump(STATE/'seen.json',{'urls':sorted(seen|{x['url'] for x in candidates})[-2500:]})
-    review(stories,holds); return candidates,stories,holds
+    if persist:
+        queue=[{'id':s['id'],'headline':s['headline'],'status':'LOCKED_CANDIDATE_ONLY'} for s in stories]
+        dump(OUT/'candidates.json',{'status':'candidate_only','candidates':candidates,'source_health':health}); dump(OUT/'stories.json',{'status':'candidate_only','stories':stories,'holds':holds}); dump(OUT/'queue.json',{'status':'LOCKED_CANDIDATE_ONLY','queue':queue}); dump(OUT/'locality_brief.json',tomorrow_locality_brief(stories))
+        if not fixtures: dump(STATE/'seen.json',{'urls':sorted(seen|{x['url'] for x in candidates})[-2500:]})
+        review(stories,holds)
+    return candidates,stories,holds
 
 def review(stories=None,holds=None):
     if stories is None:
