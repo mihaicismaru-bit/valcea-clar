@@ -8,6 +8,7 @@ import os
 import shutil
 
 from media_assets import materialize_media
+from trust import corrections_for, validate_contract, verification_state
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '_site'
@@ -21,6 +22,10 @@ SITE = 'https://valceaclar.ro'
 
 def load(name):
     return json.loads((C / name).read_text(encoding='utf-8'))
+
+
+def load_strategy(name):
+    return json.loads((STRATEGY / name).read_text(encoding='utf-8'))
 
 
 def h(value):
@@ -78,6 +83,11 @@ articles = sorted(
     reverse=True,
 )
 legal = load('legal.json')
+corrections = load('corrections.json')
+trust_contract = load_strategy('trust_transparency_contract.json')
+trust_errors = validate_contract(trust_contract, corrections, {article['id'] for article in articles})
+if trust_errors:
+    raise ValueError('Invalid trust/transparency contract: ' + ', '.join(trust_errors))
 media = {item['file']: item for item in load('media.json')}
 css = (C / 'site.css').read_text(encoding='utf-8')
 sections = []
@@ -102,6 +112,7 @@ nav = (
     f'<a href="{u("/")}">Acasă</a>'
     f'<a href="{u("/stiri/")}">Ultimele</a>'
     f'{section_links}'
+    f'<a href="{u("/standarde/")}">Standarde</a>'
     f'<a href="{u("/despre/")}">Despre</a>'
     '</nav>'
 )
@@ -188,7 +199,7 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
 <main id="main">{body}</main>
 <footer>
   <strong>VÂLCEA CLAR</strong> · redactie@valceaclar.ro
-  <div class="footer-links"><a href="{u('/despre/')}">Despre</a> · <a href="{u('/termeni/')}">Termeni</a> · <a href="{u('/confidentialitate/')}">Confidențialitate</a></div>
+  <div class="footer-links"><a href="{u('/despre/')}">Despre</a> · <a href="{u('/standarde/')}">Standarde</a> · <a href="{u('/corectii/')}">Corecții</a> · <a href="{u('/termeni/')}">Termeni</a> · <a href="{u('/confidentialitate/')}">Confidențialitate</a></div>
 </footer>
 </body>
 </html>'''
@@ -397,10 +408,13 @@ for article in articles:
     canonical_image = canonical_article_image(article)
     published = article.get('published', '')
     modified = article.get('updated') or published
+    verification = verification_state(article, trust_contract)
+    verification_json = json.dumps(verification, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
     article_head = (
         f'<meta property="article:published_time" content="{h(published)}">\n'
         f'<meta property="article:modified_time" content="{h(modified)}">\n'
-        f'<script type="application/ld+json">{news_article_schema(article, canonical, canonical_image)}</script>'
+        f'<script type="application/ld+json">{news_article_schema(article, canonical, canonical_image)}</script>\n'
+        f'<script type="application/json" id="editorial-verification">{verification_json}</script>'
     )
     fb = 'https://www.facebook.com/sharer/sharer.php?u=' + quote(canonical, safe='')
     wa = 'https://wa.me/?text=' + quote(article['headline'] + ' ' + canonical, safe='')
@@ -410,12 +424,34 @@ for article in articles:
         f'<li><a href="{h(source["url"])}" rel="nofollow noopener">{h(source["name"])}</a></li>'
         for source in article['sources']
     )
+    article_corrections = corrections_for(article['id'], corrections)
+    if article_corrections:
+        correction_items = ''.join(
+            f'<li><time datetime="{h(item["published_local"])}">{h(pretty_date(item["published_local"]))}</time> — {h(item["summary"])}</li>'
+            for item in article_corrections
+        )
+        corrections_block = f'<section class="article-corrections"><h2>Corecții și clarificări</h2><ul>{correction_items}</ul></section>'
+    else:
+        corrections_block = ''
+    verified = verification['distribution_eligible_as_verified']
+    verification_note = (
+        'Metadatele de publicare, autoritatea și sursa T1 îndeplinesc contractul public de verificare.'
+        if verified else
+        'Această stare nu declară materialul fals. Metadatele complete de verificare lipsesc, iar articolul este exclus din distribuția etichetată „verificat” până la o revizuire documentată.'
+    )
+    verification_block = (
+        '<section class="verification-panel" aria-label="Starea verificării">'
+        f'<div class="verification-badge {"verified" if verified else "legacy"}">{h(verification["label"])}</div>'
+        f'<p>{h(verification_note)} <a href="{u("/standarde/")}">Cum derivăm această stare</a>.</p>'
+        '</section>'
+    )
     body = (
         '<article class="article">'
         f'<a class="back top-back" href="{u("/stiri/")}">← Ultimele știri</a>'
         f'<div class="kicker">{h(article["section"])}</div>'
         f'<h1>{h(article["headline"])}</h1>'
         f'<p class="dek">{h(article["dek"])}</p>{story_meta(article)}'
+        f'{verification_block}'
         '<div class="share-bar" aria-label="Distribuie articolul"><span>Distribuie</span>'
         f'<a href="{h(fb)}" rel="nofollow noopener">Facebook</a>'
         f'<a href="{h(wa)}" rel="nofollow noopener">WhatsApp</a>'
@@ -423,6 +459,7 @@ for article in articles:
         f'<div class="article-media">{image_html(article, True)}</div>'
         f'<div class="article-body">{paragraphs}</div>'
         f'<section class="sources"><h2>Surse și documente</h2><p>Materialul este construit pe surse identificabile. Linkurile de mai jos permit verificarea informațiilor.</p><ul>{sources}</ul></section>'
+        f'{corrections_block}'
         f'<a class="back" href="{u("/stiri/")}">← Înapoi la flux</a>'
         '</article>'
     )
@@ -448,6 +485,35 @@ about = (
 )
 write_route('despre', shell('Despre — VÂLCEA CLAR', about, canonical_path='/despre/'))
 
+ownership = trust_contract['ownership_disclosure']
+standards = (
+    '<div class="legal article"><div class="kicker">Transparență editorială</div><h1>Cum verificăm</h1>'
+    '<p class="dek">Etichetele de verificare sunt derivate din metadate și surse, nu adăugate discreționar de generatorul site-ului.</p>'
+    '<section><h2>Publicat · verificat T1</h2><p>Eticheta apare numai când articolul este publicat prin autoritatea aprobată, are nivel T1 și cel puțin o sursă HTTPS identificabilă. Aceste condiții sunt verificate automat și nu garantează că informația nu va necesita ulterior o corecție.</p></section>'
+    '<section><h2>Materiale cu metadate incomplete</h2><p>Materialele publicate anterior contractului pot avea surse bune, dar rămân excluse fail-closed din distribuția etichetată „verificat” până la o revizuire editorială documentată. Eticheta nu înseamnă că articolul este fals.</p></section>'
+    '<section><h2>Corecții</h2><p>Erorile materiale confirmate sunt corectate în articol și înscrise în registrul public cu data și descrierea schimbării. Semnalările pot fi trimise la redactie@valceaclar.ro. <a href="' + u('/corectii/') + '">Vezi registrul corecțiilor</a>.</p></section>'
+    '<section><h2>Responsabilitate editorială și proprietate</h2><p>Responsabilitatea editorială publică este indicată ca ' + h(ownership['editorial_responsibility']) + '. Identitatea entității juridice editoare nu este încă declarată în datele canonice; nu o completăm prin presupunere. Această pagină va fi actualizată după confirmarea ownerului.</p></section>'
+    '<section><h2>Ce nu schimbă acest contract</h2><p>Contractul nu extinde lista surselor autorizate, dreptul de publicare automată, expedierea pe canale directe sau auto-postarea socială.</p></section></div>'
+)
+write_route('standarde', shell('Cum verificăm — VÂLCEA CLAR', standards, 'Standardele publice de verificare, surse, corecții și responsabilitate editorială.', '/standarde/'))
+
+if corrections['entries']:
+    registry_items = ''.join(
+        '<section><h2><a href="' + u('/stiri/' + h(item['article_id']) + '/') + '">' + h(item['article_id']) + '</a></h2>'
+        '<p><time datetime="' + h(item['published_local']) + '">' + h(pretty_date(item['published_local'])) + '</time> · ' + h(item['kind']) + '</p>'
+        '<p>' + h(item['summary']) + '</p></section>'
+        for item in corrections['entries']
+    )
+else:
+    registry_items = '<section><h2>Nicio intrare în perioada acoperită</h2><p>Registrul este gol de la data începerii lui. Acest lucru nu dovedește că nu au existat corecții anterior și nu înlocuiește istoricul vizibil al fiecărui articol.</p></section>'
+corrections_body = (
+    '<div class="legal article"><div class="kicker">Transparență editorială</div><h1>Corecții și clarificări</h1>'
+    '<p class="dek">Registru public al schimbărilor materiale făcute după publicare.</p>'
+    '<p class="registry-scope">Registrul a început la ' + h(pretty_date(corrections['registry_started_local'])) + '. Pentru o semnalare: redactie@valceaclar.ro.</p>'
+    + registry_items + '</div>'
+)
+write_route('corectii', shell('Corecții și clarificări — VÂLCEA CLAR', corrections_body, 'Registrul public al corecțiilor și clarificărilor VÂLCEA CLAR.', '/corectii/'))
+
 for slug in ['termeni', 'confidentialitate']:
     item = legal[slug]
     body = (
@@ -462,7 +528,7 @@ for slug in ['termeni', 'confidentialitate']:
     'User-agent: *\nDisallow: /\n' if PREVIEW else 'User-agent: *\nAllow: /\nSitemap: https://valceaclar.ro/sitemap.xml\n',
     encoding='utf-8',
 )
-urls = ['/', '/stiri/', '/despre/', '/termeni/', '/confidentialitate/'] + [f'/stiri/{a["id"]}/' for a in articles]
+urls = ['/', '/stiri/', '/despre/', '/standarde/', '/corectii/', '/termeni/', '/confidentialitate/'] + [f'/stiri/{a["id"]}/' for a in articles]
 (OUT / 'sitemap.xml').write_text(
     '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
     + ''.join(f'<url><loc>{SITE}{path}</loc></url>' for path in urls)
