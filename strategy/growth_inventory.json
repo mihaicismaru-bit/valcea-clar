@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_local": "2026-08-26T05:31:00+03:00",
+  "updated_local": "2026-08-26T06:32:00+03:00",
   "north_star": "County Reach: ponderea populației județului Vâlcea atinsă lunar, măsurată independent și first-party, cu acoperire pe localități și segmente comportamentale.",
   "segments": ["news_lovers", "daily_briefers", "casual_users"],
   "methods": [
@@ -24,7 +24,7 @@
     {"id":"story_followup","channel":"retention","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"link preview -> decision/result/correction on same-event timeline"},
     {"id":"locality_pages","channel":"search_retention","status":"DE_TESTAT","impact":"high_county","editorial_risk":"low","cost":"low","effort":"medium_high","measurability":"high","next":"coverage pages for every UAT; freshness and gap KPI"},
     {"id":"morning_evening_briefs","channel":"habit","status":"DE_TESTAT","impact":"high","editorial_risk":"low","cost":"low","effort":"medium","measurability":"high","next":"AM what matters today + PM what changed"},
-    {"id":"share_cards","channel":"viral","status":"DE_TESTAT","impact":"medium","editorial_risk":"low_medium","cost":"low","effort":"medium","measurability":"high","next":"automated factual quote/stat/map cards with source label"},
+    {"id":"share_cards","channel":"viral","status":"TESTAT","impact":"medium","editorial_risk":"low_medium","cost":"low","effort":"medium","measurability":"high","dependencies":["production merge","channel-specific distribution authority","first-party outbound attribution"],"evidence":"Generator determinist testat pentru feed portrait 1080×1350 și story vertical 1080×1920. Acceptă drept publicate/verificate numai articole AUTO_PUBLISHED cu autoritate owner și sursă T1; utilitățile sunt marcate CANDIDATE_ONLY / NU ESTE ȘTIRE PUBLICATĂ. Manifestul este CANDIDATE_NO_POST și conține proveniență, dimensiuni și hash, fără destinații sau auto-post.","next":"după integrare, testează distribuția manuală pe un canal aprobat și măsoară share click/referral; păstrează auto-postarea dezactivată până la autoritate separată"},
     {"id":"reader_tips","channel":"ugc","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"high","cost":"low","effort":"high","measurability":"medium","next":"tip inbox only; never publish UGC without verification"},
     {"id":"local_partnerships","channel":"distribution","status":"DE_TESTAT","impact":"medium_high","editorial_risk":"medium","cost":"low_medium","effort":"high","measurability":"medium","next":"schools, events, associations, businesses; editorial independence contract"},
     {"id":"qr_offline_to_online","channel":"offline","status":"DE_TESTAT","impact":"medium","editorial_risk":"low","cost":"medium","effort":"medium","measurability":"high","next":"QR to locality/event utility pages with campaign IDs"},
