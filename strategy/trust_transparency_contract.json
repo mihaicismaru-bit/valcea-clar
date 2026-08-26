@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "effective_local": "2026-08-26T08:30:00+03:00",
+  "editorial_contact": "redactie@valceaclar.ro",
+  "ownership_disclosure": {
+    "publication_name": "VÂLCEA CLAR",
+    "editorial_responsibility": "Redacția VÂLCEA CLAR",
+    "legal_publisher": null,
+    "status": "NOT_DECLARED_CANONICALLY",
+    "rule": "Numele unei entități juridice nu este afișat până când este confirmat și aprobat în canon de owner. Lipsa nu poate fi completată prin inferență."
+  },
+  "verification_states": {
+    "PUBLISHED_VERIFIED_T1": {
+      "public_label": "Publicat · verificat T1",
+      "distribution_eligible_as_verified": true,
+      "requirements": [
+        "publication_mode=AUTO_PUBLISHED",
+        "automation.authority=OWNER_APPROVED_AUTO_PUBLICATION",
+        "automation.source_tier=T1",
+        "cel puțin o sursă HTTPS identificabilă"
+      ]
+    },
+    "LEGACY_METADATA_INCOMPLETE": {
+      "public_label": "Publicat · metadate de verificare incomplete",
+      "distribution_eligible_as_verified": false,
+      "requirements": [
+        "stare implicită pentru materialele publicate fără contractul machine-readable complet"
+      ],
+      "rule": "Starea nu declară materialul fals. Îl exclude fail-closed din orice distribuție care folosește eticheta «verificat» până la o revizuire editorială documentată."
+    }
+  },
+  "corrections_policy": {
+    "reporting_channel": "redactie@valceaclar.ro",
+    "material_error_action": "Corectează textul și adaugă o intrare datată, legată de articol, care descrie transparent ce s-a schimbat.",
+    "clarification_action": "Marchează clarificarea separat de corectarea unei erori factuale.",
+    "silent_rewrite_forbidden": true,
+    "deletion_rule": "Ștergerea integrală este excepțională și trebuie explicată în registru, cu excepția situațiilor în care explicația ar produce un prejudiciu suplimentar sau ar încălca legea."
+  },
+  "automation_rules": [
+    "Starea de verificare se derivă din metadatele articolului; nu poate fi declarată manual de generatorul de pagini.",
+    "Materialele legacy nu sunt promovate automat la PUBLISHED_VERIFIED_T1.",
+    "Un registru gol înseamnă numai că nu există intrări de la data începerii registrului, nu că publicația nu a făcut niciodată corecții.",
+    "Contractul nu modifică allow-list-ul, autoritatea de publicare, expediere sau auto-postare."
+  ]
+}
