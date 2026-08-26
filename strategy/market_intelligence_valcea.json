@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checked_local": "2026-08-26T07:31:15+03:00",
+  "scope": "Baseline operațional pentru cele trei publicații locale deja monitorizate canonic. Nu este un clasament de audiență și nu măsoară persoane unice, notorietate sau audiență certificată.",
+  "methodology": {
+    "sample_window": "Feedurile RSS și suprafețele publice observabile la 26.08.2026, 07:31 Europe/Bucharest; pentru ritm s-au numărat elementele din ultimele 24 de ore, iar pentru celelalte dimensiuni s-au folosit feedul curent, homepage-ul și paginile publice de contact/despre.",
+    "limitations": [
+      "Un element absent de pe suprafețele verificate este notat ca neobservat, nu ca inexistent.",
+      "Titlurile și feedurile sunt proxy-uri pentru mixul editorial; nu validează exactitatea fiecărui articol.",
+      "Scorurile 0–3 descriu capabilități observabile și nu trebuie însumate într-un scor de calitate sau audiență."
+    ],
+    "rubrics": {
+      "update_cadence": "3 = minimum 8 elemente RSS în 24h; 2 = 3–7; 1 = 1–2; 0 = niciunul.",
+      "geographic_breadth": "3 = minimum 6 UAT-uri vâlcene numite în eșantion; 2 = 3–5; 1 = 1–2; 0 = niciun UAT identificabil.",
+      "utility_coverage": "3 = produs recurent structurat/calendar; 2 = alertă curentă sau acoperire multi-temă de servicii; 1 = subiect punctual; 0 = neobservat.",
+      "format_mix": "3 = foto și video frecvent plus încă un format de serviciu/live/structurat; 2 = foto/video/update observabil; 1 = predominant articol; 0 = neobservat.",
+      "direct_channels": "3 = opt-in direct observabil; 2 = minimum două destinații sociale sau un canal direct; 1 = un singur canal social/contact; 0 = neobservat.",
+      "trust_signals": "3 = publisher, echipă, contact și politică explicită de corecții; 2 = publisher/echipă/contact; 1 = contact nominal; 0 = neobservat."
+    }
+  },
+  "competitors": [
+    {
+      "id": "se_intampla_in_valcea",
+      "name": "Se întâmplă în Vâlcea",
+      "homepage": "https://seintamplainvalcea.ro/",
+      "feed": "https://seintamplainvalcea.ro/feed/",
+      "latest_published_local": "2026-08-25T22:37:13+03:00",
+      "feed_items_24h": 9,
+      "dimensions": {
+        "update_cadence": {"score_0_3": 3, "observation": "Nouă elemente în feed în fereastra de 24h.", "evidence": ["https://seintamplainvalcea.ro/feed/"]},
+        "geographic_breadth": {"score_0_3": 2, "observed_uats": ["Berbești", "Bujoreni", "Râmnicu Vâlcea"], "observation": "Trei UAT-uri vâlcene sunt numite în cele nouă titluri curente; Valea Oltului/Lotrișor și Boița nu au fost tratate ca UAT-uri vâlcene.", "evidence": ["https://seintamplainvalcea.ro/feed/"]},
+        "utility_coverage": {"score_0_3": 2, "observation": "Sunt prezente alerte meteo/hidrologice și situații de urgență, dar nu a fost observat un calendar structurat pe localitate pentru electricitate/apă.", "evidence": ["https://seintamplainvalcea.ro/2026/08/25/cod-galben-de-viituri-in-valcea-raurile-pot-creste-rapid-pana-miercuri-noapte/", "https://seintamplainvalcea.ro/2026/08/25/ro-alert-in-mai-multe-localitati-din-valcea-cod-portocaliu-de-ploi-torentiale-grindina-si-rafale-puternice/"]},
+        "format_mix": {"score_0_3": 2, "observed": ["foto", "update", "YouTube"], "observation": "Titlurile folosesc FOTO/UPDATE, iar homepage-ul leagă un canal YouTube.", "evidence": ["https://seintamplainvalcea.ro/", "https://youtube.com/@ClaudiaStanciuVL"]},
+        "direct_channels": {"score_0_3": 2, "observed": ["Facebook", "YouTube"], "not_observed_on_checked_surface": ["newsletter opt-in", "WhatsApp alerts opt-in"], "observation": "Homepage-ul expune două destinații sociale, fără un formular de abonare directă observat.", "evidence": ["https://seintamplainvalcea.ro/", "https://www.facebook.com/SeIntamplaInValcea", "https://youtube.com/@ClaudiaStanciuVL"]},
+        "trust_signals": {"score_0_3": 2, "observed": ["societate editoare", "redactor-șef", "redactori", "telefon și email", "termeni de utilizare"], "not_observed_on_checked_surface": ["politică explicită de corecții"], "observation": "Pagina Despre identifică editorul și redacția; pe suprafețele verificate nu a fost găsit un registru explicit de corecții.", "evidence": ["https://seintamplainvalcea.ro/despre/", "https://seintamplainvalcea.ro/termeni-si-conditii-de-utilizare/"]}
+      }
+    },
+    {
+      "id": "eveniment_valcean",
+      "name": "Eveniment Vâlcean",
+      "homepage": "https://evenimentvalcean.ro/",
+      "feed": "https://evenimentvalcean.ro/feed/",
+      "latest_published_local": "2026-08-25T22:53:45+03:00",
+      "feed_items_24h": 15,
+      "dimensions": {
+        "update_cadence": {"score_0_3": 3, "observation": "Cincisprezece elemente în feed în fereastra de 24h.", "evidence": ["https://evenimentvalcean.ro/feed/"]},
+        "geographic_breadth": {"score_0_3": 2, "observed_uats": ["Berbești", "Budești", "Bujoreni", "Costești", "Râmnicu Vâlcea"], "observation": "Cinci UAT-uri vâlcene sunt numite în cele 15 titluri curente.", "evidence": ["https://evenimentvalcean.ro/feed/"]},
+        "utility_coverage": {"score_0_3": 1, "observation": "Apar punctual lucrări rutiere, canalizare și infrastructură, fără calendar recurent structurat observat.", "evidence": ["https://evenimentvalcean.ro/foto-video-vesti-bune-pentru-soferii-de-pe-valea-oltului-lucrarile-de-pe-dn7-au-trecut-de-75/", "https://evenimentvalcean.ro/investitii-importante-pentru-comuna-costesti-canalizarea-infrastructura-inteligenta-si-bugetul-local-pe-masa-consiliului-local/"]},
+        "format_mix": {"score_0_3": 2, "observed": ["foto", "video"], "observation": "FOTO și FOTO/VIDEO sunt frecvente în feed; nu a fost observat un format propriu structurat de serviciu.", "evidence": ["https://evenimentvalcean.ro/feed/"]},
+        "direct_channels": {"score_0_3": 1, "observed": ["pagină Facebook de contact"], "not_observed_on_checked_surface": ["newsletter opt-in", "WhatsApp alerts opt-in", "web-push opt-in"], "observation": "Butonul WhatsApp observat este o funcție de share, nu dovadă de abonare la alerte.", "evidence": ["https://evenimentvalcean.ro/contact/", "https://evenimentvalcean.ro/"]},
+        "trust_signals": {"score_0_3": 1, "observed": ["două contacte nominale", "telefon", "email", "Facebook"], "not_observed_on_checked_surface": ["societate editoare", "politică explicită de corecții"], "observation": "Pagina Contact oferă persoane și date de contact; editorul și politica de corecții nu au fost observate pe suprafața verificată.", "evidence": ["https://evenimentvalcean.ro/contact/"]}
+      }
+    },
+    {
+      "id": "ziarul_de_valcea",
+      "name": "Ziarul de Vâlcea",
+      "homepage": "https://ziaruldevalcea.ro/",
+      "feed": "https://ziaruldevalcea.ro/feed/",
+      "latest_published_local": "2026-08-26T05:38:56+03:00",
+      "feed_items_24h": 4,
+      "dimensions": {
+        "update_cadence": {"score_0_3": 2, "observation": "Patru elemente în feed în fereastra de 24h.", "evidence": ["https://ziaruldevalcea.ro/feed/"]},
+        "geographic_breadth": {"score_0_3": 1, "observed_uats": ["Râmnicu Vâlcea"], "observation": "În cele zece elemente curente, titlurile numesc explicit un UAT vâlcean; alte materiale sunt județene sau naționale.", "evidence": ["https://ziaruldevalcea.ro/feed/"]},
+        "utility_coverage": {"score_0_3": 1, "observation": "Termoficarea și utilitățile urbane apar ca subiecte și investigații punctuale, fără calendar structurat observat.", "evidence": ["https://ziaruldevalcea.ro/2026/08/chimcomplex-ofera-o-solutie-concreta-pentru-termoficarea-ramnicului-oferta-competitiva-si-disponibilitate-pentru-un-parteneriat-cu-primaria/", "https://ziaruldevalcea.ro/2026/08/investigatie-asfalt-si-utilitati-in-camp-strazi-cu-case-lasate-in-noroi-cine-a-stabilit-prioritatile-primariei-ramnicu-valcea/"]},
+        "format_mix": {"score_0_3": 1, "observed": ["articol", "investigație"], "observation": "Eșantionul curent este predominant textual; nu a fost observat un produs video sau structurat recurent în feed.", "evidence": ["https://ziaruldevalcea.ro/feed/"]},
+        "direct_channels": {"score_0_3": 1, "observed": ["contact WhatsApp"], "not_observed_on_checked_surface": ["newsletter opt-in", "WhatsApp alerts opt-in", "web-push opt-in"], "observation": "WhatsApp este prezent ca metodă de contact, nu ca dovadă de canal editorial cu opt-in.", "evidence": ["https://ziaruldevalcea.ro/", "https://ziaruldevalcea.ro/contact-politica-de-confidentialitate/"]},
+        "trust_signals": {"score_0_3": 2, "observed": ["societate editoare", "fondator și directori", "redactori", "telefon și email", "ISSN și marcă OSIM", "politică de confidențialitate"], "not_observed_on_checked_surface": ["politică explicită de corecții"], "observation": "Pagina de contact identifică editorul, conducerea și redacția; nu a fost observat un registru explicit de corecții.", "evidence": ["https://ziaruldevalcea.ro/contact-politica-de-confidentialitate/"]}
+      }
+    }
+  ],
+  "cross_market_findings": [
+    "Volumul brut nu este un avantaj suficient: două dintre cele trei feeduri au avut 9–15 elemente în 24h.",
+    "Acoperirea geografică există, dar nu a fost observată o suprafață sistematică pentru toate cele 89 de UAT-uri.",
+    "Subiectele de utilitate apar editorial, însă în eșantion nu a fost observat un calendar recurent, localizat și cu expirare automată pentru electricitate/apă.",
+    "Niciuna dintre suprafețele de transparență verificate nu a expus o politică explicită de corecții; formularea este limitată la suprafețele inspectate.",
+    "Canalele sociale și de contact sunt prezente, dar nu a fost observat un produs direct localizat cu opt-in separat și frequency cap."
+  ],
+  "ranked_experiments": [
+    {"rank": 1, "id": "trust_verification_corrections", "hypothesis": "Un hub public de surse, corecții și stare machine-readable a verificării crește diferențierea prin încredere și permite distribuția fail-closed a materialelor publicate manual.", "impact": "high", "editorial_risk": "low", "cost": "low", "effort": "medium", "dependencies": ["ownership/editorial disclosure approved by owner", "verification-state contract for manual articles"], "measurability": "high", "success_signal": "100% din articole au surse și stare de verificare; timp de corecție și accesări ale istoricului sunt măsurate fără date personale"},
+    {"rank": 2, "id": "all_uat_utility_surface", "hypothesis": "Calendarul pe localitate și paginile pentru toate UAT-urile câștigă reveniri fără a concura doar pe breaking news.", "impact": "high_county", "editorial_risk": "low", "cost": "low", "effort": "medium", "dependencies": ["candidate utility parsers", "owner-reviewed production merge", "first-party analytics"], "measurability": "high", "success_signal": "UAT-uri cu utilitate proaspătă, selectări de localitate și returning 7/30"},
+    {"rank": 3, "id": "locality_direct_opt_in", "hypothesis": "Alertele opționale pe localitate convertesc utilitatea în canal direct și obicei.", "impact": "high_county", "editorial_risk": "low_medium", "cost": "low", "effort": "medium", "dependencies": ["consent UX", "provider-side destinations", "separate send authority"], "measurability": "high", "success_signal": "opt-in, open/click, opt-out, frequency-cap blocks și revenire pe UAT"},
+    {"rank": 4, "id": "verified_social_explainers", "hypothesis": "Cardurile și clipurile scurte care arată sursa și ce s-a schimbat ajung la casual users fără a dilua standardul editorial.", "impact": "medium_high", "editorial_risk": "low_medium", "cost": "low_medium", "effort": "medium", "dependencies": ["manual distribution authority", "rights-cleared visuals", "referral attribution"], "measurability": "high", "success_signal": "share rate, qualified referral return și corecții per format"}
+  ],
+  "decision": "Prioritatea următorului micro-lot este TRUST/TRANSPARENCY 01. Viteza concurențială este deja ridicată; avantajul imediat, reversibil și cu risc redus este să facem verificarea, sursele și corecțiile vizibile și machine-readable, apoi să folosim acea stare în distribuție."
+}
