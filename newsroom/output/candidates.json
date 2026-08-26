@@ -65,7 +65,7 @@
       "score": 56,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "inhga_hydrological_warnings",
@@ -76,7 +76,7 @@
       "score": 56,
       "decision": "READY",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "inhga_hydrological_warnings",
@@ -571,17 +571,6 @@
       "seen_before": true
     },
     {
-      "source_id": "ziarul_de_valcea",
-      "source_name": "Ziarul de Vâlcea",
-      "tier": "T2",
-      "url": "https://ziaruldevalcea.ro/2026/08/incendiu-puternic-langa-shopping-city-ramnicu-valcea-un-autobuz-si-o-autoutilitara-distruse-de-flacari/?utm_source=rss&utm_medium=rss&utm_campaign=incendiu-puternic-langa-shopping-city-ramnicu-valcea-un-autobuz-si-o-autoutilitara-distruse-de-flacari",
-      "title": "Incendiu puternic lângă Shopping City Râmnicu Vâlcea: un autobuz și o autoutilitară, distruse de flăcări",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
@@ -775,6 +764,17 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "ziarul_de_valcea",
+      "source_name": "Ziarul de Vâlcea",
+      "tier": "T2",
+      "url": "https://ziaruldevalcea.ro/2026/08/vacanta-de-cosmar-in-turcia-cumparata-prin-dertour-o-familie-din-valcea-reclama-ca-a-fost-lasata-fara-transfer-la-aeroport-nu-mai-aveam-niciun-ban-disponibil/?utm_source=rss&utm_medium=rss&utm_campaign=vacanta-de-cosmar-in-turcia-cumparata-prin-dertour-o-familie-din-valcea-reclama-ca-a-fost-lasata-fara-transfer-la-aeroport-nu-mai-aveam-niciun-ban-disponibil",
+      "title": "Vacanță de coșmar în Turcia, cumpărată prin Dertour. O familie din Vâlcea reclamă că a fost lăsată fără transfer la aeroport: „Nu mai aveam niciun ban disponibil”",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "ziarul_de_valcea",
