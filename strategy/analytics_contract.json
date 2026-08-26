@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "TESTAT_CANDIDATE_NOT_DEPLOYED",
+  "objective": "Măsurare first-party minimă, verificabilă și orientată spre acoperirea județeană, fără a confunda estimările interne cu audiența certificată independent.",
+  "privacy": {
+    "persistent_measurement_requires_consent": true,
+    "respect_signals": ["Global Privacy Control", "Do Not Track"],
+    "identifier_policy": "Identificatorii pseudonimi sunt generați în afara repository-ului; niciun secret, identificator publicitar sau profil personal nu este stocat aici.",
+    "forbidden_fields": [
+      "ip", "ip_address", "latitude", "longitude", "coordinates", "name", "email",
+      "phone", "free_text", "query", "url_query", "url_fragment", "user_agent", "ad_id"
+    ],
+    "raw_event_retention_days": 31,
+    "aggregate_retention_days": 400,
+    "note": "Retenția este o limită de produs revizuibilă, nu o afirmație de conformitate juridică exhaustivă."
+  },
+  "events": {
+    "page_view": {"required": ["event_id", "occurred_at", "session_id", "path", "consent_state"]},
+    "article_read": {"required": ["event_id", "occurred_at", "session_id", "path", "article_id", "consent_state"]},
+    "share_click": {"required": ["event_id", "occurred_at", "session_id", "path", "article_id", "consent_state"]},
+    "locality_select": {"required": ["event_id", "occurred_at", "session_id", "path", "uat", "consent_state"]},
+    "brief_open": {"required": ["event_id", "occurred_at", "session_id", "path", "consent_state"]},
+    "return_visit": {"required": ["event_id", "occurred_at", "visitor_id", "session_id", "path", "consent_state"]}
+  },
+  "allowed_dimensions": [
+    "event", "event_id", "occurred_at", "visitor_id", "session_id", "path", "article_id",
+    "section", "uat", "source_channel", "campaign_id", "device_class", "consent_state"
+  ],
+  "allowed_values": {
+    "consent_state": ["granted", "denied", "unknown"],
+    "source_channel": ["direct", "search", "discover", "facebook", "instagram", "tiktok", "youtube", "whatsapp", "newsletter", "web_push", "referral", "offline", "other"],
+    "device_class": ["mobile", "desktop", "tablet", "other"]
+  },
+  "behavioral_segments": {
+    "priority": ["news_lovers", "daily_briefers", "casual_users"],
+    "news_lovers": "cel puțin 8 zile active sau 20 article_read în luna măsurată",
+    "daily_briefers": "cel puțin 3 brief_open și neeligibil pentru news_lovers",
+    "casual_users": "ceilalți vizitatori măsurați cu consimțământ"
+  },
+  "kpis": {
+    "monthly_unique_measured_visitors": "vizitatori pseudonimi distincți cu consent_state=granted",
+    "returning_7d": "vizitatori cu activitate în cel puțin două zile distincte într-o fereastră de maximum 7 zile",
+    "returning_30d": "vizitatori cu activitate în cel puțin două zile distincte într-o fereastră de maximum 30 zile",
+    "locality_reach_proxy": "vizitatori distincți care au selectat sau consumat conținut asociat unui UAT; nu echivalează cu rezidența",
+    "county_reach": "monthly_unique_measured_visitors / official_population_denominator"
+  },
+  "county_reach_gate": {
+    "certified": false,
+    "denominator": null,
+    "denominator_status": "UNVERIFIED_NOT_IMPORTED",
+    "official_source": "INS, Recensământul Populației și Locuințelor 2021, rezultate definitive, tabelele 1.01 și 1.03",
+    "official_source_url": "https://www.recensamantromania.ro/rezultate-rpl-2021/rezultate-definitive-caracteristici-demografice/",
+    "rule": "Raportul County Reach rămâne null până când denominatorul, perioada și universul sunt verificate și compatibile cu numeratorul. Certificarea independentă BRAT/SATI se raportează separat."
+  }
+}

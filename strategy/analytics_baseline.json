@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "NOT_MEASURED",
+  "measured_period": null,
+  "monthly_unique_measured_visitors": null,
+  "returning_7d": null,
+  "returning_30d": null,
+  "localities_with_measured_audience": null,
+  "county_reach": {
+    "numerator": null,
+    "denominator": null,
+    "ratio": null,
+    "status": "BLOCKED_NO_PRODUCTION_EVENTS_AND_DENOMINATOR",
+    "certified": false
+  },
+  "independent_measurement": {
+    "provider_target": "BRAT/SATI",
+    "status": "NOT_ENROLLED_NOT_CERTIFIED",
+    "url": "https://www.brat.ro/sati/"
+  },
+  "blockers": [
+    "Nu există încă endpoint first-party și flux de consimțământ aprobate/deployate.",
+    "Nu există evenimente reale validate; fixture-urile de test nu sunt KPI.",
+    "Denominatorul oficial INS pentru universul ales nu a fost încă importat și verificat metodologic.",
+    "VÂLCEA CLAR nu este încă măsurat independent prin BRAT/SATI."
+  ]
+}

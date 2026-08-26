@@ -1,20 +1,19 @@
 {
-  "checkpoint_id": "VC-AUTO-008",
-  "checked_local": "2026-08-26T02:44:00+03:00",
+  "checkpoint_id": "VC-AUTO-009",
+  "checked_local": "2026-08-26T03:42:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-008-clean",
     "draft_pr": 15,
-    "superseded_pr": 14,
-    "base_main": "7b775990b8a6638720ceef853ef0b35c9c89ed7f",
+    "base_main": "40d1194d674586cce45f6e19717f7f5e33ff1956",
     "core_publication_mode": "candidate_only",
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "PR #15 contains only canonical code, strategy and tests. Dynamic newsroom/output files and newsroom/state/seen.json are inherited unchanged from current main so recurring radar commits cannot recreate feature-branch conflicts."
+    "note": "Canonical code and strategy remain isolated from dynamic newsroom/output files. No publication authority, allow-list or production state was changed."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T02:39:41+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T03:36:10+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -28,30 +27,37 @@
     "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list."
   },
   "development_micro_lot": {
-    "name": "DISCOVER/SEO 01",
+    "name": "ANALYTICS 01",
     "result": "completed",
     "draft_pr": 15,
-    "implementation": "All production pages emit max-image-preview:large. Article pages emit canonical NewsArticle JSON-LD, matching publication/update dates, organization author and publisher, og:type=article and article timestamps.",
-    "image_treatment": "Preferred image metadata is fail-closed: an asset must be local, rights-cleared, credited, at least 1200px wide, over 300,000 pixels and landscape. Both current 286x380 context assets were correctly excluded from NewsArticle.image and og:image.",
+    "implementation": "Added a privacy-safe allow-listed first-party event contract, validator and aggregate-only processor for six events, all 89 UATs and the news_lovers, daily_briefers and casual_users segments.",
+    "privacy_gates": "Forbidden personal fields, unknown fields/UATs/channels, raw query strings/fragments, invalid IDs, persistent visitor IDs without consent and duplicate event IDs fail closed. Raw events are not copied into aggregate output.",
+    "measurement_gate": "County Reach remains null until both real consented production events and a verified official INS population denominator exist. First-party results are always labelled non-certified; BRAT/SATI remains a separate independent-measurement target.",
     "official_basis": [
-      "https://developers.google.com/search/docs/appearance/structured-data/article",
-      "https://developers.google.com/search/docs/appearance/google-discover",
-      "https://developers.google.com/search/docs/appearance/google-images"
+      "https://www.recensamantromania.ro/rezultate-rpl-2021/rezultate-definitive-caracteristici-demografice/",
+      "https://www.brat.ro/sati/",
+      "https://www.edpb.europa.eu/edpb-cookie-policy_en"
     ],
-    "conflict_prevention": "Superseded PR #14 was replaced by PR #15 based on current main with all tracked radar outputs excluded from the change set.",
-    "verification": "41 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed. No production deployment was made."
+    "verification": "47 unit tests, static build, site verification, newsroom policy verification, live source scan and live promoter check passed. The synthetic fixture validated aggregation but was not persisted as a real KPI. No production deployment was made."
   },
   "growth_inventory": {
     "mechanisms_total": 24,
-    "changed": ["google_discover: DE_TESTAT -> TESTAT"],
-    "note": "The technical contract is tested; actual Discover eligibility and traffic remain unproven until deployment, eligible large imagery and Search Console observation."
+    "changed": ["first_party_analytics: DE_TESTAT -> TESTAT"],
+    "note": "Technical validation is complete; deployment, production consent, real baseline data, official denominator verification and independent certification remain outstanding."
+  },
+  "kpi_signals": {
+    "real_first_party_baseline": "NOT_MEASURED",
+    "county_reach": null,
+    "independent_certification": "NOT_ENROLLED_NOT_CERTIFIED",
+    "test_fixture_only": "7 valid synthetic events, 2 synthetic measured visitors, 2 UATs and deterministic segment/returning calculations; excluded from real KPIs"
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
-    "No certified or first-party County Reach baseline exists yet.",
+    "No production analytics endpoint or approved consent UX exists yet.",
+    "No real first-party County Reach baseline exists; the INS denominator is not yet imported and methodologically verified.",
+    "VÂLCEA CLAR is not yet independently measured or certified through BRAT/SATI.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
-    "Draft PR #15 remains intentionally unmerged pending owner review.",
-    "No registered image currently meets the canonical 1200px landscape Search/Discover gate; current context images are 286x380 px."
+    "Draft PR #15 remains intentionally unmerged pending owner review."
   ],
-  "next_micro_lot": "ANALYTICS 01 — define a privacy-safe first-party event contract, locality and behavioral-segment dimensions, and a County Reach baseline pipeline that needs no repository secrets."
+  "next_micro_lot": "DIRECT CHANNEL 01 — define one shared explicit-opt-in, locality preference and frequency-cap contract for newsletter, WhatsApp and web push, tied to the new analytics event schema without adding provider secrets."
 }
