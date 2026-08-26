@@ -12,6 +12,8 @@ from media_assets import materialize_media
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '_site'
 C = ROOT / 'content'
+STRATEGY = ROOT / 'strategy'
+NEWSROOM_OUT = ROOT / 'newsroom' / 'output'
 BASE = os.getenv('VALCEA_CLAR_BASE_PATH', '').rstrip('/')
 PREVIEW = os.getenv('VALCEA_CLAR_PREVIEW', '') == '1'
 SITE = 'https://valceaclar.ro'
@@ -150,8 +152,8 @@ def news_article_schema(article, canonical, image_url=None):
     return json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
 
 
-def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_path='/', body_class='', og_type='website', og_image=None, extra_head=''):
-    robots_value = 'noindex,nofollow' if PREVIEW else 'max-image-preview:large'
+def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_path='/', body_class='', og_type='website', og_image=None, extra_head='', robots_override=None):
+    robots_value = robots_override or ('noindex,nofollow' if PREVIEW else 'max-image-preview:large')
     robots = f'<meta name="robots" content="{robots_value}">'
     canonical = route_url(canonical_path)
     image_meta = f'<meta property="og:image" content="{h(og_image)}">' if og_image else ''
@@ -298,6 +300,96 @@ def write_route(path, text):
 
 
 write_route('stiri', shell('Știri — VÂLCEA CLAR', stiri_body, canonical_path='/stiri/'))
+
+
+def load_candidate_locality_brief():
+    path = NEWSROOM_OUT / 'locality_brief.json'
+    if not path.exists():
+        return {'status': 'candidate_only', 'target_date': None, 'localities': []}
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return {'status': 'candidate_only', 'target_date': None, 'localities': []}
+    if data.get('status') != 'candidate_only' or data.get('product_id') != 'tomorrow_locality_brief':
+        return {'status': 'candidate_only', 'target_date': None, 'localities': []}
+    return data
+
+
+coverage = json.loads((STRATEGY / 'source_coverage_matrix.json').read_text(encoding='utf-8'))
+uats = coverage.get('uats', [])
+brief = load_candidate_locality_brief()
+brief_by_uat = {item.get('uat'): item.get('alerts', []) for item in brief.get('localities', [])}
+uat_options = ''.join(
+    f'<option value="{h(item["name"])}" data-uat-type="{h(item.get("type", ""))}">{h(item["name"])}</option>'
+    for item in uats
+)
+alert_groups = ''
+for item in uats:
+    uat = item['name']
+    alerts = brief_by_uat.get(uat, [])
+    cards = ''
+    for alert in alerts:
+        source_url = str(alert.get('source_url', ''))
+        if not source_url.startswith('https://'):
+            continue
+        utility = 'Electricitate' if alert.get('utility') == 'electricity' else 'Utilitate locală'
+        start = pretty_date(alert.get('valid_from'))
+        end = pretty_date(alert.get('valid_until'))
+        cards += (
+            '<article class="utility-alert">'
+            f'<div class="kicker">{h(utility)} · candidate_only</div>'
+            f'<h3>{h(start)} – {h(end)}</h3>'
+            f'<p>{h(alert.get("zone", "Zonă nespecificată"))}</p>'
+            f'<a href="{h(source_url)}" rel="nofollow noopener">Documentul oficial al operatorului →</a>'
+            '</article>'
+        )
+    alert_groups += (
+        f'<section class="utility-results" data-uat="{h(uat)}" hidden>'
+        + (cards or '<div class="utility-empty">Nu există alerte candidate structurate pentru această localitate în fereastra curentă.</div>')
+        + '</section>'
+    )
+
+utility_script = '''<script>
+(() => {
+  const key = 'vc_locality_session_v1';
+  const select = document.querySelector('#saved-locality');
+  const prompt = document.querySelector('#locality-prompt');
+  const groups = [...document.querySelectorAll('[data-uat]')];
+  const show = (name) => {
+    groups.forEach((group) => { group.hidden = group.dataset.uat !== name; });
+    prompt.hidden = Boolean(name);
+  };
+  const saved = sessionStorage.getItem(key) || '';
+  if ([...select.options].some((option) => option.value === saved)) select.value = saved;
+  show(select.value);
+  select.addEventListener('change', () => {
+    sessionStorage.setItem(key, select.value);
+    show(select.value);
+  });
+})();
+</script>'''
+utility_body = (
+    '<div class="utility-page">'
+    '<div class="candidate-banner"><strong>Instrument în test</strong><span>Conținut candidate_only · nu este o știre publicată și nu declanșează alerte.</span></div>'
+    '<div class="eyebrow">Utilitate locală</div><h1 class="page-title">Mâine în localitatea ta</h1>'
+    '<p class="page-dek">Alege o localitate pentru a vedea întreruperile programate detectate în surse oficiale. Preferința este păstrată numai în această sesiune; nu creăm un identificator persistent.</p>'
+    '<div class="locality-picker"><label for="saved-locality">Localitatea mea</label>'
+    f'<select id="saved-locality"><option value="">Alege una dintre cele {len(uats)} de localități</option>{uat_options}</select>'
+    '<p class="privacy-note">Datele sunt candidate și pot fi incomplete. Verifică documentul oficial înainte de a lua o decizie.</p></div>'
+    '<div id="locality-prompt" class="utility-empty">Selectează localitatea pentru rezultatele disponibile.</div>'
+    f'{alert_groups}{utility_script}</div>'
+)
+write_route(
+    'instrumente/maine-in-localitatea-ta',
+    shell(
+        'Mâine în localitatea ta — instrument în test — VÂLCEA CLAR',
+        utility_body,
+        'View candidat pentru alerte oficiale de utilități, filtrat pe localitate.',
+        '/instrumente/maine-in-localitatea-ta/',
+        'utility-candidate-page',
+        robots_override='noindex,nofollow',
+    ),
+)
 
 for article in articles:
     canonical_path = '/stiri/' + article['id'] + '/'
