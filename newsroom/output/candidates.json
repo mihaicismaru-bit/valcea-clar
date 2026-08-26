@@ -60,6 +60,28 @@
       "source_id": "inhga_hydrological_warnings",
       "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
       "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-2-din-26-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 2 DIN 26.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-26-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 1 DIN 26.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
       "url": "https://www.hidro.ro/warning/avertizare-hidrologica-pentru-fenomene-imediate-nr-4-din-25-08-2026/",
       "title": "AVERTIZARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 4 DIN 25.08.2026",
       "score": 56,
@@ -849,7 +871,7 @@
     {
       "id": "inhga_hydrological_warnings",
       "ok": true,
-      "items": 8
+      "items": 10
     },
     {
       "id": "se_intampla_in_valcea",
