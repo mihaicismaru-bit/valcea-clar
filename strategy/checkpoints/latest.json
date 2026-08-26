@@ -1,20 +1,20 @@
 {
-  "checkpoint_id": "VC-AUTO-013",
-  "checked_local": "2026-08-26T07:34:15+03:00",
+  "checkpoint_id": "VC-AUTO-014",
+  "checked_local": "2026-08-26T08:30:00+03:00",
   "canonical_state": {
     "repository": "mihaicismaru-bit/valcea-clar",
     "working_branch": "automation/vc-auto-008-clean",
     "draft_pr": 15,
-    "base_main_observed": "c23095515ab801cbdf2f936345509d6ede7cd0fd",
-    "previous_remote_head": "5b736eadf76a4996cba14a4d0b346d2dc8c49c14",
+    "base_main_observed": "34353ec4fb18dd3a2a720e6b3ba42b1fc86f6764",
+    "previous_remote_head": "260a035c8803d4ac7c577c20e53b660fe3f9105e",
     "core_publication_mode": "candidate_only",
     "live_promoter": "owner_authorized_T1_structured_only",
     "auto_publish_allowed_sources": ["cj_valcea_sedinte_publice", "isu_valcea_comunicate"],
     "production_gate": "fail_closed",
-    "note": "No publication authority, allow-list, direct-channel destination, provider credential or auto-post state changed. Dynamic newsroom and social-card outputs remain excluded from the feature changes."
+    "note": "No publication authority, allow-list, direct-channel destination, provider credential or auto-post state changed. Dynamic newsroom and social-card outputs remain excluded from the feature branch."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T07:33:50+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T08:28:48+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -25,45 +25,58 @@
     ],
     "today_utility_signal": "For 26.08: Drăgășani and Nicolae Bălcescu, both 09:00–17:00",
     "tomorrow_locality_brief": "For 27.08: Călimănești 09:30–14:30 and Stroești 09:00–17:00",
-    "new_signals": [
-      "A new T2 report alleges that a Vâlcea family lost an airport transfer on a Turkey package holiday; it has no T1/operator corroboration in the canonical scan and remains WATCH, not a publishable fact."
+    "same_event_clusters": [
+      "Bujoreni house fire: two T2 local reports describe the same event; no current canonical ISU detail was available, so the cluster remains WATCH.",
+      "Boița DN7 collision: two local reports describe the same event outside Vâlcea county; it remains out of county-edition scope."
     ],
-    "treatment": "FAIL_CLOSED: zero live articles. All three structured drafts remain outside the authorized live source list; the new T2 consumer complaint remains WATCH."
+    "new_watch_signals": [
+      "T2 claims concerning Râmnicu Vâlcea district heating, a proposed Chimcomplex partnership and alleged need for 40 million lei were not corroborated by a current T1 document in this scan.",
+      "A reported RO-Alert for storms is secondary reporting and is not substituted for an official ANM/ISU alert in the canonical edition."
+    ],
+    "treatment": "FAIL_CLOSED: zero live articles. Three structured T1 drafts remain outside the authorized live source list; new T2 clusters remain WATCH or out of scope."
   },
   "development_micro_lot": {
-    "name": "MARKET INTELLIGENCE 01",
+    "name": "TRUST/TRANSPARENCY 01",
     "result": "completed",
     "draft_pr": 15,
-    "artifact": "strategy/market_intelligence_valcea.json",
-    "scope": "Dated baseline for Se întâmplă în Vâlcea, Eveniment Vâlcean and Ziarul de Vâlcea using their live RSS feeds, homepages and public trust/contact surfaces.",
-    "measured_dimensions": ["24h update cadence", "named Vâlcea UAT breadth", "utility/service coverage", "format mix", "direct channels", "trust signals"],
-    "key_result": "Two competitors published 9–15 feed items in 24h, so raw volume is not a defensible advantage. The reversible opportunity is structured all-UAT utility plus visible source, verification and corrections state.",
-    "safety": "The baseline explicitly scopes absence claims to checked surfaces, does not rank audience, invent unique users or claim certification, and does not validate every competitor article as fact.",
-    "verification": "72 unit tests, JSON validation, static build, site verification, newsroom verification and promoter authority checks passed. Zero article, message or card was distributed."
+    "artifacts": [
+      "strategy/trust_transparency_contract.json",
+      "content/corrections.json",
+      "scripts/trust.py",
+      "public /standarde/ and /corectii/ routes"
+    ],
+    "verification_state_result": "1/7 articles derive PUBLISHED_VERIFIED_T1; 6/7 derive LEGACY_METADATA_INCOMPLETE and remain ineligible for distribution labelled verified without being declared false.",
+    "ownership_boundary": "Editorial responsibility and contact are public. The legal publisher remains explicitly NOT_DECLARED_CANONICALLY rather than being invented; owner confirmation is required to complete it.",
+    "corrections_boundary": "The registry records its start time. An empty registry is scoped to the covered period and does not claim that no earlier corrections existed.",
+    "safety": "Verification state is derived from publication authority, T1 tier and HTTPS sources; the generator cannot upgrade legacy metadata. The contract does not change publication, send or post authority.",
+    "verification": "76 unit tests, JSON validation, static build, site verification, newsroom verification and promoter authority checks passed. Zero article, message or card was distributed."
   },
   "growth_inventory": {
-    "mechanisms_total": 26,
-    "changed": ["locality_pages: evidence and next action updated from dated competitor baseline; status remains DE_TESTAT"],
-    "note": "No genuinely new mechanism was added. The baseline validates existing all-UAT utility, direct opt-in, social-native and trust work rather than inflating the inventory."
+    "mechanisms_total": 27,
+    "changed": ["trust_transparency: added as TESTAT with high impact, low editorial risk, low cost, medium effort and high measurability"],
+    "note": "Real trust/retention impact remains unmeasured until deployment and first-party analytics. Technical validation is not presented as audience growth."
   },
   "kpi_signals": {
-    "competitors_sampled": 3,
-    "competitor_feed_items_24h": {"se_intampla_in_valcea": 9, "eveniment_valcean": 15, "ziarul_de_valcea": 4},
-    "new_t2_watch_items": 1,
+    "sources_healthy": 11,
+    "sources_total": 13,
     "structured_drafts": 3,
+    "verified_t1_articles": 1,
+    "legacy_metadata_incomplete_articles": 6,
+    "corrections_registry_entries": 0,
     "auto_publications": 0,
-    "real_social_reach": "NOT_MEASURED",
+    "real_trust_page_usage": "NOT_MEASURED",
     "county_reach": null,
     "independent_certification": null,
-    "repository_tests": 72,
+    "repository_tests": 76,
     "unsafe_publications": 0
   },
   "blockers": [
     "Both CJ Vâlcea endpoints continue to return HTTP 502.",
-    "The new consumer complaint is a T2 report without canonical T1/operator corroboration and cannot be promoted as verified fact.",
+    "The legal publisher identity has not been confirmed in canonical data and is intentionally not inferred.",
+    "Six legacy articles need documented editorial review before they can be distributed as verified.",
     "No real first-party County Reach baseline exists and BRAT/SATI certification is absent.",
     "Distribuție Oltenia, APAVIL and INHGA remain candidate-only pending a separate publication-authority decision.",
     "Draft PR #15 remains intentionally unmerged pending owner review; production behavior and real KPI collection are unchanged."
   ],
-  "next_micro_lot": "TRUST/TRANSPARENCY 01 — define and implement a public corrections/source/ownership contract plus machine-readable verification state for manually published articles; keep incomplete legacy articles fail-closed for verified distribution."
+  "next_micro_lot": "RETENTION/RECIRCULATION 01 — implement deterministic same-event timelines and «ce s-a schimbat» links for published articles, with explicit update/correction distinction and no automatic relation based only on headline similarity."
 }
