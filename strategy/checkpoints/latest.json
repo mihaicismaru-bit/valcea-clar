@@ -13,7 +13,7 @@
     "note": "No publication authority, allow-list, provider credential or production send state changed. Dynamic newsroom outputs remain excluded from the feature commit."
   },
   "edition": {
-    "latest_verified_publish_check_local": "2026-08-26T04:33:38+03:00",
+    "latest_verified_publish_check_local": "2026-08-26T04:36:59+03:00",
     "new_auto_published_in_that_check": 0,
     "source_health": "11/13 sources healthy; both CJ Vâlcea endpoints returned HTTP 502",
     "structured_drafts": 3,
@@ -38,8 +38,8 @@
       "https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API",
       "https://www.edpb.europa.eu/sme-data-protection-guide/practical-resources/practical-guide-direct-marketing_en"
     ],
-    "regression_fix": "Fixture newsroom cycles are now in-memory during tests. A regression test proves they cannot overwrite live radar outputs before the live promoter runs.",
-    "verification": "57 unit tests, stable live-output hashes across the test suite, static build, site verification, live source scan and promoter verification passed. No production message or article was sent."
+    "regression_fix": "Fixture newsroom cycles are now in-memory during tests, and the promoter can no longer change the candidate queue's top-level LOCKED_CANDIDATE_ONLY state. Regression tests cover both boundaries.",
+    "verification": "58 unit tests, stable live-output hashes across the test suite, static build, site verification, live source scan, promoter run and post-promoter newsroom verification passed. No production message or article was sent."
   },
   "growth_inventory": {
     "mechanisms_total": 25,
@@ -51,7 +51,7 @@
     "real_direct_subscribers": null,
     "real_messages_sent": 0,
     "open_click_optout_baseline": "NOT_MEASURED",
-    "test_contract": "9 direct-channel tests passed; 57 repository tests total",
+    "test_contract": "9 direct-channel tests passed; 58 repository tests total",
     "unsafe_fixture_publications": 0
   },
   "blockers": [

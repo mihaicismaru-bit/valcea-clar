@@ -1,4 +1,6 @@
 import sys
+import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -66,6 +68,20 @@ class AutoPublishTests(unittest.TestCase):
         selected, skipped = auto_publish.select(stories, {stories[0]['id']}, cfg)
         self.assertEqual(len(selected), 1)
         self.assertTrue(any(x['reason'] == 'already_published' for x in skipped))
+
+    def test_promoter_cannot_unlock_candidate_queue(self):
+        cfg = auto_publish.load(ROOT / 'newsroom/publication.json')
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            (out / 'queue.json').write_text(json.dumps({'status': 'LOCKED_CANDIDATE_ONLY', 'queue': []}), encoding='utf-8')
+            previous = auto_publish.OUT
+            auto_publish.OUT = out
+            try:
+                auto_publish.sync_queue([], set(), set(), cfg)
+                queue = json.loads((out / 'queue.json').read_text(encoding='utf-8'))
+            finally:
+                auto_publish.OUT = previous
+        self.assertEqual(queue['status'], 'LOCKED_CANDIDATE_ONLY')
 
 
 if __name__ == '__main__':

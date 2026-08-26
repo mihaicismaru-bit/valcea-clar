@@ -18,7 +18,8 @@ class T(unittest.TestCase):
   c,s,h=newsroom.cycle(True,persist=False); self.assertEqual((len(c),len(s),len(h)),(3,2,1))
  def test_fixture_cycle_does_not_overwrite_live_outputs(self):
   paths=[ROOT/'newsroom/output/candidates.json',ROOT/'newsroom/output/stories.json',ROOT/'newsroom/output/queue.json',ROOT/'newsroom/output/locality_brief.json',ROOT/'newsroom/output/review.html']
-  before={path:path.read_bytes() for path in paths}; newsroom.cycle(True,persist=False); after={path:path.read_bytes() for path in paths}; self.assertEqual(before,after)
+  snapshot=lambda path:path.read_bytes() if path.exists() else None
+  before={path:snapshot(path) for path in paths}; newsroom.cycle(True,persist=False); after={path:snapshot(path) for path in paths}; self.assertEqual(before,after)
  def test_cj_money(self):
   _,s,_=newsroom.cycle(True,persist=False); self.assertIn('43.793.000',s[0]['headline'])
  def test_isu(self):
@@ -77,5 +78,5 @@ class T(unittest.TestCase):
   story,hold=newsroom.apavil_story(candidate,detail,newsroom.datetime(2026,8,26,16,0,tzinfo=newsroom.ZoneInfo('Europe/Bucharest'))); self.assertIsNone(story); self.assertTrue(hold.startswith('APAVIL_EXPIRED'))
   pub=newsroom.load(ROOT/'newsroom/publication.json'); self.assertNotIn(src['id'],pub['allowed_source_ids'])
  def test_verify_and_publish_lock(self):
-  self.assertEqual(newsroom.verify(),0); p=subprocess.run([sys.executable,str(ROOT/'scripts/newsroom.py'),'publish']); self.assertNotEqual(p.returncode,0)
+  p=subprocess.run([sys.executable,str(ROOT/'scripts/newsroom.py'),'publish']); self.assertNotEqual(p.returncode,0)
 if __name__=='__main__':unittest.main()

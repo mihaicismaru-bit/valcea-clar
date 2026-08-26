@@ -110,7 +110,8 @@ def select(stories, existing_ids, cfg):
 def sync_queue(stories, existing_ids, published_ids, cfg):
     queue = load(OUT / "queue.json")
     story_by_id = {story.get("id"): story for story in stories}
-    queue["status"] = "AUTO_PUBLISH_ACTIVE"
+    # The promoter may annotate rows, but it must never unlock candidate-core.
+    queue["status"] = "LOCKED_CANDIDATE_ONLY"
     for row in queue.get("queue", []):
         ident = row.get("id")
         if ident in published_ids or ident in existing_ids:
