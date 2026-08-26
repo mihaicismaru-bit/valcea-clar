@@ -59,7 +59,7 @@
         "score": 56,
         "decision": "READY",
         "risks": [],
-        "seen_before": false,
+        "seen_before": true,
         "structured_facts": {
           "number": 93,
           "issue_date": "2026-08-26",
@@ -292,10 +292,6 @@
     },
     {
       "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-24-08-2026/",
-      "reason": "INHGA_NOT_VALCEA"
-    },
-    {
-      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-2-din-22-08-2026/",
       "reason": "INHGA_NOT_VALCEA"
     }
   ]

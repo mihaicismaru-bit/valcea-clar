@@ -65,7 +65,7 @@
       "score": 56,
       "decision": "READY",
       "risks": [],
-      "seen_before": false,
+      "seen_before": true,
       "structured_facts": {
         "number": 93,
         "issue_date": "2026-08-26",
@@ -232,17 +232,6 @@
       "seen_before": true
     },
     {
-      "source_id": "inhga_hydrological_warnings",
-      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
-      "tier": "T1",
-      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-2-din-22-08-2026/",
-      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 2 DIN 22.08.2026",
-      "score": 56,
-      "decision": "READY",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ipj_valcea_comunicate",
       "source_name": "IPJ Vâlcea",
       "tier": "T1",
@@ -290,7 +279,7 @@
       "risks": [
         "rețin"
       ],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -517,19 +506,19 @@
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-accident-grav-pe-dn-7-la-boita-un-sofer-a-ajuns-la-spital-dupa-ce-a-intrat-pe-contrasens/",
-      "title": "FOTO Accident grav pe DN 7, la Boița. Un șofer a ajuns la spital după ce a intrat pe contrasens",
+      "url": "https://evenimentvalcean.ro/investigatii-ct-disponibile-la-spitalul-din-brezoi-de-la-1-septembrie-pacientii-din-nordul-valcii-nu-mai-trebuie-sa-bata-drumul-pentru-investigatii/",
+      "title": "Investigații CT disponibile la Spitalul din Brezoi, de la 1 septembrie. Pacienții din nordul Vâlcii nu mai trebuie să bată drumul pentru investigații",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://evenimentvalcean.ro/investitii-importante-pentru-comuna-costesti-canalizarea-infrastructura-inteligenta-si-bugetul-local-pe-masa-consiliului-local/",
-      "title": "Investiții importante pentru comuna Costești! Canalizarea, infrastructura inteligentă și bugetul local, pe masa Consiliului Local",
+      "url": "https://evenimentvalcean.ro/foto-accident-grav-pe-dn-7-la-boita-un-sofer-a-ajuns-la-spital-dupa-ce-a-intrat-pe-contrasens/",
+      "title": "FOTO Accident grav pe DN 7, la Boița. Un șofer a ajuns la spital după ce a intrat pe contrasens",
       "score": 48,
       "decision": "WATCH",
       "risks": [],
@@ -545,6 +534,17 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/26/exista-ordin-politic-sa-nu-primim-banii-presedintele-radulescu-spune-ca-valcea-risca-sa-ramana-fara-apa-calda-din-cauza-unui-joc-politic/",
+      "title": "„Există ordin politic să nu primim banii”. Președintele Rădulescu spune că Vâlcea riscă să rămână fără apă caldă din cauza unui joc politic",
+      "score": 42,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -628,11 +628,11 @@
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/26/schitul-troianu-pradat-de-o-hoata-a-escaladat-fereastra-din-zona-altarului/",
-      "title": "Schitul Troianu, prădat de o hoața. A escaladat fereastra din zona altarului",
+      "title": "Schitul Troianu, prădat de o hoață. A escaladat fereastra din zona altarului",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -679,15 +679,26 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
       "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/25/foto-barbat-reclamat-ca-hartuia-femei-in-ramnicu-valcea-identificat-si-internat-de-autoritati/",
-      "title": "FOTO – Bărbat reclamat că hărțuia femei în Râmnicu Vâlcea, identificat și internat de autorități",
+      "url": "https://evenimentvalcean.ro/mandatele-alesilor-locali-in-centrul-unei-modificari-legislative-deputatul-psd-valcea-ovidiu-stefan-popa-am-corectat-legea-si-am-eliminat-orice-dubiu/",
+      "title": "Mandatele aleșilor locali, în centrul unei modificări legislative. Deputatul PSD Vâlcea Ovidiu Ștefan Popa: „Am corectat legea și am eliminat orice dubiu”",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": true
+      "seen_before": false
+    },
+    {
+      "source_id": "eveniment_valcean",
+      "source_name": "Eveniment Vâlcean",
+      "tier": "T2",
+      "url": "https://evenimentvalcean.ro/noapte-de-groaza-la-manastirea-antim-schitul-troianu-o-femeie-a-intrat-prin-altar-pentru-a-fura-banii-din-cutia-de-donatii/",
+      "title": "Noapte de groază la Mănăstirea Antim – Schitul Troianu. O femeie a intrat prin altar, pentru a fura banii din cutia de donații",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
     },
     {
       "source_id": "eveniment_valcean",
@@ -772,28 +783,6 @@
       "tier": "T2",
       "url": "https://evenimentvalcean.ro/foto-elevii-din-valcea-intra-in-lumea-laserelor-de-mare-putere-experienta-de-cinci-zile-la-eli-np-magurele/",
       "title": "FOTO Elevii din Vâlcea intră în lumea laserelor de mare putere! Experiență de cinci zile la ELI-NP Măgurele",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/foto-ramnicu-valcea-se-umple-de-culoare-15-artisti-isi-expun-lucrarile-la-centrul-cultural-valcea/",
-      "title": "FOTO Râmnicu Vâlcea se umple de culoare! 15 artiști își expun lucrările la Centrul Cultural Vâlcea",
-      "score": 36,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
-      "source_id": "eveniment_valcean",
-      "source_name": "Eveniment Vâlcean",
-      "tier": "T2",
-      "url": "https://evenimentvalcean.ro/dispare-politia-de-pe-waze-soferii-romani-au-gasit-deja-codurile-secrete-pentru-a-anunta-radarele/",
-      "title": "Dispare „Poliția” de pe Waze? Șoferii români au găsit deja „codurile secrete” pentru a anunța radarele",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
@@ -905,7 +894,7 @@
     {
       "id": "inhga_hydrological_warnings",
       "ok": true,
-      "items": 10
+      "items": 9
     },
     {
       "id": "se_intampla_in_valcea",
