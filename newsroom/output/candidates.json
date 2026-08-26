@@ -60,6 +60,57 @@
       "source_id": "inhga_hydrological_warnings",
       "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
       "tier": "T1",
+      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-nr-93-din-26-08-2026/",
+      "title": "ATENŢIONARE HIDROLOGICĂ NR. 93 DIN 26.08.2026",
+      "score": 56,
+      "decision": "READY",
+      "risks": [],
+      "seen_before": false,
+      "structured_facts": {
+        "number": 93,
+        "issue_date": "2026-08-26",
+        "valid_from": "2026-08-26T12:00:00+03:00",
+        "valid_until": "2026-08-27T10:00:00+03:00",
+        "levels": [
+          "GALBEN"
+        ],
+        "counties": [
+          "Alba",
+          "Arad",
+          "Argeș",
+          "Bihor",
+          "Brașov",
+          "Buzău",
+          "Cluj",
+          "Covasna",
+          "Dâmbovița",
+          "Gorj",
+          "Harghita",
+          "Hunedoara",
+          "Ialomița",
+          "Maramureș",
+          "Mureș",
+          "Neamț",
+          "Olt",
+          "Prahova",
+          "Sibiu",
+          "Suceava",
+          "Timiș",
+          "Vâlcea"
+        ],
+        "valcea_relevant": true,
+        "valcea_segments": [
+          "Olt – bazin amonte S.H. Micfalău și afluenții aferenți sectorului aval S.H. Micfalău – amonte Ac. Ionești (județele: Harghita, Covasna, Braşov, Sibiu, Vâlcea și Argeș)",
+          "Olteţ – bazin superior și afluenţi bazin mijlociu (județele: Gorj şi Vâlcea)"
+        ],
+        "phenomena": "Scurgeri importante pe versanți, torenți și pâraie, viituri rapide pe râurile mici cu posibile efecte de inundații locale și creșteri de debite și niveluri pe unele râuri din bazinele hidrografice menționate, cu posibile depășiri ale COTELOR DE ATENŢIE.",
+        "basins": "Vişeu, Iza, Someş, Crişul Repede, Crişul Negru, Crişul Alb, Mureş, Bega, Timiş, Jiu, Olt, Argeș, Ialomiţa, Buzău, Bistriţa, Moldova şi Suceava."
+      }
+    },
+    {
+      "source_id": "inhga_hydrological_warnings",
+      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+      "tier": "T1",
       "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-2-din-26-08-2026/",
       "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 2 DIN 26.08.2026",
       "score": 56,
@@ -192,17 +243,6 @@
       "seen_before": true
     },
     {
-      "source_id": "inhga_hydrological_warnings",
-      "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
-      "tier": "T1",
-      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-22-08-2026/",
-      "title": "ATENŢIONARE HIDROLOGICĂ PENTRU FENOMENE IMEDIATE NR. 1 DIN 22.08.2026",
-      "score": 56,
-      "decision": "READY",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "ipj_valcea_comunicate",
       "source_name": "IPJ Vâlcea",
       "tier": "T1",
@@ -226,7 +266,7 @@
       "score": 54,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "isu_valcea_comunicate",
@@ -238,6 +278,19 @@
       "decision": "WATCH",
       "risks": [],
       "seen_before": true
+    },
+    {
+      "source_id": "ipj_valcea_comunicate",
+      "source_name": "IPJ Vâlcea",
+      "tier": "T1",
+      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/retinuta-pentru-24-de-ore1787735137",
+      "title": "REȚINUTĂ PENTRU 24 DE ORE",
+      "score": 50,
+      "decision": "REVIEW_REQUIRED",
+      "risks": [
+        "rețin"
+      ],
+      "seen_before": false
     },
     {
       "source_id": "ipj_valcea_comunicate",
@@ -337,17 +390,6 @@
       "risks": [
         "arest"
       ],
-      "seen_before": true
-    },
-    {
-      "source_id": "ipj_valcea_comunicate",
-      "source_name": "IPJ Vâlcea",
-      "tier": "T1",
-      "url": "https://vl.politiaromana.ro/ro/stiri-si-media/comunicate/activitati-de-informare-si-prevenire-desfasurate-de-politisti-la-festivalul-deep-forest",
-      "title": "ACTIVITĂȚI DE INFORMARE ȘI PREVENIRE DESFĂȘURATE DE POLIȚIȘTI LA FESTIVALUL DEEP FOREST",
-      "score": 50,
-      "decision": "WATCH",
-      "risks": [],
       "seen_before": true
     },
     {
@@ -516,17 +558,6 @@
       "seen_before": true
     },
     {
-      "source_id": "se_intampla_in_valcea",
-      "source_name": "Se întâmplă în Vâlcea",
-      "tier": "T2",
-      "url": "https://seintamplainvalcea.ro/2026/08/25/foto-pericol-de-explozie-evitat-la-bujoreni-o-butelie-a-fost-evacuata-din-locuinta-cuprinsa-de-incendiu/",
-      "title": "FOTO – Pericol de explozie evitat la Bujoreni. O butelie a fost evacuată din locuința cuprinsă de incendiu",
-      "score": 42,
-      "decision": "WATCH",
-      "risks": [],
-      "seen_before": true
-    },
-    {
       "source_id": "eveniment_valcean",
       "source_name": "Eveniment Vâlcean",
       "tier": "T2",
@@ -535,7 +566,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -546,7 +577,7 @@
       "score": 42,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -596,12 +627,23 @@
       "source_id": "se_intampla_in_valcea",
       "source_name": "Se întâmplă în Vâlcea",
       "tier": "T2",
+      "url": "https://seintamplainvalcea.ro/2026/08/26/schitul-troianu-pradat-de-o-hoata-a-escaladat-fereastra-din-zona-altarului/",
+      "title": "Schitul Troianu, prădat de o hoața. A escaladat fereastra din zona altarului",
+      "score": 36,
+      "decision": "WATCH",
+      "risks": [],
+      "seen_before": false
+    },
+    {
+      "source_id": "se_intampla_in_valcea",
+      "source_name": "Se întâmplă în Vâlcea",
+      "tier": "T2",
       "url": "https://seintamplainvalcea.ro/2026/08/26/foto-video-gospodarie-mistuita-de-flacari-noaptea-trecuta-intr-o-comuna-din-valcea/",
       "title": "FOTO/VIDEO. Gospodărie mistuită de flăcări, noaptea trecută, într-o comună din Vâlcea",
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "se_intampla_in_valcea",
@@ -656,7 +698,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",
@@ -667,7 +709,7 @@
       "score": 36,
       "decision": "WATCH",
       "risks": [],
-      "seen_before": false
+      "seen_before": true
     },
     {
       "source_id": "eveniment_valcean",

@@ -33,6 +33,118 @@
       "image": "administratie-ramnicu-valcea-20260819.webp"
     },
     {
+      "id": "inhga_hydrological_warnings-3cf9db60405683e4",
+      "section": "VREME ȘI ALERTE",
+      "headline": "Cod galben hidrologic pentru râuri din Vâlcea, până la 27.08, ora 10:00",
+      "dek": "Avertizare oficială INHGA, păstrată în candidate mode până la o autorizare separată a sursei.",
+      "paragraphs": [
+        "INHGA a emis mesajul hidrologic nr. 93, valabil de la 26.08.2026, ora 12:00 până la 27.08.2026, ora 10:00 pentru sectoarele indicate în documentul oficial.",
+        "Pentru județul Vâlcea, textul oficial include: Olt – bazin amonte S.H. Micfalău și afluenții aferenți sectorului aval S.H. Micfalău – amonte Ac. Ionești (județele: Harghita, Covasna, Braşov, Sibiu, Vâlcea și Argeș); Olteţ – bazin superior și afluenţi bazin mijlociu (județele: Gorj şi Vâlcea).",
+        "Fenomene vizate: Scurgeri importante pe versanți, torenți și pâraie, viituri rapide pe râurile mici cu posibile efecte de inundații locale și creșteri de debite și niveluri pe unele râuri din bazinele hidrografice menționate, cu posibile depășiri ale COTELOR DE ATENŢIE.",
+        "Codul indică un risc hidrologic pentru sectoarele menționate, nu confirmarea că inundațiile se vor produce în toate localitățile județului."
+      ],
+      "sources": [
+        {
+          "name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+          "url": "https://www.hidro.ro/warning/atentionare-hidrologica-nr-93-din-26-08-2026/",
+          "tier": "T1"
+        }
+      ],
+      "source_candidate": {
+        "source_id": "inhga_hydrological_warnings",
+        "source_name": "Institutul Național de Hidrologie și Gospodărire a Apelor — avertizări",
+        "tier": "T1",
+        "url": "https://www.hidro.ro/warning/atentionare-hidrologica-nr-93-din-26-08-2026/",
+        "title": "ATENŢIONARE HIDROLOGICĂ NR. 93 DIN 26.08.2026",
+        "score": 56,
+        "decision": "READY",
+        "risks": [],
+        "seen_before": false,
+        "structured_facts": {
+          "number": 93,
+          "issue_date": "2026-08-26",
+          "valid_from": "2026-08-26T12:00:00+03:00",
+          "valid_until": "2026-08-27T10:00:00+03:00",
+          "levels": [
+            "GALBEN"
+          ],
+          "counties": [
+            "Alba",
+            "Arad",
+            "Argeș",
+            "Bihor",
+            "Brașov",
+            "Buzău",
+            "Cluj",
+            "Covasna",
+            "Dâmbovița",
+            "Gorj",
+            "Harghita",
+            "Hunedoara",
+            "Ialomița",
+            "Maramureș",
+            "Mureș",
+            "Neamț",
+            "Olt",
+            "Prahova",
+            "Sibiu",
+            "Suceava",
+            "Timiș",
+            "Vâlcea"
+          ],
+          "valcea_relevant": true,
+          "valcea_segments": [
+            "Olt – bazin amonte S.H. Micfalău și afluenții aferenți sectorului aval S.H. Micfalău – amonte Ac. Ionești (județele: Harghita, Covasna, Braşov, Sibiu, Vâlcea și Argeș)",
+            "Olteţ – bazin superior și afluenţi bazin mijlociu (județele: Gorj şi Vâlcea)"
+          ],
+          "phenomena": "Scurgeri importante pe versanți, torenți și pâraie, viituri rapide pe râurile mici cu posibile efecte de inundații locale și creșteri de debite și niveluri pe unele râuri din bazinele hidrografice menționate, cu posibile depășiri ale COTELOR DE ATENŢIE.",
+          "basins": "Vişeu, Iza, Someş, Crişul Repede, Crişul Negru, Crişul Alb, Mureş, Bega, Timiş, Jiu, Olt, Argeș, Ialomiţa, Buzău, Bistriţa, Moldova şi Suceava."
+        }
+      },
+      "status": "DRAFT_CANDIDATE_ONLY",
+      "image": null,
+      "structured_facts": {
+        "number": 93,
+        "issue_date": "2026-08-26",
+        "valid_from": "2026-08-26T12:00:00+03:00",
+        "valid_until": "2026-08-27T10:00:00+03:00",
+        "levels": [
+          "GALBEN"
+        ],
+        "counties": [
+          "Alba",
+          "Arad",
+          "Argeș",
+          "Bihor",
+          "Brașov",
+          "Buzău",
+          "Cluj",
+          "Covasna",
+          "Dâmbovița",
+          "Gorj",
+          "Harghita",
+          "Hunedoara",
+          "Ialomița",
+          "Maramureș",
+          "Mureș",
+          "Neamț",
+          "Olt",
+          "Prahova",
+          "Sibiu",
+          "Suceava",
+          "Timiș",
+          "Vâlcea"
+        ],
+        "valcea_relevant": true,
+        "valcea_segments": [
+          "Olt – bazin amonte S.H. Micfalău și afluenții aferenți sectorului aval S.H. Micfalău – amonte Ac. Ionești (județele: Harghita, Covasna, Braşov, Sibiu, Vâlcea și Argeș)",
+          "Olteţ – bazin superior și afluenţi bazin mijlociu (județele: Gorj şi Vâlcea)"
+        ],
+        "phenomena": "Scurgeri importante pe versanți, torenți și pâraie, viituri rapide pe râurile mici cu posibile efecte de inundații locale și creșteri de debite și niveluri pe unele râuri din bazinele hidrografice menționate, cu posibile depășiri ale COTELOR DE ATENŢIE.",
+        "basins": "Vişeu, Iza, Someş, Crişul Repede, Crişul Negru, Crişul Alb, Mureş, Bega, Timiş, Jiu, Olt, Argeș, Ialomiţa, Buzău, Bistriţa, Moldova şi Suceava."
+      }
+    },
+    {
       "id": "inhga_hydrological_warnings-fbadc5f5bde1fa59",
       "section": "VREME ȘI ALERTE",
       "headline": "Cod galben hidrologic pentru râuri din Vâlcea, până la 26.08, ora 24:00",
@@ -185,10 +297,6 @@
     {
       "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-2-din-22-08-2026/",
       "reason": "INHGA_NOT_VALCEA"
-    },
-    {
-      "url": "https://www.hidro.ro/warning/atentionare-hidrologica-pentru-fenomene-imediate-nr-1-din-22-08-2026/",
-      "reason": "INHGA_EXPIRED:2026-08-23T00:00:00+03:00"
     }
   ]
 }
