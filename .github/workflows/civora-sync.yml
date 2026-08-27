@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - 'sync/run-now'
+      - 'scripts/check_civora_projection_ready.py'
       - 'scripts/sync_civora.py'
       - 'scripts/build.py'
       - 'scripts/enrich_metadata.py'
@@ -43,6 +44,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Require completed CIVORA derived public projection
+        run: python3 scripts/check_civora_projection_ready.py
 
       - name: Sync canonical CIVORA feed
         run: python3 scripts/sync_civora.py
