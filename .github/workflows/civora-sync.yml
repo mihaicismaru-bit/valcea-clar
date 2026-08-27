@@ -10,6 +10,7 @@ on:
       - 'sync/run-now'
       - 'scripts/sync_civora.py'
       - 'scripts/build.py'
+      - 'scripts/enrich_metadata.py'
       - 'scripts/verify.py'
       - 'scripts/media_assets.py'
       - 'content/site.css'
@@ -86,6 +87,9 @@ jobs:
 
       - name: Build production site
         run: python3 scripts/build.py
+
+      - name: Enrich discovery and social metadata
+        run: python3 scripts/enrich_metadata.py
 
       - name: Verify production artifact
         run: python3 scripts/verify.py
