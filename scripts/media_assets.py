@@ -11,12 +11,21 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'media_source'
+CONTENT = ROOT / 'content'
 MAX_REMOTE_BYTES = 12 * 1024 * 1024
 UA = 'VÂLCEA-CLAR-Public-Media-Mirror/1.0 (+https://valceaclar.ro/)'
 
 
 def _local_manifest() -> dict:
     return json.loads((SRC / 'manifest.json').read_text(encoding='utf-8'))
+
+
+def _canonical_articles() -> list[dict]:
+    path = CONTENT / 'articles.json'
+    if not path.is_file():
+        return []
+    doc = json.loads(path.read_text(encoding='utf-8'))
+    return [row for row in doc.get('articles', []) if isinstance(row, dict)]
 
 
 def _safe_remote_url(value: str) -> str:
@@ -68,15 +77,17 @@ def _download_image(url: str) -> tuple[bytes, str]:
 
 
 def materialize_media(target: Path, articles: list[dict] | None = None) -> set[str]:
-    """Build all local media and mirror verified canonical CIVORA visuals.
+    """Build local media and mirror verified canonical CIVORA visuals.
 
     Curated media committed in ``media_source`` is deterministic and mandatory.
     CIVORA visuals are canonical provenance records but their network transfer is
     best-effort: a transient remote image failure must not stop publication of the
-    verified article itself. Missing mirrors are omitted from HTML and remain
-    visible to the independent public-media health gate.
+    verified article itself. Missing mirrors stay visible to the independent
+    public-media health gate.
     """
     target.mkdir(parents=True, exist_ok=True)
+    if articles is None:
+        articles = _canonical_articles()
     available: set[str] = set()
     provenance: dict[str, dict] = {}
 
@@ -93,7 +104,7 @@ def materialize_media(target: Path, articles: list[dict] | None = None) -> set[s
         }
 
     mirrors: dict[str, dict] = {}
-    for article in articles or []:
+    for article in articles:
         name = str(article.get('image') or '').strip()
         fetch_url = str(article.get('image_fetch_url') or '').strip()
         if not name or not fetch_url:
