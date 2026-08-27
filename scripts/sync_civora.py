@@ -64,6 +64,18 @@ def _published_at(story: dict, feed: dict) -> str:
     )
 
 
+def _freshness_key(story: dict, feed: dict):
+    value = _published_at(story, feed)
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        timestamp = parsed.timestamp()
+    except ValueError:
+        timestamp = 0.0
+    return (timestamp, int(story.get("priority") or 0), str(story.get("id") or ""))
+
+
 def _normalize_sources(value) -> list[dict]:
     out = []
     for row in value or []:
@@ -149,9 +161,14 @@ def main() -> int:
         if isinstance(row, dict) and row.get("file")
     }
 
+    ordered_stories = sorted(
+        feed["stories"],
+        key=lambda story: _freshness_key(story, feed),
+        reverse=True,
+    )
     articles = [
         _normalize_story(story, rank, feed, old_by_id, local_media)
-        for rank, story in enumerate(feed["stories"])
+        for rank, story in enumerate(ordered_stories)
     ]
     ids = [row["id"] for row in articles]
     if len(ids) != len(set(ids)):
@@ -162,6 +179,7 @@ def main() -> int:
         "updated_local": generated_at,
         "canonical_source": FEED_URL,
         "canonical_schema_version": feed.get("schema_version"),
+        "presentation_order": "freshness_first_then_source_priority",
         "articles": articles,
     }
     rendered = json.dumps(public_doc, ensure_ascii=False, indent=2) + "\n"
@@ -172,13 +190,15 @@ def main() -> int:
     STATE_PATH.write_text(
         json.dumps(
             {
-                "schema_version": "1.0",
+                "schema_version": "1.1",
                 "source": FEED_URL,
                 "source_generated_at": generated_at,
                 "source_schema_version": feed.get("schema_version"),
                 "publication_model": feed.get("publication_model"),
+                "presentation_order": "freshness_first_then_source_priority",
                 "story_count": len(articles),
                 "lead_story_id": articles[0]["id"],
+                "lead_published_at": articles[0]["published"],
                 "articles_sha256": digest,
                 "synced_at": generated_at,
                 "ownership": {
@@ -195,7 +215,7 @@ def main() -> int:
     )
     print(
         f"CIVORA sync: PASS stories={len(articles)} lead={articles[0]['id']} "
-        f"generated_at={generated_at} sha256={digest[:12]}"
+        f"published={articles[0]['published']} generated_at={generated_at} sha256={digest[:12]}"
     )
     return 0
 
