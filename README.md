@@ -19,9 +19,10 @@ There is one editorial engine and one public projection:
 - `content/` — public presentation inputs; editorial story authority remains CIVORA.
 - `media_source/` + `content/media.json` — curated local public media; remote images are never hotlinked into `<img>`.
 - `scripts/build.py` — deterministic static renderer.
-- `scripts/verify.py` — fail-closed route/media/public-contract validation.
+- `scripts/enrich_metadata.py` — deterministic `NewsArticle`, Open Graph/Twitter and search-discovery metadata for the generated artifact.
+- `scripts/verify.py` — fail-closed route/media/metadata/public-contract validation.
 - `_site/` — generated output, never canonical source.
-- `.github/workflows/civora-sync.yml` — hourly CIVORA sync, build, self-healing GitHub Pages deploy and live readback.
+- `.github/workflows/civora-sync.yml` — hourly CIVORA sync, build, metadata enrichment, self-healing GitHub Pages deploy and live readback.
 - `.github/workflows/quality.yml` and `pr-validation.yml` — validate the public projection only.
 
 The former standalone `newsroom/`, source registry, candidate engine and auto-publisher have been removed. Do not recreate editorial execution in this repository; editorial changes belong in CIVORA.
@@ -34,7 +35,7 @@ Each canonical public cycle:
 2. refuses malformed, empty or domain-mismatched input;
 3. projects all canonical stories into the public schema;
 4. preserves only registered local media;
-5. runs unit tests, static build and verification;
+5. runs unit tests, static build, metadata enrichment and verification;
 6. compares the expected canonical lead with `valceaclar.ro`;
 7. deploys when canonical content changed, public readback is stale, or the presentation code changed;
 8. requires HTTP readback of both homepage and lead story;
@@ -48,6 +49,7 @@ A repository update is not considered publication until public HTTP readback pas
 python3 -m unittest discover -s tests -v
 python3 scripts/sync_civora.py
 python3 scripts/build.py
+python3 scripts/enrich_metadata.py
 python3 scripts/verify.py
 python3 -m http.server 8000 -d _site
 ```
