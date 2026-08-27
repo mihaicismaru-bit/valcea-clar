@@ -18,6 +18,31 @@ jobs:
         run: python3 scripts/sync_civora.py
       - name: Build static site
         run: python3 scripts/build.py
+      - name: Prove verified CIVORA visual mirrors
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          doc=json.loads(Path('content/articles.json').read_text(encoding='utf-8'))
+          provenance=json.loads(Path('_site/media/provenance.json').read_text(encoding='utf-8'))
+          assets=provenance.get('assets', {})
+          expected=[a for a in doc.get('articles', []) if a.get('image_provenance_status') == 'VERIFIED']
+          missing=[]
+          mismatch=[]
+          for article in expected:
+              name=article.get('image')
+              if not name or not (Path('_site/media')/name).is_file():
+                  missing.append(article.get('id'))
+                  continue
+              asset=assets.get(name, {})
+              if asset.get('origin_url') != article.get('image_origin_url'):
+                  mismatch.append(article.get('id'))
+          if missing or mismatch:
+              raise SystemExit(f'CIVORA media projection failed: missing={missing} mismatch={mismatch}')
+          if provenance.get('mirror_failures'):
+              raise SystemExit(f"CIVORA media mirror network failures: {provenance['mirror_failures']}")
+          print('CIVORA MEDIA PASS', len(expected), 'verified visuals mirrored locally')
+          PY
       - name: Enrich discovery and social metadata
         run: python3 scripts/enrich_metadata.py
       - name: Verify public site
