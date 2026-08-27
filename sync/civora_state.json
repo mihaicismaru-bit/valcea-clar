@@ -1,18 +1,21 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "source_generated_at": "2026-08-27T07:01:11.612095Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 30,
+  "verified_visual_count": 14,
   "lead_story_id": "maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827",
   "lead_published_at": "2026-08-27T10:01:10+03:00",
-  "articles_sha256": "2efd4c7f0cb16c2e5cc8af2b2fb61b4543344143f538bd595f2324c91fb623dd",
+  "articles_sha256": "77b46084c2b4d735b3c8b6de38b9b5de8af457022aa344118608913188234b05",
   "synced_at": "2026-08-27T07:01:11.612095Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
-    "hosting": "GitHub Pages"
+    "hosting": "GitHub Pages",
+    "visual_provenance": "CIVORA",
+    "visual_delivery": "build_time_local_mirror"
   }
 }
