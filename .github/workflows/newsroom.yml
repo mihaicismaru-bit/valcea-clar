@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 * * * *'
+  push:
+    paths:
+      - 'sync/run-now'
 permissions:
   contents: write
   pages: write
