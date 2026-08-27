@@ -1,11 +1,17 @@
 import unittest
 
-from scripts.sync_civora import _normalize_story
+from scripts.sync_civora import _freshness_key, _normalize_story
 
 
 class SyncCivoraTests(unittest.TestCase):
     def setUp(self):
         self.feed = {"generated_at": "2026-08-27T00:00:00Z"}
+
+    def test_freshness_beats_legacy_priority(self):
+        older = {"id": "old", "priority": 100, "first_published_at": "2026-08-21T12:00:00+03:00"}
+        newer = {"id": "new", "priority": 10, "first_published_at": "2026-08-26T22:35:00+03:00"}
+        ordered = sorted([older, newer], key=lambda row: _freshness_key(row, self.feed), reverse=True)
+        self.assertEqual(ordered[0]["id"], "new")
 
     def test_canonical_rank_controls_public_priority(self):
         story = {
