@@ -13,6 +13,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 -m unittest discover -s tests -v
+      - run: python3 scripts/check_civora_projection_ready.py --self-test
+      - run: python3 scripts/check_civora_projection_ready.py
       - run: python3 scripts/sync_civora.py
       - run: python3 scripts/build.py
       - run: python3 scripts/enrich_metadata.py
