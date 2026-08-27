@@ -1,7 +1,7 @@
 {
   "schema_version": "1.2",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
-  "source_generated_at": "2026-08-27T10:06:58.149595Z",
+  "source_generated_at": "2026-08-27T11:54:31.349322Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
@@ -9,8 +9,8 @@
   "verified_visual_count": 14,
   "lead_story_id": "auto-bjai-valcea-evenimente-6e9802de76ac",
   "lead_published_at": "2026-08-27T13:06:57+03:00",
-  "articles_sha256": "bd179fdb8d9e5d6f2e01bd60c70734c1adad9b3d25e21f48cd5345607dc03c56",
-  "synced_at": "2026-08-27T10:06:58.149595Z",
+  "articles_sha256": "3abe7cecdad0fbb9e7d2d2f337b2ad09bcdeeaa2d7ddff33b48ba39537c231d6",
+  "synced_at": "2026-08-27T11:54:31.349322Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
