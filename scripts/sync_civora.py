@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Synchronize the public VÂLCEA CLAR projection from the canonical CIVORA feed.
 
-CIVORA owns editorial generation and publication eligibility. This repository owns
-only the deterministic public presentation and GitHub Pages deployment.
+CIVORA owns editorial generation, publication eligibility and visual provenance.
+This repository owns only deterministic public presentation and GitHub Pages
+publication. Verified CIVORA visuals are projected as build-time media mirrors;
+the public HTML never needs to hotlink a remote image at runtime.
 """
 from __future__ import annotations
 
@@ -10,6 +12,7 @@ import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import unquote, urlparse
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,8 +26,13 @@ FEED_URL = (
     "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/"
     "valcea-clar/site/runtime/live-feed.json"
 )
+CIVORA_RUNTIME_RAW = (
+    "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/"
+    "valcea-clar/site/runtime"
+)
 EXPECTED_DOMAIN = "valceaclar.ro"
 EXPECTED_MODEL = "continuous_story_first"
+SAFE_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
 
 def _load_json(path: Path, default):
@@ -37,7 +45,7 @@ def _fetch_feed() -> dict:
     request = Request(
         FEED_URL,
         headers={
-            "User-Agent": "valcea-clar-public-sync/1.0",
+            "User-Agent": "valcea-clar-public-sync/1.1",
             "Accept": "application/json",
             "Cache-Control": "no-cache",
         },
@@ -93,6 +101,68 @@ def _normalize_sources(value) -> list[dict]:
     return out
 
 
+def _image_extension(*values: str) -> str:
+    for value in values:
+        if not value:
+            continue
+        suffix = Path(unquote(urlparse(value).path)).suffix.lower()
+        if suffix in SAFE_IMAGE_EXTENSIONS:
+            return ".jpg" if suffix == ".jpeg" else suffix
+    return ".jpg"
+
+
+def _normalize_visual(story_id: str, visual) -> dict | None:
+    """Return a safe build-time mirror contract for a verified CIVORA visual."""
+    if not isinstance(visual, dict):
+        return None
+    if str(visual.get("provenance_status") or "").upper() != "VERIFIED":
+        return None
+    if visual.get("synthetic") is True:
+        return None
+
+    public_url = str(visual.get("public_url") or "").strip()
+    source_url = str(visual.get("source_url") or public_url).strip()
+    relative_url = str(visual.get("relative_url") or "").strip()
+    if not public_url or urlparse(public_url).scheme != "https":
+        return None
+
+    fetch_url = public_url
+    filename = str(visual.get("filename") or "").strip()
+    if relative_url.startswith("/media/"):
+        fetch_url = CIVORA_RUNTIME_RAW + relative_url
+        filename = Path(unquote(urlparse(relative_url).path)).name or filename
+    elif (urlparse(public_url).hostname or "").lower() == "valceaclar.ro" and urlparse(public_url).path.startswith("/media/"):
+        fetch_url = CIVORA_RUNTIME_RAW + urlparse(public_url).path
+        filename = Path(unquote(urlparse(public_url).path)).name or filename
+
+    if not filename or Path(filename).suffix.lower() not in SAFE_IMAGE_EXTENSIONS:
+        ext = _image_extension(public_url, source_url)
+        fingerprint = hashlib.sha256(public_url.encode("utf-8")).hexdigest()[:16]
+        filename = f"civora-{fingerprint}{ext}"
+    filename = Path(filename).name
+
+    caption = (
+        visual.get("editorial_note")
+        or visual.get("alt_text")
+        or visual.get("credit")
+        or "Imagine verificată prin CIVORA."
+    )
+    return {
+        "image": filename,
+        "image_caption": str(caption),
+        "image_origin_url": public_url,
+        "image_fetch_url": fetch_url,
+        "image_source_url": source_url,
+        "image_credit": str(visual.get("credit") or ""),
+        "image_rights_basis": str(visual.get("rights_basis") or ""),
+        "image_license_url": str(visual.get("license_url") or ""),
+        "image_provenance_status": "VERIFIED",
+        "image_contextual_archive": bool(visual.get("contextual_archive")),
+        "image_captured_at": str(visual.get("captured_at") or ""),
+        "image_story_id": story_id,
+    }
+
+
 def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_media: set[str]) -> dict:
     story_id = str(story.get("id") or "").strip()
     headline = str(story.get("headline") or "").strip()
@@ -107,25 +177,6 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
     if not paragraphs:
         raise SystemExit(f"Refusing sync: canonical story {story_id} has no body")
 
-    old = old_by_id.get(story_id, {})
-    image = None
-    image_caption = None
-
-    old_image = old.get("image")
-    if old_image in local_media:
-        image = old_image
-        image_caption = old.get("image_caption")
-
-    visual = story.get("visual") or {}
-    visual_filename = visual.get("filename") if isinstance(visual, dict) else None
-    if visual_filename in local_media:
-        image = visual_filename
-        image_caption = (
-            visual.get("editorial_note")
-            or visual.get("alt_text")
-            or visual.get("credit")
-        )
-
     out = {
         "id": story_id,
         "section": str(story.get("section") or "ȘTIRI"),
@@ -137,12 +188,22 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
         "paragraphs": paragraphs,
         "sources": _normalize_sources(story.get("sources")),
         "published": _published_at(story, feed),
-        "image": image,
+        "image": None,
         "canonical_source": "CIVORA",
         "canonical_path": str(story.get("path") or f"/stiri/{story_id}/"),
     }
-    if image_caption:
-        out["image_caption"] = str(image_caption)
+
+    canonical_visual = _normalize_visual(story_id, story.get("visual"))
+    if canonical_visual:
+        out.update(canonical_visual)
+    else:
+        old = old_by_id.get(story_id, {})
+        old_image = old.get("image")
+        if old_image in local_media:
+            out["image"] = old_image
+            if old.get("image_caption"):
+                out["image_caption"] = str(old["image_caption"])
+
     return out
 
 
@@ -187,16 +248,18 @@ def main() -> int:
 
     SYNC_DIR.mkdir(parents=True, exist_ok=True)
     ARTICLES_PATH.write_text(rendered, encoding="utf-8")
+    verified_visual_count = sum(1 for row in articles if row.get("image_provenance_status") == "VERIFIED")
     STATE_PATH.write_text(
         json.dumps(
             {
-                "schema_version": "1.1",
+                "schema_version": "1.2",
                 "source": FEED_URL,
                 "source_generated_at": generated_at,
                 "source_schema_version": feed.get("schema_version"),
                 "publication_model": feed.get("publication_model"),
                 "presentation_order": "freshness_first_then_source_priority",
                 "story_count": len(articles),
+                "verified_visual_count": verified_visual_count,
                 "lead_story_id": articles[0]["id"],
                 "lead_published_at": articles[0]["published"],
                 "articles_sha256": digest,
@@ -205,6 +268,8 @@ def main() -> int:
                     "editorial_engine": "mihaicismaru-bit/civora",
                     "public_projection": "mihaicismaru-bit/valcea-clar",
                     "hosting": "GitHub Pages",
+                    "visual_provenance": "CIVORA",
+                    "visual_delivery": "build_time_local_mirror",
                 },
             },
             ensure_ascii=False,
@@ -214,8 +279,9 @@ def main() -> int:
         encoding="utf-8",
     )
     print(
-        f"CIVORA sync: PASS stories={len(articles)} lead={articles[0]['id']} "
-        f"published={articles[0]['published']} generated_at={generated_at} sha256={digest[:12]}"
+        f"CIVORA sync: PASS stories={len(articles)} visuals={verified_visual_count} "
+        f"lead={articles[0]['id']} published={articles[0]['published']} "
+        f"generated_at={generated_at} sha256={digest[:12]}"
     )
     return 0
 

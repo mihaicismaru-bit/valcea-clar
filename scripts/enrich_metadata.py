@@ -99,8 +99,9 @@ def enrich_article(path: Path, article: dict) -> None:
     title = str(article.get("headline") or "VÂLCEA CLAR")
     desc = str(article.get("dek") or "Știri locale verificate din Vâlcea.")
     published = str(article.get("published") or "")
-    image_name = article.get("image")
-    image_url = f"{SITE}/media/{image_name}" if image_name else None
+    image_name = str(article.get("image") or "").strip()
+    image_exists = bool(image_name and (OUT / "media" / image_name).is_file())
+    image_url = f"{SITE}/media/{image_name}" if image_exists else None
     lines = common_block(title, desc, canonical, image_url)
     lines.insert(1, meta_tag("og:type", "article"))
     if published:
@@ -131,13 +132,19 @@ def main() -> int:
     home = OUT / "index.html"
     enrich_home(home, home.read_text(encoding="utf-8"))
     enriched = 0
+    image_enriched = 0
     for story_id, article in articles.items():
         page = OUT / "stiri" / story_id / "index.html"
         if not page.is_file():
             raise SystemExit(f"Metadata enrichment refused: missing story route {story_id}")
+        if article.get("image") and (OUT / "media" / str(article["image"])).is_file():
+            image_enriched += 1
         enrich_article(page, article)
         enriched += 1
-    print(f"METADATA PASS: homepage + {enriched} NewsArticle pages enriched; preview={PREVIEW}.")
+    print(
+        f"METADATA PASS: homepage + {enriched} NewsArticle pages enriched; "
+        f"image_pages={image_enriched}; preview={PREVIEW}."
+    )
     return 0
 
 
