@@ -1,47 +1,63 @@
-# VÂLCEA CLAR — clean GitHub-first site
+# VÂLCEA CLAR — GitHub-first public projection
 
-Standalone static news publication repository. No ChatGPT Sites, no CMS bridge, no runtime dependency on Google Drive, and no remote images in `<img>`. The local guide / „Unde ieșim” is intentionally out of scope until the automated newsroom is finalized.
+VÂLCEA CLAR is the standalone static public site served by GitHub Pages. It has no ChatGPT Sites dependency and no CMS bridge.
 
-## Architecture
+## Canonical architecture
 
-- `content/` — canonical editorial/site data
-- `media_source/` — curated local WebP assets, base64-fragmented only for connector-safe Git transport; build reconstructs ordinary `/media/*.webp` files and validates their hashes
-- `scripts/build.py` — deterministic stdlib static build
-- `scripts/verify.py` — fail-closed public-media and route validation
-- `_site/` — generated output (not canonical source)
-- `.github/workflows/pages.yml` — GitHub Pages build/deploy
+There is one editorial engine and one public projection:
+
+`sources → mihaicismaru-bit/civora → CIVORA canonical live feed → mihaicismaru-bit/valcea-clar → GitHub Pages → valceaclar.ro`
+
+- **CIVORA (`mihaicismaru-bit/civora`)** owns source discovery, verification, editorial policy, story composition, publication eligibility, provenance and social distribution.
+- **This repository (`mihaicismaru-bit/valcea-clar`)** owns the deterministic public presentation, local public media bundle, GitHub Pages deployment and public HTTP readback.
+- **Google Drive** may preserve project checkpoints/evidence but is not a runtime dependency.
+- **ChatGPT Sites is not part of production.**
+
+## Active public path
+
+- `scripts/sync_civora.py` — imports the canonical CIVORA `site/runtime/live-feed.json` and deterministically projects it into `content/articles.json`.
+- `content/` — public presentation inputs. Editorial story authority remains CIVORA.
+- `media_source/` + `content/media.json` — curated local public media; remote images are never hotlinked into `<img>`.
+- `scripts/build.py` — deterministic static build.
+- `scripts/verify.py` — fail-closed route/media validation.
+- `_site/` — generated output, never canonical source.
+- `.github/workflows/newsroom.yml` — hourly CIVORA sync, build, self-healing Pages deploy and live readback.
+- `.github/workflows/quality.yml` / `pr-validation.yml` — validate the CIVORA projection rather than a second newsroom.
+
+The order delivered by the CIVORA feed is authoritative for the public homepage. The importer projects that order into presentation priority so an old high-priority dossier cannot pin the lead above newer canonical stories.
+
+## Editorial continuity
+
+The public workflow runs hourly. Each cycle:
+
+1. reads the current CIVORA canonical feed;
+2. refuses malformed/domain-mismatched/empty feeds;
+3. projects all canonical stories into the public schema;
+4. preserves only already-registered local media;
+5. runs unit tests, build and verification;
+6. compares the expected canonical lead with `valceaclar.ro`;
+7. deploys to GitHub Pages when content changed **or** the public site is stale;
+8. requires HTTP readback of both homepage and lead story;
+9. persists projection state only when canonical input changed.
+
+A repository update is not considered publication until the public readback passes.
+
+## Legacy cleanup
+
+The former standalone newsroom implementation under `newsroom/` and the old `scripts/newsroom*.py` / `scripts/auto_publish.py` path is **deprecated and has no scheduled execution authority**. It remains temporarily for reconciliation evidence and will be deleted after public parity/readback has been demonstrated on the CIVORA-fed path.
+
+Do not re-enable a parallel source registry, candidate engine or auto-publisher in this repository. Editorial changes belong in CIVORA.
 
 ## Local validation
 
 ```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/sync_civora.py
 python3 scripts/build.py
 python3 scripts/verify.py
 python3 -m http.server 8000 -d _site
 ```
 
-## Deployment
+## Production
 
-Push to `main`, enable GitHub Pages with **Source: GitHub Actions**, configure `valceaclar.ro` as the custom domain, then point DNS to GitHub Pages. Do not reconnect a Sites presentation layer.
-
-## Migration policy
-
-Drive may remain an editorial archive/source inbox, but anything displayed publicly must first be registered in `content/media.json`, encoded into `media_source/` with a SHA-256 manifest, and pass `scripts/verify.py`. The public build contains ordinary WebP files; no base64 is embedded in pages.
-
-## Current scope
-
-Newsroom first: automated news intake, editorial verification, article generation, editions, media provenance, publishing and distribution. Local-guide features are deliberately deferred.
-
-## Newsroom Core v1
-
-The active automation is deliberately smaller than the legacy CIVORA surface:
-
-1. `newsroom/sources.json` — one canonical source registry (T1/T2 tiers).
-2. `scripts/newsroom_cycle.py` — fetch, normalize, score, cluster/deduplicate and decide.
-3. `newsroom/output/` — candidate and readiness queue; this is not public content.
-4. `newsroom/state/` — seen URLs and source-health state.
-5. `scripts/newsroom_verify.py` — fail-closed policy guard.
-6. `.github/workflows/newsroom.yml` — 10-minute radar; persists candidate state only.
-
-Current `publication_mode` is **candidate_only** and `auto_publish.enabled` is **false**. A T1 item may be marked `READY_T1` as a simulation of what would be eligible later, but the workflow has no authority to move it into `content/articles.json`.
-
-Production deployment is also locked: it is manual-only and requires the literal `DEPLOY` confirmation. Normal pushes only run quality checks. The build emits `CNAME` only when `VALCEA_CLAR_PRODUCTION=1`.
+GitHub Pages is the production host for `valceaclar.ro`. The hourly canonical workflow owns routine deploys. The manual Pages workflow remains only as a recovery path.
