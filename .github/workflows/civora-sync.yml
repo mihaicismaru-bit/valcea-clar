@@ -13,6 +13,7 @@ on:
       - 'scripts/check_civora_projection_ready.py'
       - 'scripts/sync_civora.py'
       - 'scripts/build.py'
+      - 'scripts/history_projection.py'
       - 'scripts/enrich_metadata.py'
       - 'scripts/verify.py'
       - 'scripts/media_assets.py'
@@ -74,26 +75,46 @@ jobs:
               live_ok=true
             fi
           fi
+
+          history_expected="$(python3 scripts/history_projection.py --probe)"
+          history_live_ok=true
+          if [ -n "$history_expected" ]; then
+            history_live_ok=false
+            if curl -fsSL --max-time 25 "https://valceaclar.ro${history_expected}?history_probe=$(date +%s)" -o /tmp/live-history.html; then
+              if grep -Fq "EDIȚIE ISTORICĂ RECONSTRUITĂ" /tmp/live-history.html; then
+                history_live_ok=true
+              fi
+            fi
+          fi
+
           structural=false
           if [ "${{ github.event_name }}" = push ] && [ "${{ github.event.head_commit.message }}" != 'sync: reconcile CIVORA canonical stories' ]; then
             structural=true
           fi
           deploy=false
-          if [ "$changed" = true ] || [ "$live_ok" != true ] || [ "$structural" = true ]; then
+          if [ "$changed" = true ] || [ "$live_ok" != true ] || [ "$history_live_ok" != true ] || [ "$structural" = true ]; then
             deploy=true
           fi
           echo "changed=$changed" >> "$GITHUB_OUTPUT"
           echo "live_ok=$live_ok" >> "$GITHUB_OUTPUT"
+          echo "history_live_ok=$history_live_ok" >> "$GITHUB_OUTPUT"
+          echo "history_expected=$history_expected" >> "$GITHUB_OUTPUT"
           echo "structural=$structural" >> "$GITHUB_OUTPUT"
           echo "deploy=$deploy" >> "$GITHUB_OUTPUT"
           echo "expected_id=$expected_id" >> "$GITHUB_OUTPUT"
-          echo "content_changed=$changed live_ok=$live_ok structural=$structural deploy=$deploy expected_id=$expected_id"
+          echo "content_changed=$changed live_ok=$live_ok history_live_ok=$history_live_ok structural=$structural deploy=$deploy expected_id=$expected_id history_expected=$history_expected"
 
       - name: Unit tests
         run: python3 -m unittest discover -s tests -v
 
       - name: Build production site
         run: python3 scripts/build.py
+
+      - name: Validate historical projection contract
+        run: python3 scripts/history_projection.py --self-test
+
+      - name: Project released historical editions
+        run: python3 scripts/history_projection.py
 
       - name: Enrich discovery and social metadata
         run: python3 scripts/enrich_metadata.py
@@ -134,6 +155,30 @@ jobs:
             exit 1
           fi
           echo "Public readback PASS: $expected_id"
+
+      - name: Public readback of historical archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          history_expected='${{ steps.state.outputs.history_expected }}'
+          if [ -z "$history_expected" ]; then
+            echo 'Historical projection not active.'
+            exit 0
+          fi
+          ok=0
+          for i in $(seq 1 15); do
+            if curl -fsSL --max-time 25 "https://valceaclar.ro${history_expected}?readback=$(date +%s)" -o /tmp/history.html \
+              && grep -Fq "EDIȚIE ISTORICĂ RECONSTRUITĂ" /tmp/history.html; then
+              ok=1
+              break
+            fi
+            sleep 8
+          done
+          if [ "$ok" != 1 ]; then
+            echo "Public readback failed for historical route: $history_expected" >&2
+            exit 1
+          fi
+          echo "Historical public readback PASS: $history_expected"
 
       - name: Public readback of verified CIVORA media
         run: python3 scripts/readback_media.py
