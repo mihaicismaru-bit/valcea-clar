@@ -99,8 +99,6 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
     image = None
     image_caption = None
 
-    # Preserve already-curated local media for the same story. The public repo does
-    # not hotlink CIVORA/remote images; media reconciliation is a separate safe path.
     old_image = old.get("image")
     if old_image in local_media:
         image = old_image
@@ -116,9 +114,6 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
             or visual.get("credit")
         )
 
-    # CIVORA feed order is the canonical homepage order. The presentation builder
-    # sorts by priority, so project rank into a monotonic presentation priority and
-    # keep the source priority separately for audit.
     out = {
         "id": story_id,
         "section": str(story.get("section") or "ȘTIRI"),
@@ -185,7 +180,7 @@ def main() -> int:
                 "story_count": len(articles),
                 "lead_story_id": articles[0]["id"],
                 "articles_sha256": digest,
-                "synced_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+                "synced_at": generated_at,
                 "ownership": {
                     "editorial_engine": "mihaicismaru-bit/civora",
                     "public_projection": "mihaicismaru-bit/valcea-clar",
