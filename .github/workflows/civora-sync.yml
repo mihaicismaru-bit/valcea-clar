@@ -15,6 +15,7 @@ on:
       - 'scripts/enrich_metadata.py'
       - 'scripts/verify.py'
       - 'scripts/media_assets.py'
+      - 'scripts/readback_media.py'
       - 'content/site.css'
       - 'content/site.json'
       - 'content/legal.json'
@@ -129,6 +130,9 @@ jobs:
             exit 1
           fi
           echo "Public readback PASS: $expected_id"
+
+      - name: Public readback of verified CIVORA media
+        run: python3 scripts/readback_media.py
 
       - name: Persist canonical projection state
         shell: bash
