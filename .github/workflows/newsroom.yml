@@ -1,100 +1,117 @@
-name: newsroom-auto-publish
+name: valcea-clar-hourly-civora-sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
-  push:
-    paths:
-      - 'newsroom/run-now'
+    - cron: '17 * * * *'
 permissions:
   contents: write
   pages: write
   id-token: write
 concurrency:
-  group: newsroom-auto-publish
+  group: valcea-clar-hourly-civora-sync
   cancel-in-progress: false
 jobs:
-  cycle:
+  sync-build-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Supplement TLS trust with official Sectigo DV chain
-        run: |
-          curl -fsSL 'https://support.sectigo.com/sfc/servlet.shepherd/version/download/068Uj00000XusPJ' -o "$RUNNER_TEMP/sectigo-dv-r36-chain.pem"
-          cat /etc/ssl/certs/ca-certificates.crt "$RUNNER_TEMP/sectigo-dv-r36-chain.pem" > "$RUNNER_TEMP/newsroom-ca.pem"
-          echo "SSL_CERT_FILE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
-          echo "CURL_CA_BUNDLE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
-      - name: Run bounded candidate radar
-        run: python3 scripts/newsroom_network.py
-      - name: Verify auto-publication authority
-        run: python3 scripts/auto_publish.py --verify
-      - id: promote
-        name: Promote only vetted stories
-        run: |
-          python3 scripts/auto_publish.py
-          if git diff --quiet -- content/articles.json; then
-            echo 'published=false' >> "$GITHUB_OUTPUT"
-          else
-            echo 'published=true' >> "$GITHUB_OUTPUT"
-          fi
-      - name: Unit tests before live publish
-        if: steps.promote.outputs.published == 'true'
-        run: python3 -m unittest discover -s tests -v
-      - name: Build production site
-        if: steps.promote.outputs.published == 'true'
-        run: python3 scripts/build.py
-      - name: Verify production artifact
-        if: steps.promote.outputs.published == 'true'
-        run: python3 scripts/verify.py
-      - uses: actions/configure-pages@v5
-        if: steps.promote.outputs.published == 'true'
-      - uses: actions/upload-pages-artifact@v3
-        if: steps.promote.outputs.published == 'true'
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
-        if: steps.promote.outputs.published == 'true'
-      - name: Verify newly published routes over HTTPS
-        if: steps.promote.outputs.published == 'true'
+
+      - name: Sync canonical CIVORA feed
+        run: python3 scripts/sync_civora.py
+
+      - id: state
+        name: Determine whether public deployment is needed
+        shell: bash
         run: |
           set -euo pipefail
-          python3 - <<'PY' > /tmp/published_ids
+          if git diff --quiet -- content/articles.json; then
+            changed=false
+          else
+            changed=true
+          fi
+          expected_id="$(python3 - <<'PY'
           import json
           from pathlib import Path
-          data=json.loads(Path('newsroom/output/publish.json').read_text(encoding='utf-8'))
-          for row in data.get('published',[]): print(row['id'])
+          doc=json.loads(Path('content/articles.json').read_text(encoding='utf-8'))
+          print(doc['articles'][0]['id'])
           PY
-          while IFS= read -r id; do
-            ok=0
-            for i in $(seq 1 12); do
-              if curl -fsSL --max-time 20 "https://valceaclar.ro/stiri/${id}/" -o /tmp/article.html && grep -q '<h1>' /tmp/article.html; then
-                ok=1
-                break
-              fi
-              sleep 5
-            done
-            test "$ok" = 1
-          done < /tmp/published_ids
-          curl -fsSL --max-time 20 https://valceaclar.ro/ -o /tmp/home.html
-          grep -q 'VÂLCEA CLAR' /tmp/home.html
-      - name: Persist newsroom and publication state
+          )"
+          live_ok=false
+          if curl -fsSL --max-time 25 "https://valceaclar.ro/?sync_probe=$(date +%s)" -o /tmp/live-home.html; then
+            if grep -Fq "/stiri/${expected_id}/" /tmp/live-home.html; then
+              live_ok=true
+            fi
+          fi
+          deploy=false
+          if [ "$changed" = true ] || [ "$live_ok" != true ]; then
+            deploy=true
+          fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          echo "live_ok=$live_ok" >> "$GITHUB_OUTPUT"
+          echo "deploy=$deploy" >> "$GITHUB_OUTPUT"
+          echo "expected_id=$expected_id" >> "$GITHUB_OUTPUT"
+          echo "content_changed=$changed live_ok=$live_ok deploy=$deploy expected_id=$expected_id"
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Build production site
+        run: python3 scripts/build.py
+
+      - name: Verify production artifact
+        run: python3 scripts/verify.py
+
+      - uses: actions/configure-pages@v5
+        if: steps.state.outputs.deploy == 'true'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.state.outputs.deploy == 'true'
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        if: steps.state.outputs.deploy == 'true'
+
+      - name: Public readback of canonical lead
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_id='${{ steps.state.outputs.expected_id }}'
+          ok=0
+          for i in $(seq 1 15); do
+            if curl -fsSL --max-time 25 "https://valceaclar.ro/?readback=$(date +%s)" -o /tmp/home.html \
+              && grep -Fq "/stiri/${expected_id}/" /tmp/home.html \
+              && curl -fsSL --max-time 25 "https://valceaclar.ro/stiri/${expected_id}/?readback=$(date +%s)" -o /tmp/story.html \
+              && grep -q '<h1>' /tmp/story.html; then
+              ok=1
+              break
+            fi
+            sleep 8
+          done
+          if [ "$ok" != 1 ]; then
+            echo "Public readback failed for canonical lead: $expected_id" >&2
+            exit 1
+          fi
+          echo "Public readback PASS: $expected_id"
+
+      - name: Persist canonical projection state
+        shell: bash
         run: |
           set -euo pipefail
           git config user.name 'valcea-clar-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add newsroom/output newsroom/state content/articles.json
+          git add content/articles.json sync/civora_state.json
           if git diff --cached --quiet; then
-            echo 'No material newsroom change.'
+            echo 'Canonical projection unchanged.'
             exit 0
           fi
-          if git diff --cached --name-only | grep -q '^content/articles.json$'; then
-            git commit -m 'newsroom: auto-publish vetted local stories'
-          else
-            git commit -m 'newsroom: persist candidate radar state'
-          fi
+          git commit -m 'sync: reconcile CIVORA canonical stories'
           git pull --rebase origin main
           git push origin HEAD:main

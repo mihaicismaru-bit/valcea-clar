@@ -1,16 +1,11 @@
 {
-  "mode": "live",
-  "auto_publish": true,
-  "allowed_tiers": ["T1"],
-  "allowed_source_ids": [
-    "cj_valcea_sedinte_publice",
-    "isu_valcea_comunicate"
-  ],
-  "require_candidate_status": "DRAFT_CANDIDATE_ONLY",
-  "require_candidate_decision": "READY",
-  "require_zero_risks": true,
-  "max_per_cycle": 3,
-  "default_priority": 100,
-  "owner_approval": "2026-08-24T21:40:00+03:00",
-  "authority": "OWNER_APPROVED_AUTO_PUBLICATION"
+  "mode": "deprecated_parallel_newsroom",
+  "auto_publish": false,
+  "allowed_tiers": [],
+  "allowed_source_ids": [],
+  "max_per_cycle": 0,
+  "authority": "REVOKED_BY_CIVORA_RECONCILIATION",
+  "canonical_editorial_engine": "mihaicismaru-bit/civora",
+  "public_projection_repository": "mihaicismaru-bit/valcea-clar",
+  "note": "This file is retained only as reconciliation evidence. The public repository must not generate or authorize stories independently of CIVORA."
 }

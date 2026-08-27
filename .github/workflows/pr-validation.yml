@@ -14,57 +14,21 @@ jobs:
           python-version: '3.12'
       - name: Unit tests
         run: python3 -m unittest discover -s tests -v
+      - name: Reconcile current canonical CIVORA feed
+        run: python3 scripts/sync_civora.py
       - name: Build static site
         run: python3 scripts/build.py
       - name: Verify public site
         run: python3 scripts/verify.py
-      - name: Build deterministic newsroom fixture
-        run: python3 scripts/newsroom.py cycle --fixtures
-      - name: Verify newsroom fail-closed policy
-        run: python3 scripts/newsroom.py verify
-      - name: Prove publisher is locked
-        run: |
-          if python3 scripts/newsroom.py publish; then
-            echo 'publisher unexpectedly unlocked' >&2
-            exit 1
-          fi
-  network-candidate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Supplement TLS trust with official Sectigo DV chain
-        run: |
-          curl -fsSL 'https://support.sectigo.com/sfc/servlet.shepherd/version/download/068Uj00000XusPJ' -o "$RUNNER_TEMP/sectigo-dv-r36-chain.pem"
-          cat /etc/ssl/certs/ca-certificates.crt "$RUNNER_TEMP/sectigo-dv-r36-chain.pem" > "$RUNNER_TEMP/newsroom-ca.pem"
-          echo "SSL_CERT_FILE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
-          echo "CURL_CA_BUNDLE=$RUNNER_TEMP/newsroom-ca.pem" >> "$GITHUB_ENV"
-      - name: Run bounded real network cycle in candidate-only mode
-        run: python3 scripts/newsroom_network.py
-      - name: Print network-cycle summary
+      - name: Verify canonical lead survives projection
         run: |
           python3 - <<'PY'
           import json
           from pathlib import Path
-          c=json.loads(Path('newsroom/output/candidates.json').read_text())
-          s=json.loads(Path('newsroom/output/stories.json').read_text())
-          q=json.loads(Path('newsroom/output/queue.json').read_text())
-          print('CANDIDATES',len(c.get('candidates',[])))
-          print('STRUCTURED_DRAFTS',len(s.get('stories',[])))
-          print('HOLDS',len(s.get('holds',[])))
-          print('QUEUE',len(q.get('queue',[])),q.get('status'))
-          for h in c.get('source_health',[]): print('SOURCE',h)
-          for x in c.get('candidates',[])[:30]: print('CANDIDATE',x.get('source_id'),x.get('decision'),x.get('score'),x.get('title'),x.get('url'))
-          for x in s.get('stories',[]): print('DRAFT',x.get('section'),x.get('headline'),x.get('sources',[{}])[0].get('url'))
-          for x in s.get('holds',[]): print('HOLD',x)
+          state=json.loads(Path('sync/civora_state.json').read_text(encoding='utf-8'))
+          home=Path('_site/index.html').read_text(encoding='utf-8')
+          expected=f"/stiri/{state['lead_story_id']}/"
+          if expected not in home:
+              raise SystemExit(f'canonical lead missing from projection: {expected}')
+          print('CANONICAL PROJECTION PASS', state['lead_story_id'], state['story_count'])
           PY
-      - uses: actions/upload-artifact@v4
-        with:
-          name: newsroom-network-candidate
-          path: |
-            newsroom/output/candidates.json
-            newsroom/output/stories.json
-            newsroom/output/queue.json
-            newsroom/output/review.html
