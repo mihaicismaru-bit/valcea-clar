@@ -1,3 +1,4 @@
+import json
 import subprocess
 import sys
 import unittest
@@ -10,6 +11,9 @@ class SiteUXContract(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build.py')], check=True)
+        cls.content = json.loads((ROOT / 'content' / 'articles.json').read_text(encoding='utf-8'))
+        cls.articles = cls.content['articles']
+        cls.lead = cls.articles[0]
 
     def read(self, rel):
         return (ROOT / '_site' / rel).read_text(encoding='utf-8')
@@ -25,18 +29,22 @@ class SiteUXContract(unittest.TestCase):
     def test_home_has_editorial_navigation(self):
         home = self.read('index.html')
         self.assertIn('Navigație principală', home)
-        self.assertIn('ACTUALITATE', home)
-        self.assertIn('EVENIMENTE', home)
-        self.assertIn('ENERGIE', home)
+        self.assertIn('Acasă', home)
+        self.assertIn('Ultimele', home)
+        self.assertIn('Despre', home)
+        current_sections = {str(a.get('section', '')).strip() for a in self.articles if a.get('section')}
+        self.assertTrue(current_sections)
+        self.assertTrue(any(section in home for section in current_sections))
 
     def test_article_contract(self):
-        article = self.read('stiri/buila-vanturarita-accident-20260822/index.html')
+        article_id = self.lead['id']
+        article = self.read(f'stiri/{article_id}/index.html')
         self.assertIn('class="article-body"', article)
         self.assertIn('Surse și documente', article)
         self.assertIn('Distribuie articolul', article)
         self.assertIn('Redacția VÂLCEA CLAR', article)
         self.assertIn(
-            '<link rel="canonical" href="https://valceaclar.ro/stiri/buila-vanturarita-accident-20260822/">',
+            f'<link rel="canonical" href="https://valceaclar.ro/stiri/{article_id}/">',
             article,
         )
 
