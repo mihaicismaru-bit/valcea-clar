@@ -116,5 +116,9 @@ jobs:
             exit 0
           fi
           git commit -m 'sync: reconcile CIVORA canonical stories'
+          # Tests/builds may touch legacy generated fixtures. They are not part of
+          # the canonical sync transaction and must never block or leak into state.
+          git restore --worktree .
+          git clean -fd -- _site
           git pull --rebase origin main
           git push origin HEAD:main
