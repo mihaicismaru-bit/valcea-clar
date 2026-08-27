@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.1",
+  "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
+  "source_generated_at": "2026-08-26T19:45:24.096249Z",
+  "source_schema_version": "2.3",
+  "publication_model": "continuous_story_first",
+  "presentation_order": "freshness_first_then_source_priority",
+  "story_count": 28,
+  "lead_story_id": "auto-scm-rm-valcea-2779ab02ddd5",
+  "lead_published_at": "2026-08-26T22:35:55+03:00",
+  "articles_sha256": "08780bafe0705e0bed12b8e8af59fd60e6fe452d57ff9d7dca76661e193740bf",
+  "synced_at": "2026-08-26T19:45:24.096249Z",
+  "ownership": {
+    "editorial_engine": "mihaicismaru-bit/civora",
+    "public_projection": "mihaicismaru-bit/valcea-clar",
+    "hosting": "GitHub Pages"
+  }
+}
