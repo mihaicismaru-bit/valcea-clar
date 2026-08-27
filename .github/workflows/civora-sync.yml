@@ -3,7 +3,9 @@ name: VÂLCEA CLAR — CIVORA Public Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    # Keep the hourly slot away from common top-of-hour congestion and force
+    # GitHub to re-register the schedule after the workflow rename/cutover.
+    - cron: '7 * * * *'
   push:
     branches: [main]
     paths:
