@@ -116,10 +116,14 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
             or visual.get("credit")
         )
 
+    # CIVORA feed order is the canonical homepage order. The presentation builder
+    # sorts by priority, so project rank into a monotonic presentation priority and
+    # keep the source priority separately for audit.
     out = {
         "id": story_id,
         "section": str(story.get("section") or "ȘTIRI"),
-        "priority": int(story.get("priority") or 0),
+        "priority": 1_000_000 - rank,
+        "source_priority": int(story.get("priority") or 0),
         "canonical_rank": rank,
         "headline": headline,
         "dek": str(story.get("dek") or paragraphs[0]),
