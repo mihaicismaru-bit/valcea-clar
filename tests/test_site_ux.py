@@ -11,6 +11,7 @@ class SiteUXContract(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build.py')], check=True)
+        subprocess.run([sys.executable, str(ROOT / 'scripts' / 'enrich_metadata.py')], check=True)
         cls.content = json.loads((ROOT / 'content' / 'articles.json').read_text(encoding='utf-8'))
         cls.articles = cls.content['articles']
         cls.lead = cls.articles[0]
@@ -25,6 +26,8 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('class="headline-strip"', home)
         self.assertIn('În Vâlcea, acum', home)
         self.assertIn('Ediție continuă', home)
+        self.assertIn('max-image-preview:large', home)
+        self.assertIn('"@type":"NewsMediaOrganization"', home)
 
     def test_home_has_editorial_navigation(self):
         home = self.read('index.html')
@@ -47,6 +50,10 @@ class SiteUXContract(unittest.TestCase):
             f'<link rel="canonical" href="https://valceaclar.ro/stiri/{article_id}/">',
             article,
         )
+        self.assertIn('"@type":"NewsArticle"', article)
+        self.assertIn('property="og:type" content="article"', article)
+        self.assertIn('name="twitter:card"', article)
+        self.assertIn('max-image-preview:large', article)
 
     def test_site_verifier_still_passes(self):
         result = subprocess.run(

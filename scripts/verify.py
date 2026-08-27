@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 import re,sys,os
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'_site'; errors=[]
 BASE=os.getenv('VALCEA_CLAR_BASE_PATH','').rstrip('/')
+PREVIEW=os.getenv('VALCEA_CLAR_PREVIEW','')=='1'
 forbidden=['ChatGPT Sites','live-bridge.js','route-bridge.js','live-feed.json','sites.google.com','/unde-iesim/','Unde ieșim']
 def local_ref(s):
  if BASE and s==BASE: return '/'
@@ -28,5 +29,13 @@ for f in OUT.rglob('*.html'):
   target=OUT/'index.html' if q=='/' else (OUT/q.strip('/')/'index.html')
   if '.' in Path(q).name: target=OUT/q.lstrip('/')
   if not target.exists():errors.append(f'{f}: broken {href}')
+ rel=f.relative_to(OUT).as_posix()
+ if not PREVIEW and rel=='index.html' and 'max-image-preview:large' not in t:
+  errors.append(f'{f}: missing max-image-preview:large')
+ if rel.startswith('stiri/') and rel!='stiri/index.html':
+  for marker in ['"@type":"NewsArticle"','property="og:type" content="article"','name="twitter:card"']:
+   if marker not in t:errors.append(f'{f}: missing metadata {marker}')
+  if not PREVIEW and 'max-image-preview:large' not in t:
+   errors.append(f'{f}: missing max-image-preview:large')
 if errors:print('VERIFY FAIL\n- '+'\n- '.join(errors));sys.exit(1)
-print(f'VERIFY PASS: no remote images, no Sites bridge, no missing local media, no broken internal routes; base={BASE or "/"}.')
+print(f'VERIFY PASS: public routes/media intact; Sites bridge absent; NewsArticle/social/discovery metadata present; base={BASE or "/"}; preview={PREVIEW}.')

@@ -1,8 +1,0 @@
-{
-  "publication_mode": "candidate_only",
-  "auto_publish": false,
-  "risk_terms": ["deced","deces","mort","răn","ranit","ranita","raniti","ranite","victim","arest","rețin","retin","anchet","dosar","acuza","suspect","cercetat","cercetată","cercetata","perchezi","flagrant","trafic de minori","trafic de persoane","braconaj","inculpat","condamnat"],
-  "material_terms": ["buget","milioane","lei","investi","hotăr","hotar","ședin","sedin","trafic","incend","accident","spital","școal","scoal","transport","proiect","misiun","pompier"],
-  "ready_score_t1": 55,
-  "ready_score_t2": 68
-}

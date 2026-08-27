@@ -18,6 +18,8 @@ jobs:
         run: python3 scripts/sync_civora.py
       - name: Build static site
         run: python3 scripts/build.py
+      - name: Enrich discovery and social metadata
+        run: python3 scripts/enrich_metadata.py
       - name: Verify public site
         run: python3 scripts/verify.py
       - name: Verify canonical lead survives projection
