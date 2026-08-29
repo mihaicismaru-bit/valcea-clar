@@ -1,31 +1,31 @@
 {
-  "updated_local": "2026-08-29T10:27:08.838196Z",
+  "updated_local": "2026-08-29T11:04:46.517261Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
-      "id": "auto-bjai-valcea-evenimente-def3753e2a99",
-      "section": "CULTURĂ",
+      "id": "auto-scm-rm-valcea-0dca1b99269c",
+      "section": "SPORT",
       "priority": 1000000,
       "source_priority": 84,
       "canonical_rank": 0,
-      "headline": "ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții",
-      "dek": "Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat această informare la 26.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
+      "headline": "Victorie muncită la Dumbrăvița! „Cel mai important este că am obținut cele trei puncte”",
+      "dek": "SCM Râmnicu Vâlcea a publicat această informare la 29.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
       "paragraphs": [
-        "INFORMARE DIN SURSĂ PRIMARĂ. La 26.08.2026, Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat materialul cu titlul „ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
+        "INFORMARE DIN SURSĂ PRIMARĂ. La 29.08.2026, SCM Râmnicu Vâlcea a publicat materialul cu titlul „Victorie muncită la Dumbrăvița! „Cel mai important este că am obținut cele trei puncte””. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
       ],
       "sources": [
         {
-          "name": "Biblioteca Județeană «Antim Ivireanul» Vâlcea",
-          "url": "https://www.bjai.ro/evenimente/ziua-limbii-romane-expozeuri-evocari-recitaluri-poetice-interludii-muzicale-videoproiectii/",
-          "tier": "T1"
+          "name": "SCM Râmnicu Vâlcea",
+          "url": "https://scmramnicuvalcea.ro/victorie-muncita-la-dumbravita-cel-mai-important-este-ca-am-obtinut-cele-trei-puncte/",
+          "tier": "T1B"
         }
       ],
-      "published": "2026-08-29T13:27:07+03:00",
+      "published": "2026-08-29T14:04:45+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
+      "canonical_path": "/stiri/auto-scm-rm-valcea-0dca1b99269c/"
     },
     {
       "id": "scm-program-5aabeba76e53785685fb",
@@ -102,20 +102,9 @@
         }
       ],
       "published": "2026-08-27T10:01:10+03:00",
-      "image": "regele-mihai-1944-jeep-context.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827/",
-      "image_caption": "Foto de arhivă/context din 1944: Regele Mihai I la volanul unui jeep al Armatei SUA; imaginea nu surprinde colocviul de la Biblioteca Județeană Vâlcea din 23 august 2026 și nici un eveniment din Măciuca în 2027.",
-      "image_origin_url": "https://valceaclar.ro/media/social/regele-mihai-1944-jeep-context.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/regele-mihai-1944-jeep-context.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:King_Michael_I_of_Romania_in_Jeep.jpg",
-      "image_credit": "U.S. National Archives at College Park / Wikimedia Commons — domeniu public",
-      "image_rights_basis": "public_domain",
-      "image_license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "1944",
-      "image_story_id": "maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827"
+      "canonical_path": "/stiri/maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827/"
     },
     {
       "id": "auto-scm-rm-valcea-2779ab02ddd5",
@@ -207,20 +196,9 @@
         }
       ],
       "published": "2026-08-21T12:27:59+03:00",
-      "image": "cet-govora-context-2011.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/cet-govora-cine-a-decis-oprirea-20260821/",
-      "image_caption": "Foto de arhivă: CET Govora, 27 iunie 2011; imaginea nu surprinde situația operațională din 2026.",
-      "image_origin_url": "https://valceaclar.ro/media/social/cet-govora-context-2011.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/cet-govora-context-2011.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:CET_Govora_(dinspre_nord-vest).JPG",
-      "image_credit": "Tudorcfr90 / Wikimedia Commons — CC BY-SA 3.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2011-06-27",
-      "image_story_id": "cet-govora-cine-a-decis-oprirea-20260821"
+      "canonical_path": "/stiri/cet-govora-cine-a-decis-oprirea-20260821/"
     },
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
@@ -261,20 +239,9 @@
         }
       ],
       "published": "2026-08-20T22:20:18+03:00",
-      "image": "civora-395d00862c607c27.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/arutela-restaurare-controversa-pnrr-20260820/",
-      "image_caption": "Foto de arhivă a castrului Arutela; imaginea nu documentează lucrările PNRR din 2026.",
-      "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Castra_Arutela_001.jpg",
-      "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Castra_Arutela_001.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:Castra_Arutela_001.jpg",
-      "image_credit": "CristianChirita / Wikimedia Commons — CC BY-SA 3.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2007-05-22",
-      "image_story_id": "arutela-restaurare-controversa-pnrr-20260820"
+      "canonical_path": "/stiri/arutela-restaurare-controversa-pnrr-20260820/"
     },
     {
       "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
@@ -321,20 +288,9 @@
         }
       ],
       "published": "2026-08-20T22:20:18+03:00",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/gutau-mocanu-stefania-uta-cetatean-onoare-20260820/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ceremonia sau persoanele descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820"
+      "canonical_path": "/stiri/gutau-mocanu-stefania-uta-cetatean-onoare-20260820/"
     },
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
@@ -439,20 +395,9 @@
         }
       ],
       "published": "2026-08-18T23:43:05+03:00",
-      "image": "civora-db7024f0d6133cea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/open-air-blues-brezoi-2026-review-bani-publici-20260818/",
-      "image_caption": "Foto de context: orașul Brezoi, 2017; imaginea nu surprinde Open Air Blues 2026.",
-      "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
-      "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:Ora%C8%99ul_Brezoi.jpg",
-      "image_credit": "Claudiupt / Wikimedia Commons — CC0",
-      "image_rights_basis": "cc0",
-      "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2017-08-20",
-      "image_story_id": "open-air-blues-brezoi-2026-review-bani-publici-20260818"
+      "canonical_path": "/stiri/open-air-blues-brezoi-2026-review-bani-publici-20260818/"
     },
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
@@ -699,20 +644,9 @@
         }
       ],
       "published": "2026-08-18T23:43:05+03:00",
-      "image": "civora-db7024f0d6133cea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/bikers-for-humanity-rock-fest-2026-review-20260818/",
-      "image_caption": "Foto de context: orașul Brezoi, 2017; imaginea nu surprinde Bikers for Humanity Rock Fest 2026.",
-      "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
-      "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:Ora%C8%99ul_Brezoi.jpg",
-      "image_credit": "Claudiupt / Wikimedia Commons — CC0",
-      "image_rights_basis": "cc0",
-      "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2017-08-20",
-      "image_story_id": "bikers-for-humanity-rock-fest-2026-review-20260818"
+      "canonical_path": "/stiri/bikers-for-humanity-rock-fest-2026-review-20260818/"
     },
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
@@ -1115,20 +1049,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-312-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-312-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-312-20260814/"
     },
     {
       "id": "rm-valcea-hcl-311-20260814",
@@ -1159,20 +1082,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-311-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-311-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-311-20260814/"
     },
     {
       "id": "rm-valcea-hcl-310-20260814",
@@ -1215,13 +1127,13 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-310-20260814/",
-      "image_caption": "Fotografie contextuală: sediul Primăriei Municipiului Râmnicu Vâlcea; imaginea nu surprinde dosarul sau ședința din 14 august 2026.",
+      "image_caption": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
       "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
       "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
       "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "image_license_url": "",
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
@@ -1255,20 +1167,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-309-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-309-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-309-20260814/"
     },
     {
       "id": "rm-valcea-hcl-308-20260814",
@@ -1299,20 +1200,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-308-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-308-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-308-20260814/"
     },
     {
       "id": "rm-valcea-hcl-307-20260814",
@@ -1343,20 +1233,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-307-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-307-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-307-20260814/"
     },
     {
       "id": "rm-valcea-hcl-306-20260814",
@@ -1390,20 +1269,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-306-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-306-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-306-20260814/"
     },
     {
       "id": "rm-valcea-hcl-305-20260814",
@@ -1435,20 +1303,9 @@
         }
       ],
       "published": "2026-08-18T15:18:10.668481Z",
-      "image": "primaria-ramnicu-valcea.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-305-20260814/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-305-20260814"
+      "canonical_path": "/stiri/rm-valcea-hcl-305-20260814/"
     },
     {
       "id": "rm-valcea-gambling-authorizations-20260723",
