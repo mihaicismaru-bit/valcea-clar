@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-08-29T01:53:24.421713Z",
+  "updated_local": "2026-08-29T02:38:27.267450Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -22,7 +22,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-08-29T04:53:23+03:00",
+      "published": "2026-08-29T05:38:26+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
