@@ -1,15 +1,38 @@
 {
-  "updated_local": "2026-08-29T08:11:38.624611Z",
+  "updated_local": "2026-08-29T09:06:47.510487Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "auto-bjai-valcea-evenimente-def3753e2a99",
+      "section": "CULTURĂ",
+      "priority": 1000000,
+      "source_priority": 84,
+      "canonical_rank": 0,
+      "headline": "ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții",
+      "dek": "Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat această informare la 26.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
+      "paragraphs": [
+        "INFORMARE DIN SURSĂ PRIMARĂ. La 26.08.2026, Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat materialul cu titlul „ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
+      ],
+      "sources": [
+        {
+          "name": "Biblioteca Județeană «Antim Ivireanul» Vâlcea",
+          "url": "https://www.bjai.ro/evenimente/ziua-limbii-romane-expozeuri-evocari-recitaluri-poetice-interludii-muzicale-videoproiectii/",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-08-29T12:06:46+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
+    },
+    {
       "id": "scm-program-5aabeba76e53785685fb",
       "section": "SPORT",
-      "priority": 1000000,
+      "priority": 999999,
       "source_priority": 88,
-      "canonical_rank": 0,
+      "canonical_rank": 1,
       "headline": "SCM Râmnicu Vâlcea – CSM Reşiţa: meci programat pe 5 septembrie 2026, de la 11:00",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -27,29 +50,6 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/scm-program-5aabeba76e53785685fb/"
-    },
-    {
-      "id": "auto-bjai-valcea-evenimente-def3753e2a99",
-      "section": "CULTURĂ",
-      "priority": 999999,
-      "source_priority": 84,
-      "canonical_rank": 1,
-      "headline": "ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții",
-      "dek": "Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat această informare la 26.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
-      "paragraphs": [
-        "INFORMARE DIN SURSĂ PRIMARĂ. La 26.08.2026, Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat materialul cu titlul „ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
-      ],
-      "sources": [
-        {
-          "name": "Biblioteca Județeană «Antim Ivireanul» Vâlcea",
-          "url": "https://www.bjai.ro/evenimente/ziua-limbii-romane-expozeuri-evocari-recitaluri-poetice-interludii-muzicale-videoproiectii/",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-08-29T10:06:01+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
     },
     {
       "id": "alert-2437a02144b89e5de9e1",
