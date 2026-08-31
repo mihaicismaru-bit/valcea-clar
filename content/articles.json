@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-08-31T21:27:36.800723Z",
+  "updated_local": "2026-08-31T22:45:38.928189Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -22,7 +22,7 @@
           "tier": "T1B"
         }
       ],
-      "published": "2026-09-01T00:27:35+03:00",
+      "published": "2026-09-01T01:45:38+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-raliul-valcii-official-news-bef661828bc4/"
@@ -45,17 +45,40 @@
           "tier": "T1B"
         }
       ],
-      "published": "2026-09-01T00:27:35+03:00",
+      "published": "2026-09-01T01:45:38+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-raliul-valcii-official-news-8708e420c76b/"
     },
     {
-      "id": "auto-scm-rm-valcea-0dca1b99269c",
-      "section": "SPORT",
+      "id": "auto-bjai-valcea-evenimente-def3753e2a99",
+      "section": "CULTURĂ",
       "priority": 999998,
       "source_priority": 84,
       "canonical_rank": 2,
+      "headline": "ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții",
+      "dek": "Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat această informare la 26.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
+      "paragraphs": [
+        "INFORMARE DIN SURSĂ PRIMARĂ. La 26.08.2026, Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat materialul cu titlul „ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
+      ],
+      "sources": [
+        {
+          "name": "Biblioteca Județeană «Antim Ivireanul» Vâlcea",
+          "url": "https://www.bjai.ro/evenimente/ziua-limbii-romane-expozeuri-evocari-recitaluri-poetice-interludii-muzicale-videoproiectii/",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-01T01:45:38+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
+    },
+    {
+      "id": "auto-scm-rm-valcea-0dca1b99269c",
+      "section": "SPORT",
+      "priority": 999997,
+      "source_priority": 84,
+      "canonical_rank": 3,
       "headline": "Victorie muncită la Dumbrăvița! „Cel mai important este că am obținut cele trei puncte”",
       "dek": "SCM Râmnicu Vâlcea a publicat această informare la 29.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
       "paragraphs": [
@@ -72,29 +95,6 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-scm-rm-valcea-0dca1b99269c/"
-    },
-    {
-      "id": "auto-bjai-valcea-evenimente-def3753e2a99",
-      "section": "CULTURĂ",
-      "priority": 999997,
-      "source_priority": 84,
-      "canonical_rank": 3,
-      "headline": "ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții",
-      "dek": "Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat această informare la 26.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
-      "paragraphs": [
-        "INFORMARE DIN SURSĂ PRIMARĂ. La 26.08.2026, Biblioteca Județeană «Antim Ivireanul» Vâlcea a publicat materialul cu titlul „ZIUA LIMBII ROMÂNE, expozeuri evocări recitaluri poetice interludii muzicale videoproiecții”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
-      ],
-      "sources": [
-        {
-          "name": "Biblioteca Județeană «Antim Ivireanul» Vâlcea",
-          "url": "https://www.bjai.ro/evenimente/ziua-limbii-romane-expozeuri-evocari-recitaluri-poetice-interludii-muzicale-videoproiectii/",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-08-31T20:45:14+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
     },
     {
       "id": "scm-program-5aabeba76e53785685fb",
