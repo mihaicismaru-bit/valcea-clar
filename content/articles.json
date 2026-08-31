@@ -1,15 +1,61 @@
 {
-  "updated_local": "2026-08-31T21:05:45.550192Z",
+  "updated_local": "2026-08-31T21:27:36.800723Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
-      "id": "auto-scm-rm-valcea-0dca1b99269c",
+      "id": "auto-raliul-valcii-official-news-bef661828bc4",
       "section": "SPORT",
       "priority": 1000000,
       "source_priority": 84,
       "canonical_rank": 0,
+      "headline": "Raliul, la tine în buzunar!",
+      "dek": "Raliul Vâlcii — site oficial a publicat această informare la 30.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
+      "paragraphs": [
+        "INFORMARE DIN SURSĂ PRIMARĂ. La 30.08.2026, Raliul Vâlcii — site oficial a publicat materialul cu titlul „Raliul, la tine în buzunar!”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
+      ],
+      "sources": [
+        {
+          "name": "Raliul Vâlcii — site oficial",
+          "url": "https://raliulvalcii.ro/stiri/aplicatia-oficiala-raliul-valcii/",
+          "tier": "T1B"
+        }
+      ],
+      "published": "2026-09-01T00:27:35+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/auto-raliul-valcii-official-news-bef661828bc4/"
+    },
+    {
+      "id": "auto-raliul-valcii-official-news-8708e420c76b",
+      "section": "SPORT",
+      "priority": 999999,
+      "source_priority": 84,
+      "canonical_rank": 1,
+      "headline": "Acreditări media Raliul Vâlcii Nurvil 2026 — înscrierile sunt deschise!",
+      "dek": "Raliul Vâlcii — site oficial a publicat această informare la 31.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
+      "paragraphs": [
+        "INFORMARE DIN SURSĂ PRIMARĂ. La 31.08.2026, Raliul Vâlcii — site oficial a publicat materialul cu titlul „Acreditări media Raliul Vâlcii Nurvil 2026 — înscrierile sunt deschise!”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
+      ],
+      "sources": [
+        {
+          "name": "Raliul Vâlcii — site oficial",
+          "url": "https://raliulvalcii.ro/stiri/acreditari-media-raliul-valcii-2026/",
+          "tier": "T1B"
+        }
+      ],
+      "published": "2026-09-01T00:27:35+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/auto-raliul-valcii-official-news-8708e420c76b/"
+    },
+    {
+      "id": "auto-scm-rm-valcea-0dca1b99269c",
+      "section": "SPORT",
+      "priority": 999998,
+      "source_priority": 84,
+      "canonical_rank": 2,
       "headline": "Victorie muncită la Dumbrăvița! „Cel mai important este că am obținut cele trei puncte”",
       "dek": "SCM Râmnicu Vâlcea a publicat această informare la 29.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
       "paragraphs": [
@@ -26,52 +72,6 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-scm-rm-valcea-0dca1b99269c/"
-    },
-    {
-      "id": "auto-raliul-valcii-official-news-bef661828bc4",
-      "section": "SPORT",
-      "priority": 999999,
-      "source_priority": 84,
-      "canonical_rank": 1,
-      "headline": "Raliul, la tine în buzunar!",
-      "dek": "Raliul Vâlcii — site oficial a publicat această informare la 30.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
-      "paragraphs": [
-        "INFORMARE DIN SURSĂ PRIMARĂ. La 30.08.2026, Raliul Vâlcii — site oficial a publicat materialul cu titlul „Raliul, la tine în buzunar!”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
-      ],
-      "sources": [
-        {
-          "name": "Raliul Vâlcii — site oficial",
-          "url": "https://raliulvalcii.ro/stiri/aplicatia-oficiala-raliul-valcii/",
-          "tier": "T1B"
-        }
-      ],
-      "published": "2026-08-31T20:45:14+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-raliul-valcii-official-news-bef661828bc4/"
-    },
-    {
-      "id": "auto-raliul-valcii-official-news-8708e420c76b",
-      "section": "SPORT",
-      "priority": 999998,
-      "source_priority": 84,
-      "canonical_rank": 2,
-      "headline": "Acreditări media Raliul Vâlcii Nurvil 2026 — înscrierile sunt deschise!",
-      "dek": "Raliul Vâlcii — site oficial a publicat această informare la 31.08.2026. VÂLCEA CLAR o semnalează ca noutate din sursă primară și păstrează legătura directă către pagina oficială.",
-      "paragraphs": [
-        "INFORMARE DIN SURSĂ PRIMARĂ. La 31.08.2026, Raliul Vâlcii — site oficial a publicat materialul cu titlul „Acreditări media Raliul Vâlcii Nurvil 2026 — înscrierile sunt deschise!”. În această etapă, VÂLCEA CLAR confirmă automat numai existența publicării, data, titlul furnizat de instituție și adresa sursei oficiale. Detaliile din conținutul sursei nu sunt transformate automat în afirmații editoriale; pentru acestea rămâne necesară verificarea sau compunerea unui material complet."
-      ],
-      "sources": [
-        {
-          "name": "Raliul Vâlcii — site oficial",
-          "url": "https://raliulvalcii.ro/stiri/acreditari-media-raliul-valcii-2026/",
-          "tier": "T1B"
-        }
-      ],
-      "published": "2026-08-31T20:45:14+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-raliul-valcii-official-news-8708e420c76b/"
     },
     {
       "id": "auto-bjai-valcea-evenimente-def3753e2a99",
