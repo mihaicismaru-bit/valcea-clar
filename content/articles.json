@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-01T07:07:17.316049Z",
+  "updated_local": "2026-09-01T08:28:18.350016Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -22,7 +22,7 @@
           "tier": "T1B"
         }
       ],
-      "published": "2026-09-01T10:07:16+03:00",
+      "published": "2026-09-01T11:28:17+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-raliul-valcii-official-news-f6e28bbb1533/"
@@ -45,7 +45,7 @@
           "tier": "T1B"
         }
       ],
-      "published": "2026-09-01T10:07:16+03:00",
+      "published": "2026-09-01T11:28:17+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-raliul-valcii-official-news-bef661828bc4/"
@@ -68,7 +68,7 @@
           "tier": "T1B"
         }
       ],
-      "published": "2026-09-01T10:07:16+03:00",
+      "published": "2026-09-01T11:28:17+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-raliul-valcii-official-news-8708e420c76b/"
@@ -91,7 +91,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-01T10:07:16+03:00",
+      "published": "2026-09-01T11:28:17+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/auto-bjai-valcea-evenimente-def3753e2a99/"
