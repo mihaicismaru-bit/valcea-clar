@@ -9,7 +9,9 @@ the short intermediate state between those two transactions.
 from __future__ import annotations
 
 import json
+import os
 import sys
+import time
 from urllib.request import Request, urlopen
 
 BASE = (
@@ -19,6 +21,13 @@ BASE = (
 FEED_URL = BASE + "/runtime/live-feed.json"
 UX_STATE_URL = BASE + "/public_ux_state.json"
 MANIFEST_URL = BASE + "/runtime/stiri/manifest.json"
+DEFAULT_WAIT_SECONDS = 300.0
+DEFAULT_RETRY_SECONDS = 10.0
+RETRYABLE_PROJECTION_ERRORS = (
+    "derived Public UX is not caught up:",
+    "derived Public UX is missing canonical stories:",
+    "canonical feed is between newsroom and derived-media projection:",
+)
 
 
 def fetch_json(url: str) -> dict:
@@ -97,6 +106,12 @@ def validate(feed: dict, ux: dict, manifest: dict) -> dict:
     }
 
 
+def retryable_projection_error(exc: BaseException) -> bool:
+    if isinstance(exc, (OSError, json.JSONDecodeError)):
+        return True
+    return isinstance(exc, ValueError) and str(exc).startswith(RETRYABLE_PROJECTION_ERRORS)
+
+
 def self_test() -> int:
     feed = {
         "canonical_domain": "valceaclar.ro",
@@ -145,6 +160,12 @@ def self_test() -> int:
     else:
         raise AssertionError("verified-media regression did not fail closed")
 
+    assert retryable_projection_error(
+        ValueError("derived Public UX is not caught up: live_story_count=1 feed=2")
+    )
+    assert retryable_projection_error(OSError("temporary transport failure"))
+    assert not retryable_projection_error(ValueError("canonical_domain mismatch"))
+
     print("CIVORA derived-projection readiness self-test: PASS")
     return 0
 
@@ -152,17 +173,45 @@ def self_test() -> int:
 def main() -> int:
     if "--self-test" in sys.argv:
         return self_test()
-    try:
-        result = validate(
-            fetch_json(FEED_URL),
-            fetch_json(UX_STATE_URL),
-            fetch_json(MANIFEST_URL),
-        )
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
-        print(f"CIVORA derived-projection readiness: WAIT/FAIL-CLOSED: {exc}", file=sys.stderr)
-        return 1
-    print(json.dumps(result, ensure_ascii=False))
-    return 0
+
+    wait_seconds = max(
+        0.0,
+        float(os.environ.get("CIVORA_PROJECTION_WAIT_SECONDS", DEFAULT_WAIT_SECONDS)),
+    )
+    retry_seconds = max(
+        1.0,
+        float(os.environ.get("CIVORA_PROJECTION_RETRY_SECONDS", DEFAULT_RETRY_SECONDS)),
+    )
+    deadline = time.monotonic() + wait_seconds
+    attempt = 0
+
+    while True:
+        attempt += 1
+        try:
+            result = validate(
+                fetch_json(FEED_URL),
+                fetch_json(UX_STATE_URL),
+                fetch_json(MANIFEST_URL),
+            )
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            remaining = deadline - time.monotonic()
+            if not retryable_projection_error(exc) or remaining <= 0:
+                print(
+                    f"CIVORA derived-projection readiness: WAIT/FAIL-CLOSED: {exc}",
+                    file=sys.stderr,
+                )
+                return 1
+            sleep_for = min(retry_seconds, remaining)
+            print(
+                "CIVORA derived-projection readiness: WAIT: "
+                f"attempt={attempt} remaining={remaining:.0f}s error={exc}",
+                file=sys.stderr,
+            )
+            time.sleep(sleep_for)
+            continue
+
+        print(json.dumps(result, ensure_ascii=False))
+        return 0
 
 
 if __name__ == "__main__":
