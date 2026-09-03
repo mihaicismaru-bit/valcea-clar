@@ -6,10 +6,10 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 37,
-  "verified_visual_count": 18,
+  "verified_visual_count": 19,
   "lead_story_id": "horezu-autobuze-electrice-energie-verde-20260903",
   "lead_published_at": "2026-09-03T10:05:54+03:00",
-  "articles_sha256": "b68c2b402da689372a293172d7b01f40403ba650770abfad454231e7d443b821",
+  "articles_sha256": "7febea61b7a6563bcebb7429ba0c10cda6649cbc73f858a776d6c0eda249bc10",
   "synced_at": "2026-09-03T07:05:55.736562Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
