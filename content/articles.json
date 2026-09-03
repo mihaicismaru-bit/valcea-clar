@@ -1,15 +1,122 @@
 {
-  "updated_local": "2026-09-02T23:39:26.223620Z",
+  "updated_local": "2026-09-03T03:53:14.099138Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "ramnicu-dem-radulescu-minora-14-ani-accident-20260902",
+      "section": "SIGURANȚĂ",
+      "priority": 1000000,
+      "source_priority": 98,
+      "canonical_rank": 0,
+      "headline": "Fată de 14 ani, rănită pe o trecere de pietoni de pe bulevardul Dem Rădulescu. Poliția verifică împrejurările",
+      "dek": "Adolescenta a fost transportată la spital după accidentul produs în Râmnicu Vâlcea. Potrivit relatărilor concordante care citează IPJ Vâlcea, șoferul a avut rezultat negativ la testarea pentru alcool.",
+      "paragraphs": [
+        "O fată de 14 ani a fost rănită într-un accident rutier produs pe bulevardul Dem Rădulescu din Râmnicu Vâlcea și a fost transportată la spital pentru îngrijiri medicale, potrivit relatărilor publicate la 2 septembrie care atribuie informațiile Inspectoratului de Poliție Județean Vâlcea.",
+        "Din primele verificări ale polițiștilor, relatate concordant de Gazeta de Sud și Vocea Vâlcii, un bărbat de 57 de ani aflat la volanul unui autoturism ar fi acroșat adolescenta în timp ce aceasta s-ar fi angajat regulamentar în traversare, pe trecerea pentru pietoni. Formularea rămâne una preliminară, până la stabilirea completă a dinamicii accidentului.",
+        "Conducătorul auto a fost testat cu aparatul alcooltest, iar rezultatul a fost negativ. Polițiștii au deschis un dosar pentru vătămare corporală din culpă și continuă cercetările pentru stabilirea tuturor împrejurărilor producerii accidentului."
+      ],
+      "sources": [
+        {
+          "name": "Gazeta de Sud — Minoră de 14 ani, lovită de o mașină pe o trecere de pietoni din Râmnicu Vâlcea, 2 septembrie 2026",
+          "url": "https://www.gds.ro/Local/Valcea/2026-09-02/minora-de-14-ani-lovita-de-o-masina-pe-o-trecere-de-pietoni-din-ramnicu-valcea/",
+          "tier": "T2"
+        },
+        {
+          "name": "Vocea Vâlcii — O fată de 14 ani, lovită pe trecerea de pietoni în Râmnicu Vâlcea, 2 septembrie 2026",
+          "url": "https://vocea-valcii.ro/fapt-divers/o-fata-de-14-ani-lovita-pe-trecerea-de-pietoni-in-ramnicu-valcea-a-ajuns-la-spital/",
+          "tier": "T2"
+        },
+        {
+          "name": "Știrile Kanal D — Minoră de 14 ani, lovită pe o trecere de pietoni în Râmnicu Vâlcea, 2 septembrie 2026",
+          "url": "https://www.stirilekanald.ro/minora-de-14-ani-lovita-pe-o-trecere-de-pietoni-in-ramnicu-valcea-fata-a-ajuns-la-spital-20542772",
+          "tier": "T2"
+        }
+      ],
+      "published": "2026-09-03T06:53:13+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/ramnicu-dem-radulescu-minora-14-ani-accident-20260902/"
+    },
+    {
+      "id": "valcea-atv-ionesti-pausesti-maglasi-fara-permis-20260902",
+      "section": "SIGURANȚĂ",
+      "priority": 999999,
+      "source_priority": 94,
+      "canonical_rank": 1,
+      "headline": "Două controale cu ATV-uri în Vâlcea: poliția spune că ambii șoferi nu aveau permis; unul a avut 0,43 mg/l la etilotest",
+      "dek": "Cazurile au fost constatate la Ionești și Păușești-Măglași în 1 septembrie. În primul caz, ATV-ul era neînmatriculat; în al doilea, au fost recoltate probe biologice pentru stabilirea alcoolemiei.",
+      "paragraphs": [
+        "Polițiștii vâlceni au oprit în 1 septembrie două ATV-uri conduse pe drumuri publice, în Ionești și Păușești-Măglași, iar relatările concordante care citează IPJ Vâlcea spun că niciunul dintre cei doi conducători nu avea permis de conducere.",
+        "Primul control a avut loc în jurul orei 19:00, în Ionești. Potrivit informațiilor atribuite Poliției, un tânăr de 19 ani conducea un ATV care nu era înmatriculat sau înregistrat și nu deținea permis pentru nicio categorie de vehicule.",
+        "Al doilea caz a fost constatat în jurul orei 23:20 pe DN 64, în Păușești-Măglași. Un bărbat de 40 de ani conducea un ATV fără permis, iar testarea cu aparatul etilotest a indicat 0,43 mg/l alcool pur în aerul expirat. Au fost recoltate probe biologice pentru stabilirea alcoolemiei în sânge.",
+        "Cercetările continuă sub supravegherea unităților de parchet competente. Valoarea indicată de etilotest reprezintă alcoolul din aerul expirat și nu este prezentată de VÂLCEA CLAR ca rezultat al alcoolemiei în sânge."
+      ],
+      "sources": [
+        {
+          "name": "Gazeta de Sud — Doi bărbați, prinși la volanul unor ATV-uri fără permis, în Vâlcea, 2 septembrie 2026",
+          "url": "https://www.gds.ro/Local/Valcea/2026-09-02/doi-barbati-prinsi-la-volanul-unor-atv-uri-fara-permis-in-valcea-unul-era-baut/",
+          "tier": "T2"
+        },
+        {
+          "name": "Eveniment Vâlcean — Doi șoferi de ATV, depistați fără permis pe drumurile din Vâlcea, 2 septembrie 2026",
+          "url": "https://evenimentvalcean.ro/foto-doi-soferi-de-atv-depistati-fara-permis-pe-drumurile-din-valcea-unul-era-si-baut/",
+          "tier": "T2"
+        },
+        {
+          "name": "Vocea Vâlcii — Două ATV-uri, doi șoferi fără permis, 2 septembrie 2026",
+          "url": "https://vocea-valcii.ro/fapt-divers/doua-atv-uri-doi-soferi-fara-permis-unul-dintre-ei-consumase-si-alcool/",
+          "tier": "T2"
+        }
+      ],
+      "published": "2026-09-03T06:53:13+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/valcea-atv-ionesti-pausesti-maglasi-fara-permis-20260902/"
+    },
+    {
+      "id": "balcesti-incendiu-vegetatie-15ha-20260902",
+      "section": "SIGURANȚĂ",
+      "priority": 999998,
+      "source_priority": 96,
+      "canonical_rank": 2,
+      "headline": "Incendiu de vegetație la Bălcești: aproximativ 15 hectare de teren au fost afectate",
+      "dek": "Pompierii vâlceni au stins un incendiu de vegetație uscată la Bălcești, iar ISU Vâlcea estimează suprafața afectată la aproximativ 15 hectare. Buletinul oficial nu indică o cauză a incendiului.",
+      "paragraphs": [
+        "Un incendiu de vegetație uscată produs la Bălcești a afectat aproximativ 15 hectare de teren, potrivit bilanțului publicat la 2 septembrie de Inspectoratul pentru Situații de Urgență Vâlcea. Pompierii militari au intervenit pentru stingerea focului.",
+        "Incidentul apare în bilanțul ISU pentru intervalul 31 august, ora 08:00 – 2 septembrie, ora 08:00. În cele 48 de ore, pompierii vâlceni au avut 55 de misiuni, dintre care 49 pentru prim ajutor și transport medical și două pentru stingerea incendiilor.",
+        "ISU amintește, în același buletin, campania națională „Nu aprinde pericolul”, care avertizează că arderea vegetației uscate este interzisă. Comunicatul nu precizează însă cauza incendiului de la Bălcești, iar VÂLCEA CLAR nu atribuie focul unei arderi intenționate în lipsa unei constatări oficiale."
+      ],
+      "sources": [
+        {
+          "name": "ISU Vâlcea — Misiunile pompierilor vâlceni în ultimele 48 de ore, 02.09.2026",
+          "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-776",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-03T06:38:39+03:00",
+      "image": "balcesti-context-2026.jpg",
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/balcesti-incendiu-vegetatie-15ha-20260902/",
+      "image_caption": "Foto de context din Bălcești, iunie 2026; imaginea nu surprinde incendiul de vegetație raportat de ISU.",
+      "image_origin_url": "https://valceaclar.ro/media/social/balcesti-context-2026.jpg",
+      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/balcesti-context-2026.jpg",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Drum_de_p%C4%83m%C3%A2nt_RO.jpg",
+      "image_credit": "Wikiminds34 / Wikimedia Commons — CC BY 4.0",
+      "image_rights_basis": "creative_commons",
+      "image_license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "image_provenance_status": "VERIFIED",
+      "image_contextual_archive": true,
+      "image_captured_at": "2026-06-16",
+      "image_story_id": "balcesti-incendiu-vegetatie-15ha-20260902"
+    },
+    {
       "id": "valcea-apa-canal-contract-152m-20260902",
       "section": "ADMINISTRAȚIE",
-      "priority": 1000000,
+      "priority": 999997,
       "source_priority": 100,
-      "canonical_rank": 0,
+      "canonical_rank": 3,
       "headline": "Contract de peste 152 mil. euro pentru apă și canalizare în Vâlcea. CJ indică 12 localități; documentele din aprilie includ și Râmnicu",
       "dek": "Contractul de finanțare pentru proiectul regional de apă și apă uzată a fost semnat la 2 septembrie 2026 la Ministerul Investițiilor și Proiectelor Europene. Comunicarea CJ enumeră 12 localități, în timp ce hotărârile municipiului Râmnicu Vâlcea din 2026 indică și o contribuție locală pentru același proiect.",
       "paragraphs": [
@@ -49,9 +156,9 @@
     {
       "id": "fast-isu-incendiu-locuinta-in-municipiul-ramnicu-valcea-777-968eefa444",
       "section": "URGENȚE",
-      "priority": 999999,
+      "priority": 999996,
       "source_priority": 97,
-      "canonical_rank": 1,
+      "canonical_rank": 4,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -73,9 +180,9 @@
     {
       "id": "auto-scm-rm-valcea-b30c85d12af3",
       "section": "SPORT",
-      "priority": 999998,
+      "priority": 999995,
       "source_priority": 95,
-      "canonical_rank": 2,
+      "canonical_rank": 5,
       "headline": "SCM Râmnicu Vâlcea caută prima victorie acasă, sâmbătă, cu CSM Reșița",
       "dek": "Meciul se joacă pe 5 septembrie, de la ora 11:00, pe Stadionul Municipal. Vâlcenii vin după succesul cu Dumbrăvița și ocupă locul 9; Reșița este pe locul 4.",
       "paragraphs": [
@@ -100,9 +207,9 @@
     {
       "id": "auto-raliul-valcii-official-news-f6e28bbb1533",
       "section": "SPORT",
-      "priority": 999997,
+      "priority": 999994,
       "source_priority": 96,
-      "canonical_rank": 3,
+      "canonical_rank": 6,
       "headline": "Raliul Vâlcii 2026: înscrierile sunt deschise până la 18 septembrie",
       "dek": "Etapa a VII-a a Campionatului Național de Raliuri se desfășoară între 24 și 26 septembrie, la Râmnicu Vâlcea. Programul include 13 probe speciale și o superspecială urbană.",
       "paragraphs": [
@@ -127,9 +234,9 @@
     {
       "id": "scm-program-5aabeba76e53785685fb",
       "section": "SPORT",
-      "priority": 999996,
+      "priority": 999993,
       "source_priority": 88,
-      "canonical_rank": 4,
+      "canonical_rank": 7,
       "headline": "SCM Râmnicu Vâlcea – CSM Reşiţa: meci programat pe 5 septembrie 2026, de la 11:00",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -151,9 +258,9 @@
     {
       "id": "maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827",
       "section": "CULTURĂ",
-      "priority": 999995,
+      "priority": 999992,
       "source_priority": 98,
-      "canonical_rank": 5,
+      "canonical_rank": 8,
       "headline": "Măciuca, anunțată drept gazda Zilei Regalității 2027 după colocviul de la Biblioteca Vâlcea",
       "dek": "Curierul de Vâlcea relatează că omul de afaceri Dan Nițu a anunțat intenția organizării Zilei Regalității la Măciuca în 2027. Anunțul a venit după colocviul dedicat Regelui Mihai I, desfășurat la 23 august 2026 la Biblioteca Județeană «Antim Ivireanul».",
       "paragraphs": [
@@ -193,9 +300,9 @@
     {
       "id": "cet-govora-cine-a-decis-oprirea-20260821",
       "section": "ENERGIE",
-      "priority": 999994,
+      "priority": 999991,
       "source_priority": 100,
-      "canonical_rank": 6,
+      "canonical_rank": 9,
       "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
       "dek": "O postare politică susține că CET Govora a renunțat voluntar la licență și că nimeni nu i-a impus oprirea. Documentele oficiale arată însă un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de cifrele invocate în postare.",
       "paragraphs": [
@@ -249,9 +356,9 @@
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
       "section": "PATRIMONIU",
-      "priority": 999993,
+      "priority": 999990,
       "source_priority": 98,
-      "canonical_rank": 7,
+      "canonical_rank": 10,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
       "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului, iar Ministerul Culturii explică atât avizarea, cât și soluția arhitecturală contemporană.",
       "paragraphs": [
@@ -303,9 +410,9 @@
     {
       "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
       "section": "ADMINISTRAȚIE",
-      "priority": 999992,
+      "priority": 999989,
       "source_priority": 96,
-      "canonical_rank": 8,
+      "canonical_rank": 11,
       "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
       "dek": "Propunerea consilierului local Vicențiu Mocanu ca Ștefania Uță să primească titlul de Cetățean de Onoare al Râmnicului a declanșat un schimb de replici cu primarul Mircia Gutău. Regulamentul local arată că un consilier poate formula individual o asemenea propunere.",
       "paragraphs": [
@@ -363,9 +470,9 @@
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999991,
+      "priority": 999988,
       "source_priority": 99,
-      "canonical_rank": 9,
+      "canonical_rank": 12,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
       "dek": "O reconstrucție documentată a ediției 2026: artiștii pe zile, ce s-a cântat unde există setlisturi verificabile, organizatorii, vocile influente, sponsorii și sprijinul public.",
       "paragraphs": [
@@ -481,9 +588,9 @@
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
       "section": "EVENIMENTE",
-      "priority": 999990,
+      "priority": 999987,
       "source_priority": 99,
-      "canonical_rank": 10,
+      "canonical_rank": 13,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
       "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
       "paragraphs": [
@@ -541,9 +648,9 @@
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999989,
+      "priority": 999986,
       "source_priority": 98,
-      "canonical_rank": 11,
+      "canonical_rank": 14,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
       "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei, iar lista de parteneri arată o rețea publică și culturală mai largă.",
       "paragraphs": [
@@ -592,9 +699,9 @@
     {
       "id": "deep-forest-fest-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999988,
+      "priority": 999985,
       "source_priority": 98,
-      "canonical_rank": 12,
+      "canonical_rank": 15,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
       "dek": "Dosarul VÂLCEA CLAR separă muzica și promovarea de documentele publice: cine a urcat pe afiș, cum a evoluat festivalul și ce sume apar în hotărârile locale.",
       "paragraphs": [
@@ -675,9 +782,9 @@
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
       "section": "EVENIMENTE",
-      "priority": 999987,
+      "priority": 999984,
       "source_priority": 98,
-      "canonical_rank": 13,
+      "canonical_rank": 16,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
       "dek": "Ediția aniversară de la Brezoi a combinat 21 de trupe cu o cauză umanitară; dosarul separă profitul promis pentru caritate de eventualele resurse publice locale și de rezultatul financiar care trebuie documentat după festival.",
       "paragraphs": [
@@ -741,9 +848,9 @@
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "section": "CULTURĂ",
-      "priority": 999986,
+      "priority": 999983,
       "source_priority": 97,
-      "canonical_rank": 14,
+      "canonical_rank": 17,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
       "dek": "Patru evenimente sunt deja publicate pentru septembrie 2026, de la jazz și latino simfonic la program coral și Violoncellissimo; VÂLCEA CLAR le leagă de artiști, bilete și finanțarea publică a Centrului Cultural Municipal.",
       "paragraphs": [
@@ -787,9 +894,9 @@
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999985,
+      "priority": 999982,
       "source_priority": 97,
-      "canonical_rank": 15,
+      "canonical_rank": 18,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
       "dek": "Festivalul gratuit de la Măldărești este organizat de instituții ale Consiliului Județean Vâlcea; VÂLCEA CLAR reconstruiește programul și separă costul public dovedit de sumele care încă lipsesc din documentele indexate.",
       "paragraphs": [
@@ -837,9 +944,9 @@
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
       "section": "CULTURĂ",
-      "priority": 999984,
+      "priority": 999981,
       "source_priority": 96,
-      "canonical_rank": 16,
+      "canonical_rank": 19,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
       "dek": "Ariel și Anton Pann aparțin unor administrații diferite și au fluxuri distincte de program și finanțare; VÂLCEA CLAR le transformă în surse permanente pentru agenda culturală, premiere, distribuții și money trace.",
       "paragraphs": [
@@ -913,9 +1020,9 @@
     {
       "id": "invartita-dorului-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999983,
+      "priority": 999980,
       "source_priority": 96,
-      "canonical_rank": 17,
+      "canonical_rank": 20,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
       "dek": "Festivalul păstoresc organizat de Primăria și Consiliul Local Vaideeni aduce zeci de artiști și ansambluri; VÂLCEA CLAR separă tradiția de întrebarea contabilă privind costul complet al ediției.",
       "paragraphs": [
@@ -964,9 +1071,9 @@
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999982,
+      "priority": 999979,
       "source_priority": 96,
-      "canonical_rank": 18,
+      "canonical_rank": 21,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
       "dek": "Târgul de la Horezu combină patrimoniul ceramic cu spectacole folclorice; documentele locale confirmă o hotărâre specială de buget, iar VÂLCEA CLAR urmărește suma și execuția ei până la nivel de contracte și plăți.",
       "paragraphs": [
@@ -1014,9 +1121,9 @@
     {
       "id": "apavil-joburi-fara-experienta-20260818",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999981,
+      "priority": 999978,
       "source_priority": 91,
-      "canonical_rank": 19,
+      "canonical_rank": 22,
       "headline": "APAVIL scoate la concurs două posturi fără experiență: laborant în Râmnicu Vâlcea și electrician în Călimănești",
       "dek": "Cele două oferte oficiale ANOFM sunt pentru contracte pe perioadă nedeterminată și normă întreagă. Termenele de valabilitate sunt 20 august 2026 pentru laborant și 21 august 2026 pentru electrician.",
       "paragraphs": [
@@ -1048,9 +1155,9 @@
     {
       "id": "cj-valcea-cocos-rajdp-mandat-guvernanta-20260818",
       "section": "ADMINISTRAȚIE",
-      "priority": 999980,
+      "priority": 999977,
       "source_priority": 90,
-      "canonical_rank": 20,
+      "canonical_rank": 23,
       "headline": "Vasile Cocoș nu mai are mandat de administrator la RAJDP. Pagina de guvernanță a CJ îl afișează încă în Consiliul de Administrație",
       "dek": "HCJ 137 din 24 iulie 2026 aprobă încetarea mandatului lui Vasile Cocoș la Drumurile Județene Vâlcea. În schimb, pagina oficială de guvernanță corporativă a CJ îl menționează încă drept membru CA, o neconcordanță pe care instituția trebuie să o actualizeze sau să o explice.",
       "paragraphs": [
@@ -1086,9 +1193,9 @@
     {
       "id": "bujoreni-11-zidari-4582-6000-20260818",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999979,
+      "priority": 999976,
       "source_priority": 88,
-      "canonical_rank": 21,
+      "canonical_rank": 24,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -1113,9 +1220,9 @@
     {
       "id": "rm-valcea-hcl-312-20260814",
       "section": "MOBILITATE",
-      "priority": 999978,
+      "priority": 999975,
       "source_priority": 92,
-      "canonical_rank": 22,
+      "canonical_rank": 25,
       "headline": "11 microbuze electrice sunt transferate către opt localități din Vâlcea",
       "dek": "HCL 312 împarte 11 microbuze, 11 stații lente și 5 stații rapide cumpărate prin PNRR. Furnizorul contractului de achiziție este BMC Trucks & Bus S.A., iar predarea către UAT-uri trebuie făcută în cel mult 15 zile.",
       "paragraphs": [
@@ -1157,9 +1264,9 @@
     {
       "id": "rm-valcea-hcl-311-20260814",
       "section": "ADMINISTRAȚIE",
-      "priority": 999977,
+      "priority": 999974,
       "source_priority": 92,
-      "canonical_rank": 23,
+      "canonical_rank": 26,
       "headline": "Bunurile cumpărate prin proiectele de transport sunt puse la dispoziția ETA, iar contractul de delegare este modificat",
       "dek": "HCL 311 introduce în contractul de delegare nr. 17/28.05.2026 bunurile cumpărate prin proiectul de extindere a transportului spre zonele turistice și bunurile puse la dispoziția ETA de UAT-urile partenere. Votul a fost unanim.",
       "paragraphs": [
@@ -1201,9 +1308,9 @@
     {
       "id": "rm-valcea-hcl-310-20260814",
       "section": "ADMINISTRAȚIE",
-      "priority": 999976,
+      "priority": 999973,
       "source_priority": 92,
-      "canonical_rank": 24,
+      "canonical_rank": 27,
       "headline": "Primăria ia avocați externi într-un proces pentru daune morale. Cine a dat în judecată Municipiul și DAS",
       "dek": "HCL 310 autorizează reprezentare juridică externă în dosarul 8244/288/2026. Dosarul este o acțiune în răspundere delictuală aflată pe fond la Judecătoria Râmnicu Vâlcea, iar hotărârea locală precizează că sunt solicitate daune morale.",
       "paragraphs": [
@@ -1254,9 +1361,9 @@
     {
       "id": "rm-valcea-hcl-309-20260814",
       "section": "BANI_PUBLICI",
-      "priority": 999975,
+      "priority": 999972,
       "source_priority": 92,
-      "canonical_rank": 25,
+      "canonical_rank": 28,
       "headline": "Municipiul și Consiliul Județean se asociază pentru susținerea SCM Râmnicu Vâlcea în 2026",
       "dek": "HCL 309 aprobă asocierea dintre municipiu și județ pentru sportul de performanță derulat prin Sport Club Municipal Râmnicu Vâlcea și aprobă modelul contractului pe care primarul îl poate semna. Suma contribuțiilor nu este stabilită în corpul hotărârii.",
       "paragraphs": [
@@ -1297,9 +1404,9 @@
     {
       "id": "rm-valcea-hcl-308-20260814",
       "section": "BANI_PUBLICI",
-      "priority": 999974,
+      "priority": 999971,
       "source_priority": 92,
-      "canonical_rank": 26,
+      "canonical_rank": 29,
       "headline": "Râmnicu Vâlcea introduce 990.000 lei din creditul Băncii Transilvania în bugetul de investiții din 2026",
       "dek": "HCL 308 mărește bugetul creditelor interne pe 2026 de la 10 milioane la 10,99 milioane lei. Documentul arată și noul calendar al tragerilor din finanțarea de 40 milioane lei contractată de la Banca Transilvania pe 10 ani.",
       "paragraphs": [
@@ -1341,9 +1448,9 @@
     {
       "id": "rm-valcea-hcl-307-20260814",
       "section": "BANI_PUBLICI",
-      "priority": 999973,
+      "priority": 999970,
       "source_priority": 92,
-      "canonical_rank": 27,
+      "canonical_rank": 30,
       "headline": "730.000 lei din împrumutul municipal sunt mutați către parcarea etajată din Nord",
       "dek": "HCL 307 redistribuie bani în interiorul împrumutului de 40 milioane lei: scade finanțarea pentru locuințele de tineri și cu 1.400 lei pentru Școala Copăcelu, iar parcarea etajată din Nord ajunge la 10,286 milioane lei din împrumut.",
       "paragraphs": [
@@ -1385,9 +1492,9 @@
     {
       "id": "rm-valcea-hcl-306-20260814",
       "section": "SERVICII",
-      "priority": 999972,
+      "priority": 999969,
       "source_priority": 92,
-      "canonical_rank": 28,
+      "canonical_rank": 31,
       "headline": "Căldura se scumpește cu 13% la Râmnicu Vâlcea. Factura populației rămâne neschimbată, Primăria acoperă diferența",
       "dek": "HCL 306 ridică de la 1 august 2026 costul total al energiei termice pe rețeaua de distribuție de la 518,61 la 586,27 lei/MWh, fără TVA. Prețul facturat populației rămâne 475,62 lei/MWh, iar bugetul local preia o diferență de 110,65 lei/MWh.",
       "paragraphs": [
@@ -1432,9 +1539,9 @@
     {
       "id": "rm-valcea-hcl-305-20260814",
       "section": "SERVICII",
-      "priority": 999971,
+      "priority": 999968,
       "source_priority": 92,
-      "canonical_rank": 29,
+      "canonical_rank": 32,
       "headline": "CET Govora primește dreptul de a cumpăra integral energia termică de la alți producători",
       "dek": "HCL 305 rescrie actul adițional la concesiune după ce CET Govora a refuzat forma din iunie. Documentul leagă schimbarea de oprirea grupurilor pe lignit la 31 august 2026 și de faptul că noua centrală a CJ era estimată să devină operațională cel mai devreme la 15 octombrie 2026.",
       "paragraphs": [
@@ -1477,9 +1584,9 @@
     {
       "id": "rm-valcea-gambling-authorizations-20260723",
       "section": "ADMINISTRAȚIE",
-      "priority": 999970,
+      "priority": 999967,
       "source_priority": 97,
-      "canonical_rank": 30,
+      "canonical_rank": 33,
       "headline": "Jocurile de noroc din Râmnicu Vâlcea: 11 autorizații într-o zi și rețeaua din spatele adreselor",
       "dek": "Pe 23 iulie 2026, Consiliul Local a acordat 11 autorizații anuale pentru patru operatori. VÂLCEA CLAR pune hotărârile în contextul noului regulament local, al taxei de 1.000 lei/mp/an și al registrului ONJN.",
       "paragraphs": [
