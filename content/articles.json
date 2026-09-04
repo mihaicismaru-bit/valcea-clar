@@ -1,15 +1,789 @@
 {
-  "updated_local": "2026-09-04T06:08:45.882054Z",
+  "updated_local": "2026-09-04T14:04:28.013930Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "isu-valcea-interventii-zilnice",
+      "section": "URGENȚE",
+      "priority": 1000000,
+      "source_priority": 94,
+      "canonical_rank": 0,
+      "headline": "ISU Vâlcea: 30 de intervenții pe 3 septembrie 2026, dintre care 22 de prim ajutor",
+      "dek": "ISU Vâlcea raportează pentru 3 septembrie 2026 un total de 30 de intervenții: 5 incendii, 22 de prim ajutor și 3 alte intervenții.",
+      "paragraphs": [
+        "ISU Vâlcea raportează 30 de intervenții pentru data de 3 septembrie 2026.",
+        "Bilanțul oficial indică 5 incendii, 22 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 3 alte intervenții."
+      ],
+      "sources": [
+        {
+          "name": "ISU Vâlcea — pagina oficială",
+          "url": "https://isuvl.igsu.ro/",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T17:04:26+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/isu-valcea-interventii-zilnice/"
+    },
+    {
+      "id": "fast-isu-incendiu-izbucnit-intr-o-gospodarie-din-localitatea-li-729005290f",
+      "section": "URGENȚE",
+      "priority": 999999,
+      "source_priority": 97,
+      "canonical_rank": 1,
+      "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
+      "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
+      "paragraphs": [
+        "ISU Vâlcea precizează în comunicarea oficială: Echipajele operative sosite la fața locului au constatat că arde generalizat o anexă și au identificat, din nefericire, 2 victime carbonizate (un adult și un minor), ambele de sex feminin.",
+        "ISU Vâlcea precizează în comunicarea oficială: S-au deplasat de urgență la locul evenimentului forțe din cadrul Stației de Pompieri Grădiștea, cu două autospeciale de stingere cu apă și spumă."
+      ],
+      "sources": [
+        {
+          "name": "ISU Vâlcea — comunicare oficială",
+          "url": "https://isuvl.igsu.ro/stiri-locale/incendiu-izbucnit-intr-o-gospodarie-din-localitatea-livezi-779",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/fast-isu-incendiu-izbucnit-intr-o-gospodarie-din-localitatea-li-729005290f/"
+    },
+    {
+      "id": "rm-valcea-hcl-342-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999998,
+      "source_priority": 92,
+      "canonical_rank": 2,
+      "headline": "(1) Se aprobă punerea la dispoziția operatorului serviciului de transport public local, societatea ETA S.A., a…",
+      "dek": "Textul integral al HCL 342, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă punerea la dispoziția operatorului serviciului de transport public local, societatea ETA S.A., a bunurilor realizate/achiziționate pentru UAT Municipiul Râmnicu Vâlcea în cadrul proiectelor ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport” și ”Sisteme de transport inteligente – etapa a II-a”, identificate în Anexele 1 - 3 la prezenta hotărâre. (2) Consecință a prevederilor alin. (1) se completează Anexa 4.1-Bunuri de retur la Contractul de delegare a gestiunii serviciilor publice de transport persoane în aria de competență a Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea nr. 17/28.05.2026 cu bunurile identificate în Anexele 1 - 3 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Se mandatează reprezentantul Municipiului Râmnicu Vâlcea în Adunarea Generală a Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea să aprobe modificarea Contractului de delegare a gestiunii serviciilor publice de transport persoane în aria teritorială de competență a Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea nr. 17/28.05.2026, în sensul completării anexei 4.1-Bunuri de retur cu bunurile realizate/achiziționate în cadrul proiectelor ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport” și ”Sisteme de transport inteligente – etapa a II-a”, puse la dispoziția operatorului serviciului de transport public local, societatea ETA S.A, conform.",
+        "Se mandatează reprezentantul Municipiului Râmnicu Vâlcea în Adunarea Generală a Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea să aprobe modificarea Contractului de delegare a gestiunii serviciilor publice de transport persoane în aria teritorială de competență a Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea nr. 17/28.05.2026, în sensul completării anexei 4.1-Bunuri de retur cu bunurile realizate/achiziționate în cadrul proiectelor ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport” și ”Sisteme de transport inteligente – etapa a II-a”, puse la dispoziția operatorului serviciului de transport public local, societatea ETA S.A, de către unitățile administrativ – teritoriale partenere, membre ale Asociației.",
+        "Se împuternicește Președintele Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea, domnul Florinel Constantinescu, să semneze actul adițional la Contractului de delegare a gestiunii serviciilor publice de transport persoane în aria teritorială de competență a Asociației de Dezvoltare Intercomunitară pentru Transportul Public Vâlcea, înregistrat sub nr. 17/28.05.2026.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 342/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/6901DEFF342BAAF8C2258E6800313C4B/$FILE/hotarirea%20342%20-%2031%20august%20%202026%20-%20punerea%20la%20dispozitia%20ETA%20bunuri%20sisteme%20de%20transport%20inteligente.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-342-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-341-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999997,
+      "source_priority": 92,
+      "canonical_rank": 3,
+      "headline": "Transferul dreptului de proprietate către UAT Orașul Călimănești asupra bunurilor - echipamente ITS pentru autobuze…",
+      "dek": "Textul integral al HCL 341, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă transferul dreptului de proprietate către UAT Orașul Călimănești asupra bunurilor - echipamente ITS pentru autobuze și microbuze electrice, achiziționate în cadrul proiectului ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, având datele de identificare prevăzute în Anexa nr. 1 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Consiliul Local aprobă transferul dreptului de proprietate către UAT Orașul Ocnele Mari asupra bunurilor - echipamente ITS pentru autobuze și microbuze electrice, achiziționate în cadrul proiectului ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, având datele de identificare prevăzute în Anexa nr. 2 la prezenta hotărâre.",
+        "Consiliul Local aprobă transferul dreptului de proprietate către UAT Orașul Băile Govora asupra bunurilor - echipamente ITS pentru autobuze și microbuze electrice, achiziționate în cadrul proiectului ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, având datele de identificare prevăzute în Anexa nr. 3 la prezenta hotărâre.",
+        "Consiliul Local aprobă transferul dreptului de proprietate către UAT Comuna Dăești asupra bunurilor - echipamente ITS pentru autobuze și microbuze electrice, achiziționate în cadrul proiectului ”Sistem de transport inteligent la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, având datele de identificare prevăzute în Anexa nr. 4 la prezenta hotărâre.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 341/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/52870FA103889306C2258E6800312FA3/$FILE/hotarirea%20341%20-%2031%20august%202026%20-%20transfer%20echipamente%20ITS%20pentru%20autobuze%20si%20microbuze%20electrice%20catre%20UAT%20uri%20din%20ADI%20Transport.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-341-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-340-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999996,
+      "source_priority": 92,
+      "canonical_rank": 4,
+      "headline": "Transferul dreptului de proprietate către UAT Orașul Călimănești asupra bunurilor - stații de îmbarcare debarcare…",
+      "dek": "Textul integral al HCL 340, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă transferul dreptului de proprietate către UAT Orașul Călimănești asupra bunurilor - stații de îmbarcare debarcare călători realizate în cadrul proiectului ”Sisteme de transport inteligente la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, precum și a dotărilor și echipamentelor aferente acestora, având datele de identificare prevăzute în Anexa nr. 1 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Transferul dreptului de proprietate către UAT Orașul Ocnele Mari asupra bunurilor - stații de îmbarcare debarcare călători realizate în cadrul proiectului ”Sisteme de transport inteligente la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, precum și a dotărilor și echipamentelor aferente acestora, având datele de identificare prevăzute în Anexa nr. 1 la prezenta hotărâre.",
+        "Transferul dreptului de proprietate către UAT Orașul Băile Govora asupra bunurilor - stații de îmbarcare debarcare călători realizate în cadrul proiectului ”Sisteme de transport inteligente la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, precum și a dotărilor și echipamentelor aferente acestora, având datele de identificare prevăzute în Anexa nr. 1 la prezenta hotărâre.",
+        "Transferul dreptului de proprietate către UAT Comuna Dăești asupra bunurilor - stații de îmbarcare debarcare călători realizate în cadrul proiectului ”Sisteme de transport inteligente la nivelul localităților membre ale Asociației de Dezvoltare Intercomunitară ADI Transport”, precum și a dotărilor și echipamentelor aferente acestora, având datele de identificare prevăzute în Anexa nr. 1 la prezenta hotărâre.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 340/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/D140FF1BB80B275DC2258E68003122F1/$FILE/hotarirea%20340%20-%2031%20august%202026%20-%20transfer%20statii%20imbarcare%20debarcare%20catre%20UAT%20uri%20din%20ADI%20Transport.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-340-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-339-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999995,
+      "source_priority": 92,
+      "canonical_rank": 5,
+      "headline": "(1) Se aprobă transferul dreptului de proprietate către UAT Comuna Bujoreni, asupra bunurilor – stații de îmbarcare…",
+      "dek": "Textul integral al HCL 339, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă transferul dreptului de proprietate către UAT Comuna Bujoreni, asupra bunurilor – stații de îmbarcare debarcare călători realizate în cadrul proiectului ”Sisteme de transport inteligente – etapa a II-a”, precum și a dotărilor și echipamentelor aferente acestora, având datele de identificare prevăzute în Anexa nr. 1 la prezenta hotărâre. (2) Predarea-primirea bunurilor se va face pe bază de protocol încheiat între Municipiul Râmnicu Vâlcea și UAT Comuna Bujoreni, în termen de cel mult 15 zile de la data adoptării hotărârii de transfer a dreptului de proprietate și în forma prevăzută în Anexa nr. 2 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Punerea în aplicare revine Direcția Dezvoltare Locală.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 339/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/AA0F84F1DDC858CCC2258E68003114C7/$FILE/hotarirea%20339%20-%2031%20august%202026%20-%20transfer%20statii%20imbarcare%20debarcare%20catre%20UAT%20Bujoreni.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-339-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-337-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999994,
+      "source_priority": 92,
+      "canonical_rank": 6,
+      "headline": "Constituirea comisiei de selecţie şi nominalizare pentru un post vacant de membru în Consiliul de Administrație la…",
+      "dek": "Textul integral al HCL 337, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă constituirea comisiei de selecţie şi nominalizare pentru un post vacant de membru în Consiliul de Administrație la societatea Centrul de Afaceri Flandra Vâlcea S.A, în următoarea componență: 1. Rusănescu Alina Daniela- Președinte; Munteanu Venera Daniela - Președinte supleant; 2. Pană Liuță Viorel – membru; Belețescu Climent Florin - membru supleant. 3. Arc Consulting SRL - expert independent, Căprar Elena - membru.",
+        "Hotărârea a fost adoptată cu 20 pentru · 0 împotrivă · 2 abțineri.",
+        "Consiliul Local aprobă constituirea comisiei de solutionare a contestațiilor pentru un post vacant de membru în Consiliul de Administrație la societatea Centrul de Afaceri Flandra Vâlcea S.A, în următoarea componență: 1. Chițan Cristina – Președinte; Bâlă Elena Teodora – Președinte supleant; 2. Boțoghină Adina Mihaela – Membru; Prodescu Mihaela – Membru supleant. 3. Arc Consulting SRL - expert independent – membru.",
+        "Secretariatul comisiei de selecție şi nominalizare și al comisiei de soluționare a contestațiilor va fi asigurat de către dna Ciontea Mihaela Teodora – șef Serviciu Juridic, Guvernanță Corporativă, Legea 10/2001 și de către dnul Almariei Ionuț – consilier juridic în cadrul aceluiași serviciu.",
+        "(1) Pentru participarea la lucrările Comisiei de selecție și nominalizare, membrii comisiei și persoanele care asigură secretariatul comisiei au dreptul la o indemnizație de 20% din indemnizația ordonatorului principal de credite. (2) Pentru participarea la lucrările Comisiei de soluționare a contestațiilor, membrii comisiei de soluționare a contestatiilor desemnați de autoritatea publică tutelară au dreptul la o indemnizație de 10% din indemnizația ordonatorului principal de credite.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 337/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/A7EE0C20CF07B6C7C2258E680030F05E/$FILE/hotarirea%20337%20-31%20august%202026%20-%20constituire%20comisii%20selectie%20si%20de%20solutionare%20contestatii%20administrator%20Flandra%20SA.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-337-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-336-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999993,
+      "source_priority": 92,
+      "canonical_rank": 7,
+      "headline": "Actualizarea Devizului General și a indicatorilor tehnico – economici aferenți proiectului ”Creșterea eficienței…",
+      "dek": "Textul integral al HCL 336, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă actualizarea Devizului General și a indicatorilor tehnico – economici aferenți proiectului ”Creșterea eficienței energetice în sediul administrativ al Primăriei Municipiului Râmnicu Vâlcea”, la valoarea totală de 5.447.571,50 lei fără TVA, respectiv 6.535.101,79 lei cu TVA, din care C+M la valoarea de 4.443.995,24 lei fără TVA, respectiv 5.315.302,54 lei cu TVA, conform anexelor nr. 1 și nr. 2 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Punerea în aplicare revine Direcția Dezvoltare Locală și Direcția Economico-Financiară.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 336/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/971FB12EDD045AF9C2258E680030E2B5/$FILE/hotarirea%20336%20-%2031%20august%202026%20-%20actualizare%20Deviz%20General%20si%20indicatori%20pentru%20proiectul%20Cresterea%20eficientei%20energetice%20in%20sediul%20administrativ%20primarie.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-336-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-335-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999992,
+      "source_priority": 92,
+      "canonical_rank": 8,
+      "headline": "Actualizarea Devizului General și a indicatorilor tehnico – economici aferenți proiectului ”Creșterea eficienței…",
+      "dek": "Textul integral al HCL 335, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă actualizarea Devizului General și a indicatorilor tehnico – economici aferenți proiectului ”Creșterea eficienței energetice în clădirea – Seminarul Teologic Sfântul Nicolae”, la valoarea totală de 9.640.657,66 lei fără TVA, respectiv 11.635.711,58 lei cu TVA, din care C+M la valoarea de 8.765.121,49 lei fără TVA, respectiv 10.596.173,31 lei cu TVA, conform anexelor nr. 1 și nr. 2 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Punerea în aplicare revine Direcția Dezvoltare Locală și Direcția Economico-Financiară.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 335/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/DBD91AF2FC5B7B35C2258E680030D5C1/$FILE/hotarirea%20335%20-%2031%20august%202026%20-%20actualizare%20Deviz%20General%20si%20indicatori%20pentru%20proiectul%20Cresterea%20eficientei%20energetice%20Seminarul%20Teologic.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-335-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-334-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999991,
+      "source_priority": 92,
+      "canonical_rank": 9,
+      "headline": "Începând cu data de 01.09.2026, se aprobă organigrama, statul de funcții și Regulamentul de Organizare și Funcționare…",
+      "dek": "Textul integral al HCL 334, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Începând cu data de 01.09.2026, se aprobă organigrama, statul de funcții și Regulamentul de Organizare și Funcționare ale Căminului pentru Persoane Vârstnice Râmnicu Vâlcea, al căror conținut este prezentat în anexele nr.1 – Organigrama, nr. 2 - Stat de Funcții Căminul pentru Persoane Vârstnice Râmnicu Vâlcea și nr. 3 - Regulamentul de Organizare și Funcționare, care fac parte integrantă din prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Începând cu data aplicării prezentei orice prevederi contrare își încetează aplicabilitatea.",
+        "Punerea în aplicare revine Căminul pentru Persoane Vârstnice Râmnicu Vâlcea.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 334/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/27a04e9cd1066e89c2258e680030c6e4/$FILE/hotarirea%20334%20-%2031%20august%202026%20-%20aprobare%20organigrama%2C%20stat%20functii%20si%20ROF%20Camin.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-334-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-333-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999990,
+      "source_priority": 92,
+      "canonical_rank": 10,
+      "headline": "Se mandatează reprezentantul Municipiului Râmnicu Vâlcea în Adunarea Generală a Acţionarilor la societatea APAVIL…",
+      "dek": "Textul integral al HCL 333, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Se mandatează reprezentantul Municipiului Râmnicu Vâlcea în Adunarea Generală a Acţionarilor la societatea APAVIL S.A. să aprobe rectificarea bugetul de venituri și cheltuieli pentru anul 2026, prevăzute în anexele nr.1 și nr.2 la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 21 pentru · 1 împotrivă · 0 abțineri.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 333/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/c5f0044dbac7f3e2c2258e680030b762/$FILE/hotarirea%20333%20-%2031%20august%202026%20-%20mandatare%20reprezentant%20AGA%20Apavil%20rectificare%20buget.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-333-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-332-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999989,
+      "source_priority": 92,
+      "canonical_rank": 11,
+      "headline": "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (pariuri în cotă fixă) operatorului…",
+      "dek": "Textul integral al HCL 332, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (pariuri în cotă fixă) operatorului economic PARI BET TOTAL SRL, cu sediul în Municipiul Pitești, Bulevardul Republicii nr. 148, Clădirea C2, Etaj 2, județ Argeș pentru punctul de lucru situat în Râmnicu-Vâlcea, strada Nicolae Titulescu nr.2-3. (2) Se împuternicește primarul municipiului Râmnicu - Vâlcea să elibereze și să semneze Autorizația anuală de funcționare pentru punctul de lucru prevăzut la alin.(1), în conformitate cu prevederile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/2026.",
+        "Hotărârea a fost adoptată cu 17 pentru · 5 împotrivă · 0 abțineri.",
+        "Taxa locală anuală pentru eliberarea autorizației de funcționare, calculată la suprafața utilă de 15 m.p. a spațiului în care se va desfășura activitatea de jocuri de noroc, este de 15.000 lei și se achită conform prevederilor Hotărârii Consiliului Local nr.142/2026.",
+        "Titularul autorizației are obligația de a respecta prevederile legislației în vigoare în domeniul jocurilor de noroc și condițiile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/19.05.2026.",
+        "Punerea în aplicare revine Serviciul Autorizări Activități Comerciale, Evenimente Publice și Direcția Economico-Financiară.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 332/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/f23dfeb03ed04651c2258e680030aa0f/$FILE/hotarirea%20332%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20pentru%20jocuri%20de%20noroc%20pariuri%20in%20cota%20fixa%20%28PARI%20BET%20TOTAL%20SRL%20punct%20de%20lucru%20strada%20Nicolae%20Titulescu%20%20nr%202-3%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-332-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-331-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999988,
+      "source_priority": 92,
+      "canonical_rank": 12,
+      "headline": "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (pariuri în cotă fixă) operatorului…",
+      "dek": "Textul integral al HCL 331, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (pariuri în cotă fixă) operatorului economic PARI BET TOTAL SRL, cu sediul în Municipiul Pitești, Bulevardul Republicii nr. 148, Clădirea C2, Etaj 2, județ Argeș pentru punctul de lucru situat în Râmnicu-Vâlcea, strada Regina Maria nr.22, bloc M.V. Popescu, scara 5, Etaj Parter, ap.2. (2) Se împuternicește primarul municipiului Râmnicu - Vâlcea să elibereze și să semneze Autorizația anuală de funcționare pentru punctul de lucru prevăzut la alin.(1), în conformitate cu prevederile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/2026.",
+        "Hotărârea a fost adoptată cu 17 pentru · 5 împotrivă · 0 abțineri.",
+        "Taxa locală anuală pentru eliberarea autorizației de funcționare, calculată la suprafața utilă de 20 m.p. a spațiului în care se va desfășura activitatea de jocuri de noroc, este de 20.000 lei și se achită conform prevederilor Hotărârii Consiliului Local nr.142/2026.",
+        "Titularul autorizației are obligația de a respecta prevederile legislației în vigoare în domeniul jocurilor de noroc și condițiile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/19.05.2026.",
+        "Punerea în aplicare revine Serviciul Autorizări Activități Comerciale, Evenimente Publice și Direcția Economico-Financiară.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 331/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/10c9da9e4b3206a9c2258e6800309b85/$FILE/hotarirea%20331%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20pentru%20jocuri%20de%20noroc%20pariuri%20in%20cota%20fixa%20%28PARI%20BET%20TOTAL%20SRL%20punct%20de%20lucru%20Regina%20Maria%20nr%2022%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-331-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-330-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999987,
+      "source_priority": 92,
+      "canonical_rank": 13,
+      "headline": "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (pariuri în cotă fixă) operatorului…",
+      "dek": "Textul integral al HCL 330, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (pariuri în cotă fixă) operatorului economic PARI BET TOTAL SRL, cu sediul în Municipiul Pitești, Bulevardul Republicii nr. 148, Clădirea C2, Etaj 2, județ Argeș pentru punctul de lucru situat în Râmnicu-Vâlcea, strada Matei Basarab nr.4, Județ Vâlcea. (2) Se împuternicește primarul municipiului Râmnicu - Vâlcea să elibereze și să semneze Autorizația anuală de funcționare pentru punctul de lucru prevăzut la alin.(1), în conformitate cu prevederile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/2026.",
+        "Hotărârea a fost adoptată cu 17 pentru · 5 împotrivă · 0 abțineri.",
+        "Taxa locală anuală pentru eliberarea autorizației de funcționare, calculată la suprafața utilă de 15,1 m.p. a spațiului în care se va desfășura activitatea de jocuri de noroc, este de 15.100 lei și se achită conform prevederilor Hotărârii Consiliului Local nr.142/2026.",
+        "Titularul autorizației are obligația de a respecta prevederile legislației în vigoare în domeniul jocurilor de noroc și condițiile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/19.05.2026.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 330/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/5caef5edd8886a56c2258e6800308976/$FILE/hotarirea%20330%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20pentru%20jocuri%20de%20noroc%20pariuri%20in%20cota%20fixa%20%28PARI%20BET%20TOTAL%20SRL%20punct%20de%20lucru%20strada%20Matei%20Basarab%20%20nr%204%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-330-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-329-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999986,
+      "source_priority": 92,
+      "canonical_rank": 14,
+      "headline": "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (slot-machine) operatorului…",
+      "dek": "Textul integral al HCL 329, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (slot-machine) operatorului economic PROJECT P&C IMPEX SRL, cu sediul în județul Hunedoara, Municipiul Deva, B-dul Iuliu Maniu, bl. L1, etaj MEZ, pentru punctul de lucru situat în municipiul Râmnicu - Vâlcea, strada Nicolae Titulescu nr.2 - 3. (2) Se împuternicește primarul municipiului Râmnicu - Vâlcea să elibereze și să semneze Autorizația anuală de funcționare pentru punctul de lucru prevăzut la alin.(1), în conformitate cu prevederile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/2026.",
+        "Hotărârea a fost adoptată cu 17 pentru · 5 împotrivă · 0 abțineri.",
+        "Taxa locală anuală pentru eliberarea autorizației de funcționare, calculată la suprafața utilă de 5,16 m.p. a spațiului în care se va desfășura activitatea de jocuri de noroc, este de 5.160 lei și se achită conform prevederilor Hotărârii Consiliului Local nr.142/2026.",
+        "Titularul autorizației are obligația de a respecta prevederile legislației în vigoare în domeniul jocurilor de noroc și condițiile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/19.05.2026.",
+        "Punerea în aplicare revine Serviciul Autorizări Activități Comerciale, Evenimente Publice și Direcția Economico-Finnanciară.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 329/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/dca48ea0784214a1c2258e6800307cb5/$FILE/hotarirea%20329%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20slot%20machine%20pentru%20jocuri%20de%20noroc%20%28PROJECT%20P%26C%20IMPEX%20SRL%20punct%20de%20lucru%20strada%20Nicolae%20Titulescu%20nr%202-3%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-329-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-328-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999985,
+      "source_priority": 92,
+      "canonical_rank": 15,
+      "headline": "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (slot-machine) operatorului…",
+      "dek": "Textul integral al HCL 328, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se aprobă acordarea autorizației anuale de funcționare pentru jocuri de noroc (slot-machine) operatorului economic CARADUNE GAMES SRL, cu sediul în municipiul Craiova, jud. Dolj, Bulevardul NICOLAE ROMANESCU nr.21, pentru punctul de lucru situat în municipiul Râmnicu - Vâlcea, str. Rapsodiei nr.33, bl. H7, parter. (2) Se împuternicește primarul municipiului Râmnicu - Vâlcea să elibereze și să semneze Autorizația anuală de funcționare pentru punctul de lucru prevăzut la alin.(1), în conformitate cu prevederile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/2026.",
+        "Hotărârea a fost adoptată cu 17 pentru · 5 împotrivă · 0 abțineri.",
+        "Taxa locală anuală pentru eliberarea autorizației de funcționare, calculată la suprafața utilă de 15 m.p. a spațiului în care se va desfășura activitatea de jocuri de noroc, este de 15.000 lei și se achită conform prevederilor Hotărârii Consiliului Local nr.142/2026.",
+        "Titularul autorizației are obligația de a respecta prevederile legislației în vigoare în domeniul jocurilor de noroc și condițiile Regulamentului privind autorizarea, amplasarea și funcționarea activităților de jocuri de noroc pe raza municipiului Râmnicu-Vâlcea, aprobat prin Hotărârea Consiliului Local nr.142/19.05.2026.",
+        "Punerea în aplicare revine Serviciul Autorizări Activități Comerciale, Evenimente Publice și Direcția Economico-Finnanciară.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 328/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/e6662291a9c0fbd1c2258e680030706a/$FILE/hotarirea%20328%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20slot%20machine%20pentru%20jocuri%20de%20noroc%20%28CARADUNE%20SRL%20punct%20de%20lucru%20strada%20Rapsodiei%20nr%2033%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-328-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-327-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999984,
+      "source_priority": 92,
+      "canonical_rank": 16,
+      "headline": "(1) Începând cu data de 01.09.2026, se modifică statul de funcții al Centrului Cultural Municipal Râmnicu Vâlcea…",
+      "dek": "Textul integral al HCL 327, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Începând cu data de 01.09.2026, se modifică statul de funcții al Centrului Cultural Municipal Râmnicu Vâlcea, după cum urmează: a) prin transformarea a 4 (patru) posturi contractuale vacante, astfel: Nr. crt. Compartiment/Structură Funcția actuală Funcția transformată Nr. posturi 1 Structura Teatrul Ariel Actor grad debutant Actor grad II 1 2 Structura Filarmonica Ion Dumitrescu Concert – maestru grad I Concert – maestru grad I A 1 3 Structura Filarmonica Ion Dumitrescu Corist treapta II Artist liric grad I 1 4 Compartiment secretariat artistic Secretar marketing grad II Referent de specialitate grad IA 1 b) prin promovare în grad profesional, astfel: Nr. crt. Compartiment/Structură Funcția actuală Funcția în care a promovat Nr. posturi 1 Structura Teatrul Ariel Actor grad I Actor grad IA 1 2 Compartiment tehnic/producție spectacole și concerte Artist plastic grad I Artist plastic grad I A 1 3 Compartiment financiar - contabilitate Referent de specialitate grad II Referent de specialitate grad I 1 4 Compartiment juridic și….",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Începând cu data de 01.09.2026, se modifică Regulamentul de organizare și funcționare al Centrului Cultural Municipal Râmnicu Vâlcea, al cărui conținut este prezentat în anexa nr. 2 la prezenta hotărâre.",
+        "Punerea în aplicare revine Centrul Cultural Municipal Rm. Vâlcea.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 327/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/a6ff6d0c6c5d16edc2258e68003062d2/$FILE/hotarirea%20327%20-%2031%20august%202026%20-%20modificare%20stat%20functii%20si%20ROF%20Centrul%20Cultural.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-327-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-326-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999983,
+      "source_priority": 92,
+      "canonical_rank": 17,
+      "headline": "Începând cu data de 01.09.2026, se aprobă prețul biletelor percepute de Teatrul ”Ariel” și Cinematograful ”Geo…",
+      "dek": "Textul integral al HCL 326, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Începând cu data de 01.09.2026, se aprobă prețul biletelor percepute de Teatrul ”Ariel” și Cinematograful ”Geo Saizescu”, structuri din cadrul Centrului Cultural Municipal Râmnicu Vâlcea, conform anexei care face parte integrantă din prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 21 pentru · 1 împotrivă · 0 abțineri.",
+        "Începând cu data aplicării prezentei, orice prevederi contrare își încetează aplicabilitatea.",
+        "Punerea în aplicare revine Centrul Cultural Municipal Rm. Vâlcea.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 326/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/8a74679724cc4be6c2258e68003055de/$FILE/hotarirea%20326%20-%2031%20august%202026%20-%20aprobare%20pret%20bilete%20Centru%20Cultural%20Municipal%20%28teatru%20si%20cinematograf%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-326-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-325-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999982,
+      "source_priority": 92,
+      "canonical_rank": 18,
+      "headline": "(1) Se avizează indicatorii de performanță ai serviciului de alimentare cu apă şi de canalizare furnizat/prestat de…",
+      "dek": "Textul integral al HCL 325, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "(1) Se avizează indicatorii de performanță ai serviciului de alimentare cu apă şi de canalizare furnizat/prestat de către operatorul regional Apavil S.A., pentru anul 2026 – referitor la Municipiul Râmnicu Vâlcea, care vor constitui anexă la Regulamentul serviciului de alimentare cu apă și de canalizare furnizat/prestat de către operatorul regional Apavil S.A. (2) Indicatorii avizați conform alin.(1) sunt prevăzuți în anexa la prezenta hotărâre.",
+        "Hotărârea a fost adoptată cu 19 pentru · 3 împotrivă · 0 abțineri.",
+        "Se acordă mandat special reprezentatului Municipiului Râmnicu Vâlcea în Adunarea Generală a Asociației, în vederea exprimării votului cu privire la: a) aprobarea indicatorilor de performanță ai serviciului de alimentare cu apă şi de canalizare furnizat/prestat de către operatorul regional Apavil S.A., pentru anul 2026 și includerii acestora în anexă la Regulamentul serviciului de alimentare cu apă și de canalizare furnizat/prestat de către operatorul regional Apavil S.A.; b) completarea în mod corespunzător, prin Act adițional, a Contractului de delegare a gestiunii serviciilor publice de alimentare cu apă și de canalizare nr.1/2008, cu modificările și completările ulterioare, respectiv a anexei care cuprinde Regulamentul serviciului de alimentare cu apă şi de canalizare furnizat/prestat de către operatorul regional Apavil S.A.",
+        "Se mandatează Asociația de Dezvoltare Intercomunitară ”APA Vâlcea” să semneze, prin reprezentantul său legal - Președinte, în numele şi pe seama Municipiului Râmnicu Vâlcea, Actul adițional la Contractul de delegare a gestiunii serviciilor publice de alimentare cu apă și canalizare nr.1/2008, cu modificările și completările ulterioare, ce se va încheia cu Apavil S.A. și care va cuprinde modificarea prevăzută la.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 325/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/2be9557af9d7e542c2258e6800304830/$FILE/hotarirea%20325%20-%2031%20august%202026%20-%20mandatare%20reprezentant%20municipiu%20in%20ADI%20APA%20aprobare%20indicatori%20performanta%20serviciu%20alimentare%20cu%20apa%20si%20de%20canalizare.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-325-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-324-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999981,
+      "source_priority": 92,
+      "canonical_rank": 19,
+      "headline": "Repartizarea locuinței de serviciu situată în Municipiul Râmnicu Vâlcea, strada Republicii nr.40, bloc I9, scara B…",
+      "dek": "Textul integral al HCL 324, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă repartizarea locuinței de serviciu situată în Municipiul Râmnicu Vâlcea, strada Republicii nr.40, bloc I9, scara B, ap.19, doamnei Răduț Alexandra - Mădălina.",
+        "Hotărârea a fost adoptată cu 18 pentru · 0 împotrivă · 4 abțineri.",
+        "Punerea în aplicare revine Direcția Dezvoltare Locală.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 324/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/ed58ee33cdee2594c2258e6800303b95/$FILE/hotarirea%20324-%2031%20august%202026%20-%20repartizare%20locuinta%20serviciu%20dnei%20Radut%20Alexandra.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-324-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-323-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999980,
+      "source_priority": 92,
+      "canonical_rank": 20,
+      "headline": "Prelungirea perioadei inițiale de concesionare a terenului proprietate publică a municipiului, situat în Râmnicu…",
+      "dek": "Textul integral al HCL 323, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă prelungirea perioadei inițiale de concesionare a terenului proprietate publică a municipiului, situat în Râmnicu Vâlcea, Aleea Melodiei, bl. N9, sc.A, cu 12 ani și 6 luni, respectiv până la 03.03.2039, pentru proprietarul apartamentului nr. 1 și actualizarea suprafeței terenului concesionat, în sensul concesionării suprafeței de teren rezultată din măsurători de 0,63 m.p. ( suprafață rotunjită în documentația tehnică de cadastru la 1 mp ), identificată in Planul de amplasament și delimitare – anexă la prezenta hotărâre, în loc de 3,80 mp – suprafață aprobată inițial prin Hotărârea Consiliului Local nr. 26/29.03.2001,.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Valoarea redevenței corespunzătoare perioadei de prelungire a duratei concesiunii este de 210,42 euro (334 euro/mp/12 ani și 6 luni x 0,63 mp), cu plata unei redevențe anuale de 16,84 euro/an (210,42 euro :12 ani și 6 luni), echivalent în lei.",
+        "Cheltuielile aferente întabulării terenului concesionat în Cartea Funciară a municipiului și toate taxele ocazionate de înscrierea dreptului de concesiune cad în sarcina concesionarului.",
+        "Punerea în aplicare revine Direcția Dezvoltare Locală.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 323/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/6bbdbc7580580471c2258e6800302dba/$FILE/hotarirea%20323%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%200%2C63%20%20mp.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-323-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-322-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999979,
+      "source_priority": 92,
+      "canonical_rank": 21,
+      "headline": "Prelungirea perioadei inițiale de concesionare a terenului proprietate publică a m perioadei inițiale de concesionare…",
+      "dek": "Textul integral al HCL 322, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă prelungirea perioadei inițiale de concesionare a terenului proprietate publică a m perioadei inițiale de concesionare cu 12 ani și 6 luni, respectiv până la 11.03.2039, pentru terenul proprietate publică a municipiului situat în Râmnicu Vâlcea, str. Rapsodiei, nr.31, bloc M1, sc. C pe care este realizat primul acces din exterior (alee de acces + podest) la apartamentul nr. 4, pentru proprietarul acestuia, și actualizarea suprafeței terenului concesionat în sensul concesionării suprafeței rezultată din măsurători de 7,40 mp, identificată ca S1+S2 în Planul de amplasament și delimitare - anexă la prezenta hotărâre, din care suprafața de 6,40 mp (S1, rotunjită în CF la 6 mp) este înscrisă în Cartea Funciară nr. 65211, iar suprafața de 1 mp (S2) este înscrisă în Cartea Funciară nr. 65188, în loc de 10,85 mp - suprafață aprobată inițial prin Hotărârea Consiliului Local nr. 115/2001,.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Valoarea redevenței corespunzătoare perioadei de prelungire a duratei concesiunii este de 2.471,60 euro (334 euro/mp/12 ani și 6 luni x 7,4 mp), cu plata unei redevențe anuale de 197,73 euro/an (2.471,6 euro :12 ani și 6 luni), echivalent în lei.",
+        "Se actualizează suprafeța terenului concesionat, proprietate publică a municipiului, situat în Râmnicu Vâlcea, str. Rapsodiei, nr.31, bloc M1, sc. C, pe care este realizat al doilea acces din exterior la apartamentul nr. 4, în sensul concesionării suprafeței rezultată din măsurători de 4,30 mp (rotunjit 4 mp), identificată ca S3 în Planul de amplasament și delimitare - anexă la prezenta hotărâre, înscrisă în Cartea Funciară nr. 65188, în loc de 3,72 mp - suprafață aprobată inițial prin Hotărârea Consiliului Local nr. 39/2003,.",
+        "Plata redevenței în sumă de 58 USD, reprezentând diferența dintre redevența datorată pentru suprafața actualizată (430 USD) și redevența calculată inițial (372 USD) se va face în rate anuale, pe perioada contractuală rămasă. Începând cu anul 2026 redevența va fi de 40,10 USD/an, față de 14,88 USD cât este în prezent.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 322/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/9f9c51aa0e736c6bc2258e680030207e/$FILE/hotarirea%20322%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%207%2C4%20mp.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-322-20260831/"
+    },
+    {
+      "id": "rm-valcea-hcl-321-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999978,
+      "source_priority": 92,
+      "canonical_rank": 22,
+      "headline": "Prelungirea perioadei inițiale de concesionare a terenului proprietate publică a municipiului situat în Râmnicu…",
+      "dek": "Textul integral al HCL 321, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
+      "paragraphs": [
+        "Consiliul Local aprobă prelungirea perioadei inițiale de concesionare a terenului proprietate publică a municipiului situat în Râmnicu Vâlcea, str. Henri Coandă, nr.1, cu 12 ani și 6 luni, respectiv până la 17.03.2039 și actualizarea suprafeței terenului concesionat în sensul concesionării suprafeței totale de teren rezultată din măsurători de 9,08 mp, compusă din terenul în suprafață de 6,16 mp ( rotunjit în CF nr. 44543 la 6 mp ) – identificat in Planul de amplasament și delimitare - Anexa nr. 1 la prezenta hotărâre și terenul în suprafață de 2,92 mp (rotunjit în CF nr. 44553 la 3 mp ) – identificat în Planul de amplasament și delimitare – Anexa nr. 2 la prezenta hotărâre, în loc de 9,10 mp ( 6,20 mp +2,90 mp ) – suprafață aprobată inițial prin Hotărârea Consiliului Local nr. 88/35/31.10.2000,.",
+        "Hotărârea a fost adoptată cu 22 pentru · 0 împotrivă · 0 abțineri.",
+        "Valoarea redevenței corespunzătoare perioadei de prelungire a duratei concesiunii este de 3032,72 euro (334 euro/mp/12 ani și 6 luni x 9,08 mp), cu plata unei redevențe anuale de 242,62 euro/an (3032,72 euro : 12 ani și 6 luni), echivalent în lei.",
+        "Punerea în aplicare revine Direcția Dezvoltare Locală.",
+        "VÂLCEA CLAR păstrează aceeași hotărâre în monitorizare pentru anexele, contractele, plățile și efectele de implementare care pot apărea ulterior în documentele publice."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 321/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/72c96c8e3e2da38dc2258e6800300a53/$FILE/hotarirea%20321%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%209%2C08%20mp.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-hcl-321-20260831/"
+    },
+    {
+      "id": "rm-valcea-gambling-authorizations-20260831",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999977,
+      "source_priority": 91,
+      "canonical_rank": 23,
+      "headline": "5 hotărâri pentru autorizații anuale de jocuri de noroc în cea mai recentă serie analizată a Consiliului Local Râmnicu Vâlcea",
+      "dek": "În registrul oficial, 5 dintre cele mai recente 25 de hotărâri din 31.08.2026 privesc autorizații anuale de funcționare pentru jocuri de noroc; ele nu sunt tratate automat drept tot atâtea săli noi.",
+      "paragraphs": [
+        "În grupul celor mai recente 25 de hotărâri afișate în registrul oficial, 5 acte din 31.08.2026 au ca obiect acordarea unei autorizații anuale de funcționare pentru jocuri de noroc.",
+        "O autorizație anuală de funcționare nu este clasificată de VÂLCEA CLAR drept dovadă a deschiderii unei săli noi; pentru această concluzie este necesar istoricul fiecărui punct de lucru și al autorizațiilor sale.",
+        "Hotărârile din acest grup nominalizează mai mulți operatori economici nominalizați în hotărârile oficiale; fiecare act este urmărit separat prin documentul oficial al hotărârii, nu doar prin titlul din registru."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Municipiului Râmnicu Vâlcea — registrul HCL adoptate",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn?OpenView&Count=500",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 332/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/f23dfeb03ed04651c2258e680030aa0f/$FILE/hotarirea%20332%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20pentru%20jocuri%20de%20noroc%20pariuri%20in%20cota%20fixa%20%28PARI%20BET%20TOTAL%20SRL%20punct%20de%20lucru%20strada%20Nicolae%20Titulescu%20%20nr%202-3%29.htm",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 331/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/10c9da9e4b3206a9c2258e6800309b85/$FILE/hotarirea%20331%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20pentru%20jocuri%20de%20noroc%20pariuri%20in%20cota%20fixa%20%28PARI%20BET%20TOTAL%20SRL%20punct%20de%20lucru%20Regina%20Maria%20nr%2022%29.htm",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 330/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/5caef5edd8886a56c2258e6800308976/$FILE/hotarirea%20330%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20pentru%20jocuri%20de%20noroc%20pariuri%20in%20cota%20fixa%20%28PARI%20BET%20TOTAL%20SRL%20punct%20de%20lucru%20strada%20Matei%20Basarab%20%20nr%204%29.htm",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 329/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/dca48ea0784214a1c2258e6800307cb5/$FILE/hotarirea%20329%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20slot%20machine%20pentru%20jocuri%20de%20noroc%20%28PROJECT%20P%26C%20IMPEX%20SRL%20punct%20de%20lucru%20strada%20Nicolae%20Titulescu%20nr%202-3%29.htm",
+          "tier": "T1"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 328/2026-08-31",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/e6662291a9c0fbd1c2258e680030706a/$FILE/hotarirea%20328%20-%2031%20august%202026%20-%20acordare%20autorizatie%20anuala%20de%20functionare%20slot%20machine%20pentru%20jocuri%20de%20noroc%20%28CARADUNE%20SRL%20punct%20de%20lucru%20strada%20Rapsodiei%20nr%2033%29.htm",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-04T14:12:45+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/rm-valcea-gambling-authorizations-20260831/"
+    },
+    {
       "id": "ramnicu-cet-govora-oprire-apa-calda-20260904",
       "section": "UTIL",
-      "priority": 1000000,
+      "priority": 999976,
       "source_priority": 100,
-      "canonical_rank": 0,
+      "canonical_rank": 24,
       "headline": "Apa caldă este oprită în tot Râmnicu Vâlcea pe 4 septembrie, până la ora 21:00",
       "dek": "CET Govora anunță întreruperea furnizării apei fierbinți și a apei calde de consum în întreg municipiul, între orele 01:00 și 21:00. Sunt programate racordări la rețeaua de termoficare și remedierea unei avarii pe conducta primară DN600, în zona Gara–Comisariat.",
       "paragraphs": [
@@ -32,9 +806,9 @@
     {
       "id": "fast-ipj-actiune-pentru-cresterea-sigurantei-rutiere-pe-dn-64-aaf8eb1c11",
       "section": "SIGURANȚĂ",
-      "priority": 999999,
+      "priority": 999975,
       "source_priority": 96,
-      "canonical_rank": 1,
+      "canonical_rank": 25,
       "headline": "IPJ Vâlcea: ACȚIUNE PENTRU CREȘTEREA SIGURANȚEI RUTIERE PE DN 64",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -57,9 +831,9 @@
     {
       "id": "rm-valcea-hcl-320-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999998,
+      "priority": 999974,
       "source_priority": 92,
-      "canonical_rank": 2,
+      "canonical_rank": 26,
       "headline": "Îndreptarea erorii materiale din cuprinsul Hotărîrii Consiliului Local nr. 115/31.08.2001,",
       "dek": "Textul integral al HCL 320, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -78,7 +852,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 320/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/7B72F7410E747B2EC2258E670030CF77/$FILE/hotarirea%20320%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%204%2C1%20%20mp.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/7b72f7410e747b2ec2258e670030cf77/$FILE/hotarirea%20320%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%204%2C1%20%20mp.htm",
           "tier": "T1"
         }
       ],
@@ -90,9 +864,9 @@
     {
       "id": "rm-valcea-hcl-319-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999997,
+      "priority": 999973,
       "source_priority": 92,
-      "canonical_rank": 3,
+      "canonical_rank": 27,
       "headline": "Prelungirea perioadei inițiale de concesionare a terenului proprietate publică a municipiului, în suprafață de 4,44…",
       "dek": "Textul integral al HCL 319, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -111,7 +885,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 319/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/DF13AC587489890BC2258E670030C38E/$FILE/hotarirea%20319%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%204%2C44%20%20mp.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/df13ac587489890bc2258e670030c38e/$FILE/hotarirea%20319%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%204%2C44%20%20mp.htm",
           "tier": "T1"
         }
       ],
@@ -123,9 +897,9 @@
     {
       "id": "rm-valcea-hcl-318-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999996,
+      "priority": 999972,
       "source_priority": 92,
-      "canonical_rank": 4,
+      "canonical_rank": 28,
       "headline": "Prelungirea perioadei inițiale de concesionare a terenului proprietate publică a municipiului, situat în Râmnicu…",
       "dek": "Textul integral al HCL 318, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -144,7 +918,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 318/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/3988C2A5E49BD64CC2258E670030B83C/$FILE/hotarirea%20318%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%202%20%20mp.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/3988c2a5e49bd64cc2258e670030b83c/$FILE/hotarirea%20318%20-%2031%20august%202026%20-%20prelungire%20durata%20perioada%20concesionare%20teren%20de%202%20%20mp.htm",
           "tier": "T1"
         }
       ],
@@ -156,9 +930,9 @@
     {
       "id": "rm-valcea-hcl-317-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999995,
+      "priority": 999971,
       "source_priority": 92,
-      "canonical_rank": 5,
+      "canonical_rank": 29,
       "headline": "Devizul General Total pentru obiectivul de investiții ”Sală de Sport Școala Gimnazială nr.4 Rm. Vâlcea”, la valoarea…",
       "dek": "Textul integral al HCL 317, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -175,7 +949,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 317/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/DFB1FAE95C925BDBC2258E670030ABDF/$FILE/hotarirea%20317%20-%2031%20august%202026%20-%20aprobare%20Deviz%20General%20Total%20pentru%20obiectivul%20Sala%20de%20sport%20Scoala%20Gimnaziala%20nr%204.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/dfb1fae95c925bdbc2258e670030abdf/$FILE/hotarirea%20317%20-%2031%20august%202026%20-%20aprobare%20Deviz%20General%20Total%20pentru%20obiectivul%20Sala%20de%20sport%20Scoala%20Gimnaziala%20nr%204.htm",
           "tier": "T1"
         }
       ],
@@ -187,9 +961,9 @@
     {
       "id": "rm-valcea-hcl-316-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999994,
+      "priority": 999970,
       "source_priority": 92,
-      "canonical_rank": 6,
+      "canonical_rank": 30,
       "headline": "Studiul de Fezabilitate pentru obiectivul de investiții ”Extindere rețele de canalizare menajeră în municipiul Rm.…",
       "dek": "Textul integral al HCL 316, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -206,7 +980,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 316/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/C0EE1214FA5EFD33C2258E670030A02F/$FILE/hotarirea%20316%20%20-%20%2031%20august%202026%20-%20aprobare%20SF%20si%20indicatori%20Extindere%20retele%20canalizare%20menajera%20in%20municipiu.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/c0ee1214fa5efd33c2258e670030a02f/$FILE/hotarirea%20316%20%20-%20%2031%20august%202026%20-%20aprobare%20SF%20si%20indicatori%20Extindere%20retele%20canalizare%20menajera%20in%20municipiu.htm",
           "tier": "T1"
         }
       ],
@@ -218,9 +992,9 @@
     {
       "id": "rm-valcea-hcl-314-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999993,
+      "priority": 999969,
       "source_priority": 92,
-      "canonical_rank": 7,
+      "canonical_rank": 31,
       "headline": "Se rectifică bugetul Direcției Administrării Domeniului Public pentru anul 2026 prin virări de credite bugetare în…",
       "dek": "Textul integral al HCL 314, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -238,7 +1012,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 314/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/AA941F930F6D21C1C2258E670030877B/$FILE/hotarirea%20314%20-%2031%20august%202026%20-%20rectificare%20buget%20DADP%20pe%20anul%202026.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/aa941f930f6d21c1c2258e670030877b/$FILE/hotarirea%20314%20-%2031%20august%202026%20-%20rectificare%20buget%20DADP%20pe%20anul%202026.htm",
           "tier": "T1"
         }
       ],
@@ -250,9 +1024,9 @@
     {
       "id": "rm-valcea-hcl-313-20260831",
       "section": "ADMINISTRAȚIE",
-      "priority": 999992,
+      "priority": 999968,
       "source_priority": 92,
-      "canonical_rank": 8,
+      "canonical_rank": 32,
       "headline": "Rectificarea bugetului local prin suplimentare cu suma de 1.143.700 lei, atât la partea de venituri cât și la partea…",
       "dek": "Textul integral al HCL 313, adoptată la 31 august 2026, arată măsura operativă și efectele care pot fi stabilite direct din document. VÂLCEA CLAR nu publică titlul administrativ al hotărârii ca substitut pentru știre.",
       "paragraphs": [
@@ -271,7 +1045,7 @@
         },
         {
           "name": "HCL Râmnicu Vâlcea nr. 313/2026-08-31",
-          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/vwHotarariByAn/8577A5E33A2DF3E1C2258E670030773C/$FILE/hotarirea%20313%20-%2031%20august%202026%20-%20rectificare%20buget%20local%20si%20liste%20investitii%20pe%20anul%202026.htm",
+          "url": "https://dm.primariavl.ro/dm/2026/hotarari.nsf/93b6e47af3dd4c36c2257ad3003c531b/8577a5e33a2df3e1c2258e670030773c/$FILE/hotarirea%20313%20-%2031%20august%202026%20-%20rectificare%20buget%20local%20si%20liste%20investitii%20pe%20anul%202026.htm",
           "tier": "T1"
         }
       ],
@@ -283,9 +1057,9 @@
     {
       "id": "horezu-autobuze-electrice-energie-verde-20260903",
       "section": "MOBILITATE",
-      "priority": 999991,
+      "priority": 999967,
       "source_priority": 91,
-      "canonical_rank": 9,
+      "canonical_rank": 33,
       "headline": "Horezu pregătește patru autobuze electrice și două centrale solare de câte 400 kW. Ce arată documentele",
       "dek": "Documentele de achiziție prevăd două autobuze electrice de 10–11 metri și două vehicule mai mici, plus stații lente de încărcare. Separat, proiectul fotovoltaic al orașului prevede două centrale de câte 400 kW pentru autoconsum.",
       "paragraphs": [
@@ -318,27 +1092,16 @@
         }
       ],
       "published": "2026-09-03T10:05:54+03:00",
-      "image": "horezu-context-2018.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/horezu-autobuze-electrice-energie-verde-20260903/",
-      "image_caption": "Foto de context din Horezu, iunie 2018; imaginea nu surprinde autobuzele, stațiile de încărcare, lucrările ori proiectele energetice descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/horezu-context-2018.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/horezu-context-2018.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:RO_VL_Horezu_Biserica_din_targ_(1).jpg",
-      "image_credit": "Țetcu Mircea Rareș / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2018-06-11",
-      "image_story_id": "horezu-autobuze-electrice-energie-verde-20260903"
+      "canonical_path": "/stiri/horezu-autobuze-electrice-energie-verde-20260903/"
     },
     {
       "id": "babeni-izvorul-dorului-program-20260903",
       "section": "EVENIMENTE",
-      "priority": 999990,
+      "priority": 999966,
       "source_priority": 88,
-      "canonical_rank": 10,
+      "canonical_rank": 34,
       "headline": "Băbeni începe patru zile de Festival «La Izvorul Dorului»: fotbal joi, concerte și paradă până duminică",
       "dek": "Festivalul se desfășoară între 3 și 6 septembrie. Prima zi aduce turneul de fotbal pentru juniori la Liceul «George Țărnea», iar programul continuă până duminică cu muzică, folclor și activități pentru comunitate.",
       "paragraphs": [
@@ -383,9 +1146,9 @@
     {
       "id": "ramnicu-dem-radulescu-minora-14-ani-accident-20260902",
       "section": "SIGURANȚĂ",
-      "priority": 999989,
+      "priority": 999965,
       "source_priority": 98,
-      "canonical_rank": 11,
+      "canonical_rank": 35,
       "headline": "Fată de 14 ani, rănită pe o trecere de pietoni de pe bulevardul Dem Rădulescu. Poliția verifică împrejurările",
       "dek": "Adolescenta a fost transportată la spital după accidentul produs în Râmnicu Vâlcea. Potrivit relatărilor concordante care citează IPJ Vâlcea, șoferul a avut rezultat negativ la testarea pentru alcool.",
       "paragraphs": [
@@ -429,9 +1192,9 @@
     {
       "id": "valcea-atv-ionesti-pausesti-maglasi-fara-permis-20260902",
       "section": "SIGURANȚĂ",
-      "priority": 999988,
+      "priority": 999964,
       "source_priority": 94,
-      "canonical_rank": 12,
+      "canonical_rank": 36,
       "headline": "Două controale cu ATV-uri în Vâlcea: poliția spune că ambii șoferi nu aveau permis; unul a avut 0,43 mg/l la etilotest",
       "dek": "Cazurile au fost constatate la Ionești și Păușești-Măglași în 1 septembrie. În primul caz, ATV-ul era neînmatriculat; în al doilea, au fost recoltate probe biologice pentru stabilirea alcoolemiei.",
       "paragraphs": [
@@ -476,9 +1239,9 @@
     {
       "id": "balcesti-incendiu-vegetatie-15ha-20260902",
       "section": "SIGURANȚĂ",
-      "priority": 999987,
+      "priority": 999963,
       "source_priority": 96,
-      "canonical_rank": 13,
+      "canonical_rank": 37,
       "headline": "Incendiu de vegetație la Bălcești: aproximativ 15 hectare de teren au fost afectate",
       "dek": "Pompierii vâlceni au stins un incendiu de vegetație uscată la Bălcești, iar ISU Vâlcea estimează suprafața afectată la aproximativ 15 hectare. Buletinul oficial nu indică o cauză a incendiului.",
       "paragraphs": [
@@ -512,9 +1275,9 @@
     {
       "id": "valcea-apa-canal-contract-152m-20260902",
       "section": "ADMINISTRAȚIE",
-      "priority": 999986,
+      "priority": 999962,
       "source_priority": 100,
-      "canonical_rank": 14,
+      "canonical_rank": 38,
       "headline": "Contract de peste 152 mil. euro pentru apă și canalizare în Vâlcea. CJ indică 12 localități; documentele din aprilie includ și Râmnicu",
       "dek": "Contractul de finanțare pentru proiectul regional de apă și apă uzată a fost semnat la 2 septembrie 2026 la Ministerul Investițiilor și Proiectelor Europene. Comunicarea CJ enumeră 12 localități, în timp ce hotărârile municipiului Râmnicu Vâlcea din 2026 indică și o contribuție locală pentru același proiect.",
       "paragraphs": [
@@ -554,9 +1317,9 @@
     {
       "id": "fast-isu-incendiu-locuinta-in-municipiul-ramnicu-valcea-777-968eefa444",
       "section": "URGENȚE",
-      "priority": 999985,
+      "priority": 999961,
       "source_priority": 97,
-      "canonical_rank": 15,
+      "canonical_rank": 39,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -578,9 +1341,9 @@
     {
       "id": "auto-scm-rm-valcea-b30c85d12af3",
       "section": "SPORT",
-      "priority": 999984,
+      "priority": 999960,
       "source_priority": 95,
-      "canonical_rank": 16,
+      "canonical_rank": 40,
       "headline": "SCM Râmnicu Vâlcea caută prima victorie acasă, sâmbătă, cu CSM Reșița",
       "dek": "Meciul se joacă pe 5 septembrie, de la ora 11:00, pe Stadionul Municipal. Vâlcenii vin după succesul cu Dumbrăvița și ocupă locul 9; Reșița este pe locul 4.",
       "paragraphs": [
@@ -605,9 +1368,9 @@
     {
       "id": "auto-raliul-valcii-official-news-f6e28bbb1533",
       "section": "SPORT",
-      "priority": 999983,
+      "priority": 999959,
       "source_priority": 96,
-      "canonical_rank": 17,
+      "canonical_rank": 41,
       "headline": "Raliul Vâlcii 2026: înscrierile sunt deschise până la 18 septembrie",
       "dek": "Etapa a VII-a a Campionatului Național de Raliuri se desfășoară între 24 și 26 septembrie, la Râmnicu Vâlcea. Programul include 13 probe speciale și o superspecială urbană.",
       "paragraphs": [
@@ -632,9 +1395,9 @@
     {
       "id": "scm-program-5aabeba76e53785685fb",
       "section": "SPORT",
-      "priority": 999982,
+      "priority": 999958,
       "source_priority": 88,
-      "canonical_rank": 18,
+      "canonical_rank": 42,
       "headline": "SCM Râmnicu Vâlcea – CSM Reşiţa: meci programat pe 5 septembrie 2026, de la 11:00",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -656,9 +1419,9 @@
     {
       "id": "cet-govora-cine-a-decis-oprirea-20260821",
       "section": "ENERGIE",
-      "priority": 999981,
+      "priority": 999957,
       "source_priority": 100,
-      "canonical_rank": 19,
+      "canonical_rank": 43,
       "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
       "dek": "O postare politică susține că CET Govora a renunțat voluntar la licență și că nimeni nu i-a impus oprirea. Documentele oficiale arată însă un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de cifrele invocate în postare.",
       "paragraphs": [
@@ -712,9 +1475,9 @@
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
       "section": "PATRIMONIU",
-      "priority": 999980,
+      "priority": 999956,
       "source_priority": 98,
-      "canonical_rank": 20,
+      "canonical_rank": 44,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
       "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului, iar Ministerul Culturii explică atât avizarea, cât și soluția arhitecturală contemporană.",
       "paragraphs": [
@@ -766,9 +1529,9 @@
     {
       "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
       "section": "ADMINISTRAȚIE",
-      "priority": 999979,
+      "priority": 999955,
       "source_priority": 96,
-      "canonical_rank": 21,
+      "canonical_rank": 45,
       "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
       "dek": "Propunerea consilierului local Vicențiu Mocanu ca Ștefania Uță să primească titlul de Cetățean de Onoare al Râmnicului a declanșat un schimb de replici cu primarul Mircia Gutău. Regulamentul local arată că un consilier poate formula individual o asemenea propunere.",
       "paragraphs": [
@@ -826,9 +1589,9 @@
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999978,
+      "priority": 999954,
       "source_priority": 99,
-      "canonical_rank": 22,
+      "canonical_rank": 46,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
       "dek": "O reconstrucție documentată a ediției 2026: artiștii pe zile, ce s-a cântat unde există setlisturi verificabile, organizatorii, vocile influente, sponsorii și sprijinul public.",
       "paragraphs": [
@@ -944,9 +1707,9 @@
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
       "section": "EVENIMENTE",
-      "priority": 999977,
+      "priority": 999953,
       "source_priority": 99,
-      "canonical_rank": 23,
+      "canonical_rank": 47,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
       "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
       "paragraphs": [
@@ -1004,9 +1767,9 @@
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999976,
+      "priority": 999952,
       "source_priority": 98,
-      "canonical_rank": 24,
+      "canonical_rank": 48,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
       "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei, iar lista de parteneri arată o rețea publică și culturală mai largă.",
       "paragraphs": [
@@ -1055,9 +1818,9 @@
     {
       "id": "deep-forest-fest-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999975,
+      "priority": 999951,
       "source_priority": 98,
-      "canonical_rank": 25,
+      "canonical_rank": 49,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
       "dek": "Dosarul VÂLCEA CLAR separă muzica și promovarea de documentele publice: cine a urcat pe afiș, cum a evoluat festivalul și ce sume apar în hotărârile locale.",
       "paragraphs": [
@@ -1138,9 +1901,9 @@
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
       "section": "EVENIMENTE",
-      "priority": 999974,
+      "priority": 999950,
       "source_priority": 98,
-      "canonical_rank": 26,
+      "canonical_rank": 50,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
       "dek": "Ediția aniversară de la Brezoi a combinat 21 de trupe cu o cauză umanitară; dosarul separă profitul promis pentru caritate de eventualele resurse publice locale și de rezultatul financiar care trebuie documentat după festival.",
       "paragraphs": [
@@ -1204,9 +1967,9 @@
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "section": "CULTURĂ",
-      "priority": 999973,
+      "priority": 999949,
       "source_priority": 97,
-      "canonical_rank": 27,
+      "canonical_rank": 51,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
       "dek": "Patru evenimente sunt deja publicate pentru septembrie 2026, de la jazz și latino simfonic la program coral și Violoncellissimo; VÂLCEA CLAR le leagă de artiști, bilete și finanțarea publică a Centrului Cultural Municipal.",
       "paragraphs": [
@@ -1250,9 +2013,9 @@
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999972,
+      "priority": 999948,
       "source_priority": 97,
-      "canonical_rank": 28,
+      "canonical_rank": 52,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
       "dek": "Festivalul gratuit de la Măldărești este organizat de instituții ale Consiliului Județean Vâlcea; VÂLCEA CLAR reconstruiește programul și separă costul public dovedit de sumele care încă lipsesc din documentele indexate.",
       "paragraphs": [
@@ -1300,9 +2063,9 @@
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
       "section": "CULTURĂ",
-      "priority": 999971,
+      "priority": 999947,
       "source_priority": 96,
-      "canonical_rank": 29,
+      "canonical_rank": 53,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
       "dek": "Ariel și Anton Pann aparțin unor administrații diferite și au fluxuri distincte de program și finanțare; VÂLCEA CLAR le transformă în surse permanente pentru agenda culturală, premiere, distribuții și money trace.",
       "paragraphs": [
@@ -1376,9 +2139,9 @@
     {
       "id": "invartita-dorului-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999970,
+      "priority": 999946,
       "source_priority": 96,
-      "canonical_rank": 30,
+      "canonical_rank": 54,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
       "dek": "Festivalul păstoresc organizat de Primăria și Consiliul Local Vaideeni aduce zeci de artiști și ansambluri; VÂLCEA CLAR separă tradiția de întrebarea contabilă privind costul complet al ediției.",
       "paragraphs": [
@@ -1427,9 +2190,9 @@
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999969,
+      "priority": 999945,
       "source_priority": 96,
-      "canonical_rank": 31,
+      "canonical_rank": 55,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
       "dek": "Târgul de la Horezu combină patrimoniul ceramic cu spectacole folclorice; documentele locale confirmă o hotărâre specială de buget, iar VÂLCEA CLAR urmărește suma și execuția ei până la nivel de contracte și plăți.",
       "paragraphs": [
@@ -1477,9 +2240,9 @@
     {
       "id": "apavil-joburi-fara-experienta-20260818",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999968,
+      "priority": 999944,
       "source_priority": 91,
-      "canonical_rank": 32,
+      "canonical_rank": 56,
       "headline": "APAVIL scoate la concurs două posturi fără experiență: laborant în Râmnicu Vâlcea și electrician în Călimănești",
       "dek": "Cele două oferte oficiale ANOFM sunt pentru contracte pe perioadă nedeterminată și normă întreagă. Termenele de valabilitate sunt 20 august 2026 pentru laborant și 21 august 2026 pentru electrician.",
       "paragraphs": [
@@ -1511,9 +2274,9 @@
     {
       "id": "cj-valcea-cocos-rajdp-mandat-guvernanta-20260818",
       "section": "ADMINISTRAȚIE",
-      "priority": 999967,
+      "priority": 999943,
       "source_priority": 90,
-      "canonical_rank": 33,
+      "canonical_rank": 57,
       "headline": "Vasile Cocoș nu mai are mandat de administrator la RAJDP. Pagina de guvernanță a CJ îl afișează încă în Consiliul de Administrație",
       "dek": "HCJ 137 din 24 iulie 2026 aprobă încetarea mandatului lui Vasile Cocoș la Drumurile Județene Vâlcea. În schimb, pagina oficială de guvernanță corporativă a CJ îl menționează încă drept membru CA, o neconcordanță pe care instituția trebuie să o actualizeze sau să o explice.",
       "paragraphs": [
@@ -1549,9 +2312,9 @@
     {
       "id": "bujoreni-11-zidari-4582-6000-20260818",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999966,
+      "priority": 999942,
       "source_priority": 88,
-      "canonical_rank": 34,
+      "canonical_rank": 58,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -1576,9 +2339,9 @@
     {
       "id": "rm-valcea-hcl-312-20260814",
       "section": "MOBILITATE",
-      "priority": 999965,
+      "priority": 999941,
       "source_priority": 92,
-      "canonical_rank": 35,
+      "canonical_rank": 59,
       "headline": "11 microbuze electrice sunt transferate către opt localități din Vâlcea",
       "dek": "HCL 312 împarte 11 microbuze, 11 stații lente și 5 stații rapide cumpărate prin PNRR. Furnizorul contractului de achiziție este BMC Trucks & Bus S.A., iar predarea către UAT-uri trebuie făcută în cel mult 15 zile.",
       "paragraphs": [
@@ -1620,9 +2383,9 @@
     {
       "id": "rm-valcea-hcl-311-20260814",
       "section": "ADMINISTRAȚIE",
-      "priority": 999964,
+      "priority": 999940,
       "source_priority": 92,
-      "canonical_rank": 36,
+      "canonical_rank": 60,
       "headline": "Bunurile cumpărate prin proiectele de transport sunt puse la dispoziția ETA, iar contractul de delegare este modificat",
       "dek": "HCL 311 introduce în contractul de delegare nr. 17/28.05.2026 bunurile cumpărate prin proiectul de extindere a transportului spre zonele turistice și bunurile puse la dispoziția ETA de UAT-urile partenere. Votul a fost unanim.",
       "paragraphs": [
@@ -1664,9 +2427,9 @@
     {
       "id": "rm-valcea-hcl-310-20260814",
       "section": "ADMINISTRAȚIE",
-      "priority": 999963,
+      "priority": 999939,
       "source_priority": 92,
-      "canonical_rank": 37,
+      "canonical_rank": 61,
       "headline": "Primăria ia avocați externi într-un proces pentru daune morale. Cine a dat în judecată Municipiul și DAS",
       "dek": "HCL 310 autorizează reprezentare juridică externă în dosarul 8244/288/2026. Dosarul este o acțiune în răspundere delictuală aflată pe fond la Judecătoria Râmnicu Vâlcea, iar hotărârea locală precizează că sunt solicitate daune morale.",
       "paragraphs": [
@@ -1717,9 +2480,9 @@
     {
       "id": "rm-valcea-hcl-309-20260814",
       "section": "BANI_PUBLICI",
-      "priority": 999962,
+      "priority": 999938,
       "source_priority": 92,
-      "canonical_rank": 38,
+      "canonical_rank": 62,
       "headline": "Municipiul și Consiliul Județean se asociază pentru susținerea SCM Râmnicu Vâlcea în 2026",
       "dek": "HCL 309 aprobă asocierea dintre municipiu și județ pentru sportul de performanță derulat prin Sport Club Municipal Râmnicu Vâlcea și aprobă modelul contractului pe care primarul îl poate semna. Suma contribuțiilor nu este stabilită în corpul hotărârii.",
       "paragraphs": [
@@ -1760,9 +2523,9 @@
     {
       "id": "rm-valcea-hcl-308-20260814",
       "section": "BANI_PUBLICI",
-      "priority": 999961,
+      "priority": 999937,
       "source_priority": 92,
-      "canonical_rank": 39,
+      "canonical_rank": 63,
       "headline": "Râmnicu Vâlcea introduce 990.000 lei din creditul Băncii Transilvania în bugetul de investiții din 2026",
       "dek": "HCL 308 mărește bugetul creditelor interne pe 2026 de la 10 milioane la 10,99 milioane lei. Documentul arată și noul calendar al tragerilor din finanțarea de 40 milioane lei contractată de la Banca Transilvania pe 10 ani.",
       "paragraphs": [
@@ -1804,9 +2567,9 @@
     {
       "id": "rm-valcea-hcl-307-20260814",
       "section": "BANI_PUBLICI",
-      "priority": 999960,
+      "priority": 999936,
       "source_priority": 92,
-      "canonical_rank": 40,
+      "canonical_rank": 64,
       "headline": "730.000 lei din împrumutul municipal sunt mutați către parcarea etajată din Nord",
       "dek": "HCL 307 redistribuie bani în interiorul împrumutului de 40 milioane lei: scade finanțarea pentru locuințele de tineri și cu 1.400 lei pentru Școala Copăcelu, iar parcarea etajată din Nord ajunge la 10,286 milioane lei din împrumut.",
       "paragraphs": [
@@ -1848,9 +2611,9 @@
     {
       "id": "rm-valcea-hcl-306-20260814",
       "section": "SERVICII",
-      "priority": 999959,
+      "priority": 999935,
       "source_priority": 92,
-      "canonical_rank": 41,
+      "canonical_rank": 65,
       "headline": "Căldura se scumpește cu 13% la Râmnicu Vâlcea. Factura populației rămâne neschimbată, Primăria acoperă diferența",
       "dek": "HCL 306 ridică de la 1 august 2026 costul total al energiei termice pe rețeaua de distribuție de la 518,61 la 586,27 lei/MWh, fără TVA. Prețul facturat populației rămâne 475,62 lei/MWh, iar bugetul local preia o diferență de 110,65 lei/MWh.",
       "paragraphs": [
@@ -1895,9 +2658,9 @@
     {
       "id": "rm-valcea-hcl-305-20260814",
       "section": "SERVICII",
-      "priority": 999958,
+      "priority": 999934,
       "source_priority": 92,
-      "canonical_rank": 42,
+      "canonical_rank": 66,
       "headline": "CET Govora primește dreptul de a cumpăra integral energia termică de la alți producători",
       "dek": "HCL 305 rescrie actul adițional la concesiune după ce CET Govora a refuzat forma din iunie. Documentul leagă schimbarea de oprirea grupurilor pe lignit la 31 august 2026 și de faptul că noua centrală a CJ era estimată să devină operațională cel mai devreme la 15 octombrie 2026.",
       "paragraphs": [
@@ -1940,9 +2703,9 @@
     {
       "id": "rm-valcea-gambling-authorizations-20260723",
       "section": "ADMINISTRAȚIE",
-      "priority": 999957,
+      "priority": 999933,
       "source_priority": 91,
-      "canonical_rank": 43,
+      "canonical_rank": 67,
       "headline": "5 hotărâri pentru autorizații anuale de jocuri de noroc în cea mai recentă serie analizată a Consiliului Local Râmnicu Vâlcea",
       "dek": "În registrul oficial, 5 dintre cele mai recente 25 de hotărâri din 23.07.2026 privesc autorizații anuale de funcționare pentru jocuri de noroc; ele nu sunt tratate automat drept tot atâtea săli noi.",
       "paragraphs": [
