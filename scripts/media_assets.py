@@ -14,6 +14,7 @@ SRC = ROOT / 'media_source'
 CONTENT = ROOT / 'content'
 MAX_REMOTE_BYTES = 12 * 1024 * 1024
 UA = 'VÂLCEA-CLAR-Public-Media-Mirror/1.0 (+https://valceaclar.ro/)'
+LIVE_MEDIA_ROOT = 'https://valceaclar.ro/media/'
 
 
 def _local_manifest() -> dict:
@@ -84,6 +85,11 @@ def materialize_media(target: Path, articles: list[dict] | None = None) -> set[s
     best-effort: a transient remote image failure must not stop publication of the
     verified article itself. Missing mirrors stay visible to the independent
     public-media health gate.
+
+    For a VERIFIED asset that was already projected publicly, the current public
+    copy is an allowed recovery source when the canonical runtime mirror is
+    temporarily unavailable. The bytes are still signature-checked and the
+    canonical rights/provenance record remains authoritative.
     """
     target.mkdir(parents=True, exist_ok=True)
     if articles is None:
@@ -132,17 +138,48 @@ def materialize_media(target: Path, articles: list[dict] | None = None) -> set[s
             continue
         if spec['provenance_status'] != 'VERIFIED':
             continue
-        try:
-            data, final_url = _download_image(spec['fetch_url'])
-        except Exception as exc:
-            failures.append({'file': name, 'url': spec['fetch_url'], 'error': f'{type(exc).__name__}: {exc}'})
+
+        attempts: list[str] = []
+        for candidate in (
+            spec['fetch_url'],
+            spec['origin_url'],
+            LIVE_MEDIA_ROOT + name,
+        ):
+            candidate = str(candidate or '').strip()
+            if candidate and candidate not in attempts:
+                attempts.append(candidate)
+
+        data = None
+        final_url = ''
+        attempt_errors: list[str] = []
+        for candidate in attempts:
+            try:
+                data, final_url = _download_image(candidate)
+                break
+            except Exception as exc:
+                attempt_errors.append(f'{candidate} => {type(exc).__name__}: {exc}')
+
+        if data is None:
+            failures.append(
+                {
+                    'file': name,
+                    'url': spec['fetch_url'],
+                    'error': ' | '.join(attempt_errors) or 'no usable mirror source',
+                }
+            )
             continue
+
         (target / name).write_bytes(data)
         available.add(name)
         mirrored += 1
+        delivery = (
+            'civora_verified_build_mirror'
+            if final_url.startswith(spec['fetch_url'])
+            else 'verified_public_copy_recovery'
+        )
         provenance[name] = {
             **spec,
-            'delivery': 'civora_verified_build_mirror',
+            'delivery': delivery,
             'final_fetch_url': final_url,
             'sha256': hashlib.sha256(data).hexdigest(),
             'bytes': len(data),
