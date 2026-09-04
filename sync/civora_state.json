@@ -6,10 +6,10 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 68,
-  "verified_visual_count": 16,
+  "verified_visual_count": 18,
   "lead_story_id": "valcea-romsilva-pnrr-torenti-20260831",
   "lead_published_at": "2026-09-04T23:20:01+03:00",
-  "articles_sha256": "72438c9b93503eb405adae7239a95e4b104fb9e4dca7749633c686c1c850c83a",
+  "articles_sha256": "b62234ccc79852b98d5ba40a5388a58af51afc8f808e96bee69b11313bee02fb",
   "synced_at": "2026-09-04T22:10:59.824214Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
