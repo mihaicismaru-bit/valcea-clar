@@ -1,1 +1,1 @@
-2026-09-04T16:17:00Z force public convergence: CIVORA canonical live-feed generated 2026-09-04T16:13:27.907697Z contains 69 stories including ramnicu-uap-atelier-35-artex-20260904; require exact story-set and public readback before distribution
+2026-09-04T19:43:00Z force public convergence: CIVORA canonical head 3106f9666e506337517f12e710fee5cc0d8f61a7 changed the live story set after the 16:17Z public sync; require exact canonical story-set convergence, deployment, and public readback before any delivery claim
