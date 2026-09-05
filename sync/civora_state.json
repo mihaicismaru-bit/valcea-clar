@@ -6,10 +6,10 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 72,
-  "verified_visual_count": 18,
+  "verified_visual_count": 17,
   "lead_story_id": "valcea-cod-galben-canicula-vant-5-6-septembrie-2026",
   "lead_published_at": "2026-09-05T16:46:31+03:00",
-  "articles_sha256": "1641b8712a39e2dc2948c6be1cbfb710d1cf078538483e468772376464a92da3",
+  "articles_sha256": "1920645f8db0831167197107a6b613d77e1db9556de5fd5abd0c4c112f74f847",
   "synced_at": "2026-09-05T16:15:41.603976Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",

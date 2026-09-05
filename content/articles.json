@@ -1306,20 +1306,9 @@
         }
       ],
       "published": "2026-09-03T10:05:54+03:00",
-      "image": "horezu-context-2018.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/horezu-autobuze-electrice-energie-verde-20260903/",
-      "image_caption": "Foto de context din Horezu, iunie 2018; imaginea nu surprinde autobuzele, stațiile de încărcare, lucrările ori proiectele energetice descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/horezu-context-2018.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/horezu-context-2018.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:RO_VL_Horezu_Biserica_din_targ_(1).jpg",
-      "image_credit": "Țetcu Mircea Rareș / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2018-06-11",
-      "image_story_id": "horezu-autobuze-electrice-energie-verde-20260903"
+      "canonical_path": "/stiri/horezu-autobuze-electrice-energie-verde-20260903/"
     },
     {
       "id": "ramnicu-dem-radulescu-minora-14-ani-accident-20260902",
