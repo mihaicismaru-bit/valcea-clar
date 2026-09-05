@@ -15,6 +15,7 @@ C = ROOT / 'content'
 BASE = os.getenv('VALCEA_CLAR_BASE_PATH', '').rstrip('/')
 PREVIEW = os.getenv('VALCEA_CLAR_PREVIEW', '') == '1'
 SITE = 'https://valceaclar.ro'
+AVAILABLE_MEDIA = set()
 
 
 def load(name):
@@ -52,7 +53,7 @@ def story_href(article):
 
 def image_html(article, hero=False):
     name = article.get('image')
-    if not name:
+    if not name or name not in AVAILABLE_MEDIA:
         return '<div class="no-photo" aria-hidden="true">VÂLCEA CLAR</div>' if hero else ''
     caption = article.get('image_caption', 'Imagine de context din arhiva VÂLCEA CLAR.')
     return (
@@ -88,7 +89,7 @@ if OUT.exists():
 OUT.mkdir()
 (OUT / 'assets').mkdir()
 (OUT / 'assets/site.css').write_text(css, encoding='utf-8')
-materialize_media(OUT / 'media')
+AVAILABLE_MEDIA = materialize_media(OUT / 'media')
 
 section_links = ''.join(
     f'<a href="{u("/stiri/")}#{h(section.lower())}">{h(section)}</a>'
