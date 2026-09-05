@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-05T06:54:41.698043Z",
+  "updated_local": "2026-09-05T07:01:51.366369Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -88,24 +88,17 @@
       "id": "isu-valcea-interventii-zilnice",
       "section": "URGENȚE",
       "priority": 999997,
-      "source_priority": 99,
+      "source_priority": 94,
       "canonical_rank": 3,
-      "headline": "ISU Vâlcea: 57 de misiuni în 48 de ore; 4 incendii de vegetație au afectat circa 12,8 hectare",
-      "dek": "Bilanțul oficial acoperă intervalul 2 septembrie, ora 08:00 – 4 septembrie, ora 08:00: 47 de intervenții medicale, 6 incendii și 4 alte situații de urgență. VÂLCEA CLAR corectează pe același URL bilanțul zilnic atribuit anterior greșit datei de 4 septembrie.",
+      "headline": "ISU Vâlcea: 30 de intervenții pe 4 septembrie 2026, dintre care 23 de prim ajutor",
+      "dek": "ISU Vâlcea raportează pentru 4 septembrie 2026 un total de 30 de intervenții: 3 incendii, 23 de prim ajutor și 4 alte intervenții.",
       "paragraphs": [
-        "În intervalul 2 septembrie 2026, ora 08:00 – 4 septembrie 2026, ora 08:00, ISU Vâlcea a desfășurat 57 de misiuni.",
-        "Bilanțul de 57 de misiuni cuprinde 47 de intervenții medicale, 6 intervenții pentru incendii și 4 alte situații de urgență; echipajele SMURD au asistat 50 de persoane.",
-        "Patru incendii de vegetație uscată s-au produs în Șirineasa, Drăgășani, Budești și Laloșu și au afectat aproximativ 12,8 hectare în total.",
-        "Indicatorul zilnic de 30 de intervenții publicat de ISU este pentru 3 septembrie 2026 și are defalcarea 5 incendii, 22 intervenții de prim ajutor și 3 alte intervenții; el nu trebuie prezentat ca bilanț pentru 4 septembrie."
+        "ISU Vâlcea raportează 30 de intervenții pentru data de 4 septembrie 2026.",
+        "Bilanțul oficial indică 3 incendii, 23 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 4 alte intervenții."
       ],
       "sources": [
         {
-          "name": "ISU Vâlcea — Misiunile pompierilor vâlceni în ultimele 48 de ore",
-          "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-782",
-          "tier": "T1"
-        },
-        {
-          "name": "ISU Vâlcea — pagina oficială, indicatorul zilnic pentru 03.09.2026",
+          "name": "ISU Vâlcea — pagina oficială",
           "url": "https://isuvl.igsu.ro/",
           "tier": "T1"
         }
@@ -1154,20 +1147,9 @@
         }
       ],
       "published": "2026-09-03T10:05:54+03:00",
-      "image": "horezu-context-2018.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/horezu-autobuze-electrice-energie-verde-20260903/",
-      "image_caption": "Foto de context din Horezu, iunie 2018; imaginea nu surprinde autobuzele, stațiile de încărcare, lucrările ori proiectele energetice descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/horezu-context-2018.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/horezu-context-2018.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:RO_VL_Horezu_Biserica_din_targ_(1).jpg",
-      "image_credit": "Țetcu Mircea Rareș / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2018-06-11",
-      "image_story_id": "horezu-autobuze-electrice-energie-verde-20260903"
+      "canonical_path": "/stiri/horezu-autobuze-electrice-energie-verde-20260903/"
     },
     {
       "id": "ramnicu-dem-radulescu-minora-14-ani-accident-20260902",
