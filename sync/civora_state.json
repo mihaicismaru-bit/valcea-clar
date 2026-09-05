@@ -1,7 +1,7 @@
 {
   "schema_version": "1.2",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
-  "source_generated_at": "2026-09-05T09:18:48.646936Z",
+  "source_generated_at": "2026-09-05T10:17:29.408933Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
@@ -9,8 +9,8 @@
   "verified_visual_count": 18,
   "lead_story_id": "babeni-izvorul-dorului-program-20260903",
   "lead_published_at": "2026-09-05T12:18:47+03:00",
-  "articles_sha256": "758a703e3926d9fad38f813806d01f832e518a9907f79b6f7031a2b7c09bc81a",
-  "synced_at": "2026-09-05T09:18:48.646936Z",
+  "articles_sha256": "21ab4d99ed76c3cbe64d6567bddfece91fa7ecf52ee802a0be5be25991427dd3",
+  "synced_at": "2026-09-05T10:17:29.408933Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",

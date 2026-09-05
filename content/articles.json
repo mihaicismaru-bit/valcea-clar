@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-05T09:18:48.646936Z",
+  "updated_local": "2026-09-05T10:17:29.408933Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -154,18 +154,20 @@
       "id": "isu-valcea-interventii-zilnice",
       "section": "URGENȚE",
       "priority": 999995,
-      "source_priority": 94,
+      "source_priority": 96,
       "canonical_rank": 5,
-      "headline": "ISU Vâlcea: 30 de intervenții pe 4 septembrie 2026, dintre care 23 de prim ajutor",
-      "dek": "ISU Vâlcea raportează pentru 4 septembrie 2026 un total de 30 de intervenții: 3 incendii, 23 de prim ajutor și 4 alte intervenții.",
+      "headline": "ISU Vâlcea: 57 de misiuni în 48 de ore. Patru incendii de vegetație au afectat circa 12,8 hectare",
+      "dek": "Bilanțul oficial pentru intervalul 2 septembrie, ora 08:00 – 4 septembrie, ora 08:00 include 47 de intervenții de prim ajutor și transport medical, 6 intervenții la incendii și 4 alte situații de urgență. SMURD a asistat 50 de persoane.",
       "paragraphs": [
-        "ISU Vâlcea raportează 30 de intervenții pentru data de 4 septembrie 2026.",
-        "Bilanțul oficial indică 3 incendii, 23 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 4 alte intervenții."
+        "ISU Vâlcea raportează 57 de misiuni în intervalul 2 septembrie 2026, ora 08:00 – 4 septembrie 2026, ora 08:00.",
+        "Din total, 47 de intervenții au vizat primul ajutor calificat și transportul medical, 6 au fost pentru stingerea incendiilor, iar 4 au vizat alte tipuri de situații de urgență.",
+        "În perioada de referință, echipajele SMURD au intervenit în 47 de situații și au asistat 50 de persoane.",
+        "ISU Vâlcea menționează patru incendii de vegetație uscată în Șirineasa, Drăgășani, Budești și Laloșu, cu aproximativ 12,8 hectare afectate în total."
       ],
       "sources": [
         {
-          "name": "ISU Vâlcea — pagina oficială",
-          "url": "https://isuvl.igsu.ro/",
+          "name": "ISU Vâlcea — «Misiunile pompierilor vâlceni în ultimele 48 de ore», 4 septembrie 2026",
+          "url": "https://isuvl.igsu.ro/comunicate-de-presa/misiunile-pompierilor-valceni-in-ultimele-48-de-ore-782",
           "tier": "T1"
         }
       ],
