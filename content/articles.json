@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-05T13:46:33.290328Z",
+  "updated_local": "2026-09-05T16:15:41.603976Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -1478,22 +1478,31 @@
       "id": "auto-scm-rm-valcea-b30c85d12af3",
       "section": "SPORT",
       "priority": 999955,
-      "source_priority": 95,
+      "source_priority": 93,
       "canonical_rank": 45,
-      "headline": "SCM Râmnicu Vâlcea caută prima victorie acasă, sâmbătă, cu CSM Reșița",
-      "dek": "Meciul se joacă pe 5 septembrie, de la ora 11:00, pe Stadionul Municipal. Vâlcenii vin după succesul cu Dumbrăvița și ocupă locul 9; Reșița este pe locul 4.",
+      "headline": "SCM Râmnicu Vâlcea pierde acasă cu 1-2 în fața CSM Reșița. Dandea a redus din penalty",
+      "dek": "Bărbuț a deschis scorul în minutul 8, Rimovecz a făcut 2-0 înainte de pauză, iar Adrian Dandea a înscris pentru Vâlcea în minutul 54, din penalty.",
       "paragraphs": [
-        "SCM Râmnicu Vâlcea primește CSM Reșița sâmbătă, 5 septembrie 2026, de la ora 11:00, pe Stadionul Municipal. Pentru formația vâlceană, miza este prima victorie a sezonului în fața propriilor suporteri.",
-        "Înaintea meciului, Teodor Ciobanu, unul dintre foștii jucători importanți ai fotbalului vâlcean, va fi invitat pe teren, potrivit anunțului clubului.",
-        "Echipa vine după victoria cu 1-0 obținută la Dumbrăvița, unde Alexandru Sălcianu a marcat cu capul după o fază fixă. După cinci etape, SCM are 8 puncte, golaveraj 6-5 și ocupă locul 9.",
-        "CSM Reșița se află pe locul 4, cu 12 puncte și golaveraj 9-6. Formația bănățeană a câștigat patru dintre primele cinci partide și a învins CSA Steaua cu 2-1 în etapa precedentă.",
-        "Atacantul Dragoș Huiban a descris partida drept dificilă, dar a spus că echipa vine după două rezultate pozitive și are încredere că poate obține victoria pe teren propriu."
+        "SCM Râmnicu Vâlcea a pierdut cu 1-2 meciul disputat pe 5 septembrie 2026, pe Stadionul Municipal, în fața CSM Reșița, în etapa a 6-a a Ligii a II-a.",
+        "Cristian Bărbuț a marcat în minutul 8, Sergiu Rimovecz în minutul 40, iar Adrian Dandea a redus diferența pentru SCM în minutul 54, din penalty.",
+        "SCM Râmnicu Vâlcea nu obținuse nicio victorie pe teren propriu în primele trei meciuri de acasă ale sezonului, iar înfrângerea cu Reșița prelungește această serie la patru partide.",
+        "CSM Reșița a ajuns la 15 puncte după victoria de la Râmnicu Vâlcea."
       ],
       "sources": [
         {
-          "name": "SCM Râmnicu Vâlcea — avancronica meciului cu CSM Reșița",
+          "name": "Radio România Reșița — cronica SCM Râmnicu Vâlcea - CSM Reșița, 05.09.2026",
+          "url": "https://www.radioresita.ro/sport/csm-resita-victorioasa-la-ramnicu-valcea-chira-si-rimovecz-au-parafat-al-cincilea-succes-al-rossonerilor",
+          "tier": "T2"
+        },
+        {
+          "name": "Radio România Timișoara — cronica SCM Râmnicu Vâlcea - CSM Reșița, 05.09.2026",
+          "url": "https://www.radiotimisoara.ro/sport/fotbal/csm-resita-se-impune-in-zavoi-si-se-mentine-pe-podium-388491.html",
+          "tier": "T2"
+        },
+        {
+          "name": "SCM Râmnicu Vâlcea — avancronica oficială a partidei, 01.09.2026",
           "url": "https://scmramnicuvalcea.ro/putem-aduce-prima-victorie-in-fata-propriilor-suporteri-scm-ramnicu-valcea-inaintea-meciului-cu-resita/",
-          "tier": "T1B"
+          "tier": "T1"
         }
       ],
       "published": "2026-09-01T18:28:41+03:00",

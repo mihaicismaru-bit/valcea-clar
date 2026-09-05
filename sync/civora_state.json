@@ -1,7 +1,7 @@
 {
   "schema_version": "1.2",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
-  "source_generated_at": "2026-09-05T13:46:33.290328Z",
+  "source_generated_at": "2026-09-05T16:15:41.603976Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
@@ -9,8 +9,8 @@
   "verified_visual_count": 18,
   "lead_story_id": "valcea-cod-galben-canicula-vant-5-6-septembrie-2026",
   "lead_published_at": "2026-09-05T16:46:31+03:00",
-  "articles_sha256": "0c8b87377d50b663b0359fed4ad54829339ef4aa8bd32e62790ec147e297f222",
-  "synced_at": "2026-09-05T13:46:33.290328Z",
+  "articles_sha256": "1641b8712a39e2dc2948c6be1cbfb710d1cf078538483e468772376464a92da3",
+  "synced_at": "2026-09-05T16:15:41.603976Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
