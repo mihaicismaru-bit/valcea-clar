@@ -6,10 +6,10 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 73,
-  "verified_visual_count": 14,
+  "verified_visual_count": 13,
   "lead_story_id": "ramnicu-valcea-gutau-festivitati-scoli-20260907",
   "lead_published_at": "2026-09-07T05:47:04+03:00",
-  "articles_sha256": "ed51cb95dd9041336a851d15c254a45e6d04542b391c14a8bbd2d3366c8f9954",
+  "articles_sha256": "12a11cf5f70b3514efb7b419953277df9670473cb52853d8912a50b6d4925dde",
   "synced_at": "2026-09-07T02:47:06.138737Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
