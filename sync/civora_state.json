@@ -6,10 +6,10 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 70,
-  "verified_visual_count": 13,
+  "verified_visual_count": 14,
   "lead_story_id": "ocnele-mari-salina-program-septembrie-20260907",
   "lead_published_at": "2026-09-07T01:16:11+03:00",
-  "articles_sha256": "9f5aa8628d8e415bdcb8dfbb730c7c3123f610cee9225c9969ef909f49f197d0",
+  "articles_sha256": "b45152b91a85495e51fa841a4625ef5aeeac94ee1ba7186ce6db25a4d59f3c89",
   "synced_at": "2026-09-06T22:16:13.188702Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
