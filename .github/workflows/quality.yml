@@ -1,7 +1,20 @@
 name: quality
 on:
   push:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'content/site.css'
+      - 'content/site.json'
+      - 'content/legal.json'
+      - 'content/media.json'
+      - '.github/workflows/quality.yml'
   pull_request:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'content/**'
+      - '.github/workflows/quality.yml'
 permissions:
   contents: read
 jobs:
