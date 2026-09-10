@@ -6,10 +6,10 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 72,
-  "verified_visual_count": 14,
+  "verified_visual_count": 13,
   "lead_story_id": "valcea-intrerupere-curent-2026-09-13-horezu",
   "lead_published_at": "2026-09-09T16:56:23+03:00",
-  "articles_sha256": "717b75c2790dacdaa83c2edd8aa0360b0b99358b16d2cc96df61695dd72d6504",
+  "articles_sha256": "11463c5dcf47940928ad45d121e803cf2e3d79cbb73301736f12ba2e2089de2c",
   "synced_at": "2026-09-09T22:00:42.407868Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
