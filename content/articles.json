@@ -1,15 +1,52 @@
 {
-  "updated_local": "2026-09-13T10:37:07.677866Z",
+  "updated_local": "2026-09-13T14:39:49.873044Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "apavil-joburi-septembrie-2026",
+      "section": "LOCURI DE MUNCĂ",
+      "priority": 1000000,
+      "source_priority": 82,
+      "canonical_rank": 0,
+      "headline": "APAVIL caută trei oameni: două posturi de inginer și un post de încasator-cititor",
+      "dek": "Dosarele pentru cele două posturi de inginer se depun până pe 18 septembrie, ora 13:00, iar pentru postul de încasator-cititor din subzona Mihăești până pe 21 septembrie, ora 15:00.",
+      "paragraphs": [
+        "APAVIL a publicat în 3 septembrie 2026 două anunțuri care însumează trei posturi: două de inginer în Serviciul Unitatea de Implementare Proiecte și unul de încasator-cititor pentru Râmnicu Vâlcea, subzona Mihăești.",
+        "Pentru cele două posturi de inginer, termenul de depunere a dosarelor este 18 septembrie 2026, ora 13:00; proba scrisă este în 25 septembrie, ora 09:00, iar interviul în 1 octombrie, ora 09:00.",
+        "Pentru postul de încasator-cititor, termenul de depunere a dosarelor este 21 septembrie 2026, ora 15:00; proba scrisă este în 28 septembrie, ora 11:00, iar interviul în 2 octombrie, ora 09:00.",
+        "Pentru posturile de inginer sunt cerute studii superioare tehnice relevante pentru construcții și minimum trei ani de experiență în managementul contractelor din proiecte finanțate din fonduri europene.",
+        "Pentru postul de încasator-cititor sunt cerute studii medii cu diplomă de bacalaureat și vârsta de peste 21 de ani."
+      ],
+      "sources": [
+        {
+          "name": "APAVIL — anunțuri angajare 2026",
+          "url": "https://apavil.ro/?page_id=7981",
+          "tier": "T1"
+        },
+        {
+          "name": "APAVIL — două posturi de inginer, Unitatea de Implementare Proiecte, 03.09.2026",
+          "url": "https://apavil.ro/materiale/anunturi-angajare/2026/26977_Anunt%20privind%20scoaterea%20la%20concurs%20a%20doua%20posturi%20de%20inginer%20in%20cadrul%20Serviciului%20Unitatea%20de%20implementare%20Proiecte%20(03.09.2026)/1_Detalii%20anunt.pdf",
+          "tier": "T1"
+        },
+        {
+          "name": "APAVIL — post de încasator-cititor, subzona Mihăești, 03.09.2026",
+          "url": "https://apavil.ro/materiale/anunturi-angajare/2026/26979_Anunt%20privind%20scoaterea%20la%20concurs%20a%20unui%20postde%20incasator-cititor%20in%20cadrul%20Serviciului%20Citire%20Incasare,%20R%C3%A2mnicu%20V%C3%A2lcea,%20subzona%20Mihaesti%20(03.09.2026)/1_Detalii%20anunt.pdf",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-13T17:39:48+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/apavil-joburi-septembrie-2026/"
+    },
+    {
       "id": "scm-program-b77962d4af149f60d7e6",
       "section": "SPORT",
-      "priority": 1000000,
+      "priority": 999999,
       "source_priority": 88,
-      "canonical_rank": 0,
+      "canonical_rank": 1,
       "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -27,30 +64,6 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/scm-program-b77962d4af149f60d7e6/"
-    },
-    {
-      "id": "valcea-intrerupere-curent-2026-09-13-horezu",
-      "section": "UTIL",
-      "priority": 999999,
-      "source_priority": 88,
-      "canonical_rank": 1,
-      "headline": "Horezu: întrerupere de curent programată pe 13 septembrie 2026, între 09:00–15:00",
-      "dek": "Distribuție Oltenia include PTCZ PTTR Horezu în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–15:00.",
-      "paragraphs": [
-        "Zona indicată în documentul oficial este PTCZ PTTR Horezu.",
-        "Distribuție Oltenia a programat o întrerupere a alimentării cu energie electrică în Horezu, pe 13 septembrie 2026, între orele 09:00 și 15:00."
-      ],
-      "sources": [
-        {
-          "name": "Distribuție Oltenia — întreruperi programate Vâlcea",
-          "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Fseptembrie%2F07.09-13.09%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2007_09%20-%2013_09_2026%20-%20Valcea.pdf",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-09-09T16:56:23+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-13-horezu/"
     },
     {
       "id": "fast-ipj-retinuta-pentru-24-de-ore1788941100-c8f452db47",
