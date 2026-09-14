@@ -3,9 +3,10 @@ name: VÂLCEA CLAR — CIVORA Public Sync
 on:
   workflow_dispatch:
   schedule:
-    # Keep the hourly slot away from common top-of-hour congestion and force
-    # GitHub to re-register the schedule after the workflow rename/cutover.
-    - cron: '7 * * * *'
+    # GitHub cron delivery is best-effort. Two off-peak lightweight probes per
+    # hour reduce missed-delta latency; the expensive sync/build/deploy job runs
+    # only when CIVORA or the public readback actually differs.
+    - cron: '17,47 * * * *'
   push:
     branches: [main]
     paths:
@@ -35,7 +36,103 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  probe:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.probe.outputs.run }}
+      reason: ${{ steps.probe.outputs.reason }}
+    steps:
+      - id: probe
+        name: Probe CIVORA delta and public readback
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Structural/manual events always execute the full validated path.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event_name }}" = "push" ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+            echo 'reason=explicit_or_structural_event' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          upstream='https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site'
+          local_state="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/sync/civora_state.json"
+
+          # A transient upstream/public transport failure is a reason to run the
+          # canonical fail-closed job, not a reason to report a false no-op.
+          curl -fsSL --max-time 25 -H 'Cache-Control: no-cache' "$upstream/runtime/live-feed.json?probe=${GITHUB_RUN_ID}" -o /tmp/feed.json || true
+          curl -fsSL --max-time 25 -H 'Cache-Control: no-cache' "$upstream/public_ux_state.json?probe=${GITHUB_RUN_ID}" -o /tmp/ux.json || true
+          curl -fsSL --max-time 25 -H 'Cache-Control: no-cache' "$local_state?probe=${GITHUB_RUN_ID}" -o /tmp/local.json || true
+          curl -fsSL --max-time 25 "https://valceaclar.ro/?sync_probe=${GITHUB_RUN_ID}" -o /tmp/live-home.html || true
+          curl -fsSL --max-time 25 "https://valceaclar.ro/sitemap.xml?sync_probe=${GITHUB_RUN_ID}" -o /tmp/live-sitemap.xml || true
+
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          out = Path(os.environ['GITHUB_OUTPUT'])
+
+          def load(path):
+              p = Path(path)
+              if not p.is_file() or not p.read_text(encoding='utf-8', errors='replace').strip():
+                  return None
+              try:
+                  return json.loads(p.read_text(encoding='utf-8'))
+              except Exception:
+                  return None
+
+          feed = load('/tmp/feed.json')
+          ux = load('/tmp/ux.json')
+          local = load('/tmp/local.json')
+          if not all(isinstance(x, dict) for x in (feed, ux, local)):
+              out.write_text('run=true\nreason=probe_input_unavailable\n', encoding='utf-8')
+              raise SystemExit(0)
+
+          stories = [row for row in feed.get('stories', []) if isinstance(row, dict) and row.get('id')]
+          feed_ids = {str(row['id']) for row in stories}
+          ux_ids = {str(value) for value in ux.get('story_ids', []) if value}
+          live_count = int(ux.get('live_story_count') or 0)
+          upstream_ready = bool(stories) and len(stories) == live_count and feed_ids == ux_ids
+          if not upstream_ready:
+              # Let the canonical readiness gate decide fail-closed; do not
+              # waste a full build while CIVORA is visibly mid-transaction.
+              out.write_text('run=false\nreason=upstream_projection_not_ready\n', encoding='utf-8')
+              raise SystemExit(0)
+
+          expected_id = str(ux.get('story_ids', [''])[0] or '')
+          delta = (
+              str(feed.get('generated_at') or '') != str(local.get('source_generated_at') or '')
+              or len(stories) != int(local.get('story_count') or 0)
+              or expected_id != str(local.get('lead_story_id') or '')
+          )
+
+          home = Path('/tmp/live-home.html').read_text(encoding='utf-8', errors='replace') if Path('/tmp/live-home.html').is_file() else ''
+          sitemap = Path('/tmp/live-sitemap.xml').read_text(encoding='utf-8', errors='replace') if Path('/tmp/live-sitemap.xml').is_file() else ''
+          live_routes = set(re.findall(r'https?://[^<]+(/stiri/[^<]+/)</loc>', sitemap))
+          public_mismatch = (
+              not home
+              or not sitemap
+              or not expected_id
+              or f'/stiri/{expected_id}/' not in home
+              or live_routes != {f'/stiri/{story_id}/' for story_id in feed_ids}
+          )
+
+          if delta:
+              reason = 'civora_delta'
+          elif public_mismatch:
+              reason = 'public_readback_mismatch'
+          else:
+              reason = 'no_delta'
+          run = delta or public_mismatch
+          out.write_text(f"run={'true' if run else 'false'}\nreason={reason}\n", encoding='utf-8')
+          print({'run': run, 'reason': reason, 'story_count': len(stories), 'lead': expected_id})
+          PY
+
   sync-build-deploy:
+    needs: probe
+    if: needs.probe.outputs.run == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
