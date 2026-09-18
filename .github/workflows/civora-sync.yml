@@ -3,9 +3,10 @@ name: VÂLCEA CLAR — CIVORA Public Sync
 on:
   workflow_dispatch:
   schedule:
-    # Keep the hourly slot away from common top-of-hour congestion and force
-    # GitHub to re-register the schedule after the workflow rename/cutover.
-    - cron: '7 * * * *'
+    # Probe frequently enough to bound cross-repo convergence, while the state
+    # gate below skips all heavy build/deploy work when CIVORA and the public
+    # projection already agree.
+    - cron: '1,16,31,46 * * * *'
   push:
     branches: [main]
     paths:
@@ -129,23 +130,32 @@ jobs:
           echo "deploy=$deploy" >> "$GITHUB_OUTPUT"
           echo "expected_id=$expected_id" >> "$GITHUB_OUTPUT"
           echo "content_changed=$changed live_ok=$live_ok story_set_ok=$story_set_ok history_live_ok=$history_live_ok structural=$structural deploy=$deploy expected_id=$expected_id history_expected=$history_expected"
+          if [ "$deploy" != true ]; then
+            echo 'CIVORA/public projection already converged; heavy build/deploy will be skipped.'
+          fi
 
       - name: Unit tests
+        if: steps.state.outputs.deploy == 'true'
         run: python3 -m unittest discover -s tests -v
 
       - name: Build production site
+        if: steps.state.outputs.deploy == 'true'
         run: python3 scripts/build.py
 
       - name: Validate historical projection contract
+        if: steps.state.outputs.deploy == 'true'
         run: python3 scripts/history_projection.py --self-test
 
       - name: Project released historical editions
+        if: steps.state.outputs.deploy == 'true'
         run: python3 scripts/history_projection.py
 
       - name: Enrich discovery and social metadata
+        if: steps.state.outputs.deploy == 'true'
         run: python3 scripts/enrich_metadata.py
 
       - name: Verify production artifact
+        if: steps.state.outputs.deploy == 'true'
         run: python3 scripts/verify.py
 
       - uses: actions/configure-pages@v5
@@ -161,6 +171,7 @@ jobs:
         if: steps.state.outputs.deploy == 'true'
 
       - name: Public readback of canonical lead
+        if: steps.state.outputs.deploy == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -183,6 +194,7 @@ jobs:
           echo "Public readback PASS: $expected_id"
 
       - name: Public readback of exact canonical story set
+        if: steps.state.outputs.deploy == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -217,6 +229,7 @@ jobs:
           echo 'Public story-set readback PASS.'
 
       - name: Public readback of historical archive
+        if: steps.state.outputs.deploy == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -241,6 +254,7 @@ jobs:
           echo "Historical public readback PASS: $history_expected"
 
       - name: Public readback of verified CIVORA media
+        if: steps.state.outputs.deploy == 'true'
         run: python3 scripts/readback_media.py
 
       - name: Persist canonical projection state
