@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-19T21:06:44.965802Z",
+  "updated_local": "2026-09-20T13:45:17.598262Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -1860,35 +1860,11 @@
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-21-budesti/"
     },
     {
-      "id": "scm-program-b77962d4af149f60d7e6",
-      "section": "SPORT",
+      "id": "ramnicu-parcare-nord-20260904",
+      "section": "ACTUALITATE",
       "priority": 999944,
       "source_priority": 88,
       "canonical_rank": 56,
-      "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
-      "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
-      "paragraphs": [
-        "În programul oficial al SCM Râmnicu Vâlcea, partida SCM Râmnicu Vâlcea – Bihor Oradea este programată pe 20 septembrie 2026, la ora 11:30.",
-        "Programul oficial indică pentru această partidă locația Stadionul Municipal."
-      ],
-      "sources": [
-        {
-          "name": "SCM Râmnicu Vâlcea — program oficial",
-          "url": "https://scmramnicuvalcea.ro/program/",
-          "tier": "T1B"
-        }
-      ],
-      "published": "2026-09-14T16:48:58+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/scm-program-b77962d4af149f60d7e6/"
-    },
-    {
-      "id": "ramnicu-parcare-nord-20260904",
-      "section": "ACTUALITATE",
-      "priority": 999943,
-      "source_priority": 88,
-      "canonical_rank": 57,
       "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
       "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
       "paragraphs": [
@@ -1918,9 +1894,9 @@
     {
       "id": "bujoreni-11-zidari-4582-6000-20260818",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999942,
+      "priority": 999943,
       "source_priority": 88,
-      "canonical_rank": 58,
+      "canonical_rank": 57,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -1945,9 +1921,9 @@
     {
       "id": "ramnicu-uap-atelier-35-artex-20260904",
       "section": "CULTURĂ",
-      "priority": 999941,
+      "priority": 999942,
       "source_priority": 82,
-      "canonical_rank": 59,
+      "canonical_rank": 58,
       "headline": "Două evenimente culturale la Râmnicu Vâlcea pe 4 septembrie: «Atelier 35» la Cozia, apoi expoziție și lansare la Artex",
       "dek": "Filiala Râmnicu Vâlcea a UAP a programat pentru 4 septembrie o expoziție de grup la Galeriile Cozia 1 și 2 și, de la ora 18:00, un dublu eveniment la Galeria Artex: retrospectiva Mariei Constantin și lansarea unui roman al Ioanei Drăgan.",
       "paragraphs": [
@@ -1970,9 +1946,9 @@
     {
       "id": "apavil-joburi-septembrie-2026",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999940,
+      "priority": 999941,
       "source_priority": 82,
-      "canonical_rank": 60,
+      "canonical_rank": 59,
       "headline": "APAVIL caută trei oameni: două posturi de inginer și un post de încasator-cititor",
       "dek": "Dosarele pentru cele două posturi de inginer se depun până pe 18 septembrie, ora 13:00, iar pentru postul de încasator-cititor din subzona Mihăești până pe 21 septembrie, ora 15:00.",
       "paragraphs": [
@@ -2007,9 +1983,9 @@
     {
       "id": "valcea-romsilva-pnrr-torenti-20260831",
       "section": "JUDEȚ",
-      "priority": 999939,
+      "priority": 999940,
       "source_priority": 78,
-      "canonical_rank": 61,
+      "canonical_rank": 60,
       "headline": "Romsilva: toate cele 19 lucrări PNRR împotriva viiturilor, într-un proiect care include Vâlcea, au fost finalizate",
       "dek": "Regia Națională a Pădurilor anunță finalizarea și recepția celor 19 obiective din proiectul de corectare a torenților derulat în opt județe, inclusiv Vâlcea. Valoarea de 109,56 milioane de lei fără TVA este pentru întregul proiect, nu doar pentru județ.",
       "paragraphs": [
@@ -2037,9 +2013,9 @@
     {
       "id": "valcea-apa-canal-contract-152m-20260902",
       "section": "JUDEȚ",
-      "priority": 999938,
+      "priority": 999939,
       "source_priority": 93,
-      "canonical_rank": 62,
+      "canonical_rank": 61,
       "headline": "APAVIL precizează valoarea contractului pentru apă și canalizare din Vâlcea: 931,7 milioane lei",
       "dek": "Operatorul județean spune că Contractul nr. 179 pentru proiectul regional a fost semnat pe 28 august. Finanțarea nerambursabilă poate ajunge la 709,81 milioane lei, iar lucrările prevăd 57,52 km pentru alimentarea cu apă și 186,89 km pentru colectarea apelor uzate.",
       "paragraphs": [
@@ -2062,9 +2038,9 @@
     {
       "id": "cet-govora-cine-a-decis-oprirea-20260821",
       "section": "ENERGIE",
-      "priority": 999937,
+      "priority": 999938,
       "source_priority": 100,
-      "canonical_rank": 63,
+      "canonical_rank": 62,
       "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
       "dek": "O postare politică susține că CET Govora a renunțat voluntar la licență și că nimeni nu i-a impus oprirea. Documentele oficiale arată însă un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de cifrele invocate în postare.",
       "paragraphs": [
@@ -2118,9 +2094,9 @@
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
       "section": "PATRIMONIU",
-      "priority": 999936,
+      "priority": 999937,
       "source_priority": 98,
-      "canonical_rank": 64,
+      "canonical_rank": 63,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
       "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului, iar Ministerul Culturii explică atât avizarea, cât și soluția arhitecturală contemporană.",
       "paragraphs": [
@@ -2172,9 +2148,9 @@
     {
       "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
       "section": "ADMINISTRAȚIE",
-      "priority": 999935,
+      "priority": 999936,
       "source_priority": 96,
-      "canonical_rank": 65,
+      "canonical_rank": 64,
       "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
       "dek": "Propunerea consilierului local Vicențiu Mocanu ca Ștefania Uță să primească titlul de Cetățean de Onoare al Râmnicului a declanșat un schimb de replici cu primarul Mircia Gutău. Regulamentul local arată că un consilier poate formula individual o asemenea propunere.",
       "paragraphs": [
@@ -2232,9 +2208,9 @@
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999934,
+      "priority": 999935,
       "source_priority": 99,
-      "canonical_rank": 66,
+      "canonical_rank": 65,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
       "dek": "O reconstrucție documentată a ediției 2026: artiștii pe zile, ce s-a cântat unde există setlisturi verificabile, organizatorii, vocile influente, sponsorii și sprijinul public.",
       "paragraphs": [
@@ -2350,9 +2326,9 @@
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
       "section": "EVENIMENTE",
-      "priority": 999933,
+      "priority": 999934,
       "source_priority": 99,
-      "canonical_rank": 67,
+      "canonical_rank": 66,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
       "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
       "paragraphs": [
@@ -2410,9 +2386,9 @@
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999932,
+      "priority": 999933,
       "source_priority": 98,
-      "canonical_rank": 68,
+      "canonical_rank": 67,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
       "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei, iar lista de parteneri arată o rețea publică și culturală mai largă.",
       "paragraphs": [
@@ -2461,9 +2437,9 @@
     {
       "id": "deep-forest-fest-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999931,
+      "priority": 999932,
       "source_priority": 98,
-      "canonical_rank": 69,
+      "canonical_rank": 68,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
       "dek": "Dosarul VÂLCEA CLAR separă muzica și promovarea de documentele publice: cine a urcat pe afiș, cum a evoluat festivalul și ce sume apar în hotărârile locale.",
       "paragraphs": [
@@ -2544,9 +2520,9 @@
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
       "section": "EVENIMENTE",
-      "priority": 999930,
+      "priority": 999931,
       "source_priority": 98,
-      "canonical_rank": 70,
+      "canonical_rank": 69,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
       "dek": "Ediția aniversară de la Brezoi a combinat 21 de trupe cu o cauză umanitară; dosarul separă profitul promis pentru caritate de eventualele resurse publice locale și de rezultatul financiar care trebuie documentat după festival.",
       "paragraphs": [
@@ -2610,9 +2586,9 @@
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "section": "CULTURĂ",
-      "priority": 999929,
+      "priority": 999930,
       "source_priority": 97,
-      "canonical_rank": 71,
+      "canonical_rank": 70,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
       "dek": "Patru evenimente sunt deja publicate pentru septembrie 2026, de la jazz și latino simfonic la program coral și Violoncellissimo; VÂLCEA CLAR le leagă de artiști, bilete și finanțarea publică a Centrului Cultural Municipal.",
       "paragraphs": [
@@ -2656,9 +2632,9 @@
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999928,
+      "priority": 999929,
       "source_priority": 97,
-      "canonical_rank": 72,
+      "canonical_rank": 71,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
       "dek": "Festivalul gratuit de la Măldărești este organizat de instituții ale Consiliului Județean Vâlcea; VÂLCEA CLAR reconstruiește programul și separă costul public dovedit de sumele care încă lipsesc din documentele indexate.",
       "paragraphs": [
@@ -2706,9 +2682,9 @@
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
       "section": "CULTURĂ",
-      "priority": 999927,
+      "priority": 999928,
       "source_priority": 96,
-      "canonical_rank": 73,
+      "canonical_rank": 72,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
       "dek": "Ariel și Anton Pann aparțin unor administrații diferite și au fluxuri distincte de program și finanțare; VÂLCEA CLAR le transformă în surse permanente pentru agenda culturală, premiere, distribuții și money trace.",
       "paragraphs": [
@@ -2782,9 +2758,9 @@
     {
       "id": "invartita-dorului-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999926,
+      "priority": 999927,
       "source_priority": 96,
-      "canonical_rank": 74,
+      "canonical_rank": 73,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
       "dek": "Festivalul păstoresc organizat de Primăria și Consiliul Local Vaideeni aduce zeci de artiști și ansambluri; VÂLCEA CLAR separă tradiția de întrebarea contabilă privind costul complet al ediției.",
       "paragraphs": [
@@ -2833,9 +2809,9 @@
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999925,
+      "priority": 999926,
       "source_priority": 96,
-      "canonical_rank": 75,
+      "canonical_rank": 74,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
       "dek": "Târgul de la Horezu combină patrimoniul ceramic cu spectacole folclorice; documentele locale confirmă o hotărâre specială de buget, iar VÂLCEA CLAR urmărește suma și execuția ei până la nivel de contracte și plăți.",
       "paragraphs": [
@@ -2883,9 +2859,9 @@
     {
       "id": "fast-isu-incendiu-izbucnit-intr-o-gospodarie-din-localitatea-li-729005290f",
       "section": "URGENȚE",
-      "priority": 999924,
+      "priority": 999925,
       "source_priority": 97,
-      "canonical_rank": 76,
+      "canonical_rank": 75,
       "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2907,9 +2883,9 @@
     {
       "id": "fast-isu-incendiu-locuinta-in-municipiul-ramnicu-valcea-777-968eefa444",
       "section": "URGENȚE",
-      "priority": 999923,
+      "priority": 999924,
       "source_priority": 97,
-      "canonical_rank": 77,
+      "canonical_rank": 76,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2926,6 +2902,30 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/fast-isu-incendiu-locuinta-in-municipiul-ramnicu-valcea-777-968eefa444/",
+      "archive_only": true
+    },
+    {
+      "id": "scm-program-b77962d4af149f60d7e6",
+      "section": "SPORT",
+      "priority": 999923,
+      "source_priority": 88,
+      "canonical_rank": 77,
+      "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
+      "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
+      "paragraphs": [
+        "În programul oficial al SCM Râmnicu Vâlcea, partida SCM Râmnicu Vâlcea – Bihor Oradea este programată pe 20 septembrie 2026, la ora 11:30.",
+        "Programul oficial indică pentru această partidă locația Stadionul Municipal."
+      ],
+      "sources": [
+        {
+          "name": "SCM Râmnicu Vâlcea — program oficial",
+          "url": "https://scmramnicuvalcea.ro/program/"
+        }
+      ],
+      "published": "2026-09-14T16:48:58+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/scm-program-b77962d4af149f60d7e6/",
       "archive_only": true
     },
     {
