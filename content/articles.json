@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-20T13:45:17.598262Z",
+  "updated_local": "2026-09-20T21:37:10.899632Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -1860,43 +1860,11 @@
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-21-budesti/"
     },
     {
-      "id": "ramnicu-parcare-nord-20260904",
-      "section": "ACTUALITATE",
+      "id": "bujoreni-11-zidari-4582-6000-20260818",
+      "section": "LOCURI DE MUNCĂ",
       "priority": 999944,
       "source_priority": 88,
       "canonical_rank": 56,
-      "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
-      "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
-      "paragraphs": [
-        "O parcare pe două niveluri a fost inaugurată în seara de 4 septembrie 2026 în cartierul Nord din Râmnicu Vâlcea, în curtea Liceului Forestier.",
-        "Amenajarea se află în cartierul Nord, într-o zonă în care fluxul către Spitalul Județean de Urgență contribuie la presiunea pe trafic și locurile de parcare.",
-        "Parcarea are aproximativ 80 de locuri pe fiecare nivel, în jur de 160 de locuri în total.",
-        "Deasupra parcării a fost construit un teren de sport pentru Liceul Forestier, prevăzut cu nocturnă și vestiare.",
-        "Accesul folosește recunoașterea numărului de înmatriculare, iar parcarea este anunțată gratuită în prima lună, până la reglarea sistemului de plată cu cardul."
-      ],
-      "sources": [
-        {
-          "name": "AGERPRES — parcare pe două niveluri cu teren de sport în Râmnicu Vâlcea, 04.09.2026",
-          "url": "https://agerpres.ro/administratie/2026/09/04/parcare-pe-doua-niveluri-cu-teren-de-sport-cu-nocturna-realizata-in-ramnicu-valcea-printr-o-investit--1590920",
-          "tier": "T2"
-        },
-        {
-          "name": "EUROVÂLCEA — noua parcare etajată din Nord, 05.09.2026",
-          "url": "https://www.eurovalcea.ro/2026/09/05/ramnicu-valcea-noua-parcare-etajata-din-nord-inaugurata-160-de-locuri-si-teren-de-sport-deasupra/",
-          "tier": "T2"
-        }
-      ],
-      "published": "2026-09-14T16:48:58+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/ramnicu-parcare-nord-20260904/"
-    },
-    {
-      "id": "bujoreni-11-zidari-4582-6000-20260818",
-      "section": "LOCURI DE MUNCĂ",
-      "priority": 999943,
-      "source_priority": 88,
-      "canonical_rank": 57,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -1921,9 +1889,9 @@
     {
       "id": "ramnicu-uap-atelier-35-artex-20260904",
       "section": "CULTURĂ",
-      "priority": 999942,
+      "priority": 999943,
       "source_priority": 82,
-      "canonical_rank": 58,
+      "canonical_rank": 57,
       "headline": "Două evenimente culturale la Râmnicu Vâlcea pe 4 septembrie: «Atelier 35» la Cozia, apoi expoziție și lansare la Artex",
       "dek": "Filiala Râmnicu Vâlcea a UAP a programat pentru 4 septembrie o expoziție de grup la Galeriile Cozia 1 și 2 și, de la ora 18:00, un dublu eveniment la Galeria Artex: retrospectiva Mariei Constantin și lansarea unui roman al Ioanei Drăgan.",
       "paragraphs": [
@@ -1946,9 +1914,9 @@
     {
       "id": "apavil-joburi-septembrie-2026",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999941,
+      "priority": 999942,
       "source_priority": 82,
-      "canonical_rank": 59,
+      "canonical_rank": 58,
       "headline": "APAVIL caută trei oameni: două posturi de inginer și un post de încasator-cititor",
       "dek": "Dosarele pentru cele două posturi de inginer se depun până pe 18 septembrie, ora 13:00, iar pentru postul de încasator-cititor din subzona Mihăești până pe 21 septembrie, ora 15:00.",
       "paragraphs": [
@@ -1983,9 +1951,9 @@
     {
       "id": "valcea-romsilva-pnrr-torenti-20260831",
       "section": "JUDEȚ",
-      "priority": 999940,
+      "priority": 999941,
       "source_priority": 78,
-      "canonical_rank": 60,
+      "canonical_rank": 59,
       "headline": "Romsilva: toate cele 19 lucrări PNRR împotriva viiturilor, într-un proiect care include Vâlcea, au fost finalizate",
       "dek": "Regia Națională a Pădurilor anunță finalizarea și recepția celor 19 obiective din proiectul de corectare a torenților derulat în opt județe, inclusiv Vâlcea. Valoarea de 109,56 milioane de lei fără TVA este pentru întregul proiect, nu doar pentru județ.",
       "paragraphs": [
@@ -2013,9 +1981,9 @@
     {
       "id": "valcea-apa-canal-contract-152m-20260902",
       "section": "JUDEȚ",
-      "priority": 999939,
+      "priority": 999940,
       "source_priority": 93,
-      "canonical_rank": 61,
+      "canonical_rank": 60,
       "headline": "APAVIL precizează valoarea contractului pentru apă și canalizare din Vâlcea: 931,7 milioane lei",
       "dek": "Operatorul județean spune că Contractul nr. 179 pentru proiectul regional a fost semnat pe 28 august. Finanțarea nerambursabilă poate ajunge la 709,81 milioane lei, iar lucrările prevăd 57,52 km pentru alimentarea cu apă și 186,89 km pentru colectarea apelor uzate.",
       "paragraphs": [
@@ -2038,9 +2006,9 @@
     {
       "id": "cet-govora-cine-a-decis-oprirea-20260821",
       "section": "ENERGIE",
-      "priority": 999938,
+      "priority": 999939,
       "source_priority": 100,
-      "canonical_rank": 62,
+      "canonical_rank": 61,
       "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
       "dek": "O postare politică susține că CET Govora a renunțat voluntar la licență și că nimeni nu i-a impus oprirea. Documentele oficiale arată însă un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de cifrele invocate în postare.",
       "paragraphs": [
@@ -2094,9 +2062,9 @@
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
       "section": "PATRIMONIU",
-      "priority": 999937,
+      "priority": 999938,
       "source_priority": 98,
-      "canonical_rank": 63,
+      "canonical_rank": 62,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
       "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului, iar Ministerul Culturii explică atât avizarea, cât și soluția arhitecturală contemporană.",
       "paragraphs": [
@@ -2146,71 +2114,11 @@
       "image_story_id": "arutela-restaurare-controversa-pnrr-20260820"
     },
     {
-      "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
-      "section": "ADMINISTRAȚIE",
-      "priority": 999936,
-      "source_priority": 96,
-      "canonical_rank": 64,
-      "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
-      "dek": "Propunerea consilierului local Vicențiu Mocanu ca Ștefania Uță să primească titlul de Cetățean de Onoare al Râmnicului a declanșat un schimb de replici cu primarul Mircia Gutău. Regulamentul local arată că un consilier poate formula individual o asemenea propunere.",
-      "paragraphs": [
-        "DE LA AUR MONDIAL LA DISPUTĂ POLITICĂ. Alexandra Ștefania Uță a câștigat la 9 august 2026 finala de 400 metri garduri la Campionatele Mondiale U20 de la Eugene, Oregon, cu 55,33 secunde, record personal. La câteva zile după performanță, consilierul local AUR Vicențiu Mocanu a propus public ca sportiva să primească titlul de Cetățean de Onoare al municipiului Râmnicu Vâlcea.",
-        "CE A SPUS GUTĂU. Criterii.ro a reprodus reacția primarului Mircia Gutău, care l-a acuzat pe Mocanu că se lipește politic de succesul sportivei și a invocat competiția internă din partidul acestuia. În aceeași poziție, Gutău a susținut că inițiativa ar trebui lăsată clubului sportiv din care face parte atleta și, eventual, formulată după acumularea mai multor rezultate de excepție.",
-        "REPLICA LUI MOCANU. Tot Criterii.ro a publicat răspunsul consilierului, care i-a reproșat primarului un dublu standard: în formularea lui Mocanu, recunoașterea unei valori este tratată ca legitimă atunci când inițiativa aparține administrației și ca electorală atunci când vine din partea unui adversar politic. Schimbul de replici a mutat rapid discuția de la performanța sportivă la rivalitatea politică locală.",
-        "CE SPUNE REGULAMENTUL. Regulamentul privind conferirea titlului de Cetățean de Onoare al municipiului Râmnicu Vâlcea, republicat prin HCL 148/2010, spune explicit la art. 3 că propunerea poate fi făcută de primar, de consilierii municipali în grup sau individual, de instituții ori organizații neguvernamentale cu activitate în municipiu sau de persoane fizice. Procedural, așadar, un consilier local are dreptul să formuleze o asemenea propunere.",
-        "CE NU ESTE ÎNCĂ DECIS. Existența unei propuneri publice nu înseamnă acordarea titlului. Pentru promovarea formală sunt necesare propunerea, expunerea de motive a primarului, raportul compartimentului de specialitate și un proiect de hotărâre, iar titlul se conferă prin hotărâre a Consiliului Local. VÂLCEA CLAR nu a identificat până la această publicare un proiect de hotărâre adoptat pentru Ștefania Uță.",
-        "PERFORMANȚA CARE A GENERAT DISCUȚIA. World Athletics o consemnează pe Alexandra Ștefania Uță drept campioană mondială U20 la 400 m garduri, cu 55,33 secunde în finala din 9 august 2026. Profilul oficial al sportivei indică și titlul european U20, ceea ce confirmă că disputa pornește de la o performanță sportivă de prim rang, nu de la o distincție simbolică inventată de actorii politici locali.",
-        "UN LUCRU TREBUIE SEPARAT. Gutău poate critica momentul sau motivația politică a inițiativei, iar Mocanu poate contesta această interpretare. Faptul verificabil este însă că regulamentul nu rezervă inițiativa primarului sau clubului sportiv. Următorul prag concret este apariția unui proiect oficial și votul din Consiliul Local; până atunci, avem o campioană mondială și un schimb public de replici între doi actori politici locali."
-      ],
-      "sources": [
-        {
-          "name": "World Athletics — finala 400 m garduri feminin, Campionatele Mondiale U20 2026",
-          "url": "https://worldathletics.org/en/competitions/world-athletics-u20-championships/oregon26/results/women/400-metres-hurdles/final/result",
-          "tier": "T1"
-        },
-        {
-          "name": "World Athletics — profil Alexandra Ștefania Uță",
-          "url": "https://worldathletics.org/athletes/romania/alexandra-stefania-uta-14969059",
-          "tier": "T1"
-        },
-        {
-          "name": "HCL Râmnicu Vâlcea nr. 148/2010 — regulament Cetățean de Onoare",
-          "url": "https://hcl.usr.ro/ramnicu_valcea/2010/h148",
-          "tier": "T1"
-        },
-        {
-          "name": "Criterii.ro — schimbul de replici Gutău–Mocanu",
-          "url": "https://criterii.ro/national/desi-nu-poarta-barba-gutau-nu-e-imberb-iar-viky-mocanu-desi-are-barba-e-imberb/",
-          "tier": "T2"
-        },
-        {
-          "name": "Ziarul de Vâlcea — reacție editorială la disputa Gutău–Mocanu",
-          "url": "https://ziaruldevalcea.ro/2026/08/mircia-gutau-vrea-monopol-si-pe-recunostinta-orasului-vicentiu-mocanu-are-dreptate-stefania-uta-merita-acum-titlul-de-cetatean-de-onoare/",
-          "tier": "T2"
-        }
-      ],
-      "published": "2026-08-20T22:20:18+03:00",
-      "image": "primaria-ramnicu-valcea.jpg",
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/gutau-mocanu-stefania-uta-cetatean-onoare-20260820/",
-      "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ceremonia sau persoanele descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:R-Valcea_Primarie_1.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "",
-      "image_story_id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820"
-    },
-    {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999935,
+      "priority": 999937,
       "source_priority": 99,
-      "canonical_rank": 65,
+      "canonical_rank": 63,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
       "dek": "O reconstrucție documentată a ediției 2026: artiștii pe zile, ce s-a cântat unde există setlisturi verificabile, organizatorii, vocile influente, sponsorii și sprijinul public.",
       "paragraphs": [
@@ -2326,9 +2234,9 @@
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
       "section": "EVENIMENTE",
-      "priority": 999934,
+      "priority": 999936,
       "source_priority": 99,
-      "canonical_rank": 66,
+      "canonical_rank": 64,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
       "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
       "paragraphs": [
@@ -2386,9 +2294,9 @@
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999933,
+      "priority": 999935,
       "source_priority": 98,
-      "canonical_rank": 67,
+      "canonical_rank": 65,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
       "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei, iar lista de parteneri arată o rețea publică și culturală mai largă.",
       "paragraphs": [
@@ -2437,9 +2345,9 @@
     {
       "id": "deep-forest-fest-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999932,
+      "priority": 999934,
       "source_priority": 98,
-      "canonical_rank": 68,
+      "canonical_rank": 66,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
       "dek": "Dosarul VÂLCEA CLAR separă muzica și promovarea de documentele publice: cine a urcat pe afiș, cum a evoluat festivalul și ce sume apar în hotărârile locale.",
       "paragraphs": [
@@ -2520,9 +2428,9 @@
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
       "section": "EVENIMENTE",
-      "priority": 999931,
+      "priority": 999933,
       "source_priority": 98,
-      "canonical_rank": 69,
+      "canonical_rank": 67,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
       "dek": "Ediția aniversară de la Brezoi a combinat 21 de trupe cu o cauză umanitară; dosarul separă profitul promis pentru caritate de eventualele resurse publice locale și de rezultatul financiar care trebuie documentat după festival.",
       "paragraphs": [
@@ -2586,9 +2494,9 @@
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "section": "CULTURĂ",
-      "priority": 999930,
+      "priority": 999932,
       "source_priority": 97,
-      "canonical_rank": 70,
+      "canonical_rank": 68,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
       "dek": "Patru evenimente sunt deja publicate pentru septembrie 2026, de la jazz și latino simfonic la program coral și Violoncellissimo; VÂLCEA CLAR le leagă de artiști, bilete și finanțarea publică a Centrului Cultural Municipal.",
       "paragraphs": [
@@ -2632,9 +2540,9 @@
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999929,
+      "priority": 999931,
       "source_priority": 97,
-      "canonical_rank": 71,
+      "canonical_rank": 69,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
       "dek": "Festivalul gratuit de la Măldărești este organizat de instituții ale Consiliului Județean Vâlcea; VÂLCEA CLAR reconstruiește programul și separă costul public dovedit de sumele care încă lipsesc din documentele indexate.",
       "paragraphs": [
@@ -2682,9 +2590,9 @@
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
       "section": "CULTURĂ",
-      "priority": 999928,
+      "priority": 999930,
       "source_priority": 96,
-      "canonical_rank": 72,
+      "canonical_rank": 70,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
       "dek": "Ariel și Anton Pann aparțin unor administrații diferite și au fluxuri distincte de program și finanțare; VÂLCEA CLAR le transformă în surse permanente pentru agenda culturală, premiere, distribuții și money trace.",
       "paragraphs": [
@@ -2758,9 +2666,9 @@
     {
       "id": "invartita-dorului-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999927,
+      "priority": 999929,
       "source_priority": 96,
-      "canonical_rank": 73,
+      "canonical_rank": 71,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
       "dek": "Festivalul păstoresc organizat de Primăria și Consiliul Local Vaideeni aduce zeci de artiști și ansambluri; VÂLCEA CLAR separă tradiția de întrebarea contabilă privind costul complet al ediției.",
       "paragraphs": [
@@ -2809,9 +2717,9 @@
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999926,
+      "priority": 999928,
       "source_priority": 96,
-      "canonical_rank": 74,
+      "canonical_rank": 72,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
       "dek": "Târgul de la Horezu combină patrimoniul ceramic cu spectacole folclorice; documentele locale confirmă o hotărâre specială de buget, iar VÂLCEA CLAR urmărește suma și execuția ei până la nivel de contracte și plăți.",
       "paragraphs": [
@@ -2859,9 +2767,9 @@
     {
       "id": "fast-isu-incendiu-izbucnit-intr-o-gospodarie-din-localitatea-li-729005290f",
       "section": "URGENȚE",
-      "priority": 999925,
+      "priority": 999927,
       "source_priority": 97,
-      "canonical_rank": 75,
+      "canonical_rank": 73,
       "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2883,9 +2791,9 @@
     {
       "id": "fast-isu-incendiu-locuinta-in-municipiul-ramnicu-valcea-777-968eefa444",
       "section": "URGENȚE",
-      "priority": 999924,
+      "priority": 999926,
       "source_priority": 97,
-      "canonical_rank": 76,
+      "canonical_rank": 74,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2905,11 +2813,42 @@
       "archive_only": true
     },
     {
+      "id": "ramnicu-parcare-nord-20260904",
+      "section": "ACTUALITATE",
+      "priority": 999925,
+      "source_priority": 88,
+      "canonical_rank": 75,
+      "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
+      "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
+      "paragraphs": [
+        "O parcare pe două niveluri a fost inaugurată în seara de 4 septembrie 2026 în cartierul Nord din Râmnicu Vâlcea, în curtea Liceului Forestier.",
+        "Amenajarea se află în cartierul Nord, într-o zonă în care fluxul către Spitalul Județean de Urgență contribuie la presiunea pe trafic și locurile de parcare.",
+        "Parcarea are aproximativ 80 de locuri pe fiecare nivel, în jur de 160 de locuri în total.",
+        "Deasupra parcării a fost construit un teren de sport pentru Liceul Forestier, prevăzut cu nocturnă și vestiare.",
+        "Accesul folosește recunoașterea numărului de înmatriculare, iar parcarea este anunțată gratuită în prima lună, până la reglarea sistemului de plată cu cardul."
+      ],
+      "sources": [
+        {
+          "name": "AGERPRES — parcare pe două niveluri cu teren de sport în Râmnicu Vâlcea, 04.09.2026",
+          "url": "https://agerpres.ro/administratie/2026/09/04/parcare-pe-doua-niveluri-cu-teren-de-sport-cu-nocturna-realizata-in-ramnicu-valcea-printr-o-investit--1590920"
+        },
+        {
+          "name": "EUROVÂLCEA — noua parcare etajată din Nord, 05.09.2026",
+          "url": "https://www.eurovalcea.ro/2026/09/05/ramnicu-valcea-noua-parcare-etajata-din-nord-inaugurata-160-de-locuri-si-teren-de-sport-deasupra/"
+        }
+      ],
+      "published": "2026-09-14T16:48:58+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/ramnicu-parcare-nord-20260904/",
+      "archive_only": true
+    },
+    {
       "id": "scm-program-b77962d4af149f60d7e6",
       "section": "SPORT",
-      "priority": 999923,
+      "priority": 999924,
       "source_priority": 88,
-      "canonical_rank": 77,
+      "canonical_rank": 76,
       "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -2931,9 +2870,9 @@
     {
       "id": "baile-govora-conferinta-inrmfb-16-19-septembrie-2026",
       "section": "EVENIMENTE",
-      "priority": 999922,
+      "priority": 999923,
       "source_priority": 78,
-      "canonical_rank": 78,
+      "canonical_rank": 77,
       "headline": "Băile Govora găzduiește Conferința Națională INRMFB între 16 și 19 septembrie",
       "dek": "Cea de-a XX-a Conferință Națională a Institutului Național de Recuperare, Medicină Fizică și Balneoclimatologie este programată la Băile Govora, iar lucrările științifice se vor desfășura la Cazinoul din parcul central.",
       "paragraphs": [
@@ -2957,9 +2896,9 @@
     {
       "id": "balcesti-incendiu-vegetatie-15ha-20260902",
       "section": "SIGURANȚĂ",
-      "priority": 999921,
+      "priority": 999922,
       "source_priority": 0,
-      "canonical_rank": 79,
+      "canonical_rank": 78,
       "headline": "Incendiu de vegetație la Bălcești: aproximativ 15 hectare de teren au fost afectate",
       "dek": "Pompierii vâlceni au stins un incendiu de vegetație uscată la Bălcești, iar ISU Vâlcea estimează suprafața afectată la aproximativ 15 hectare. Buletinul oficial nu indică o cauză a incendiului.",
       "paragraphs": [
@@ -2982,9 +2921,9 @@
     {
       "id": "horezu-autobuze-electrice-energie-verde-20260903",
       "section": "MOBILITATE",
-      "priority": 999920,
+      "priority": 999921,
       "source_priority": 0,
-      "canonical_rank": 80,
+      "canonical_rank": 79,
       "headline": "Horezu pregătește patru autobuze electrice și două centrale solare de câte 400 kW. Ce arată documentele",
       "dek": "Documentele de achiziție prevăd două autobuze electrice de 10–11 metri și două vehicule mai mici, plus stații lente de încărcare. Separat, proiectul fotovoltaic al orașului prevede două centrale de câte 400 kW pentru autoconsum.",
       "paragraphs": [
@@ -3021,9 +2960,9 @@
     {
       "id": "babeni-izvorul-dorului-program-20260903",
       "section": "EVENIMENTE",
-      "priority": 999919,
+      "priority": 999920,
       "source_priority": 0,
-      "canonical_rank": 81,
+      "canonical_rank": 80,
       "headline": "Băbeni începe patru zile de Festival «La Izvorul Dorului»: fotbal joi, concerte și paradă până duminică",
       "dek": "Festivalul se desfășoară între 3 și 6 septembrie. Prima zi aduce turneul de fotbal pentru juniori la Liceul «George Țărnea», iar programul continuă până duminică cu muzică, folclor și activități pentru comunitate.",
       "paragraphs": [
@@ -3055,9 +2994,9 @@
     {
       "id": "ramnicu-fissura-lucis-casa-simian-20260903",
       "section": "CULTURĂ",
-      "priority": 999918,
+      "priority": 999919,
       "source_priority": 0,
-      "canonical_rank": 82,
+      "canonical_rank": 81,
       "headline": "„FISSURA LUCIS” la Casa Simian: vernisaj programat pe 3 septembrie, la ora 17:00",
       "dek": "La Muzeul de Artă „Casa Simian” din Râmnicu Vâlcea a fost anunțat pentru 3 septembrie 2026, ora 17:00, vernisajul expoziției de pictură a artistei Alexa Nicoleta Dicu.",
       "paragraphs": [
@@ -3084,9 +3023,9 @@
     {
       "id": "maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827",
       "section": "CULTURĂ",
-      "priority": 999917,
+      "priority": 999918,
       "source_priority": 0,
-      "canonical_rank": 83,
+      "canonical_rank": 82,
       "headline": "Măciuca, anunțată drept gazda Zilei Regalității 2027 după colocviul de la Biblioteca Vâlcea",
       "dek": "Curierul de Vâlcea relatează că omul de afaceri Dan Nițu a anunțat intenția organizării Zilei Regalității la Măciuca în 2027. Anunțul a venit după colocviul dedicat Regelui Mihai I, desfășurat la 23 august 2026 la Biblioteca Județeană «Antim Ivireanul».",
       "paragraphs": [
@@ -3114,9 +3053,9 @@
     {
       "id": "dn7-valea-oltului-restrictii-august-20260824",
       "section": "SERVICII",
-      "priority": 999916,
+      "priority": 999917,
       "source_priority": 0,
-      "canonical_rank": 84,
+      "canonical_rank": 83,
       "headline": "DN7, Valea Oltului: restricțiile pentru vehiculele de peste 7,5 tone rămân până la sfârșitul lui august",
       "dek": "Pe sectorul Călimănești–Câineni, restricțiile pentru autovehiculele cu masa totală maximă autorizată de peste 7,5 tone se mențin în intervalul 08:00–17:30, pentru continuarea lucrărilor de punere în siguranță a versanților.",
       "paragraphs": [
@@ -3140,9 +3079,9 @@
     {
       "id": "ramnicu-valcea-remus-bellu-incendiu-autobuz-20260822",
       "section": "ACTUALITATE",
-      "priority": 999915,
+      "priority": 999916,
       "source_priority": 0,
-      "canonical_rank": 85,
+      "canonical_rank": 84,
       "headline": "Incendiul de pe strada Remus Bellu: un autobuz și o autoutilitară au fost distruse. Nu au fost raportate victime",
       "dek": "Pompierii din Râmnicu Vâlcea au intervenit cu două autospeciale după incendiul izbucnit în seara de 22 august lângă Shopping City. Alte două autoutilitare au fost afectate parțial, iar cauza probabilă nu este încă stabilită în informațiile publice verificate.",
       "paragraphs": [
@@ -3166,9 +3105,9 @@
     {
       "id": "buila-vanturarita-accident-20260822",
       "section": "ACTUALITATE",
-      "priority": 999914,
+      "priority": 999915,
       "source_priority": 0,
-      "canonical_rank": 86,
+      "canonical_rank": 85,
       "headline": "Accident mortal în Buila–Vânturarița: o mașină a căzut circa 300 de metri într-o prăpastie",
       "dek": "Un bărbat a murit, doi au fost transportați la UPU Vâlcea, iar un al treilea a refuzat transportul după accidentul produs pe drumul spre Schitul Hădărău. Informațiile sunt atribuite ISU Vâlcea de TVR Info și Digi24.",
       "paragraphs": [
@@ -3196,9 +3135,9 @@
     {
       "id": "cantecele-oltului-2026-parada-concurs-20260822",
       "section": "EVENIMENTE",
-      "priority": 999913,
+      "priority": 999914,
       "source_priority": 0,
-      "canonical_rank": 87,
+      "canonical_rank": 86,
       "headline": "Cântecele Oltului 2026: jurizarea, premierea și gala închid festivalul pe 23 august la Călimănești",
       "dek": "Ultima zi a ediției a 58-a a Festivalului Național de Folclor «Cântecele Oltului» include reunirea juriului, festivitatea de premiere, spectacolul de gală și recitalul Aurora și Săndel Mihai.",
       "paragraphs": [
@@ -3227,9 +3166,9 @@
     {
       "id": "supercupa-damila-pietrari-20260822",
       "section": "SPORT",
-      "priority": 999912,
+      "priority": 999913,
       "source_priority": 0,
-      "canonical_rank": 88,
+      "canonical_rank": 87,
       "headline": "Supercupa Damila deschide sezonul județean la Pietrari. AJF Vâlcea afișează ora 11:00 pentru 22 august",
       "dek": "Asociația Județeană de Fotbal Vâlcea afișează Supercupa Damila pe 22 august 2026, la Stadionul Comunal din Pietrari, cu ora de start 11:00. O hotărâre mai veche a Comitetului Executiv menționa 17:30, astfel că reperul util pentru spectatori este anunțul curent al AJF.",
       "paragraphs": [
@@ -3252,6 +3191,51 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/supercupa-damila-pietrari-20260822/",
+      "archive_only": true
+    },
+    {
+      "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
+      "section": "ADMINISTRAȚIE",
+      "priority": 999912,
+      "source_priority": 96,
+      "canonical_rank": 88,
+      "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
+      "dek": "Propunerea consilierului local Vicențiu Mocanu ca Ștefania Uță să primească titlul de Cetățean de Onoare al Râmnicului a declanșat un schimb de replici cu primarul Mircia Gutău. Regulamentul local arată că un consilier poate formula individual o asemenea propunere.",
+      "paragraphs": [
+        "DE LA AUR MONDIAL LA DISPUTĂ POLITICĂ. Alexandra Ștefania Uță a câștigat la 9 august 2026 finala de 400 metri garduri la Campionatele Mondiale U20 de la Eugene, Oregon, cu 55,33 secunde, record personal. La câteva zile după performanță, consilierul local AUR Vicențiu Mocanu a propus public ca sportiva să primească titlul de Cetățean de Onoare al municipiului Râmnicu Vâlcea.",
+        "CE A SPUS GUTĂU. Criterii.ro a reprodus reacția primarului Mircia Gutău, care l-a acuzat pe Mocanu că se lipește politic de succesul sportivei și a invocat competiția internă din partidul acestuia. În aceeași poziție, Gutău a susținut că inițiativa ar trebui lăsată clubului sportiv din care face parte atleta și, eventual, formulată după acumularea mai multor rezultate de excepție.",
+        "REPLICA LUI MOCANU. Tot Criterii.ro a publicat răspunsul consilierului, care i-a reproșat primarului un dublu standard: în formularea lui Mocanu, recunoașterea unei valori este tratată ca legitimă atunci când inițiativa aparține administrației și ca electorală atunci când vine din partea unui adversar politic. Schimbul de replici a mutat rapid discuția de la performanța sportivă la rivalitatea politică locală.",
+        "CE SPUNE REGULAMENTUL. Regulamentul privind conferirea titlului de Cetățean de Onoare al municipiului Râmnicu Vâlcea, republicat prin HCL 148/2010, spune explicit la art. 3 că propunerea poate fi făcută de primar, de consilierii municipali în grup sau individual, de instituții ori organizații neguvernamentale cu activitate în municipiu sau de persoane fizice. Procedural, așadar, un consilier local are dreptul să formuleze o asemenea propunere.",
+        "CE NU ESTE ÎNCĂ DECIS. Existența unei propuneri publice nu înseamnă acordarea titlului. Pentru promovarea formală sunt necesare propunerea, expunerea de motive a primarului, raportul compartimentului de specialitate și un proiect de hotărâre, iar titlul se conferă prin hotărâre a Consiliului Local. VÂLCEA CLAR nu a identificat până la această publicare un proiect de hotărâre adoptat pentru Ștefania Uță.",
+        "PERFORMANȚA CARE A GENERAT DISCUȚIA. World Athletics o consemnează pe Alexandra Ștefania Uță drept campioană mondială U20 la 400 m garduri, cu 55,33 secunde în finala din 9 august 2026. Profilul oficial al sportivei indică și titlul european U20, ceea ce confirmă că disputa pornește de la o performanță sportivă de prim rang, nu de la o distincție simbolică inventată de actorii politici locali.",
+        "UN LUCRU TREBUIE SEPARAT. Gutău poate critica momentul sau motivația politică a inițiativei, iar Mocanu poate contesta această interpretare. Faptul verificabil este însă că regulamentul nu rezervă inițiativa primarului sau clubului sportiv. Următorul prag concret este apariția unui proiect oficial și votul din Consiliul Local; până atunci, avem o campioană mondială și un schimb public de replici între doi actori politici locali."
+      ],
+      "sources": [
+        {
+          "name": "World Athletics — finala 400 m garduri feminin, Campionatele Mondiale U20 2026",
+          "url": "https://worldathletics.org/en/competitions/world-athletics-u20-championships/oregon26/results/women/400-metres-hurdles/final/result"
+        },
+        {
+          "name": "World Athletics — profil Alexandra Ștefania Uță",
+          "url": "https://worldathletics.org/athletes/romania/alexandra-stefania-uta-14969059"
+        },
+        {
+          "name": "HCL Râmnicu Vâlcea nr. 148/2010 — regulament Cetățean de Onoare",
+          "url": "https://hcl.usr.ro/ramnicu_valcea/2010/h148"
+        },
+        {
+          "name": "Criterii.ro — schimbul de replici Gutău–Mocanu",
+          "url": "https://criterii.ro/national/desi-nu-poarta-barba-gutau-nu-e-imberb-iar-viky-mocanu-desi-are-barba-e-imberb/"
+        },
+        {
+          "name": "Ziarul de Vâlcea — reacție editorială la disputa Gutău–Mocanu",
+          "url": "https://ziaruldevalcea.ro/2026/08/mircia-gutau-vrea-monopol-si-pe-recunostinta-orasului-vicentiu-mocanu-are-dreptate-stefania-uta-merita-acum-titlul-de-cetatean-de-onoare/"
+        }
+      ],
+      "published": "2026-08-20T22:20:18+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/gutau-mocanu-stefania-uta-cetatean-onoare-20260820/",
       "archive_only": true
     },
     {
