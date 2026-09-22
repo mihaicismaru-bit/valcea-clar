@@ -41,6 +41,23 @@ VÂLCEA CLAR uses a **Washington Post–inspired editorial information architect
 9. sources and documents
 10. return to news stream
 
+## Product-aware article UX
+
+**Section and editorial product are separate axes.** A story may belong to ECONOMIE, ADMINISTRAȚIE or CULTURĂ while its reader-facing product is PE SCURT, CLARIFICĂM, VERIFICAT, CE URMEAZĂ, VÂLCEA AZI, WEEKEND CLAR, DOSAR, UNDE IEȘIM, PROFIL/OAMENI, ANCHETĂ or PAMFLET/SATIRĂ.
+
+The masthead, typography system and core navigation stay recognizably VÂLCEA CLAR. Product differences change editorial grammar, not brand identity:
+
+- **PE SCURT** — compact reading measure, essential context first.
+- **CLARIFICĂM / VERIFICAT** — evidence-forward signpost and stronger source treatment.
+- **CE URMEAZĂ** — follow-up framing, deadlines and next steps when supplied by CIVORA.
+- **VÂLCEA AZI** — default continuous-news treatment.
+- **WEEKEND CLAR / UNDE IEȘIM** — service-oriented treatment for plans, events and useful details.
+- **DOSAR / ANCHETĂ** — long-form measure, stronger hierarchy, document/source emphasis.
+- **PROFIL/OAMENI** — portrait-led treatment when verified media exists.
+- **PAMFLET/SATIRĂ** — unmistakable format disclosure; satire never visually masquerades as straight news.
+
+The public projection must prefer an explicit CIVORA product field. Fallback inference is conservative and may never upgrade an ordinary story into ANCHETĂ, VERIFICAT or another higher-claim format without a canonical signal.
+
 ## Visual language
 
 - white/neutral editorial canvas
