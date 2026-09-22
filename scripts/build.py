@@ -129,7 +129,7 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
   <div class="mast">
     <div class="mast-meta">Vâlcea · publicație locală</div>
     <a class="brand" href="{u('/')}">VÂLCEA CLAR</a>
-    <div class="tag">Fapte. Documente. Context.</div>
+    <div class="tag">Ce se întâmplă. Ce știm. Ce contează.</div>
   </div>
   {nav}
 </header>
