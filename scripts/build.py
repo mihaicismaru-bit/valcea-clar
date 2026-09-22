@@ -299,6 +299,8 @@ for article in articles:
     wa = 'https://wa.me/?text=' + quote(article['headline'] + ' ' + canonical, safe='')
     mail = 'mailto:?subject=' + quote(article['headline']) + '&body=' + quote(canonical)
     paragraphs = ''.join(f'<p>{h(p)}</p>' for p in article['paragraphs'])
+    article_media_html = image_html(article, True)
+    article_media_block = f'<div class="article-media">{article_media_html}</div>' if article_media_html else ''
     sources = ''.join(
         f'<li><a href="{h(source["url"])}" rel="nofollow noopener">{h(source["name"])}</a></li>'
         for source in article['sources']
@@ -313,8 +315,8 @@ for article in articles:
         f'<a href="{h(fb)}" rel="nofollow noopener">Facebook</a>'
         f'<a href="{h(wa)}" rel="nofollow noopener">WhatsApp</a>'
         f'<a href="{h(mail)}">Email</a></div>'
-        (f'<div class="article-media">{image_html(article, True)}</div>' if image_html(article, True) else '')
-        + f'<div class="article-body">{paragraphs}</div>'
+        f'{article_media_block}'
+        f'<div class="article-body">{paragraphs}</div>'
         f'<section class="sources"><h2>Surse și documente</h2><p>Materialul este construit pe surse identificabile. Linkurile de mai jos permit verificarea informațiilor.</p><ul>{sources}</ul></section>'
         f'<a class="back" href="{u("/stiri/")}">← Înapoi la flux</a>'
         '</article>'
