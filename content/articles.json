@@ -28,7 +28,8 @@
       "published": "2026-09-22T09:42:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/calimanesti-restrictii-trotuare-20260922/"
+      "canonical_path": "/stiri/calimanesti-restrictii-trotuare-20260922/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "valcea-somaj-august-2026",
@@ -53,7 +54,8 @@
       "published": "2026-09-22T09:42:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-somaj-august-2026/"
+      "canonical_path": "/stiri/valcea-somaj-august-2026/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "tetoiu-otesani-incendii-20260921",
@@ -83,7 +85,8 @@
       "published": "2026-09-22T09:42:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/tetoiu-otesani-incendii-20260921/"
+      "canonical_path": "/stiri/tetoiu-otesani-incendii-20260921/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "brezoi-ziua-recoltei-pregatiri-20260922",
@@ -108,7 +111,8 @@
       "published": "2026-09-22T09:42:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/brezoi-ziua-recoltei-pregatiri-20260922/"
+      "canonical_path": "/stiri/brezoi-ziua-recoltei-pregatiri-20260922/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "scm-valcea-fc-bihor-20260920",
@@ -134,6 +138,7 @@
       "image": "civora-560f68dd9a63de0f.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/scm-valcea-fc-bihor-20260920/",
+      "editorial_product": "straight_news",
       "image_caption": "Foto de context a Stadionului Municipal Râmnicu Vâlcea, 2016; imaginea nu surprinde partida SCM Râmnicu Vâlcea – FC Bihor din 20 septembrie 2026.",
       "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stadionul_Municipal.jpg",
       "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stadionul_Municipal.jpg",
@@ -172,7 +177,8 @@
       "published": "2026-09-22T09:42:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/ramnicu-valcea-floarea-darurilor-20260926/"
+      "canonical_path": "/stiri/ramnicu-valcea-floarea-darurilor-20260926/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "calimanesti-concurs-contabil-sef-20260921",
@@ -196,7 +202,8 @@
       "published": "2026-09-22T09:42:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/calimanesti-concurs-contabil-sef-20260921/"
+      "canonical_path": "/stiri/calimanesti-concurs-contabil-sef-20260921/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "fast-ipj-retinut-pentru-24-de-ore1789723053-280c27b878",
@@ -220,7 +227,8 @@
       "published": "2026-09-18T23:59:28+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/fast-ipj-retinut-pentru-24-de-ore1789723053-280c27b878/"
+      "canonical_path": "/stiri/fast-ipj-retinut-pentru-24-de-ore1789723053-280c27b878/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "rm-valcea-hcl-345-20260916",
@@ -254,6 +262,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-345-20260916/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -300,6 +309,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-344-20260916/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -347,6 +357,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-343-20260916/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -386,7 +397,8 @@
       "published": "2026-09-15T17:48:48+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/fast-ipj-depistat-de-politistii-serviciului-rutier1789460882-ddc5052abd/"
+      "canonical_path": "/stiri/fast-ipj-depistat-de-politistii-serviciului-rutier1789460882-ddc5052abd/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "auto-raliul-valcii-official-news-f6e28bbb1533",
@@ -428,7 +440,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-raliul-valcii-official-news-f6e28bbb1533/"
+      "canonical_path": "/stiri/auto-raliul-valcii-official-news-f6e28bbb1533/",
+      "editorial_product": "service_news"
     },
     {
       "id": "fast-ipj-retinuta-pentru-24-de-ore1788941100-c8f452db47",
@@ -453,7 +466,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/fast-ipj-retinuta-pentru-24-de-ore1788941100-c8f452db47/"
+      "canonical_path": "/stiri/fast-ipj-retinuta-pentru-24-de-ore1788941100-c8f452db47/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "fast-ipj-actiuni-pentru-siguranta-rutiera-in-judetul-valcea-4a4010226d",
@@ -478,7 +492,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/fast-ipj-actiuni-pentru-siguranta-rutiera-in-judetul-valcea-4a4010226d/"
+      "canonical_path": "/stiri/fast-ipj-actiuni-pentru-siguranta-rutiera-in-judetul-valcea-4a4010226d/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "ocnele-mari-salina-program-septembrie-20260907",
@@ -505,6 +520,7 @@
       "image": "civora-27dc8b11b750a17a.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/ocnele-mari-salina-program-septembrie-20260907/",
+      "editorial_product": "service_news",
       "image_caption": "Foto de context din Salina Ocnele Mari, 22 iunie 2023; imaginea nu documentează schimbarea de program din septembrie 2026.",
       "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocnele%20Mari%202068.JPG",
       "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocnele%20Mari%202068.JPG",
@@ -553,6 +569,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-342-20260831/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -601,6 +618,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-341-20260831/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -649,6 +667,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-340-20260831/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -695,6 +714,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-339-20260831/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -742,7 +762,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-337-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-337-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-336-20260831",
@@ -773,7 +794,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-336-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-336-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-335-20260831",
@@ -804,7 +826,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-335-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-335-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-334-20260831",
@@ -836,7 +859,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-334-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-334-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-333-20260831",
@@ -866,7 +890,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-333-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-333-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-332-20260831",
@@ -899,7 +924,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-332-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-332-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-331-20260831",
@@ -932,7 +958,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-331-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-331-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-330-20260831",
@@ -964,7 +991,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-330-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-330-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-329-20260831",
@@ -997,7 +1025,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-329-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-329-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-328-20260831",
@@ -1030,7 +1059,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-328-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-328-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-327-20260831",
@@ -1062,7 +1092,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-327-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-327-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-326-20260831",
@@ -1094,7 +1125,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-326-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-326-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-325-20260831",
@@ -1126,7 +1158,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-325-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-325-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-324-20260831",
@@ -1157,7 +1190,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-324-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-324-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-323-20260831",
@@ -1190,7 +1224,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-323-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-323-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-322-20260831",
@@ -1223,7 +1258,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-322-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-322-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-321-20260831",
@@ -1255,7 +1291,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-321-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-321-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-320-20260831",
@@ -1288,7 +1325,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-320-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-320-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-319-20260831",
@@ -1321,7 +1359,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-319-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-319-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-318-20260831",
@@ -1354,7 +1393,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-318-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-318-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-317-20260831",
@@ -1385,7 +1425,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-317-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-317-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-316-20260831",
@@ -1416,7 +1457,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-316-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-316-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-314-20260831",
@@ -1448,7 +1490,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-314-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-314-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-313-20260831",
@@ -1481,7 +1524,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-hcl-313-20260831/"
+      "canonical_path": "/stiri/rm-valcea-hcl-313-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-hcl-312-20260814",
@@ -1515,6 +1559,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-312-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1563,6 +1608,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-311-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1620,6 +1666,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-310-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Fotografie contextuală: sediul Primăriei Municipiului Râmnicu Vâlcea; imaginea nu surprinde dosarul sau ședința din 14 august 2026.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1667,6 +1714,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-309-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1715,6 +1763,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-308-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1763,6 +1812,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-307-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1814,6 +1864,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-306-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1863,6 +1914,7 @@
       "image": "primaria-ramnicu-valcea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/rm-valcea-hcl-305-20260814/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: sediul Primăriei Râmnicu Vâlcea; imaginea nu surprinde ședința sau documentul descris.",
       "image_origin_url": "https://valceaclar.ro/media/social/primaria-ramnicu-valcea.jpg",
       "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/primaria-ramnicu-valcea.jpg",
@@ -1927,7 +1979,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-gambling-authorizations-20260831/"
+      "canonical_path": "/stiri/rm-valcea-gambling-authorizations-20260831/",
+      "editorial_product": "explainer"
     },
     {
       "id": "rm-valcea-gambling-authorizations-20260723",
@@ -1977,7 +2030,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/rm-valcea-gambling-authorizations-20260723/"
+      "canonical_path": "/stiri/rm-valcea-gambling-authorizations-20260723/",
+      "editorial_product": "explainer"
     },
     {
       "id": "apavil-joburi-fara-experienta-20260818",
@@ -2011,7 +2065,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/apavil-joburi-fara-experienta-20260818/"
+      "canonical_path": "/stiri/apavil-joburi-fara-experienta-20260818/",
+      "editorial_product": "service_news"
     },
     {
       "id": "cj-valcea-cocos-rajdp-mandat-guvernanta-20260818",
@@ -2049,7 +2104,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/cj-valcea-cocos-rajdp-mandat-guvernanta-20260818/"
+      "canonical_path": "/stiri/cj-valcea-cocos-rajdp-mandat-guvernanta-20260818/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "valcea-intrerupere-curent-2026-09-26-daesti",
@@ -2073,7 +2129,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-26-daesti/"
+      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-26-daesti/",
+      "editorial_product": "service_news"
     },
     {
       "id": "valcea-intrerupere-curent-2026-09-25-baile-govora",
@@ -2097,7 +2154,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-25-baile-govora/"
+      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-25-baile-govora/",
+      "editorial_product": "service_news"
     },
     {
       "id": "valcea-intrerupere-curent-2026-09-24-ionesti",
@@ -2121,7 +2179,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-24-ionesti/"
+      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-24-ionesti/",
+      "editorial_product": "service_news"
     },
     {
       "id": "valcea-intrerupere-curent-2026-09-23-ladesti",
@@ -2145,7 +2204,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-23-ladesti/"
+      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-23-ladesti/",
+      "editorial_product": "service_news"
     },
     {
       "id": "bujoreni-11-zidari-4582-6000-20260818",
@@ -2172,7 +2232,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/bujoreni-11-zidari-4582-6000-20260818/"
+      "canonical_path": "/stiri/bujoreni-11-zidari-4582-6000-20260818/",
+      "editorial_product": "service_news"
     },
     {
       "id": "ramnicu-uap-atelier-35-artex-20260904",
@@ -2197,7 +2258,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/ramnicu-uap-atelier-35-artex-20260904/"
+      "canonical_path": "/stiri/ramnicu-uap-atelier-35-artex-20260904/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "valcea-romsilva-pnrr-torenti-20260831",
@@ -2227,7 +2289,8 @@
       "published": "2026-09-14T16:48:58+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-romsilva-pnrr-torenti-20260831/"
+      "canonical_path": "/stiri/valcea-romsilva-pnrr-torenti-20260831/",
+      "editorial_product": "straight_news"
     },
     {
       "id": "valcea-apa-canal-contract-152m-20260902",
@@ -2252,7 +2315,8 @@
       "published": "2026-09-02T20:57:55+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-apa-canal-contract-152m-20260902/"
+      "canonical_path": "/stiri/valcea-apa-canal-contract-152m-20260902/",
+      "editorial_product": "explainer"
     },
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
@@ -2296,6 +2360,7 @@
       "image": "civora-395d00862c607c27.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/arutela-restaurare-controversa-pnrr-20260820/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de arhivă a castrului Arutela; imaginea nu documentează lucrările PNRR din 2026.",
       "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Castra_Arutela_001.jpg",
       "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Castra_Arutela_001.jpg",
@@ -2418,6 +2483,7 @@
       "image": "civora-db7024f0d6133cea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/open-air-blues-brezoi-2026-review-bani-publici-20260818/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: orașul Brezoi, 2017; imaginea nu surprinde Open Air Blues 2026.",
       "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
       "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
@@ -2492,7 +2558,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/musiclover-festival-2026-dosar-complet-20260818/"
+      "canonical_path": "/stiri/musiclover-festival-2026-dosar-complet-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
@@ -2543,6 +2610,7 @@
       "image": "centru-urban-20260819.webp",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/jazz-cave-festival-2026-review-bani-publici-20260818/",
+      "editorial_product": "explainer",
       "image_caption": "Cadru urban central din Râmnicu Vâlcea, 19 august 2026. Imagine de context; nu surprinde festivalul."
     },
     {
@@ -2626,7 +2694,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/deep-forest-fest-2026-review-bani-publici-20260818/"
+      "canonical_path": "/stiri/deep-forest-fest-2026-review-bani-publici-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
@@ -2682,6 +2751,7 @@
       "image": "civora-db7024f0d6133cea.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/bikers-for-humanity-rock-fest-2026-review-20260818/",
+      "editorial_product": "explainer",
       "image_caption": "Foto de context: orașul Brezoi, 2017; imaginea nu surprinde Bikers for Humanity Rock Fest 2026.",
       "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
       "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ora%C8%99ul_Brezoi.jpg",
@@ -2742,7 +2812,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/filarmonica-valcea-septembrie-2026-program-20260818/"
+      "canonical_path": "/stiri/filarmonica-valcea-septembrie-2026-program-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
@@ -2792,7 +2863,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/fii-cool-la-cule-2026-review-bani-publici-20260818/"
+      "canonical_path": "/stiri/fii-cool-la-cule-2026-review-bani-publici-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
@@ -2868,7 +2940,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/teatrele-valcii-ariel-anton-pann-2026-dosar-20260818/"
+      "canonical_path": "/stiri/teatrele-valcii-ariel-anton-pann-2026-dosar-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "invartita-dorului-2026-dosar-20260818",
@@ -2919,7 +2992,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/invartita-dorului-2026-dosar-20260818/"
+      "canonical_path": "/stiri/invartita-dorului-2026-dosar-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
@@ -2969,7 +3043,8 @@
       "published": "2026-08-18T23:43:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/cocosul-de-hurez-2026-dosar-20260818/"
+      "canonical_path": "/stiri/cocosul-de-hurez-2026-dosar-20260818/",
+      "editorial_product": "explainer"
     },
     {
       "id": "fast-isu-incendiu-izbucnit-intr-o-gospodarie-din-localitatea-li-729005290f",
