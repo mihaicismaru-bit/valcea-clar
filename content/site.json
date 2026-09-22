@@ -4,13 +4,34 @@
   "tagline": "Ce se întâmplă. Ce știm. Ce contează.",
   "email": "redactie@valceaclar.ro",
   "nav": [
-    ["VÂLCEA AZI", "/"],
-    ["Pe scurt", "/stiri/"],
-    ["Clarificăm", "/stiri/#clarificam"],
-    ["Verificat", "/stiri/#verificat"],
-    ["Ce urmează", "/stiri/#ce-urmeaza"],
-    ["Dosar", "/stiri/#dosar"],
-    ["Unde ieșim", "/stiri/#unde-iesim"]
+    [
+      "Acasă",
+      "/"
+    ],
+    [
+      "Ultimele",
+      "/stiri/"
+    ],
+    [
+      "VÂLCEA AZI",
+      "/valcea-azi/"
+    ],
+    [
+      "Pe scurt",
+      "/pe-scurt/"
+    ],
+    [
+      "Clarificăm",
+      "/clarificam/"
+    ],
+    [
+      "Dosar",
+      "/dosar/"
+    ],
+    [
+      "Despre",
+      "/despre/"
+    ]
   ],
   "localities": [
     "Râmnicu Vâlcea",

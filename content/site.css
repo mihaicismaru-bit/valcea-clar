@@ -40,3 +40,19 @@ footer{border-top:3px solid var(--ink);max-width:var(--max);margin:20px auto 0;p
 .article[data-product="PAMFLET/SATIRĂ"] .product-signpost{border:2px solid var(--ink);padding:16px 18px}.article[data-product="PAMFLET/SATIRĂ"] .article-body{font-family:Georgia,'Times New Roman',serif}
 @media(max-width:760px){.product-signpost{grid-template-columns:1fr;gap:6px}.article[data-product="DOSAR"] h1,.article[data-product="ANCHETĂ"] h1{font-size:40px}.article[data-product="DOSAR"] .article-body,.article[data-product="ANCHETĂ"] .article-body{font-size:18px}}
 
+
+
+/* Search-friendly two-level navigation */
+.nav-stack{border-top:1px solid var(--line)}
+.nav-stack .nav{border-top:0}
+.nav-primary{border-bottom:1px solid var(--ink)!important}
+.nav-primary a{font-size:11px}
+.nav-topics{background:var(--soft);gap:18px}
+.nav-topics a{font-size:10px;font-weight:700;color:#444}
+.nav-label{display:flex;align-items:center;padding:11px 3px 10px 0;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.archive-stream{max-width:940px;border-top:4px solid var(--ink)}
+@media(max-width:620px){
+  .nav-stack{margin:0}
+  .nav-primary,.nav-topics{padding:0 14px}
+  .nav-label{position:sticky;left:0;background:var(--soft);z-index:1;padding-right:10px}
+}

@@ -2,6 +2,7 @@ import json
 import subprocess
 import sys
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -87,6 +88,48 @@ class SiteUXContract(unittest.TestCase):
                 visible = page.split('<main id="main">', 1)[1].split('</main>', 1)[0]
                 self.assertNotIn(str(article.get('image') or ''), visible)
                 self.assertNotIn(str(article.get('image_caption') or ''), visible)
+
+    def test_navigation_uses_real_indexable_routes(self):
+        home = self.read('index.html')
+        self.assertIn('aria-label="Navigație principală"', home)
+        self.assertIn('aria-label="Secțiuni tematice"', home)
+        self.assertNotIn('href="/stiri/#', home)
+        for href in ('/valcea-azi/', '/pe-scurt/', '/clarificam/', '/dosar/', '/sectiuni/administratie/'):
+            self.assertIn(f'href="{href}"', home)
+        for rel in ('valcea-azi/index.html', 'pe-scurt/index.html', 'clarificam/index.html', 'dosar/index.html', 'sectiuni/administratie/index.html'):
+            self.assertTrue((ROOT / '_site' / rel).is_file(), rel)
+
+    def test_sitemaps_are_google_friendly(self):
+        sitemap = ROOT / '_site' / 'sitemap.xml'
+        news = ROOT / '_site' / 'news-sitemap.xml'
+        self.assertTrue(sitemap.is_file())
+        self.assertTrue(news.is_file())
+        root = ET.parse(sitemap).getroot()
+        ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        urls = root.findall('s:url', ns)
+        locs = [row.find('s:loc', ns).text for row in urls]
+        self.assertEqual(len(locs), len(set(locs)))
+        self.assertTrue(all('#' not in value for value in locs))
+        self.assertIn('https://valceaclar.ro/clarificam/', locs)
+        self.assertIn('https://valceaclar.ro/sectiuni/administratie/', locs)
+        article_loc = f'https://valceaclar.ro/stiri/{self.lead["id"]}/'
+        row = next(row for row in urls if row.find('s:loc', ns).text == article_loc)
+        self.assertIsNotNone(row.find('s:lastmod', ns))
+
+        news_root = ET.parse(news).getroot()
+        news_ns = {
+            's': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+            'n': 'http://www.google.com/schemas/sitemap-news/0.9',
+        }
+        news_urls = news_root.findall('s:url', news_ns)
+        self.assertGreaterEqual(len(news_urls), 1)
+        self.assertTrue(any(
+            row.find('s:loc', news_ns).text == article_loc
+            for row in news_urls
+        ))
+        robots = self.read('robots.txt')
+        self.assertIn('Sitemap: https://valceaclar.ro/sitemap.xml', robots)
+        self.assertIn('Sitemap: https://valceaclar.ro/news-sitemap.xml', robots)
 
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
