@@ -1,1 +1,1 @@
-2026-09-22T14:55:00Z S7 production loop: reconcile public projection to current CIVORA live feed after successful 17:49 Europe/Bucharest newsroom cycle. Require exact canonical current/archive story set, derived Public UX timestamps, media provenance, Pages deployment and public readback before social retry.
+Product-aware UX reprojection: reconcile current CIVORA live feed after editorial_product metadata backfill. Require build, Pages deploy and public readback; no editorial copy changes.\n
