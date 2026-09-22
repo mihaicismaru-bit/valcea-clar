@@ -39,7 +39,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "calimanesti-restrictii-trotuare-20260922"
+      "image_story_id": "calimanesti-restrictii-trotuare-20260922",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "valcea-somaj-august-2026",
@@ -75,7 +79,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "valcea-somaj-august-2026"
+      "image_story_id": "valcea-somaj-august-2026",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "tetoiu-otesani-incendii-20260921",
@@ -116,7 +124,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "tetoiu-otesani-incendii-20260921"
+      "image_story_id": "tetoiu-otesani-incendii-20260921",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "brezoi-ziua-recoltei-pregatiri-20260922",
@@ -152,7 +164,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "brezoi-ziua-recoltei-pregatiri-20260922"
+      "image_story_id": "brezoi-ziua-recoltei-pregatiri-20260922",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "scm-valcea-fc-bihor-20260920",
@@ -188,7 +204,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "scm-valcea-fc-bihor-20260920"
+      "image_story_id": "scm-valcea-fc-bihor-20260920",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "ramnicu-valcea-floarea-darurilor-20260926",
@@ -223,7 +243,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "ramnicu-valcea-floarea-darurilor-20260926"
+      "image_story_id": "ramnicu-valcea-floarea-darurilor-20260926",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "calimanesti-concurs-contabil-sef-20260921",
@@ -258,7 +282,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "calimanesti-concurs-contabil-sef-20260921"
+      "image_story_id": "calimanesti-concurs-contabil-sef-20260921",
+      "image_site_eligible": false,
+      "image_synthetic": false,
+      "image_depicts_real_scene": false,
+      "image_asset_role": "social_card"
     },
     {
       "id": "fast-ipj-retinut-pentru-24-de-ore1789723053-280c27b878",
@@ -1467,7 +1495,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-312-20260814"
+      "image_story_id": "rm-valcea-hcl-312-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-311-20260814",
@@ -1511,7 +1543,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-311-20260814"
+      "image_story_id": "rm-valcea-hcl-311-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-310-20260814",
@@ -1564,7 +1600,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": false,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-310-20260814"
+      "image_story_id": "rm-valcea-hcl-310-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-309-20260814",
@@ -1607,7 +1647,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-309-20260814"
+      "image_story_id": "rm-valcea-hcl-309-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-308-20260814",
@@ -1651,7 +1695,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-308-20260814"
+      "image_story_id": "rm-valcea-hcl-308-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-307-20260814",
@@ -1695,7 +1743,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-307-20260814"
+      "image_story_id": "rm-valcea-hcl-307-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-306-20260814",
@@ -1742,7 +1794,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-306-20260814"
+      "image_story_id": "rm-valcea-hcl-306-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-hcl-305-20260814",
@@ -1787,7 +1843,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "",
-      "image_story_id": "rm-valcea-hcl-305-20260814"
+      "image_story_id": "rm-valcea-hcl-305-20260814",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": true,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "rm-valcea-gambling-authorizations-20260831",
@@ -2216,7 +2276,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "2007-05-22",
-      "image_story_id": "arutela-restaurare-controversa-pnrr-20260820"
+      "image_story_id": "arutela-restaurare-controversa-pnrr-20260820",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": null,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
@@ -2334,7 +2398,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "2017-08-20",
-      "image_story_id": "open-air-blues-brezoi-2026-review-bani-publici-20260818"
+      "image_story_id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": null,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
@@ -2594,7 +2662,11 @@
       "image_provenance_status": "VERIFIED",
       "image_contextual_archive": true,
       "image_captured_at": "2017-08-20",
-      "image_story_id": "bikers-for-humanity-rock-fest-2026-review-20260818"
+      "image_story_id": "bikers-for-humanity-rock-fest-2026-review-20260818",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": null,
+      "image_asset_role": "site_visual"
     },
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
