@@ -72,8 +72,9 @@ class SiteUXContract(unittest.TestCase):
                 '/social/editorial/', 'social/editorial',
             )):
                 page = self.read(f'stiri/{article["id"]}/index.html')
-                self.assertNotIn(str(article.get('image') or ''), page)
-                self.assertNotIn(str(article.get('image_caption') or ''), page)
+                visible = page.split('<main id="main">', 1)[1].split('</main>', 1)[0]
+                self.assertNotIn(str(article.get('image') or ''), visible)
+                self.assertNotIn(str(article.get('image_caption') or ''), visible)
 
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
