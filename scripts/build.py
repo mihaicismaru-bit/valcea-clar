@@ -51,10 +51,37 @@ def story_href(article):
     return u('/stiri/' + h(article['id']) + '/')
 
 
+def is_editorial_card(article):
+    """Return True for social/editorial cards that must never render as site media."""
+    fields = [
+        article.get('image_caption'),
+        article.get('image_credit'),
+        article.get('image_rights_basis'),
+        article.get('image_source_url'),
+        article.get('image_origin_url'),
+        article.get('image_fetch_url'),
+        article.get('image_kind'),
+        article.get('visual_type'),
+        article.get('asset_type'),
+    ]
+    haystack = ' '.join(str(value or '').lower() for value in fields)
+    markers = (
+        'card editorial',
+        'editorial card',
+        'editorial_card',
+        'social card',
+        'social_card',
+        'original_editorial_layout',
+        '/social/editorial/',
+        'social/editorial',
+    )
+    return any(marker in haystack for marker in markers)
+
+
 def image_html(article, hero=False):
     name = article.get('image')
-    if not name or name not in AVAILABLE_MEDIA:
-        return '<div class="no-photo" aria-hidden="true">VÂLCEA CLAR</div>' if hero else ''
+    if not name or name not in AVAILABLE_MEDIA or is_editorial_card(article):
+        return ''
     caption = article.get('image_caption', 'Imagine de context din arhiva VÂLCEA CLAR.')
     return (
         '<figure class="story-media">'
@@ -159,12 +186,14 @@ def mini_story(article):
 
 def stream_story(article):
     media = image_html(article) if article.get('image') else ''
+    media_block = f'<div class="stream-media">{media}</div>' if media else ''
+    no_media = ' no-media' if not media else ''
     return (
-        '<article class="stream-story">'
+        f'<article class="stream-story{no_media}">'
         f'<div class="stream-copy"><div class="kicker">{h(article["section"])}</div>'
         f'<h3><a href="{story_href(article)}">{h(article["headline"])}</a></h3>'
         f'<p>{h(article["dek"])}</p>{story_meta(article, True)}</div>'
-        f'<div class="stream-media">{media}</div>'
+        f'{media_block}'
         '</article>'
     )
 
@@ -284,8 +313,8 @@ for article in articles:
         f'<a href="{h(fb)}" rel="nofollow noopener">Facebook</a>'
         f'<a href="{h(wa)}" rel="nofollow noopener">WhatsApp</a>'
         f'<a href="{h(mail)}">Email</a></div>'
-        f'<div class="article-media">{image_html(article, True)}</div>'
-        f'<div class="article-body">{paragraphs}</div>'
+        (f'<div class="article-media">{image_html(article, True)}</div>' if image_html(article, True) else '')
+        + f'<div class="article-body">{paragraphs}</div>'
         f'<section class="sources"><h2>Surse și documente</h2><p>Materialul este construit pe surse identificabile. Linkurile de mai jos permit verificarea informațiilor.</p><ul>{sources}</ul></section>'
         f'<a class="back" href="{u("/stiri/")}">← Înapoi la flux</a>'
         '</article>'
