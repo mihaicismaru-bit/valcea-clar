@@ -17,6 +17,7 @@ import hashlib
 import html as html_lib
 import json
 import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote, urlparse
@@ -52,13 +53,18 @@ def _load_json(path: Path, default):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _fresh_url(url: str) -> str:
+    separator = '&' if '?' in url else '?'
+    return f"{url}{separator}vc_sync={time.time_ns()}"
+
+
 def _fetch_json(url: str, *, agent: str) -> dict:
     request = Request(
-        url,
+        _fresh_url(url),
         headers={
             "User-Agent": agent,
             "Accept": "application/json",
-            "Cache-Control": "no-cache",
+            "Cache-Control": "no-cache, no-store, max-age=0",
         },
     )
     with urlopen(request, timeout=30) as response:
@@ -70,11 +76,11 @@ def _fetch_json(url: str, *, agent: str) -> dict:
 
 def _fetch_text(url: str) -> str:
     request = Request(
-        url,
+        _fresh_url(url),
         headers={
             "User-Agent": "valcea-clar-public-sync/1.2",
             "Accept": "text/html,*/*;q=0.8",
-            "Cache-Control": "no-cache",
+            "Cache-Control": "no-cache, no-store, max-age=0",
         },
     )
     with urlopen(request, timeout=30) as response:
