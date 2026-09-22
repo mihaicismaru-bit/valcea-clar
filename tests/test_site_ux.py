@@ -55,6 +55,26 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('name="twitter:card"', article)
         self.assertIn('max-image-preview:large', article)
 
+    def test_editorial_cards_never_render_as_site_media(self):
+        home = self.read('index.html')
+        banned = ('Card editorial construit', 'VÂLCEA CLAR — card editorial')
+        for marker in banned:
+            self.assertNotIn(marker, home)
+        for article in self.articles:
+            fields = ' '.join(str(article.get(key) or '').lower() for key in (
+                'image_caption', 'image_credit', 'image_rights_basis',
+                'image_source_url', 'image_origin_url', 'image_fetch_url',
+                'image_kind', 'visual_type', 'asset_type',
+            ))
+            if any(marker in fields for marker in (
+                'card editorial', 'editorial card', 'editorial_card',
+                'social card', 'social_card', 'original_editorial_layout',
+                '/social/editorial/', 'social/editorial',
+            )):
+                page = self.read(f'stiri/{article["id"]}/index.html')
+                self.assertNotIn(str(article.get('image') or ''), page)
+                self.assertNotIn(str(article.get('image_caption') or ''), page)
+
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
             [sys.executable, str(ROOT / 'scripts' / 'verify.py')],
