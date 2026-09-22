@@ -100,6 +100,131 @@ def story_meta(article, compact=False):
     return f'<div class="story-meta"><span>Redacția VÂLCEA CLAR</span><span>{h(label)}</span></div>'
 
 
+PRODUCTS = {
+    'PE SCURT',
+    'CLARIFICĂM',
+    'VERIFICAT',
+    'CE URMEAZĂ',
+    'VÂLCEA AZI',
+    'WEEKEND CLAR',
+    'DOSAR',
+    'UNDE IEȘIM',
+    'PROFIL/OAMENI',
+    'ANCHETĂ',
+    'PAMFLET/SATIRĂ',
+}
+PRODUCT_ALIASES = {
+    'NEWS': 'VÂLCEA AZI',
+    'STRAIGHT NEWS': 'VÂLCEA AZI',
+    'BREAKING': 'VÂLCEA AZI',
+    'SERVICE ALERT': 'PE SCURT',
+    'SERVICE NEWS': 'PE SCURT',
+    'EXPLAINER': 'CLARIFICĂM',
+    'DECISION DIGEST': 'CLARIFICĂM',
+    'FACT CHECK': 'VERIFICAT',
+    'VERIFIED DATA': 'VERIFICAT',
+    'VERIFICAT DIN DATE': 'VERIFICAT',
+    'STATUS CHECK': 'CE URMEAZĂ',
+    'WHAT HAPPENED NEXT': 'CE URMEAZĂ',
+    'PROJECT TRACKER': 'CE URMEAZĂ',
+    'PERMIT FOLLOWUP': 'CE URMEAZĂ',
+    'UPCOMING EVENTS': 'UNDE IEȘIM',
+    'EVENT GUIDE': 'UNDE IEȘIM',
+    'MONEY TRACE': 'DOSAR',
+    'DOSSIER': 'DOSAR',
+    'PROFILE': 'PROFIL/OAMENI',
+    'PEOPLE': 'PROFIL/OAMENI',
+    'INVESTIGATION': 'ANCHETĂ',
+    'SATIRE': 'PAMFLET/SATIRĂ',
+    'PAMPHLET': 'PAMFLET/SATIRĂ',
+    'WEEKEND': 'WEEKEND CLAR',
+}
+PRODUCT_SLUGS = {
+    'PE SCURT': 'pe-scurt',
+    'CLARIFICĂM': 'clarificam',
+    'VERIFICAT': 'verificat',
+    'CE URMEAZĂ': 'ce-urmeaza',
+    'VÂLCEA AZI': 'valcea-azi',
+    'WEEKEND CLAR': 'weekend-clar',
+    'DOSAR': 'dosar',
+    'UNDE IEȘIM': 'unde-iesim',
+    'PROFIL/OAMENI': 'profil-oameni',
+    'ANCHETĂ': 'ancheta',
+    'PAMFLET/SATIRĂ': 'pamflet-satira',
+}
+PRODUCT_DESCRIPTIONS = {
+    'PE SCURT': 'Informația esențială, verificată și pusă rapid în context.',
+    'CLARIFICĂM': 'Explicăm ce rezultă din fapte și documente și separăm explicit ceea ce rămâne necunoscut.',
+    'VERIFICAT': 'Afirmațiile și cifrele sunt confruntate cu sursele disponibile, iar limitele verificării rămân vizibile.',
+    'CE URMEAZĂ': 'Urmărim pașii următori, termenele și întrebările care rămân deschise.',
+    'WEEKEND CLAR': 'Selecție de idei și informații utile pentru timpul liber, verificate editorial.',
+    'DOSAR': 'Context extins, documente, cronologie și legături între decizii, bani, proiecte și actori.',
+    'UNDE IEȘIM': 'Ghid practic de evenimente și locuri, cu informațiile utile și data verificării.',
+    'PROFIL/OAMENI': 'Un portret jurnalistic construit din fapte, context și contribuții relevante pentru comunitate.',
+    'ANCHETĂ': 'Documentare aprofundată, cu trasabilitatea probelor și drept la replică acolo unde este necesar.',
+    'PAMFLET/SATIRĂ': 'Text satiric bazat pe un nucleu factual verificat; exagerarea editorială este separată de fapte.',
+}
+
+
+def _product_token(value):
+    return ' '.join(str(value or '').strip().upper().replace('_', ' ').replace('-', ' ').split())
+
+
+def article_product(article):
+    raw = (
+        article.get('editorial_product')
+        or article.get('product_type')
+        or article.get('product')
+        or article.get('format')
+        or ''
+    )
+    token = _product_token(raw)
+    if token in PRODUCTS:
+        return token
+    if token in PRODUCT_ALIASES:
+        return PRODUCT_ALIASES[token]
+
+    story_id = str(article.get('id') or '').lower()
+    conservative_markers = (
+        ('pamflet', 'PAMFLET/SATIRĂ'),
+        ('satira', 'PAMFLET/SATIRĂ'),
+        ('ancheta', 'ANCHETĂ'),
+        ('dosar', 'DOSAR'),
+        ('profil-', 'PROFIL/OAMENI'),
+        ('weekend-', 'WEEKEND CLAR'),
+    )
+    for marker, product in conservative_markers:
+        if marker in story_id:
+            return product
+    return 'VÂLCEA AZI'
+
+
+def product_slug(article):
+    return PRODUCT_SLUGS[article_product(article)]
+
+
+def product_kicker(article):
+    product = article_product(article)
+    section = str(article.get('section') or 'ȘTIRI')
+    return (
+        '<div class="kicker product-kicker">'
+        f'<span class="product-badge">{h(product)}</span>'
+        f'<span class="section-badge">{h(section)}</span>'
+        '</div>'
+    )
+
+
+def product_signpost(article):
+    product = article_product(article)
+    description = PRODUCT_DESCRIPTIONS.get(product)
+    if not description:
+        return ''
+    return (
+        f'<aside class="product-signpost" aria-label="Format editorial: {h(product)}">'
+        f'<strong>{h(product)}</strong><span>{h(description)}</span></aside>'
+    )
+
+
 articles = sorted(
     load('articles.json')['articles'],
     key=lambda a: (a.get('priority', 0), a.get('published', '')),
@@ -179,7 +304,7 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
 def mini_story(article):
     return (
         '<article class="rail-story">'
-        f'<div class="kicker">{h(article["section"])}</div>'
+        f'{product_kicker(article)}'
         f'<strong><a href="{story_href(article)}">{h(article["headline"])}</a></strong>'
         f'{story_meta(article, True)}'
         '</article>'
@@ -192,7 +317,7 @@ def stream_story(article):
     no_media = ' no-media' if not media else ''
     return (
         f'<article class="stream-story{no_media}">'
-        f'<div class="stream-copy"><div class="kicker">{h(article["section"])}</div>'
+        f'<div class="stream-copy">{product_kicker(article)}'
         f'<h3><a href="{story_href(article)}">{h(article["headline"])}</a></h3>'
         f'<p>{h(article["dek"])}</p>{story_meta(article, True)}</div>'
         f'{media_block}'
@@ -204,7 +329,7 @@ lead = articles[0]
 rail_articles = articles[1:4]
 stream_articles = articles[4:] if len(articles) > 4 else articles[1:]
 latest_links = ''.join(
-    f'<a href="{story_href(a)}"><span>{h(a["section"])}</span>{h(a["headline"])}</a>'
+    f'<a href="{story_href(a)}"><span>{h(article_product(a))} · {h(a["section"])}</span>{h(a["headline"])}</a>'
     for a in articles[1:4]
 )
 
@@ -219,7 +344,7 @@ home = (
     '<section class="lead-grid" aria-label="Principal">'
     '<article class="hero">'
     f'{image_html(lead, True)}'
-    f'<div class="kicker">{h(lead["section"])}</div>'
+    f'{product_kicker(lead)}'
     f'<h1><a href="{story_href(lead)}">{h(lead["headline"])}</a></h1>'
     f'<p class="dek">{h(lead["dek"])}</p>{story_meta(lead)}'
     '</article>'
@@ -250,7 +375,7 @@ for section in sections:
         '<div class="cards">'
         + ''.join(
             '<article class="card">'
-            f'{image_html(a)}<div class="kicker">{h(a["section"])}</div>'
+            f'{image_html(a)}{product_kicker(a)}'
             f'<h3><a href="{story_href(a)}">{h(a["headline"])}</a></h3>'
             f'<p>{h(a["dek"])}</p>{story_meta(a, True)}'
             '</article>'
@@ -274,7 +399,7 @@ for section in sections:
         rows += (
             '<article class="list-row">'
             f'<div class="list-media">{thumb}</div>'
-            f'<div><div class="kicker">{h(a["section"])}</div><h2><a href="{story_href(a)}">{h(a["headline"])}</a></h2>'
+            f'<div>{product_kicker(a)}<h2><a href="{story_href(a)}">{h(a["headline"])}</a></h2>'
             f'<p>{h(a["dek"])}</p>{story_meta(a, True)}</div></article>'
         )
     rows += '</section>'
@@ -307,12 +432,15 @@ for article in articles:
         f'<li><a href="{h(source["url"])}" rel="nofollow noopener">{h(source["name"])}</a></li>'
         for source in article['sources']
     )
+    product = article_product(article)
+    product_class = product_slug(article)
     body = (
-        '<article class="article">'
+        f'<article class="article article--{h(product_class)}" data-product="{h(product)}">'
         f'<a class="back top-back" href="{u("/stiri/")}">← Ultimele știri</a>'
-        f'<div class="kicker">{h(article["section"])}</div>'
+        f'{product_kicker(article)}'
         f'<h1>{h(article["headline"])}</h1>'
         f'<p class="dek">{h(article["dek"])}</p>{story_meta(article)}'
+        f'{product_signpost(article)}'
         '<div class="share-bar" aria-label="Distribuie articolul"><span>Distribuie</span>'
         f'<a href="{h(fb)}" rel="nofollow noopener">Facebook</a>'
         f'<a href="{h(wa)}" rel="nofollow noopener">WhatsApp</a>'
@@ -325,7 +453,7 @@ for article in articles:
     )
     write_route(
         'stiri/' + article['id'],
-        shell(article['headline'] + ' — VÂLCEA CLAR', body, article['dek'], canonical_path, 'article-page'),
+        shell(article['headline'] + ' — VÂLCEA CLAR', body, article['dek'], canonical_path, f'article-page product-{product_class}'),
     )
 
 about = (

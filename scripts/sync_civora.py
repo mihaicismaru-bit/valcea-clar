@@ -241,6 +241,14 @@ def _normalize_visual(story_id: str, visual) -> dict | None:
     }
 
 
+def _editorial_product(story: dict) -> str:
+    for key in ('editorial_product', 'product_type', 'product', 'format', 'story_type'):
+        value = str(story.get(key) or '').strip()
+        if value:
+            return value
+    return ''
+
+
 def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_media: set[str]) -> dict:
     story_id = str(story.get("id") or "").strip()
     headline = str(story.get("headline") or "").strip()
@@ -270,6 +278,9 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
         "canonical_source": "CIVORA",
         "canonical_path": str(story.get("path") or f"/stiri/{story_id}/"),
     }
+    editorial_product = _editorial_product(story)
+    if editorial_product:
+        out["editorial_product"] = editorial_product
 
     canonical_visual = _normalize_visual(story_id, story.get("site_visual") or story.get("visual"))
     if canonical_visual:

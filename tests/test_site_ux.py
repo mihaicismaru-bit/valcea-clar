@@ -55,6 +55,18 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('name="twitter:card"', article)
         self.assertIn('max-image-preview:large', article)
 
+    def test_article_exposes_product_aware_contract(self):
+        article_id = self.lead['id']
+        article = self.read(f'stiri/{article_id}/index.html')
+        self.assertIn('data-product="', article)
+        self.assertIn('class="product-badge"', article)
+        self.assertIn('class="section-badge"', article)
+        css = self.read('assets/site.css')
+        self.assertIn('Product-aware editorial grammar', css)
+        self.assertIn('article[data-product="DOSAR"]', css)
+        self.assertIn('article[data-product="CLARIFICĂM"]', css)
+        self.assertIn('article[data-product="PAMFLET/SATIRĂ"]', css)
+
     def test_editorial_cards_never_render_as_site_media(self):
         home = self.read('index.html')
         banned = ('Card editorial construit', 'VÂLCEA CLAR — card editorial')
