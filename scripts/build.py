@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import quote
 import html
 import json
 import os
 import shutil
+import unicodedata
 
 from media_assets import materialize_media
 
@@ -24,6 +25,30 @@ def load(name):
 
 def h(value):
     return html.escape(str(value), quote=True)
+
+
+def xh(value):
+    return html.escape(str(value), quote=False)
+
+
+def slugify(value):
+    normalized = unicodedata.normalize('NFKD', str(value or ''))
+    ascii_value = normalized.encode('ascii', 'ignore').decode('ascii').lower()
+    cleaned = ''.join(ch if ch.isalnum() else '-' for ch in ascii_value)
+    return '-'.join(part for part in cleaned.split('-') if part)
+
+
+def parse_dt(value):
+    try:
+        dt = datetime.fromisoformat(str(value or '').replace('Z', '+00:00'))
+        return dt if dt.tzinfo else dt.astimezone()
+    except (TypeError, ValueError):
+        return None
+
+
+def sitemap_lastmod(value):
+    dt = parse_dt(value)
+    return dt.isoformat(timespec='seconds') if dt else ''
 
 
 def u(path):
@@ -207,6 +232,18 @@ def product_slug(article):
     return PRODUCT_SLUGS[article_product(article)]
 
 
+def product_path(product):
+    return '/' + PRODUCT_SLUGS[product] + '/'
+
+
+def section_slug(section):
+    return slugify(section) or 'stiri'
+
+
+def section_path(section):
+    return '/sectiuni/' + section_slug(section) + '/'
+
+
 def product_kicker(article):
     product = article_product(article)
     section = str(article.get('section') or 'ȘTIRI')
@@ -249,22 +286,36 @@ OUT.mkdir()
 (OUT / 'assets/site.css').write_text(css, encoding='utf-8')
 AVAILABLE_MEDIA = materialize_media(OUT / 'media')
 
-section_links = ''.join(
-    f'<a href="{u("/stiri/")}#{h(section.lower())}">{h(section)}</a>'
-    for section in sections[:6]
+available_products = {article_product(article) for article in articles}
+product_nav_order = [
+    'VÂLCEA AZI', 'PE SCURT', 'CLARIFICĂM', 'VERIFICAT',
+    'CE URMEAZĂ', 'DOSAR', 'UNDE IEȘIM', 'PROFIL/OAMENI', 'ANCHETĂ'
+]
+primary_product_links = ''.join(
+    f'<a href="{u(product_path(product))}">{h(product)}</a>'
+    for product in product_nav_order if product in available_products
+)
+section_nav_order = [
+    'ACTUALITATE', 'ADMINISTRAȚIE', 'ECONOMIE', 'SIGURANȚĂ',
+    'UTILITAR', 'CULTURĂ', 'SPORT', 'EVENIMENTE', 'JUDEȚ'
+]
+topic_links = ''.join(
+    f'<a href="{u(section_path(section))}">{h(section.replace("_", " "))}</a>'
+    for section in section_nav_order if section in sections
 )
 nav = (
-    '<nav class="nav" aria-label="Navigație principală">'
-    f'<a href="{u("/")}">Acasă · VÂLCEA AZI</a>'
-    f'<a href="{u("/stiri/")}">Ultimele · PE SCURT</a>'
-    f'<a href="{u("/stiri/")}">CLARIFICĂM</a>'
-    f'<a href="{u("/stiri/")}">VERIFICAT</a>'
-    f'<a href="{u("/stiri/")}">CE URMEAZĂ</a>'
-    f'<a href="{u("/stiri/")}">DOSAR</a>'
-    f'<a href="{u("/stiri/")}">UNDE IEȘIM</a>'
-    f'{section_links}'
+    '<div class="nav-stack">'
+    '<nav class="nav nav-primary" aria-label="Navigație principală">'
+    f'<a href="{u("/")}">Acasă</a>'
+    f'<a href="{u("/stiri/")}">Ultimele</a>'
+    f'{primary_product_links}'
     f'<a href="{u("/despre/")}">Despre</a>'
     '</nav>'
+    '<nav class="nav nav-topics" aria-label="Secțiuni tematice">'
+    '<span class="nav-label">Teme</span>'
+    f'{topic_links}'
+    '</nav>'
+    '</div>'
 )
 
 
@@ -375,7 +426,7 @@ for section in sections:
     home += (
         f'<section class="section section-block" id="home-{h(section.lower())}">'
         f'<div class="section-head"><h2>{h(section.title())}</h2>'
-        f'<a href="{u("/stiri/")}#{h(section.lower())}">Vezi secțiunea →</a></div>'
+        f'<a href="{u(section_path(section))}">Vezi secțiunea →</a></div>'
         '<div class="cards">'
         + ''.join(
             '<article class="card">'
@@ -422,6 +473,46 @@ def write_route(path, text):
 
 
 write_route('stiri', shell('Știri — VÂLCEA CLAR', stiri_body, canonical_path='/stiri/'))
+
+
+def archive_page(title, description, page_articles, eyebrow='VÂLCEA CLAR'):
+    rows = ''.join(stream_story(article) for article in page_articles)
+    body = (
+        f'<div class="page-head"><div class="eyebrow">{h(eyebrow)}</div>'
+        f'<h1 class="page-title">{h(title)}</h1>'
+        f'<p class="page-dek">{h(description)}</p></div>'
+        f'<div class="story-stream archive-stream">{rows}</div>'
+    )
+    return body
+
+
+product_routes = []
+for product in product_nav_order + ['WEEKEND CLAR', 'PAMFLET/SATIRĂ']:
+    product_articles = [article for article in articles if article_product(article) == product]
+    if not product_articles:
+        continue
+    path = product_path(product)
+    description = PRODUCT_DESCRIPTIONS.get(product, 'Materiale VÂLCEA CLAR selectate editorial.')
+    write_route(
+        path,
+        shell(f'{product} — VÂLCEA CLAR', archive_page(product, description, product_articles, 'Format editorial'), description, path),
+    )
+    product_routes.append((path, product_articles))
+
+section_routes = []
+for section in sections:
+    section_articles = [article for article in articles if article.get('section') == section]
+    if not section_articles:
+        continue
+    path = section_path(section)
+    title = section.replace('_', ' ').title()
+    description = f'Știri și explicații VÂLCEA CLAR din secțiunea {title}.'
+    write_route(
+        path,
+        shell(f'{title} — VÂLCEA CLAR', archive_page(title, description, section_articles, 'Secțiune'), description, path),
+    )
+    section_routes.append((path, section_articles))
+
 
 for article in articles:
     canonical_path = '/stiri/' + article['id'] + '/'
@@ -479,14 +570,79 @@ for slug in ['termeni', 'confidentialitate']:
     write_route(slug, shell(item['title'] + ' — VÂLCEA CLAR', body, canonical_path='/' + slug + '/'))
 
 (OUT / 'robots.txt').write_text(
-    'User-agent: *\nDisallow: /\n' if PREVIEW else 'User-agent: *\nAllow: /\nSitemap: https://valceaclar.ro/sitemap.xml\n',
+    'User-agent: *\nDisallow: /\n' if PREVIEW else (
+        'User-agent: *\nAllow: /\n'
+        'Sitemap: https://valceaclar.ro/sitemap.xml\n'
+        'Sitemap: https://valceaclar.ro/news-sitemap.xml\n'
+    ),
     encoding='utf-8',
 )
-urls = ['/', '/stiri/', '/despre/', '/termeni/', '/confidentialitate/'] + [f'/stiri/{a["id"]}/' for a in articles]
-(OUT / 'sitemap.xml').write_text(
-    '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    + ''.join(f'<url><loc>{SITE}{path}</loc></url>' for path in urls)
-    + '</urlset>',
-    encoding='utf-8',
+
+latest_published = max((parse_dt(article.get('published')) for article in articles if parse_dt(article.get('published'))), default=None)
+latest_value = latest_published.isoformat(timespec='seconds') if latest_published else ''
+
+sitemap_entries = [
+    ('/', latest_value),
+    ('/stiri/', latest_value),
+    ('/despre/', ''),
+    ('/termeni/', ''),
+    ('/confidentialitate/', ''),
+]
+for path, page_articles in product_routes + section_routes:
+    page_dates = [parse_dt(article.get('published')) for article in page_articles]
+    page_dates = [value for value in page_dates if value]
+    page_lastmod = max(page_dates).isoformat(timespec='seconds') if page_dates else ''
+    sitemap_entries.append((path, page_lastmod))
+for article in articles:
+    sitemap_entries.append((f'/stiri/{article["id"]}/', sitemap_lastmod(article.get('published'))))
+
+seen_paths = set()
+unique_entries = []
+for path, lastmod in sitemap_entries:
+    if path in seen_paths:
+        continue
+    seen_paths.add(path)
+    unique_entries.append((path, lastmod))
+
+sitemap_xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+]
+for path, lastmod in unique_entries:
+    sitemap_xml.append('<url>')
+    sitemap_xml.append(f'<loc>{xh(SITE + path)}</loc>')
+    if lastmod:
+        sitemap_xml.append(f'<lastmod>{xh(lastmod)}</lastmod>')
+    sitemap_xml.append('</url>')
+sitemap_xml.append('</urlset>')
+(OUT / 'sitemap.xml').write_text(''.join(sitemap_xml), encoding='utf-8')
+
+news_cutoff = latest_published - timedelta(days=2) if latest_published else None
+news_articles = [
+    article for article in articles
+    if parse_dt(article.get('published'))
+    and (news_cutoff is None or parse_dt(article.get('published')) >= news_cutoff)
+]
+news_xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">',
+]
+for article in news_articles:
+    published = sitemap_lastmod(article.get('published'))
+    news_xml.extend([
+        '<url>',
+        f'<loc>{xh(SITE + "/stiri/" + article["id"] + "/")}</loc>',
+        '<news:news>',
+        '<news:publication><news:name>VÂLCEA CLAR</news:name><news:language>ro</news:language></news:publication>',
+        f'<news:publication_date>{xh(published)}</news:publication_date>',
+        f'<news:title>{xh(article["headline"])}</news:title>',
+        '</news:news>',
+        '</url>',
+    ])
+news_xml.append('</urlset>')
+(OUT / 'news-sitemap.xml').write_text(''.join(news_xml), encoding='utf-8')
+
+print(
+    f'Built {len(unique_entries)} indexed routes; {len(news_articles)} Google News sitemap stories; '
+    f'{len(list((OUT / "media").glob("*.webp")))} local images; base={BASE or "/"}; preview={PREVIEW}.'
 )
-print(f'Built {len(urls)} routes; {len(list((OUT / "media").glob("*.webp")))} local images; base={BASE or "/"}; preview={PREVIEW}.')
