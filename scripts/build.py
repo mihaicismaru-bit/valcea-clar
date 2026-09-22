@@ -179,10 +179,11 @@ def article_product(article):
         or ''
     )
     token = _product_token(raw)
+    # An explicit reader-facing product is authoritative. Internal writer
+    # formats are aliases only; they must not erase a durable public product
+    # already encoded in the canonical story identity.
     if token in PRODUCTS:
         return token
-    if token in PRODUCT_ALIASES:
-        return PRODUCT_ALIASES[token]
 
     story_id = str(article.get('id') or '').lower()
     conservative_markers = (
@@ -196,6 +197,9 @@ def article_product(article):
     for marker, product in conservative_markers:
         if marker in story_id:
             return product
+
+    if token in PRODUCT_ALIASES:
+        return PRODUCT_ALIASES[token]
     return 'VÂLCEA AZI'
 
 
