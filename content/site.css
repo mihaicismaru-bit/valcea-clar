@@ -56,3 +56,26 @@ footer{border-top:3px solid var(--ink);max-width:var(--max);margin:20px auto 0;p
   .nav-primary,.nav-topics{padding:0 14px}
   .nav-label{position:sticky;left:0;background:var(--soft);z-index:1;padding-right:10px}
 }
+
+
+/* International benchmark application: product discovery + reader expectations */
+.editorial-products{padding:28px 0;border-bottom:1px solid var(--line)}
+.editorial-products .section-head span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.product-tile{display:block;padding:16px 18px;border-right:1px solid var(--line);text-decoration:none}
+.product-tile:first-child{padding-left:0}.product-tile:last-child{border-right:0;padding-right:0}
+.product-tile>span{display:block;color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;margin-bottom:6px}
+.product-tile strong{display:block;font:700 18px/1.18 Georgia,'Times New Roman',serif}
+.product-tile small{display:block;margin-top:8px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.04em}
+.product-tile:hover strong{text-decoration:underline;text-underline-offset:3px}
+.related-stories{margin-top:34px;border-top:1px solid var(--line);padding-top:18px}
+.related-stories .section-head{border-bottom:2px solid var(--ink);margin-bottom:0}
+.related-stories .section-head h2{font-size:20px}
+.related-stories ul{list-style:none;margin:0;padding:0}
+.related-stories li{border-bottom:1px solid var(--line)}
+.related-stories a{display:block;padding:13px 0;text-decoration:none}
+.related-stories a span{display:block;color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.related-stories a strong{display:block;font:700 18px/1.2 Georgia,'Times New Roman',serif}
+.related-stories a:hover strong{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.product-grid{grid-template-columns:1fr 1fr}.product-tile:nth-child(2){border-right:0}.product-tile:nth-child(3){padding-left:0}}
+@media(max-width:620px){.editorial-products .section-head span{display:none}.product-grid{grid-template-columns:1fr}.product-tile,.product-tile:first-child,.product-tile:nth-child(3),.product-tile:last-child{padding:14px 0;border-right:0;border-bottom:1px solid var(--line)}.product-tile:last-child{border-bottom:0}}
