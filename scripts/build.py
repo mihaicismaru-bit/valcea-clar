@@ -53,6 +53,8 @@ def story_href(article):
 
 def is_editorial_card(article):
     """Return True for social/editorial cards that must never render as site media."""
+    if article.get('image_site_eligible') is False:
+        return True
     fields = [
         article.get('image_caption'),
         article.get('image_credit'),
