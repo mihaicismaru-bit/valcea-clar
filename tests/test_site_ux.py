@@ -131,6 +131,16 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('Sitemap: https://valceaclar.ro/sitemap.xml', robots)
         self.assertIn('Sitemap: https://valceaclar.ro/news-sitemap.xml', robots)
 
+    def test_benchmark_product_ux_contract(self):
+        home = self.read('index.html')
+        self.assertIn('class="editorial-products"', home)
+        self.assertIn('Cum explicăm Vâlcea', home)
+        article = self.read(f'stiri/{self.lead["id"]}/index.html')
+        self.assertIn('min de citit', article)
+        self.assertIn('class="related-stories"', article)
+        self.assertIn('Mai citește', article)
+        self.assertIn('Publicat ', article)
+
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
             [sys.executable, str(ROOT / 'scripts' / 'verify.py')],
