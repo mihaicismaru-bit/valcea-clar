@@ -9,10 +9,10 @@
   "story_count": 103,
   "current_story_count": 75,
   "archive_story_count": 28,
-  "verified_visual_count": 18,
+  "verified_visual_count": 20,
   "lead_story_id": "calimanesti-restrictii-trotuare-20260922",
   "lead_published_at": "2026-09-22T09:42:55+03:00",
-  "articles_sha256": "e2d4c41e68226867fcb6f290bb2ce20eaef6d241e35fbd8b001bd60a78554be7",
+  "articles_sha256": "e79c6aef580c9c4f15b8aae1de437ccab3f236ed4859674d2d20bf31fdc26386",
   "synced_at": "2026-09-22T14:50:47.010513Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
