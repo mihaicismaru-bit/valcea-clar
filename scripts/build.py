@@ -97,8 +97,8 @@ section_links = ''.join(
 )
 nav = (
     '<nav class="nav" aria-label="Navigație principală">'
-    f'<a href="{u("/")}">VÂLCEA AZI</a>'
-    f'<a href="{u("/stiri/")}">PE SCURT</a>'
+    f'<a href="{u("/")}">Acasă · VÂLCEA AZI</a>'
+    f'<a href="{u("/stiri/")}">Ultimele · PE SCURT</a>'
     f'<a href="{u("/stiri/")}">CLARIFICĂM</a>'
     f'<a href="{u("/stiri/")}">VERIFICAT</a>'
     f'<a href="{u("/stiri/")}">CE URMEAZĂ</a>'
@@ -182,7 +182,7 @@ home = (
     '<section class="mission-strip" aria-label="Promisiunea editorială">'
     '<strong>VÂLCEA. CLAR.</strong><span>Ce se întâmplă.</span><span>Ce știm.</span><span>Ce contează.</span>'
     '</section>'
-    '<div class="status"><div><b>Redacție locală autonomă</b> · tot județul Vâlcea</div>'
+    '<div class="status"><div><b>Ediție continuă</b> · Redacție locală autonomă · tot județul Vâlcea</div>'
     f'<div>Ultima actualizare: {h(pretty_date(articles[0].get("published")))}</div></div>'
     f'<aside class="headline-strip" aria-label="Pe scurt"><span>Pe scurt</span>{latest_links}</aside>'
     '<section class="lead-grid" aria-label="Principal">'
