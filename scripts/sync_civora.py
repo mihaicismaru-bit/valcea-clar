@@ -242,10 +242,22 @@ def _normalize_visual(story_id: str, visual) -> dict | None:
 
 
 def _editorial_product(story: dict) -> str:
+    """Return the reader-facing product signal without stringifying metadata objects."""
     for key in ('editorial_product', 'product_type', 'product', 'format', 'story_type'):
-        value = str(story.get(key) or '').strip()
-        if value:
-            return value
+        value = story.get(key)
+        if isinstance(value, dict):
+            nested = (
+                value.get('reader_product')
+                or value.get('product')
+                or value.get('format')
+                or value.get('writer_format')
+            )
+            if nested:
+                return str(nested).strip()
+            continue
+        text = str(value or '').strip()
+        if text:
+            return text
     return ''
 
 
