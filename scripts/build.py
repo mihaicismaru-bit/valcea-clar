@@ -97,8 +97,13 @@ section_links = ''.join(
 )
 nav = (
     '<nav class="nav" aria-label="Navigație principală">'
-    f'<a href="{u("/")}">Acasă</a>'
-    f'<a href="{u("/stiri/")}">Ultimele</a>'
+    f'<a href="{u("/")}">VÂLCEA AZI</a>'
+    f'<a href="{u("/stiri/")}">PE SCURT</a>'
+    f'<a href="{u("/stiri/")}">CLARIFICĂM</a>'
+    f'<a href="{u("/stiri/")}">VERIFICAT</a>'
+    f'<a href="{u("/stiri/")}">CE URMEAZĂ</a>'
+    f'<a href="{u("/stiri/")}">DOSAR</a>'
+    f'<a href="{u("/stiri/")}">UNDE IEȘIM</a>'
     f'{section_links}'
     f'<a href="{u("/despre/")}">Despre</a>'
     '</nav>'
@@ -174,7 +179,10 @@ latest_links = ''.join(
 
 home = (
     '<div data-layout="continuous-story-first">'
-    '<div class="status"><div><b>Ediție continuă</b> · Vâlcea, România</div>'
+    '<section class="mission-strip" aria-label="Promisiunea editorială">'
+    '<strong>VÂLCEA. CLAR.</strong><span>Ce se întâmplă.</span><span>Ce știm.</span><span>Ce contează.</span>'
+    '</section>'
+    '<div class="status"><div><b>Redacție locală autonomă</b> · tot județul Vâlcea</div>'
     f'<div>Ultima actualizare: {h(pretty_date(articles[0].get("published")))}</div></div>'
     f'<aside class="headline-strip" aria-label="Pe scurt"><span>Pe scurt</span>{latest_links}</aside>'
     '<section class="lead-grid" aria-label="Principal">'
@@ -187,6 +195,12 @@ home = (
     '<aside class="rail"><h2>Ultimele</h2>'
     + ''.join(mini_story(a) for a in rail_articles)
     + f'<a class="more-link" href="{u("/stiri/")}">Toate știrile →</a></aside>'
+    '</section>'
+    '<section class="service-grid" aria-label="Informație utilă">'
+    '<div><b>TRAFIC</b><span>Drumuri, incidente, restricții</span></div>'
+    '<div><b>UTILITĂȚI</b><span>Apă, energie, termoficare</span></div>'
+    '<div><b>EVENIMENTE</b><span>Ce se întâmplă azi în județ</span></div>'
+    '<div><b>DE URMĂRIT</b><span>Subiecte deschise și ce urmează</span></div>'
     '</section>'
     '<section class="section latest-section">'
     '<div class="section-head"><h2>În Vâlcea, acum</h2><a href="' + u('/stiri/') + '">Flux complet →</a></div>'
@@ -283,7 +297,7 @@ for article in articles:
 
 about = (
     '<div class="legal article"><div class="kicker">Despre publicație</div><h1>VÂLCEA CLAR</h1>'
-    '<p class="dek">Publicație locală construită pentru informație clară, verificabilă și utilă.</p>'
+    '<p class="dek">VÂLCEA. CLAR. — Ce se întâmplă. Ce știm. Ce contează.</p>'
     '<section><h2>Principiul editorial</h2><p>Separăm faptele confirmate de interpretări, folosim documente și surse identificabile și marcăm explicit limitele informației disponibile.</p></section>'
     '<section><h2>Publicare continuă</h2><p>Fluxul este actualizat pe măsură ce apar informații relevante. Automatizarea poate descoperi și pregăti materiale, însă controalele de risc rămân fail-closed.</p></section></div>'
 )
