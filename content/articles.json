@@ -1,15 +1,88 @@
 {
-  "updated_local": "2026-09-22T06:42:56.458762Z",
+  "updated_local": "2026-09-22T14:50:47.010513Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "calimanesti-restrictii-trotuare-20260922",
+      "section": "UTILITAR",
+      "priority": 1000000,
+      "source_priority": 98,
+      "canonical_rank": 0,
+      "headline": "Restricții de circulație anunțate la Călimănești, pentru lucrări la trotuare",
+      "dek": "AS TRANS anunță restricții temporare de la 22 septembrie, pe un sector de 400 de metri. Informarea nu precizează durata lucrărilor sau o închidere integrală.",
+      "paragraphs": [
+        "AS TRANS anunță restricții temporare începând de marți, 22 septembrie, pe sectorul cuprins între kilometrii 190+650 și 191+050, în cadrul proiectului de modernizare și extindere a trotuarelor din Călimănești.",
+        "Anunțul, publicat luni în Ziarul de Vâlcea, indică avize ale DRDP Craiova și ale Poliției Rutiere Vâlcea. Sectorul menționat are o lungime de 400 de metri.",
+        "Informarea consultată nu precizează ora începerii, data încheierii sau modul concret în care va fi dirijată circulația. Nu anunță închiderea integrală a drumului. Pentru deplasările prin zonă, luați în calcul posibilitatea unor întârzieri și urmăriți semnalizarea temporară.",
+        "Informația disponibilă este anunțul constructorului. Situația efectivă din trafic nu a fost verificată la fața locului."
+      ],
+      "sources": [
+        {
+          "name": "anunțul AS TRANS publicat de Ziarul de Vâlcea, 21 septembrie",
+          "url": "https://ziaruldevalcea.ro/2026/09/anunt-public-restrictii-de-circulatie-in-orasul-calimanesti/",
+          "tier": "T2"
+        }
+      ],
+      "published": "2026-09-22T09:42:55+03:00",
+      "image": "calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/calimanesti-restrictii-trotuare-20260922/",
+      "image_caption": "Card editorial construit din informații verificate; nu este o fotografie a evenimentului sau a persoanelor descrise.",
+      "image_origin_url": "https://valceaclar.ro/media/social/editorial/s3/calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
+      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/editorial/s3/calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
+      "image_source_url": "https://valceaclar.ro/media/social/editorial/s3/calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
+      "image_credit": "VÂLCEA CLAR — card editorial",
+      "image_rights_basis": "original_editorial_layout",
+      "image_license_url": "",
+      "image_provenance_status": "VERIFIED",
+      "image_contextual_archive": false,
+      "image_captured_at": "",
+      "image_story_id": "calimanesti-restrictii-trotuare-20260922"
+    },
+    {
+      "id": "valcea-somaj-august-2026",
+      "section": "ECONOMIE",
+      "priority": 999999,
+      "source_priority": 93,
+      "canonical_rank": 1,
+      "headline": "Șomajul urcă la 3,03%. Aproape două treimi dintre cei înregistrați sunt din mediul rural",
+      "dek": "Curierul de Vâlcea publică date atribuite AJOFM: 4.214 șomeri înregistrați la sfârșitul lui august, dintre care 2.768 în mediul rural.",
+      "paragraphs": [
+        "La sfârșitul lunii august, Vâlcea avea 4.214 șomeri înregistrați, iar rata șomajului ajunsese la 3,03%, potrivit datelor atribuite AJOFM de Curierul de Vâlcea în materialul publicat pe 21 septembrie. Creșterea este de 0,10 puncte procentuale față de iulie.",
+        "Dintre persoanele înregistrate, 2.768 provin din mediul rural și 1.446 din mediul urban. Ponderea ruralului, calculată din aceste valori, este de aproximativ 65,7%.",
+        "Lectura redacției: cifrele justifică întrebări despre transportul către locurile de muncă și accesul la formare în comune. Ele nu demonstrează singure cauzele șomajului și nu reprezintă totalul tuturor persoanelor fără serviciu."
+      ],
+      "sources": [
+        {
+          "name": "Curierul de Vâlcea, date atribuite AJOFM",
+          "url": "https://www.curierul.ro/rata-somajului-usoara-crestere-in-valcea/",
+          "tier": "T2"
+        }
+      ],
+      "published": "2026-09-22T09:42:55+03:00",
+      "image": "valcea-somaj-august-2026-og-8feeaa219754.jpg",
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/valcea-somaj-august-2026/",
+      "image_caption": "Card editorial construit din informații verificate; nu este o fotografie a evenimentului sau a persoanelor descrise.",
+      "image_origin_url": "https://valceaclar.ro/media/social/editorial/s3/valcea-somaj-august-2026-og-8feeaa219754.jpg",
+      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/editorial/s3/valcea-somaj-august-2026-og-8feeaa219754.jpg",
+      "image_source_url": "https://valceaclar.ro/media/social/editorial/s3/valcea-somaj-august-2026-og-8feeaa219754.jpg",
+      "image_credit": "VÂLCEA CLAR — card editorial",
+      "image_rights_basis": "original_editorial_layout",
+      "image_license_url": "",
+      "image_provenance_status": "VERIFIED",
+      "image_contextual_archive": false,
+      "image_captured_at": "",
+      "image_story_id": "valcea-somaj-august-2026"
+    },
+    {
       "id": "tetoiu-otesani-incendii-20260921",
       "section": "ACTUALITATE",
-      "priority": 1000000,
+      "priority": 999998,
       "source_priority": 91,
-      "canonical_rank": 0,
+      "canonical_rank": 2,
       "headline": "Două incendii de vegetație, zeci de hectare afectate",
       "dek": "Relatările din 21 septembrie indică aproximativ 35–40 de hectare afectate la Tetoiu și circa 10 la Oteșani. Informațiile descriu situația raportată luni.",
       "paragraphs": [
@@ -29,7 +102,7 @@
           "tier": "T2"
         }
       ],
-      "published": "2026-09-22T09:42:47+03:00",
+      "published": "2026-09-22T09:42:55+03:00",
       "image": "tetoiu-otesani-incendii-20260921-og-4299a8050e78.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/tetoiu-otesani-incendii-20260921/",
@@ -44,79 +117,6 @@
       "image_contextual_archive": false,
       "image_captured_at": "",
       "image_story_id": "tetoiu-otesani-incendii-20260921"
-    },
-    {
-      "id": "calimanesti-restrictii-trotuare-20260922",
-      "section": "UTILITAR",
-      "priority": 999999,
-      "source_priority": 98,
-      "canonical_rank": 1,
-      "headline": "Restricții de circulație anunțate la Călimănești, pentru lucrări la trotuare",
-      "dek": "AS TRANS anunță restricții temporare de la 22 septembrie, pe un sector de 400 de metri. Informarea nu precizează durata lucrărilor sau o închidere integrală.",
-      "paragraphs": [
-        "AS TRANS anunță restricții temporare începând de marți, 22 septembrie, pe sectorul cuprins între kilometrii 190+650 și 191+050, în cadrul proiectului de modernizare și extindere a trotuarelor din Călimănești.",
-        "Anunțul, publicat luni în Ziarul de Vâlcea, indică avize ale DRDP Craiova și ale Poliției Rutiere Vâlcea. Sectorul menționat are o lungime de 400 de metri.",
-        "Informarea consultată nu precizează ora începerii, data încheierii sau modul concret în care va fi dirijată circulația. Nu anunță închiderea integrală a drumului. Pentru deplasările prin zonă, luați în calcul posibilitatea unor întârzieri și urmăriți semnalizarea temporară.",
-        "Informația disponibilă este anunțul constructorului. Situația efectivă din trafic nu a fost verificată la fața locului."
-      ],
-      "sources": [
-        {
-          "name": "anunțul AS TRANS publicat de Ziarul de Vâlcea, 21 septembrie",
-          "url": "https://ziaruldevalcea.ro/2026/09/anunt-public-restrictii-de-circulatie-in-orasul-calimanesti/",
-          "tier": "T2"
-        }
-      ],
-      "published": "2026-09-22T09:38:33+03:00",
-      "image": "calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/calimanesti-restrictii-trotuare-20260922/",
-      "image_caption": "Card editorial construit din informații verificate; nu este o fotografie a evenimentului sau a persoanelor descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/editorial/s3/calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/editorial/s3/calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
-      "image_source_url": "https://valceaclar.ro/media/social/editorial/s3/calimanesti-restrictii-trotuare-20260922-og-8aff0726c6ad.jpg",
-      "image_credit": "VÂLCEA CLAR — card editorial",
-      "image_rights_basis": "original_editorial_layout",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": false,
-      "image_captured_at": "",
-      "image_story_id": "calimanesti-restrictii-trotuare-20260922"
-    },
-    {
-      "id": "valcea-somaj-august-2026",
-      "section": "ECONOMIE",
-      "priority": 999998,
-      "source_priority": 93,
-      "canonical_rank": 2,
-      "headline": "Șomajul urcă la 3,03%. Aproape două treimi dintre cei înregistrați sunt din mediul rural",
-      "dek": "Curierul de Vâlcea publică date atribuite AJOFM: 4.214 șomeri înregistrați la sfârșitul lui august, dintre care 2.768 în mediul rural.",
-      "paragraphs": [
-        "La sfârșitul lunii august, Vâlcea avea 4.214 șomeri înregistrați, iar rata șomajului ajunsese la 3,03%, potrivit datelor atribuite AJOFM de Curierul de Vâlcea în materialul publicat pe 21 septembrie. Creșterea este de 0,10 puncte procentuale față de iulie.",
-        "Dintre persoanele înregistrate, 2.768 provin din mediul rural și 1.446 din mediul urban. Ponderea ruralului, calculată din aceste valori, este de aproximativ 65,7%.",
-        "Lectura redacției: cifrele justifică întrebări despre transportul către locurile de muncă și accesul la formare în comune. Ele nu demonstrează singure cauzele șomajului și nu reprezintă totalul tuturor persoanelor fără serviciu."
-      ],
-      "sources": [
-        {
-          "name": "Curierul de Vâlcea, date atribuite AJOFM",
-          "url": "https://www.curierul.ro/rata-somajului-usoara-crestere-in-valcea/",
-          "tier": "T2"
-        }
-      ],
-      "published": "2026-09-22T09:38:33+03:00",
-      "image": "valcea-somaj-august-2026-og-8feeaa219754.jpg",
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-somaj-august-2026/",
-      "image_caption": "Card editorial construit din informații verificate; nu este o fotografie a evenimentului sau a persoanelor descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/editorial/s3/valcea-somaj-august-2026-og-8feeaa219754.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/editorial/s3/valcea-somaj-august-2026-og-8feeaa219754.jpg",
-      "image_source_url": "https://valceaclar.ro/media/social/editorial/s3/valcea-somaj-august-2026-og-8feeaa219754.jpg",
-      "image_credit": "VÂLCEA CLAR — card editorial",
-      "image_rights_basis": "original_editorial_layout",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": false,
-      "image_captured_at": "",
-      "image_story_id": "valcea-somaj-august-2026"
     },
     {
       "id": "brezoi-ziua-recoltei-pregatiri-20260922",
@@ -138,7 +138,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-22T09:38:33+03:00",
+      "published": "2026-09-22T09:42:55+03:00",
       "image": "brezoi-ziua-recoltei-pregatiri-20260922-og-8cc7b2732fcf.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/brezoi-ziua-recoltei-pregatiri-20260922/",
@@ -174,7 +174,7 @@
           "tier": "T2"
         }
       ],
-      "published": "2026-09-22T09:38:33+03:00",
+      "published": "2026-09-22T09:42:55+03:00",
       "image": "scm-valcea-fc-bihor-20260920-og-0455cbffdeac.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/scm-valcea-fc-bihor-20260920/",
@@ -209,7 +209,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-22T09:38:33+03:00",
+      "published": "2026-09-22T09:42:55+03:00",
       "image": "ramnicu-valcea-floarea-darurilor-20260926-og-0267847eed0d.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/ramnicu-valcea-floarea-darurilor-20260926/",
@@ -244,7 +244,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-22T09:38:33+03:00",
+      "published": "2026-09-22T09:42:55+03:00",
       "image": "calimanesti-concurs-contabil-sef-20260921-og-d94b9e7b2007.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/calimanesti-concurs-contabil-sef-20260921/",
@@ -406,11 +406,53 @@
       "canonical_path": "/stiri/fast-ipj-depistat-de-politistii-serviciului-rutier1789460882-ddc5052abd/"
     },
     {
+      "id": "auto-raliul-valcii-official-news-f6e28bbb1533",
+      "section": "SPORT",
+      "priority": 999988,
+      "source_priority": 97,
+      "canonical_rank": 12,
+      "headline": "Raliul Vâlcii intră în săptămâna decisivă: programul complet din 24–26 septembrie",
+      "dek": "Etapa de la Vâlcea închide sezonul Campionatului Național de Raliuri. Organizatorii au publicat programul celor 13 probe, orele de start, evenimentele din Centrul Civic și regulile pentru spectatori.",
+      "paragraphs": [
+        "Organizatorii cer spectatorilor să respecte zonele de siguranță și indicațiile oamenilor de ordine; accesul pe probe se restricționează înainte de start, iar hărțile și regulile trebuie consultate înainte de deplasare.",
+        "Raliul Vâlcii Nurvil 2026 se desfășoară între 24 și 26 septembrie și închide sezonul Campionatului Național de Raliuri, după anularea etapei din Bacău. Site-ul oficial al competiției indică 13 probe speciale, 120,30 kilometri competitivi și 500,97 kilometri în total.",
+        "Festivitatea de premiere este programată sâmbătă la ora 20:00 în Centrul Civic, iar organizatorii anunță și un concert Misha Miller. Informarea oficială din 21 septembrie arată că etapa de la Vâlcea decide clasamentele finale ale sezonului național.",
+        "Joi, 24 septembrie, programul începe cu shakedown-ul de la Golești, între 13:00 și 17:00. Fotografia oficială este la 18:50 în Centrul Civic, startul festiv între 19:00 și 21:00, iar concertul MIRA la 20:30. Parcul de Service se deschide miercuri, 23 septembrie, la ora 20:00, la Vâlcea Shopping City.",
+        "Vineri sunt programate câte două treceri pe Fețeni, Runcu și Căciulata și proba de noapte Mihăești 1 la 19:28. Sâmbătă urmează Mihăești, Vaideeni și Horezu, Power Stage Horezu 2 la 15:55 și superspeciala Nurvil Show la 17:13."
+      ],
+      "sources": [
+        {
+          "name": "Raliul Vâlcii — programul complet 2026",
+          "url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+          "tier": "T1"
+        },
+        {
+          "name": "Raliul Vâlcii — confruntarea decisivă / finala CNR",
+          "url": "https://raliulvalcii.ro/stiri/confruntarea-decisiva-are-loc-la-valcea/",
+          "tier": "T1"
+        },
+        {
+          "name": "Raliul Vâlcii — informații pentru public și spectatori",
+          "url": "https://raliulvalcii.ro/public/",
+          "tier": "T1"
+        },
+        {
+          "name": "Raliul Vâlcii — documente oficiale 2026",
+          "url": "https://raliulvalcii.ro/documente-oficiale/",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-14T16:48:58+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/auto-raliul-valcii-official-news-f6e28bbb1533/"
+    },
+    {
       "id": "fast-ipj-retinuta-pentru-24-de-ore1788941100-c8f452db47",
       "section": "SIGURANȚĂ",
-      "priority": 999988,
+      "priority": 999987,
       "source_priority": 96,
-      "canonical_rank": 12,
+      "canonical_rank": 13,
       "headline": "IPJ Vâlcea: REȚINUTĂ PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 09.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -433,9 +475,9 @@
     {
       "id": "fast-ipj-actiuni-pentru-siguranta-rutiera-in-judetul-valcea-4a4010226d",
       "section": "SIGURANȚĂ",
-      "priority": 999987,
+      "priority": 999986,
       "source_priority": 96,
-      "canonical_rank": 13,
+      "canonical_rank": 14,
       "headline": "IPJ Vâlcea: ACȚIUNI PENTRU SIGURANȚA RUTIERĂ ÎN JUDEȚUL VÂLCEA",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 13.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -454,33 +496,6 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/fast-ipj-actiuni-pentru-siguranta-rutiera-in-judetul-valcea-4a4010226d/"
-    },
-    {
-      "id": "auto-raliul-valcii-official-news-f6e28bbb1533",
-      "section": "SPORT",
-      "priority": 999986,
-      "source_priority": 96,
-      "canonical_rank": 14,
-      "headline": "Raliul Vâlcii 2026: înscrierile sunt deschise până la 18 septembrie",
-      "dek": "Etapa a VII-a a Campionatului Național de Raliuri se desfășoară între 24 și 26 septembrie, la Râmnicu Vâlcea. Programul include 13 probe speciale și o superspecială urbană.",
-      "paragraphs": [
-        "Înscrierile pentru Raliul Vâlcii Nurvil 2026 sunt deschise pe platforma myfras.ro până vineri, 18 septembrie 2026, la ora 20:00. Competiția este programată între 24 și 26 septembrie, la Râmnicu Vâlcea.",
-        "Shakedown-ul este programat joi, 24 septembrie, între orele 13:00 și 15:00, iar startul festiv va avea loc de la ora 19:00, în centrul municipiului Râmnicu Vâlcea. Recunoașterile sunt prevăzute pentru 23 septembrie.",
-        "Organizatorii au anunțat 13 probe speciale, însumând 120,30 kilometri competitivi, dintr-un traseu total de aproximativ 501 kilometri. Probele se desfășoară pe parcursul a două zile de concurs.",
-        "Programul de vineri cuprinde șapte probe și 72,50 kilometri, inclusiv o probă de noapte la Mihăești. Sâmbătă sunt programate șase probe și 47,80 kilometri, cu Power Stage la Horezu și superspeciala Nurvil Show în centrul Râmnicului.",
-        "Parcul de service va fi amenajat la Vâlcea Shopping City. Regulamentul, programul, itinerariul și hărțile probelor sunt publicate în secțiunea de documente pentru echipaje a site-ului oficial."
-      ],
-      "sources": [
-        {
-          "name": "Raliul Vâlcii — informațiile oficiale pentru înscrieri și traseu",
-          "url": "https://raliulvalcii.ro/stiri/inscrieri-raliul-valcii-2026/",
-          "tier": "T1B"
-        }
-      ],
-      "published": "2026-09-14T16:48:58+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/auto-raliul-valcii-official-news-f6e28bbb1533/"
     },
     {
       "id": "ocnele-mari-salina-program-septembrie-20260907",
@@ -2043,46 +2058,11 @@
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-23-ladesti/"
     },
     {
-      "id": "valcea-intrerupere-curent-2026-09-22-horezu",
-      "section": "UTIL",
+      "id": "bujoreni-11-zidari-4582-6000-20260818",
+      "section": "LOCURI DE MUNCĂ",
       "priority": 999940,
       "source_priority": 88,
       "canonical_rank": 60,
-      "headline": "Horezu: întrerupere de curent programată pe 22 septembrie 2026, între 09:00–17:00",
-      "dek": "Distribuție Oltenia include PTCZ Bloc O2-O3 Horezu în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
-      "paragraphs": [
-        "Zona indicată în documentul oficial este PTCZ Bloc O2-O3 Horezu.",
-        "Distribuție Oltenia a programat o întrerupere a alimentării cu energie electrică în Horezu, pe 22 septembrie 2026, între orele 09:00 și 17:00."
-      ],
-      "sources": [
-        {
-          "name": "Distribuție Oltenia — întreruperi programate Vâlcea",
-          "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Fseptembrie%2F21.09-27.09%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2021_09%20-%2027_09_2026%20-%20Valcea.pdf",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-09-14T16:48:58+03:00",
-      "image": "valcea-intrerupere-curent-2026-09-22-horezu-og-c460e76b59ec.jpg",
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-22-horezu/",
-      "image_caption": "Card editorial construit din informații verificate; nu este o fotografie a evenimentului sau a persoanelor descrise.",
-      "image_origin_url": "https://valceaclar.ro/media/social/editorial/s3/valcea-intrerupere-curent-2026-09-22-horezu-og-c460e76b59ec.jpg",
-      "image_fetch_url": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/media/social/editorial/s3/valcea-intrerupere-curent-2026-09-22-horezu-og-c460e76b59ec.jpg",
-      "image_source_url": "https://valceaclar.ro/media/social/editorial/s3/valcea-intrerupere-curent-2026-09-22-horezu-og-c460e76b59ec.jpg",
-      "image_credit": "VÂLCEA CLAR — card editorial",
-      "image_rights_basis": "original_editorial_layout",
-      "image_license_url": "",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": false,
-      "image_captured_at": "",
-      "image_story_id": "valcea-intrerupere-curent-2026-09-22-horezu"
-    },
-    {
-      "id": "bujoreni-11-zidari-4582-6000-20260818",
-      "section": "LOCURI DE MUNCĂ",
-      "priority": 999939,
-      "source_priority": 88,
-      "canonical_rank": 61,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -2107,9 +2087,9 @@
     {
       "id": "ramnicu-uap-atelier-35-artex-20260904",
       "section": "CULTURĂ",
-      "priority": 999938,
+      "priority": 999939,
       "source_priority": 82,
-      "canonical_rank": 62,
+      "canonical_rank": 61,
       "headline": "Două evenimente culturale la Râmnicu Vâlcea pe 4 septembrie: «Atelier 35» la Cozia, apoi expoziție și lansare la Artex",
       "dek": "Filiala Râmnicu Vâlcea a UAP a programat pentru 4 septembrie o expoziție de grup la Galeriile Cozia 1 și 2 și, de la ora 18:00, un dublu eveniment la Galeria Artex: retrospectiva Mariei Constantin și lansarea unui roman al Ioanei Drăgan.",
       "paragraphs": [
@@ -2132,9 +2112,9 @@
     {
       "id": "valcea-romsilva-pnrr-torenti-20260831",
       "section": "JUDEȚ",
-      "priority": 999937,
+      "priority": 999938,
       "source_priority": 78,
-      "canonical_rank": 63,
+      "canonical_rank": 62,
       "headline": "Romsilva: toate cele 19 lucrări PNRR împotriva viiturilor, într-un proiect care include Vâlcea, au fost finalizate",
       "dek": "Regia Națională a Pădurilor anunță finalizarea și recepția celor 19 obiective din proiectul de corectare a torenților derulat în opt județe, inclusiv Vâlcea. Valoarea de 109,56 milioane de lei fără TVA este pentru întregul proiect, nu doar pentru județ.",
       "paragraphs": [
@@ -2162,9 +2142,9 @@
     {
       "id": "valcea-apa-canal-contract-152m-20260902",
       "section": "JUDEȚ",
-      "priority": 999936,
+      "priority": 999937,
       "source_priority": 93,
-      "canonical_rank": 64,
+      "canonical_rank": 63,
       "headline": "APAVIL precizează valoarea contractului pentru apă și canalizare din Vâlcea: 931,7 milioane lei",
       "dek": "Operatorul județean spune că Contractul nr. 179 pentru proiectul regional a fost semnat pe 28 august. Finanțarea nerambursabilă poate ajunge la 709,81 milioane lei, iar lucrările prevăd 57,52 km pentru alimentarea cu apă și 186,89 km pentru colectarea apelor uzate.",
       "paragraphs": [
@@ -2187,9 +2167,9 @@
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
       "section": "PATRIMONIU",
-      "priority": 999935,
+      "priority": 999936,
       "source_priority": 98,
-      "canonical_rank": 65,
+      "canonical_rank": 64,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
       "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului, iar Ministerul Culturii explică atât avizarea, cât și soluția arhitecturală contemporană.",
       "paragraphs": [
@@ -2241,9 +2221,9 @@
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999934,
+      "priority": 999935,
       "source_priority": 99,
-      "canonical_rank": 66,
+      "canonical_rank": 65,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
       "dek": "O reconstrucție documentată a ediției 2026: artiștii pe zile, ce s-a cântat unde există setlisturi verificabile, organizatorii, vocile influente, sponsorii și sprijinul public.",
       "paragraphs": [
@@ -2359,9 +2339,9 @@
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
       "section": "EVENIMENTE",
-      "priority": 999933,
+      "priority": 999934,
       "source_priority": 99,
-      "canonical_rank": 67,
+      "canonical_rank": 66,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
       "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
       "paragraphs": [
@@ -2419,9 +2399,9 @@
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999932,
+      "priority": 999933,
       "source_priority": 98,
-      "canonical_rank": 68,
+      "canonical_rank": 67,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
       "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei, iar lista de parteneri arată o rețea publică și culturală mai largă.",
       "paragraphs": [
@@ -2470,9 +2450,9 @@
     {
       "id": "deep-forest-fest-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999931,
+      "priority": 999932,
       "source_priority": 98,
-      "canonical_rank": 69,
+      "canonical_rank": 68,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
       "dek": "Dosarul VÂLCEA CLAR separă muzica și promovarea de documentele publice: cine a urcat pe afiș, cum a evoluat festivalul și ce sume apar în hotărârile locale.",
       "paragraphs": [
@@ -2553,9 +2533,9 @@
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
       "section": "EVENIMENTE",
-      "priority": 999930,
+      "priority": 999931,
       "source_priority": 98,
-      "canonical_rank": 70,
+      "canonical_rank": 69,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
       "dek": "Ediția aniversară de la Brezoi a combinat 21 de trupe cu o cauză umanitară; dosarul separă profitul promis pentru caritate de eventualele resurse publice locale și de rezultatul financiar care trebuie documentat după festival.",
       "paragraphs": [
@@ -2619,9 +2599,9 @@
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "section": "CULTURĂ",
-      "priority": 999929,
+      "priority": 999930,
       "source_priority": 97,
-      "canonical_rank": 71,
+      "canonical_rank": 70,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
       "dek": "Patru evenimente sunt deja publicate pentru septembrie 2026, de la jazz și latino simfonic la program coral și Violoncellissimo; VÂLCEA CLAR le leagă de artiști, bilete și finanțarea publică a Centrului Cultural Municipal.",
       "paragraphs": [
@@ -2665,9 +2645,9 @@
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999928,
+      "priority": 999929,
       "source_priority": 97,
-      "canonical_rank": 72,
+      "canonical_rank": 71,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
       "dek": "Festivalul gratuit de la Măldărești este organizat de instituții ale Consiliului Județean Vâlcea; VÂLCEA CLAR reconstruiește programul și separă costul public dovedit de sumele care încă lipsesc din documentele indexate.",
       "paragraphs": [
@@ -2715,9 +2695,9 @@
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
       "section": "CULTURĂ",
-      "priority": 999927,
+      "priority": 999928,
       "source_priority": 96,
-      "canonical_rank": 73,
+      "canonical_rank": 72,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
       "dek": "Ariel și Anton Pann aparțin unor administrații diferite și au fluxuri distincte de program și finanțare; VÂLCEA CLAR le transformă în surse permanente pentru agenda culturală, premiere, distribuții și money trace.",
       "paragraphs": [
@@ -2791,9 +2771,9 @@
     {
       "id": "invartita-dorului-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999926,
+      "priority": 999927,
       "source_priority": 96,
-      "canonical_rank": 74,
+      "canonical_rank": 73,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
       "dek": "Festivalul păstoresc organizat de Primăria și Consiliul Local Vaideeni aduce zeci de artiști și ansambluri; VÂLCEA CLAR separă tradiția de întrebarea contabilă privind costul complet al ediției.",
       "paragraphs": [
@@ -2842,9 +2822,9 @@
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999925,
+      "priority": 999926,
       "source_priority": 96,
-      "canonical_rank": 75,
+      "canonical_rank": 74,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
       "dek": "Târgul de la Horezu combină patrimoniul ceramic cu spectacole folclorice; documentele locale confirmă o hotărâre specială de buget, iar VÂLCEA CLAR urmărește suma și execuția ei până la nivel de contracte și plăți.",
       "paragraphs": [
@@ -2892,9 +2872,9 @@
     {
       "id": "fast-isu-incendiu-izbucnit-intr-o-gospodarie-din-localitatea-li-729005290f",
       "section": "URGENȚE",
-      "priority": 999924,
+      "priority": 999925,
       "source_priority": 97,
-      "canonical_rank": 76,
+      "canonical_rank": 75,
       "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2916,9 +2896,9 @@
     {
       "id": "fast-isu-incendiu-locuinta-in-municipiul-ramnicu-valcea-777-968eefa444",
       "section": "URGENȚE",
-      "priority": 999923,
+      "priority": 999924,
       "source_priority": 97,
-      "canonical_rank": 77,
+      "canonical_rank": 76,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2940,9 +2920,9 @@
     {
       "id": "fast-ipj-retinut-pentru-24-de-ore1788707527-9f766f21d9",
       "section": "SIGURANȚĂ",
-      "priority": 999922,
+      "priority": 999923,
       "source_priority": 96,
-      "canonical_rank": 78,
+      "canonical_rank": 77,
       "headline": "IPJ Vâlcea: REȚINUT PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 05.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -2965,9 +2945,9 @@
     {
       "id": "ramnicu-parcare-nord-20260904",
       "section": "ACTUALITATE",
-      "priority": 999921,
+      "priority": 999922,
       "source_priority": 88,
-      "canonical_rank": 79,
+      "canonical_rank": 78,
       "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
       "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
       "paragraphs": [
@@ -2996,9 +2976,9 @@
     {
       "id": "scm-program-b77962d4af149f60d7e6",
       "section": "SPORT",
-      "priority": 999920,
+      "priority": 999921,
       "source_priority": 88,
-      "canonical_rank": 80,
+      "canonical_rank": 79,
       "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -3020,9 +3000,9 @@
     {
       "id": "valcea-intrerupere-curent-2026-09-21-budesti",
       "section": "UTIL",
-      "priority": 999919,
+      "priority": 999920,
       "source_priority": 88,
-      "canonical_rank": 81,
+      "canonical_rank": 80,
       "headline": "Budeşti: întrerupere de curent programată pe 21 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA IAS Budeşti, PTA Satul Nou Racoviţa, PTAB Budeşti 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -3039,6 +3019,30 @@
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-21-budesti/",
+      "archive_only": true
+    },
+    {
+      "id": "valcea-intrerupere-curent-2026-09-22-horezu",
+      "section": "UTIL",
+      "priority": 999919,
+      "source_priority": 88,
+      "canonical_rank": 81,
+      "headline": "Horezu: întrerupere de curent programată pe 22 septembrie 2026, între 09:00–17:00",
+      "dek": "Distribuție Oltenia include PTCZ Bloc O2-O3 Horezu în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
+      "paragraphs": [
+        "Zona indicată în documentul oficial este PTCZ Bloc O2-O3 Horezu.",
+        "Distribuție Oltenia a programat o întrerupere a alimentării cu energie electrică în Horezu, pe 22 septembrie 2026, între orele 09:00 și 17:00."
+      ],
+      "sources": [
+        {
+          "name": "Distribuție Oltenia — întreruperi programate Vâlcea",
+          "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Fseptembrie%2F21.09-27.09%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2021_09%20-%2027_09_2026%20-%20Valcea.pdf"
+        }
+      ],
+      "published": "2026-09-14T16:48:58+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-22-horezu/",
       "archive_only": true
     },
     {
