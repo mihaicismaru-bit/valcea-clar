@@ -9,10 +9,10 @@
   "story_count": 103,
   "current_story_count": 76,
   "archive_story_count": 27,
-  "verified_visual_count": 11,
+  "verified_visual_count": 19,
   "lead_story_id": "tetoiu-otesani-incendii-20260921",
   "lead_published_at": "2026-09-22T09:42:47+03:00",
-  "articles_sha256": "28a2063044ffb47acb3ae3708e8da3d76d9e85410d4aefd09c89cb381b0fc1d2",
+  "articles_sha256": "bcf5233183c497a285a235958ab5a8ac16af35df393a59e1ccc9047a96cb9fd9",
   "synced_at": "2026-09-22T06:42:56.458762Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
