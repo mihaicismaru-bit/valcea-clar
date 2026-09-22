@@ -1,32 +1,25 @@
 {
   "name": "VÂLCEA CLAR",
   "domain": "valceaclar.ro",
-  "tagline": "Știrile Vâlcii, fără zgomot.",
+  "tagline": "Ce se întâmplă. Ce știm. Ce contează.",
   "email": "redactie@valceaclar.ro",
   "nav": [
-    [
-      "Acasă",
-      "/"
-    ],
-    [
-      "Ultimele știri",
-      "/stiri/"
-    ],
-    [
-      "Bani publici",
-      "/stiri/#bani-publici"
-    ],
-    [
-      "Oameni",
-      "/oameni/"
-    ],
-    [
-      "Cultură & Evenimente",
-      "/stiri/#evenimente"
-    ],
-    [
-      "Foto",
-      "/foto/"
-    ]
+    ["VÂLCEA AZI", "/"],
+    ["Pe scurt", "/stiri/"],
+    ["Clarificăm", "/stiri/#clarificam"],
+    ["Verificat", "/stiri/#verificat"],
+    ["Ce urmează", "/stiri/#ce-urmeaza"],
+    ["Dosar", "/stiri/#dosar"],
+    ["Unde ieșim", "/stiri/#unde-iesim"]
+  ],
+  "localities": [
+    "Râmnicu Vâlcea",
+    "Brezoi",
+    "Valea Lotrului",
+    "Valea Oltului",
+    "Călimănești",
+    "Horezu",
+    "Drăgășani",
+    "Vaideeni"
   ]
 }
