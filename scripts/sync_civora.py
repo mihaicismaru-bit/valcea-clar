@@ -152,14 +152,47 @@ def _image_extension(*values: str) -> str:
     return ".jpg"
 
 
+def _visual_is_editorial_card(visual: dict) -> bool:
+    fields = [
+        visual.get("editorial_note"),
+        visual.get("alt_text"),
+        visual.get("credit"),
+        visual.get("rights_basis"),
+        visual.get("relative_url"),
+        visual.get("public_url"),
+        visual.get("source_url"),
+        visual.get("filename"),
+        visual.get("asset_type"),
+        visual.get("visual_type"),
+        visual.get("kind"),
+    ]
+    haystack = " ".join(str(value or "").lower() for value in fields)
+    markers = (
+        "card editorial",
+        "editorial card",
+        "editorial_card",
+        "social card",
+        "social_card",
+        "original_editorial_layout",
+        "/social/editorial/",
+        "social/editorial",
+    )
+    return any(marker in haystack for marker in markers)
+
+
 def _normalize_visual(story_id: str, visual) -> dict | None:
     """Return a safe build-time mirror contract for a verified CIVORA visual."""
     if not isinstance(visual, dict):
         return None
     if str(visual.get("provenance_status") or "").upper() != "VERIFIED":
         return None
-    if visual.get("synthetic") is True:
-        return None
+
+    synthetic = visual.get("synthetic") is True
+    depicts_real_scene = visual.get("depicts_real_scene")
+    is_editorial_card = _visual_is_editorial_card(visual)
+    site_eligible = not is_editorial_card
+    if synthetic:
+        site_eligible = site_eligible and depicts_real_scene is False
 
     public_url = str(visual.get("public_url") or "").strip()
     source_url = str(visual.get("source_url") or public_url).strip()
@@ -201,6 +234,10 @@ def _normalize_visual(story_id: str, visual) -> dict | None:
         "image_contextual_archive": bool(visual.get("contextual_archive")),
         "image_captured_at": str(visual.get("captured_at") or ""),
         "image_story_id": story_id,
+        "image_site_eligible": site_eligible,
+        "image_synthetic": synthetic,
+        "image_depicts_real_scene": depicts_real_scene,
+        "image_asset_role": "social_card" if is_editorial_card else "site_visual",
     }
 
 
@@ -234,7 +271,7 @@ def _normalize_story(story: dict, rank: int, feed: dict, old_by_id: dict, local_
         "canonical_path": str(story.get("path") or f"/stiri/{story_id}/"),
     }
 
-    canonical_visual = _normalize_visual(story_id, story.get("visual"))
+    canonical_visual = _normalize_visual(story_id, story.get("site_visual") or story.get("visual"))
     if canonical_visual:
         out.update(canonical_visual)
     else:

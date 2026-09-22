@@ -69,6 +69,50 @@ class SyncCivoraTests(unittest.TestCase):
         self.assertTrue(row["image"].endswith(".jpg"))
         self.assertEqual(row["image_fetch_url"], visual["public_url"])
 
+    def test_social_editorial_card_is_not_site_eligible(self):
+        visual = {
+            "filename": "story-og.jpg",
+            "public_url": "https://valceaclar.ro/media/social/editorial/story-og.jpg",
+            "relative_url": "/media/social/editorial/story-og.jpg",
+            "credit": "VÂLCEA CLAR — card editorial",
+            "rights_basis": "original_editorial_layout",
+            "synthetic": False,
+            "provenance_status": "VERIFIED",
+        }
+        row = _normalize_visual("story-card", visual)
+        self.assertIsNotNone(row)
+        self.assertFalse(row["image_site_eligible"])
+        self.assertEqual(row["image_asset_role"], "social_card")
+
+    def test_verified_ai_illustration_can_be_site_visual_when_not_real_scene(self):
+        visual = {
+            "filename": "story-ai.jpg",
+            "public_url": "https://valceaclar.ro/media/editorial/story-ai.jpg",
+            "relative_url": "/media/editorial/story-ai.jpg",
+            "credit": "VÂLCEA CLAR — ilustrație AI",
+            "rights_basis": "ai_generated_editorial",
+            "synthetic": True,
+            "depicts_real_scene": False,
+            "provenance_status": "VERIFIED",
+        }
+        row = _normalize_visual("story-ai", visual)
+        self.assertIsNotNone(row)
+        self.assertTrue(row["image_site_eligible"])
+        self.assertTrue(row["image_synthetic"])
+        self.assertFalse(row["image_depicts_real_scene"])
+        self.assertEqual(row["image_asset_role"], "site_visual")
+
+    def test_synthetic_visual_without_false_real_scene_flag_is_not_site_eligible(self):
+        visual = {
+            "filename": "story-ai-unsafe.jpg",
+            "public_url": "https://valceaclar.ro/media/editorial/story-ai-unsafe.jpg",
+            "synthetic": True,
+            "provenance_status": "VERIFIED",
+        }
+        row = _normalize_visual("story-ai-unsafe", visual)
+        self.assertIsNotNone(row)
+        self.assertFalse(row["image_site_eligible"])
+
     def test_unverified_visual_does_not_override_registered_local_media(self):
         story = {
             "id": "story-2",
