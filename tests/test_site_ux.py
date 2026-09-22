@@ -141,6 +141,17 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('Mai citește', article)
         self.assertIn('Publicat ', article)
 
+    def test_editorial_2026_visual_theme_contract(self):
+        home = self.read('index.html')
+        css = self.read('assets/site.css')
+        self.assertIn('class="theme-editorial-2026 ', home)
+        self.assertIn('name="theme-color" content="#f5f2ec"', home)
+        self.assertIn('Editorial 2026 visual refresh', css)
+        self.assertIn('--display:"Iowan Old Style"', css)
+        self.assertIn('.theme-editorial-2026 .lead-grid', css)
+        self.assertIn('.theme-editorial-2026 .article-body', css)
+        self.assertIn('@media(max-width:620px)', css)
+
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
             [sys.executable, str(ROOT / 'scripts' / 'verify.py')],

@@ -376,7 +376,7 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
 <html lang="ro">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">\n<meta name="theme-color" content="#f5f2ec">
 <title>{h(title)}</title>
 <meta name="description" content="{h(desc)}">
 {robots}
@@ -387,7 +387,7 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
 <meta property="og:url" content="{h(canonical)}">
 <link rel="stylesheet" href="{u('/assets/site.css')}">
 </head>
-<body class="{h(body_class)}">
+<body class="theme-editorial-2026 {h(body_class)}">
 <a class="skip" href="#main">Sari la conținut</a>
 <header class="site-header">
   <div class="mast">
