@@ -118,11 +118,27 @@ def image_html(article, hero=False):
     )
 
 
+def reading_time(article):
+    text = ' '.join(str(value or '') for value in article.get('paragraphs') or [])
+    words = len(text.split())
+    return max(1, round(words / 220))
+
+
 def story_meta(article, compact=False):
-    label = pretty_date(article.get('published'))
+    published = pretty_date(article.get('published'))
+    updated_raw = article.get('updated') or article.get('updated_at') or article.get('modified')
+    updated = pretty_date(updated_raw) if updated_raw and str(updated_raw) != str(article.get('published')) else ''
+    minutes = reading_time(article)
     if compact:
-        return f'<div class="meta">{h(label)}</div>'
-    return f'<div class="story-meta"><span>Redacția VÂLCEA CLAR</span><span>{h(label)}</span></div>'
+        return f'<div class="meta">{h(published)} · {minutes} min</div>'
+    parts = [
+        '<span>Redacția VÂLCEA CLAR</span>',
+        f'<span>Publicat {h(published)}</span>',
+        f'<span>{minutes} min de citit</span>',
+    ]
+    if updated:
+        parts.append(f'<span>Actualizat {h(updated)}</span>')
+    return '<div class="story-meta">' + ''.join(parts) + '</div>'
 
 
 PRODUCTS = {
@@ -279,6 +295,40 @@ for article in articles:
     if section not in sections:
         sections.append(section)
 
+
+def related_articles(article, limit=3):
+    article_id = str(article.get('id') or '')
+    product = article_product(article)
+    section = str(article.get('section') or '')
+    candidates = [row for row in articles if str(row.get('id') or '') != article_id]
+    candidates.sort(
+        key=lambda row: (
+            1 if article_product(row) == product else 0,
+            1 if str(row.get('section') or '') == section else 0,
+            int(row.get('priority') or 0),
+            str(row.get('published') or ''),
+        ),
+        reverse=True,
+    )
+    return candidates[:limit]
+
+
+def related_block(article):
+    rows = related_articles(article)
+    if not rows:
+        return ''
+    items = ''.join(
+        '<li>'
+        f'<a href="{story_href(row)}"><span>{h(article_product(row))} · {h(row.get("section") or "ȘTIRI")}</span>'
+        f'<strong>{h(row["headline"])}</strong></a>'
+        '</li>'
+        for row in rows
+    )
+    return (
+        '<section class="related-stories"><div class="section-head"><h2>Mai citește</h2></div>'
+        f'<ul>{items}</ul></section>'
+    )
+
 if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir()
@@ -407,6 +457,21 @@ home = (
     + ''.join(mini_story(a) for a in rail_articles)
     + f'<a class="more-link" href="{u("/stiri/")}">Toate știrile →</a></aside>'
     '</section>'
+    '<section class="editorial-products" aria-label="Produse editoriale">'
+    '<div class="section-head"><h2>Cum explicăm Vâlcea</h2><span>Formate diferite pentru nevoi diferite</span></div>'
+    '<div class="product-grid">'
+    + ''.join(
+        (
+            f'<a class="product-tile" href="{u(product_path(product))}">'
+            f'<span>{h(product)}</span>'
+            f'<strong>{h(next(row["headline"] for row in articles if article_product(row) == product))}</strong>'
+            f'<small>{sum(1 for row in articles if article_product(row) == product)} materiale</small>'
+            '</a>'
+        )
+        for product in product_nav_order
+        if product in available_products
+    )
+    + '</div></section>'
     '<section class="service-grid" aria-label="Informație utilă">'
     '<div><b>TRAFIC</b><span>Drumuri, incidente, restricții</span></div>'
     '<div><b>UTILITĂȚI</b><span>Apă, energie, termoficare</span></div>'
@@ -543,6 +608,7 @@ for article in articles:
         f'{article_media_block}'
         f'<div class="article-body">{paragraphs}</div>'
         f'<section class="sources"><h2>Surse și documente</h2><p>Materialul este construit pe surse identificabile. Linkurile de mai jos permit verificarea informațiilor.</p><ul>{sources}</ul></section>'
+        f'{related_block(article)}'
         f'<a class="back" href="{u("/stiri/")}">← Înapoi la flux</a>'
         '</article>'
     )
