@@ -5,7 +5,7 @@ import re,sys,os
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'_site'; errors=[]
 BASE=os.getenv('VALCEA_CLAR_BASE_PATH','').rstrip('/')
 PREVIEW=os.getenv('VALCEA_CLAR_PREVIEW','')=='1'
-forbidden=['ChatGPT Sites','live-bridge.js','route-bridge.js','live-feed.json','sites.google.com','/unde-iesim/','Unde ieșim']
+forbidden=['ChatGPT Sites','live-bridge.js','route-bridge.js','live-feed.json','sites.google.com']
 def local_ref(s):
  if BASE and s==BASE: return '/'
  if BASE and s.startswith(BASE+'/'): return s[len(BASE):]
