@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from urllib.parse import quote
 import html
 import json
@@ -290,6 +291,13 @@ articles = sorted(
 legal = load('legal.json')
 events_payload = load('events.json') if (C / 'events.json').exists() else {'events': []}
 events = events_payload.get('events') or []
+local_life = load('local_life.json') if (C / 'local_life.json').exists() else {}
+sports = local_life.get('sports') or []
+cinema = local_life.get('cinema') or {'venues': [], 'screenings': []}
+restaurants = local_life.get('restaurants') or []
+daily_menus = local_life.get('daily_menus') or []
+fitness = local_life.get('fitness') or []
+LOCAL_TZ = ZoneInfo('Europe/Bucharest')
 css = (C / 'site.css').read_text(encoding='utf-8')
 sections = []
 for article in articles:
@@ -443,38 +451,109 @@ latest_links = ''.join(
     for a in articles[1:4]
 )
 
-def home_event_teaser():
-    upcoming = [
+def local_today():
+    return datetime.now(LOCAL_TZ).date().isoformat()
+
+
+def next_event():
+    rows = [
         event for event in events
         if str(event.get('status') or '').lower() not in {'cancelled', 'past'}
         and parse_dt(event.get('start'))
+        and str(event.get('category') or '').lower() != 'sport'
     ]
-    upcoming.sort(key=lambda event: parse_dt(event.get('start')))
-    if not upcoming:
-        return ''
-    rows = upcoming[:3]
-    cards = []
-    months_short = ['IAN', 'FEB', 'MAR', 'APR', 'MAI', 'IUN', 'IUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
-    for event in rows:
-        start = parse_dt(event.get('start'))
-        story_id = str(event.get('story_id') or '')
-        href = u('/stiri/' + h(story_id) + '/') if story_id else u('/unde-iesim/')
-        time = start.strftime('%H:%M') if start and (start.hour or start.minute) else ''
-        cards.append(
-            '<article class="home-event">'
-            f'<div class="home-event-date"><strong>{start.day}</strong><span>{months_short[start.month-1]}</span></div>'
-            '<div>'
-            f'<div class="event-category">{h(event.get("category") or "Eveniment")}</div>'
-            f'<h3><a href="{href}">{h(event.get("title") or "Eveniment")}</a></h3>'
-            f'<p>{h(time + (" · " if time else "") + str(event.get("venue") or "") + " · " + str(event.get("locality") or "Vâlcea"))}</p>'
-            '</div></article>'
-        )
+    rows.sort(key=lambda event: parse_dt(event.get('start')))
+    return rows[0] if rows else None
+
+
+def next_sport():
+    rows = [
+        item for item in sports
+        if str(item.get('status') or '').lower() == 'scheduled'
+        and parse_dt(item.get('start'))
+    ]
+    rows.sort(key=lambda item: parse_dt(item.get('start')))
+    return rows[0] if rows else None
+
+
+def local_life_tabs(active='events'):
+    tabs = [
+        ('events', '/unde-iesim/', 'Evenimente'),
+        ('sport', '/unde-iesim/sport/', 'Sport'),
+        ('cinema', '/unde-iesim/cinema/', 'Cinema'),
+        ('restaurants', '/unde-iesim/restaurante/', 'Restaurante'),
+        ('daily-menu', '/unde-iesim/meniul-zilei/', 'Meniul zilei'),
+        ('fitness', '/unde-iesim/fitness/', 'Fitness'),
+    ]
     return (
-        '<section class="home-events" aria-label="Unde ieșim">'
-        '<div class="home-events-head"><div><span>Agenda VÂLCEA CLAR</span><h2>Unde ieșim</h2></div>'
-        f'<a href="{u("/unde-iesim/")}">Vezi agenda completă →</a></div>'
-        '<div class="home-events-grid">' + ''.join(cards) + '</div>'
-        '</section>'
+        '<nav class="local-life-tabs" aria-label="Ghid local">'
+        + ''.join(
+            f'<a class="{"is-active" if key == active else ""}" href="{u(path)}">{h(label)}</a>'
+            for key, path, label in tabs
+        )
+        + '</nav>'
+    )
+
+
+def home_local_life():
+    today = local_today()
+    event = next_event()
+    sport = next_sport()
+    today_screenings = [row for row in cinema.get('screenings', []) if str(row.get('date')) == today]
+    today_menus = [row for row in daily_menus if str(row.get('date')) == today and str(row.get('status')) == 'verified']
+
+    tiles = []
+
+    if event:
+        start = parse_dt(event.get('start'))
+        detail = ' · '.join(part for part in [
+            start.strftime('%d %b') if start else '',
+            str(event.get('venue') or ''),
+            str(event.get('locality') or ''),
+        ] if part)
+        tiles.append(('EVENIMENTE', str(event.get('title') or 'Agenda locală'), detail, '/unde-iesim/'))
+
+    if sport:
+        start = parse_dt(sport.get('start'))
+        title = f'{sport.get("home")} – {sport.get("away")}'
+        detail = ' · '.join(part for part in [
+            str(sport.get('sport') or ''),
+            start.strftime('%d %b · %H:%M') if start else '',
+            str(sport.get('competition') or ''),
+        ] if part)
+        tiles.append(('SPORT', title, detail, '/unde-iesim/sport/'))
+
+    if today_screenings:
+        first = today_screenings[0]
+        more = len(today_screenings) - 1
+        title = str(first.get('film') or 'Program cinema')
+        detail = f'{", ".join(first.get("times") or [])}' + (f' · +{more} filme' if more > 0 else '')
+        tiles.append(('CINEMA AZI', title, detail, '/unde-iesim/cinema/'))
+    else:
+        tiles.append(('CINEMA', 'Programul cinematografelor', 'Filme și ore verificate', '/unde-iesim/cinema/'))
+
+    if today_menus:
+        first = today_menus[0]
+        title = f'{first.get("restaurant")} · {first.get("price")}'
+        detail = str(first.get('summary') or 'Meniu verificat azi')
+        tiles.append(('MENIUL ZILEI', title, detail, '/unde-iesim/meniul-zilei/'))
+    else:
+        tiles.append(('MENIUL ZILEI', 'Ce mâncăm azi?', 'Afișăm numai meniuri verificate în aceeași zi', '/unde-iesim/meniul-zilei/'))
+
+    tiles.append(('RESTAURANTE', f'{len(restaurants)} locuri monitorizate', 'Ghid editorial, fără clasamente automate', '/unde-iesim/restaurante/'))
+    tiles.append(('FITNESS', f'{len(fitness)} săli monitorizate', 'Program, activități și clase când sunt verificate', '/unde-iesim/fitness/'))
+
+    return (
+        '<section class="home-local-life home-events" aria-label="Vâlcea, în oraș">'
+        '<div class="home-local-life-head"><div><span>Agenda VÂLCEA CLAR</span><h2>Vâlcea, în oraș</h2></div>'
+        f'<a href="{u("/unde-iesim/")}">Vezi ghidul complet →</a></div>'
+        '<div class="home-local-life-grid">'
+        + ''.join(
+            '<a class="home-life-tile" href="' + u(path) + '">'
+            f'<span>{h(label)}</span><strong>{h(title)}</strong><small>{h(detail)}</small></a>'
+            for label, title, detail, path in tiles
+        )
+        + '</div></section>'
     )
 
 
@@ -512,7 +591,7 @@ home = (
         if product in available_products
     )
     + '</div></section>'
-    + home_event_teaser()
+    + home_local_life()
     + '<section class="service-grid" aria-label="Informație utilă">'
     '<div><b>TRAFIC</b><span>Drumuri, incidente, restricții</span></div>'
     '<div><b>UTILITĂȚI</b><span>Apă, energie, termoficare</span></div>'
@@ -687,7 +766,7 @@ def event_discovery_page():
         '<div class="event-hero"><div class="eyebrow">Ghid local · VÂLCEA CLAR</div>'
         '<h1>UNDE IEȘIM</h1>'
         '<p>Concerte, spectacole, festivaluri și lucruri de făcut în Vâlcea — ordonate după dată și verificate editorial.</p></div>'
-        + date_chips + category_chips + empty_note +
+        + local_life_tabs('events') + date_chips + category_chips + empty_note +
         '<section class="event-agenda" id="agenda"><div class="event-agenda-title"><h2>Agenda verificată</h2>'
         f'<span>{len(upcoming)} evenimente disponibile acum</span></div>'
         + ''.join(groups) +
@@ -695,6 +774,130 @@ def event_discovery_page():
         '<aside class="event-tip"><strong>Știi un eveniment care lipsește?</strong>'
         '<span>Trimite-ne organizatorul, data și o sursă publică la redactie@valceaclar.ro.</span></aside>'
         '</div>'
+    )
+
+
+
+def sports_page():
+    rows = [item for item in sports if parse_dt(item.get('start')) and str(item.get('status') or '') != 'past']
+    rows.sort(key=lambda item: parse_dt(item.get('start')))
+    cards = []
+    for item in rows:
+        start = parse_dt(item.get('start'))
+        cards.append(
+            '<article class="sport-match">'
+            f'<div class="sport-date"><strong>{start.day}</strong><span>{start.strftime("%b").upper()}</span><small>{start.strftime("%H:%M")}</small></div>'
+            '<div class="sport-match-copy">'
+            f'<div class="utility-eyebrow">{h(item.get("sport") or "Sport")} · {h(item.get("competition") or "")}</div>'
+            f'<h2>{h(item.get("home") or "")} <span>–</span> {h(item.get("away") or "")}</h2>'
+            f'<p>{h(item.get("venue") or item.get("locality") or "Locație de verificat")}</p>'
+            f'<small>Verificat: {h(pretty_date(item.get("checked_at")))}</small>'
+            '</div></article>'
+        )
+    body = (
+        '<div class="utility-page"><div class="event-hero"><div class="eyebrow">Program local</div><h1>SPORT</h1>'
+        '<p>Meciurile și competițiile cu interes local ridicat, separate de agenda culturală.</p></div>'
+        + local_life_tabs('sport')
+        + '<div class="utility-section-head"><h2>Următoarele meciuri importante</h2><span>Program, nu clasament editorial</span></div>'
+        + ''.join(cards) + '</div>'
+    )
+    return body
+
+
+def cinema_page():
+    venues = {str(v.get('id')): v for v in cinema.get('venues', [])}
+    screenings = list(cinema.get('screenings', []))
+    screenings.sort(key=lambda row: (str(row.get('date') or ''), str(row.get('film') or '')))
+    dates = []
+    for row in screenings:
+        d = str(row.get('date') or '')
+        if d and d not in dates:
+            dates.append(d)
+    groups = []
+    for date_value in dates:
+        day_rows = [row for row in screenings if str(row.get('date')) == date_value]
+        parsed = datetime.fromisoformat(date_value)
+        title = parsed.strftime('%d.%m.%Y')
+        items = []
+        for row in day_rows:
+            venue = venues.get(str(row.get('venue_id'))) or {}
+            items.append(
+                '<article class="cinema-row">'
+                '<div><div class="utility-eyebrow">FILM</div>'
+                f'<h3>{h(row.get("film") or "Film")}</h3>'
+                f'<p>{h(venue.get("name") or "")} · {h(row.get("format") or "")} {h(row.get("language") or "")}</p></div>'
+                f'<div class="showtimes">{"".join(f"<span>{h(t)}</span>" for t in (row.get("times") or []))}</div>'
+                '</article>'
+            )
+        groups.append(f'<section class="cinema-day"><h2>{h(title)}</h2>{"".join(items)}</section>')
+    return (
+        '<div class="utility-page"><div class="event-hero"><div class="eyebrow">Program verificat</div><h1>CINEMA</h1>'
+        '<p>Filmele sunt grupate pe zi și cinematograf; orele expirate ies din program la refresh.</p></div>'
+        + local_life_tabs('cinema') + ''.join(groups) + '</div>'
+    )
+
+
+def restaurants_page():
+    cards = ''.join(
+        '<article class="place-card">'
+        f'<div class="utility-eyebrow">{h(row.get("locality") or "Vâlcea")}</div>'
+        f'<h2>{h(row.get("name") or "Restaurant")}</h2>'
+        f'<p>{h(row.get("address") or "Adresă în curs de verificare")}</p>'
+        f'<div class="place-tags">{"".join(f"<span>{h(tag)}</span>" for tag in (row.get("tags") or []))}</div>'
+        f'<small>Verificat: {h(pretty_date(row.get("checked_at")))}</small>'
+        f'<a href="{h(row.get("source_url") or "#")}" rel="nofollow noopener">Sursa →</a>'
+        '</article>'
+        for row in restaurants
+    )
+    return (
+        '<div class="utility-page"><div class="event-hero"><div class="eyebrow">Ghid editorial</div><h1>RESTAURANTE</h1>'
+        '<p>Un ghid practic al locurilor pe care le monitorizăm. Nu transformăm ratingurile platformelor în clasament VÂLCEA CLAR.</p></div>'
+        + local_life_tabs('restaurants') + '<div class="place-grid">' + cards + '</div></div>'
+    )
+
+
+def daily_menu_page():
+    today = local_today()
+    rows = [row for row in daily_menus if str(row.get('date')) == today and str(row.get('status')) == 'verified']
+    if not rows:
+        content = '<div class="empty-state"><strong>Nu avem încă meniuri verificate pentru azi.</strong><p>Pagina se actualizează dimineața și la prânz, numai din surse curente.</p></div>'
+    else:
+        content = ''.join(
+            '<article class="daily-menu-card">'
+            f'<div><div class="utility-eyebrow">VERIFICAT AZI</div><h2>{h(row.get("restaurant") or "")}</h2>'
+            f'<p>{h(row.get("summary") or "")}</p></div>'
+            '<div class="daily-menu-meta">'
+            f'<strong>{h(row.get("price") or "Preț de verificat")}</strong>'
+            f'<span>{h(row.get("service_window") or "Interval de verificat")}</span>'
+            f'<small>{h(pretty_date(row.get("checked_at")))}</small>'
+            + (f'<a href="{h(row.get("order_url"))}" rel="nofollow noopener">Comandă / vezi sursa →</a>' if row.get('order_url') else '')
+            + '</div></article>'
+            for row in rows
+        )
+    return (
+        '<div class="utility-page"><div class="event-hero"><div class="eyebrow">Actualizare zilnică</div><h1>MENIUL ZILEI</h1>'
+        '<p>Prânzul de azi: preț, compoziție și interval, afișate numai când au fost verificate în aceeași zi.</p></div>'
+        + local_life_tabs('daily-menu') + content + '</div>'
+    )
+
+
+def fitness_page():
+    cards = ''.join(
+        '<article class="place-card">'
+        f'<div class="utility-eyebrow">{h(row.get("locality") or "Vâlcea")}</div>'
+        f'<h2>{h(row.get("name") or "Sală")}</h2>'
+        f'<p>{h(row.get("address") or "")}</p>'
+        f'<div class="place-tags">{"".join(f"<span>{h(tag)}</span>" for tag in (row.get("activities") or []))}</div>'
+        + (f'<p class="hours">{h(row.get("hours"))}</p>' if row.get('hours') else '')
+        + f'<small>Verificat: {h(pretty_date(row.get("checked_at")))}</small>'
+        + f'<a href="{h(row.get("source_url") or "#")}" rel="nofollow noopener">Detalii →</a>'
+        + '</article>'
+        for row in fitness
+    )
+    return (
+        '<div class="utility-page"><div class="event-hero"><div class="eyebrow">Mișcare în Vâlcea</div><h1>FITNESS</h1>'
+        '<p>Săli, program și tipuri de activități. Clasele dinamice apar numai când există sursă actualizabilă.</p></div>'
+        + local_life_tabs('fitness') + '<div class="place-grid">' + cards + '</div></div>'
     )
 
 
@@ -719,6 +922,16 @@ if events and not any(path == '/unde-iesim/' for path, _ in product_routes):
         shell('UNDE IEȘIM — VÂLCEA CLAR', event_discovery_page(), PRODUCT_DESCRIPTIONS['UNDE IEȘIM'], event_path, 'event-discovery-page'),
     )
     product_routes.append((event_path, []))
+
+local_life_routes = [
+    ('/unde-iesim/sport/', 'SPORT — VÂLCEA CLAR', sports_page(), 'Programul meciurilor importante pentru publicul din Vâlcea.'),
+    ('/unde-iesim/cinema/', 'CINEMA — VÂLCEA CLAR', cinema_page(), 'Program cinema verificat pentru Râmnicu Vâlcea.'),
+    ('/unde-iesim/restaurante/', 'RESTAURANTE — VÂLCEA CLAR', restaurants_page(), 'Ghid editorial de restaurante din Vâlcea.'),
+    ('/unde-iesim/meniul-zilei/', 'MENIUL ZILEI — VÂLCEA CLAR', daily_menu_page(), 'Meniurile zilei verificate în aceeași zi.'),
+    ('/unde-iesim/fitness/', 'FITNESS — VÂLCEA CLAR', fitness_page(), 'Săli și activități fitness din Vâlcea.'),
+]
+for route, title, body, desc in local_life_routes:
+    write_route(route, shell(title, body, desc, route, 'local-life-page'))
 
 section_routes = []
 for section in sections:
@@ -815,6 +1028,8 @@ for path, page_articles in product_routes + section_routes:
     page_dates = [value for value in page_dates if value]
     page_lastmod = max(page_dates).isoformat(timespec='seconds') if page_dates else ''
     sitemap_entries.append((path, page_lastmod))
+for route, _, _, _ in local_life_routes:
+    sitemap_entries.append((route, latest_value))
 for article in articles:
     sitemap_entries.append((f'/stiri/{article["id"]}/', sitemap_lastmod(article.get('published'))))
 
