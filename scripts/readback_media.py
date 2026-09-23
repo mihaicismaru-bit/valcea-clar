@@ -6,6 +6,11 @@ visuals already projected from CIVORA with `image_provenance_status=VERIFIED`, t
 requires the public article to reference the expected local mirror, the mirror to
 return an image, and public media provenance to map that mirror back to the exact
 canonical CIVORA visual origin.
+
+A publication set with zero eligible verified visuals is valid: the VÂLCEA CLAR
+site contract explicitly allows text-only publication rather than inventing or
+misrepresenting imagery. In that state this probe reports PASS/NO_VERIFIED_MEDIA
+instead of blocking an otherwise verified deployment.
 """
 from __future__ import annotations
 
@@ -50,7 +55,8 @@ def main() -> int:
         if row.get("image_provenance_status") == "VERIFIED" and row.get("image")
     ]
     if not expected:
-        raise SystemExit("LIVE MEDIA READBACK FAIL: no verified canonical visuals in public projection")
+        print("LIVE MEDIA READBACK PASS: NO_VERIFIED_MEDIA; canonical public set is text-only")
+        return 0
 
     nonce = int(time.time())
     provenance_bytes, provenance_type = _get(

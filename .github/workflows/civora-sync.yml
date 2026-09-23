@@ -13,6 +13,7 @@ on:
       - 'sync/run-now'
       - 'scripts/check_civora_projection_ready.py'
       - 'scripts/sync_civora.py'
+      - 'scripts/reconcile_civora_currentness_events.py'
       - 'scripts/build.py'
       - 'scripts/history_projection.py'
       - 'scripts/enrich_metadata.py'
@@ -53,12 +54,17 @@ jobs:
       - name: Sync canonical CIVORA feed
         run: python3 scripts/sync_civora.py
 
+      - name: Reconcile current stories and structured Local Life
+        run: |
+          python3 scripts/reconcile_civora_currentness_events.py --self-test
+          python3 scripts/reconcile_civora_currentness_events.py
+
       - id: state
         name: Determine whether public deployment is needed
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- content/articles.json; then
+          if git diff --quiet -- content/articles.json content/events.json sync/civora_state.json; then
             changed=false
           else
             changed=true
@@ -114,7 +120,7 @@ jobs:
           fi
 
           structural=false
-          if [ "${{ github.event_name }}" = push ] && [ "${{ github.event.head_commit.message }}" != 'sync: reconcile CIVORA canonical stories' ]; then
+          if [ "${{ github.event_name }}" = push ] && [ "${{ github.event.head_commit.message }}" != 'sync: reconcile CIVORA canonical projection' ]; then
             structural=true
           fi
           deploy=false
@@ -228,6 +234,40 @@ jobs:
           fi
           echo 'Public story-set readback PASS.'
 
+      - name: Public readback of structured Local Life
+        if: steps.state.outputs.deploy == 'true'
+        run: |
+          python3 - <<'PY'
+          import html
+          import json
+          import time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          doc=json.loads(Path('content/events.json').read_text(encoding='utf-8'))
+          canonical_ids=set(str(v) for v in doc.get('canonical_event_ids') or [])
+          rows=[row for row in doc.get('events') or [] if str(row.get('id') or '') in canonical_ids]
+          if not rows:
+              print('LOCAL LIFE READBACK PASS: no currently eligible canonical events')
+              raise SystemExit(0)
+          expected=[str(row.get('title') or '').strip() for row in rows if str(row.get('title') or '').strip()]
+          last=''
+          for attempt in range(15):
+              req=Request(f"https://valceaclar.ro/unde-iesim/?readback={int(time.time())}", headers={'User-Agent':'valcea-clar-local-life-readback/1.0','Cache-Control':'no-cache'})
+              try:
+                  with urlopen(req, timeout=25) as response:
+                      last=html.unescape(response.read().decode('utf-8','replace'))
+                  missing=[title for title in expected if title not in last]
+                  if not missing:
+                      print({'status':'PASS','canonical_event_count':len(expected),'titles':expected})
+                      raise SystemExit(0)
+              except Exception as exc:
+                  last=f'{type(exc).__name__}: {exc}'
+              time.sleep(8)
+          missing=[title for title in expected if title not in last]
+          raise SystemExit('LOCAL LIFE READBACK FAIL missing=' + json.dumps(missing, ensure_ascii=False))
+          PY
+
       - name: Public readback of historical archive
         if: steps.state.outputs.deploy == 'true'
         shell: bash
@@ -263,12 +303,12 @@ jobs:
           set -euo pipefail
           git config user.name 'valcea-clar-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add content/articles.json sync/civora_state.json
+          git add content/articles.json content/events.json sync/civora_state.json
           if git diff --cached --quiet; then
             echo 'Canonical projection unchanged.'
             exit 0
           fi
-          git commit -m 'sync: reconcile CIVORA canonical stories'
+          git commit -m 'sync: reconcile CIVORA canonical projection'
           git restore --worktree .
           git clean -fd -- _site
           git pull --rebase origin main
