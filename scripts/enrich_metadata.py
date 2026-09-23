@@ -16,6 +16,33 @@ PREVIEW = os.getenv("VALCEA_CLAR_PREVIEW", "") == "1"
 START = "<!-- VC_METADATA_START -->"
 END = "<!-- VC_METADATA_END -->"
 
+# Product URLs are durable navigation/indexing surfaces, not a reflection of
+# whether the current live story set happens to contain that format. Keeping
+# these routes stable prevents a sparse news cycle from breaking navigation or
+# making Google see canonical product pages disappear and reappear.
+DURABLE_PRODUCT_ROUTES = {
+    "valcea-azi": ("VÂLCEA AZI", "Știrile curente și evoluțiile importante din județ."),
+    "pe-scurt": ("PE SCURT", "Informația esențială, verificată și pusă rapid în context."),
+    "clarificam": ("CLARIFICĂM", "Explicații despre mecanisme, cifre și documente, cu limitele verificării la vedere."),
+    "verificat": ("VERIFICAT", "Afirmații și cifre confruntate cu sursele disponibile."),
+    "ce-urmeaza": ("CE URMEAZĂ", "Termene, următorii pași și întrebările care rămân deschise."),
+    "dosar": ("DOSAR", "Context extins, cronologie, documente, bani și actori relevanți."),
+    "profil-oameni": ("PROFIL/OAMENI", "Profiluri locale construite din fapte și context verificat."),
+    "ancheta": ("ANCHETĂ", "Investigații documentate, cu standard de probă și drept la replică."),
+    "weekend-clar": ("WEEKEND CLAR", "Selecție verificată pentru timpul liber în Vâlcea."),
+    "pamflet-satira": ("PAMFLET/SATIRĂ", "Satiră etichetată clar, pornind de la un nucleu factual verificat."),
+}
+DURABLE_NAV_ORDER = (
+    ("/valcea-azi/", "VÂLCEA AZI"),
+    ("/pe-scurt/", "PE SCURT"),
+    ("/clarificam/", "CLARIFICĂM"),
+    ("/verificat/", "VERIFICAT"),
+    ("/ce-urmeaza/", "CE URMEAZĂ"),
+    ("/dosar/", "DOSAR"),
+    ("/profil-oameni/", "PROFIL/OAMENI"),
+    ("/ancheta/", "ANCHETĂ"),
+)
+
 
 def esc(value: str) -> str:
     return html.escape(str(value), quote=True)
@@ -125,6 +152,72 @@ def enrich_article(path: Path, article: dict) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def _empty_product_page(slug: str, title: str, description: str) -> str:
+    canonical = f"{SITE}/{slug}/"
+    nav = ''.join(f'<a href="{esc(path)}">{esc(label)}</a>' for path, label in DURABLE_NAV_ORDER)
+    return f'''<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(title)} — VÂLCEA CLAR</title><meta name="description" content="{esc(description)}">
+<link rel="canonical" href="{esc(canonical)}"><link rel="stylesheet" href="/assets/site.css">
+<meta name="robots" content="max-image-preview:large"></head>
+<body class="theme-editorial-2026"><a class="skip" href="#main">Sari la conținut</a>
+<header class="site-header"><div class="mast"><div class="mast-meta">Vâlcea · publicație locală</div><a class="brand" href="/">VÂLCEA CLAR</a><div class="tag">Ce se întâmplă. Ce știm. Ce contează.</div></div>
+<nav class="nav nav-primary" aria-label="Navigație principală"><a href="/">Acasă</a><a href="/stiri/">Ultimele</a>{nav}<a class="nav-event-link" href="/unde-iesim/">UNDE IEȘIM</a><a href="/despre/">Despre</a></nav></header>
+<main id="main"><div class="page-head"><div class="eyebrow">Format editorial</div><h1 class="page-title">{esc(title)}</h1><p class="page-dek">{esc(description)}</p></div>
+<div class="empty-state"><strong>Niciun material activ în acest format.</strong><p>Ruta rămâne stabilă și indexabilă; publicăm aici numai când există un material care trece standardele editoriale.</p></div></main>
+<footer><strong>VÂLCEA CLAR</strong> · redactie@valceaclar.ro</footer></body></html>'''
+
+
+def ensure_durable_product_routes() -> int:
+    """Keep product navigation/routes stable without manufacturing filler stories."""
+    created = 0
+    for slug, (title, description) in DURABLE_PRODUCT_ROUTES.items():
+        route = OUT / slug / "index.html"
+        if not route.is_file():
+            route.parent.mkdir(parents=True, exist_ok=True)
+            route.write_text(_empty_product_page(slug, title, description), encoding="utf-8")
+            created += 1
+
+    # Navigation must point only to real routes. Insert any missing durable
+    # product link immediately before UNDE IEȘIM on every generated page.
+    event_anchor = '<a class="nav-event-link" href="/unde-iesim/">UNDE IEȘIM</a>'
+    durable_links = ''.join(
+        f'<a href="{esc(path)}">{esc(label)}</a>'
+        for path, label in DURABLE_NAV_ORDER
+    )
+    for page in OUT.rglob("*.html"):
+        text = page.read_text(encoding="utf-8")
+        if event_anchor not in text:
+            continue
+        # Rebuild only the product segment when any durable product is absent;
+        # preserve topic navigation and the rest of the document verbatim.
+        missing = [path for path, _ in DURABLE_NAV_ORDER if f'href="{path}"' not in text]
+        if missing:
+            existing_pattern = re.compile(
+                r'(?:(?:<a href="/(?:valcea-azi|pe-scurt|clarificam|verificat|ce-urmeaza|dosar|profil-oameni|ancheta)/">.*?</a>))*'
+                + re.escape(event_anchor)
+            )
+            replacement = durable_links + event_anchor
+            new_text, count = existing_pattern.subn(replacement, text, count=1)
+            if count:
+                page.write_text(new_text, encoding="utf-8")
+
+    sitemap = OUT / "sitemap.xml"
+    if sitemap.is_file():
+        xml = sitemap.read_text(encoding="utf-8")
+        additions = []
+        for slug in DURABLE_PRODUCT_ROUTES:
+            loc = f"{SITE}/{slug}/"
+            if f"<loc>{loc}</loc>" not in xml:
+                additions.append(f"<url><loc>{loc}</loc></url>")
+        if additions:
+            if "</urlset>" not in xml:
+                raise SystemExit("Metadata enrichment refused: malformed sitemap.xml")
+            xml = xml.replace("</urlset>", "".join(additions) + "</urlset>", 1)
+            sitemap.write_text(xml, encoding="utf-8")
+    return created
+
+
 def main() -> int:
     if not OUT.is_dir():
         raise SystemExit("Metadata enrichment refused: _site is missing; run build.py first")
@@ -141,9 +234,10 @@ def main() -> int:
             image_enriched += 1
         enrich_article(page, article)
         enriched += 1
+    created_routes = ensure_durable_product_routes()
     print(
         f"METADATA PASS: homepage + {enriched} NewsArticle pages enriched; "
-        f"image_pages={image_enriched}; preview={PREVIEW}."
+        f"image_pages={image_enriched}; durable_product_routes_created={created_routes}; preview={PREVIEW}."
     )
     return 0
 
