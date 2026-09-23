@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-09-23T18:07:30.593835Z",
+  "source_generated_at": "2026-09-23T21:25:00.297320Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
-  "story_count": 105,
+  "story_count": 75,
   "current_story_count": 14,
-  "archive_story_count": 91,
-  "verified_visual_count": 0,
+  "archive_story_count": 61,
+  "verified_visual_count": 1,
   "lead_story_id": "brezoi-acces-ingrijire-domiciliu-selectie-20260923",
-  "lead_published_at": "2026-09-23T12:12:02+03:00",
-  "articles_sha256": "bace4508f43f6333616810e537d4636e3ffa25944106b7b5b6d235a852a0b8d5",
-  "synced_at": "2026-09-23T18:07:30.593835Z",
+  "lead_published_at": "2026-09-24T00:24:53+03:00",
+  "articles_sha256": "c49fa1fd6d094126d669ce9a5721e99948b55c17b541ce38cf0acb395c099208",
+  "synced_at": "2026-09-23T21:25:00.297320Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -23,5 +23,5 @@
   },
   "currentness_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
-  "local_life_event_count": 6
+  "local_life_event_count": 8
 }

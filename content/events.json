@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-23T21:38:23+03:00",
+  "updated_at": "2026-09-24T00:47:33+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
     {
@@ -234,6 +234,38 @@
       "status": "scheduled"
     },
     {
+      "id": "filarmonica-paralele-corale-20260925",
+      "event_id": "filarmonica-paralele-corale-20260925",
+      "fingerprint": "8a3bda51a30ee5075cd0",
+      "story_id": null,
+      "title": "Paralele Corale",
+      "category": "Concert Coral",
+      "start": "2026-09-25T19:00:00+03:00",
+      "event_start": "2026-09-25",
+      "event_end": "2026-09-25",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Lahovari",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "gratuit",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Centrul Cultural Municipal Râmnicu Vâlcea / Filarmonica Ion Dumitrescu",
+      "source_url": "https://filarmonica-valcea.ro/eveniment/paralele-corale/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://filarmonica-valcea.ro/eveniment/paralele-corale/",
+          "tier": "T1",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-24T00:31:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
       "id": "retro-party-aby-2026-09-25",
       "story_id": null,
       "title": "Retro Party",
@@ -300,6 +332,38 @@
       ],
       "checked_at": "2026-09-23T13:08:00+03:00",
       "status": "scheduled"
+    },
+    {
+      "id": "filarmonica-floarea-darului-20260926",
+      "event_id": "filarmonica-floarea-darului-20260926",
+      "fingerprint": "2b4c13f9fa26fbd1e563",
+      "story_id": null,
+      "title": "Floarea Darului",
+      "category": "Concert Coral / Muzică Veche",
+      "start": "2026-09-26T19:00:00+03:00",
+      "event_start": "2026-09-26",
+      "event_end": "2026-09-26",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Lahovari",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "gratuit",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Centrul Cultural Municipal Râmnicu Vâlcea / Filarmonica Ion Dumitrescu / Arhiepiscopia Râmnicului",
+      "source_url": "https://filarmonica-valcea.ro/eveniment/floarea-darului/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://filarmonica-valcea.ro/eveniment/floarea-darului/",
+          "tier": "T1",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-24T00:31:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
       "id": "alex-stefanescu-ia-ti-o-viata-2026-09-26",
@@ -541,6 +605,8 @@
     "uap-fragmente-de-sine-20260924",
     "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
     "uap-startisti-valceni-20260925",
+    "filarmonica-paralele-corale-20260925",
+    "filarmonica-floarea-darului-20260926",
     "ariel-cantecul-de-lebada-20261002",
     "ariel-cele-trei-gratii-20261009",
     "ariel-talk-show-20261016"
