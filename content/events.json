@@ -1,37 +1,39 @@
 {
-  "schema_version": "1.1",
-  "updated_at": "2026-09-23T13:08:00+03:00",
+  "schema_version": "1.2",
+  "updated_at": "2026-09-23T19:19:36+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
     {
-      "id": "raliul-valcii-2026",
-      "story_id": "auto-raliul-valcii-official-news-f6e28bbb1533",
-      "title": "Raliul Vâlcii 2026",
-      "category": "Sport",
-      "start": "2026-09-24T00:00:00+03:00",
-      "end": "2026-09-26T23:59:59+03:00",
+      "id": "uap-fragmente-de-sine-20260924",
+      "event_id": "uap-fragmente-de-sine-20260924",
+      "fingerprint": "ff072701cbd7bbf10b34",
+      "story_id": null,
+      "title": "Fragmente de sine",
+      "category": "Expoziție",
+      "start": "2026-09-24T16:00:00+03:00",
       "event_start": "2026-09-24",
-      "event_end": "2026-09-26",
-      "start_time": null,
+      "event_end": "2026-09-24",
+      "start_time": "16:00",
       "doors_time": null,
-      "venue": "Mai multe trasee și Centrul Civic",
-      "locality": "Județul Vâlcea",
+      "venue": "Muzeul de Artă Casa Simian",
+      "locality": "Râmnicu Vâlcea",
       "price_status": "unknown",
       "price": null,
       "ticket_url": null,
       "reservation_url": null,
-      "organiser": "Raliul Vâlcii",
-      "source_url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+      "organiser": "Muzeul Județean Aurelian Sacerdoțeanu Vâlcea / UAP Râmnicu Vâlcea",
+      "source_url": "https://uap.ro/fragmente-de-sine-valcea/",
       "source_tier": "T1",
       "sources": [
         {
-          "url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+          "url": "https://uap.ro/fragmente-de-sine-valcea/",
           "tier": "T1",
-          "role": "organiser_program"
+          "role": "canonical_event_source"
         }
       ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled"
+      "checked_at": "2026-09-23T17:00:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
       "id": "liber-volatilium-2026-09-24",
@@ -67,6 +69,100 @@
       ],
       "checked_at": "2026-09-23T13:08:00+03:00",
       "status": "scheduled"
+    },
+    {
+      "id": "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
+      "event_id": "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
+      "fingerprint": "ff0b2d524d889fda7d5d",
+      "story_id": null,
+      "title": "O noapte furtunoasă",
+      "category": "Teatru",
+      "start": "2026-09-24T19:00:00+03:00",
+      "event_start": "2026-09-24",
+      "event_end": "2026-09-24",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Casa de Cultură Drăgășani",
+      "locality": "Drăgășani",
+      "price_status": "paid",
+      "price": "Categoria 1: 100 lei; Categoria 2: 80 lei",
+      "ticket_url": "https://ticketstore.ro/ro/bilete/12379/o-noapte-furtunoasa-dragasani",
+      "reservation_url": null,
+      "organiser": "Compania de Teatru Concordia",
+      "source_url": "https://ticketstore.ro/ro/bilete/12379/o-noapte-furtunoasa-dragasani",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://ticketstore.ro/ro/bilete/12379/o-noapte-furtunoasa-dragasani",
+          "tier": "T2",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-23T17:00:00+03:00",
+      "status": "sold_out",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
+      "id": "raliul-valcii-2026",
+      "story_id": "auto-raliul-valcii-official-news-f6e28bbb1533",
+      "title": "Raliul Vâlcii 2026",
+      "category": "Sport",
+      "start": "2026-09-24T00:00:00+03:00",
+      "end": "2026-09-26T23:59:59+03:00",
+      "event_start": "2026-09-24",
+      "event_end": "2026-09-26",
+      "start_time": null,
+      "doors_time": null,
+      "venue": "Mai multe trasee și Centrul Civic",
+      "locality": "Județul Vâlcea",
+      "price_status": "unknown",
+      "price": null,
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Raliul Vâlcii",
+      "source_url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+          "tier": "T1",
+          "role": "organiser_program"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "uap-startisti-valceni-20260925",
+      "event_id": "uap-startisti-valceni-20260925",
+      "fingerprint": "789bdcac46b818089979",
+      "story_id": null,
+      "title": "stARTiști vâlceni",
+      "category": "Expoziție",
+      "start": "2026-09-25T18:00:00+03:00",
+      "event_start": "2026-09-25",
+      "event_end": "2026-09-25",
+      "start_time": "18:00",
+      "doors_time": null,
+      "venue": "River Plaza Mall, Galeria Etaj 1",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "unknown",
+      "price": null,
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "UAP Râmnicu Vâlcea / River Plaza Mall",
+      "source_url": "https://uap.ro/startisti-valceni-ramnicu-valcea/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://uap.ro/startisti-valceni-ramnicu-valcea/",
+          "tier": "T1",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-23T17:00:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
       "id": "liber-volatilium-2026-09-25",
@@ -206,6 +302,40 @@
       "status": "scheduled"
     },
     {
+      "id": "alex-stefanescu-ia-ti-o-viata-2026-09-26",
+      "story_id": null,
+      "title": "Alex Ștefănescu — „Ia-ți o viață!”",
+      "category": "Concert / one-man show",
+      "start": "2026-09-26T20:00:00+03:00",
+      "event_start": "2026-09-26",
+      "event_end": "2026-09-26",
+      "start_time": "20:00",
+      "doors_time": null,
+      "venue": "Aby Stage Bar",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "de la 53,03 lei pe iaBilet la verificare",
+      "ticket_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+      "reservation_url": null,
+      "organiser": "Aby Stage Bar",
+      "source_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "ticketing_listing"
+        },
+        {
+          "url": "https://valceaexpres.ro/local/concertul-alex-stefanescu-ia-ti-o-viata-are-loc-pe-26-septembrie-la-ramnicu-valcea-i1nf",
+          "tier": "T2",
+          "role": "local_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
       "id": "race-the-vibe-2026",
       "story_id": null,
       "title": "Race The Vibe 2026",
@@ -240,40 +370,6 @@
       "checked_at": "2026-09-23T13:08:00+03:00",
       "status": "scheduled",
       "editorial_note": "Evenimentul 26–27 septembrie 2026 este verificat. Orele și restricțiile rutiere rămân excluse din inventar până la confirmare primară, deoarece relatarea locală din 23 septembrie conține o contradicție de an."
-    },
-    {
-      "id": "alex-stefanescu-ia-ti-o-viata-2026-09-26",
-      "story_id": null,
-      "title": "Alex Ștefănescu — „Ia-ți o viață!”",
-      "category": "Concert / one-man show",
-      "start": "2026-09-26T20:00:00+03:00",
-      "event_start": "2026-09-26",
-      "event_end": "2026-09-26",
-      "start_time": "20:00",
-      "doors_time": null,
-      "venue": "Aby Stage Bar",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "paid",
-      "price": "de la 53,03 lei pe iaBilet la verificare",
-      "ticket_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
-      "reservation_url": null,
-      "organiser": "Aby Stage Bar",
-      "source_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
-      "source_tier": "T2",
-      "sources": [
-        {
-          "url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
-          "tier": "T2",
-          "role": "ticketing_listing"
-        },
-        {
-          "url": "https://valceaexpres.ro/local/concertul-alex-stefanescu-ia-ti-o-viata-are-loc-pe-26-septembrie-la-ramnicu-valcea-i1nf",
-          "tier": "T2",
-          "role": "local_corroboration"
-        }
-      ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled"
     },
     {
       "id": "violoncellissimo-2026-09-28",
@@ -342,6 +438,117 @@
       ],
       "checked_at": "2026-09-23T13:08:00+03:00",
       "status": "scheduled"
+    },
+    {
+      "id": "ariel-cantecul-de-lebada-20261002",
+      "event_id": "ariel-cantecul-de-lebada-20261002",
+      "fingerprint": "74d94719ce18b9acb20b",
+      "story_id": null,
+      "title": "Cântecul de lebădă (premieră)",
+      "category": "Teatru",
+      "start": "2026-10-02T19:00:00+03:00",
+      "event_start": "2026-10-02",
+      "event_end": "2026-10-02",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Cinema Geo Saizescu",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "50 lei",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Teatrul Municipal Ariel",
+      "source_url": "https://www.arieltheatre.ro/teatru/program",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://www.arieltheatre.ro/teatru/program",
+          "tier": "T1",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-23T17:00:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
+      "id": "ariel-cele-trei-gratii-20261009",
+      "event_id": "ariel-cele-trei-gratii-20261009",
+      "fingerprint": "b5cad65bcb3998a3d62e",
+      "story_id": null,
+      "title": "Cele trei Grații",
+      "category": "Teatru",
+      "start": "2026-10-09T19:00:00+03:00",
+      "event_start": "2026-10-09",
+      "event_end": "2026-10-09",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Cinema Geo Saizescu",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "Adult 40 lei; elev/student/pensionar 20 lei",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Teatrul Municipal Ariel",
+      "source_url": "https://www.arieltheatre.ro/teatru/program",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://www.arieltheatre.ro/teatru/program",
+          "tier": "T1",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-23T17:00:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
+      "id": "ariel-talk-show-20261016",
+      "event_id": "ariel-talk-show-20261016",
+      "fingerprint": "9d2890dc705cf2815550",
+      "story_id": null,
+      "title": "Talk Show",
+      "category": "Teatru",
+      "start": "2026-10-16T19:00:00+03:00",
+      "event_start": "2026-10-16",
+      "event_end": "2026-10-16",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Cinema Geo Saizescu",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "Adult 40 lei; elev/student/pensionar 20 lei",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Teatrul Municipal Ariel",
+      "source_url": "https://www.arieltheatre.ro/teatru/program",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://www.arieltheatre.ro/teatru/program",
+          "tier": "T1",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-23T17:00:00+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
     }
-  ]
+  ],
+  "canonical_local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
+  "canonical_event_ids": [
+    "uap-fragmente-de-sine-20260924",
+    "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
+    "uap-startisti-valceni-20260925",
+    "ariel-cantecul-de-lebada-20261002",
+    "ariel-cele-trei-gratii-20261009",
+    "ariel-talk-show-20261016"
+  ],
+  "policy": {
+    "canonical_events_merge_by_event_id_and_fingerprint": true,
+    "freshness_fail_closed": true,
+    "unknown_price_never_inferred": true,
+    "provenance_required": true
+  }
 }
