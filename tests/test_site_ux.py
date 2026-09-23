@@ -170,7 +170,7 @@ class SiteUXContract(unittest.TestCase):
     def test_unde_iesim_is_promoted_and_historical_editions_are_retired(self):
         home = self.read('index.html')
         self.assertIn('class="nav-event-link"', home)
-        self.assertIn('class="home-events"', home)
+        self.assertIn('class="home-local-life home-events"', home)
         self.assertIn('Agenda VÂLCEA CLAR', home)
         self.assertIn('Vezi ghidul complet', home)
         self.assertNotIn('Ediții anterioare', home)
