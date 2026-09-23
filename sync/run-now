@@ -1,1 +1,1 @@
-Product-aware UX reprojection: reconcile current CIVORA live feed after editorial_product metadata backfill. Require build, Pages deploy and public readback; no editorial copy changes.\n
+Autonomous newsroom sync trigger 2026-09-23T08:33+03:00: reconcile the latest validated CIVORA canonical live feed into the public projection after the 23 September newsroom update. Run canonical sync/build/deploy/readback only; no manual editorial-copy override.
