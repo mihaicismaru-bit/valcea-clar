@@ -345,8 +345,10 @@ product_nav_order = [
 ]
 primary_product_links = ''.join(
     f'<a href="{u(product_path(product))}">{h(product)}</a>'
-    for product in product_nav_order if product in available_products
+    for product in product_nav_order
+    if product in available_products and product != 'UNDE IEȘIM'
 )
+event_nav_link = f'<a class="nav-event-link" href="{u("/unde-iesim/")}">UNDE IEȘIM</a>'
 section_nav_order = [
     'ACTUALITATE', 'ADMINISTRAȚIE', 'ECONOMIE', 'SIGURANȚĂ',
     'UTILITAR', 'CULTURĂ', 'SPORT', 'EVENIMENTE', 'JUDEȚ'
@@ -361,6 +363,7 @@ nav = (
     f'<a href="{u("/")}">Acasă</a>'
     f'<a href="{u("/stiri/")}">Ultimele</a>'
     f'{primary_product_links}'
+    f'{event_nav_link}'
     f'<a href="{u("/despre/")}">Despre</a>'
     '</nav>'
     '<nav class="nav nav-topics" aria-label="Secțiuni tematice">'
@@ -440,6 +443,41 @@ latest_links = ''.join(
     for a in articles[1:4]
 )
 
+def home_event_teaser():
+    upcoming = [
+        event for event in events
+        if str(event.get('status') or '').lower() not in {'cancelled', 'past'}
+        and parse_dt(event.get('start'))
+    ]
+    upcoming.sort(key=lambda event: parse_dt(event.get('start')))
+    if not upcoming:
+        return ''
+    rows = upcoming[:3]
+    cards = []
+    months_short = ['IAN', 'FEB', 'MAR', 'APR', 'MAI', 'IUN', 'IUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+    for event in rows:
+        start = parse_dt(event.get('start'))
+        story_id = str(event.get('story_id') or '')
+        href = u('/stiri/' + h(story_id) + '/') if story_id else u('/unde-iesim/')
+        time = start.strftime('%H:%M') if start and (start.hour or start.minute) else ''
+        cards.append(
+            '<article class="home-event">'
+            f'<div class="home-event-date"><strong>{start.day}</strong><span>{months_short[start.month-1]}</span></div>'
+            '<div>'
+            f'<div class="event-category">{h(event.get("category") or "Eveniment")}</div>'
+            f'<h3><a href="{href}">{h(event.get("title") or "Eveniment")}</a></h3>'
+            f'<p>{h(time + (" · " if time else "") + str(event.get("venue") or "") + " · " + str(event.get("locality") or "Vâlcea"))}</p>'
+            '</div></article>'
+        )
+    return (
+        '<section class="home-events" aria-label="Unde ieșim">'
+        '<div class="home-events-head"><div><span>Agenda VÂLCEA CLAR</span><h2>Unde ieșim</h2></div>'
+        f'<a href="{u("/unde-iesim/")}">Vezi agenda completă →</a></div>'
+        '<div class="home-events-grid">' + ''.join(cards) + '</div>'
+        '</section>'
+    )
+
+
 home = (
     '<div data-layout="continuous-story-first">'
     '<section class="mission-strip" aria-label="Promisiunea editorială">'
@@ -474,7 +512,8 @@ home = (
         if product in available_products
     )
     + '</div></section>'
-    '<section class="service-grid" aria-label="Informație utilă">'
+    + home_event_teaser()
+    + '<section class="service-grid" aria-label="Informație utilă">'
     '<div><b>TRAFIC</b><span>Drumuri, incidente, restricții</span></div>'
     '<div><b>UTILITĂȚI</b><span>Apă, energie, termoficare</span></div>'
     '<div><b>EVENIMENTE</b><span>Ce se întâmplă azi în județ</span></div>'

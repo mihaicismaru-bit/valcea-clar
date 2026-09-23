@@ -761,3 +761,23 @@ body.theme-editorial-2026{
  .event-action{grid-column:2}.event-cta{min-width:110px}
  .event-tip{align-items:flex-start;flex-direction:column;gap:5px}
 }
+
+
+/* Homepage event discovery promotion */
+.theme-editorial-2026 .nav-event-link{color:var(--accent);font-weight:900}
+.home-events{margin:38px 0 8px;padding:18px 0 22px;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink)}
+.home-events-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:12px}
+.home-events-head span{display:block;color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.home-events-head h2{margin:3px 0 0;font-family:var(--display);font-size:32px;line-height:1;letter-spacing:-.025em}
+.home-events-head>a{color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.055em;text-transform:uppercase;text-decoration:none}
+.home-events-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.home-event{display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;padding:14px 20px;border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.home-event:first-child{padding-left:0}.home-event:last-child{border-right:0;padding-right:0}
+.home-event-date{border-right:1px solid var(--line);padding-right:10px;text-align:center}
+.home-event-date strong{display:block;font-family:var(--display);font-size:30px;line-height:.9}
+.home-event-date span{display:block;margin-top:4px;color:var(--accent);font-size:8px;font-weight:900;letter-spacing:.08em}
+.home-event h3{margin:3px 0 5px;font-family:var(--display);font-size:19px;line-height:1.12}
+.home-event h3 a{text-decoration:none}.home-event h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.home-event p{margin:0;color:var(--muted);font-size:10px;line-height:1.4}
+@media(max-width:760px){.home-events-grid{grid-template-columns:1fr}.home-event,.home-event:first-child,.home-event:last-child{padding:14px 0;border-right:0}.home-events-head{align-items:flex-start}.home-events-head h2{font-size:29px}}
+@media(max-width:460px){.home-events-head{flex-direction:column;gap:7px}}
