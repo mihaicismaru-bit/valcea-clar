@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-23T19:19:36+03:00",
+  "updated_at": "2026-09-23T21:38:23+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
     {
