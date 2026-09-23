@@ -447,16 +447,16 @@ def home_event_teaser():
     upcoming = [
         event for event in events
         if str(event.get('status') or '').lower() not in {'cancelled', 'past'}
-        and event_dt(event)
+        and parse_dt(event.get('start'))
     ]
-    upcoming.sort(key=lambda event: event_dt(event))
+    upcoming.sort(key=lambda event: parse_dt(event.get('start')))
     if not upcoming:
         return ''
     rows = upcoming[:3]
     cards = []
     months_short = ['IAN', 'FEB', 'MAR', 'APR', 'MAI', 'IUN', 'IUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
     for event in rows:
-        start = event_dt(event)
+        start = parse_dt(event.get('start'))
         story_id = str(event.get('story_id') or '')
         href = u('/stiri/' + h(story_id) + '/') if story_id else u('/unde-iesim/')
         time = start.strftime('%H:%M') if start and (start.hour or start.minute) else ''
