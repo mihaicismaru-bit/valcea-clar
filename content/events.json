@@ -1,22 +1,8 @@
 {
-  "schema_version": "1.0",
-  "updated_at": "2026-09-23T11:50:00+03:00",
-  "note": "Seed inventory contains only event facts already verified in VÂLCEA CLAR canonical articles. It is intentionally incomplete until the event scanner/backfill verifies additional listings.",
+  "schema_version": "1.1",
+  "updated_at": "2026-09-23T13:08:00+03:00",
+  "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
-    {
-      "id": "floarea-darurilor-2026",
-      "story_id": "ramnicu-valcea-floarea-darurilor-20260926",
-      "title": "„Floarea Darurilor”",
-      "category": "Concert",
-      "start": "2026-09-26T19:00:00+03:00",
-      "venue": "Sala Lahovari",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "unknown",
-      "ticket_url": null,
-      "status": "scheduled",
-      "source_tier": "T1",
-      "checked_at": "2026-09-22T17:50:46+03:00"
-    },
     {
       "id": "raliul-valcii-2026",
       "story_id": "auto-raliul-valcii-official-news-f6e28bbb1533",
@@ -24,13 +10,338 @@
       "category": "Sport",
       "start": "2026-09-24T00:00:00+03:00",
       "end": "2026-09-26T23:59:59+03:00",
+      "event_start": "2026-09-24",
+      "event_end": "2026-09-26",
+      "start_time": null,
+      "doors_time": null,
       "venue": "Mai multe trasee și Centrul Civic",
       "locality": "Județul Vâlcea",
       "price_status": "unknown",
+      "price": null,
       "ticket_url": null,
-      "status": "scheduled",
+      "reservation_url": null,
+      "organiser": "Raliul Vâlcii",
+      "source_url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
       "source_tier": "T1",
-      "checked_at": "2026-09-14T16:48:58+03:00"
+      "sources": [
+        {
+          "url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+          "tier": "T1",
+          "role": "organiser_program"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "liber-volatilium-2026-09-24",
+      "story_id": null,
+      "title": "Liber Volatilium",
+      "category": "Teatru",
+      "start": "2026-09-24T19:00:00+03:00",
+      "event_start": "2026-09-24",
+      "event_end": "2026-09-24",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Teatrul Anton Pann",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "Intrare liberă; rezervare necesară",
+      "ticket_url": null,
+      "reservation_url": null,
+      "reservation_phone": "0773 324 352",
+      "organiser": "Vanner Collective",
+      "source_url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "local_listing_with_reservation_details"
+        },
+        {
+          "url": "https://festivalindex.com/ro-ro/events/47730-liber-volatilium-2026",
+          "tier": "T3",
+          "role": "independent_event_index_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "liber-volatilium-2026-09-25",
+      "story_id": null,
+      "title": "Liber Volatilium",
+      "category": "Teatru",
+      "start": "2026-09-25T19:00:00+03:00",
+      "event_start": "2026-09-25",
+      "event_end": "2026-09-25",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Teatrul Anton Pann",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "Intrare liberă; rezervare necesară",
+      "ticket_url": null,
+      "reservation_url": null,
+      "reservation_phone": "0773 324 352",
+      "organiser": "Vanner Collective",
+      "source_url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "local_listing_with_reservation_details"
+        },
+        {
+          "url": "https://festivalindex.com/ro-ro/events/47730-liber-volatilium-2026",
+          "tier": "T3",
+          "role": "independent_event_index_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "paralele-corale-2026-09-25",
+      "story_id": "filarmonica-valcea-septembrie-2026-program-20260818",
+      "title": "Paralele Corale",
+      "category": "Concert",
+      "start": "2026-09-25T19:00:00+03:00",
+      "event_start": "2026-09-25",
+      "event_end": "2026-09-25",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Lahovari",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "Intrare liberă",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Filarmonica „Ion Dumitrescu” / Centrul Cultural Municipal Râmnicu Vâlcea",
+      "source_url": "https://filarmonica-valcea.ro/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://filarmonica-valcea.ro/",
+          "tier": "T1",
+          "role": "organiser_listing"
+        },
+        {
+          "url": "https://curierulderamnic.ro/2026/09/22/paralele-corale-vineri-25-sept-2026-sala-lahovari-filarmonica-ion-dumitrescu-centrul-cultural-municipal-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "price_and_time_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "retro-party-aby-2026-09-25",
+      "story_id": null,
+      "title": "Retro Party",
+      "category": "Party",
+      "start": "2026-09-25T22:00:00+03:00",
+      "event_start": "2026-09-25",
+      "event_end": "2026-09-25",
+      "start_time": "22:00",
+      "doors_time": "21:00",
+      "venue": "Aby Stage Bar",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "25 lei, înainte de taxele platformei de ticketing",
+      "ticket_url": "https://www.tixhit.com/eveniment/ramnicu-valcea-retro-party-ramnicu-valcea-e2ae",
+      "reservation_url": null,
+      "organiser": "Aby Stage Bar",
+      "source_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "ticketing_listing"
+        },
+        {
+          "url": "https://www.tixhit.com/eveniment/ramnicu-valcea-retro-party-ramnicu-valcea-e2ae",
+          "tier": "T3",
+          "role": "ticketing_aggregator_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "floarea-darului-2026",
+      "story_id": "ramnicu-valcea-floarea-darurilor-20260926",
+      "title": "Floarea Darului",
+      "category": "Concert",
+      "start": "2026-09-26T19:00:00+03:00",
+      "event_start": "2026-09-26",
+      "event_end": "2026-09-26",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Lahovari",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "Intrare liberă",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Filarmonica „Ion Dumitrescu” / Centrul Cultural Municipal Râmnicu Vâlcea",
+      "source_url": "https://filarmonica-valcea.ro/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://filarmonica-valcea.ro/",
+          "tier": "T1",
+          "role": "organiser_listing"
+        },
+        {
+          "url": "https://curierulderamnic.ro/2026/09/22/floarea-darului-sambata-26-sept-2026-ora-19-00-sala-lahovari-filarmonica-ion-dumitrescu-centrul-cultural-municipal-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "price_and_time_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "race-the-vibe-2026",
+      "story_id": null,
+      "title": "Race The Vibe 2026",
+      "category": "Sport",
+      "start": "2026-09-26T00:00:00+03:00",
+      "end": "2026-09-27T23:59:59+03:00",
+      "event_start": "2026-09-26",
+      "event_end": "2026-09-27",
+      "start_time": null,
+      "doors_time": null,
+      "venue": "Șerbăneasa / DJ 678A",
+      "locality": "Nicolae Bălcescu",
+      "price_status": "unknown",
+      "price": null,
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Asociația Ride The Vibe / Club Sportiv Vâlcea / Consiliul Județean Vâlcea",
+      "source_url": "https://www.opiniavl.ro/2026/08/31/agenda-culturala-valceana/",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://www.opiniavl.ro/2026/08/31/agenda-culturala-valceana/",
+          "tier": "T2",
+          "role": "event_schedule_and_organisers"
+        },
+        {
+          "url": "https://seintamplainvalcea.ro/2026/09/23/restrictii-de-circulatie-la-nicolae-balcescu-pentru-race-the-vibe/",
+          "tier": "T2",
+          "role": "current_local_corroboration_with_date_typo"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled",
+      "editorial_note": "Evenimentul 26–27 septembrie 2026 este verificat. Orele și restricțiile rutiere rămân excluse din inventar până la confirmare primară, deoarece relatarea locală din 23 septembrie conține o contradicție de an."
+    },
+    {
+      "id": "alex-stefanescu-ia-ti-o-viata-2026-09-26",
+      "story_id": null,
+      "title": "Alex Ștefănescu — „Ia-ți o viață!”",
+      "category": "Concert / one-man show",
+      "start": "2026-09-26T20:00:00+03:00",
+      "event_start": "2026-09-26",
+      "event_end": "2026-09-26",
+      "start_time": "20:00",
+      "doors_time": null,
+      "venue": "Aby Stage Bar",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "de la 53,03 lei pe iaBilet la verificare",
+      "ticket_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+      "reservation_url": null,
+      "organiser": "Aby Stage Bar",
+      "source_url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://www.iabilet.ro/bilete-in-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "ticketing_listing"
+        },
+        {
+          "url": "https://valceaexpres.ro/local/concertul-alex-stefanescu-ia-ti-o-viata-are-loc-pe-26-septembrie-la-ramnicu-valcea-i1nf",
+          "tier": "T2",
+          "role": "local_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "violoncellissimo-2026-09-28",
+      "story_id": "filarmonica-valcea-septembrie-2026-program-20260818",
+      "title": "Clasic la puterea a treia — Violoncellissimo",
+      "category": "Concert",
+      "start": "2026-09-28T19:00:00+03:00",
+      "event_start": "2026-09-28",
+      "event_end": "2026-09-28",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Lahovari",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "35 lei standard; 20 lei tarif redus pentru elevi, studenți, pensionari și șomeri",
+      "ticket_url": "https://www.bilete.ro/turneul-national-clasic-la-puterea-a-treia-violoncellissimo/",
+      "reservation_url": null,
+      "organiser": "Filarmonica „Ion Dumitrescu” / Turneul Violoncellissimo",
+      "source_url": "https://filarmonica-valcea.ro/",
+      "source_tier": "T1",
+      "sources": [
+        {
+          "url": "https://filarmonica-valcea.ro/",
+          "tier": "T1",
+          "role": "organiser_listing"
+        },
+        {
+          "url": "https://www.bilete.ro/turneul-national-clasic-la-puterea-a-treia-violoncellissimo/",
+          "tier": "T2",
+          "role": "ticketing_price_and_time"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
+    },
+    {
+      "id": "nevasta-de-ocazie-2026-09-29",
+      "story_id": null,
+      "title": "Nevastă de ocazie",
+      "category": "Teatru",
+      "start": "2026-09-29T19:30:00+03:00",
+      "event_start": "2026-09-29",
+      "event_end": "2026-09-29",
+      "start_time": "19:30",
+      "doors_time": null,
+      "venue": "Casa de Cultură a Sindicatelor",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "paid",
+      "price": "de la 105 lei la verificarea agregatorului de ticketing",
+      "ticket_url": "https://app.tics.ro/eveniment/nevasta-de-ocazie-ramnicu-valcea-015041",
+      "reservation_url": null,
+      "organiser": null,
+      "source_url": "https://app.tics.ro/eveniment/nevasta-de-ocazie-ramnicu-valcea-015041",
+      "source_tier": "T2",
+      "sources": [
+        {
+          "url": "https://app.tics.ro/eveniment/nevasta-de-ocazie-ramnicu-valcea-015041",
+          "tier": "T2",
+          "role": "ticketing_monitor"
+        },
+        {
+          "url": "https://www.vocea-olteniei.ro/2026/08/31/septembrie-cultural-in-valcea-festivaluri-teatru-muzica-patrimoniu-si-traditii-in-intreg-judetul/",
+          "tier": "T2",
+          "role": "local_corroboration"
+        }
+      ],
+      "checked_at": "2026-09-23T13:08:00+03:00",
+      "status": "scheduled"
     }
   ]
 }
