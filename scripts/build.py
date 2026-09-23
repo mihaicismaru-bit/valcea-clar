@@ -288,6 +288,8 @@ articles = sorted(
     reverse=True,
 )
 legal = load('legal.json')
+events_payload = load('events.json') if (C / 'events.json').exists() else {'events': []}
+events = events_payload.get('events') or []
 css = (C / 'site.css').read_text(encoding='utf-8')
 sections = []
 for article in articles:
@@ -551,6 +553,112 @@ def archive_page(title, description, page_articles, eyebrow='VÂLCEA CLAR'):
     return body
 
 
+def event_dt(event, key='start'):
+    return parse_dt(event.get(key))
+
+
+def event_category_slug(event):
+    return slugify(event.get('category') or 'eveniment')
+
+
+def event_card(event):
+    start = event_dt(event)
+    day = str(start.day) if start else '—'
+    months_short = ['IAN', 'FEB', 'MAR', 'APR', 'MAI', 'IUN', 'IUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+    month = months_short[start.month - 1] if start else ''
+    time = start.strftime('%H:%M') if start and (start.hour or start.minute) else 'ora de verificat'
+    venue = str(event.get('venue') or 'Loc de verificat')
+    locality = str(event.get('locality') or 'Vâlcea')
+    category = str(event.get('category') or 'Eveniment')
+    story_id = str(event.get('story_id') or '')
+    href = u('/stiri/' + h(story_id) + '/') if story_id else u('/unde-iesim/')
+    ticket_url = str(event.get('ticket_url') or '').strip()
+    cta = (
+        f'<a class="event-cta event-cta--ticket" href="{h(ticket_url)}" rel="nofollow noopener">Bilete</a>'
+        if ticket_url else
+        f'<a class="event-cta" href="{href}">Detalii</a>'
+    )
+    price_status = str(event.get('price_status') or 'unknown')
+    price = 'Preț de verificat' if price_status == 'unknown' else price_status
+    return (
+        '<article class="event-card">'
+        f'<div class="event-date"><strong>{h(day)}</strong><span>{h(month)}</span></div>'
+        '<div class="event-copy">'
+        f'<div class="event-category">{h(category)}</div>'
+        f'<h2><a href="{href}">{h(event.get("title") or "Eveniment")}</a></h2>'
+        f'<div class="event-facts"><span>{h(time)}</span><span>{h(venue)}</span><span>{h(locality)}</span><span>{h(price)}</span></div>'
+        f'<div class="event-freshness">Verificat: {h(pretty_date(event.get("checked_at")))}</div>'
+        '</div>'
+        f'<div class="event-action">{cta}</div>'
+        '</article>'
+    )
+
+
+def event_discovery_page():
+    upcoming = [
+        event for event in events
+        if str(event.get('status') or '').lower() not in {'cancelled', 'past'}
+        and event_dt(event)
+    ]
+    upcoming.sort(key=lambda event: event_dt(event))
+    categories = []
+    for event in upcoming:
+        category = str(event.get('category') or 'Eveniment')
+        if category not in categories:
+            categories.append(category)
+
+    date_chips = (
+        '<div class="event-date-chips" aria-label="Perioadă">'
+        '<a href="#agenda">Următoarele</a>'
+        '<a href="#septembrie">Septembrie</a>'
+        '<a href="#octombrie">Octombrie</a>'
+        '<a href="#noiembrie">Noiembrie</a>'
+        '<a href="#decembrie">Decembrie</a>'
+        '</div>'
+    )
+    category_chips = (
+        '<div class="event-filter-row" aria-label="Categorii">'
+        '<span>Filtre</span>'
+        + ''.join(f'<a href="#cat-{h(slugify(category))}">{h(category)}</a>' for category in categories)
+        + '</div>'
+    )
+
+    groups = []
+    month_names = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie']
+    for month in range(9, 13):
+        rows = [event for event in upcoming if event_dt(event).month == month]
+        if not rows:
+            continue
+        groups.append(
+            f'<section class="event-month" id="{month_names[month-1]}">'
+            f'<div class="event-month-head"><h2>{h(month_names[month-1].title())}</h2><span>{len(rows)} evenimente verificate</span></div>'
+            + ''.join(event_card(event) for event in rows)
+            + '</section>'
+        )
+
+    empty_note = ''
+    if len(upcoming) < 6:
+        empty_note = (
+            '<aside class="event-inventory-note"><strong>Calendar în extindere</strong>'
+            '<p>Publicăm numai evenimente pentru care data și sursa au fost verificate. '
+            'Redacția completează agenda pe măsură ce organizatorii publică programele și accesul.</p></aside>'
+        )
+    return (
+        '<div class="event-hub">'
+        '<div class="event-hero"><div class="eyebrow">Ghid local · VÂLCEA CLAR</div>'
+        '<h1>UNDE IEȘIM</h1>'
+        '<p>Concerte, spectacole, festivaluri și lucruri de făcut în Vâlcea — ordonate după dată și verificate editorial.</p></div>'
+        + date_chips + category_chips + empty_note +
+        '<section class="event-agenda" id="agenda"><div class="event-agenda-title"><h2>Agenda verificată</h2>'
+        f'<span>{len(upcoming)} evenimente disponibile acum</span></div>'
+        + ''.join(groups) +
+        '</section>'
+        '<aside class="event-tip"><strong>Știi un eveniment care lipsește?</strong>'
+        '<span>Trimite-ne organizatorul, data și o sursă publică la redactie@valceaclar.ro.</span></aside>'
+        '</div>'
+    )
+
+
 product_routes = []
 for product in product_nav_order + ['WEEKEND CLAR', 'PAMFLET/SATIRĂ']:
     product_articles = [article for article in articles if article_product(article) == product]
@@ -558,11 +666,20 @@ for product in product_nav_order + ['WEEKEND CLAR', 'PAMFLET/SATIRĂ']:
         continue
     path = product_path(product)
     description = PRODUCT_DESCRIPTIONS.get(product, 'Materiale VÂLCEA CLAR selectate editorial.')
+    page_body = event_discovery_page() if product == 'UNDE IEȘIM' else archive_page(product, description, product_articles, 'Format editorial')
     write_route(
         path,
-        shell(f'{product} — VÂLCEA CLAR', archive_page(product, description, product_articles, 'Format editorial'), description, path),
+        shell(f'{product} — VÂLCEA CLAR', page_body, description, path, 'event-discovery-page' if product == 'UNDE IEȘIM' else ''),
     )
     product_routes.append((path, product_articles))
+
+if events and not any(path == '/unde-iesim/' for path, _ in product_routes):
+    event_path = '/unde-iesim/'
+    write_route(
+        event_path,
+        shell('UNDE IEȘIM — VÂLCEA CLAR', event_discovery_page(), PRODUCT_DESCRIPTIONS['UNDE IEȘIM'], event_path, 'event-discovery-page'),
+    )
+    product_routes.append((event_path, []))
 
 section_routes = []
 for section in sections:
