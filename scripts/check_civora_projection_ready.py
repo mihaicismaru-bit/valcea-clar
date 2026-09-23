@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""Fail closed while CIVORA's derived public UX/media projection is still catching up.
+"""Fail closed while CIVORA's derived editorial/media projection is incomplete.
 
 The canonical Live Newsroom writes the editorial feed first. A separate CIVORA
-workflow then reapplies reader-facing ordering and verified media. The public
-GitHub Pages repository must consume only the completed derived projection, not
-the short intermediate state between those two transactions.
+projection supplies reader-facing ordering and verified media. This pre-deploy
+gate verifies that every canonical feed story is represented in the derived UX
+projection and that verified media has been propagated.
+
+Important delivery-truth rule: ``public_ux_state.live_story_count`` describes
+what the deployment/readback layer has observed live. It is therefore a
+*post-deploy* fact and must not be required to equal the desired feed before a
+deployment is allowed to run; doing so creates a circular deadlock precisely
+when production is stale. The deployment workflow performs independent public
+lead, exact-story-set, historical-route and media readbacks after deploy.
 """
 from __future__ import annotations
 
@@ -25,7 +32,7 @@ def fetch_json(url: str) -> dict:
     request = Request(
         url,
         headers={
-            "User-Agent": "valcea-clar-projection-readiness/1.0",
+            "User-Agent": "valcea-clar-projection-readiness/1.1",
             "Accept": "application/json",
             "Cache-Control": "no-cache",
         },
@@ -44,12 +51,13 @@ def validate(feed: dict, ux: dict, manifest: dict) -> dict:
     if feed.get("publication_model") != "continuous_story_first":
         raise ValueError("publication_model mismatch")
 
-    live_count = int(ux.get("live_story_count") or 0)
+    # public_ux_state.story_ids is the desired/safe derived projection. By
+    # contrast live_story_count is produced from public deployment readback and
+    # can legitimately lag before this workflow deploys. Requiring it here
+    # would make stale production impossible to repair.
     ux_ids = {str(value) for value in ux.get("story_ids", []) if value}
-    if live_count != len(stories):
-        raise ValueError(
-            f"derived Public UX is not caught up: live_story_count={live_count} feed={len(stories)}"
-        )
+    if not ux_ids:
+        raise ValueError("derived Public UX has no projected stories")
     missing_from_ux = sorted(feed_ids - ux_ids)
     if missing_from_ux:
         raise ValueError(
@@ -94,6 +102,8 @@ def validate(feed: dict, ux: dict, manifest: dict) -> dict:
         "feed_generated_at": feed.get("generated_at"),
         "story_count": len(stories),
         "verified_media_count": len(expected_verified_media),
+        "public_live_story_count_observed": int(ux.get("live_story_count") or 0),
+        "delivery_truth_gate": "post_deploy_readback",
     }
 
 
@@ -114,7 +124,7 @@ def self_test() -> int:
             {"id": "b"},
         ],
     }
-    ux = {"live_story_count": 2, "story_ids": ["a", "b", "archive"]}
+    ux = {"live_story_count": 0, "story_ids": ["a", "b", "archive"]}
     manifest = {
         "stories": [
             {
@@ -126,15 +136,17 @@ def self_test() -> int:
             }
         ]
     }
-    assert validate(feed, ux, manifest)["verified_media_count"] == 1
+    ready = validate(feed, ux, manifest)
+    assert ready["verified_media_count"] == 1
+    assert ready["public_live_story_count_observed"] == 0
 
-    bad_count = dict(ux, live_story_count=1)
+    missing_ux_story = {"live_story_count": 0, "story_ids": ["a", "archive"]}
     try:
-        validate(feed, bad_count, manifest)
+        validate(feed, missing_ux_story, manifest)
     except ValueError:
         pass
     else:
-        raise AssertionError("count drift did not fail closed")
+        raise AssertionError("missing derived Public UX story did not fail closed")
 
     bad_feed = json.loads(json.dumps(feed))
     bad_feed["stories"][0].pop("visual")
