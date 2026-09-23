@@ -125,6 +125,48 @@ def enrich_article(path: Path, article: dict) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def ensure_clarificam_route() -> None:
+    """Keep the canonical CLARIFICĂM product discoverable even between stories.
+
+    Product navigation is an editorial taxonomy, not a reflection of whether a
+    particular run happens to contain an explainer. An empty product page is
+    preferable to silently deleting a canonical route or inventing filler.
+    """
+    target = OUT / "clarificam" / "index.html"
+    if not target.is_file():
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(
+            '''<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f2ec"><title>CLARIFICĂM — VÂLCEA CLAR</title>
+<meta name="description" content="Explicații VÂLCEA CLAR despre mecanisme, cifre și documente locale.">
+<link rel="canonical" href="https://valceaclar.ro/clarificam/"><meta property="og:site_name" content="VÂLCEA CLAR">
+<meta property="og:title" content="CLARIFICĂM — VÂLCEA CLAR"><meta property="og:description" content="Explicații VÂLCEA CLAR despre mecanisme, cifre și documente locale.">
+<meta property="og:url" content="https://valceaclar.ro/clarificam/"><link rel="stylesheet" href="/assets/site.css"></head>
+<body class="theme-editorial-2026"><a class="skip" href="#main">Sari la conținut</a><header class="site-header"><div class="mast"><div class="mast-meta">Vâlcea · publicație locală</div><a class="brand" href="/">VÂLCEA CLAR</a><div class="tag">Ce se întâmplă. Ce știm. Ce contează.</div></div><nav class="nav nav-primary" aria-label="Navigație principală"><a href="/">Acasă</a><a href="/stiri/">Ultimele</a><a href="/valcea-azi/">VÂLCEA AZI</a><a href="/pe-scurt/">PE SCURT</a><a href="/clarificam/">CLARIFICĂM</a><a href="/dosar/">DOSAR</a><a class="nav-event-link" href="/unde-iesim/">UNDE IEȘIM</a><a href="/despre/">Despre</a></nav></header>
+<main id="main"><section class="section"><div class="kicker">FORMAT EDITORIAL</div><h1 class="index-title">CLARIFICĂM</h1><p class="index-dek">Explicăm mecanismul real din spatele unei informații locale: ce știm, ce nu știm, ce înseamnă cifrele și ce urmează.</p><div class="empty-state"><strong>Nu există momentan un material CLARIFICĂM în fluxul public curent.</strong><p>Pagina rămâne indexabilă ca parte a structurii editoriale; nu publicăm un text slab doar pentru a umple categoria.</p></div></section></main>
+<footer><strong>VÂLCEA CLAR</strong> · redactie@valceaclar.ro<div class="footer-links"><a href="/despre/">Despre</a> · <a href="/termeni/">Termeni</a> · <a href="/confidentialitate/">Confidențialitate</a></div></footer></body></html>''',
+            encoding="utf-8",
+        )
+
+    # Keep the canonical product visible in the primary navigation on every
+    # generated page without disturbing article or Local Life content.
+    pattern = re.compile(r'(<a href="[^"]*/pe-scurt/">PE SCURT</a>)(?!<a href="[^"]*/clarificam/">)')
+    for page in OUT.rglob("*.html"):
+        text = page.read_text(encoding="utf-8")
+        if 'href="/clarificam/"' not in text and '/pe-scurt/' in text:
+            text = pattern.sub(r'\1<a href="/clarificam/">CLARIFICĂM</a>', text, count=1)
+            page.write_text(text, encoding="utf-8")
+
+    sitemap = OUT / "sitemap.xml"
+    if sitemap.is_file():
+        text = sitemap.read_text(encoding="utf-8")
+        loc = SITE + "/clarificam/"
+        if f"<loc>{loc}</loc>" not in text:
+            text = text.replace("</urlset>", f"<url><loc>{loc}</loc></url></urlset>", 1)
+            sitemap.write_text(text, encoding="utf-8")
+
+
 def main() -> int:
     if not OUT.is_dir():
         raise SystemExit("Metadata enrichment refused: _site is missing; run build.py first")
@@ -141,6 +183,7 @@ def main() -> int:
             image_enriched += 1
         enrich_article(page, article)
         enriched += 1
+    ensure_clarificam_route()
     print(
         f"METADATA PASS: homepage + {enriched} NewsArticle pages enriched; "
         f"image_pages={image_enriched}; preview={PREVIEW}."
