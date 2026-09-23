@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-23T12:55:00+03:00",
+  "source_policy": "Verified structured facts only; no inferred availability, rankings or recommendations.",
+  "sports": [
+    {
+      "id": "handbal-rapid-scm-20260930",
+      "sport": "Handbal",
+      "competition": "Liga Florilor",
+      "start": "2026-09-30T18:00:00+03:00",
+      "home": "Rapid București",
+      "away": "SCM Râmnicu Vâlcea",
+      "venue": null,
+      "locality": "București",
+      "importance": "important",
+      "status": "scheduled",
+      "source_url": "https://scmrmvalcea.ro/scm/program-competitional/",
+      "checked_at": "2026-09-23T12:45:00+03:00"
+    },
+    {
+      "id": "handbal-scm-stiinta-20261007",
+      "sport": "Handbal",
+      "competition": "Liga Florilor",
+      "start": "2026-10-07T18:00:00+03:00",
+      "home": "SCM Râmnicu Vâlcea",
+      "away": "CSU Știința București",
+      "venue": null,
+      "locality": "Râmnicu Vâlcea",
+      "importance": "home",
+      "status": "scheduled",
+      "source_url": "https://scmrmvalcea.ro/scm/program-competitional/",
+      "checked_at": "2026-09-23T12:45:00+03:00"
+    },
+    {
+      "id": "fotbal-scm-poli-20261017",
+      "sport": "Fotbal",
+      "competition": "Liga 2",
+      "start": "2026-10-17T11:00:00+03:00",
+      "home": "SCM Râmnicu Vâlcea",
+      "away": "FC Politehnica Timișoara",
+      "venue": "Stadionul Municipal",
+      "locality": "Râmnicu Vâlcea",
+      "importance": "home",
+      "status": "scheduled",
+      "source_url": "https://scmramnicuvalcea.ro/program/",
+      "checked_at": "2026-09-23T12:45:00+03:00"
+    },
+    {
+      "id": "handbal-scm-csm-20261111",
+      "sport": "Handbal",
+      "competition": "Liga Florilor",
+      "start": "2026-11-11T18:00:00+03:00",
+      "home": "SCM Râmnicu Vâlcea",
+      "away": "CSM București",
+      "venue": null,
+      "locality": "Râmnicu Vâlcea",
+      "importance": "major",
+      "status": "scheduled",
+      "source_url": "https://scmrmvalcea.ro/scm/program-competitional/",
+      "checked_at": "2026-09-23T12:45:00+03:00"
+    },
+    {
+      "id": "fotbal-scm-selimbar-20261205",
+      "sport": "Fotbal",
+      "competition": "Liga 2",
+      "start": "2026-12-05T11:00:00+03:00",
+      "home": "SCM Râmnicu Vâlcea",
+      "away": "Viitorul Șelimbăr",
+      "venue": "Stadionul Municipal",
+      "locality": "Râmnicu Vâlcea",
+      "importance": "home",
+      "status": "scheduled",
+      "source_url": "https://scmramnicuvalcea.ro/program/",
+      "checked_at": "2026-09-23T12:45:00+03:00"
+    }
+  ],
+  "cinema": {
+    "checked_at": "2026-09-23T12:40:00+03:00",
+    "venues": [
+      {
+        "id": "cinema-city-shopping-city",
+        "name": "Cinema City Shopping City",
+        "locality": "Râmnicu Vâlcea",
+        "address": "Strada Ferdinand 38",
+        "source_url": "https://www.cinemagia.ro/program-cinema/cinema-city-shopping-city-ramnicu-valcea/premiere/"
+      },
+      {
+        "id": "cinema-geo-saizescu",
+        "name": "Cinema Geo Saizescu",
+        "locality": "Râmnicu Vâlcea",
+        "address": "Bulevardul Tineretului 2A",
+        "source_url": "https://cinemageosaizescu.ro/"
+      }
+    ],
+    "screenings": [
+      {
+        "date": "2026-09-23",
+        "film": "Atlasul Universului",
+        "venue_id": "cinema-city-shopping-city",
+        "times": [
+          "18:30"
+        ],
+        "format": "2D",
+        "language": "RO",
+        "ticket_url": null
+      },
+      {
+        "date": "2026-09-23",
+        "film": "Pisicile de la muzeu 2: Comoara din Egipt",
+        "venue_id": "cinema-city-shopping-city",
+        "times": [
+          "16:15",
+          "17:00"
+        ],
+        "format": "2D",
+        "language": "DUB",
+        "ticket_url": null
+      },
+      {
+        "date": "2026-09-23",
+        "film": "3 zile în septembrie",
+        "venue_id": "cinema-city-shopping-city",
+        "times": [
+          "17:40",
+          "19:30",
+          "21:20"
+        ],
+        "format": "2D",
+        "language": "RO",
+        "ticket_url": null
+      },
+      {
+        "date": "2026-09-24",
+        "film": "Povestea peștelui posac",
+        "venue_id": "cinema-geo-saizescu",
+        "times": [
+          "11:00",
+          "17:00"
+        ],
+        "format": "2D",
+        "language": "RO",
+        "ticket_url": "https://cinemageosaizescu.ro/"
+      },
+      {
+        "date": "2026-09-24",
+        "film": "Cum să devii supererou: Masca roșie",
+        "venue_id": "cinema-geo-saizescu",
+        "times": [
+          "17:00",
+          "19:00"
+        ],
+        "format": "2D",
+        "language": "RO",
+        "ticket_url": "https://cinemageosaizescu.ro/"
+      },
+      {
+        "date": "2026-09-25",
+        "film": "Avengers: Doomsday",
+        "venue_id": "cinema-geo-saizescu",
+        "times": [
+          "19:00"
+        ],
+        "format": "2D",
+        "language": "SUB",
+        "ticket_url": "https://cinemageosaizescu.ro/"
+      }
+    ]
+  },
+  "restaurants": [
+    {
+      "id": "restaurant-belvedere",
+      "name": "Restaurant Belvedere",
+      "locality": "Râmnicu Vâlcea",
+      "address": "Strada Carol I 11",
+      "tags": [
+        "prânz",
+        "meniu al zilei"
+      ],
+      "source_url": "https://wolt.com/ro/rou/ramnicu-valcea/restaurant/restaurant-belvedere-67dac1f15416f96b8fd40439",
+      "checked_at": "2026-09-23T12:35:00+03:00"
+    },
+    {
+      "id": "accademia-del-gusto",
+      "name": "Accademia del Gusto",
+      "locality": "Râmnicu Vâlcea",
+      "address": null,
+      "tags": [
+        "restaurant",
+        "meniu al zilei"
+      ],
+      "source_url": "https://glovoapp.com/ro/ro/ramnicu-valcea/stores/laccademia-del-gusto-rvl",
+      "checked_at": "2026-09-23T12:35:00+03:00"
+    },
+    {
+      "id": "cesars",
+      "name": "Cesar's",
+      "locality": "Râmnicu Vâlcea",
+      "address": null,
+      "tags": [
+        "restaurant",
+        "meniu al zilei",
+        "brunch"
+      ],
+      "source_url": "https://glovoapp.com/ro/ro/ramnicu-valcea/stores/cesar-s-rvl",
+      "checked_at": "2026-09-23T12:35:00+03:00"
+    },
+    {
+      "id": "flamingo",
+      "name": "Flamingo",
+      "locality": "Râmnicu Vâlcea",
+      "address": null,
+      "tags": [
+        "restaurant",
+        "meniu al zilei"
+      ],
+      "source_url": "https://www.papadream.ro/meniul-zilei",
+      "checked_at": "2026-09-23T12:35:00+03:00"
+    },
+    {
+      "id": "mezza-luna",
+      "name": "Mezza Luna",
+      "locality": "Râmnicu Vâlcea",
+      "address": null,
+      "tags": [
+        "restaurant",
+        "meniu al zilei"
+      ],
+      "source_url": "https://www.papadream.ro/meniul-zilei",
+      "checked_at": "2026-09-23T12:35:00+03:00"
+    }
+  ],
+  "daily_menus": [
+    {
+      "date": "2026-09-23",
+      "restaurant_id": "restaurant-belvedere",
+      "restaurant": "Restaurant Belvedere",
+      "price": "40 lei",
+      "service_window": null,
+      "summary": "Ciorbă/supă la alegere + preparat de bază cu garnitură + salată de varză + pâine",
+      "order_url": "https://wolt.com/ro/rou/ramnicu-valcea/restaurant/restaurant-belvedere-67dac1f15416f96b8fd40439",
+      "source_url": "https://wolt.com/ro/rou/ramnicu-valcea/restaurant/restaurant-belvedere-67dac1f15416f96b8fd40439",
+      "checked_at": "2026-09-23T12:35:00+03:00",
+      "status": "verified"
+    },
+    {
+      "date": "2026-09-23",
+      "restaurant_id": "cesars",
+      "restaurant": "Cesar's",
+      "price": "39 lei",
+      "service_window": "10:00–16:00",
+      "summary": "Felul I + felul II + desert, la alegere conform ofertei curente",
+      "order_url": "https://glovoapp.com/ro/ro/ramnicu-valcea/stores/cesar-s-rvl",
+      "source_url": "https://glovoapp.com/ro/ro/ramnicu-valcea/stores/cesar-s-rvl",
+      "checked_at": "2026-09-23T12:35:00+03:00",
+      "status": "verified"
+    },
+    {
+      "date": "2026-09-23",
+      "restaurant_id": "accademia-del-gusto",
+      "restaurant": "Accademia del Gusto",
+      "price": "50 lei",
+      "service_window": "12:00–15:00",
+      "summary": "Ciorbă/supă + fel principal; selecția diferă zilnic",
+      "order_url": "https://glovoapp.com/ro/ro/ramnicu-valcea/stores/laccademia-del-gusto-rvl",
+      "source_url": "https://glovoapp.com/ro/ro/ramnicu-valcea/stores/laccademia-del-gusto-rvl",
+      "checked_at": "2026-09-23T12:35:00+03:00",
+      "status": "verified"
+    }
+  ],
+  "fitness": [
+    {
+      "id": "stay-fit-valcea-central",
+      "name": "Stay Fit Gym Vâlcea Central",
+      "locality": "Râmnicu Vâlcea",
+      "address": "Calea lui Traian 127, Winmarkt",
+      "activities": [
+        "fitness",
+        "aerobic",
+        "functional training",
+        "cycling",
+        "cardio"
+      ],
+      "hours": null,
+      "source_url": "https://stayfit.ro/valcea/",
+      "checked_at": "2026-09-23T12:30:00+03:00"
+    },
+    {
+      "id": "sportify",
+      "name": "Sportify",
+      "locality": "Râmnicu Vâlcea",
+      "address": "Calea lui Traian 68",
+      "activities": [
+        "group fitness",
+        "forță",
+        "antrenamente personale"
+      ],
+      "hours": null,
+      "source_url": "https://sportifygym.ro/",
+      "checked_at": "2026-09-23T12:30:00+03:00"
+    },
+    {
+      "id": "fitness-cool",
+      "name": "Fitness Cool",
+      "locality": "Râmnicu Vâlcea",
+      "address": "Gib Mihăescu 15B",
+      "activities": [
+        "fitness"
+      ],
+      "hours": "L–V 08:00–22:00; S 08:00–16:00",
+      "source_url": "https://ramnicu-valcea.cylex.ro/firma/fitness%2Bcool%2Bsrl-928495.html",
+      "checked_at": "2026-09-23T12:30:00+03:00"
+    }
+  ]
+}

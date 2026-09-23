@@ -170,14 +170,47 @@ class SiteUXContract(unittest.TestCase):
     def test_unde_iesim_is_promoted_and_historical_editions_are_retired(self):
         home = self.read('index.html')
         self.assertIn('class="nav-event-link"', home)
-        self.assertIn('class="home-events"', home)
+        self.assertIn('class="home-local-life home-events"', home)
         self.assertIn('Agenda VÂLCEA CLAR', home)
-        self.assertIn('Vezi agenda completă', home)
+        self.assertIn('Vezi ghidul complet', home)
         self.assertNotIn('Ediții anterioare', home)
         self.assertNotIn('/editii/', home)
         self.assertFalse((ROOT / '_site' / 'editii').exists())
         sitemap = self.read('sitemap.xml')
         self.assertNotIn('/editii/', sitemap)
+
+    def test_local_life_hub_routes_and_compact_home_ux(self):
+        home = self.read('index.html')
+        self.assertIn('class="home-local-life home-events"', home)
+        self.assertIn('Vâlcea, în oraș', home)
+        for label in ('SPORT', 'CINEMA', 'MENIUL ZILEI', 'RESTAURANTE', 'FITNESS'):
+            self.assertIn(label, home)
+        routes = (
+            'unde-iesim/sport/index.html',
+            'unde-iesim/cinema/index.html',
+            'unde-iesim/restaurante/index.html',
+            'unde-iesim/meniul-zilei/index.html',
+            'unde-iesim/fitness/index.html',
+        )
+        for rel in routes:
+            self.assertTrue((ROOT / '_site' / rel).is_file(), rel)
+        self.assertIn('Următoarele meciuri importante', self.read('unde-iesim/sport/index.html'))
+        self.assertIn('Program verificat', self.read('unde-iesim/cinema/index.html'))
+        self.assertIn('Ghid editorial', self.read('unde-iesim/restaurante/index.html'))
+        self.assertIn('Actualizare zilnică', self.read('unde-iesim/meniul-zilei/index.html'))
+        self.assertIn('Mișcare în Vâlcea', self.read('unde-iesim/fitness/index.html'))
+        sitemap = self.read('sitemap.xml')
+        for path in (
+            '/unde-iesim/sport/',
+            '/unde-iesim/cinema/',
+            '/unde-iesim/restaurante/',
+            '/unde-iesim/meniul-zilei/',
+            '/unde-iesim/fitness/',
+        ):
+            self.assertIn('https://valceaclar.ro' + path, sitemap)
+        css = self.read('assets/site.css')
+        self.assertIn('LOCAL LIFE HUB — compact discovery UX', css)
+        self.assertIn('.home-local-life-grid', css)
 
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
