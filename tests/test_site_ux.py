@@ -152,6 +152,21 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('.theme-editorial-2026 .article-body', css)
         self.assertIn('@media(max-width:620px)', css)
 
+    def test_unde_iesim_is_event_discovery_product(self):
+        page = self.read('unde-iesim/index.html')
+        self.assertIn('class="event-hub"', page)
+        self.assertIn('class="event-date-chips"', page)
+        self.assertIn('class="event-filter-row"', page)
+        self.assertIn('Agenda verificată', page)
+        self.assertIn('Verificat:', page)
+        self.assertIn('Floarea Darurilor', page)
+        self.assertIn('Raliul Vâlcii 2026', page)
+        self.assertNotIn('editorial_card', page)
+        css = self.read('assets/site.css')
+        self.assertIn('UNDE IEȘIM — event discovery UX', css)
+        self.assertIn('.event-card', css)
+        self.assertIn('.event-cta', css)
+
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
             [sys.executable, str(ROOT / 'scripts' / 'verify.py')],
