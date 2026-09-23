@@ -167,6 +167,18 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('.event-card', css)
         self.assertIn('.event-cta', css)
 
+    def test_unde_iesim_is_promoted_and_historical_editions_are_retired(self):
+        home = self.read('index.html')
+        self.assertIn('class="nav-event-link"', home)
+        self.assertIn('class="home-events"', home)
+        self.assertIn('Agenda VÂLCEA CLAR', home)
+        self.assertIn('Vezi agenda completă', home)
+        self.assertNotIn('Ediții anterioare', home)
+        self.assertNotIn('/editii/', home)
+        self.assertFalse((ROOT / '_site' / 'editii').exists())
+        sitemap = self.read('sitemap.xml')
+        self.assertNotIn('/editii/', sitemap)
+
     def test_site_verifier_still_passes(self):
         result = subprocess.run(
             [sys.executable, str(ROOT / 'scripts' / 'verify.py')],
