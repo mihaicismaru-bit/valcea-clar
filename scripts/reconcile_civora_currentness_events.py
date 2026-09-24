@@ -219,7 +219,17 @@ def venue_equivalent(left, right) -> bool:
 
 
 def same_manifestation(left: dict, right: dict) -> bool:
-    if semantic_core(left) != semantic_core(right):
+    """Treat an older unknown-time row as the same event once time is resolved.
+
+    Title/date/locality + equivalent venue define the manifestation. If both
+    rows have explicit times they must match; if one side has no time, the
+    explicit canonical time is treated as an enrichment rather than a new event.
+    """
+    left_title, left_date, left_time, left_locality = semantic_core(left)
+    right_title, right_date, right_time, right_locality = semantic_core(right)
+    if (left_title, left_date, left_locality) != (right_title, right_date, right_locality):
+        return False
+    if left_time and right_time and left_time != right_time:
         return False
     return venue_equivalent(left.get("venue"), right.get("venue"))
 
@@ -534,6 +544,25 @@ def self_test() -> int:
     stale["events"][0]["checked_at"] = "2026-09-22T01:00:00+03:00"
     ev2, imported2 = reconcile_events({"events": []}, stale, now)
     assert imported2 == [] and ev2["events"] == []
+
+    unknown_time_legacy = {"events": [{
+        "id":"race-legacy","title":"Race The Vibe 2026","event_start":"2026-09-26",
+        "start_time":None,"venue":"Șerbăneasa / DJ 678A","locality":"Nicolae Bălcescu",
+        "checked_at":"2026-09-23T13:00:00+03:00","source_url":"https://legacy.test/race",
+        "sources":[{"url":"https://legacy.test/race","tier":"T2","role":"discovery"}]
+    }]}
+    race_canonical = {"events": [{
+        "event_id":"race-canonical","fingerprint":"race-fp","title":"Race The Vibe 2026",
+        "event_start":"2026-09-26","event_end":"2026-09-27","start_time":"10:00",
+        "venue":"DJ 678A, sat Serbaneasa","locality":"Nicolae Balcescu","category":"sport",
+        "free":True,"price":"gratuit","source_url":"https://official.test/race",
+        "source_tier":"T1","checked_at":"2026-09-23T18:00:00+03:00","status":"scheduled"
+    }]}
+    race_out, race_ids = reconcile_events(unknown_time_legacy, race_canonical, datetime(2026,9,23,18,0,tzinfo=TZ))
+    assert race_ids == ["race-canonical"]
+    assert len(race_out["events"]) == 1
+    assert race_out["events"][0]["start_time"] == "10:00"
+    assert race_out["events"][0]["price_status"] == "free"
 
     surface = {
         "sport": {"entries": [{"sport":"handbal feminin","competition":"Liga Florilor","date":"2026-09-30","time":"17:00","home":"SCM Râmnicu Vâlcea","away":"SCM Universitatea Craiova","venue":"Sala Traian","locality":"Râmnicu Vâlcea","status":"scheduled","source_url":"https://frh.ro/","checked_at":"2026-09-23T17:00:00+03:00"}]},
