@@ -7,9 +7,12 @@ on:
       - 'content/local_life.json'
       - '.github/workflows/local-life-readback.yml'
   workflow_dispatch:
+  schedule:
+    - cron: '8,23,38,53 * * * *'
 
 permissions:
   contents: read
+  actions: write
 
 jobs:
   verify-public-local-life:
@@ -19,7 +22,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verify public Local Life subroutes against current registry
+      - id: verify
+        name: Verify public Local Life subroutes against current registry
+        continue-on-error: true
         run: |
           python3 - <<'PY'
           import html
@@ -90,3 +95,19 @@ jobs:
 
           print({'status':'PASS','today':today,'sport_rows':len(future),'menu_rows':len(today_menus),'cinema_today_rows':len(today_screenings)})
           PY
+
+
+      - name: Self-heal stale Local Life public projection
+        if: steps.verify.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run civora-sync.yml --repo "$GITHUB_REPOSITORY" --ref main
+          echo 'Detected stale Local Life projection; canonical CIVORA sync dispatched.'
+
+      - name: Fail after recovery dispatch
+        if: steps.verify.outcome == 'failure'
+        run: |
+          echo 'Local Life readback failed; recovery was dispatched and this run remains failed until a later readback proves convergence.' >&2
+          exit 1
