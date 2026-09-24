@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.2",
-  "updated_at": "2026-09-24T03:10:38+03:00",
+  "schema_version": "1.3",
+  "updated_at": "2026-09-24T07:34:32+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
     {
@@ -36,44 +36,10 @@
       "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
-      "id": "liber-volatilium-2026-09-24",
-      "story_id": null,
-      "title": "Liber Volatilium",
-      "category": "Teatru",
-      "start": "2026-09-24T19:00:00+03:00",
-      "event_start": "2026-09-24",
-      "event_end": "2026-09-24",
-      "start_time": "19:00",
-      "doors_time": null,
-      "venue": "Teatrul Anton Pann",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "free",
-      "price": "Intrare liberă; rezervare necesară",
-      "ticket_url": null,
-      "reservation_url": null,
-      "reservation_phone": "0773 324 352",
-      "organiser": "Vanner Collective",
-      "source_url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
-      "source_tier": "T2",
-      "sources": [
-        {
-          "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
-          "tier": "T2",
-          "role": "local_listing_with_reservation_details"
-        },
-        {
-          "url": "https://festivalindex.com/ro-ro/events/47730-liber-volatilium-2026",
-          "tier": "T3",
-          "role": "independent_event_index_corroboration"
-        }
-      ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled"
-    },
-    {
       "id": "vanner-liber-volatilium-rmvalcea-20260924",
       "event_id": "vanner-liber-volatilium-rmvalcea-20260924",
       "fingerprint": "5f400ce0cda9785ce5da",
+      "identity_key": "1aae5e5bf7527fb5c957",
       "story_id": null,
       "title": "Liber Volatilium",
       "category": "Teatru",
@@ -96,11 +62,17 @@
           "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
           "tier": "T2_CORROBORATED_BY_MONTHLY_CULTURAL_AGENDA",
           "role": "canonical_event_source"
+        },
+        {
+          "url": "https://festivalindex.com/ro-ro/events/47730-liber-volatilium-2026",
+          "tier": "T3",
+          "role": "independent_event_index_corroboration"
         }
       ],
       "checked_at": "2026-09-24T01:58:43+03:00",
       "status": "scheduled",
-      "canonical_source": "CIVORA_LOCAL_LIFE"
+      "canonical_source": "CIVORA_LOCAL_LIFE",
+      "reservation_phone": "0773 324 352"
     },
     {
       "id": "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
@@ -138,6 +110,7 @@
       "id": "raliul-valcii-start-festiv-mira-20260924",
       "event_id": "raliul-valcii-start-festiv-mira-20260924",
       "fingerprint": "88dc88879fe749e0bd00",
+      "identity_key": "5cfb7f1da44442e6939b",
       "story_id": null,
       "title": "Raliul Vâlcii 2026 — start festiv și concert MIRA",
       "category": "Sport / Concert",
@@ -229,44 +202,10 @@
       "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
-      "id": "liber-volatilium-2026-09-25",
-      "story_id": null,
-      "title": "Liber Volatilium",
-      "category": "Teatru",
-      "start": "2026-09-25T19:00:00+03:00",
-      "event_start": "2026-09-25",
-      "event_end": "2026-09-25",
-      "start_time": "19:00",
-      "doors_time": null,
-      "venue": "Teatrul Anton Pann",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "free",
-      "price": "Intrare liberă; rezervare necesară",
-      "ticket_url": null,
-      "reservation_url": null,
-      "reservation_phone": "0773 324 352",
-      "organiser": "Vanner Collective",
-      "source_url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
-      "source_tier": "T2",
-      "sources": [
-        {
-          "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
-          "tier": "T2",
-          "role": "local_listing_with_reservation_details"
-        },
-        {
-          "url": "https://festivalindex.com/ro-ro/events/47730-liber-volatilium-2026",
-          "tier": "T3",
-          "role": "independent_event_index_corroboration"
-        }
-      ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled"
-    },
-    {
       "id": "vanner-liber-volatilium-rmvalcea-20260925",
       "event_id": "vanner-liber-volatilium-rmvalcea-20260925",
       "fingerprint": "cf6b42564ff3dd777f7c",
+      "identity_key": "48217e36f602386f9b95",
       "story_id": null,
       "title": "Liber Volatilium",
       "category": "Teatru",
@@ -289,50 +228,23 @@
           "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
           "tier": "T2_CORROBORATED_BY_MONTHLY_CULTURAL_AGENDA",
           "role": "canonical_event_source"
+        },
+        {
+          "url": "https://festivalindex.com/ro-ro/events/47730-liber-volatilium-2026",
+          "tier": "T3",
+          "role": "independent_event_index_corroboration"
         }
       ],
       "checked_at": "2026-09-24T01:58:43+03:00",
       "status": "scheduled",
-      "canonical_source": "CIVORA_LOCAL_LIFE"
-    },
-    {
-      "id": "paralele-corale-2026-09-25",
-      "story_id": "filarmonica-valcea-septembrie-2026-program-20260818",
-      "title": "Paralele Corale",
-      "category": "Concert",
-      "start": "2026-09-25T19:00:00+03:00",
-      "event_start": "2026-09-25",
-      "event_end": "2026-09-25",
-      "start_time": "19:00",
-      "doors_time": null,
-      "venue": "Sala Lahovari",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "free",
-      "price": "Intrare liberă",
-      "ticket_url": null,
-      "reservation_url": null,
-      "organiser": "Filarmonica „Ion Dumitrescu” / Centrul Cultural Municipal Râmnicu Vâlcea",
-      "source_url": "https://filarmonica-valcea.ro/",
-      "source_tier": "T1",
-      "sources": [
-        {
-          "url": "https://filarmonica-valcea.ro/",
-          "tier": "T1",
-          "role": "organiser_listing"
-        },
-        {
-          "url": "https://curierulderamnic.ro/2026/09/22/paralele-corale-vineri-25-sept-2026-sala-lahovari-filarmonica-ion-dumitrescu-centrul-cultural-municipal-ramnicu-valcea/",
-          "tier": "T2",
-          "role": "price_and_time_corroboration"
-        }
-      ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled"
+      "canonical_source": "CIVORA_LOCAL_LIFE",
+      "reservation_phone": "0773 324 352"
     },
     {
       "id": "filarmonica-paralele-corale-20260925",
       "event_id": "filarmonica-paralele-corale-20260925",
       "fingerprint": "8a3bda51a30ee5075cd0",
+      "identity_key": "5ad692aa1bdaecc5cddf",
       "story_id": null,
       "title": "Paralele Corale",
       "category": "Concert Coral",
@@ -355,6 +267,16 @@
           "url": "https://filarmonica-valcea.ro/eveniment/paralele-corale/",
           "tier": "T1",
           "role": "canonical_event_source"
+        },
+        {
+          "url": "https://filarmonica-valcea.ro/",
+          "tier": "T1",
+          "role": "organiser_listing"
+        },
+        {
+          "url": "https://curierulderamnic.ro/2026/09/22/paralele-corale-vineri-25-sept-2026-sala-lahovari-filarmonica-ion-dumitrescu-centrul-cultural-municipal-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "price_and_time_corroboration"
         }
       ],
       "checked_at": "2026-09-24T00:31:00+03:00",
@@ -396,43 +318,10 @@
       "status": "scheduled"
     },
     {
-      "id": "floarea-darului-2026",
-      "story_id": "ramnicu-valcea-floarea-darurilor-20260926",
-      "title": "Floarea Darului",
-      "category": "Concert",
-      "start": "2026-09-26T19:00:00+03:00",
-      "event_start": "2026-09-26",
-      "event_end": "2026-09-26",
-      "start_time": "19:00",
-      "doors_time": null,
-      "venue": "Sala Lahovari",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "free",
-      "price": "Intrare liberă",
-      "ticket_url": null,
-      "reservation_url": null,
-      "organiser": "Filarmonica „Ion Dumitrescu” / Centrul Cultural Municipal Râmnicu Vâlcea",
-      "source_url": "https://filarmonica-valcea.ro/",
-      "source_tier": "T1",
-      "sources": [
-        {
-          "url": "https://filarmonica-valcea.ro/",
-          "tier": "T1",
-          "role": "organiser_listing"
-        },
-        {
-          "url": "https://curierulderamnic.ro/2026/09/22/floarea-darului-sambata-26-sept-2026-ora-19-00-sala-lahovari-filarmonica-ion-dumitrescu-centrul-cultural-municipal-ramnicu-valcea/",
-          "tier": "T2",
-          "role": "price_and_time_corroboration"
-        }
-      ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled"
-    },
-    {
       "id": "filarmonica-floarea-darului-20260926",
       "event_id": "filarmonica-floarea-darului-20260926",
       "fingerprint": "2b4c13f9fa26fbd1e563",
+      "identity_key": "4d8f65e5bcbfe3116f82",
       "story_id": null,
       "title": "Floarea Darului",
       "category": "Concert Coral / Muzică Veche",
@@ -455,6 +344,16 @@
           "url": "https://filarmonica-valcea.ro/eveniment/floarea-darului/",
           "tier": "T1",
           "role": "canonical_event_source"
+        },
+        {
+          "url": "https://filarmonica-valcea.ro/",
+          "tier": "T1",
+          "role": "organiser_listing"
+        },
+        {
+          "url": "https://curierulderamnic.ro/2026/09/22/floarea-darului-sambata-26-sept-2026-ora-19-00-sala-lahovari-filarmonica-ion-dumitrescu-centrul-cultural-municipal-ramnicu-valcea/",
+          "tier": "T2",
+          "role": "price_and_time_corroboration"
         }
       ],
       "checked_at": "2026-09-24T00:31:00+03:00",
@@ -535,6 +434,7 @@
       "id": "european-folk-day-salistea79-malaia-20260927",
       "event_id": "european-folk-day-salistea79-malaia-20260927",
       "fingerprint": "033c4ad65ffe63c44e12",
+      "identity_key": "d21dfea18e0c3ff8bfe0",
       "story_id": null,
       "title": "Săliștea 79. Între vis și suspendare",
       "category": "Patrimoniu / Gastronomie / Cultură",
@@ -635,6 +535,7 @@
       "id": "ariel-cantecul-de-lebada-20261002",
       "event_id": "ariel-cantecul-de-lebada-20261002",
       "fingerprint": "74d94719ce18b9acb20b",
+      "identity_key": "4f54d52b6e5a39be9612",
       "story_id": null,
       "title": "Cântecul de lebădă (premieră)",
       "category": "Teatru",
@@ -667,6 +568,7 @@
       "id": "ariel-cele-trei-gratii-20261009",
       "event_id": "ariel-cele-trei-gratii-20261009",
       "fingerprint": "b5cad65bcb3998a3d62e",
+      "identity_key": "20086d0d727fae8226c8",
       "story_id": null,
       "title": "Cele trei Grații",
       "category": "Teatru",
@@ -699,6 +601,7 @@
       "id": "ariel-talk-show-20261016",
       "event_id": "ariel-talk-show-20261016",
       "fingerprint": "9d2890dc705cf2815550",
+      "identity_key": "90cef894a4773c19bdb9",
       "story_id": null,
       "title": "Talk Show",
       "category": "Teatru",
@@ -730,11 +633,8 @@
   ],
   "canonical_local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "canonical_event_ids": [
-    "uap-fragmente-de-sine-20260924",
     "vanner-liber-volatilium-rmvalcea-20260924",
-    "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
     "raliul-valcii-start-festiv-mira-20260924",
-    "uap-startisti-valceni-20260925",
     "vanner-liber-volatilium-rmvalcea-20260925",
     "filarmonica-paralele-corale-20260925",
     "filarmonica-floarea-darului-20260926",
@@ -744,7 +644,8 @@
     "ariel-talk-show-20261016"
   ],
   "policy": {
-    "canonical_events_merge_by_event_id_and_fingerprint": true,
+    "canonical_events_merge_by_event_id_fingerprint_and_manifestation_identity": true,
+    "manifestation_identity_uses_title_date_time_locality_and_equivalent_venue": true,
     "freshness_fail_closed": true,
     "unknown_price_never_inferred": true,
     "provenance_required": true
