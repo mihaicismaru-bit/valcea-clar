@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-23T22:18:32.952201Z",
+  "updated_local": "2026-09-24T15:19:29.978428Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -38,7 +38,7 @@
           "tier": "T2"
         }
       ],
-      "published": "2026-09-24T01:13:06+03:00",
+      "published": "2026-09-24T01:18:32+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/dragasani-ct-radiologie-program-clarificare-20260924/",
@@ -68,7 +68,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-24T01:13:06+03:00",
+      "published": "2026-09-24T01:18:32+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/horezu-drum-vf-roman-inchis-20260926/",
@@ -484,39 +484,11 @@
       "archive_status": "active"
     },
     {
-      "id": "valcea-intrerupere-curent-2026-09-24-ionesti",
-      "section": "UTIL",
+      "id": "bujoreni-11-zidari-4582-6000-20260818",
+      "section": "LOCURI DE MUNCĂ",
       "priority": 1999986,
       "source_priority": 88,
       "canonical_rank": 14,
-      "headline": "Ioneşti: întrerupere de curent programată pe 24 septembrie 2026, între 09:00–17:00",
-      "dek": "Distribuție Oltenia include PTA Bucşani, PTA Foteşti, PTA Guguianca în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
-      "paragraphs": [
-        "Zona indicată în documentul oficial este PTA Bucşani, PTA Foteşti, PTA Guguianca.",
-        "Distribuție Oltenia a programat o întrerupere a alimentării cu energie electrică în Ioneşti, pe 24 septembrie 2026, între orele 09:00 și 17:00."
-      ],
-      "sources": [
-        {
-          "name": "Distribuție Oltenia — întreruperi programate Vâlcea",
-          "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Fseptembrie%2F21.09-27.09%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2021_09%20-%2027_09_2026%20-%20Valcea.pdf",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-09-14T16:48:58+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-24-ionesti/",
-      "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
-    },
-    {
-      "id": "bujoreni-11-zidari-4582-6000-20260818",
-      "section": "LOCURI DE MUNCĂ",
-      "priority": 1999985,
-      "source_priority": 88,
-      "canonical_rank": 15,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -547,7 +519,7 @@
       "section": "UTILITAR",
       "priority": 1000000,
       "source_priority": 98,
-      "canonical_rank": 16,
+      "canonical_rank": 15,
       "headline": "Restricții de circulație anunțate la Călimănești, pentru lucrări la trotuare",
       "dek": "AS TRANS anunță restricții temporare de la 22 septembrie, pe un sector de 400 de metri. Informarea nu precizează durata lucrărilor sau o închidere integrală.",
       "paragraphs": [
@@ -575,7 +547,7 @@
       "section": "ECONOMIE",
       "priority": 999999,
       "source_priority": 93,
-      "canonical_rank": 17,
+      "canonical_rank": 16,
       "headline": "Șomajul urcă la 3,03%. Aproape două treimi dintre cei înregistrați sunt din mediul rural",
       "dek": "Curierul de Vâlcea publică date atribuite AJOFM: 4.214 șomeri înregistrați la sfârșitul lui august, dintre care 2.768 în mediul rural.",
       "paragraphs": [
@@ -602,7 +574,7 @@
       "section": "ACTUALITATE",
       "priority": 999998,
       "source_priority": 91,
-      "canonical_rank": 18,
+      "canonical_rank": 17,
       "headline": "Două incendii de vegetație, zeci de hectare afectate",
       "dek": "Relatările din 21 septembrie indică aproximativ 35–40 de hectare afectate la Tetoiu și circa 10 la Oteșani. Informațiile descriu situația raportată luni.",
       "paragraphs": [
@@ -633,7 +605,7 @@
       "section": "COMUNITATE",
       "priority": 999997,
       "source_priority": 89,
-      "canonical_rank": 19,
+      "canonical_rank": 18,
       "headline": "Copiii pregătesc a treia ediție a Zilei Recoltei",
       "dek": "Grupul Catehetic „Sfântul Nectarie” pregătește decorațiuni și un program artistic pentru a treia ediție. Data evenimentului nu este precizată în informare.",
       "paragraphs": [
@@ -660,7 +632,7 @@
       "section": "SPORT",
       "priority": 999996,
       "source_priority": 86,
-      "canonical_rank": 20,
+      "canonical_rank": 19,
       "headline": "SCM Râmnicu Vâlcea câștigă acasă după o revenire în repriza a doua",
       "dek": "SCM a învins FC Bihor cu 3–2, după ce era condusă la pauză, potrivit cronicii Curierului de Vâlcea. Lemac și Huiban au înscris în repriza a doua.",
       "paragraphs": [
@@ -687,7 +659,7 @@
       "section": "CULTURĂ",
       "priority": 999995,
       "source_priority": 83,
-      "canonical_rank": 21,
+      "canonical_rank": 20,
       "headline": "„Floarea Darurilor”, la Sala Lahovari",
       "dek": "Arhiepiscopia Râmnicului anunță concertul pentru sâmbătă, 26 septembrie, la ora 19:00. Condițiile de acces trebuie verificate la organizatori.",
       "paragraphs": [
@@ -713,7 +685,7 @@
       "section": "UTILITAR",
       "priority": 999994,
       "source_priority": 82,
-      "canonical_rank": 22,
+      "canonical_rank": 21,
       "headline": "Anunț nou pentru un post de contabil-șef",
       "dek": "Primăria Călimănești a publicat un anunț de concurs pentru postul de contabil-șef. Termenul și condițiile din atașament nu au fost verificate.",
       "paragraphs": [
@@ -739,7 +711,7 @@
       "section": "URGENȚE",
       "priority": 999993,
       "source_priority": 97,
-      "canonical_rank": 24,
+      "canonical_rank": 23,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -765,7 +737,7 @@
       "section": "URGENȚE",
       "priority": 999992,
       "source_priority": 97,
-      "canonical_rank": 23,
+      "canonical_rank": 22,
       "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -791,7 +763,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999991,
       "source_priority": 96,
-      "canonical_rank": 25,
+      "canonical_rank": 24,
       "headline": "IPJ Vâlcea: REȚINUT PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 05.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -818,7 +790,7 @@
       "section": "MOBILITATE",
       "priority": 999990,
       "source_priority": 92,
-      "canonical_rank": 33,
+      "canonical_rank": 32,
       "headline": "11 microbuze electrice sunt transferate către opt localități din Vâlcea",
       "dek": "HCL 312 împarte 11 microbuze, 11 stații lente și 5 stații rapide cumpărate prin PNRR. Furnizorul contractului de achiziție este BMC Trucks & Bus S.A., iar predarea către UAT-uri trebuie făcută în cel mult 15 zile.",
       "paragraphs": [
@@ -852,7 +824,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999989,
       "source_priority": 92,
-      "canonical_rank": 32,
+      "canonical_rank": 31,
       "headline": "Bunurile cumpărate prin proiectele de transport sunt puse la dispoziția ETA, iar contractul de delegare este modificat",
       "dek": "HCL 311 introduce în contractul de delegare nr. 17/28.05.2026 bunurile cumpărate prin proiectul de extindere a transportului spre zonele turistice și bunurile puse la dispoziția ETA de UAT-urile partenere. Votul a fost unanim.",
       "paragraphs": [
@@ -886,7 +858,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999988,
       "source_priority": 92,
-      "canonical_rank": 31,
+      "canonical_rank": 30,
       "headline": "Primăria ia avocați externi într-un proces pentru daune morale. Cine a dat în judecată Municipiul și DAS",
       "dek": "HCL 310 autorizează reprezentare juridică externă în dosarul 8244/288/2026. Dosarul este o acțiune în răspundere delictuală aflată pe fond la Judecătoria Râmnicu Vâlcea, iar hotărârea locală precizează că sunt solicitate daune morale.",
       "paragraphs": [
@@ -928,7 +900,7 @@
       "section": "BANI PUBLICI",
       "priority": 999987,
       "source_priority": 92,
-      "canonical_rank": 30,
+      "canonical_rank": 29,
       "headline": "Municipiul și Consiliul Județean se asociază pentru susținerea SCM Râmnicu Vâlcea în 2026",
       "dek": "HCL 309 aprobă asocierea dintre municipiu și județ pentru sportul de performanță derulat prin Sport Club Municipal Râmnicu Vâlcea și aprobă modelul contractului pe care primarul îl poate semna. Suma contribuțiilor nu este stabilită în corpul hotărârii.",
       "paragraphs": [
@@ -961,7 +933,7 @@
       "section": "BANI PUBLICI",
       "priority": 999986,
       "source_priority": 92,
-      "canonical_rank": 29,
+      "canonical_rank": 28,
       "headline": "Râmnicu Vâlcea introduce 990.000 lei din creditul Băncii Transilvania în bugetul de investiții din 2026",
       "dek": "HCL 308 mărește bugetul creditelor interne pe 2026 de la 10 milioane la 10,99 milioane lei. Documentul arată și noul calendar al tragerilor din finanțarea de 40 milioane lei contractată de la Banca Transilvania pe 10 ani.",
       "paragraphs": [
@@ -995,7 +967,7 @@
       "section": "BANI PUBLICI",
       "priority": 999985,
       "source_priority": 92,
-      "canonical_rank": 28,
+      "canonical_rank": 27,
       "headline": "730.000 lei din împrumutul municipal sunt mutați către parcarea etajată din Nord",
       "dek": "HCL 307 redistribuie bani în interiorul împrumutului de 40 milioane lei: scade finanțarea pentru locuințele de tineri și cu 1.400 lei pentru Școala Copăcelu, iar parcarea etajată din Nord ajunge la 10,286 milioane lei din împrumut.",
       "paragraphs": [
@@ -1029,7 +1001,7 @@
       "section": "SERVICII",
       "priority": 999984,
       "source_priority": 92,
-      "canonical_rank": 27,
+      "canonical_rank": 26,
       "headline": "Căldura se scumpește cu 13% la Râmnicu Vâlcea. Factura populației rămâne neschimbată, Primăria acoperă diferența",
       "dek": "HCL 306 ridică de la 1 august 2026 costul total al energiei termice pe rețeaua de distribuție de la 518,61 la 586,27 lei/MWh, fără TVA. Prețul facturat populației rămâne 475,62 lei/MWh, iar bugetul local preia o diferență de 110,65 lei/MWh.",
       "paragraphs": [
@@ -1066,7 +1038,7 @@
       "section": "SERVICII",
       "priority": 999983,
       "source_priority": 92,
-      "canonical_rank": 26,
+      "canonical_rank": 25,
       "headline": "CET Govora primește dreptul de a cumpăra integral energia termică de la alți producători",
       "dek": "HCL 305 rescrie actul adițional la concesiune după ce CET Govora a refuzat forma din iunie. Documentul leagă schimbarea de oprirea grupurilor pe lignit la 31 august 2026 și de faptul că noua centrală a CJ era estimată să devină operațională cel mai devreme la 15 octombrie 2026.",
       "paragraphs": [
@@ -1101,7 +1073,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999982,
       "source_priority": 91,
-      "canonical_rank": 35,
+      "canonical_rank": 34,
       "headline": "5 hotărâri pentru autorizații anuale de jocuri de noroc în cea mai recentă serie analizată a Consiliului Local Râmnicu Vâlcea",
       "dek": "În registrul oficial, 5 dintre cele mai recente 25 de hotărâri din 31.08.2026 privesc autorizații anuale de funcționare pentru jocuri de noroc; ele nu sunt tratate automat drept tot atâtea săli noi.",
       "paragraphs": [
@@ -1148,7 +1120,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999981,
       "source_priority": 91,
-      "canonical_rank": 34,
+      "canonical_rank": 33,
       "headline": "5 hotărâri pentru autorizații anuale de jocuri de noroc în cea mai recentă serie analizată a Consiliului Local Râmnicu Vâlcea",
       "dek": "În registrul oficial, 5 dintre cele mai recente 25 de hotărâri din 23.07.2026 privesc autorizații anuale de funcționare pentru jocuri de noroc; ele nu sunt tratate automat drept tot atâtea săli noi.",
       "paragraphs": [
@@ -1191,11 +1163,37 @@
       "archive_status": "published_archive"
     },
     {
-      "id": "valcea-intrerupere-curent-2026-09-23-ladesti",
+      "id": "valcea-intrerupere-curent-2026-09-24-ionesti",
       "section": "UTIL",
       "priority": 999980,
       "source_priority": 88,
       "canonical_rank": 40,
+      "headline": "Ioneşti: întrerupere de curent programată pe 24 septembrie 2026, între 09:00–17:00",
+      "dek": "Distribuție Oltenia include PTA Bucşani, PTA Foteşti, PTA Guguianca în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
+      "paragraphs": [
+        "Zona indicată în documentul oficial este PTA Bucşani, PTA Foteşti, PTA Guguianca.",
+        "Distribuție Oltenia a programat o întrerupere a alimentării cu energie electrică în Ioneşti, pe 24 septembrie 2026, între orele 09:00 și 17:00."
+      ],
+      "sources": [
+        {
+          "name": "Distribuție Oltenia — întreruperi programate Vâlcea",
+          "url": "https://www.distributieoltenia.ro/resources/ckfinder/core/connector/php/connector.php?command=Proxy&lang=en&type=Files&currentFolder=%2FDO%2FINTRERUPERI%20PROGRAMATE%2F2026%2Fseptembrie%2F21.09-27.09%2F&hash=b6aa3f17237de08c&fileName=Lucrari%20pentru%20prevenire%20si%20corectare%20avarii%20-%20saptamana%2021_09%20-%2027_09_2026%20-%20Valcea.pdf"
+        }
+      ],
+      "published": "2026-09-14T16:48:58+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/valcea-intrerupere-curent-2026-09-24-ionesti/",
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "published_archive"
+    },
+    {
+      "id": "valcea-intrerupere-curent-2026-09-23-ladesti",
+      "section": "UTIL",
+      "priority": 999979,
+      "source_priority": 88,
+      "canonical_rank": 39,
       "headline": "Lădeşti: întrerupere de curent programată pe 23 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Găgeni 1, PTA Găgeni 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1219,9 +1217,9 @@
     {
       "id": "valcea-intrerupere-curent-2026-09-22-horezu",
       "section": "UTIL",
-      "priority": 999979,
+      "priority": 999978,
       "source_priority": 88,
-      "canonical_rank": 39,
+      "canonical_rank": 38,
       "headline": "Horezu: întrerupere de curent programată pe 22 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTCZ Bloc O2-O3 Horezu în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1245,9 +1243,9 @@
     {
       "id": "valcea-intrerupere-curent-2026-09-21-budesti",
       "section": "UTIL",
-      "priority": 999978,
+      "priority": 999977,
       "source_priority": 88,
-      "canonical_rank": 38,
+      "canonical_rank": 37,
       "headline": "Budeşti: întrerupere de curent programată pe 21 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA IAS Budeşti, PTA Satul Nou Racoviţa, PTAB Budeşti 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1271,9 +1269,9 @@
     {
       "id": "scm-program-b77962d4af149f60d7e6",
       "section": "SPORT",
-      "priority": 999977,
+      "priority": 999976,
       "source_priority": 88,
-      "canonical_rank": 37,
+      "canonical_rank": 36,
       "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -1297,9 +1295,9 @@
     {
       "id": "ramnicu-parcare-nord-20260904",
       "section": "ACTUALITATE",
-      "priority": 999976,
+      "priority": 999975,
       "source_priority": 88,
-      "canonical_rank": 36,
+      "canonical_rank": 35,
       "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
       "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
       "paragraphs": [
@@ -1330,7 +1328,7 @@
     {
       "id": "ramnicu-uap-atelier-35-artex-20260904",
       "section": "CULTURĂ",
-      "priority": 999975,
+      "priority": 999974,
       "source_priority": 82,
       "canonical_rank": 42,
       "headline": "Două evenimente culturale la Râmnicu Vâlcea pe 4 septembrie: «Atelier 35» la Cozia, apoi expoziție și lansare la Artex",
@@ -1357,7 +1355,7 @@
     {
       "id": "apavil-joburi-septembrie-2026",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 999974,
+      "priority": 999973,
       "source_priority": 82,
       "canonical_rank": 41,
       "headline": "APAVIL caută trei oameni: două posturi de inginer și un post de încasator-cititor",
@@ -1394,7 +1392,7 @@
     {
       "id": "valcea-romsilva-pnrr-torenti-20260831",
       "section": "JUDEȚ",
-      "priority": 999973,
+      "priority": 999972,
       "source_priority": 78,
       "canonical_rank": 44,
       "headline": "Romsilva: toate cele 19 lucrări PNRR împotriva viiturilor, într-un proiect care include Vâlcea, au fost finalizate",
@@ -1425,7 +1423,7 @@
     {
       "id": "baile-govora-conferinta-inrmfb-16-19-septembrie-2026",
       "section": "EVENIMENTE",
-      "priority": 999972,
+      "priority": 999971,
       "source_priority": 78,
       "canonical_rank": 43,
       "headline": "Băile Govora găzduiește Conferința Națională INRMFB între 16 și 19 septembrie",
@@ -1453,7 +1451,7 @@
     {
       "id": "ramnicu-fissura-lucis-casa-simian-20260903",
       "section": "CULTURĂ",
-      "priority": 999971,
+      "priority": 999970,
       "source_priority": 0,
       "canonical_rank": 48,
       "headline": "„FISSURA LUCIS” la Casa Simian: vernisaj programat pe 3 septembrie, la ora 17:00",
@@ -1484,7 +1482,7 @@
     {
       "id": "horezu-autobuze-electrice-energie-verde-20260903",
       "section": "MOBILITATE",
-      "priority": 999970,
+      "priority": 999969,
       "source_priority": 0,
       "canonical_rank": 46,
       "headline": "Horezu pregătește patru autobuze electrice și două centrale solare de câte 400 kW. Ce arată documentele",
@@ -1525,7 +1523,7 @@
     {
       "id": "balcesti-incendiu-vegetatie-15ha-20260902",
       "section": "SIGURANȚĂ",
-      "priority": 999969,
+      "priority": 999968,
       "source_priority": 0,
       "canonical_rank": 45,
       "headline": "Incendiu de vegetație la Bălcești: aproximativ 15 hectare de teren au fost afectate",
@@ -1552,7 +1550,7 @@
     {
       "id": "babeni-izvorul-dorului-program-20260903",
       "section": "EVENIMENTE",
-      "priority": 999968,
+      "priority": 999967,
       "source_priority": 0,
       "canonical_rank": 47,
       "headline": "Băbeni începe patru zile de Festival «La Izvorul Dorului»: fotbal joi, concerte și paradă până duminică",
@@ -1588,7 +1586,7 @@
     {
       "id": "valcea-apa-canal-contract-152m-20260902",
       "section": "JUDEȚ",
-      "priority": 999967,
+      "priority": 999966,
       "source_priority": 93,
       "canonical_rank": 49,
       "headline": "APAVIL precizează valoarea contractului pentru apă și canalizare din Vâlcea: 931,7 milioane lei",
@@ -1615,7 +1613,7 @@
     {
       "id": "maciuca-ziua-regalitatii-2027-colocviu-bjai-20260827",
       "section": "CULTURĂ",
-      "priority": 999966,
+      "priority": 999965,
       "source_priority": 0,
       "canonical_rank": 50,
       "headline": "Măciuca, anunțată drept gazda Zilei Regalității 2027 după colocviul de la Biblioteca Vâlcea",
@@ -1647,7 +1645,7 @@
     {
       "id": "ramnicu-valcea-remus-bellu-incendiu-autobuz-20260822",
       "section": "ACTUALITATE",
-      "priority": 999965,
+      "priority": 999964,
       "source_priority": 0,
       "canonical_rank": 52,
       "headline": "Incendiul de pe strada Remus Bellu: un autobuz și o autoutilitară au fost distruse. Nu au fost raportate victime",
@@ -1675,7 +1673,7 @@
     {
       "id": "dn7-valea-oltului-restrictii-august-20260824",
       "section": "SERVICII",
-      "priority": 999964,
+      "priority": 999963,
       "source_priority": 0,
       "canonical_rank": 51,
       "headline": "DN7, Valea Oltului: restricțiile pentru vehiculele de peste 7,5 tone rămân până la sfârșitul lui august",
@@ -1703,7 +1701,7 @@
     {
       "id": "cantecele-oltului-2026-parada-concurs-20260822",
       "section": "EVENIMENTE",
-      "priority": 999963,
+      "priority": 999962,
       "source_priority": 0,
       "canonical_rank": 54,
       "headline": "Cântecele Oltului 2026: jurizarea, premierea și gala închid festivalul pe 23 august la Călimănești",
@@ -1736,7 +1734,7 @@
     {
       "id": "buila-vanturarita-accident-20260822",
       "section": "ACTUALITATE",
-      "priority": 999962,
+      "priority": 999961,
       "source_priority": 0,
       "canonical_rank": 53,
       "headline": "Accident mortal în Buila–Vânturarița: o mașină a căzut circa 300 de metri într-o prăpastie",
@@ -1768,7 +1766,7 @@
     {
       "id": "supercupa-damila-pietrari-20260822",
       "section": "SPORT",
-      "priority": 999961,
+      "priority": 999960,
       "source_priority": 0,
       "canonical_rank": 55,
       "headline": "Supercupa Damila deschide sezonul județean la Pietrari. AJF Vâlcea afișează ora 11:00 pentru 22 august",
@@ -1800,7 +1798,7 @@
     {
       "id": "cet-govora-cine-a-decis-oprirea-20260821",
       "section": "ENERGIE",
-      "priority": 999960,
+      "priority": 999959,
       "source_priority": 100,
       "canonical_rank": 56,
       "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
@@ -1844,7 +1842,7 @@
     {
       "id": "arutela-restaurare-controversa-pnrr-20260820",
       "section": "PATRIMONIU",
-      "priority": 999959,
+      "priority": 999958,
       "source_priority": 98,
       "canonical_rank": 57,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
@@ -1886,7 +1884,7 @@
     {
       "id": "gutau-mocanu-stefania-uta-cetatean-onoare-20260820",
       "section": "ADMINISTRAȚIE",
-      "priority": 999958,
+      "priority": 999957,
       "source_priority": 96,
       "canonical_rank": 58,
       "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
@@ -1933,7 +1931,7 @@
     {
       "id": "open-air-blues-brezoi-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999957,
+      "priority": 999956,
       "source_priority": 99,
       "canonical_rank": 60,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
@@ -2028,7 +2026,7 @@
     {
       "id": "musiclover-festival-2026-dosar-complet-20260818",
       "section": "EVENIMENTE",
-      "priority": 999956,
+      "priority": 999955,
       "source_priority": 99,
       "canonical_rank": 59,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
@@ -2084,7 +2082,7 @@
     {
       "id": "jazz-cave-festival-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999955,
+      "priority": 999954,
       "source_priority": 98,
       "canonical_rank": 63,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
@@ -2133,7 +2131,7 @@
     {
       "id": "deep-forest-fest-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999954,
+      "priority": 999953,
       "source_priority": 98,
       "canonical_rank": 62,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
@@ -2208,7 +2206,7 @@
     {
       "id": "bikers-for-humanity-rock-fest-2026-review-20260818",
       "section": "EVENIMENTE",
-      "priority": 999953,
+      "priority": 999952,
       "source_priority": 98,
       "canonical_rank": 61,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
@@ -2260,7 +2258,7 @@
     {
       "id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "section": "CULTURĂ",
-      "priority": 999952,
+      "priority": 999951,
       "source_priority": 97,
       "canonical_rank": 65,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
@@ -2305,7 +2303,7 @@
     {
       "id": "fii-cool-la-cule-2026-review-bani-publici-20260818",
       "section": "EVENIMENTE",
-      "priority": 999951,
+      "priority": 999950,
       "source_priority": 97,
       "canonical_rank": 64,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
@@ -2353,7 +2351,7 @@
     {
       "id": "teatrele-valcii-ariel-anton-pann-2026-dosar-20260818",
       "section": "CULTURĂ",
-      "priority": 999950,
+      "priority": 999949,
       "source_priority": 96,
       "canonical_rank": 68,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
@@ -2422,7 +2420,7 @@
     {
       "id": "invartita-dorului-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999949,
+      "priority": 999948,
       "source_priority": 96,
       "canonical_rank": 67,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
@@ -2471,7 +2469,7 @@
     {
       "id": "cocosul-de-hurez-2026-dosar-20260818",
       "section": "EVENIMENTE",
-      "priority": 999948,
+      "priority": 999947,
       "source_priority": 96,
       "canonical_rank": 66,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
@@ -2519,7 +2517,7 @@
     {
       "id": "scm-program-fdbf66a4a5bb7ef4f69b",
       "section": "SPORT",
-      "priority": 999947,
+      "priority": 999946,
       "source_priority": 0,
       "canonical_rank": 69,
       "headline": "CSM Ramnicu Valcea – FC Bacau: meci programat pe 22 august 2026, de la 11:00",
@@ -2545,7 +2543,7 @@
     {
       "id": "alert-fdfdb85a579432f385f7",
       "section": "MOBILITATE",
-      "priority": 999946,
+      "priority": 999945,
       "source_priority": 0,
       "canonical_rank": 71,
       "headline": "DN 7, 17 august 2026: INFOTRAFIC a semnalat trafic alternativ",
@@ -2571,7 +2569,7 @@
     {
       "id": "alert-1cd2159b942ec2b672f7",
       "section": "MOBILITATE",
-      "priority": 999945,
+      "priority": 999944,
       "source_priority": 0,
       "canonical_rank": 70,
       "headline": "DN 7, 17 august 2026: 2 victime într-un incident rutier semnalat de INFOTRAFIC",
@@ -2598,7 +2596,7 @@
     {
       "id": "florile-govorei-20260816",
       "section": "CULTURĂ",
-      "priority": 999944,
+      "priority": 999943,
       "source_priority": 0,
       "canonical_rank": 72,
       "headline": "Florile Govorei 2026: ediția a 55-a, în 15–16 august",
@@ -2623,7 +2621,7 @@
     {
       "id": "musiclover-green-day-20260815",
       "section": "EVENIMENTE",
-      "priority": 999943,
+      "priority": 999942,
       "source_priority": 0,
       "canonical_rank": 73,
       "headline": "Musiclover Festival 2026 la Fețeni: programul celor trei zile, artiștii și accesul",
@@ -2662,7 +2660,7 @@
     {
       "id": "luminos-fest-zavoi-20260815",
       "section": "EVENIMENTE",
-      "priority": 999942,
+      "priority": 999941,
       "source_priority": 0,
       "canonical_rank": 74,
       "headline": "Luminos Fest 2026 în Parcul Zăvoi: lampioane, ateliere și intrare liberă",
@@ -2688,7 +2686,7 @@
     {
       "id": "scm-valcea-slatina-20260815",
       "section": "SPORT",
-      "priority": 999941,
+      "priority": 999940,
       "source_priority": 0,
       "canonical_rank": 75,
       "headline": "SCM Râmnicu Vâlcea – CSM Slatina, partida programată la 15 august 2026",
@@ -2730,7 +2728,6 @@
     "cj-valcea-cocos-rajdp-mandat-guvernanta-20260818",
     "valcea-intrerupere-curent-2026-09-26-daesti",
     "valcea-intrerupere-curent-2026-09-25-baile-govora",
-    "valcea-intrerupere-curent-2026-09-24-ionesti",
     "bujoreni-11-zidari-4582-6000-20260818"
   ],
   "archive_story_ids": [
@@ -2754,6 +2751,7 @@
     "rm-valcea-hcl-305-20260814",
     "rm-valcea-gambling-authorizations-20260831",
     "rm-valcea-gambling-authorizations-20260723",
+    "valcea-intrerupere-curent-2026-09-24-ionesti",
     "valcea-intrerupere-curent-2026-09-23-ladesti",
     "valcea-intrerupere-curent-2026-09-22-horezu",
     "valcea-intrerupere-curent-2026-09-21-budesti",
