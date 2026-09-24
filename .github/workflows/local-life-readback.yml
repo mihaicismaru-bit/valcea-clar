@@ -54,12 +54,16 @@ jobs:
                   if marker and marker not in sport_html:
                       raise SystemExit(f'SPORT READBACK MISSING {marker!r}')
           # Explicit regression gate for the corrected 30 September fixture.
+          # Match the semantic fields as rendered by sports_page(): day/month/time
+          # are separate HTML elements, not one prose date string.
           corrected=next((row for row in future if row.get('id')=='handbal-scm-craiova-20260930'),None)
           if corrected:
-              required=['SCM Râmnicu Vâlcea','SCM Universitatea Craiova','30 septembrie 2026, 17:00']
+              required=['SCM Râmnicu Vâlcea','SCM Universitatea Craiova','<strong>30</strong>','<span>SEP</span>','<small>17:00</small>']
               for marker in required:
                   if marker not in sport_html:
                       raise SystemExit(f'SPORT CORRECTION READBACK MISSING {marker!r}')
+              if 'Rapid București' in sport_html and '30</strong><span>SEP' in sport_html:
+                  raise SystemExit('SPORT REGRESSION: stale Rapid fixture still appears on 30 September')
 
           menu_html=fetch('/unde-iesim/meniul-zilei/')
           today_menus=[row for row in data.get('daily_menus',[]) if str(row.get('date'))==today and str(row.get('status'))=='verified']
