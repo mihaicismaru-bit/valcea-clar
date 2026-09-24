@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 from datetime import datetime, timedelta
+from email.utils import format_datetime
 from zoneinfo import ZoneInfo
 from urllib.parse import quote
 import html
@@ -394,6 +395,7 @@ def shell(title, body, desc='Știri locale verificate din Vâlcea.', canonical_p
 <meta name="description" content="{h(desc)}">
 {robots}
 <link rel="canonical" href="{h(canonical)}">
+<link rel="alternate" type="application/rss+xml" title="VÂLCEA CLAR RSS" href="{u("/rss.xml")}">
 <meta property="og:site_name" content="VÂLCEA CLAR">
 <meta property="og:title" content="{h(title)}">
 <meta property="og:description" content="{h(desc)}">
@@ -455,11 +457,70 @@ def local_today():
     return datetime.now(LOCAL_TZ).date().isoformat()
 
 
+def local_now():
+    return datetime.now(LOCAL_TZ)
+
+
+def event_is_upcoming(event, now=None):
+    now = now or local_now()
+    if str(event.get('status') or '').lower() in {'cancelled', 'past'}:
+        return False
+    raw_start = str(event.get('start') or '').strip()
+    start = parse_dt(raw_start)
+    if not start:
+        return False
+    start = start.astimezone(LOCAL_TZ)
+    end = parse_dt(event.get('end') or event.get('event_end'))
+    if end:
+        return end.astimezone(LOCAL_TZ) >= now
+    if 'T' not in raw_start and ' ' not in raw_start:
+        return start.date() >= now.date()
+    return start >= now
+
+
+def screening_future_times(row, now=None):
+    now = now or local_now()
+    date_value = str(row.get('date') or '')
+    if not date_value:
+        return []
+    if date_value < now.date().isoformat():
+        return []
+    times = [str(value) for value in (row.get('times') or []) if str(value).strip()]
+    if date_value > now.date().isoformat():
+        return times
+    future = []
+    for value in times:
+        try:
+            candidate = datetime.fromisoformat(f'{date_value}T{value}').replace(tzinfo=LOCAL_TZ)
+        except ValueError:
+            continue
+        if candidate >= now:
+            future.append(value)
+    return future
+
+
+def menu_is_current(row, now=None):
+    now = now or local_now()
+    if str(row.get('date') or '') != now.date().isoformat() or str(row.get('status') or '') != 'verified':
+        return False
+    window = str(row.get('service_window') or '').strip()
+    if not window:
+        return True
+    normalized = window.replace('—', '-').replace('–', '-')
+    if '-' not in normalized:
+        return True
+    end_value = normalized.rsplit('-', 1)[-1].strip()
+    try:
+        end = datetime.fromisoformat(f'{now.date().isoformat()}T{end_value}').replace(tzinfo=LOCAL_TZ)
+    except ValueError:
+        return True
+    return end >= now
+
+
 def next_event():
     rows = [
         event for event in events
-        if str(event.get('status') or '').lower() not in {'cancelled', 'past'}
-        and parse_dt(event.get('start'))
+        if event_is_upcoming(event)
         and str(event.get('category') or '').lower() != 'sport'
     ]
     rows.sort(key=lambda event: parse_dt(event.get('start')))
@@ -471,6 +532,7 @@ def next_sport():
         item for item in sports
         if str(item.get('status') or '').lower() == 'scheduled'
         and parse_dt(item.get('start'))
+        and parse_dt(item.get('start')).astimezone(LOCAL_TZ) >= local_now()
     ]
     rows.sort(key=lambda item: parse_dt(item.get('start')))
     return rows[0] if rows else None
@@ -499,8 +561,12 @@ def home_local_life():
     today = local_today()
     event = next_event()
     sport = next_sport()
-    today_screenings = [row for row in cinema.get('screenings', []) if str(row.get('date')) == today]
-    today_menus = [row for row in daily_menus if str(row.get('date')) == today and str(row.get('status')) == 'verified']
+    today_screenings = [
+        {**row, 'times': screening_future_times(row)}
+        for row in cinema.get('screenings', [])
+        if str(row.get('date')) == today and screening_future_times(row)
+    ]
+    today_menus = [row for row in daily_menus if menu_is_current(row)]
 
     tiles = []
 
@@ -713,11 +779,7 @@ def event_card(event):
 
 
 def event_discovery_page():
-    upcoming = [
-        event for event in events
-        if str(event.get('status') or '').lower() not in {'cancelled', 'past'}
-        and event_dt(event)
-    ]
+    upcoming = [event for event in events if event_is_upcoming(event)]
     upcoming.sort(key=lambda event: event_dt(event))
     categories = []
     for event in upcoming:
@@ -779,7 +841,7 @@ def event_discovery_page():
 
 
 def sports_page():
-    rows = [item for item in sports if parse_dt(item.get('start')) and str(item.get('status') or '') != 'past']
+    rows = [item for item in sports if parse_dt(item.get('start')) and str(item.get('status') or '') != 'past' and parse_dt(item.get('start')).astimezone(LOCAL_TZ) >= local_now()]
     rows.sort(key=lambda item: parse_dt(item.get('start')))
     cards = []
     for item in rows:
@@ -806,7 +868,11 @@ def sports_page():
 
 def cinema_page():
     venues = {str(v.get('id')): v for v in cinema.get('venues', [])}
-    screenings = list(cinema.get('screenings', []))
+    screenings = [
+        {**row, 'times': screening_future_times(row)}
+        for row in cinema.get('screenings', [])
+        if screening_future_times(row)
+    ]
     screenings.sort(key=lambda row: (str(row.get('date') or ''), str(row.get('film') or '')))
     dates = []
     for row in screenings:
@@ -858,7 +924,7 @@ def restaurants_page():
 
 def daily_menu_page():
     today = local_today()
-    rows = [row for row in daily_menus if str(row.get('date')) == today and str(row.get('status')) == 'verified']
+    rows = [row for row in daily_menus if menu_is_current(row)]
     if not rows:
         content = '<div class="empty-state"><strong>Nu avem încă meniuri verificate pentru azi.</strong><p>Pagina se actualizează dimineața și la prânz, numai din surse curente.</p></div>'
     else:
@@ -1078,6 +1144,36 @@ for article in news_articles:
     ])
 news_xml.append('</urlset>')
 (OUT / 'news-sitemap.xml').write_text(''.join(news_xml), encoding='utf-8')
+
+rss_items = []
+for article in articles[:50]:
+    published = parse_dt(article.get('published'))
+    if not published:
+        continue
+    url = SITE + '/stiri/' + article['id'] + '/'
+    rss_items.extend([
+        '<item>',
+        f'<title>{xh(article["headline"])}</title>',
+        f'<link>{xh(url)}</link>',
+        f'<guid isPermaLink="true">{xh(url)}</guid>',
+        f'<pubDate>{xh(format_datetime(published))}</pubDate>',
+        f'<description>{xh(article.get("dek") or "")}</description>',
+        '</item>',
+    ])
+rss_last_build = format_datetime(latest_published) if latest_published else ''
+rss_xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<rss version="2.0"><channel>',
+    '<title>VÂLCEA CLAR</title>',
+    f'<link>{SITE}</link>',
+    '<description>Știri locale verificate din județul Vâlcea.</description>',
+    '<language>ro</language>',
+]
+if rss_last_build:
+    rss_xml.append(f'<lastBuildDate>{xh(rss_last_build)}</lastBuildDate>')
+rss_xml.extend(rss_items)
+rss_xml.append('</channel></rss>')
+(OUT / 'rss.xml').write_text(''.join(rss_xml), encoding='utf-8')
 
 print(
     f'Built {len(unique_entries)} indexed routes; {len(news_articles)} Google News sitemap stories; '
