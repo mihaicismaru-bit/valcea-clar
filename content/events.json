@@ -396,42 +396,6 @@
       "status": "scheduled"
     },
     {
-      "id": "race-the-vibe-2026",
-      "story_id": null,
-      "title": "Race The Vibe 2026",
-      "category": "Sport",
-      "start": "2026-09-26T00:00:00+03:00",
-      "end": "2026-09-27T23:59:59+03:00",
-      "event_start": "2026-09-26",
-      "event_end": "2026-09-27",
-      "start_time": null,
-      "doors_time": null,
-      "venue": "Șerbăneasa / DJ 678A",
-      "locality": "Nicolae Bălcescu",
-      "price_status": "unknown",
-      "price": null,
-      "ticket_url": null,
-      "reservation_url": null,
-      "organiser": "Asociația Ride The Vibe / Club Sportiv Vâlcea / Consiliul Județean Vâlcea",
-      "source_url": "https://www.opiniavl.ro/2026/08/31/agenda-culturala-valceana/",
-      "source_tier": "T2",
-      "sources": [
-        {
-          "url": "https://www.opiniavl.ro/2026/08/31/agenda-culturala-valceana/",
-          "tier": "T2",
-          "role": "event_schedule_and_organisers"
-        },
-        {
-          "url": "https://seintamplainvalcea.ro/2026/09/23/restrictii-de-circulatie-la-nicolae-balcescu-pentru-race-the-vibe/",
-          "tier": "T2",
-          "role": "current_local_corroboration_with_date_typo"
-        }
-      ],
-      "checked_at": "2026-09-23T13:08:00+03:00",
-      "status": "scheduled",
-      "editorial_note": "Evenimentul 26–27 septembrie 2026 este verificat. Orele și restricțiile rutiere rămân excluse din inventar până la confirmare primară, deoarece relatarea locală din 23 septembrie conține o contradicție de an."
-    },
-    {
       "id": "european-folk-day-salistea79-malaia-20260927",
       "event_id": "european-folk-day-salistea79-malaia-20260927",
       "fingerprint": "033c4ad65ffe63c44e12",
