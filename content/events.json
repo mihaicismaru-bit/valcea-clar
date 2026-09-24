@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-24T00:47:33+03:00",
+  "updated_at": "2026-09-24T03:10:38+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
     {
@@ -71,6 +71,38 @@
       "status": "scheduled"
     },
     {
+      "id": "vanner-liber-volatilium-rmvalcea-20260924",
+      "event_id": "vanner-liber-volatilium-rmvalcea-20260924",
+      "fingerprint": "5f400ce0cda9785ce5da",
+      "story_id": null,
+      "title": "Liber Volatilium",
+      "category": "Teatru",
+      "start": "2026-09-24T19:00:00+03:00",
+      "event_start": "2026-09-24",
+      "event_end": "2026-09-24",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Studio, Teatrul Anton Pann",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "gratuit",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Vanner Collective / Teatrul Anton Pann (gazdă)",
+      "source_url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+      "source_tier": "T2_CORROBORATED_BY_MONTHLY_CULTURAL_AGENDA",
+      "sources": [
+        {
+          "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+          "tier": "T2_CORROBORATED_BY_MONTHLY_CULTURAL_AGENDA",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-24T01:58:43+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
       "id": "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
       "event_id": "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
       "fingerprint": "ff0b2d524d889fda7d5d",
@@ -100,6 +132,38 @@
       ],
       "checked_at": "2026-09-23T17:00:00+03:00",
       "status": "sold_out",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
+      "id": "raliul-valcii-start-festiv-mira-20260924",
+      "event_id": "raliul-valcii-start-festiv-mira-20260924",
+      "fingerprint": "88dc88879fe749e0bd00",
+      "story_id": null,
+      "title": "Raliul Vâlcii 2026 — start festiv și concert MIRA",
+      "category": "Sport / Concert",
+      "start": "2026-09-24T19:00:00+03:00",
+      "event_start": "2026-09-24",
+      "event_end": "2026-09-24",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Centrul Civic",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "unknown",
+      "price": null,
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Raliul Vâlcii Nurvil",
+      "source_url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+      "source_tier": "T1_ORGANISER",
+      "sources": [
+        {
+          "url": "https://raliulvalcii.ro/stiri/program-raliul-valcii-nurvil-2026/",
+          "tier": "T1_ORGANISER",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-24T01:58:43+03:00",
+      "status": "scheduled",
       "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
@@ -198,6 +262,38 @@
       ],
       "checked_at": "2026-09-23T13:08:00+03:00",
       "status": "scheduled"
+    },
+    {
+      "id": "vanner-liber-volatilium-rmvalcea-20260925",
+      "event_id": "vanner-liber-volatilium-rmvalcea-20260925",
+      "fingerprint": "cf6b42564ff3dd777f7c",
+      "story_id": null,
+      "title": "Liber Volatilium",
+      "category": "Teatru",
+      "start": "2026-09-25T19:00:00+03:00",
+      "event_start": "2026-09-25",
+      "event_end": "2026-09-25",
+      "start_time": "19:00",
+      "doors_time": null,
+      "venue": "Sala Studio, Teatrul Anton Pann",
+      "locality": "Râmnicu Vâlcea",
+      "price_status": "free",
+      "price": "gratuit",
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": "Vanner Collective / Teatrul Anton Pann (gazdă)",
+      "source_url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+      "source_tier": "T2_CORROBORATED_BY_MONTHLY_CULTURAL_AGENDA",
+      "sources": [
+        {
+          "url": "https://curierulderamnic.ro/2026/09/21/cand-toata-lumea-zboara-in-aceeasi-directie-cine-mai-alege-drumul-spectacolul-liber-volatilium-ajunge-la-ramnicu-valcea/",
+          "tier": "T2_CORROBORATED_BY_MONTHLY_CULTURAL_AGENDA",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-24T01:58:43+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
       "id": "paralele-corale-2026-09-25",
@@ -436,6 +532,38 @@
       "editorial_note": "Evenimentul 26–27 septembrie 2026 este verificat. Orele și restricțiile rutiere rămân excluse din inventar până la confirmare primară, deoarece relatarea locală din 23 septembrie conține o contradicție de an."
     },
     {
+      "id": "european-folk-day-salistea79-malaia-20260927",
+      "event_id": "european-folk-day-salistea79-malaia-20260927",
+      "fingerprint": "033c4ad65ffe63c44e12",
+      "story_id": null,
+      "title": "Săliștea 79. Între vis și suspendare",
+      "category": "Patrimoniu / Gastronomie / Cultură",
+      "start": "2026-09-27T11:00:00+03:00",
+      "event_start": "2026-09-27",
+      "event_end": "2026-09-27",
+      "start_time": "11:00",
+      "doors_time": null,
+      "venue": "Expoziția Fluierelor Lumii",
+      "locality": "Săliștea, Mălaia",
+      "price_status": "unknown",
+      "price": null,
+      "ticket_url": null,
+      "reservation_url": null,
+      "organiser": null,
+      "source_url": "https://www.europeanfolkday.eu/events/",
+      "source_tier": "T1_OFFICIAL_EVENT_NETWORK",
+      "sources": [
+        {
+          "url": "https://www.europeanfolkday.eu/events/",
+          "tier": "T1_OFFICIAL_EVENT_NETWORK",
+          "role": "canonical_event_source"
+        }
+      ],
+      "checked_at": "2026-09-24T03:04:45+03:00",
+      "status": "scheduled",
+      "canonical_source": "CIVORA_LOCAL_LIFE"
+    },
+    {
       "id": "violoncellissimo-2026-09-28",
       "story_id": "filarmonica-valcea-septembrie-2026-program-20260818",
       "title": "Clasic la puterea a treia — Violoncellissimo",
@@ -603,10 +731,14 @@
   "canonical_local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "canonical_event_ids": [
     "uap-fragmente-de-sine-20260924",
+    "vanner-liber-volatilium-rmvalcea-20260924",
     "ticketstore-o-noapte-furtunoasa-dragasani-20260924",
+    "raliul-valcii-start-festiv-mira-20260924",
     "uap-startisti-valceni-20260925",
+    "vanner-liber-volatilium-rmvalcea-20260925",
     "filarmonica-paralele-corale-20260925",
     "filarmonica-floarea-darului-20260926",
+    "european-folk-day-salistea79-malaia-20260927",
     "ariel-cantecul-de-lebada-20261002",
     "ariel-cele-trei-gratii-20261009",
     "ariel-talk-show-20261016"
