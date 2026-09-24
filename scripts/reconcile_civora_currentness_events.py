@@ -10,7 +10,9 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+import re
+import unicodedata
+from datetime import datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -144,6 +146,7 @@ def public_event(raw: dict) -> dict:
         "id": event_id,
         "event_id": event_id,
         "fingerprint": fingerprint,
+        "identity_key": raw.get("identity_key"),
         "story_id": None,
         "title": str(raw.get("title") or "").strip(),
         "category": str(raw.get("category") or "Eveniment").strip().title(),
@@ -185,11 +188,67 @@ def fresh_event(row: dict, now: datetime) -> bool:
     return True
 
 
+def norm_text(value) -> str:
+    text = unicodedata.normalize("NFKD", str(value or "").casefold())
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return " ".join(text.split())
+
+
+def semantic_core(row: dict) -> tuple[str, str, str, str]:
+    return (
+        norm_text(row.get("title")),
+        str(row.get("event_start") or "").strip(),
+        str(row.get("start_time") or "").strip(),
+        norm_text(row.get("locality")),
+    )
+
+
+def venue_equivalent(left, right) -> bool:
+    a = norm_text(left)
+    b = norm_text(right)
+    if not a or not b:
+        return True
+    if a == b:
+        return True
+    # Venue sources often alternate between a building and its room,
+    # e.g. "Teatrul Anton Pann" vs "Sala Studio, Teatrul Anton Pann".
+    return a in b or b in a
+
+
+def same_manifestation(left: dict, right: dict) -> bool:
+    if semantic_core(left) != semantic_core(right):
+        return False
+    return venue_equivalent(left.get("venue"), right.get("venue"))
+
+
+def merge_sources(primary: dict, duplicate: dict) -> dict:
+    merged = dict(primary)
+    seen = set()
+    sources = []
+    for source in list(primary.get("sources") or []) + list(duplicate.get("sources") or []):
+        if not isinstance(source, dict):
+            continue
+        url = str(source.get("url") or "").strip()
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        sources.append(source)
+    if sources:
+        merged["sources"] = sources
+    # Preserve useful access details from the legacy record when the canonical
+    # source does not yet carry them.
+    for field in ("ticket_url", "reservation_url", "reservation_phone", "doors_time"):
+        if not merged.get(field) and duplicate.get(field):
+            merged[field] = duplicate.get(field)
+    return merged
+
+
 def reconcile_events(existing: dict, canonical: dict, now: datetime) -> tuple[dict, list[str]]:
     old = [row for row in existing.get("events") or [] if isinstance(row, dict) and row.get("id")]
     by_id = {str(row["id"]): row for row in old}
     imported = []
-    fingerprints = {str(row.get("fingerprint")) for row in old if row.get("fingerprint")}
+
     for raw in canonical.get("events") or []:
         if not isinstance(raw, dict):
             continue
@@ -199,25 +258,58 @@ def reconcile_events(existing: dict, canonical: dict, now: datetime) -> tuple[di
             continue
         if not fresh_event(row, now):
             continue
-        fp = str(row.get("fingerprint") or "")
+
         event_id = str(row["id"])
-        duplicate_id = next((eid for eid, candidate in by_id.items() if str(candidate.get("fingerprint") or "") == fp and eid != event_id), None)
-        if duplicate_id:
+        fp = str(row.get("fingerprint") or "")
+        duplicate_ids = []
+        for eid, candidate in list(by_id.items()):
+            if eid == event_id:
+                continue
+            same_fp = bool(fp) and str(candidate.get("fingerprint") or "") == fp
+            if same_fp or same_manifestation(candidate, row):
+                row = merge_sources(row, candidate)
+                duplicate_ids.append(eid)
+        for duplicate_id in duplicate_ids:
             by_id.pop(duplicate_id, None)
+
         by_id[event_id] = row
-        fingerprints.add(fp)
         imported.append(event_id)
 
-    rows = list(by_id.values())
-    rows.sort(key=lambda row: (str(row.get("event_start") or "9999-12-31"), str(row.get("start_time") or "99:99"), str(row.get("title") or "")))
+    # Fail closed on exact residual duplicates even if both came from legacy
+    # inventory. Keep the fresher record and merge its source/access details.
+    deduped = []
+    for row in by_id.values():
+        match_index = next(
+            (i for i, candidate in enumerate(deduped) if same_manifestation(candidate, row)),
+            None,
+        )
+        if match_index is None:
+            deduped.append(row)
+            continue
+        current = deduped[match_index]
+        current_checked = parse_dt(current.get("checked_at"))
+        row_checked = parse_dt(row.get("checked_at"))
+        if row_checked and (not current_checked or row_checked > current_checked):
+            deduped[match_index] = merge_sources(row, current)
+        else:
+            deduped[match_index] = merge_sources(current, row)
+
+    deduped.sort(
+        key=lambda row: (
+            str(row.get("event_start") or "9999-12-31"),
+            str(row.get("start_time") or "99:99"),
+            str(row.get("title") or ""),
+        )
+    )
     result = dict(existing)
-    result["schema_version"] = "1.2"
+    result["schema_version"] = "1.3"
     result["updated_at"] = now.isoformat(timespec="seconds")
-    result["events"] = rows
+    result["events"] = deduped
     result["canonical_local_life_source"] = EVENTS_URL
     result["canonical_event_ids"] = imported
     result["policy"] = {
-        "canonical_events_merge_by_event_id_and_fingerprint": True,
+        "canonical_events_merge_by_event_id_fingerprint_and_manifestation_identity": True,
+        "manifestation_identity_uses_title_date_time_locality_and_equivalent_venue": True,
         "freshness_fail_closed": True,
         "unknown_price_never_inferred": True,
         "provenance_required": True,
@@ -257,15 +349,33 @@ def self_test() -> int:
     out, current, archive = reconcile_articles(articles, manifest)
     assert current == ["new"] and archive == ["old"]
     assert out["articles"][0]["id"] == "new" and out["articles"][1]["archive_only"] is True
+
     now = datetime(2026, 9, 23, 18, 0, tzinfo=TZ)
     canonical = {"events": [{
-        "event_id": "dragasani", "fingerprint": "fp", "title": "O noapte furtunoasă", "event_start": "2026-09-24", "start_time": "19:00", "venue": "Casa de Cultură", "locality": "Drăgășani", "category": "teatru", "price": "80–100 lei", "source_url": "https://example.test/e", "source_tier": "T2", "checked_at": "2026-09-23T17:00:00+03:00", "status": "sold_out"
+        "event_id": "dragasani", "fingerprint": "fp", "title": "O noapte furtunoasă",
+        "event_start": "2026-09-24", "start_time": "19:00", "venue": "Casa de Cultură, sala mare",
+        "locality": "Drăgășani", "category": "teatru", "price": "80–100 lei",
+        "source_url": "https://example.test/e", "source_tier": "T2",
+        "checked_at": "2026-09-23T17:00:00+03:00", "status": "sold_out"
     }]}
-    ev, imported = reconcile_events({"events": []}, canonical, now)
-    assert imported == ["dragasani"] and ev["events"][0]["locality"] == "Drăgășani"
-    stale = json.loads(json.dumps(canonical)); stale["events"][0]["checked_at"] = "2026-09-22T01:00:00+03:00"
+    legacy = {"events": [{
+        "id": "legacy-dragasani", "title": "O noapte furtunoasă",
+        "event_start": "2026-09-24", "start_time": "19:00", "venue": "Casa de Cultură",
+        "locality": "Drăgășani", "checked_at": "2026-09-23T15:00:00+03:00",
+        "source_url": "https://legacy.test/e",
+        "sources": [{"url": "https://legacy.test/e", "tier": "T3", "role": "discovery"}],
+    }]}
+    ev, imported = reconcile_events(legacy, canonical, now)
+    assert imported == ["dragasani"]
+    assert len(ev["events"]) == 1
+    assert ev["events"][0]["id"] == "dragasani"
+    assert {s["url"] for s in ev["events"][0]["sources"]} == {"https://example.test/e", "https://legacy.test/e"}
+
+    stale = json.loads(json.dumps(canonical))
+    stale["events"][0]["checked_at"] = "2026-09-22T01:00:00+03:00"
     ev2, imported2 = reconcile_events({"events": []}, stale, now)
     assert imported2 == [] and ev2["events"] == []
+
     print("CIVORA public currentness/events reconciliation self-test: PASS")
     return 0
 
