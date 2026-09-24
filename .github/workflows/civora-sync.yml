@@ -64,7 +64,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- content/articles.json content/events.json sync/civora_state.json; then
+          if git diff --quiet -- content/articles.json content/events.json content/local_life.json sync/civora_state.json; then
             changed=false
           else
             changed=true
@@ -303,7 +303,7 @@ jobs:
           set -euo pipefail
           git config user.name 'valcea-clar-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add content/articles.json content/events.json sync/civora_state.json
+          git add content/articles.json content/events.json content/local_life.json sync/civora_state.json
           if git diff --cached --quiet; then
             echo 'Canonical projection unchanged.'
             exit 0

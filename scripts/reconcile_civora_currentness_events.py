@@ -22,10 +22,12 @@ CONTENT = ROOT / "content"
 SYNC = ROOT / "sync"
 ARTICLES = CONTENT / "articles.json"
 EVENTS = CONTENT / "events.json"
+LOCAL_LIFE = CONTENT / "local_life.json"
 STATE = SYNC / "civora_state.json"
 TZ = ZoneInfo("Europe/Bucharest")
 MANIFEST_URL = "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json"
 EVENTS_URL = "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json"
+SURFACES_URL = "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json"
 
 
 def fetch_json(url: str) -> dict:
@@ -317,15 +319,170 @@ def reconcile_events(existing: dict, canonical: dict, now: datetime) -> tuple[di
     return result, imported
 
 
-def apply(manifest: dict, canonical_events: dict, now: datetime) -> dict:
+
+
+def slug(value: str) -> str:
+    text = norm_text(value)
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-") or "item"
+
+
+def reconcile_local_life(existing: dict, canonical: dict, now: datetime) -> dict:
+    """Project CIVORA's structured Local Life surfaces into the public repository.
+
+    Restaurants remain a slower-moving public directory owned by this repository.
+    Sport, cinema, daily menu and fitness are dynamic utility surfaces and are
+    replaced from CIVORA on every sync so stale public rows cannot survive.
+    """
+    result = dict(existing)
+    checked_at = now.isoformat(timespec="seconds")
+
+    sports = []
+    for row in (canonical.get("sport") or {}).get("entries") or []:
+        if not isinstance(row, dict):
+            continue
+        date = str(row.get("date") or "").strip()
+        time = str(row.get("time") or "").strip()
+        if not date or not time or not row.get("home") or not row.get("away"):
+            continue
+        start = f"{date}T{time}:00+03:00"
+        start_dt = parse_dt(start)
+        if not start_dt or start_dt < now:
+            continue
+        sports.append({
+            "id": str(row.get("id") or f"sport-{slug(row.get('home'))}-{slug(row.get('away'))}-{date}"),
+            "sport": str(row.get("sport") or "").strip().title(),
+            "competition": str(row.get("competition") or "").strip(),
+            "start": start,
+            "home": str(row.get("home") or "").strip(),
+            "away": str(row.get("away") or "").strip(),
+            "venue": row.get("venue"),
+            "locality": str(row.get("locality") or "").strip(),
+            "importance": row.get("importance") or "local",
+            "status": str(row.get("status") or "scheduled"),
+            "source_url": str(row.get("source_url") or "").strip(),
+            "checked_at": str(row.get("checked_at") or checked_at),
+        })
+    result["sports"] = sports
+
+    cinema_doc = canonical.get("cinema") or {}
+    venue_map: dict[tuple[str, str], str] = {}
+    venues = []
+    grouped: dict[tuple[str, str, str, str, str], dict] = {}
+    for row in cinema_doc.get("entries") or []:
+        if not isinstance(row, dict):
+            continue
+        date = str(row.get("date") or cinema_doc.get("date") or "").strip()
+        time = str(row.get("time") or "").strip()
+        film = str(row.get("film") or "").strip()
+        cinema_name = str(row.get("cinema") or "").strip()
+        locality = str(row.get("locality") or "").strip()
+        if not date or not time or not film or not cinema_name:
+            continue
+        try:
+            show_dt = datetime.fromisoformat(f"{date}T{time}:00").replace(tzinfo=TZ)
+        except ValueError:
+            continue
+        if show_dt <= now:
+            continue
+        venue_key = (cinema_name, locality)
+        venue_id = venue_map.get(venue_key)
+        if not venue_id:
+            venue_id = f"cinema-{slug(cinema_name)}"
+            venue_map[venue_key] = venue_id
+            venues.append({
+                "id": venue_id,
+                "name": cinema_name,
+                "locality": locality,
+                "address": row.get("address"),
+                "source_url": str(row.get("source_url") or "").strip(),
+            })
+        group_key = (date, film, venue_id, str(row.get("format") or ""), str(row.get("language") or ""))
+        item = grouped.setdefault(group_key, {
+            "date": date,
+            "film": film,
+            "venue_id": venue_id,
+            "times": [],
+            "format": row.get("format"),
+            "language": row.get("language"),
+            "ticket_url": row.get("ticket_url"),
+        })
+        if time not in item["times"]:
+            item["times"].append(time)
+    screenings = list(grouped.values())
+    for row in screenings:
+        row["times"].sort()
+    screenings.sort(key=lambda row: (row["date"], row["times"][0] if row["times"] else "99:99", row["film"]))
+    result["cinema"] = {
+        "checked_at": str(cinema_doc.get("checked_at") or canonical.get("updated_at") or checked_at),
+        "venues": venues,
+        "screenings": screenings,
+    }
+
+    menu_doc = canonical.get("menu") or {}
+    menus = []
+    today = now.date().isoformat()
+    for row in menu_doc.get("entries") or []:
+        if not isinstance(row, dict):
+            continue
+        date = str(row.get("date") or menu_doc.get("date") or today)
+        row_checked = str(row.get("checked_at") or "")
+        if date != today or not row_checked.startswith(today):
+            continue
+        menus.append({
+            "date": date,
+            "restaurant_id": str(row.get("restaurant_id") or f"restaurant-{slug(row.get('restaurant'))}"),
+            "restaurant": str(row.get("restaurant") or "").strip(),
+            "price": row.get("price"),
+            "service_window": row.get("service_window"),
+            "summary": row.get("summary") or " · ".join(str(x) for x in (row.get("dishes") or []) if x),
+            "order_url": row.get("order_url") or row.get("source_url"),
+            "source_url": row.get("source_url"),
+            "checked_at": row_checked,
+            "status": str(row.get("status") or "verified"),
+        })
+    result["daily_menus"] = menus
+
+    fitness = []
+    for row in (canonical.get("fitness") or {}).get("entries") or []:
+        if not isinstance(row, dict) or not row.get("name") or not row.get("address"):
+            continue
+        fitness.append({
+            "id": str(row.get("id") or slug(row.get("name"))),
+            "name": str(row.get("name") or "").strip(),
+            "locality": str(row.get("locality") or "").strip(),
+            "address": str(row.get("address") or "").strip(),
+            "activities": list(row.get("activities") or []),
+            "hours": row.get("hours"),
+            "source_url": str(row.get("source_url") or "").strip(),
+            "checked_at": str(row.get("checked_at") or checked_at),
+        })
+    result["fitness"] = fitness
+
+    result["schema_version"] = "1.1"
+    result["updated_at"] = checked_at
+    result["canonical_surface_source"] = SURFACES_URL
+    result["policy"] = {
+        "dynamic_surfaces_replace_from_civora": True,
+        "cinema_expired_showtimes_removed_at_sync": True,
+        "daily_menu_same_day_only": True,
+        "fitness_current_address_from_canonical_surface": True,
+        "restaurants_preserved_as_slow_directory": True,
+    }
+    return result
+
+
+def apply(manifest: dict, canonical_events: dict, canonical_surfaces: dict, now: datetime) -> dict:
     articles = load(ARTICLES, {"articles": []})
     events = load(EVENTS, {"events": []})
+    local_life = load(LOCAL_LIFE, {"restaurants": []})
     articles, current_ids, archive_ids = reconcile_articles(articles, manifest)
     events, imported = reconcile_events(events, canonical_events, now)
+    local_life = reconcile_local_life(local_life, canonical_surfaces, now)
     if not current_ids:
         raise SystemExit("Refusing deployment: CIVORA has no active_now story; preserve last known good public homepage")
     ARTICLES.write_text(json.dumps(articles, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     EVENTS.write_text(json.dumps(events, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    LOCAL_LIFE.write_text(json.dumps(local_life, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     state = load(STATE, {})
     state["current_story_count"] = len(current_ids)
     state["archive_story_count"] = len(archive_ids)
@@ -333,8 +490,10 @@ def apply(manifest: dict, canonical_events: dict, now: datetime) -> dict:
     state["currentness_source"] = MANIFEST_URL
     state["local_life_source"] = EVENTS_URL
     state["local_life_event_count"] = len(imported)
+    state["local_life_surface_source"] = SURFACES_URL
+    state["local_life_surface_updated_at"] = local_life.get("updated_at")
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return {"current": current_ids, "archive_count": len(archive_ids), "events": imported}
+    return {"current": current_ids, "archive_count": len(archive_ids), "events": imported, "local_life": {"sports": len(local_life.get("sports") or []), "cinema_screenings": len((local_life.get("cinema") or {}).get("screenings") or []), "daily_menus": len(local_life.get("daily_menus") or []), "fitness": len(local_life.get("fitness") or [])}}
 
 
 def self_test() -> int:
@@ -376,7 +535,20 @@ def self_test() -> int:
     ev2, imported2 = reconcile_events({"events": []}, stale, now)
     assert imported2 == [] and ev2["events"] == []
 
-    print("CIVORA public currentness/events reconciliation self-test: PASS")
+    surface = {
+        "sport": {"entries": [{"sport":"handbal feminin","competition":"Liga Florilor","date":"2026-09-30","time":"17:00","home":"SCM Râmnicu Vâlcea","away":"SCM Universitatea Craiova","venue":"Sala Traian","locality":"Râmnicu Vâlcea","status":"scheduled","source_url":"https://frh.ro/","checked_at":"2026-09-23T17:00:00+03:00"}]},
+        "cinema": {"date":"2026-09-23","entries":[{"film":"Viitor","cinema":"Cinema Test","time":"20:00","locality":"Râmnicu Vâlcea","source_url":"https://cinema.test","checked_at":"2026-09-23T17:00:00+03:00"},{"film":"Trecut","cinema":"Cinema Test","time":"16:00","locality":"Râmnicu Vâlcea","source_url":"https://cinema.test","checked_at":"2026-09-23T17:00:00+03:00"}]},
+        "menu": {"entries":[{"date":"2026-09-23","restaurant":"Test","price":"30 lei","checked_at":"2026-09-23T17:00:00+03:00","source_url":"https://menu.test","status":"verified"}]},
+        "fitness": {"entries":[{"name":"Fitness Cool","locality":"Râmnicu Vâlcea","address":"Bulevardul Dem Rădulescu 53–55, Bloc X3, parter","activities":["fitness"],"source_url":"https://fitness.test","checked_at":"2026-09-23T17:00:00+03:00"}]},
+    }
+    ll = reconcile_local_life({"restaurants":[{"id":"keep"}]}, surface, now)
+    assert ll["sports"][0]["away"] == "SCM Universitatea Craiova"
+    assert ll["fitness"][0]["address"].startswith("Bulevardul Dem Rădulescu")
+    assert len(ll["cinema"]["screenings"]) == 1 and ll["cinema"]["screenings"][0]["film"] == "Viitor"
+    assert len(ll["daily_menus"]) == 1
+    assert ll["restaurants"] == [{"id":"keep"}]
+
+    print("CIVORA public currentness/events/local-life reconciliation self-test: PASS")
     return 0
 
 
@@ -386,7 +558,7 @@ def main() -> int:
     args = parser.parse_args()
     if args.self_test:
         return self_test()
-    report = apply(fetch_json(MANIFEST_URL), fetch_json(EVENTS_URL), datetime.now(TZ))
+    report = apply(fetch_json(MANIFEST_URL), fetch_json(EVENTS_URL), fetch_json(SURFACES_URL), datetime.now(TZ))
     print(json.dumps({"status": "PASS", **report}, ensure_ascii=False))
     return 0
 
