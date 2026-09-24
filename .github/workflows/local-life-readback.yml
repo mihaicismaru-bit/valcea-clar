@@ -1,0 +1,88 @@
+name: local-life-public-readback
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/local_life.json'
+      - '.github/workflows/local-life-readback.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-local-life:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify public Local Life subroutes against current registry
+        run: |
+          python3 - <<'PY'
+          import html
+          import json
+          import time
+          from datetime import datetime
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from zoneinfo import ZoneInfo
+
+          data=json.loads(Path('content/local_life.json').read_text(encoding='utf-8'))
+          today=datetime.now(ZoneInfo('Europe/Bucharest')).date().isoformat()
+
+          def fetch(path):
+              last=''
+              for _ in range(15):
+                  url=f'https://valceaclar.ro{path}?local_life_readback={int(time.time())}'
+                  req=Request(url,headers={'User-Agent':'valcea-clar-local-life-readback/1.0','Cache-Control':'no-cache'})
+                  try:
+                      with urlopen(req,timeout=25) as response:
+                          last=html.unescape(response.read().decode('utf-8','replace'))
+                      return last
+                  except Exception as exc:
+                      last=f'ERROR {exc!r}'
+                      time.sleep(4)
+              raise SystemExit(f'PUBLIC READBACK FETCH FAILED {path}: {last[:300]}')
+
+          sport_html=fetch('/unde-iesim/sport/')
+          future=[row for row in data.get('sports',[]) if str(row.get('status') or '') != 'past']
+          for row in future:
+              for marker in (str(row.get('home') or '').strip(),str(row.get('away') or '').strip()):
+                  if marker and marker not in sport_html:
+                      raise SystemExit(f'SPORT READBACK MISSING {marker!r}')
+          # Explicit regression gate for the corrected 30 September fixture.
+          corrected=next((row for row in future if row.get('id')=='handbal-scm-craiova-20260930'),None)
+          if corrected:
+              required=['SCM Râmnicu Vâlcea','SCM Universitatea Craiova','30 septembrie 2026, 17:00']
+              for marker in required:
+                  if marker not in sport_html:
+                      raise SystemExit(f'SPORT CORRECTION READBACK MISSING {marker!r}')
+
+          menu_html=fetch('/unde-iesim/meniul-zilei/')
+          today_menus=[row for row in data.get('daily_menus',[]) if str(row.get('date'))==today and str(row.get('status'))=='verified']
+          for row in today_menus:
+              for marker in (str(row.get('restaurant') or '').strip(),str(row.get('price') or '').strip()):
+                  if marker and marker not in menu_html:
+                      raise SystemExit(f'MENU READBACK MISSING {marker!r}')
+          stale=[row for row in data.get('daily_menus',[]) if str(row.get('date'))!=today]
+          if stale:
+              raise SystemExit('REGISTRY CONTAINS STALE DAILY MENUS')
+
+          cinema_html=fetch('/unde-iesim/cinema/')
+          screenings=(data.get('cinema') or {}).get('screenings') or []
+          today_screenings=[row for row in screenings if str(row.get('date'))==today]
+          for row in today_screenings:
+              film=str(row.get('film') or '').strip()
+              if film and film not in cinema_html:
+                  raise SystemExit(f'CINEMA READBACK MISSING {film!r}')
+              for showtime in row.get('times') or []:
+                  if str(showtime) not in cinema_html:
+                      raise SystemExit(f'CINEMA READBACK MISSING TIME {showtime!r} FOR {film!r}')
+          if any(str(row.get('date')) < today for row in screenings):
+              raise SystemExit('REGISTRY CONTAINS EXPIRED CINEMA SCREENINGS')
+
+          print({'status':'PASS','today':today,'sport_rows':len(future),'menu_rows':len(today_menus),'cinema_today_rows':len(today_screenings)})
+          PY
