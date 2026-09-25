@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-24T15:19:29.978428Z",
+  "updated_local": "2026-09-24T23:37:56.593530Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -119,11 +119,11 @@
       "priority": 1999997,
       "source_priority": 94,
       "canonical_rank": 3,
-      "headline": "ISU Vâlcea: 29 de intervenții pe 23 septembrie 2026, dintre care 22 de prim ajutor",
-      "dek": "ISU Vâlcea raportează pentru 23 septembrie 2026 un total de 29 de intervenții: 2 incendii, 22 de prim ajutor și 5 alte intervenții.",
+      "headline": "ISU Vâlcea: 34 de intervenții pe 24 septembrie 2026, dintre care 21 de prim ajutor",
+      "dek": "ISU Vâlcea raportează pentru 24 septembrie 2026 un total de 34 de intervenții: 9 incendii, 21 de prim ajutor și 4 alte intervenții.",
       "paragraphs": [
-        "ISU Vâlcea raportează 29 de intervenții pentru data de 23 septembrie 2026.",
-        "Bilanțul oficial indică 2 incendii, 22 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 5 alte intervenții."
+        "ISU Vâlcea raportează 34 de intervenții pentru data de 24 septembrie 2026.",
+        "Bilanțul oficial indică 9 incendii, 21 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 4 alte intervenții."
       ],
       "sources": [
         {
