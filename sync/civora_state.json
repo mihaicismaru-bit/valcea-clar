@@ -23,7 +23,7 @@
   },
   "currentness_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
-  "local_life_event_count": 5,
+  "local_life_event_count": 4,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-25T03:13:04+03:00"
+  "local_life_surface_updated_at": "2026-09-25T07:56:48+03:00"
 }
