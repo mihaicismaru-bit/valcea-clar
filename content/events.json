@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3",
-  "updated_at": "2026-09-25T22:11:23+03:00",
+  "updated_at": "2026-09-26T01:18:17+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
     {
@@ -324,30 +324,30 @@
           "role": "canonical_event_source"
         }
       ],
-      "checked_at": "2026-09-24T18:59:36+03:00",
+      "checked_at": "2026-09-26T00:01:15+03:00",
       "status": "scheduled",
       "canonical_source": "CIVORA_LOCAL_LIFE"
     },
     {
       "id": "filarmonica-floarea-darului-20260926",
       "event_id": "filarmonica-floarea-darului-20260926",
-      "fingerprint": "2b4c13f9fa26fbd1e563",
-      "identity_key": "4d8f65e5bcbfe3116f82",
+      "fingerprint": "b370fe375a263fdf8084",
+      "identity_key": "f7576d205c1774775d10",
       "story_id": null,
       "title": "Floarea Darului",
-      "category": "Concert Coral / Muzică Veche",
+      "category": "Concert Coral / Muzica Veche",
       "start": "2026-09-26T19:00:00+03:00",
       "event_start": "2026-09-26",
       "event_end": "2026-09-26",
       "start_time": "19:00",
       "doors_time": null,
       "venue": "Sala Lahovari",
-      "locality": "Râmnicu Vâlcea",
+      "locality": "Ramnicu Valcea",
       "price_status": "free",
       "price": "gratuit",
       "ticket_url": null,
       "reservation_url": null,
-      "organiser": "Centrul Cultural Municipal Râmnicu Vâlcea / Filarmonica Ion Dumitrescu / Arhiepiscopia Râmnicului",
+      "organiser": "Centrul Cultural Municipal Ramnicu Valcea / Filarmonica Ion Dumitrescu / Arhiepiscopia Ramnicului",
       "source_url": "https://filarmonica-valcea.ro/eveniment/floarea-darului/",
       "source_tier": "T1",
       "sources": [
@@ -357,7 +357,7 @@
           "role": "canonical_event_source"
         }
       ],
-      "checked_at": "2026-09-24T00:31:00+03:00",
+      "checked_at": "2026-09-26T00:01:15+03:00",
       "status": "scheduled",
       "canonical_source": "CIVORA_LOCAL_LIFE"
     },
@@ -598,7 +598,8 @@
   ],
   "canonical_local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "canonical_event_ids": [
-    "european-folk-day-salistea79-malaia-20260927",
+    "race-the-vibe-nicolae-balcescu-20260926",
+    "filarmonica-floarea-darului-20260926",
     "ariel-cele-trei-gratii-20261009",
     "ariel-talk-show-20261016"
   ],
