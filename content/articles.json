@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-26T16:30:58.630135Z",
+  "updated_local": "2026-09-26T16:32:52.627091Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -321,10 +321,25 @@
         }
       ],
       "published": "2026-09-14T16:48:58+03:00",
-      "image": null,
+      "image": "civora-27dc8b11b750a17a.jpg",
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/ocnele-mari-salina-program-septembrie-20260907/",
       "editorial_product": "service_news",
+      "image_caption": "Foto de context din Salina Ocnele Mari, 22 iunie 2023; imaginea nu documentează schimbarea de program din septembrie 2026.",
+      "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocnele%20Mari%202068.JPG",
+      "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocnele%20Mari%202068.JPG",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Ocnele_Mari_2068.JPG",
+      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
+      "image_rights_basis": "creative_commons",
+      "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "image_provenance_status": "VERIFIED",
+      "image_contextual_archive": true,
+      "image_captured_at": "2023-06-22",
+      "image_story_id": "ocnele-mari-salina-program-septembrie-20260907",
+      "image_site_eligible": true,
+      "image_synthetic": false,
+      "image_depicts_real_scene": null,
+      "image_asset_role": "site_visual",
       "archive_only": false,
       "active_now": true,
       "archive_status": "active"
@@ -698,7 +713,7 @@
       "section": "URGENȚE",
       "priority": 999991,
       "source_priority": 97,
-      "canonical_rank": 46,
+      "canonical_rank": 22,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -724,7 +739,7 @@
       "section": "URGENȚE",
       "priority": 999990,
       "source_priority": 97,
-      "canonical_rank": 45,
+      "canonical_rank": 21,
       "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -750,7 +765,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999989,
       "source_priority": 96,
-      "canonical_rank": 22,
+      "canonical_rank": 24,
       "headline": "IPJ Vâlcea: REȚINUTĂ PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 09.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -777,7 +792,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999988,
       "source_priority": 96,
-      "canonical_rank": 39,
+      "canonical_rank": 23,
       "headline": "IPJ Vâlcea: REȚINUT PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 05.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -1181,7 +1196,7 @@
       "section": "UTIL",
       "priority": 999977,
       "source_priority": 88,
-      "canonical_rank": 21,
+      "canonical_rank": 42,
       "headline": "Dăeşti: întrerupere de curent programată pe 26 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Berila în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1207,7 +1222,7 @@
       "section": "UTIL",
       "priority": 999976,
       "source_priority": 88,
-      "canonical_rank": 23,
+      "canonical_rank": 41,
       "headline": "Băile Govora: întrerupere de curent programată pe 25 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Gătejeşti în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1233,7 +1248,7 @@
       "section": "UTIL",
       "priority": 999975,
       "source_priority": 88,
-      "canonical_rank": 24,
+      "canonical_rank": 40,
       "headline": "Ioneşti: întrerupere de curent programată pe 24 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Bucşani, PTA Foteşti, PTA Guguianca în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1259,7 +1274,7 @@
       "section": "UTIL",
       "priority": 999974,
       "source_priority": 88,
-      "canonical_rank": 35,
+      "canonical_rank": 39,
       "headline": "Lădeşti: întrerupere de curent programată pe 23 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Găgeni 1, PTA Găgeni 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1311,7 +1326,7 @@
       "section": "UTIL",
       "priority": 999972,
       "source_priority": 88,
-      "canonical_rank": 40,
+      "canonical_rank": 37,
       "headline": "Budeşti: întrerupere de curent programată pe 21 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA IAS Budeşti, PTA Satul Nou Racoviţa, PTAB Budeşti 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1337,7 +1352,7 @@
       "section": "SPORT",
       "priority": 999971,
       "source_priority": 88,
-      "canonical_rank": 43,
+      "canonical_rank": 36,
       "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -1363,7 +1378,7 @@
       "section": "ACTUALITATE",
       "priority": 999970,
       "source_priority": 88,
-      "canonical_rank": 42,
+      "canonical_rank": 35,
       "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
       "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
       "paragraphs": [
@@ -1396,7 +1411,7 @@
       "section": "CULTURĂ",
       "priority": 999969,
       "source_priority": 82,
-      "canonical_rank": 36,
+      "canonical_rank": 44,
       "headline": "Două evenimente culturale la Râmnicu Vâlcea pe 4 septembrie: «Atelier 35» la Cozia, apoi expoziție și lansare la Artex",
       "dek": "Filiala Râmnicu Vâlcea a UAP a programat pentru 4 septembrie o expoziție de grup la Galeriile Cozia 1 și 2 și, de la ora 18:00, un dublu eveniment la Galeria Artex: retrospectiva Mariei Constantin și lansarea unui roman al Ioanei Drăgan.",
       "paragraphs": [
@@ -1423,7 +1438,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 999968,
       "source_priority": 82,
-      "canonical_rank": 41,
+      "canonical_rank": 43,
       "headline": "APAVIL caută trei oameni: două posturi de inginer și un post de încasator-cititor",
       "dek": "Dosarele pentru cele două posturi de inginer se depun până pe 18 septembrie, ora 13:00, iar pentru postul de încasator-cititor din subzona Mihăești până pe 21 septembrie, ora 15:00.",
       "paragraphs": [
@@ -1460,7 +1475,7 @@
       "section": "JUDEȚ",
       "priority": 999967,
       "source_priority": 78,
-      "canonical_rank": 37,
+      "canonical_rank": 46,
       "headline": "Romsilva: toate cele 19 lucrări PNRR împotriva viiturilor, într-un proiect care include Vâlcea, au fost finalizate",
       "dek": "Regia Națională a Pădurilor anunță finalizarea și recepția celor 19 obiective din proiectul de corectare a torenților derulat în opt județe, inclusiv Vâlcea. Valoarea de 109,56 milioane de lei fără TVA este pentru întregul proiect, nu doar pentru județ.",
       "paragraphs": [
@@ -1491,7 +1506,7 @@
       "section": "EVENIMENTE",
       "priority": 999966,
       "source_priority": 78,
-      "canonical_rank": 44,
+      "canonical_rank": 45,
       "headline": "Băile Govora găzduiește Conferința Națională INRMFB între 16 și 19 septembrie",
       "dek": "Cea de-a XX-a Conferință Națională a Institutului Național de Recuperare, Medicină Fizică și Balneoclimatologie este programată la Băile Govora, iar lucrările științifice se vor desfășura la Cazinoul din parcul central.",
       "paragraphs": [
@@ -1550,7 +1565,7 @@
       "section": "MOBILITATE",
       "priority": 999964,
       "source_priority": 0,
-      "canonical_rank": 47,
+      "canonical_rank": 48,
       "headline": "Horezu pregătește patru autobuze electrice și două centrale solare de câte 400 kW. Ce arată documentele",
       "dek": "Documentele de achiziție prevăd două autobuze electrice de 10–11 metri și două vehicule mai mici, plus stații lente de încărcare. Separat, proiectul fotovoltaic al orașului prevede două centrale de câte 400 kW pentru autoconsum.",
       "paragraphs": [
@@ -1591,7 +1606,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999963,
       "source_priority": 0,
-      "canonical_rank": 48,
+      "canonical_rank": 47,
       "headline": "Incendiu de vegetație la Bălcești: aproximativ 15 hectare de teren au fost afectate",
       "dek": "Pompierii vâlceni au stins un incendiu de vegetație uscată la Bălcești, iar ISU Vâlcea estimează suprafața afectată la aproximativ 15 hectare. Buletinul oficial nu indică o cauză a incendiului.",
       "paragraphs": [
@@ -2689,7 +2704,7 @@
       "section": "EVENIMENTE",
       "priority": 999937,
       "source_priority": 0,
-      "canonical_rank": 76,
+      "canonical_rank": 75,
       "headline": "Musiclover Festival 2026 la Fețeni: programul celor trei zile, artiștii și accesul",
       "dek": "Festivalul s-a desfășurat între 14 și 16 august 2026 pe Platoul Fețeni, în format FAN ZONE cu bilet plus o zonă cu acces liber.",
       "paragraphs": [
@@ -2728,7 +2743,7 @@
       "section": "EVENIMENTE",
       "priority": 999936,
       "source_priority": 0,
-      "canonical_rank": 75,
+      "canonical_rank": 76,
       "headline": "Luminos Fest 2026 în Parcul Zăvoi: lampioane, ateliere și intrare liberă",
       "dek": "Evenimentul de familie din 15–16 august a adus lampioane pe apă, ateliere pentru copii și Aleea Creatorilor în Parcul Zăvoi.",
       "paragraphs": [
