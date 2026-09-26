@@ -1,5 +1,8 @@
 import unittest
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
+from scripts.reconcile_civora_currentness_events import reconcile_events
 from scripts.sync_civora import _freshness_key, _normalize_story, _normalize_visual
 
 
@@ -131,6 +134,38 @@ class SyncCivoraTests(unittest.TestCase):
         self.assertEqual(row["image"], "local.webp")
         self.assertEqual(row["image_caption"], "Local")
         self.assertNotIn("image_fetch_url", row)
+
+    def test_public_event_reconcile_drops_expired_legacy_rows(self):
+        tz = ZoneInfo("Europe/Bucharest")
+        now = datetime(2026, 9, 26, 19, 15, tzinfo=tz)
+        existing = {
+            "events": [
+                {
+                    "id": "expired-24-sep",
+                    "start": "2026-09-24T19:00:00+03:00",
+                    "event_start": "2026-09-24",
+                    "start_time": "19:00",
+                    "title": "Eveniment expirat",
+                    "locality": "Râmnicu Vâlcea",
+                    "checked_at": "2026-09-24T12:00:00+03:00",
+                    "status": "scheduled",
+                },
+                {
+                    "id": "future-27-sep",
+                    "start": "2026-09-27T11:00:00+03:00",
+                    "event_start": "2026-09-27",
+                    "start_time": "11:00",
+                    "title": "Eveniment viitor",
+                    "locality": "Mălaia",
+                    "checked_at": "2026-09-26T09:00:00+03:00",
+                    "status": "scheduled",
+                },
+            ]
+        }
+        reconciled, _ = reconcile_events(existing, {"events": []}, now)
+        ids = [row["id"] for row in reconciled["events"]]
+        self.assertNotIn("expired-24-sep", ids)
+        self.assertIn("future-27-sep", ids)
 
     def test_refuses_bodyless_story(self):
         story = {"id": "story-3", "headline": "Titlu", "paragraphs": []}
