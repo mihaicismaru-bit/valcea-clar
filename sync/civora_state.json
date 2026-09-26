@@ -2,7 +2,7 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-09-26T16:32:52.627091Z",
+  "source_generated_at": "2026-09-26T21:05:15.622257Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
@@ -12,8 +12,8 @@
   "verified_visual_count": 1,
   "lead_story_id": "baile-olanesti-incendiu-iezer-13ha-20260925",
   "lead_published_at": "2026-09-26T13:00:57+03:00",
-  "articles_sha256": "5f817cef3be63783fc38eb8733e2e34393b66f5cf19a6bf27b3dee45c92afc62",
-  "synced_at": "2026-09-26T16:32:52.627091Z",
+  "articles_sha256": "7986cbae497a6673418c3494554c86a1ffa4e4f15696a3fbc1bc3f33e6efb301",
+  "synced_at": "2026-09-26T21:05:15.622257Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -23,7 +23,7 @@
   },
   "currentness_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
-  "local_life_event_count": 2,
+  "local_life_event_count": 3,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-26T21:02:02+03:00"
+  "local_life_surface_updated_at": "2026-09-27T02:36:17+03:00"
 }
