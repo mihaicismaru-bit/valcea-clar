@@ -247,7 +247,15 @@ def merge_sources(primary: dict, duplicate: dict) -> dict:
 
 
 def reconcile_events(existing: dict, canonical: dict, now: datetime) -> tuple[dict, list[str]]:
-    old = [row for row in existing.get("events") or [] if isinstance(row, dict) and row.get("id")]
+    # Expired or stale legacy public rows must never survive simply because
+    # they are absent from the latest canonical CIVORA event inventory. Apply
+    # the same fail-closed freshness gate to the existing projection before
+    # merging current canonical events.
+    old = [
+        row
+        for row in existing.get("events") or []
+        if isinstance(row, dict) and row.get("id") and fresh_event(row, now)
+    ]
     by_id = {str(row["id"]): row for row in old}
     imported = []
 
