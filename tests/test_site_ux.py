@@ -159,8 +159,11 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('class="event-filter-row"', page)
         self.assertIn('Agenda verificată', page)
         self.assertIn('Verificat:', page)
-        self.assertIn('Floarea Darului', page)
-        self.assertIn('Raliul Vâlcii 2026', page)
+        events = json.loads((ROOT / 'content' / 'events.json').read_text(encoding='utf-8')).get('events') or []
+        self.assertTrue(events, 'current verified event inventory must not be empty')
+        self.assertEqual(page.count('class="event-card"'), len(events))
+        for event in events:
+            self.assertIn(str(event['title']), page)
         self.assertNotIn('editorial_card', page)
         css = self.read('assets/site.css')
         self.assertIn('UNDE IEȘIM — event discovery UX', css)
