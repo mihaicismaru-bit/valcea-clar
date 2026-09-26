@@ -246,6 +246,22 @@ def merge_sources(primary: dict, duplicate: dict) -> dict:
     return merged
 
 
+def existing_projection_event_fresh(row: dict, now: datetime) -> bool:
+    """Apply current event freshness rules to legacy public projection rows.
+
+    Older projection rows may have event_start/start_time but no combined start
+    field. Reconstruct the deterministic start value before reusing fresh_event
+    so valid legacy metadata can still merge into a canonical manifestation.
+    """
+    probe = dict(row)
+    if not probe.get("start") and probe.get("event_start"):
+        try:
+            probe["start"] = event_start_iso(probe)
+        except ValueError:
+            return False
+    return fresh_event(probe, now)
+
+
 def reconcile_events(existing: dict, canonical: dict, now: datetime) -> tuple[dict, list[str]]:
     # Expired or stale legacy public rows must never survive simply because
     # they are absent from the latest canonical CIVORA event inventory. Apply
@@ -254,7 +270,7 @@ def reconcile_events(existing: dict, canonical: dict, now: datetime) -> tuple[di
     old = [
         row
         for row in existing.get("events") or []
-        if isinstance(row, dict) and row.get("id") and fresh_event(row, now)
+        if isinstance(row, dict) and row.get("id") and existing_projection_event_fresh(row, now)
     ]
     by_id = {str(row["id"]): row for row in old}
     imported = []
