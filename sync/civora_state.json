@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-09-25T21:32:06.284746Z",
+  "source_generated_at": "2026-09-26T05:09:29.991423Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
-  "story_count": 76,
+  "story_count": 78,
   "current_story_count": 13,
-  "archive_story_count": 63,
-  "verified_visual_count": 1,
+  "archive_story_count": 65,
+  "verified_visual_count": 0,
   "lead_story_id": "dragasani-ct-radiologie-program-clarificare-20260924",
-  "lead_published_at": "2026-09-24T18:19:29+03:00",
-  "articles_sha256": "a127d898795f2a152b9afe176461360381b47b218a3a2ec1b0e120b3f710bbfa",
-  "synced_at": "2026-09-25T21:32:06.284746Z",
+  "lead_published_at": "2026-09-26T08:09:23+03:00",
+  "articles_sha256": "27836322c188bddfa3ed96f887e9d708ea0d2ececa3ce229a8182b031d0b4755",
+  "synced_at": "2026-09-26T05:09:29.991423Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 4,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-26T03:45:00+03:00"
+  "local_life_surface_updated_at": "2026-09-26T08:13:02+03:00"
 }
