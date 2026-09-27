@@ -7,12 +7,12 @@
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 79,
-  "current_story_count": 11,
-  "archive_story_count": 68,
+  "current_story_count": 12,
+  "archive_story_count": 67,
   "verified_visual_count": 1,
-  "lead_story_id": "valcea-campanie-antirabica-toamna-20260925",
+  "lead_story_id": "baile-olanesti-incendiu-iezer-13ha-20260925",
   "lead_published_at": "2026-09-27T08:06:08+03:00",
-  "articles_sha256": "62fb85795d77d6e368911bb1f99eb7b847c4bf46f0ec705f51cc5c3d980ef18d",
+  "articles_sha256": "d5bde9d9a0efb448bac007264f1d2461ef5e92314d34a28ffb8e89930f4f2d2d",
   "synced_at": "2026-09-27T11:49:55.213741Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
@@ -23,7 +23,7 @@
   },
   "currentness_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
-  "local_life_event_count": 2,
+  "local_life_event_count": 15,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-27T20:44:32+03:00"
+  "local_life_surface_updated_at": "2026-09-27T22:29:52+03:00"
 }
