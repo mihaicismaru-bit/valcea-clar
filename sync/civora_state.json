@@ -9,10 +9,10 @@
   "story_count": 79,
   "current_story_count": 12,
   "archive_story_count": 67,
-  "verified_visual_count": 0,
+  "verified_visual_count": 1,
   "lead_story_id": "valcea-campanie-antirabica-toamna-20260925",
   "lead_published_at": "2026-09-27T14:49:54+03:00",
-  "articles_sha256": "b6d75407e2aa29fa10d532be0ac4efde56ca9ed589182a3feb699812a0900456",
+  "articles_sha256": "ad20dc9ed16df5f10fba378341f281cfc44c1f54e7e6ff18b28580aa48a68ff7",
   "synced_at": "2026-09-27T19:29:15.604428Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 15,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-27T23:25:53+03:00"
+  "local_life_surface_updated_at": "2026-09-28T02:12:44+03:00"
 }
