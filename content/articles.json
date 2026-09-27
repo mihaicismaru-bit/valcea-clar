@@ -1,40 +1,13 @@
 {
-  "updated_local": "2026-09-27T11:49:55.213741Z",
+  "updated_local": "2026-09-27T19:29:15.604428Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
-      "id": "baile-olanesti-incendiu-iezer-13ha-20260925",
-      "section": "URGENȚE",
-      "priority": 2000000,
-      "source_priority": 99,
-      "canonical_rank": 11,
-      "headline": "Băile Olănești: incendiul de la Iezer a ajuns la 27 de hectare; duminică seara nu era localizat",
-      "dek": "ISU Vâlcea a transmis duminică seara că suprafața afectată de incendiul din fondul forestier de la Băile Olănești a ajuns la 27 de hectare. La ora retragerii forțelor, incendiul nu era localizat, iar operațiunile urmau să fie reluate dimineața.",
-      "paragraphs": [
-        "ISU Vâlcea a estimat duminică seara suprafața afectată la 27 de hectare.",
-        "La momentul retragerii forțelor, ISU Vâlcea a transmis că incendiul nu era localizat.",
-        "În cursul zilei au intervenit 62 de pompieri militari cu șapte autospeciale și o dronă, cu sprijin local și silvic."
-      ],
-      "sources": [
-        {
-          "name": "AGERPRES — informații ISU Vâlcea, 27.09.2026 20:01",
-          "url": "https://agerpres.ro/social/2026/09/27/isu-valcea-incendiul-de-la-baile-olanesti-nu-este-localizat-suprafata-afectata---27-de-hectare--1597412"
-        }
-      ],
-      "published": "2026-09-27T22:29:09+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/baile-olanesti-incendiu-iezer-13ha-20260925/",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
-    },
-    {
       "id": "valcea-campanie-antirabica-toamna-20260925",
       "section": "UTIL",
-      "priority": 1999999,
+      "priority": 2000000,
       "source_priority": 88,
       "canonical_rank": 0,
       "headline": "Vâlcea: campania antirabică de toamnă a început; momeli vaccinale pentru vulpi și vaccinarea câinilor și pisicilor din octombrie",
@@ -62,7 +35,7 @@
           "tier": "T2"
         }
       ],
-      "published": "2026-09-27T08:06:08+03:00",
+      "published": "2026-09-27T14:49:54+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-campanie-antirabica-toamna-20260925/",
@@ -72,11 +45,40 @@
       "archive_status": "active"
     },
     {
+      "id": "baile-olanesti-incendiu-iezer-13ha-20260925",
+      "section": "URGENȚE",
+      "priority": 1999999,
+      "source_priority": 99,
+      "canonical_rank": 1,
+      "headline": "Băile Olănești: incendiul de la Iezer a ajuns la 27 de hectare; duminică seara nu era localizat",
+      "dek": "ISU Vâlcea a transmis duminică seara că suprafața afectată de incendiul din fondul forestier de la Băile Olănești a ajuns la 27 de hectare. La ora retragerii forțelor, incendiul nu era localizat, iar operațiunile urmau să fie reluate dimineața.",
+      "paragraphs": [
+        "ISU Vâlcea a estimat duminică seara suprafața afectată la 27 de hectare.",
+        "La momentul retragerii forțelor, ISU Vâlcea a transmis că incendiul nu era localizat.",
+        "În cursul zilei au intervenit 62 de pompieri militari cu șapte autospeciale și o dronă, cu sprijin local și silvic."
+      ],
+      "sources": [
+        {
+          "name": "AGERPRES — informații ISU Vâlcea, 27.09.2026 20:01",
+          "url": "https://agerpres.ro/social/2026/09/27/isu-valcea-incendiul-de-la-baile-olanesti-nu-este-localizat-suprafata-afectata---27-de-hectare--1597412",
+          "tier": "T1B"
+        }
+      ],
+      "published": "2026-09-26T19:32:51+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/baile-olanesti-incendiu-iezer-13ha-20260925/",
+      "editorial_product": "continuous_update",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active"
+    },
+    {
       "id": "transalpina-program-0900-1800-20260926",
       "section": "MOBILITATE",
       "priority": 1999998,
       "source_priority": 97,
-      "canonical_rank": 1,
+      "canonical_rank": 2,
       "headline": "Transalpina: din 26 septembrie, circulația între Rânca și Obârșia Lotrului este permisă doar 09:00–18:00",
       "dek": "CNAIR a scurtat programul zilnic pe sectorul DN67C Rânca–Obârșia Lotrului din cauza condițiilor meteo de la altitudine. În afara intervalului 09:00–18:00, sectorul este închis circulației.",
       "paragraphs": [
@@ -117,7 +119,7 @@
       "section": "SĂNĂTATE",
       "priority": 1999997,
       "source_priority": 94,
-      "canonical_rank": 2,
+      "canonical_rank": 3,
       "headline": "Drăgășani: CT și radiologia sunt disponibile, dar programele publicate nu coincid",
       "dek": "Trei informații publice despre programul imagisticii de la Spitalul Municipal „Costache Nicolescu” indică intervale diferite. Disponibilitatea CT și radiologiei este confirmată; înainte de deplasare, programul trebuie verificat direct la spital.",
       "paragraphs": [
@@ -160,7 +162,7 @@
       "section": "URGENȚE",
       "priority": 1999996,
       "source_priority": 94,
-      "canonical_rank": 3,
+      "canonical_rank": 4,
       "headline": "ISU Vâlcea: 32 de intervenții pe 26 septembrie 2026, dintre care 21 de prim ajutor",
       "dek": "ISU Vâlcea raportează pentru 26 septembrie 2026 un total de 32 de intervenții: 5 incendii, 21 de prim ajutor și 6 alte intervenții.",
       "paragraphs": [
@@ -188,7 +190,7 @@
       "section": "SIGURANȚĂ",
       "priority": 1999995,
       "source_priority": 96,
-      "canonical_rank": 4,
+      "canonical_rank": 5,
       "headline": "IPJ Vâlcea: REȚINUT PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 16.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -216,7 +218,7 @@
       "section": "SIGURANȚĂ",
       "priority": 1999994,
       "source_priority": 96,
-      "canonical_rank": 5,
+      "canonical_rank": 6,
       "headline": "IPJ Vâlcea: DEPISTAT DE POLIȚIȘTII SERVICIULUI RUTIER",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 15.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -245,7 +247,7 @@
       "section": "SIGURANȚĂ",
       "priority": 1999993,
       "source_priority": 96,
-      "canonical_rank": 6,
+      "canonical_rank": 7,
       "headline": "IPJ Vâlcea: ACȚIUNI PENTRU SIGURANȚA RUTIERĂ ÎN JUDEȚUL VÂLCEA",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 13.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -274,7 +276,7 @@
       "section": "UTIL",
       "priority": 1999992,
       "source_priority": 93,
-      "canonical_rank": 7,
+      "canonical_rank": 8,
       "headline": "Salina Ocnele Mari își schimbă programul din 7 septembrie: închis luni și marți",
       "dek": "SALROM anunță un program nou pentru Salina Ocnele Mari în perioada 7–30 septembrie 2026: baza turistică este închisă lunea și marțea, iar miercuri–vineri funcționează între 10:00 și 16:00.",
       "paragraphs": [
@@ -291,25 +293,10 @@
         }
       ],
       "published": "2026-09-14T16:48:58+03:00",
-      "image": "civora-27dc8b11b750a17a.jpg",
+      "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/ocnele-mari-salina-program-septembrie-20260907/",
       "editorial_product": "service_news",
-      "image_caption": "Foto de context din Salina Ocnele Mari, 22 iunie 2023; imaginea nu documentează schimbarea de program din septembrie 2026.",
-      "image_origin_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocnele%20Mari%202068.JPG",
-      "image_fetch_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocnele%20Mari%202068.JPG",
-      "image_source_url": "https://commons.wikimedia.org/wiki/File:Ocnele_Mari_2068.JPG",
-      "image_credit": "Stoschmidt / Wikimedia Commons — CC BY-SA 4.0",
-      "image_rights_basis": "creative_commons",
-      "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "image_provenance_status": "VERIFIED",
-      "image_contextual_archive": true,
-      "image_captured_at": "2023-06-22",
-      "image_story_id": "ocnele-mari-salina-program-septembrie-20260907",
-      "image_site_eligible": true,
-      "image_synthetic": false,
-      "image_depicts_real_scene": null,
-      "image_asset_role": "site_visual",
       "archive_only": false,
       "active_now": true,
       "archive_status": "active"
@@ -319,7 +306,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 1999991,
       "source_priority": 91,
-      "canonical_rank": 8,
+      "canonical_rank": 9,
       "headline": "APAVIL scoate la concurs două posturi fără experiență: laborant în Râmnicu Vâlcea și electrician în Călimănești",
       "dek": "Cele două oferte oficiale ANOFM sunt pentru contracte pe perioadă nedeterminată și normă întreagă. Termenele de valabilitate sunt 20 august 2026 pentru laborant și 21 august 2026 pentru electrician.",
       "paragraphs": [
@@ -357,7 +344,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 1999990,
       "source_priority": 90,
-      "canonical_rank": 9,
+      "canonical_rank": 10,
       "headline": "Vasile Cocoș nu mai are mandat de administrator la RAJDP. Pagina de guvernanță a CJ îl afișează încă în Consiliul de Administrație",
       "dek": "HCJ 137 din 24 iulie 2026 aprobă încetarea mandatului lui Vasile Cocoș la Drumurile Județene Vâlcea. În schimb, pagina oficială de guvernanță corporativă a CJ îl menționează încă drept membru CA, o neconcordanță pe care instituția trebuie să o actualizeze sau să o explice.",
       "paragraphs": [
@@ -399,7 +386,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 1999989,
       "source_priority": 88,
-      "canonical_rank": 10,
+      "canonical_rank": 11,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -2806,8 +2793,8 @@
     }
   ],
   "current_story_ids": [
-    "baile-olanesti-incendiu-iezer-13ha-20260925",
     "valcea-campanie-antirabica-toamna-20260925",
+    "baile-olanesti-incendiu-iezer-13ha-20260925",
     "transalpina-program-0900-1800-20260926",
     "dragasani-ct-radiologie-program-clarificare-20260924",
     "isu-valcea-interventii-zilnice",
