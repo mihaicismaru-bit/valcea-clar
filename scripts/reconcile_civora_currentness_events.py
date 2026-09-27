@@ -179,9 +179,19 @@ def fresh_event(row: dict, now: datetime) -> bool:
     checked = parse_dt(row.get("checked_at"))
     if not start or not checked:
         return False
-    if start.date() < now.date() or str(row.get("status") or "").lower() == "past":
+
+    # Multi-day events remain current through event_end (inclusive). Falling
+    # back to event_start preserves the previous single-day behavior.
+    end_text = str(row.get("event_end") or row.get("event_start") or "").strip()
+    try:
+        end_date = datetime.fromisoformat(end_text).date() if end_text else start.date()
+    except ValueError:
+        end_date = start.date()
+
+    if end_date < now.date() or str(row.get("status") or "").lower() == "past":
         return False
-    days = (start.date() - now.date()).days
+
+    days = max(0, (start.date() - now.date()).days)
     age_hours = max(0.0, (now - checked).total_seconds() / 3600.0)
     if days <= 1 and age_hours > 12:
         return False
@@ -558,6 +568,20 @@ def self_test() -> int:
     stale["events"][0]["checked_at"] = "2026-09-22T01:00:00+03:00"
     ev2, imported2 = reconcile_events({"events": []}, stale, now)
     assert imported2 == [] and ev2["events"] == []
+
+    # Regression: a multi-day event must remain current on its second day
+    # when event_end is today and its verification is still inside TTL.
+    multiday_now = datetime(2026, 9, 27, 7, 0, tzinfo=TZ)
+    multiday = {"events": [{
+        "event_id": "race-the-vibe", "fingerprint": "race-fp", "title": "Race The Vibe",
+        "event_start": "2026-09-26", "event_end": "2026-09-27", "start_time": "10:00",
+        "venue": "Nicolae Bălcescu", "locality": "Nicolae Bălcescu", "category": "sport",
+        "free": True, "source_url": "https://example.test/race", "source_tier": "T1",
+        "checked_at": "2026-09-26T22:00:00+03:00", "status": "scheduled"
+    }]}
+    multiday_out, multiday_imported = reconcile_events({"events": []}, multiday, multiday_now)
+    assert multiday_imported == ["race-the-vibe"]
+    assert multiday_out["events"][0]["event_end"] == "2026-09-27"
 
     surface = {
         "sport": {"entries": [{"sport":"handbal feminin","competition":"Liga Florilor","date":"2026-09-30","time":"17:00","home":"SCM Râmnicu Vâlcea","away":"SCM Universitatea Craiova","venue":"Sala Traian","locality":"Râmnicu Vâlcea","status":"scheduled","source_url":"https://frh.ro/","checked_at":"2026-09-23T17:00:00+03:00"}]},
