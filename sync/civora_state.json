@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-09-28T06:12:05.933954Z",
+  "source_generated_at": "2026-09-28T08:41:57.673858Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 83,
-  "current_story_count": 12,
-  "archive_story_count": 71,
+  "current_story_count": 16,
+  "archive_story_count": 67,
   "verified_visual_count": 1,
-  "lead_story_id": "valcea-campanie-antirabica-toamna-20260925",
-  "lead_published_at": "2026-09-28T09:11:58+03:00",
-  "articles_sha256": "889d59d0a022f4aa90058e06f69f990ed825e2b2e417de3f943aab5c122bbea0",
-  "synced_at": "2026-09-28T06:12:05.933954Z",
+  "lead_story_id": "costesti-iluminat-public-achizitie-20260928",
+  "lead_published_at": "2026-09-28T09:12:05+03:00",
+  "articles_sha256": "65522f6cafdbc2f70e44f7e08d56c5f54fcc17e989fd9a4c0d23d186e151d357",
+  "synced_at": "2026-09-28T08:41:57.673858Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 14,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-28T10:38:10+03:00"
+  "local_life_surface_updated_at": "2026-09-28T11:51:47+03:00"
 }
