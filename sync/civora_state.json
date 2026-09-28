@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-09-28T08:41:57.673858Z",
+  "source_generated_at": "2026-09-28T10:10:06.356752Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
-  "story_count": 83,
-  "current_story_count": 16,
-  "archive_story_count": 67,
+  "story_count": 86,
+  "current_story_count": 18,
+  "archive_story_count": 68,
   "verified_visual_count": 1,
-  "lead_story_id": "costesti-iluminat-public-achizitie-20260928",
-  "lead_published_at": "2026-09-28T09:12:05+03:00",
-  "articles_sha256": "65522f6cafdbc2f70e44f7e08d56c5f54fcc17e989fd9a4c0d23d186e151d357",
-  "synced_at": "2026-09-28T08:41:57.673858Z",
+  "lead_story_id": "runcu-eci-trei-posturi-septembrie-2026",
+  "lead_published_at": "2026-09-28T13:09:59+03:00",
+  "articles_sha256": "49d2fdd368e98f744dd9f2e3dbe49f61e5b75c1171ade2585b25a5fb34253f81",
+  "synced_at": "2026-09-28T10:10:06.356752Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 16,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-28T12:00:37+03:00"
+  "local_life_surface_updated_at": "2026-09-28T18:58:19+03:00"
 }
