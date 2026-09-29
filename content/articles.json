@@ -1,15 +1,51 @@
 {
-  "updated_local": "2026-09-28T10:10:06.356752Z",
+  "updated_local": "2026-09-28T22:35:12.845443Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "costesti-iluminat-public-achizitie-20260928",
+      "section": "ADMINISTRAȚIE",
+      "priority": 2000000,
+      "source_priority": 96,
+      "canonical_rank": 0,
+      "headline": "Costești caută constructor pentru modernizarea iluminatului public: contract estimat la 780.000 lei",
+      "dek": "Primăria a deschis o procedură pentru 172 de corpuri de iluminat, senzori și telegestiune. Ofertele se primesc până la 28 septembrie, ora 11:00, iar finanțarea este indicată ca venind de la Administrația Fondului pentru Mediu.",
+      "paragraphs": [
+        "Comuna Costești a publicat o procedură de achiziție pentru lucrările de modernizare a iluminatului public, cu valoare totală estimată de 780.000 lei.",
+        "Termenul-limită pentru primirea ofertelor este 28 septembrie 2026, ora 11:00, iar deschiderea ofertelor este programată la 11:05 la Primăria Costești.",
+        "Documentația prevede demontarea a 153 de aparate existente și montarea a 172 de corpuri de iluminat, instalarea a doi senzori și a unui sistem de telegestiune.",
+        "Anunțul indică Administrația Fondului pentru Mediu drept sursă de finanțare și o durată estimată a lucrărilor de maximum șase luni.",
+        "Documentele verificate descriu etapa de primire a ofertelor; ele nu dovedesc atribuirea contractului sau începerea lucrărilor."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Costești — anunț de publicitate, modernizarea iluminatului public",
+          "url": "https://comuna-costesti.ro/documente/anunt-de-publicitate-executia-lucrarilor-pentru-modernizarea-sistemului-de-iluminat-public-din-comuna-costesti-judet-valcea/",
+          "tier": "T1"
+        },
+        {
+          "name": "Primăria Costești — Anunț de participare nr. 6587/18.09.2026",
+          "url": "https://comuna-costesti.ro/wp-content/uploads/2026/09/Anunt-de-participare-1.pdf",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-28T13:10:05+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/costesti-iluminat-public-achizitie-20260928/",
+      "editorial_product": "service_news",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active"
+    },
+    {
       "id": "runcu-eci-trei-posturi-septembrie-2026",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 2000000,
+      "priority": 1999999,
       "source_priority": 93,
-      "canonical_rank": 0,
+      "canonical_rank": 1,
       "headline": "Runcu scoate la concurs trei posturi pentru Echipa Comunitară Integrată",
       "dek": "Primăria Runcu recrutează asistent social, asistent medical comunitar și mediator școlar. Termenele de înscriere sunt 6, 7 și 8 octombrie.",
       "paragraphs": [
@@ -34,7 +70,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-28T13:09:59+03:00",
+      "published": "2026-09-28T13:10:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/runcu-eci-trei-posturi-septembrie-2026/",
@@ -46,9 +82,9 @@
     {
       "id": "alunu-educator-concurs-20260923",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 1999999,
+      "priority": 1999998,
       "source_priority": 92,
-      "canonical_rank": 1,
+      "canonical_rank": 2,
       "headline": "Alunu caută educator pe perioadă determinată; dosarele se depun până pe 30 septembrie, ora 15:00",
       "dek": "Primăria Alunu organizează concurs pentru un post de educator, normă întreagă, pe perioadă determinată. Termenul de înscriere este 30 septembrie 2026, ora 15:00.",
       "paragraphs": [
@@ -63,7 +99,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-28T13:09:59+03:00",
+      "published": "2026-09-28T13:10:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/alunu-educator-concurs-20260923/",
@@ -73,75 +109,11 @@
       "archive_status": "active"
     },
     {
-      "id": "bunesti-terapeut-ocupational-concurs-20260925",
-      "section": "LOCURI DE MUNCĂ",
-      "priority": 1999998,
-      "source_priority": 91,
-      "canonical_rank": 2,
-      "headline": "Bunești caută terapeut ocupațional pentru centrul de zi; dosarele se depun până pe 9 octombrie",
-      "dek": "Postul este pe perioadă nedeterminată, cu normă întreagă, la Centrul de zi pentru copii aflați în risc de separare de părinți.",
-      "paragraphs": [
-        "Dosarele se depun până la 9 octombrie 2026, ora 15:00.",
-        "Primăria Comunei Bunești organizează concurs pentru un post de terapeut ocupațional, pe perioadă nedeterminată, cu normă întreagă, la centrul de zi pentru copii."
-      ],
-      "sources": [
-        {
-          "name": "Primăria Comunei Bunești — concurs terapeut ocupațional",
-          "url": "https://www.primaria-bunesti.ro/anunturi/organizare-concurs-terapeut-ocupational-s-perioada-nedeterminata-centrul-de-zi-pentru-copii-aflati-in-situatie-de-risc-de-separare-de-parinti/",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-09-28T13:09:59+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/bunesti-terapeut-ocupational-concurs-20260925/",
-      "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
-    },
-    {
-      "id": "costesti-iluminat-public-achizitie-20260928",
-      "section": "ADMINISTRAȚIE",
-      "priority": 1999997,
-      "source_priority": 96,
-      "canonical_rank": 3,
-      "headline": "Costești caută constructor pentru modernizarea iluminatului public: contract estimat la 780.000 lei",
-      "dek": "Primăria a deschis o procedură pentru 172 de corpuri de iluminat, senzori și telegestiune. Ofertele se primesc până la 28 septembrie, ora 11:00, iar finanțarea este indicată ca venind de la Administrația Fondului pentru Mediu.",
-      "paragraphs": [
-        "Comuna Costești a publicat o procedură de achiziție pentru lucrările de modernizare a iluminatului public, cu valoare totală estimată de 780.000 lei.",
-        "Termenul-limită pentru primirea ofertelor este 28 septembrie 2026, ora 11:00, iar deschiderea ofertelor este programată la 11:05 la Primăria Costești.",
-        "Documentația prevede demontarea a 153 de aparate existente și montarea a 172 de corpuri de iluminat, instalarea a doi senzori și a unui sistem de telegestiune.",
-        "Anunțul indică Administrația Fondului pentru Mediu drept sursă de finanțare și o durată estimată a lucrărilor de maximum șase luni.",
-        "Documentele verificate descriu etapa de primire a ofertelor; ele nu dovedesc atribuirea contractului sau începerea lucrărilor."
-      ],
-      "sources": [
-        {
-          "name": "Primăria Costești — anunț de publicitate, modernizarea iluminatului public",
-          "url": "https://comuna-costesti.ro/documente/anunt-de-publicitate-executia-lucrarilor-pentru-modernizarea-sistemului-de-iluminat-public-din-comuna-costesti-judet-valcea/",
-          "tier": "T1"
-        },
-        {
-          "name": "Primăria Costești — Anunț de participare nr. 6587/18.09.2026",
-          "url": "https://comuna-costesti.ro/wp-content/uploads/2026/09/Anunt-de-participare-1.pdf",
-          "tier": "T1"
-        }
-      ],
-      "published": "2026-09-28T13:06:13+03:00",
-      "image": null,
-      "canonical_source": "CIVORA",
-      "canonical_path": "/stiri/costesti-iluminat-public-achizitie-20260928/",
-      "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
-    },
-    {
       "id": "gusoeni-asistent-medical-comunitar-concurs-20260917",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 1999996,
+      "priority": 1999997,
       "source_priority": 91,
-      "canonical_rank": 4,
+      "canonical_rank": 3,
       "headline": "Gușoeni caută asistent medical comunitar debutant; dosarele se depun până la 30 septembrie",
       "dek": "Postul este pe perioadă nedeterminată, cu normă întreagă. Nu se cere vechime în specialitate; sunt necesare studii sanitare eligibile, documente OAMGMAMR și competențe de bază pe calculator.",
       "paragraphs": [
@@ -157,10 +129,38 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-28T13:06:13+03:00",
+      "published": "2026-09-28T13:10:05+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/gusoeni-asistent-medical-comunitar-concurs-20260917/",
+      "editorial_product": "service_news",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active"
+    },
+    {
+      "id": "bunesti-terapeut-ocupational-concurs-20260925",
+      "section": "LOCURI DE MUNCĂ",
+      "priority": 1999996,
+      "source_priority": 91,
+      "canonical_rank": 4,
+      "headline": "Bunești caută terapeut ocupațional pentru centrul de zi; dosarele se depun până pe 9 octombrie",
+      "dek": "Postul este pe perioadă nedeterminată, cu normă întreagă, la Centrul de zi pentru copii aflați în risc de separare de părinți.",
+      "paragraphs": [
+        "Dosarele se depun până la 9 octombrie 2026, ora 15:00.",
+        "Primăria Comunei Bunești organizează concurs pentru un post de terapeut ocupațional, pe perioadă nedeterminată, cu normă întreagă, la centrul de zi pentru copii."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Comunei Bunești — concurs terapeut ocupațional",
+          "url": "https://www.primaria-bunesti.ro/anunturi/organizare-concurs-terapeut-ocupational-s-perioada-nedeterminata-centrul-de-zi-pentru-copii-aflati-in-situatie-de-risc-de-separare-de-parinti/",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-09-28T13:10:05+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/bunesti-terapeut-ocupational-concurs-20260925/",
       "editorial_product": "service_news",
       "archive_only": false,
       "active_now": true,
@@ -355,11 +355,11 @@
       "priority": 1999990,
       "source_priority": 94,
       "canonical_rank": 8,
-      "headline": "ISU Vâlcea: 29 de intervenții pe 27 septembrie 2026, dintre care 22 de prim ajutor",
-      "dek": "ISU Vâlcea raportează pentru 27 septembrie 2026 un total de 29 de intervenții: 6 incendii, 22 de prim ajutor și 1 alte intervenții.",
+      "headline": "ISU Vâlcea: 27 de intervenții pe 28 septembrie 2026, dintre care 21 de prim ajutor",
+      "dek": "ISU Vâlcea raportează pentru 28 septembrie 2026 un total de 27 de intervenții: 5 incendii, 21 de prim ajutor și 1 alte intervenții.",
       "paragraphs": [
-        "ISU Vâlcea raportează 29 de intervenții pentru data de 27 septembrie 2026.",
-        "Bilanțul oficial indică 6 incendii, 22 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 1 alte intervenții."
+        "ISU Vâlcea raportează 27 de intervenții pentru data de 28 septembrie 2026.",
+        "Bilanțul oficial indică 5 incendii, 21 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 1 alte intervenții."
       ],
       "sources": [
         {
@@ -3027,11 +3027,11 @@
     }
   ],
   "current_story_ids": [
+    "costesti-iluminat-public-achizitie-20260928",
     "runcu-eci-trei-posturi-septembrie-2026",
     "alunu-educator-concurs-20260923",
-    "bunesti-terapeut-ocupational-concurs-20260925",
-    "costesti-iluminat-public-achizitie-20260928",
     "gusoeni-asistent-medical-comunitar-concurs-20260917",
+    "bunesti-terapeut-ocupational-concurs-20260925",
     "caineni-cornetu-avrig-acord-mediu-20260921",
     "muereasca-statii-incarcare-finantare-cj-20260831",
     "valcea-campanie-antirabica-toamna-20260925",
