@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-09-28T22:35:12.845443Z",
+  "source_generated_at": "2026-09-29T15:12:17.055292Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
-  "story_count": 86,
-  "current_story_count": 18,
-  "archive_story_count": 68,
+  "story_count": 89,
+  "current_story_count": 19,
+  "archive_story_count": 70,
   "verified_visual_count": 1,
-  "lead_story_id": "costesti-iluminat-public-achizitie-20260928",
-  "lead_published_at": "2026-09-28T13:10:05+03:00",
-  "articles_sha256": "6a4958d8c05d89f2bf5f2820c5c76c34db0c98b1aca098d995332e21b8364156",
-  "synced_at": "2026-09-28T22:35:12.845443Z",
+  "lead_story_id": "fast-isu-incendiu-izbucnit-la-o-gospodarie-din-localitatea-lapu-b5068b7678",
+  "lead_published_at": "2026-09-29T18:12:09+03:00",
+  "articles_sha256": "bd13c410285c536e1a19b30e30eef9f54f252e5178bdfef6b547f83a70c85e78",
+  "synced_at": "2026-09-29T15:12:17.055292Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 14,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-09-29T16:45:33+03:00"
+  "local_life_surface_updated_at": "2026-09-29T21:21:09+03:00"
 }
