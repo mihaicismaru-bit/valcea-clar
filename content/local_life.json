@@ -1,23 +1,8 @@
 {
   "schema_version": "1.1",
-  "updated_at": "2026-09-30T10:49:30+03:00",
+  "updated_at": "2026-09-30T17:30:32+03:00",
   "source_policy": "Verified structured facts only; no inferred availability, rankings or recommendations.",
-  "sports": [
-    {
-      "id": "sport-scm-ramnicu-valcea-scm-universitatea-craiova-2026-09-30",
-      "sport": "Handbal Feminin",
-      "competition": "Liga Florilor MOL",
-      "start": "2026-09-30T17:00:00+03:00",
-      "home": "SCM Râmnicu Vâlcea",
-      "away": "SCM Universitatea Craiova",
-      "venue": "Sala Traian",
-      "locality": "Râmnicu Vâlcea",
-      "importance": "local",
-      "status": "scheduled",
-      "source_url": "https://frh.ro/program.php?id=598",
-      "checked_at": "2026-09-24T15:29:19+03:00"
-    }
-  ],
+  "sports": [],
   "cinema": {
     "checked_at": "2026-09-24T15:29:19+03:00",
     "venues": [],
