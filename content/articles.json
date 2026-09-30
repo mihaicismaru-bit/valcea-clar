@@ -1,5 +1,5 @@
 {
-  "updated_local": "2026-09-29T20:06:12.776994Z",
+  "updated_local": "2026-09-29T23:44:18.647776Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
@@ -23,7 +23,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-29T18:12:16+03:00",
+      "published": "2026-09-29T23:06:12+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/fast-isu-incendiu-izbucnit-la-o-gospodarie-din-localitatea-lapu-b5068b7678/",
@@ -52,7 +52,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-29T18:12:16+03:00",
+      "published": "2026-09-29T23:06:12+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/fast-isu-incendiu-izbucnit-in-fondul-forestier-al-localitatii-b-cc7fbe8346/",
@@ -81,7 +81,7 @@
           "tier": "T1"
         }
       ],
-      "published": "2026-09-29T18:12:16+03:00",
+      "published": "2026-09-29T23:06:12+03:00",
       "image": null,
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/fast-isu-incendiu-izbucnit-in-fondul-forestier-al-localitatii-b-cb8f59b74a/",
@@ -382,11 +382,11 @@
       "priority": 1999989,
       "source_priority": 94,
       "canonical_rank": 11,
-      "headline": "ISU Vâlcea: 27 de intervenții pe 28 septembrie 2026, dintre care 21 de prim ajutor",
-      "dek": "ISU Vâlcea raportează pentru 28 septembrie 2026 un total de 27 de intervenții: 5 incendii, 21 de prim ajutor și 1 alte intervenții.",
+      "headline": "ISU Vâlcea: 31 de intervenții pe 29 septembrie 2026, dintre care 25 de prim ajutor",
+      "dek": "ISU Vâlcea raportează pentru 29 septembrie 2026 un total de 31 de intervenții: 2 incendii, 25 de prim ajutor și 4 alte intervenții.",
       "paragraphs": [
-        "ISU Vâlcea raportează 27 de intervenții pentru data de 28 septembrie 2026.",
-        "Bilanțul oficial indică 5 incendii, 21 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 1 alte intervenții."
+        "ISU Vâlcea raportează 31 de intervenții pentru data de 29 septembrie 2026.",
+        "Bilanțul oficial indică 2 incendii, 25 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 4 alte intervenții."
       ],
       "sources": [
         {
