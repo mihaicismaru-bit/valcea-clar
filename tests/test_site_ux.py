@@ -1,3 +1,4 @@
+import html
 import json
 import subprocess
 import sys
@@ -163,7 +164,7 @@ class SiteUXContract(unittest.TestCase):
         self.assertTrue(events, 'current verified event inventory must not be empty')
         self.assertEqual(page.count('class="event-card"'), len(events))
         for event in events:
-            self.assertIn(str(event['title']), page)
+            self.assertIn(html.escape(str(event['title'])), page)
         self.assertNotIn('editorial_card', page)
         css = self.read('assets/site.css')
         self.assertIn('UNDE IEȘIM — event discovery UX', css)
