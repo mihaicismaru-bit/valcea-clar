@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-10-03T06:36:15.077082Z",
+  "source_generated_at": "2026-10-03T08:36:13.874589Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
-  "story_count": 88,
-  "current_story_count": 9,
+  "story_count": 89,
+  "current_story_count": 10,
   "archive_story_count": 79,
   "verified_visual_count": 0,
-  "lead_story_id": "weekend-clar-20261003",
-  "lead_published_at": "2026-10-03T09:36:09+03:00",
-  "articles_sha256": "4d938568ebed9b8f3fdad9701b421615467b028725c2fc66ab9ab225cc7d14a8",
-  "synced_at": "2026-10-03T06:36:15.077082Z",
+  "lead_story_id": "scm-program-dbd2c22d1578de50198c",
+  "lead_published_at": "2026-10-03T11:36:08+03:00",
+  "articles_sha256": "8a219ad7bae18e602d3311ae475da5b548de954e6227b4797229eda2a3b7b8e0",
+  "synced_at": "2026-10-03T08:36:13.874589Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 16,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-10-03T09:38:21+03:00"
+  "local_life_surface_updated_at": "2026-10-03T13:37:15+03:00"
 }
