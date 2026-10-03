@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-10-03T06:00:33.935057Z",
+  "source_generated_at": "2026-10-03T06:36:15.077082Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
-  "story_count": 87,
-  "current_story_count": 8,
+  "story_count": 88,
+  "current_story_count": 9,
   "archive_story_count": 79,
   "verified_visual_count": 0,
-  "lead_story_id": "fast-isu-incendiu-izbucnit-la-o-gospodarie-din-localitatea-lapu-b5068b7678",
-  "lead_published_at": "2026-09-29T23:06:12+03:00",
-  "articles_sha256": "4175e8698bd39278e9b3ebe0a8fef026361efb4bc43ecee0c69ba679e753f6d4",
-  "synced_at": "2026-10-03T06:00:33.935057Z",
+  "lead_story_id": "weekend-clar-20261003",
+  "lead_published_at": "2026-10-03T09:36:09+03:00",
+  "articles_sha256": "4d938568ebed9b8f3fdad9701b421615467b028725c2fc66ab9ab225cc7d14a8",
+  "synced_at": "2026-10-03T06:36:15.077082Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 16,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-10-03T09:20:03+03:00"
+  "local_life_surface_updated_at": "2026-10-03T09:38:21+03:00"
 }
