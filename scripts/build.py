@@ -7,6 +7,7 @@ import html
 import json
 import os
 import shutil
+from tempfile import TemporaryDirectory
 import unicodedata
 
 from media_assets import materialize_media
@@ -348,12 +349,16 @@ def related_block(article):
         f'<ul>{items}</ul></section>'
     )
 
-if OUT.exists():
-    shutil.rmtree(OUT)
-OUT.mkdir()
-(OUT / 'assets').mkdir()
-(OUT / 'assets/site.css').write_text(css, encoding='utf-8')
-AVAILABLE_MEDIA = materialize_media(OUT / 'media')
+with TemporaryDirectory(prefix='valcea-verified-media-') as previous_build:
+    previous_media = Path(previous_build) / 'media'
+    if (OUT / 'media').is_dir():
+        shutil.copytree(OUT / 'media', previous_media)
+    if OUT.exists():
+        shutil.rmtree(OUT)
+    OUT.mkdir()
+    (OUT / 'assets').mkdir()
+    (OUT / 'assets/site.css').write_text(css, encoding='utf-8')
+    AVAILABLE_MEDIA = materialize_media(OUT / 'media', previous_media_dir=previous_media)
 
 available_products = {article_product(article) for article in articles}
 product_nav_order = [
