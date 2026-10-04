@@ -9,10 +9,10 @@
   "story_count": 89,
   "current_story_count": 9,
   "archive_story_count": 80,
-  "verified_visual_count": 0,
+  "verified_visual_count": 12,
   "lead_story_id": "weekend-clar-20261003",
   "lead_published_at": "2026-10-03T11:36:13+03:00",
-  "articles_sha256": "65b8c8b4ec30e8a308c7046422a8c525476d887fa0998071d51718eb07b39091",
+  "articles_sha256": "033e90faa37f56b0f4c7bc41c66569beea111a2ea4b42bf018bbd52e06dadb96",
   "synced_at": "2026-10-03T22:29:36.978861Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 9,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-10-04T08:49:10+03:00"
+  "local_life_surface_updated_at": "2026-10-04T10:23:22+03:00"
 }
