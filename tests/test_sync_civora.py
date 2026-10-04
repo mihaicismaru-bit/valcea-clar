@@ -1,9 +1,11 @@
+import json
 import unittest
 from datetime import datetime
+from unittest.mock import patch
 from zoneinfo import ZoneInfo
 
 from scripts.reconcile_civora_currentness_events import reconcile_events
-from scripts.sync_civora import _freshness_key, _normalize_story, _normalize_visual
+from scripts.sync_civora import _extract_runtime_archive_story, _freshness_key, _normalize_story, _normalize_visual
 
 
 class SyncCivoraTests(unittest.TestCase):
@@ -71,6 +73,46 @@ class SyncCivoraTests(unittest.TestCase):
         self.assertTrue(row["image"].startswith("civora-"))
         self.assertTrue(row["image"].endswith(".jpg"))
         self.assertEqual(row["image_fetch_url"], visual["public_url"])
+
+    def archive_projection(self, image, old=None):
+        canonical = "https://valceaclar.ro/stiri/archive-photo/"
+        news = {"@type": "NewsArticle", "url": canonical, "headline": "Titlu",
+                "datePublished": "2026-09-20T12:00:00+03:00"}
+        page = (f'<link rel="canonical" href="{canonical}">'
+                f'<script type="application/ld+json">{json.dumps(news)}</script>'
+                '<h1>Titlu</h1><div class="article-body"><p>Corp verificat.</p></div>'
+                '<section class="article-sources"><a href="https://example.com/source">Sursă</a></section>')
+        manifest = {"id": "archive-photo", "path": "/stiri/archive-photo/",
+                    "canonical": canonical, "public_ux_authorized": True,
+                    "structured_data_type": "NewsArticle", "image": image}
+        with patch("scripts.sync_civora._fetch_text", return_value=page):
+            return _extract_runtime_archive_story(manifest, 9, old or {}, {"local.webp"})
+
+    def test_archive_projects_current_verified_manifest_photo_before_legacy_local(self):
+        visual = {"public_url": "https://example.com/verified.jpg", "provenance_status": "VERIFIED",
+                  "source_url": "https://example.com/source", "credit": "Credit", "rights_basis": "licensed",
+                  "contextual_archive": True, "editorial_note": "Foto de context; nu documentează evenimentul."}
+        row = self.archive_projection(visual, {"archive-photo": {"image": "local.webp"}})
+        self.assertEqual(row["image_origin_url"], visual["public_url"])
+        self.assertEqual(row["image_fetch_url"], visual["public_url"])
+        self.assertEqual(row["image_provenance_status"], "VERIFIED")
+        self.assertEqual(row["image_caption"], visual["editorial_note"])
+        self.assertTrue(row["archive_only"])
+        self.assertTrue(row["image_site_eligible"])
+        self.assertEqual(row["paragraphs"], ["Corp verificat."])
+
+    def test_archive_unverified_or_missing_visual_keeps_existing_fallback(self):
+        for visual in (None, {"public_url": "https://example.com/held.jpg", "provenance_status": "HOLD"}):
+            with self.subTest(visual=visual):
+                self.assertIsNone(self.archive_projection(visual)["image"])
+                row = self.archive_projection(visual, {"archive-photo": {"image": "local.webp"}})
+                self.assertEqual(row["image"], "local.webp")
+                self.assertNotIn("image_fetch_url", row)
+
+    def test_archive_social_card_remains_ineligible(self):
+        row = self.archive_projection({"public_url": "https://example.com/card.jpg",
+                                      "provenance_status": "VERIFIED", "rights_basis": "original_editorial_layout"})
+        self.assertFalse(row["image_site_eligible"])
 
     def test_social_editorial_card_is_not_site_eligible(self):
         visual = {

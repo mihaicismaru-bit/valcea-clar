@@ -427,11 +427,15 @@ def _extract_runtime_archive_story(
         "canonical_path": expected_path,
         "archive_only": True,
     }
-    old_image = old.get("image")
-    if old_image in local_media:
-        out["image"] = old_image
-        if old.get("image_caption"):
-            out["image_caption"] = str(old["image_caption"])
+    canonical_visual = _normalize_visual(story_id, manifest_story.get("image"))
+    if canonical_visual:
+        out.update(canonical_visual)
+    else:
+        old_image = old.get("image")
+        if old_image in local_media:
+            out["image"] = old_image
+            if old.get("image_caption"):
+                out["image_caption"] = str(old["image_caption"])
     return out
 
 
