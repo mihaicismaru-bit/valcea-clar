@@ -77,7 +77,7 @@ def _download_image(url: str) -> tuple[bytes, str]:
     return data, final_url
 
 
-def materialize_media(target: Path, articles: list[dict] | None = None) -> set[str]:
+def materialize_media(target: Path, articles: list[dict] | None = None, *, previous_media_dir: Path | None = None) -> set[str]:
     """Build local media and mirror verified canonical CIVORA visuals.
 
     Curated media committed in ``media_source`` is deterministic and mandatory.
@@ -131,6 +131,13 @@ def materialize_media(target: Path, articles: list[dict] | None = None) -> set[s
             raise ValueError('conflicting canonical media mirror filename: ' + name)
         mirrors[name] = spec
 
+    previous_assets = {}
+    if previous_media_dir is not None and (previous_media_dir / 'provenance.json').is_file():
+        try:
+            previous_assets = json.loads((previous_media_dir / 'provenance.json').read_text(encoding='utf-8')).get('assets') or {}
+        except (ValueError, OSError):
+            pass
+
     failures = []
     mirrored = 0
     for name, spec in mirrors.items():
@@ -138,6 +145,23 @@ def materialize_media(target: Path, articles: list[dict] | None = None) -> set[s
             continue
         if spec['provenance_status'] != 'VERIFIED':
             continue
+
+        # A second build in the same job must not refetch and discard photos
+        # already verified by the first build. Reuse only exact current records
+        # with matching provenance, size, hash and actual image bytes.
+        previous = previous_assets.get(name)
+        cached = previous_media_dir / name if previous_media_dir is not None else None
+        if isinstance(previous, dict) and cached is not None and cached.is_file():
+            if all(previous.get(key) == value for key, value in spec.items()):
+                data = cached.read_bytes()
+                if (len(data) <= MAX_REMOTE_BYTES and len(data) == previous.get('bytes')
+                        and hashlib.sha256(data).hexdigest() == previous.get('sha256')
+                        and _looks_like_image(data)):
+                    (target / name).write_bytes(data)
+                    available.add(name)
+                    mirrored += 1
+                    provenance[name] = previous
+                    continue
 
         attempts: list[str] = []
         for candidate in (
