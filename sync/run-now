@@ -1,5 +1,5 @@
-2026-10-03T09:39:00+03:00
-reason=saturday-weekend-clar-story-publication
+2026-10-05T02:04:00+03:00
+reason=public_projection_divergence_recovery
 source=civora
-story_id=weekend-clar-20261003
-published_at=2026-10-03T09:36:16+03:00
+civora_main_head=ae861d4087310466e4306f73461b3bcdb4b9c670
+public_projection_head_before=65b938a2bd2eb31b028707bbaf5823b1de5f7094
