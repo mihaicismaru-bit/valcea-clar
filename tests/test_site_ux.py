@@ -69,6 +69,20 @@ class SiteUXContract(unittest.TestCase):
         self.assertIn('article[data-product="CLARIFICĂM"]', css)
         self.assertIn('article[data-product="PAMFLET/SATIRĂ"]', css)
 
+    def test_verified_archive_photos_have_visible_image_and_provenance(self):
+        provenance = json.loads(self.read('media/provenance.json'))
+        for article in self.articles:
+            if article.get('image_provenance_status') != 'VERIFIED' or article.get('image_site_eligible') is False:
+                continue
+            with self.subTest(story_id=article['id']):
+                page = self.read(f'stiri/{article["id"]}/index.html')
+                self.assertIn(f'src="/media/{article["image"]}"', page)
+                self.assertIn('data-photo-provenance="verified"', page)
+                self.assertIn(html.escape(article['image_caption'], quote=True), page)
+                if article.get('image_credit'):
+                    self.assertIn(html.escape(article['image_credit'], quote=True), page)
+                self.assertEqual(provenance['assets'][article['image']]['origin_url'], article['image_origin_url'])
+
     def test_editorial_cards_never_render_as_site_media(self):
         home = self.read('index.html')
         banned = ('Card editorial construit', 'VÂLCEA CLAR — card editorial')

@@ -111,10 +111,19 @@ def image_html(article, hero=False):
     if not name or name not in AVAILABLE_MEDIA or is_editorial_card(article):
         return ''
     caption = article.get('image_caption', 'Imagine de context din arhiva VÂLCEA CLAR.')
+    provenance = ' data-photo-provenance="verified"' if article.get('image_provenance_status') == 'VERIFIED' else ''
+    attribution = ''
+    if provenance and article.get('image_credit'):
+        credit = h(article['image_credit'])
+        if article.get('image_source_url'):
+            credit = f'<a href="{h(article["image_source_url"])}" rel="nofollow noopener">{credit}</a>'
+        attribution = f' · Foto: {credit}'
+        if article.get('image_license_url'):
+            attribution += f' · <a href="{h(article["image_license_url"])}" rel="nofollow noopener">Licență</a>'
     return (
-        '<figure class="story-media">'
+        f'<figure class="story-media"{provenance}>'
         f'<img class="thumb" src="{u("/media/" + h(name))}" alt="{h(caption)}" loading="{"eager" if hero else "lazy"}">'
-        f'<figcaption class="photo-note">{h(caption)}</figcaption>'
+        f'<figcaption class="photo-note">{h(caption)}{attribution}</figcaption>'
         '</figure>'
     )
 
