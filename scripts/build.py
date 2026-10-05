@@ -293,11 +293,19 @@ def product_signpost(article):
     )
 
 
+article_payload = load('articles.json')
 articles = sorted(
-    load('articles.json')['articles'],
+    article_payload['articles'],
     key=lambda a: (a.get('priority', 0), a.get('published', '')),
     reverse=True,
 )
+current_story_ids = [str(value) for value in article_payload.get('current_story_ids') or []]
+current_story_set = set(current_story_ids)
+current_articles = [article for article in articles if str(article.get('id') or '') in current_story_set]
+if not current_articles:
+    # Fail-safe compatibility for older content snapshots that predate explicit
+    # currentness projection. Current production sync always writes this list.
+    current_articles = articles
 legal = load('legal.json')
 events_payload = load('events.json') if (C / 'events.json').exists() else {'events': []}
 events = events_payload.get('events') or []
@@ -457,12 +465,12 @@ def stream_story(article):
     )
 
 
-lead = articles[0]
-rail_articles = articles[1:4]
-stream_articles = articles[4:] if len(articles) > 4 else articles[1:]
+lead = current_articles[0]
+rail_articles = current_articles[1:4]
+stream_articles = current_articles[4:] if len(current_articles) > 4 else current_articles[1:]
 latest_links = ''.join(
     f'<a href="{story_href(a)}"><span>{h(article_product(a))} · {h(a["section"])}</span>{h(a["headline"])}</a>'
-    for a in articles[1:4]
+    for a in current_articles[1:4]
 )
 
 def local_today():
@@ -577,7 +585,7 @@ home = (
     '<strong>VÂLCEA. CLAR.</strong><span>Ce se întâmplă.</span><span>Ce știm.</span><span>Ce contează.</span>'
     '</section>'
     '<div class="status"><div><b>Ediție continuă</b> · Redacție locală autonomă · tot județul Vâlcea</div>'
-    f'<div>Ultima actualizare: {h(pretty_date(articles[0].get("published")))}</div></div>'
+    f'<div>Ultima actualizare: {h(pretty_date(current_articles[0].get("published")))}</div></div>'
     f'<aside class="headline-strip" aria-label="Pe scurt"><span>Pe scurt</span>{latest_links}</aside>'
     '<section class="lead-grid" aria-label="Principal">'
     '<article class="hero">'
@@ -619,7 +627,7 @@ home = (
 )
 
 for section in sections:
-    section_articles = [a for a in articles if a.get('section') == section]
+    section_articles = [a for a in current_articles if a.get('section') == section]
     if not section_articles:
         continue
     home += (
