@@ -1,15 +1,86 @@
 {
-  "updated_local": "2026-10-04T21:13:51.830055Z",
+  "updated_local": "2026-10-05T22:02:27.561872Z",
   "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
     {
+      "id": "a1-cisnadie-boita-inchidere-dn7-20261005",
+      "section": "MOBILITATE",
+      "priority": 2000000,
+      "source_priority": 98,
+      "canonical_rank": 0,
+      "headline": "A1 se închide între Boița și Șelimbăr până pe 19 decembrie; DN7 preia traficul deviat",
+      "dek": "IPJ Vâlcea și IPJ Sibiu au anunțat închiderea sectorului A1 dintre Boița și Șelimbăr/Cisnădie. Traficul este deviat pe DN7 și DN1, iar polițiștii avertizează asupra unor posibile coloane și timpi mai mari de parcurs.",
+      "paragraphs": [
+        "IPJ Vâlcea și IPJ Sibiu au anunțat că sectorul A1 dintre Boița și Șelimbăr/Cisnădie este închis în perioada 5 octombrie–19 decembrie 2026.",
+        "Pentru ambele sensuri, traficul este deviat pe DN7 între Boița, Tălmaciu și Veștem, apoi pe DN1 către Cisnădie, respectiv pe traseul invers.",
+        "Polițiștii avertizează că preluarea traficului poate crește valorile de circulație pe DN7, inclusiv pe sectorul din județul Vâlcea, cu posibile coloane și timpi mai mari de parcurs.",
+        "Închiderea este legată de lucrările de construire a viaductului din zona Boița, la conexiunea rutieră unde traficul se descarcă spre DN7.",
+        "Șoferii care tranzitează Valea Oltului ar trebui să planifice timp suplimentar și să urmărească eventualele schimbări ale restricției și ale rutei de deviere."
+      ],
+      "sources": [
+        {
+          "name": "Radio România — informare IPJ Vâlcea, 05.10.2026",
+          "url": "https://www.radioromania.ro/Actualitate/traficul-pe-autostrada-a1-intre-sibiu-si-selimbar-inchis-pana-pe-19-decembrie-id224916.html",
+          "tier": "T2"
+        },
+        {
+          "name": "Radio România Oltenia-Craiova — informare IPJ Vâlcea/DRDP Craiova, 05.10.2026",
+          "url": "https://www.radiooltenia.ro/se-inchide-autostrada-a1-sibiu-pitesti-intre-boita-si-selimbar-pana-pe-19-decembrie/",
+          "tier": "T2"
+        },
+        {
+          "name": "Tribuna Sibiu — informare IPJ Sibiu, 05.10.2026",
+          "url": "https://www.tribuna.ro/a1-sibiu-boita-se-inchide-pana-in-19-decembrie-traficul-va-fi-deviat-pe-dn1-si-dn7/",
+          "tier": "T2"
+        }
+      ],
+      "published": "2026-10-06T01:02:20+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/a1-cisnadie-boita-inchidere-dn7-20261005/",
+      "editorial_product": "service_news",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active"
+    },
+    {
+      "id": "caineni-sef-serviciu-alimentare-apa-20261005",
+      "section": "LOCURI DE MUNCĂ",
+      "priority": 1999999,
+      "source_priority": 91,
+      "canonical_rank": 1,
+      "headline": "Câineni caută șef pentru Serviciul de Alimentare cu Apă; dosarele se depun până pe 16 octombrie",
+      "dek": "Primăria Câineni organizează concurs pentru un post contractual de conducere, pe perioadă nedeterminată și cu normă întreagă. Dosarele se primesc până pe 16 octombrie, între 09:00 și 14:00.",
+      "paragraphs": [
+        "Primăria comunei Câineni scoate la concurs postul vacant de șef al Serviciului de Alimentare cu Apă, pe perioadă nedeterminată și cu normă întreagă.",
+        "Dosarele se depun în perioada 5–16 octombrie 2026, între orele 09:00 și 14:00, la Compartimentul Juridic și Resurse Umane al Primăriei Câineni.",
+        "Anunțul cere studii universitare de licență sau studii superioare de lungă durată și cunoștințe de operare pe calculator la nivel mediu.",
+        "Selecția dosarelor este pe 19 octombrie, proba scrisă pe 26 octombrie la 10:00, interviul pe 29 octombrie la 10:00, iar rezultatul final pe 2 noiembrie."
+      ],
+      "sources": [
+        {
+          "name": "Posturi.gov.ro — Primăria Comunei Câineni, 05.10.2026",
+          "url": "https://posturi.gov.ro/joburi/sef-serviciu-alimentare-cu-apa/",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-10-06T01:02:20+03:00",
+      "image": null,
+      "canonical_source": "CIVORA",
+      "canonical_path": "/stiri/caineni-sef-serviciu-alimentare-apa-20261005/",
+      "editorial_product": "service_news",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active"
+    },
+    {
       "id": "scm-program-dbd2c22d1578de50198c",
       "section": "SPORT",
-      "priority": 2000000,
+      "priority": 1999998,
       "source_priority": 88,
-      "canonical_rank": 0,
+      "canonical_rank": 2,
       "headline": "Gloria Bistriţa – SCM Râmnicu Vâlcea: meci programat pe 10 octombrie 2026, de la 11:00",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Jean Padureanu. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -35,9 +106,9 @@
     {
       "id": "fast-isu-incendiu-izbucnit-la-o-gospodarie-din-localitatea-lapu-b5068b7678",
       "section": "URGENȚE",
-      "priority": 1999999,
+      "priority": 1999997,
       "source_priority": 97,
-      "canonical_rank": 1,
+      "canonical_rank": 3,
       "headline": "ISU Vâlcea: Incendiu izbucnit la o gospodărie din localitatea Lăpușata",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 28.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -63,9 +134,9 @@
     {
       "id": "runcu-eci-trei-posturi-septembrie-2026",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 1999998,
+      "priority": 1999996,
       "source_priority": 93,
-      "canonical_rank": 2,
+      "canonical_rank": 4,
       "headline": "Runcu scoate la concurs trei posturi pentru Echipa Comunitară Integrată",
       "dek": "Primăria Runcu recrutează asistent social, asistent medical comunitar și mediator școlar. Termenele de înscriere sunt 6, 7 și 8 octombrie.",
       "paragraphs": [
@@ -102,9 +173,9 @@
     {
       "id": "bunesti-terapeut-ocupational-concurs-20260925",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 1999997,
+      "priority": 1999995,
       "source_priority": 91,
-      "canonical_rank": 3,
+      "canonical_rank": 5,
       "headline": "Bunești caută terapeut ocupațional pentru centrul de zi; dosarele se depun până pe 9 octombrie",
       "dek": "Postul este pe perioadă nedeterminată, cu normă întreagă, la Centrul de zi pentru copii aflați în risc de separare de părinți.",
       "paragraphs": [
@@ -130,9 +201,9 @@
     {
       "id": "valcea-campanie-antirabica-toamna-20260925",
       "section": "UTIL",
-      "priority": 1999996,
+      "priority": 1999994,
       "source_priority": 88,
-      "canonical_rank": 4,
+      "canonical_rank": 6,
       "headline": "Vâlcea: campania antirabică de toamnă a început; momeli vaccinale pentru vulpi și vaccinarea câinilor și pisicilor din octombrie",
       "dek": "DSVSA Vâlcea anunță două etape: distribuirea momelilor vaccinale pentru vulpi în 25–30 septembrie și vaccinarea obligatorie a câinilor și pisicilor în perioada 1 octombrie–31 decembrie 2026.",
       "paragraphs": [
@@ -170,14 +241,14 @@
     {
       "id": "isu-valcea-interventii-zilnice",
       "section": "URGENȚE",
-      "priority": 1999995,
+      "priority": 1999993,
       "source_priority": 94,
-      "canonical_rank": 5,
-      "headline": "ISU Vâlcea: 26 de intervenții pe 4 octombrie 2026, dintre care 20 de prim ajutor",
-      "dek": "ISU Vâlcea raportează pentru 4 octombrie 2026 un total de 26 de intervenții: 6 incendii, 20 de prim ajutor și 0 alte intervenții.",
+      "canonical_rank": 7,
+      "headline": "ISU Vâlcea: 35 de intervenții pe 5 octombrie 2026, dintre care 24 de prim ajutor",
+      "dek": "ISU Vâlcea raportează pentru 5 octombrie 2026 un total de 35 de intervenții: 5 incendii, 24 de prim ajutor și 6 alte intervenții.",
       "paragraphs": [
-        "ISU Vâlcea raportează 26 de intervenții pentru data de 4 octombrie 2026.",
-        "Bilanțul oficial indică 6 incendii, 20 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 0 alte intervenții."
+        "ISU Vâlcea raportează 35 de intervenții pentru data de 5 octombrie 2026.",
+        "Bilanțul oficial indică 5 incendii, 24 intervenții de prim ajutor, 0 descarcerări, 0 salvări și 6 alte intervenții."
       ],
       "sources": [
         {
@@ -198,9 +269,9 @@
     {
       "id": "cj-valcea-cocos-rajdp-mandat-guvernanta-20260818",
       "section": "ADMINISTRAȚIE",
-      "priority": 1999994,
+      "priority": 1999992,
       "source_priority": 90,
-      "canonical_rank": 6,
+      "canonical_rank": 8,
       "headline": "Vasile Cocoș nu mai are mandat de administrator la RAJDP. Pagina de guvernanță a CJ îl afișează încă în Consiliul de Administrație",
       "dek": "HCJ 137 din 24 iulie 2026 aprobă încetarea mandatului lui Vasile Cocoș la Drumurile Județene Vâlcea. În schimb, pagina oficială de guvernanță corporativă a CJ îl menționează încă drept membru CA, o neconcordanță pe care instituția trebuie să o actualizeze sau să o explice.",
       "paragraphs": [
@@ -240,9 +311,9 @@
     {
       "id": "bujoreni-11-zidari-4582-6000-20260818",
       "section": "LOCURI DE MUNCĂ",
-      "priority": 1999993,
+      "priority": 1999991,
       "source_priority": 88,
-      "canonical_rank": 7,
+      "canonical_rank": 9,
       "headline": "11 locuri de muncă la Bujoreni pentru zidari: 4.582–6.000 lei brut și bonuri de masă",
       "dek": "CAROLIN SRL declară în oferta oficială ANOFM 11 posturi nou create de zidar roșar-tencuitor în Olteni, Bujoreni. Contractele sunt pe perioadă nedeterminată, iar oferta este valabilă până la 18 decembrie 2026.",
       "paragraphs": [
@@ -273,7 +344,7 @@
       "section": "WEEKEND CLAR",
       "priority": 1000000,
       "source_priority": 96,
-      "canonical_rank": 8,
+      "canonical_rank": 10,
       "headline": "WEEKEND CLAR: alergare, handbal european, cinema și Zilele Recoltei în Vâlcea",
       "dek": "Selecția verificată pentru 3–4 octombrie include Vâlcea Forest Run & MTB, SCM Râmnicu Vâlcea–TUSSIES Metzingen, patru proiecții la Cinema Geo Săizescu și Zilele Recoltei.",
       "paragraphs": [
@@ -313,7 +384,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999999,
       "source_priority": 96,
-      "canonical_rank": 9,
+      "canonical_rank": 11,
       "headline": "Costești caută constructor pentru modernizarea iluminatului public: contract estimat la 780.000 lei",
       "dek": "Primăria a deschis o procedură pentru 172 de corpuri de iluminat, senzori și telegestiune. Ofertele se primesc până la 28 septembrie, ora 11:00, iar finanțarea este indicată ca venind de la Administrația Fondului pentru Mediu.",
       "paragraphs": [
@@ -346,7 +417,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 999998,
       "source_priority": 92,
-      "canonical_rank": 10,
+      "canonical_rank": 12,
       "headline": "Alunu caută educator pe perioadă determinată; dosarele se depun până pe 30 septembrie, ora 15:00",
       "dek": "Primăria Alunu organizează concurs pentru un post de educator, normă întreagă, pe perioadă determinată. Termenul de înscriere este 30 septembrie 2026, ora 15:00.",
       "paragraphs": [
@@ -373,7 +444,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 999997,
       "source_priority": 91,
-      "canonical_rank": 11,
+      "canonical_rank": 13,
       "headline": "Gușoeni caută asistent medical comunitar debutant; dosarele se depun până la 30 septembrie",
       "dek": "Postul este pe perioadă nedeterminată, cu normă întreagă. Nu se cere vechime în specialitate; sunt necesare studii sanitare eligibile, documente OAMGMAMR și competențe de bază pe calculator.",
       "paragraphs": [
@@ -401,7 +472,7 @@
       "section": "MEDIU",
       "priority": 999996,
       "source_priority": 86,
-      "canonical_rank": 12,
+      "canonical_rank": 14,
       "headline": "Câineni este inclus în proiectul Cornetu–Avrig pentru care Ministerul Mediului a emis acordul de mediu",
       "dek": "Acordul de mediu nr. 4, emis la 21 septembrie, vizează finalizarea amenajării hidroenergetice Cornetu–Avrig și include lucrări rămase la treapta Câineni. Emiterea acordului nu înseamnă că noile lucrări au început.",
       "paragraphs": [
@@ -432,7 +503,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999995,
       "source_priority": 80,
-      "canonical_rank": 13,
+      "canonical_rank": 15,
       "headline": "Muereasca: Consiliul Local a aprobat finanțarea pentru proiectul stațiilor de încărcare electrică",
       "dek": "HCL 42/31.08.2026 aprobă finanțarea obiectivului „Înființare stații de reîncărcare autovehicule electrice” din fondul CJ Vâlcea pentru programe de dezvoltare locală. Documentația verificată indică 164.590 lei.",
       "paragraphs": [
@@ -460,7 +531,7 @@
       "section": "URGENȚE",
       "priority": 999994,
       "source_priority": 99,
-      "canonical_rank": 14,
+      "canonical_rank": 16,
       "headline": "Băile Olănești: incendiul de la Iezer a ajuns la 27 de hectare; duminică seara nu era localizat",
       "dek": "ISU Vâlcea a transmis duminică seara că suprafața afectată de incendiul din fondul forestier de la Băile Olănești a ajuns la 27 de hectare. La ora retragerii forțelor, incendiul nu era localizat, iar operațiunile urmau să fie reluate dimineața.",
       "paragraphs": [
@@ -487,7 +558,7 @@
       "section": "MOBILITATE",
       "priority": 999993,
       "source_priority": 97,
-      "canonical_rank": 15,
+      "canonical_rank": 17,
       "headline": "Transalpina: din 26 septembrie, circulația între Rânca și Obârșia Lotrului este permisă doar 09:00–18:00",
       "dek": "CNAIR a scurtat programul zilnic pe sectorul DN67C Rânca–Obârșia Lotrului din cauza condițiilor meteo de la altitudine. În afara intervalului 09:00–18:00, sectorul este închis circulației.",
       "paragraphs": [
@@ -524,7 +595,7 @@
       "section": "SĂNĂTATE",
       "priority": 999992,
       "source_priority": 94,
-      "canonical_rank": 16,
+      "canonical_rank": 18,
       "headline": "Drăgășani: CT și radiologia sunt disponibile, dar programele publicate nu coincid",
       "dek": "Trei informații publice despre programul imagisticii de la Spitalul Municipal „Costache Nicolescu” indică intervale diferite. Disponibilitatea CT și radiologiei este confirmată; înainte de deplasare, programul trebuie verificat direct la spital.",
       "paragraphs": [
@@ -563,7 +634,7 @@
       "section": "UTILITATE",
       "priority": 999991,
       "source_priority": 92,
-      "canonical_rank": 17,
+      "canonical_rank": 19,
       "headline": "Horezu: drumul spre Vârful lui Roman va fi închis pe 26 septembrie, între 10:00 și 18:00",
       "dek": "Primăria Horezu anunță închiderea drumului spre Vârful lui Roman sâmbătă, 26 septembrie. Anunțul public nu precizează în pagina-index motivul, rutele alternative sau eventuale excepții de acces.",
       "paragraphs": [
@@ -591,7 +662,7 @@
       "section": "COMUNITATE",
       "priority": 999990,
       "source_priority": 96,
-      "canonical_rank": 18,
+      "canonical_rank": 20,
       "headline": "Brezoi: dosarele pentru primele 36 de locuri de îngrijire la domiciliu se depun până pe 25 septembrie",
       "dek": "Selecția vizează persoane de peste 65 de ani care au nevoie de sprijin și au venituri sub salariul minim net. Proiectul ACCES are o valoare totală de aproape 5 milioane de lei și o țintă de 106 beneficiari.",
       "paragraphs": [
@@ -624,7 +695,7 @@
       "section": "UTILITAR",
       "priority": 999989,
       "source_priority": 98,
-      "canonical_rank": 19,
+      "canonical_rank": 21,
       "headline": "Restricții de circulație anunțate la Călimănești, pentru lucrări la trotuare",
       "dek": "AS TRANS anunță restricții temporare de la 22 septembrie, pe un sector de 400 de metri. Informarea nu precizează durata lucrărilor sau o închidere integrală.",
       "paragraphs": [
@@ -652,7 +723,7 @@
       "section": "ECONOMIE",
       "priority": 999988,
       "source_priority": 93,
-      "canonical_rank": 20,
+      "canonical_rank": 22,
       "headline": "Șomajul urcă la 3,03%. Aproape două treimi dintre cei înregistrați sunt din mediul rural",
       "dek": "Curierul de Vâlcea publică date atribuite AJOFM: 4.214 șomeri înregistrați la sfârșitul lui august, dintre care 2.768 în mediul rural.",
       "paragraphs": [
@@ -679,7 +750,7 @@
       "section": "ACTUALITATE",
       "priority": 999987,
       "source_priority": 91,
-      "canonical_rank": 21,
+      "canonical_rank": 23,
       "headline": "Două incendii de vegetație, zeci de hectare afectate",
       "dek": "Relatările din 21 septembrie indică aproximativ 35–40 de hectare afectate la Tetoiu și circa 10 la Oteșani. Informațiile descriu situația raportată luni.",
       "paragraphs": [
@@ -710,7 +781,7 @@
       "section": "COMUNITATE",
       "priority": 999986,
       "source_priority": 89,
-      "canonical_rank": 22,
+      "canonical_rank": 24,
       "headline": "Copiii pregătesc a treia ediție a Zilei Recoltei",
       "dek": "Grupul Catehetic „Sfântul Nectarie” pregătește decorațiuni și un program artistic pentru a treia ediție. Data evenimentului nu este precizată în informare.",
       "paragraphs": [
@@ -737,7 +808,7 @@
       "section": "SPORT",
       "priority": 999985,
       "source_priority": 86,
-      "canonical_rank": 23,
+      "canonical_rank": 25,
       "headline": "SCM Râmnicu Vâlcea câștigă acasă după o revenire în repriza a doua",
       "dek": "SCM a învins FC Bihor cu 3–2, după ce era condusă la pauză, potrivit cronicii Curierului de Vâlcea. Lemac și Huiban au înscris în repriza a doua.",
       "paragraphs": [
@@ -779,7 +850,7 @@
       "section": "CULTURĂ",
       "priority": 999984,
       "source_priority": 83,
-      "canonical_rank": 24,
+      "canonical_rank": 26,
       "headline": "„Floarea Darurilor”, la Sala Lahovari",
       "dek": "Arhiepiscopia Râmnicului anunță concertul pentru sâmbătă, 26 septembrie, la ora 19:00. Condițiile de acces trebuie verificate la organizatori.",
       "paragraphs": [
@@ -805,7 +876,7 @@
       "section": "UTILITAR",
       "priority": 999983,
       "source_priority": 82,
-      "canonical_rank": 25,
+      "canonical_rank": 27,
       "headline": "Anunț nou pentru un post de contabil-șef",
       "dek": "Primăria Călimănești a publicat un anunț de concurs pentru postul de contabil-șef. Termenul și condițiile din atașament nu au fost verificate.",
       "paragraphs": [
@@ -831,7 +902,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999982,
       "source_priority": 96,
-      "canonical_rank": 26,
+      "canonical_rank": 28,
       "headline": "IPJ Vâlcea: REȚINUT PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 16.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -857,7 +928,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999981,
       "source_priority": 96,
-      "canonical_rank": 27,
+      "canonical_rank": 29,
       "headline": "IPJ Vâlcea: DEPISTAT DE POLIȚIȘTII SERVICIULUI RUTIER",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 15.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -884,7 +955,7 @@
       "section": "URGENȚE",
       "priority": 999980,
       "source_priority": 97,
-      "canonical_rank": 30,
+      "canonical_rank": 32,
       "headline": "ISU Vâlcea: Incendiu locuință în municipiul Râmnicu Vâlcea",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 02.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -910,7 +981,7 @@
       "section": "URGENȚE",
       "priority": 999979,
       "source_priority": 97,
-      "canonical_rank": 29,
+      "canonical_rank": 31,
       "headline": "ISU Vâlcea: Incendiu izbucnit într-o gospodărie din localitatea Livezi",
       "dek": "Comunicarea oficială a ISU Vâlcea conține informații verificabile despre cazul din 03.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -936,7 +1007,7 @@
       "section": "SPORT",
       "priority": 999978,
       "source_priority": 97,
-      "canonical_rank": 28,
+      "canonical_rank": 30,
       "headline": "Raliul Vâlcii intră în săptămâna decisivă: programul complet din 24–26 septembrie",
       "dek": "Etapa de la Vâlcea închide sezonul Campionatului Național de Raliuri. Organizatorii au publicat programul celor 13 probe, orele de start, evenimentele din Centrul Civic și regulile pentru spectatori.",
       "paragraphs": [
@@ -977,7 +1048,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999977,
       "source_priority": 96,
-      "canonical_rank": 33,
+      "canonical_rank": 35,
       "headline": "IPJ Vâlcea: REȚINUTĂ PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 09.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -1004,7 +1075,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999976,
       "source_priority": 96,
-      "canonical_rank": 32,
+      "canonical_rank": 34,
       "headline": "IPJ Vâlcea: REȚINUT PENTRU 24 DE ORE",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 05.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -1031,7 +1102,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999975,
       "source_priority": 96,
-      "canonical_rank": 31,
+      "canonical_rank": 33,
       "headline": "IPJ Vâlcea: ACȚIUNI PENTRU SIGURANȚA RUTIERĂ ÎN JUDEȚUL VÂLCEA",
       "dek": "Comunicarea oficială a IPJ Vâlcea conține informații verificabile despre cazul din 13.09.2026. VÂLCEA CLAR publică numai elementele atribuite explicit autorității și actualizează materialul când apar date noi.",
       "paragraphs": [
@@ -1058,7 +1129,7 @@
       "section": "UTIL",
       "priority": 999974,
       "source_priority": 93,
-      "canonical_rank": 34,
+      "canonical_rank": 36,
       "headline": "Salina Ocnele Mari își schimbă programul din 7 septembrie: închis luni și marți",
       "dek": "SALROM anunță un program nou pentru Salina Ocnele Mari în perioada 7–30 septembrie 2026: baza turistică este închisă lunea și marțea, iar miercuri–vineri funcționează între 10:00 și 16:00.",
       "paragraphs": [
@@ -1101,7 +1172,7 @@
       "section": "MOBILITATE",
       "priority": 999973,
       "source_priority": 92,
-      "canonical_rank": 42,
+      "canonical_rank": 44,
       "headline": "11 microbuze electrice sunt transferate către opt localități din Vâlcea",
       "dek": "HCL 312 împarte 11 microbuze, 11 stații lente și 5 stații rapide cumpărate prin PNRR. Furnizorul contractului de achiziție este BMC Trucks & Bus S.A., iar predarea către UAT-uri trebuie făcută în cel mult 15 zile.",
       "paragraphs": [
@@ -1135,7 +1206,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999972,
       "source_priority": 92,
-      "canonical_rank": 41,
+      "canonical_rank": 43,
       "headline": "Bunurile cumpărate prin proiectele de transport sunt puse la dispoziția ETA, iar contractul de delegare este modificat",
       "dek": "HCL 311 introduce în contractul de delegare nr. 17/28.05.2026 bunurile cumpărate prin proiectul de extindere a transportului spre zonele turistice și bunurile puse la dispoziția ETA de UAT-urile partenere. Votul a fost unanim.",
       "paragraphs": [
@@ -1169,7 +1240,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999971,
       "source_priority": 92,
-      "canonical_rank": 40,
+      "canonical_rank": 42,
       "headline": "Primăria ia avocați externi într-un proces pentru daune morale. Cine a dat în judecată Municipiul și DAS",
       "dek": "HCL 310 autorizează reprezentare juridică externă în dosarul 8244/288/2026. Dosarul este o acțiune în răspundere delictuală aflată pe fond la Judecătoria Râmnicu Vâlcea, iar hotărârea locală precizează că sunt solicitate daune morale.",
       "paragraphs": [
@@ -1211,7 +1282,7 @@
       "section": "BANI PUBLICI",
       "priority": 999970,
       "source_priority": 92,
-      "canonical_rank": 39,
+      "canonical_rank": 41,
       "headline": "Municipiul și Consiliul Județean se asociază pentru susținerea SCM Râmnicu Vâlcea în 2026",
       "dek": "HCL 309 aprobă asocierea dintre municipiu și județ pentru sportul de performanță derulat prin Sport Club Municipal Râmnicu Vâlcea și aprobă modelul contractului pe care primarul îl poate semna. Suma contribuțiilor nu este stabilită în corpul hotărârii.",
       "paragraphs": [
@@ -1244,7 +1315,7 @@
       "section": "BANI PUBLICI",
       "priority": 999969,
       "source_priority": 92,
-      "canonical_rank": 38,
+      "canonical_rank": 40,
       "headline": "Râmnicu Vâlcea introduce 990.000 lei din creditul Băncii Transilvania în bugetul de investiții din 2026",
       "dek": "HCL 308 mărește bugetul creditelor interne pe 2026 de la 10 milioane la 10,99 milioane lei. Documentul arată și noul calendar al tragerilor din finanțarea de 40 milioane lei contractată de la Banca Transilvania pe 10 ani.",
       "paragraphs": [
@@ -1278,7 +1349,7 @@
       "section": "BANI PUBLICI",
       "priority": 999968,
       "source_priority": 92,
-      "canonical_rank": 37,
+      "canonical_rank": 39,
       "headline": "730.000 lei din împrumutul municipal sunt mutați către parcarea etajată din Nord",
       "dek": "HCL 307 redistribuie bani în interiorul împrumutului de 40 milioane lei: scade finanțarea pentru locuințele de tineri și cu 1.400 lei pentru Școala Copăcelu, iar parcarea etajată din Nord ajunge la 10,286 milioane lei din împrumut.",
       "paragraphs": [
@@ -1312,7 +1383,7 @@
       "section": "SERVICII",
       "priority": 999967,
       "source_priority": 92,
-      "canonical_rank": 36,
+      "canonical_rank": 38,
       "headline": "Căldura se scumpește cu 13% la Râmnicu Vâlcea. Factura populației rămâne neschimbată, Primăria acoperă diferența",
       "dek": "HCL 306 ridică de la 1 august 2026 costul total al energiei termice pe rețeaua de distribuție de la 518,61 la 586,27 lei/MWh, fără TVA. Prețul facturat populației rămâne 475,62 lei/MWh, iar bugetul local preia o diferență de 110,65 lei/MWh.",
       "paragraphs": [
@@ -1349,7 +1420,7 @@
       "section": "SERVICII",
       "priority": 999966,
       "source_priority": 92,
-      "canonical_rank": 35,
+      "canonical_rank": 37,
       "headline": "CET Govora primește dreptul de a cumpăra integral energia termică de la alți producători",
       "dek": "HCL 305 rescrie actul adițional la concesiune după ce CET Govora a refuzat forma din iunie. Documentul leagă schimbarea de oprirea grupurilor pe lignit la 31 august 2026 și de faptul că noua centrală a CJ era estimată să devină operațională cel mai devreme la 15 octombrie 2026.",
       "paragraphs": [
@@ -1384,7 +1455,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999965,
       "source_priority": 91,
-      "canonical_rank": 45,
+      "canonical_rank": 47,
       "headline": "5 hotărâri pentru autorizații anuale de jocuri de noroc în cea mai recentă serie analizată a Consiliului Local Râmnicu Vâlcea",
       "dek": "În registrul oficial, 5 dintre cele mai recente 25 de hotărâri din 31.08.2026 privesc autorizații anuale de funcționare pentru jocuri de noroc; ele nu sunt tratate automat drept tot atâtea săli noi.",
       "paragraphs": [
@@ -1431,7 +1502,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999964,
       "source_priority": 91,
-      "canonical_rank": 44,
+      "canonical_rank": 46,
       "headline": "5 hotărâri pentru autorizații anuale de jocuri de noroc în cea mai recentă serie analizată a Consiliului Local Râmnicu Vâlcea",
       "dek": "În registrul oficial, 5 dintre cele mai recente 25 de hotărâri din 23.07.2026 privesc autorizații anuale de funcționare pentru jocuri de noroc; ele nu sunt tratate automat drept tot atâtea săli noi.",
       "paragraphs": [
@@ -1478,7 +1549,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 999963,
       "source_priority": 91,
-      "canonical_rank": 43,
+      "canonical_rank": 45,
       "headline": "APAVIL scoate la concurs două posturi fără experiență: laborant în Râmnicu Vâlcea și electrician în Călimănești",
       "dek": "Cele două oferte oficiale ANOFM sunt pentru contracte pe perioadă nedeterminată și normă întreagă. Termenele de valabilitate sunt 20 august 2026 pentru laborant și 21 august 2026 pentru electrician.",
       "paragraphs": [
@@ -1513,7 +1584,7 @@
       "section": "UTIL",
       "priority": 999962,
       "source_priority": 88,
-      "canonical_rank": 53,
+      "canonical_rank": 55,
       "headline": "Dăeşti: întrerupere de curent programată pe 26 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Berila în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1539,7 +1610,7 @@
       "section": "UTIL",
       "priority": 999961,
       "source_priority": 88,
-      "canonical_rank": 52,
+      "canonical_rank": 54,
       "headline": "Băile Govora: întrerupere de curent programată pe 25 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Gătejeşti în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1565,7 +1636,7 @@
       "section": "UTIL",
       "priority": 999960,
       "source_priority": 88,
-      "canonical_rank": 51,
+      "canonical_rank": 53,
       "headline": "Ioneşti: întrerupere de curent programată pe 24 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Bucşani, PTA Foteşti, PTA Guguianca în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1591,7 +1662,7 @@
       "section": "UTIL",
       "priority": 999959,
       "source_priority": 88,
-      "canonical_rank": 50,
+      "canonical_rank": 52,
       "headline": "Lădeşti: întrerupere de curent programată pe 23 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA Găgeni 1, PTA Găgeni 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1617,7 +1688,7 @@
       "section": "UTIL",
       "priority": 999958,
       "source_priority": 88,
-      "canonical_rank": 49,
+      "canonical_rank": 51,
       "headline": "Horezu: întrerupere de curent programată pe 22 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTCZ Bloc O2-O3 Horezu în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1643,7 +1714,7 @@
       "section": "UTIL",
       "priority": 999957,
       "source_priority": 88,
-      "canonical_rank": 48,
+      "canonical_rank": 50,
       "headline": "Budeşti: întrerupere de curent programată pe 21 septembrie 2026, între 09:00–17:00",
       "dek": "Distribuție Oltenia include PTA IAS Budeşti, PTA Satul Nou Racoviţa, PTAB Budeşti 2 în programul lucrărilor pentru prevenirea și corectarea avariilor. Intervalul anunțat este 09:00–17:00.",
       "paragraphs": [
@@ -1669,7 +1740,7 @@
       "section": "SPORT",
       "priority": 999956,
       "source_priority": 88,
-      "canonical_rank": 47,
+      "canonical_rank": 49,
       "headline": "SCM Râmnicu Vâlcea – Bihor Oradea: meci programat pe 20 septembrie 2026, de la 11:30",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -1695,7 +1766,7 @@
       "section": "ACTUALITATE",
       "priority": 999955,
       "source_priority": 88,
-      "canonical_rank": 46,
+      "canonical_rank": 48,
       "headline": "Parcare pe două niveluri și teren de sport cu nocturnă, deschise în cartierul Nord din Râmnicu Vâlcea",
       "dek": "Noua amenajare din curtea Liceului Forestier oferă aproximativ 160 de locuri de parcare, iar terenul de sport al școlii a fost refăcut deasupra construcției.",
       "paragraphs": [
@@ -1728,7 +1799,7 @@
       "section": "CULTURĂ",
       "priority": 999954,
       "source_priority": 82,
-      "canonical_rank": 55,
+      "canonical_rank": 57,
       "headline": "Două evenimente culturale la Râmnicu Vâlcea pe 4 septembrie: «Atelier 35» la Cozia, apoi expoziție și lansare la Artex",
       "dek": "Filiala Râmnicu Vâlcea a UAP a programat pentru 4 septembrie o expoziție de grup la Galeriile Cozia 1 și 2 și, de la ora 18:00, un dublu eveniment la Galeria Artex: retrospectiva Mariei Constantin și lansarea unui roman al Ioanei Drăgan.",
       "paragraphs": [
@@ -1755,7 +1826,7 @@
       "section": "LOCURI DE MUNCĂ",
       "priority": 999953,
       "source_priority": 82,
-      "canonical_rank": 54,
+      "canonical_rank": 56,
       "headline": "APAVIL caută trei oameni: două posturi de inginer și un post de încasator-cititor",
       "dek": "Dosarele pentru cele două posturi de inginer se depun până pe 18 septembrie, ora 13:00, iar pentru postul de încasator-cititor din subzona Mihăești până pe 21 septembrie, ora 15:00.",
       "paragraphs": [
@@ -1792,7 +1863,7 @@
       "section": "JUDEȚ",
       "priority": 999952,
       "source_priority": 78,
-      "canonical_rank": 57,
+      "canonical_rank": 59,
       "headline": "Romsilva: toate cele 19 lucrări PNRR împotriva viiturilor, într-un proiect care include Vâlcea, au fost finalizate",
       "dek": "Regia Națională a Pădurilor anunță finalizarea și recepția celor 19 obiective din proiectul de corectare a torenților derulat în opt județe, inclusiv Vâlcea. Valoarea de 109,56 milioane de lei fără TVA este pentru întregul proiect, nu doar pentru județ.",
       "paragraphs": [
@@ -1823,7 +1894,7 @@
       "section": "EVENIMENTE",
       "priority": 999951,
       "source_priority": 78,
-      "canonical_rank": 56,
+      "canonical_rank": 58,
       "headline": "Băile Govora găzduiește Conferința Națională INRMFB între 16 și 19 septembrie",
       "dek": "Cea de-a XX-a Conferință Națională a Institutului Național de Recuperare, Medicină Fizică și Balneoclimatologie este programată la Băile Govora, iar lucrările științifice se vor desfășura la Cazinoul din parcul central.",
       "paragraphs": [
@@ -1851,7 +1922,7 @@
       "section": "SIGURANȚĂ",
       "priority": 999950,
       "source_priority": 96,
-      "canonical_rank": 58,
+      "canonical_rank": 60,
       "headline": "Incendiu de vegetație la Bălcești: aproximativ 15 hectare de teren au fost afectate",
       "dek": "Pompierii vâlceni au stins un incendiu de vegetație uscată la Bălcești, iar ISU Vâlcea estimează suprafața afectată la aproximativ 15 hectare. Buletinul oficial nu indică o cauză a incendiului.",
       "paragraphs": [
@@ -1893,7 +1964,7 @@
       "section": "MOBILITATE",
       "priority": 999949,
       "source_priority": 91,
-      "canonical_rank": 59,
+      "canonical_rank": 61,
       "headline": "Horezu pregătește patru autobuze electrice și două centrale solare de câte 400 kW. Ce arată documentele",
       "dek": "Documentele de achiziție prevăd două autobuze electrice de 10–11 metri și două vehicule mai mici, plus stații lente de încărcare. Separat, proiectul fotovoltaic al orașului prevede două centrale de câte 400 kW pentru autoconsum.",
       "paragraphs": [
@@ -1934,7 +2005,7 @@
       "section": "EVENIMENTE",
       "priority": 999948,
       "source_priority": 88,
-      "canonical_rank": 60,
+      "canonical_rank": 62,
       "headline": "Băbeni începe patru zile de Festival «La Izvorul Dorului»: fotbal joi, concerte și paradă până duminică",
       "dek": "Festivalul se desfășoară între 3 și 6 septembrie. Prima zi aduce turneul de fotbal pentru juniori la Liceul «George Țărnea», iar programul continuă până duminică cu muzică, folclor și activități pentru comunitate.",
       "paragraphs": [
@@ -1970,7 +2041,7 @@
       "section": "CULTURĂ",
       "priority": 999947,
       "source_priority": 72,
-      "canonical_rank": 61,
+      "canonical_rank": 63,
       "headline": "„FISSURA LUCIS” la Casa Simian: vernisaj programat pe 3 septembrie, la ora 17:00",
       "dek": "La Muzeul de Artă „Casa Simian” din Râmnicu Vâlcea a fost anunțat pentru 3 septembrie 2026, ora 17:00, vernisajul expoziției de pictură a artistei Alexa Nicoleta Dicu.",
       "paragraphs": [
@@ -2001,7 +2072,7 @@
       "section": "JUDEȚ",
       "priority": 999946,
       "source_priority": 93,
-      "canonical_rank": 62,
+      "canonical_rank": 64,
       "headline": "APAVIL precizează valoarea contractului pentru apă și canalizare din Vâlcea: 931,7 milioane lei",
       "dek": "Operatorul județean spune că Contractul nr. 179 pentru proiectul regional a fost semnat pe 28 august. Finanțarea nerambursabilă poate ajunge la 709,81 milioane lei, iar lucrările prevăd 57,52 km pentru alimentarea cu apă și 186,89 km pentru colectarea apelor uzate.",
       "paragraphs": [
@@ -2028,7 +2099,7 @@
       "section": "CULTURĂ",
       "priority": 999945,
       "source_priority": 98,
-      "canonical_rank": 63,
+      "canonical_rank": 65,
       "headline": "Măciuca, anunțată drept gazda Zilei Regalității 2027 după colocviul de la Biblioteca Vâlcea",
       "dek": "Curierul de Vâlcea relatează că omul de afaceri Dan Nițu a anunțat intenția organizării Zilei Regalității la Măciuca în 2027. Anunțul a venit după colocviul dedicat Regelui Mihai I, desfășurat la 23 august 2026 la Biblioteca Județeană «Antim Ivireanul».",
       "paragraphs": [
@@ -2075,7 +2146,7 @@
       "section": "SERVICII",
       "priority": 999944,
       "source_priority": 100,
-      "canonical_rank": 64,
+      "canonical_rank": 66,
       "headline": "DN7, Valea Oltului: restricțiile pentru vehiculele de peste 7,5 tone rămân până la sfârșitul lui august",
       "dek": "Pe sectorul Călimănești–Câineni, restricțiile pentru autovehiculele cu masa totală maximă autorizată de peste 7,5 tone se mențin în intervalul 08:00–17:30, pentru continuarea lucrărilor de punere în siguranță a versanților.",
       "paragraphs": [
@@ -2103,7 +2174,7 @@
       "section": "ACTUALITATE",
       "priority": 999943,
       "source_priority": 99,
-      "canonical_rank": 65,
+      "canonical_rank": 67,
       "headline": "Incendiul de pe strada Remus Bellu: un autobuz și o autoutilitară au fost distruse. Nu au fost raportate victime",
       "dek": "Pompierii din Râmnicu Vâlcea au intervenit cu două autospeciale după incendiul izbucnit în seara de 22 august lângă Shopping City. Alte două autoutilitare au fost afectate parțial, iar cauza probabilă nu este încă stabilită în informațiile publice verificate.",
       "paragraphs": [
@@ -2131,7 +2202,7 @@
       "section": "EVENIMENTE",
       "priority": 999942,
       "source_priority": 100,
-      "canonical_rank": 67,
+      "canonical_rank": 69,
       "headline": "Cântecele Oltului 2026: jurizarea, premierea și gala închid festivalul pe 23 august la Călimănești",
       "dek": "Ultima zi a ediției a 58-a a Festivalului Național de Folclor «Cântecele Oltului» include reunirea juriului, festivitatea de premiere, spectacolul de gală și recitalul Aurora și Săndel Mihai.",
       "paragraphs": [
@@ -2179,7 +2250,7 @@
       "section": "ACTUALITATE",
       "priority": 999941,
       "source_priority": 100,
-      "canonical_rank": 66,
+      "canonical_rank": 68,
       "headline": "Accident mortal în Buila–Vânturarița: o mașină a căzut circa 300 de metri într-o prăpastie",
       "dek": "Un bărbat a murit, doi au fost transportați la UPU Vâlcea, iar un al treilea a refuzat transportul după accidentul produs pe drumul spre Schitul Hădărău. Informațiile sunt atribuite ISU Vâlcea de TVR Info și Digi24.",
       "paragraphs": [
@@ -2226,7 +2297,7 @@
       "section": "SPORT",
       "priority": 999940,
       "source_priority": 99,
-      "canonical_rank": 68,
+      "canonical_rank": 70,
       "headline": "Supercupa Damila deschide sezonul județean la Pietrari. AJF Vâlcea afișează ora 11:00 pentru 22 august",
       "dek": "Asociația Județeană de Fotbal Vâlcea afișează Supercupa Damila pe 22 august 2026, la Stadionul Comunal din Pietrari, cu ora de start 11:00. O hotărâre mai veche a Comitetului Executiv menționa 17:30, astfel că reperul util pentru spectatori este anunțul curent al AJF.",
       "paragraphs": [
@@ -2273,7 +2344,7 @@
       "section": "ENERGIE",
       "priority": 999939,
       "source_priority": 100,
-      "canonical_rank": 69,
+      "canonical_rank": 71,
       "headline": "CET Govora: cine a decis oprirea și ce urmează pentru termoficarea Râmnicului",
       "dek": "O postare politică susține că CET Govora a renunțat voluntar la licență și că nimeni nu i-a impus oprirea. Documentele oficiale arată însă un calendar legal explicit de scoatere din exploatare a grupurilor pe cărbune, o tranziție către surse noi și prețuri pentru 2026 diferite de cifrele invocate în postare.",
       "paragraphs": [
@@ -2317,7 +2388,7 @@
       "section": "PATRIMONIU",
       "priority": 999938,
       "source_priority": 98,
-      "canonical_rank": 70,
+      "canonical_rank": 72,
       "headline": "Arutela, după proiectul de 12,4 milioane lei: ironii online, Ministerul Culturii răspunde cu avize și explicații",
       "dek": "Castrul roman de lângă Călimănești a devenit subiect de meme și critici după intervenția finanțată prin PNRR. Documentele oficiale confirmă valoarea proiectului, iar Ministerul Culturii explică atât avizarea, cât și soluția arhitecturală contemporană.",
       "paragraphs": [
@@ -2374,7 +2445,7 @@
       "section": "ADMINISTRAȚIE",
       "priority": 999937,
       "source_priority": 96,
-      "canonical_rank": 71,
+      "canonical_rank": 73,
       "headline": "Gutău și Mocanu se contrează după aurul mondial al Ștefaniei Uță. Miza: titlul de Cetățean de Onoare",
       "dek": "Propunerea consilierului local Vicențiu Mocanu ca Ștefania Uță să primească titlul de Cetățean de Onoare al Râmnicului a declanșat un schimb de replici cu primarul Mircia Gutău. Regulamentul local arată că un consilier poate formula individual o asemenea propunere.",
       "paragraphs": [
@@ -2421,7 +2492,7 @@
       "section": "EVENIMENTE",
       "priority": 999936,
       "source_priority": 99,
-      "canonical_rank": 73,
+      "canonical_rank": 75,
       "headline": "Open Air Blues Brezoi 2026: program, setlisturi, oamenii din jur și traseul banilor publici",
       "dek": "O reconstrucție documentată a ediției 2026: artiștii pe zile, ce s-a cântat unde există setlisturi verificabile, organizatorii, vocile influente, sponsorii și sprijinul public.",
       "paragraphs": [
@@ -2531,7 +2602,7 @@
       "section": "EVENIMENTE",
       "priority": 999935,
       "source_priority": 99,
-      "canonical_rank": 72,
+      "canonical_rank": 74,
       "headline": "Musiclover Festival 2026: trei zile la Fețeni și un buget municipal estimat de 650.000 lei",
       "dek": "Festivalul hibrid organizat de MusicLover Life Experience SRL a primit în calendarul cultural al Râmnicului cea mai mare alocare individuală dintre festivalurile muzicale documentate în august 2026.",
       "paragraphs": [
@@ -2587,7 +2658,7 @@
       "section": "EVENIMENTE",
       "priority": 999934,
       "source_priority": 98,
-      "canonical_rank": 76,
+      "canonical_rank": 78,
       "headline": "The Jazz Cave Festival 2026: 21 de formații, trei scene și banii publici din spatele proiectului",
       "dek": "Festivalul de jazz a legat Salina Ocnele Mari, Muzeul de Artă și Parcul Zăvoi; documentele municipale fixează un buget estimat de 20.000 lei, iar lista de parteneri arată o rețea publică și culturală mai largă.",
       "paragraphs": [
@@ -2636,7 +2707,7 @@
       "section": "EVENIMENTE",
       "priority": 999933,
       "source_priority": 98,
-      "canonical_rank": 75,
+      "canonical_rank": 77,
       "headline": "Deep Forest Fest 2026: line-up, istoric, organizatori și banii publici din acte",
       "dek": "Dosarul VÂLCEA CLAR separă muzica și promovarea de documentele publice: cine a urcat pe afiș, cum a evoluat festivalul și ce sume apar în hotărârile locale.",
       "paragraphs": [
@@ -2711,7 +2782,7 @@
       "section": "EVENIMENTE",
       "priority": 999932,
       "source_priority": 98,
-      "canonical_rank": 74,
+      "canonical_rank": 76,
       "headline": "Bikers for Humanity Rock Fest 2026: patru zile de rock, setlisturi și traseul banilor caritabili",
       "dek": "Ediția aniversară de la Brezoi a combinat 21 de trupe cu o cauză umanitară; dosarul separă profitul promis pentru caritate de eventualele resurse publice locale și de rezultatul financiar care trebuie documentat după festival.",
       "paragraphs": [
@@ -2778,7 +2849,7 @@
       "section": "CULTURĂ",
       "priority": 999931,
       "source_priority": 97,
-      "canonical_rank": 78,
+      "canonical_rank": 80,
       "headline": "Filarmonica din Râmnicu Vâlcea: programul din septembrie 2026, invitații și noul cadru instituțional",
       "dek": "Patru evenimente sunt deja publicate pentru septembrie 2026, de la jazz și latino simfonic la program coral și Violoncellissimo; VÂLCEA CLAR le leagă de artiști, bilete și finanțarea publică a Centrului Cultural Municipal.",
       "paragraphs": [
@@ -2823,7 +2894,7 @@
       "section": "EVENIMENTE",
       "priority": 999930,
       "source_priority": 97,
-      "canonical_rank": 77,
+      "canonical_rank": 79,
       "headline": "Fii COOL la CULE 2026: artiștii, istoria festivalului și nota de plată publică încă incompletă",
       "dek": "Festivalul gratuit de la Măldărești este organizat de instituții ale Consiliului Județean Vâlcea; VÂLCEA CLAR reconstruiește programul și separă costul public dovedit de sumele care încă lipsesc din documentele indexate.",
       "paragraphs": [
@@ -2871,7 +2942,7 @@
       "section": "CULTURĂ",
       "priority": 999929,
       "source_priority": 96,
-      "canonical_rank": 81,
+      "canonical_rank": 83,
       "headline": "Teatrele din Râmnicu Vâlcea în 2026: Ariel, Anton Pann, spectacolele și banii publici",
       "dek": "Ariel și Anton Pann aparțin unor administrații diferite și au fluxuri distincte de program și finanțare; VÂLCEA CLAR le transformă în surse permanente pentru agenda culturală, premiere, distribuții și money trace.",
       "paragraphs": [
@@ -2940,7 +3011,7 @@
       "section": "EVENIMENTE",
       "priority": 999928,
       "source_priority": 96,
-      "canonical_rank": 80,
+      "canonical_rank": 82,
       "headline": "Învârtita Dorului 2026: ediția 58, programul de la Vaideeni și costul public încă de reconciliat",
       "dek": "Festivalul păstoresc organizat de Primăria și Consiliul Local Vaideeni aduce zeci de artiști și ansambluri; VÂLCEA CLAR separă tradiția de întrebarea contabilă privind costul complet al ediției.",
       "paragraphs": [
@@ -2989,7 +3060,7 @@
       "section": "EVENIMENTE",
       "priority": 999927,
       "source_priority": 96,
-      "canonical_rank": 79,
+      "canonical_rank": 81,
       "headline": "Cocoșul de Hurez 2026: trei zile de ceramică, artiști și un buget local care trebuie desfăcut pe cheltuieli",
       "dek": "Târgul de la Horezu combină patrimoniul ceramic cu spectacole folclorice; documentele locale confirmă o hotărâre specială de buget, iar VÂLCEA CLAR urmărește suma și execuția ei până la nivel de contracte și plăți.",
       "paragraphs": [
@@ -3037,7 +3108,7 @@
       "section": "SPORT",
       "priority": 999926,
       "source_priority": 88,
-      "canonical_rank": 82,
+      "canonical_rank": 84,
       "headline": "CSM Ramnicu Valcea – FC Bacau: meci programat pe 22 august 2026, de la 11:00",
       "dek": "Programul oficial al SCM Râmnicu Vâlcea listează partida la Stadionul Municipal. Informația este verificată direct în calendarul clubului.",
       "paragraphs": [
@@ -3078,7 +3149,7 @@
       "section": "MOBILITATE",
       "priority": 999925,
       "source_priority": 96,
-      "canonical_rank": 83,
+      "canonical_rank": 85,
       "headline": "DN 7, 17 august 2026: 2 victime într-un incident rutier semnalat de INFOTRAFIC",
       "dek": "Alerta oficială emisă la ora 15:45 indică incidentul în zona localității Blidari, la kilometrul 167 + 300; la acel moment, trafic alternativ era în vigoare pe sectorul afectat.",
       "paragraphs": [
@@ -3105,7 +3176,7 @@
       "section": "MOBILITATE",
       "priority": 999924,
       "source_priority": 90,
-      "canonical_rank": 84,
+      "canonical_rank": 86,
       "headline": "DN 7, 17 august 2026: INFOTRAFIC a semnalat trafic alternativ",
       "dek": "Alerta oficială emisă la ora 10:15 vizează în zona localității Drăgănești, la kilometrul 214 și consemnează situația de trafic de pe sectorul indicat.",
       "paragraphs": [
@@ -3131,7 +3202,7 @@
       "section": "CULTURĂ",
       "priority": 999923,
       "source_priority": 93,
-      "canonical_rank": 85,
+      "canonical_rank": 87,
       "headline": "Florile Govorei 2026: ediția a 55-a, în 15–16 august",
       "dek": "Pagina oficială a Primăriei Băile Govora confirmă denumirea, ediția și intervalul evenimentului; alte detalii rămân neadăugate fără documentare primară.",
       "paragraphs": [
@@ -3156,7 +3227,7 @@
       "section": "EVENIMENTE",
       "priority": 999922,
       "source_priority": 98,
-      "canonical_rank": 86,
+      "canonical_rank": 88,
       "headline": "Musiclover Festival 2026 la Fețeni: programul celor trei zile, artiștii și accesul",
       "dek": "Festivalul s-a desfășurat între 14 și 16 august 2026 pe Platoul Fețeni, în format FAN ZONE cu bilet plus o zonă cu acces liber.",
       "paragraphs": [
@@ -3195,7 +3266,7 @@
       "section": "EVENIMENTE",
       "priority": 999921,
       "source_priority": 94,
-      "canonical_rank": 87,
+      "canonical_rank": 89,
       "headline": "Luminos Fest 2026 în Parcul Zăvoi: lampioane, ateliere și intrare liberă",
       "dek": "Evenimentul de familie din 15–16 august a adus lampioane pe apă, ateliere pentru copii și Aleea Creatorilor în Parcul Zăvoi.",
       "paragraphs": [
@@ -3221,7 +3292,7 @@
       "section": "SPORT",
       "priority": 999920,
       "source_priority": 82,
-      "canonical_rank": 88,
+      "canonical_rank": 90,
       "headline": "SCM Râmnicu Vâlcea – CSM Slatina, partida programată la 15 august 2026",
       "dek": "Materialul arhivat păstrează numai informațiile confirmate la publicare: data, adversarul și încadrarea în etapa a treia din Liga 2.",
       "paragraphs": [
@@ -3262,6 +3333,8 @@
     }
   ],
   "current_story_ids": [
+    "a1-cisnadie-boita-inchidere-dn7-20261005",
+    "caineni-sef-serviciu-alimentare-apa-20261005",
     "scm-program-dbd2c22d1578de50198c",
     "fast-isu-incendiu-izbucnit-la-o-gospodarie-din-localitatea-lapu-b5068b7678",
     "runcu-eci-trei-posturi-septembrie-2026",
