@@ -1,47 +1,12 @@
 {
   "schema_version": "1.1",
-  "updated_at": "2026-10-06T18:55:58+03:00",
+  "updated_at": "2026-10-06T22:13:18+03:00",
   "source_policy": "Verified structured facts only; no inferred availability, rankings or recommendations.",
-  "sports": [
-    {
-      "id": "sport-cs-valcea-1924-steaua-bucuresti-2026-10-06",
-      "sport": "Baschet Masculin",
-      "competition": "Baschet masculin",
-      "start": "2026-10-06T19:00:00+03:00",
-      "home": "CS Vâlcea 1924",
-      "away": "Steaua București",
-      "venue": "Sala Traian",
-      "locality": "Râmnicu Vâlcea",
-      "importance": "local",
-      "status": "scheduled",
-      "source_url": "https://www.csvalcea.ro/",
-      "checked_at": "2026-10-05T18:13:30+03:00"
-    }
-  ],
+  "sports": [],
   "cinema": {
     "checked_at": "2026-10-06T08:32:00+03:00",
-    "venues": [
-      {
-        "id": "cinema-cinema-geo-saizescu",
-        "name": "Cinema Geo Săizescu",
-        "locality": "Râmnicu Vâlcea",
-        "address": null,
-        "source_url": "https://cinemageosaizescu.ro/filme/teambuilding-2"
-      }
-    ],
-    "screenings": [
-      {
-        "date": "2026-10-06",
-        "film": "Teambuilding 2",
-        "venue_id": "cinema-cinema-geo-saizescu",
-        "times": [
-          "19:00"
-        ],
-        "format": "Digital 2D",
-        "language": null,
-        "ticket_url": null
-      }
-    ]
+    "venues": [],
+    "screenings": []
   },
   "restaurants": [
     {
