@@ -41,6 +41,21 @@ class SiteUXContract(unittest.TestCase):
         self.assertTrue(current_sections)
         self.assertTrue(any(section in home for section in current_sections))
 
+    def test_ultimele_is_current_not_archive(self):
+        page = self.read('stiri/index.html')
+        current_ids = {str(value) for value in self.content.get('current_story_ids') or []}
+        self.assertTrue(current_ids, 'current_story_ids must be explicit in production content')
+        for article in self.articles:
+            headline = html.escape(str(article.get('headline') or ''))
+            if str(article.get('id') or '') in current_ids:
+                self.assertIn(headline, page)
+            else:
+                self.assertNotIn(headline, page)
+                self.assertTrue(
+                    (ROOT / '_site' / 'stiri' / str(article['id']) / 'index.html').is_file(),
+                    'non-current durable archive route must remain public',
+                )
+
     def test_article_contract(self):
         article_id = self.lead['id']
         article = self.read(f'stiri/{article_id}/index.html')
