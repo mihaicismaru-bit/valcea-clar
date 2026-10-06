@@ -2,18 +2,18 @@
   "schema_version": "1.3",
   "source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
   "runtime_manifest_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json",
-  "source_generated_at": "2026-10-06T05:39:21.689039Z",
+  "source_generated_at": "2026-10-06T05:53:54.082740Z",
   "source_schema_version": "2.3",
   "publication_model": "continuous_story_first",
   "presentation_order": "freshness_first_then_source_priority",
   "story_count": 91,
-  "current_story_count": 7,
-  "archive_story_count": 84,
+  "current_story_count": 3,
+  "archive_story_count": 88,
   "verified_visual_count": 12,
   "lead_story_id": "a1-cisnadie-boita-inchidere-dn7-20261005",
-  "lead_published_at": "2026-10-06T01:02:26+03:00",
-  "articles_sha256": "618edae5a9fabebeae6e5d4905bf02c372060b0748621a27bc9b64b3a25fb2f2",
-  "synced_at": "2026-10-06T05:39:21.689039Z",
+  "lead_published_at": "2026-10-06T08:39:21+03:00",
+  "articles_sha256": "aab25c0284a0f2eb765572c27d056bc7e9e0f71eb72fc8df05e6021a5605879a",
+  "synced_at": "2026-10-06T05:53:54.082740Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
     "public_projection": "mihaicismaru-bit/valcea-clar",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 12,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-10-06T08:54:41+03:00"
+  "local_life_surface_updated_at": "2026-10-06T08:56:40+03:00"
 }
