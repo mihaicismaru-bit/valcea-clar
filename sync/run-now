@@ -1,6 +1,6 @@
-2026-10-06T08:35:00+03:00
-reason=local-life-cinema-menu-currentness
+2026-10-06T08:40:00+03:00
+reason=anti-filler-current-set-convergence
 source=civora
-civora_head=5c339f7b9bd659114b482cf67be28394c214cbef
-expected_cinema_date=2026-10-06
-expected_menu_date=2026-10-06
+civora_head=56876a016c1bedec3b2378f8eb71717e542b9ead
+expected_current_story_count=7
+removed_from_current=runcu-eci-trei-posturi-septembrie-2026,bunesti-terapeut-ocupational-concurs-20260925,caineni-sef-serviciu-alimentare-apa-20261005
