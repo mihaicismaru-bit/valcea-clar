@@ -1,5 +1,6 @@
-2026-10-03T09:39:00+03:00
-reason=saturday-weekend-clar-story-publication
+2026-10-06T08:35:00+03:00
+reason=local-life-cinema-menu-currentness
 source=civora
-story_id=weekend-clar-20261003
-published_at=2026-10-03T09:36:16+03:00
+civora_head=5c339f7b9bd659114b482cf67be28394c214cbef
+expected_cinema_date=2026-10-06
+expected_menu_date=2026-10-06
