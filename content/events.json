@@ -1,74 +1,8 @@
 {
   "schema_version": "1.3",
-  "updated_at": "2026-10-06T12:11:52+03:00",
+  "updated_at": "2026-10-06T18:55:58+03:00",
   "note": "Verified upcoming-event inventory for UNDE IEȘIM. Legacy start/end fields are retained for the current renderer; explicit event_start/event_end/start_time/doors_time and provenance fields implement the event-discovery contract. Unknown price, ticketing, reservation and end-time fields remain null rather than inferred.",
   "events": [
-    {
-      "id": "cs-valcea-1924-steaua-20261006",
-      "event_id": "cs-valcea-1924-steaua-20261006",
-      "fingerprint": "ddd07d53d0662a0c3e16",
-      "identity_key": "41da8fdc91f1c690055c",
-      "story_id": null,
-      "title": "CS Vâlcea 1924 – Steaua București",
-      "category": "Sport / Baschet",
-      "start": "2026-10-06T19:00:00+03:00",
-      "event_start": "2026-10-06",
-      "event_end": "2026-10-06",
-      "start_time": "19:00",
-      "doors_time": null,
-      "venue": "Sala Traian",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "unknown",
-      "price": null,
-      "ticket_url": null,
-      "reservation_url": null,
-      "organiser": "CS Vâlcea 1924",
-      "source_url": "https://www.csvalcea.ro/",
-      "source_tier": "T1B_OFFICIAL_OWNED_FEED",
-      "sources": [
-        {
-          "url": "https://www.csvalcea.ro/",
-          "tier": "T1B_OFFICIAL_OWNED_FEED",
-          "role": "canonical_event_source"
-        }
-      ],
-      "checked_at": "2026-10-06T06:03:33+03:00",
-      "status": "scheduled",
-      "canonical_source": "CIVORA_LOCAL_LIFE"
-    },
-    {
-      "id": "filarmonica-romania-glas-euphonia-20261007",
-      "event_id": "filarmonica-romania-glas-euphonia-20261007",
-      "fingerprint": "008aaf879fbcdafd1000",
-      "identity_key": "9f72b33f1035ddd87535",
-      "story_id": null,
-      "title": "ROMÂNIA CU GLAS DE EUPHONIA",
-      "category": "Concert Coral",
-      "start": "2026-10-07T19:00:00+03:00",
-      "event_start": "2026-10-07",
-      "event_end": "2026-10-07",
-      "start_time": "19:00",
-      "doors_time": null,
-      "venue": "Sala Lahovari",
-      "locality": "Râmnicu Vâlcea",
-      "price_status": "free",
-      "price": "intrare liberă",
-      "ticket_url": null,
-      "reservation_url": null,
-      "organiser": "Filarmonica „Ion Dumitrescu”",
-      "source_url": "https://filarmonica-valcea.ro/eveniment/romania-cu-glas-de-euphonia/",
-      "source_tier": "T1_OFFICIAL",
-      "sources": [
-        {
-          "url": "https://filarmonica-valcea.ro/eveniment/romania-cu-glas-de-euphonia/",
-          "tier": "T1_OFFICIAL",
-          "role": "canonical_event_source"
-        }
-      ],
-      "checked_at": "2026-10-06T06:03:33+03:00",
-      "status": "scheduled",
-      "canonical_source": "CIVORA_LOCAL_LIFE"
-    },
     {
       "id": "ariel-cele-trei-gratii-20261009",
       "event_id": "ariel-cele-trei-gratii-20261009",
@@ -402,8 +336,6 @@
   ],
   "canonical_local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "canonical_event_ids": [
-    "cs-valcea-1924-steaua-20261006",
-    "filarmonica-romania-glas-euphonia-20261007",
     "ariel-cele-trei-gratii-20261009",
     "filarmonica-mozart-mendelssohn-beethoven-20261012",
     "ariel-talk-show-20261016",

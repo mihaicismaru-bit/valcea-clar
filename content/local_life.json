@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "updated_at": "2026-10-06T12:11:52+03:00",
+  "updated_at": "2026-10-06T18:55:58+03:00",
   "source_policy": "Verified structured facts only; no inferred availability, rankings or recommendations.",
   "sports": [
     {
@@ -26,21 +26,10 @@
         "name": "Cinema Geo Săizescu",
         "locality": "Râmnicu Vâlcea",
         "address": null,
-        "source_url": "https://www.cinemageosaizescu.ro/filme/digger-2d-sub"
+        "source_url": "https://cinemageosaizescu.ro/filme/teambuilding-2"
       }
     ],
     "screenings": [
-      {
-        "date": "2026-10-06",
-        "film": "Digger – 2D SUB",
-        "venue_id": "cinema-cinema-geo-saizescu",
-        "times": [
-          "17:00"
-        ],
-        "format": "Digital 2D",
-        "language": null,
-        "ticket_url": null
-      },
       {
         "date": "2026-10-06",
         "film": "Teambuilding 2",
