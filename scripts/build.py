@@ -653,8 +653,14 @@ home += '</div>'
 )
 
 rows = ''
-for section in sections:
-    section_articles = [a for a in articles if a.get('section') == section]
+current_sections = []
+for article in current_articles:
+    section = article.get('section', 'ȘTIRI')
+    if section not in current_sections:
+        current_sections.append(section)
+
+for section in current_sections:
+    section_articles = [a for a in current_articles if a.get('section') == section]
     rows += f'<section class="news-section" id="{h(section.lower())}"><div class="section-head"><h2>{h(section.title())}</h2></div>'
     for a in section_articles:
         thumb = image_html(a) if a.get('image') else ''
@@ -668,7 +674,7 @@ for section in sections:
 
 stiri_body = (
     '<div class="page-head"><div class="eyebrow">Flux editorial</div><h1 class="page-title">Ultimele știri</h1>'
-    '<p class="page-dek">Informații locale ordonate editorial, cu surse identificabile și actualizări continue.</p></div>'
+    '<p class="page-dek">Fluxul curent VÂLCEA CLAR: numai materialele care sunt încă relevante acum. Articolele ieșite din actualitate rămân accesibile în arhivă și în secțiunile tematice.</p></div>'
     f'<div class="list">{rows}</div>'
 )
 
