@@ -1,32 +1,12 @@
 {
   "schema_version": "1.1",
-  "updated_at": "2026-10-07T18:05:48+03:00",
+  "updated_at": "2026-10-07T22:02:27+03:00",
   "source_policy": "Verified structured facts only; no inferred availability, rankings or recommendations.",
   "sports": [],
   "cinema": {
     "checked_at": "2026-10-07T17:55:40+03:00",
-    "venues": [
-      {
-        "id": "cinema-cinema-geo-saizescu",
-        "name": "Cinema Geo Săizescu",
-        "locality": "Râmnicu Vâlcea",
-        "address": null,
-        "source_url": "https://www.cinemageosaizescu.ro/filme/digger-2d-sub"
-      }
-    ],
-    "screenings": [
-      {
-        "date": "2026-10-07",
-        "film": "Digger – 2D SUB",
-        "venue_id": "cinema-cinema-geo-saizescu",
-        "times": [
-          "19:00"
-        ],
-        "format": "Digital 2D",
-        "language": null,
-        "ticket_url": null
-      }
-    ]
+    "venues": [],
+    "screenings": []
   },
   "restaurants": [
     {
