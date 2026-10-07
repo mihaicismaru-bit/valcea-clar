@@ -1,5 +1,5 @@
-2026-10-07T18:05:00+03:00
-reason=canonical-local-life-currentness-convergence
-civora_main=7e2350a963072a9c637cbd4425c61ab8662ca382
-local_life_due_cinema=2026-10-07T19:00:00+03:00:Digger-2D-SUB
-local_life_menu=2026-10-07:fail-closed
+2026-10-07T23:27:00+03:00
+reason=owner-quality-reset-no-recycled-current-feed
+civora_main=545c19bda002b20acfbc1a6301c3ba47af358107
+expected_current_story_count=0
+rule=NO_RECYCLED_CURRENT_FEED
