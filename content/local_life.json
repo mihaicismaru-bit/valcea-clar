@@ -1,27 +1,32 @@
 {
   "schema_version": "1.1",
-  "updated_at": "2026-10-07T15:28:50+03:00",
+  "updated_at": "2026-10-07T18:05:48+03:00",
   "source_policy": "Verified structured facts only; no inferred availability, rankings or recommendations.",
-  "sports": [
-    {
-      "id": "sport-cs-rapid-bucuresti-scm-ramnicu-valcea-2026-10-07",
-      "sport": "Handbal Feminin",
-      "competition": "Liga Florilor MOL",
-      "start": "2026-10-07T18:00:00+03:00",
-      "home": "CS Rapid București",
-      "away": "SCM Râmnicu Vâlcea",
-      "venue": "Sala Rapid",
-      "locality": "București",
-      "importance": "local",
-      "status": "scheduled",
-      "source_url": "https://frh.ro/meci.php?id=111628",
-      "checked_at": "2026-10-07T00:06:00+03:00"
-    }
-  ],
+  "sports": [],
   "cinema": {
-    "checked_at": "2026-10-07T00:06:00+03:00",
-    "venues": [],
-    "screenings": []
+    "checked_at": "2026-10-07T17:55:40+03:00",
+    "venues": [
+      {
+        "id": "cinema-cinema-geo-saizescu",
+        "name": "Cinema Geo Săizescu",
+        "locality": "Râmnicu Vâlcea",
+        "address": null,
+        "source_url": "https://www.cinemageosaizescu.ro/filme/digger-2d-sub"
+      }
+    ],
+    "screenings": [
+      {
+        "date": "2026-10-07",
+        "film": "Digger – 2D SUB",
+        "venue_id": "cinema-cinema-geo-saizescu",
+        "times": [
+          "19:00"
+        ],
+        "format": "Digital 2D",
+        "language": null,
+        "ticket_url": null
+      }
+    ]
   },
   "restaurants": [
     {
