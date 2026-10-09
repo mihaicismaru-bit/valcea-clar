@@ -302,9 +302,9 @@ articles = sorted(
 current_story_ids = [str(value) for value in article_payload.get('current_story_ids') or []]
 current_story_set = set(current_story_ids)
 current_articles = [article for article in articles if str(article.get('id') or '') in current_story_set]
-if not current_articles:
-    # Fail-safe compatibility for older content snapshots that predate explicit
-    # currentness projection. Current production sync always writes this list.
+if not current_articles and 'current_story_ids' not in article_payload:
+    # Compatibility only for genuinely old snapshots that predate explicit
+    # currentness. An explicit empty list is a valid zero-news state.
     current_articles = articles
 legal = load('legal.json')
 events_payload = load('events.json') if (C / 'events.json').exists() else {'events': []}
@@ -465,7 +465,7 @@ def stream_story(article):
     )
 
 
-lead = current_articles[0]
+lead = current_articles[0] if current_articles else None
 rail_articles = current_articles[1:4]
 stream_articles = current_articles[4:] if len(current_articles) > 4 else current_articles[1:]
 latest_links = ''.join(
@@ -579,73 +579,89 @@ def home_local_life():
     )
 
 
-home = (
-    '<div data-layout="continuous-story-first">'
-    '<section class="mission-strip" aria-label="Promisiunea editorială">'
-    '<strong>VÂLCEA. CLAR.</strong><span>Ce se întâmplă.</span><span>Ce știm.</span><span>Ce contează.</span>'
-    '</section>'
-    '<div class="status"><div><b>Ediție continuă</b> · Redacție locală autonomă · tot județul Vâlcea</div>'
-    f'<div>Ultima actualizare: {h(pretty_date(current_articles[0].get("published")))}</div></div>'
-    f'<aside class="headline-strip" aria-label="Pe scurt"><span>Pe scurt</span>{latest_links}</aside>'
-    '<section class="lead-grid" aria-label="Principal">'
-    '<article class="hero">'
-    f'{image_html(lead, True)}'
-    f'{product_kicker(lead)}'
-    f'<h1><a href="{story_href(lead)}">{h(lead["headline"])}</a></h1>'
-    f'<p class="dek">{h(lead["dek"])}</p>{story_meta(lead)}'
-    '</article>'
-    '<aside class="rail"><h2>Ultimele</h2>'
-    + ''.join(mini_story(a) for a in rail_articles)
-    + f'<a class="more-link" href="{u("/stiri/")}">Toate știrile →</a></aside>'
-    '</section>'
-    '<section class="editorial-products" aria-label="Produse editoriale">'
-    '<div class="section-head"><h2>Cum explicăm Vâlcea</h2><span>Formate diferite pentru nevoi diferite</span></div>'
-    '<div class="product-grid">'
-    + ''.join(
-        (
-            f'<a class="product-tile" href="{u(product_path(product))}">'
-            f'<span>{h(product)}</span>'
-            f'<strong>{h(next(row["headline"] for row in articles if article_product(row) == product))}</strong>'
-            f'<small>{sum(1 for row in articles if article_product(row) == product)} materiale</small>'
-            '</a>'
-        )
-        for product in product_nav_order
-        if product in available_products
-    )
-    + '</div></section>'
-    + home_local_life()
-    + '<section class="service-grid" aria-label="Informație utilă">'
-    '<div><b>TRAFIC</b><span>Drumuri, incidente, restricții</span></div>'
-    '<div><b>UTILITĂȚI</b><span>Apă, energie, termoficare</span></div>'
-    '<div><b>EVENIMENTE</b><span>Ce se întâmplă azi în județ</span></div>'
-    '<div><b>DE URMĂRIT</b><span>Subiecte deschise și ce urmează</span></div>'
-    '</section>'
-    '<section class="section latest-section">'
-    '<div class="section-head"><h2>În Vâlcea, acum</h2><a href="' + u('/stiri/') + '">Flux complet →</a></div>'
-    '<div class="story-stream">' + ''.join(stream_story(a) for a in stream_articles) + '</div>'
-    '</section>'
-)
-
-for section in sections:
-    section_articles = [a for a in current_articles if a.get('section') == section]
-    if not section_articles:
-        continue
-    home += (
-        f'<section class="section section-block" id="home-{h(section.lower())}">'
-        f'<div class="section-head"><h2>{h(section.title())}</h2>'
-        f'<a href="{u(section_path(section))}">Vezi secțiunea →</a></div>'
-        '<div class="cards">'
+if current_articles:
+    home = (
+        '<div data-layout="continuous-story-first">'
+        '<section class="mission-strip" aria-label="Promisiunea editorială">'
+        '<strong>VÂLCEA. CLAR.</strong><span>Ce se întâmplă.</span><span>Ce știm.</span><span>Ce contează.</span>'
+        '</section>'
+        '<div class="status"><div><b>Ediție continuă</b> · Redacție locală autonomă · tot județul Vâlcea</div>'
+        f'<div>Ultima actualizare: {h(pretty_date(current_articles[0].get("published")))}</div></div>'
+        f'<aside class="headline-strip" aria-label="Pe scurt"><span>Pe scurt</span>{latest_links}</aside>'
+        '<section class="lead-grid" aria-label="Principal">'
+        '<article class="hero">'
+        f'{image_html(lead, True)}'
+        f'{product_kicker(lead)}'
+        f'<h1><a href="{story_href(lead)}">{h(lead["headline"])}</a></h1>'
+        f'<p class="dek">{h(lead["dek"])}</p>{story_meta(lead)}'
+        '</article>'
+        '<aside class="rail"><h2>Ultimele</h2>'
+        + ''.join(mini_story(a) for a in rail_articles)
+        + f'<a class="more-link" href="{u("/stiri/")}">Toate știrile →</a></aside>'
+        '</section>'
+        '<section class="editorial-products" aria-label="Produse editoriale">'
+        '<div class="section-head"><h2>Cum explicăm Vâlcea</h2><span>Formate diferite pentru nevoi diferite</span></div>'
+        '<div class="product-grid">'
         + ''.join(
-            '<article class="card">'
-            f'{image_html(a)}{product_kicker(a)}'
-            f'<h3><a href="{story_href(a)}">{h(a["headline"])}</a></h3>'
-            f'<p>{h(a["dek"])}</p>{story_meta(a, True)}'
-            '</article>'
-            for a in section_articles[:3]
+            (
+                f'<a class="product-tile" href="{u(product_path(product))}">'
+                f'<span>{h(product)}</span>'
+                f'<strong>{h(next(row["headline"] for row in articles if article_product(row) == product))}</strong>'
+                f'<small>{sum(1 for row in articles if article_product(row) == product)} materiale</small>'
+                '</a>'
+            )
+            for product in product_nav_order
+            if product in available_products
         )
         + '</div></section>'
+        + home_local_life()
+        + '<section class="service-grid" aria-label="Informație utilă">'
+        '<div><b>TRAFIC</b><span>Drumuri, incidente, restricții</span></div>'
+        '<div><b>UTILITĂȚI</b><span>Apă, energie, termoficare</span></div>'
+        '<div><b>EVENIMENTE</b><span>Ce se întâmplă azi în județ</span></div>'
+        '<div><b>DE URMĂRIT</b><span>Subiecte deschise și ce urmează</span></div>'
+        '</section>'
+        '<section class="section latest-section">'
+        '<div class="section-head"><h2>În Vâlcea, acum</h2><a href="' + u('/stiri/') + '">Flux complet →</a></div>'
+        '<div class="story-stream">' + ''.join(stream_story(a) for a in stream_articles) + '</div>'
+        '</section>'
     )
-home += '</div>'
+    
+    for section in sections:
+        section_articles = [a for a in current_articles if a.get('section') == section]
+        if not section_articles:
+            continue
+        home += (
+            f'<section class="section section-block" id="home-{h(section.lower())}">'
+            f'<div class="section-head"><h2>{h(section.title())}</h2>'
+            f'<a href="{u(section_path(section))}">Vezi secțiunea →</a></div>'
+            '<div class="cards">'
+            + ''.join(
+                '<article class="card">'
+                f'{image_html(a)}{product_kicker(a)}'
+                f'<h3><a href="{story_href(a)}">{h(a["headline"])}</a></h3>'
+                f'<p>{h(a["dek"])}</p>{story_meta(a, True)}'
+                '</article>'
+                for a in section_articles[:3]
+            )
+            + '</div></section>'
+        )
+    home += '</div>'
+else:
+    home = (
+        '<div data-layout="continuous-story-first" data-current-story-count="0">'
+        '<section class="mission-strip" aria-label="Promisiunea editorială">'
+        '<strong>VÂLCEA. CLAR.</strong><span>Ce se întâmplă.</span><span>Ce știm.</span><span>Ce contează.</span>'
+        '</section>'
+        '<section class="zero-current-state" aria-label="Flux editorial curent">'
+        '<div class="eyebrow">Flux editorial</div>'
+        '<h1>Nicio știre curentă nu trece acum pragul editorial.</h1>'
+        '<p>Preferăm un flux gol unei știri vechi, reciclate sau fără miză locală. Arhiva rămâne disponibilă, iar informațiile utile continuă în ghidul local.</p>'
+        f'<p><a class="more-link" href="{u("/stiri/")}">Vezi fluxul curent →</a></p>'
+        '</section>'
+        + home_local_life()
+        + '</div>'
+    )
 
 (OUT / 'index.html').write_text(
     shell('VÂLCEA CLAR — Știri din Vâlcea', home, canonical_path='/'),
@@ -675,7 +691,8 @@ for section in current_sections:
 stiri_body = (
     '<div class="page-head"><div class="eyebrow">Flux editorial</div><h1 class="page-title">Ultimele știri</h1>'
     '<p class="page-dek">Fluxul curent VÂLCEA CLAR: numai materialele care sunt încă relevante acum. Articolele ieșite din actualitate rămân accesibile în arhivă și în secțiunile tematice.</p></div>'
-    f'<div class="list">{rows}</div>'
+    + ('<div class="zero-current-state" data-current-story-count="0"><strong>Nicio știre curentă nu trece acum pragul editorial.</strong><p>Nu completăm fluxul cu articole vechi sau filler.</p></div>' if not current_articles else '')
+    + f'<div class="list">{rows}</div>'
 )
 
 

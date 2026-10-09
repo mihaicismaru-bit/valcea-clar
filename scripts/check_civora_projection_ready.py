@@ -42,10 +42,11 @@ def fetch_json(url: str) -> dict:
 
 
 def validate(feed: dict, ux: dict, manifest: dict) -> dict:
-    stories = [row for row in feed.get("stories", []) if isinstance(row, dict) and row.get("id")]
+    raw_stories = feed.get("stories")
+    if not isinstance(raw_stories, list):
+        raise ValueError("canonical feed stories must be a list")
+    stories = [row for row in raw_stories if isinstance(row, dict) and row.get("id")]
     feed_ids = {str(row["id"]) for row in stories}
-    if not stories:
-        raise ValueError("canonical feed has no stories")
     if feed.get("canonical_domain") != "valceaclar.ro":
         raise ValueError("canonical_domain mismatch")
     if feed.get("publication_model") != "continuous_story_first":
@@ -56,7 +57,7 @@ def validate(feed: dict, ux: dict, manifest: dict) -> dict:
     # can legitimately lag before this workflow deploys. Requiring it here
     # would make stale production impossible to repair.
     ux_ids = {str(value) for value in ux.get("story_ids", []) if value}
-    if not ux_ids:
+    if feed_ids and not ux_ids:
         raise ValueError("derived Public UX has no projected stories")
     missing_from_ux = sorted(feed_ids - ux_ids)
     if missing_from_ux:
@@ -156,6 +157,15 @@ def self_test() -> int:
         pass
     else:
         raise AssertionError("verified-media regression did not fail closed")
+
+    empty_feed = {
+        "canonical_domain": "valceaclar.ro",
+        "publication_model": "continuous_story_first",
+        "generated_at": "2026-10-09T00:00:00Z",
+        "stories": [],
+    }
+    empty_ready = validate(empty_feed, {"live_story_count": 3, "story_ids": ["archive"]}, {"stories": []})
+    assert empty_ready["story_count"] == 0
 
     print("CIVORA derived-projection readiness self-test: PASS")
     return 0

@@ -5,12 +5,43 @@ from unittest.mock import patch
 from zoneinfo import ZoneInfo
 
 from scripts.reconcile_civora_currentness_events import reconcile_events
-from scripts.sync_civora import _extract_runtime_archive_story, _freshness_key, _normalize_story, _normalize_visual
+from scripts.sync_civora import _extract_runtime_archive_story, _fetch_feed, _freshness_key, _normalize_story, _normalize_visual
+from scripts.check_civora_projection_ready import validate as validate_projection_ready
 
 
 class SyncCivoraTests(unittest.TestCase):
     def setUp(self):
         self.feed = {"generated_at": "2026-08-27T00:00:00Z"}
+
+    def test_empty_canonical_feed_is_valid_zero_news_state(self):
+        empty = {
+            "canonical_domain": "valceaclar.ro",
+            "publication_model": "continuous_story_first",
+            "generated_at": "2026-10-09T00:00:00Z",
+            "stories": [],
+        }
+        with patch("scripts.sync_civora._fetch_json", return_value=empty):
+            self.assertEqual(_fetch_feed()["stories"], [])
+
+    def test_projection_readiness_accepts_zero_current_feed(self):
+        feed = {
+            "canonical_domain": "valceaclar.ro",
+            "publication_model": "continuous_story_first",
+            "generated_at": "2026-10-09T00:00:00Z",
+            "stories": [],
+        }
+        result = validate_projection_ready(
+            feed,
+            {"live_story_count": 3, "story_ids": ["archive-story"]},
+            {"stories": []},
+        )
+        self.assertEqual(result["story_count"], 0)
+
+    def test_build_source_does_not_backfill_archive_when_current_ids_explicitly_empty(self):
+        from pathlib import Path
+        source = Path("scripts/build.py").read_text(encoding="utf-8")
+        self.assertIn("if not current_articles and 'current_story_ids' not in article_payload:", source)
+        self.assertIn('data-current-story-count="0"', source)
 
     def test_freshness_beats_legacy_priority(self):
         older = {"id": "old", "priority": 100, "first_published_at": "2026-08-21T12:00:00+03:00"}

@@ -94,8 +94,8 @@ def _fetch_feed() -> dict:
     if payload.get("publication_model") != EXPECTED_MODEL:
         raise SystemExit("Refusing sync: CIVORA publication model mismatch")
     stories = payload.get("stories")
-    if not isinstance(stories, list) or not stories:
-        raise SystemExit("Refusing sync: CIVORA feed has no stories")
+    if not isinstance(stories, list):
+        raise SystemExit("Refusing sync: CIVORA feed stories must be a list")
     return payload
 
 
@@ -549,8 +549,8 @@ def main() -> int:
                 "current_story_count": len(current_articles),
                 "archive_story_count": len(archive_articles),
                 "verified_visual_count": verified_visual_count,
-                "lead_story_id": current_articles[0]["id"],
-                "lead_published_at": current_articles[0]["published"],
+                "lead_story_id": current_articles[0]["id"] if current_articles else None,
+                "lead_published_at": current_articles[0]["published"] if current_articles else None,
                 "articles_sha256": digest,
                 "synced_at": generated_at,
                 "ownership": {
@@ -570,7 +570,8 @@ def main() -> int:
     print(
         f"CIVORA sync: PASS stories={len(articles)} current={len(current_articles)} "
         f"archive={len(archive_articles)} visuals={verified_visual_count} "
-        f"lead={current_articles[0]['id']} published={current_articles[0]['published']} "
+        f"lead={current_articles[0]['id'] if current_articles else '<none>'} "
+        f"published={current_articles[0]['published'] if current_articles else '<none>'} "
         f"generated_at={generated_at} sha256={digest[:12]}"
     )
     return 0
