@@ -11,7 +11,8 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  # Serialize recovery deployments with the canonical public writer.
+  group: valcea-clar-civora-public-sync
   cancel-in-progress: false
 jobs:
   deploy:
@@ -25,8 +26,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 -m unittest discover -s tests -v
+      - run: python3 scripts/check_civora_projection_ready.py
       - run: python3 scripts/sync_civora.py
+      - name: Reconcile current stories and structured Local Life
+        run: |
+          python3 scripts/reconcile_civora_currentness_events.py --self-test
+          python3 scripts/reconcile_civora_currentness_events.py
+      - run: python3 -m unittest discover -s tests -v
       - run: python3 scripts/build.py
       - run: python3 scripts/history_projection.py --self-test
       - run: python3 scripts/history_projection.py
