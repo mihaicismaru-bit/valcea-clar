@@ -11,8 +11,8 @@
   "archive_story_count": 91,
   "verified_visual_count": 12,
   "lead_story_id": null,
-  "lead_published_at": "2026-09-14T16:48:58+03:00",
-  "articles_sha256": "430701492fe0f6145ed54f5759b92a58828b75cd3bafcadec3c955ca27429294",
+  "lead_published_at": null,
+  "articles_sha256": "40c9ba3af16eb6d2dd2d42964ca7847c7b08c69f1049aa5761764974d38419ab",
   "synced_at": "2026-10-07T20:39:04.384836Z",
   "ownership": {
     "editorial_engine": "mihaicismaru-bit/civora",
@@ -25,5 +25,5 @@
   "local_life_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_events.json",
   "local_life_event_count": 7,
   "local_life_surface_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/editorial/local_life_surface_registry.json",
-  "local_life_surface_updated_at": "2026-10-09T11:59:51+03:00"
+  "local_life_surface_updated_at": "2026-10-09T12:13:44+03:00"
 }
