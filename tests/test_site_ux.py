@@ -24,10 +24,16 @@ class SiteUXContract(unittest.TestCase):
     def test_home_is_continuous_story_first(self):
         home = self.read('index.html')
         self.assertIn('data-layout="continuous-story-first"', home)
-        self.assertIn('class="lead-grid"', home)
-        self.assertIn('class="headline-strip"', home)
-        self.assertIn('În Vâlcea, acum', home)
-        self.assertIn('Ediție continuă', home)
+        if self.content['current_story_ids']:
+            self.assertIn('class="lead-grid"', home)
+            self.assertIn('class="headline-strip"', home)
+            self.assertIn('În Vâlcea, acum', home)
+            self.assertIn('Ediție continuă', home)
+        else:
+            self.assertIn('data-current-story-count="0"', home)
+            self.assertIn('class="zero-current-state"', home)
+            for article in self.articles:
+                self.assertNotIn(f'/stiri/{article["id"]}/', home)
         self.assertIn('max-image-preview:large', home)
         self.assertIn('"@type":"NewsMediaOrganization"', home)
 
@@ -44,7 +50,10 @@ class SiteUXContract(unittest.TestCase):
     def test_ultimele_is_current_not_archive(self):
         page = self.read('stiri/index.html')
         current_ids = {str(value) for value in self.content.get('current_story_ids') or []}
-        self.assertTrue(current_ids, 'current_story_ids must be explicit in production content')
+        self.assertIsInstance(self.content.get('current_story_ids'), list,
+                              'current_story_ids must be explicit in production content')
+        if not current_ids:
+            self.assertIn('data-current-story-count="0"', page)
         for article in self.articles:
             headline = html.escape(str(article.get('headline') or ''))
             if str(article.get('id') or '') in current_ids:
@@ -163,8 +172,12 @@ class SiteUXContract(unittest.TestCase):
 
     def test_benchmark_product_ux_contract(self):
         home = self.read('index.html')
-        self.assertIn('class="editorial-products"', home)
-        self.assertIn('Cum explicăm Vâlcea', home)
+        if self.content['current_story_ids']:
+            self.assertIn('class="editorial-products"', home)
+            self.assertIn('Cum explicăm Vâlcea', home)
+        else:
+            self.assertIn('data-current-story-count="0"', home)
+            self.assertNotIn('class="editorial-products"', home)
         article = self.read(f'stiri/{self.lead["id"]}/index.html')
         self.assertIn('min de citit', article)
         self.assertIn('class="related-stories"', article)
