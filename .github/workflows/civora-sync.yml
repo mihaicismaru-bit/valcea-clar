@@ -73,7 +73,8 @@ jobs:
           import json
           from pathlib import Path
           doc=json.loads(Path('content/articles.json').read_text(encoding='utf-8'))
-          print(doc['articles'][0]['id'])
+          ids=[str(v) for v in doc.get('current_story_ids') or [] if v]
+          print(ids[0] if ids else '')
           PY
           )"
 
@@ -84,7 +85,15 @@ jobs:
           story_set_ok=false
           if curl -fsSL --max-time 25 "https://valceaclar.ro/?sync_probe=$(date +%s)" -o /tmp/live-home.html \
             && curl -fsSL --max-time 25 "https://valceaclar.ro/sitemap.xml?sync_probe=$(date +%s)" -o /tmp/live-sitemap.xml; then
-            if grep -Fq "/stiri/${expected_id}/" /tmp/live-home.html; then
+            lead_ok=false
+            if [ -n "$expected_id" ]; then
+              if grep -Fq "/stiri/${expected_id}/" /tmp/live-home.html; then
+                lead_ok=true
+              fi
+            elif grep -Fq 'data-current-story-count="0"' /tmp/live-home.html; then
+              lead_ok=true
+            fi
+            if [ "$lead_ok" = true ]; then
               if python3 - <<'PY'
           import json
           import re
@@ -176,7 +185,7 @@ jobs:
         uses: actions/deploy-pages@v4
         if: steps.state.outputs.deploy == 'true'
 
-      - name: Public readback of canonical lead
+      - name: Public readback of canonical current state
         if: steps.state.outputs.deploy == 'true'
         shell: bash
         run: |
@@ -184,20 +193,30 @@ jobs:
           expected_id='${{ steps.state.outputs.expected_id }}'
           ok=0
           for i in $(seq 1 15); do
-            if curl -fsSL --max-time 25 "https://valceaclar.ro/?readback=$(date +%s)" -o /tmp/home.html \
-              && grep -Fq "/stiri/${expected_id}/" /tmp/home.html \
-              && curl -fsSL --max-time 25 "https://valceaclar.ro/stiri/${expected_id}/?readback=$(date +%s)" -o /tmp/story.html \
-              && grep -q '<h1>' /tmp/story.html; then
-              ok=1
-              break
+            if [ -n "$expected_id" ]; then
+              if curl -fsSL --max-time 25 "https://valceaclar.ro/?readback=$(date +%s)" -o /tmp/home.html \
+                && grep -Fq "/stiri/${expected_id}/" /tmp/home.html \
+                && curl -fsSL --max-time 25 "https://valceaclar.ro/stiri/${expected_id}/?readback=$(date +%s)" -o /tmp/story.html \
+                && grep -q '<h1>' /tmp/story.html; then
+                ok=1
+                break
+              fi
+            else
+              if curl -fsSL --max-time 25 "https://valceaclar.ro/?readback=$(date +%s)" -o /tmp/home.html \
+                && curl -fsSL --max-time 25 "https://valceaclar.ro/stiri/?readback=$(date +%s)" -o /tmp/stiri.html \
+                && grep -Fq 'data-current-story-count="0"' /tmp/home.html \
+                && grep -Fq 'data-current-story-count="0"' /tmp/stiri.html; then
+                ok=1
+                break
+              fi
             fi
             sleep 8
           done
           if [ "$ok" != 1 ]; then
-            echo "Public readback failed for canonical lead: $expected_id" >&2
+            echo "Public readback failed for canonical current state: ${expected_id:-<zero-current>}" >&2
             exit 1
           fi
-          echo "Public readback PASS: $expected_id"
+          echo "Public current-state readback PASS: ${expected_id:-<zero-current>}"
 
       - name: Public readback of exact canonical story set
         if: steps.state.outputs.deploy == 'true'
