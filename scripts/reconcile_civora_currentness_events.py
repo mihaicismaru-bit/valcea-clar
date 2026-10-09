@@ -9,6 +9,7 @@ eligible for the public event inventory.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import unicodedata
@@ -519,6 +520,8 @@ def apply(manifest: dict, canonical_events: dict, canonical_surfaces: dict, now:
     state["current_story_count"] = len(current_ids)
     state["archive_story_count"] = len(archive_ids)
     state["lead_story_id"] = current_ids[0] if current_ids else None
+    state["lead_published_at"] = articles["articles"][0].get("published") if current_ids else None
+    state["articles_sha256"] = hashlib.sha256(ARTICLES.read_bytes()).hexdigest()
     state["currentness_source"] = MANIFEST_URL
     state["local_life_source"] = EVENTS_URL
     state["local_life_event_count"] = len(imported)
