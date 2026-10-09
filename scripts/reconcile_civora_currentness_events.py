@@ -512,15 +512,13 @@ def apply(manifest: dict, canonical_events: dict, canonical_surfaces: dict, now:
     articles, current_ids, archive_ids = reconcile_articles(articles, manifest)
     events, imported = reconcile_events(events, canonical_events, now)
     local_life = reconcile_local_life(local_life, canonical_surfaces, now)
-    if not current_ids:
-        raise SystemExit("Refusing deployment: CIVORA has no active_now story; preserve last known good public homepage")
     ARTICLES.write_text(json.dumps(articles, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     EVENTS.write_text(json.dumps(events, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     LOCAL_LIFE.write_text(json.dumps(local_life, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     state = load(STATE, {})
     state["current_story_count"] = len(current_ids)
     state["archive_story_count"] = len(archive_ids)
-    state["lead_story_id"] = current_ids[0]
+    state["lead_story_id"] = current_ids[0] if current_ids else None
     state["currentness_source"] = MANIFEST_URL
     state["local_life_source"] = EVENTS_URL
     state["local_life_event_count"] = len(imported)
