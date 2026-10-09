@@ -1,5 +1,6 @@
-2026-10-07T23:27:00+03:00
-reason=owner-quality-reset-no-recycled-current-feed
-civora_main=545c19bda002b20acfbc1a6301c3ba47af358107
+2026-10-09T04:58:00+03:00
+reason=zero-current-production-recovery
+public_projection_fix=8ec20a418556745a55fa94f782eadd01f0591d75
 expected_current_story_count=0
+expected_archive_story_count=91
 rule=NO_RECYCLED_CURRENT_FEED
