@@ -26,7 +26,11 @@ There is one editorial engine and one public projection:
 - `.github/workflows/civora-sync.yml` — hourly CIVORA sync, build, metadata enrichment, self-healing GitHub Pages deploy and live readback.
 - `.github/workflows/quality.yml` and `pr-validation.yml` — validate the public projection only.
 
-The former standalone `newsroom/`, source registry, candidate engine and auto-publisher have been removed. Do not recreate editorial execution in this repository; editorial changes belong in CIVORA.
+The former standalone `newsroom/`, source registry, candidate engine and auto-publisher have been removed.
+
+## Institutional modules — owner decision, 16 October 2026
+
+New institutional agents and their orchestrator are owned by this repository, starting with [Râmnicu Vâlcea](administratie/ramnicu_valcea/README.md). This explicit owner decision supersedes the former presentation-only restriction for the new modules. The first increment is collection and evidence queues; model execution and publication are not activated. The existing CIVORA-to-Pages production route continues until a controlled ownership migration prevents competing writers.
 
 ## Editorial continuity
 

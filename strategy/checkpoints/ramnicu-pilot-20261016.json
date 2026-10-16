@@ -1,0 +1,17 @@
+{
+  "module_id": "administratie/ramnicu-valcea",
+  "owner_decision_date": "2026-10-16",
+  "repository": "mihaicismaru-bit/valcea-clar",
+  "code_status": "collector_and_agent_contracts_implemented",
+  "execution_mode": "collect_only",
+  "nas_status": "not_deployed_or_verified",
+  "model_adapter": "not_connected",
+  "social_accounts": "not_yet_verified_or_connected",
+  "publication": "not_implemented_or_activated",
+  "validation": {
+    "module_tests": "14 passed",
+    "full_local_suite": "52 tests executed; archive photo test has 12 failing subcases because external image hosts cannot resolve in this environment",
+    "live_probe": "4 official seed attempts; 0 documents; DEGRADED; DNS resolution unavailable"
+  },
+  "next_exact_action": "Run the NAS health check and one-shot live collector probe, validate the source inventory, then recover one complete council meeting and one urbanism case before connecting model execution."
+}
