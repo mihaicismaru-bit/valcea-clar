@@ -1,0 +1,12 @@
+{
+  "source_commit": "676fea89b7fdbc8d4a167ea4424ded40658ee55c",
+  "archive": "ramnicu-nas-source-676fea8.zip",
+  "archive_sha256": "332d728ce5bd846d33f138521103e9ddf7a16d9d4a1a181a199dc2c5c405b21e",
+  "reproduce": "git archive --format=zip --output=ramnicu-nas-source-676fea8.zip 676fea89b7fdbc8d4a167ea4424ded40658ee55c administratie deploy/nas/ramnicu/Dockerfile",
+  "destination": "/volume1/docker/valcea-clar-ramnicu-pilot",
+  "supersedes": "source-transfer-fc61b24.json",
+  "change": "Fix whitespace-only main element hiding visible official-page body text; 15 unit tests passed",
+  "transfer_status": "not_transferred_dsm_http_recovered_login_required",
+  "local_context_compose": "deploy/nas/ramnicu/compose.dsm-local.yml",
+  "publication_enabled": false
+}

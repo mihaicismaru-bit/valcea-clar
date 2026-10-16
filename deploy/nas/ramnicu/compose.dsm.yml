@@ -1,0 +1,24 @@
+# EXPERIMENTAL: DSM rejected the remote archive with "invalid tar header".
+# See DSM-ACCESS-20261016.md before attempting a build.
+# Standalone DSM project: no host credentials, ports, scheduler or publisher.
+# Source is immutable; the Dockerfile initializes /data for UID/GID 1000.
+services:
+  ramnicu-collector:
+    build:
+      context: https://github.com/mihaicismaru-bit/valcea-clar/archive/38a8f8768465e52a0df6ceaec61ff9d5a098d519.tar.gz
+      dockerfile: valcea-clar-38a8f8768465e52a0df6ceaec61ff9d5a098d519/deploy/nas/ramnicu/Dockerfile
+      args:
+        SOURCE_ROOT: valcea-clar-38a8f8768465e52a0df6ceaec61ff9d5a098d519
+    user: "1000:1000"
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ramnicu-evidence:/data
+volumes:
+  ramnicu-evidence:

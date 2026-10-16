@@ -1,0 +1,16 @@
+services:
+  ramnicu-collector:
+    build:
+      context: ../../..
+      dockerfile: deploy/nas/ramnicu/Dockerfile
+    user: "${VALCEA_CLAR_UID:-1000}:${VALCEA_CLAR_GID:-1000}"
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - "${VALCEA_CLAR_DATA_DIR:?Set an absolute persistent NAS data directory}:/data"
