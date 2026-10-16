@@ -91,7 +91,8 @@ class Page(HTMLParser):
                 self.anchor[1].append(value)
 
     def result(self):
-        return " ".join(self.titles).strip(), "".join(self.main or self.text).strip(), self.links
+        main_text = "".join(self.main).strip()
+        return " ".join(self.titles).strip(), main_text or "".join(self.text).strip(), self.links
 
 
 def route(title, text, lane):

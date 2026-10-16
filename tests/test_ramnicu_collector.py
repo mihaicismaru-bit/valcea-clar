@@ -60,6 +60,17 @@ class CollectorTests(unittest.TestCase):
         self.assertNotIn("Contact", text)
         self.assertEqual(links, [("anexa.pdf", "Anexa")])
 
+    def test_empty_main_falls_back_to_visible_body_without_navigation(self):
+        page = Page()
+        page.feed('<html><main><div></div><nav>Navigation only</nav></main>'
+                  '<div><h1>EXEMPLU TEST</h1><p>Document sintetic in afara zonei main.</p>'
+                  '<a href="anexa.pdf">Anexa</a></div><footer>Contact</footer></html>')
+        _, text, links = page.result()
+        self.assertIn("Document sintetic", text)
+        self.assertNotIn("Navigation only", text)
+        self.assertNotIn("Contact", text)
+        self.assertEqual(links, [("anexa.pdf", "Anexa")])
+
     def test_versions_and_jobs_are_idempotent_and_keep_old_evidence(self):
         store = Store(self.root)
         try:
