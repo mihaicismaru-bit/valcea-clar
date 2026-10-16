@@ -11,7 +11,15 @@
   "validation": {
     "module_tests": "14 passed",
     "full_local_suite": "52 tests executed; archive photo test has 12 failing subcases because external image hosts cannot resolve in this environment",
-    "live_probe": "4 official seed attempts; 0 documents; DEGRADED; DNS resolution unavailable"
+    "live_probe": "4 official seed attempts; 0 documents; DEGRADED; DNS resolution unavailable",
+    "github_unit_suite": "53 tests passed on current main baseline plus this module (GitHub Actions)",
+    "module_ci": "Administration module tests passed on push and pull_request",
+    "integration_blocker": "Existing CIVORA feed fetch returns HTTP 404 in readiness and sync steps after unit tests pass",
+    "ci_evidence": [
+      "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/38871098930",
+      "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/38871099049",
+      "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/38871099124"
+    ]
   },
   "next_exact_action": "Run the NAS health check and one-shot live collector probe, validate the source inventory, then recover one complete council meeting and one urbanism case before connecting model execution."
 }
