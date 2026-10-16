@@ -151,3 +151,53 @@ passed, including the publication-disabled guard. The first test invocation
 failed because sandbox TEMP denied file access; rerunning with a writable
 temporary directory under the task's `work/` passed. This does not validate
 the Docker image, live source coverage or NAS persistent-volume behavior.
+
+## Source-transfer retry — approximately 12:13 Europe/Bucharest
+
+Prepared `ramnicu-nas-source-fc61b24.zip` from the exact repository commit
+`fc61b24bc36a1f5a3c60a87284a5f6cb4288cf61` using `git archive`, limited to
+`administratie` and `deploy/nas/ramnicu/Dockerfile`. SHA-256:
+`140dfea20a930a8d1f36826fae5de5188dae537886c70406479684990192eda0`.
+The archive has 7 regular files; it contains no publication workflow, compose
+replacement, credentials or working-tree files. The manifest and reproduction
+command are in `source-transfer-fc61b24.json`. ZIP CRC, SHA-256 and the complete
+file list were checked locally.
+
+`compose.dsm-local.yml` is ready for the existing pilot project after extracting
+that archive directly into `/volume1/docker/valcea-clar-ramnicu-pilot`.
+Its build context is `.`, Dockerfile is `deploy/nas/ramnicu/Dockerfile`,
+and the project-scoped `ramnicu-evidence` volume name is unchanged. It is not
+applied on NAS and remains runtime-unverified. The archive deliberately does
+not overwrite the existing project YAML; inspect the destination before
+extraction and apply the local YAML separately after transfer.
+
+**Transfer did not start: DSM stopped returning HTTP responses.** Opening
+File Station produced a taskbar icon but no usable File Station window.
+Browser refresh and direct navigation remained pending with the prior DSM
+document visible. Previously displayed health values must not be treated as
+fresh health checks. No upload dialog was reached in this retry.
+
+Three independent unauthenticated HTTPS probes were made without disabling
+TLS verification, without cookies and without collecting credentials:
+
+| Probe | Result |
+| --- | --- |
+| HEAD, 20s maximum | curl exit 28, timeout after 20011ms, 0 bytes |
+| HEAD, 30s maximum | curl exit 28; HTTP 000; TCP 1.391534s; TLS 5.419031s; total 30.011777s; 0 bytes |
+| GET, 30s maximum | curl exit 28; HTTP 000; TCP 0.020482s; TLS 5.052842s; no first byte; total 30.010158s; 0 bytes |
+
+TCP and TLS can complete; no HTTP response was received within either 30s
+probe. This demonstrates an external HTTP availability blocker on the access
+path, not a proven NAS hardware failure or a proven application root cause.
+Existing Windows SMB mappings pointed to a different host and were not used.
+
+No new NAS files/configurations were written in this retry; no collector
+container was built or started. Prior project files remain as recorded above.
+No services or NAS were restarted, no security settings changed, and no volume
+was pruned. The real collection, persistent writes, council meeting, urbanism
+case and annex validation remain outstanding. Publication remains off.
+
+Resume when DSM serves HTTP again or an authorized file-transfer channel to
+this same NAS is available. Use the verified archive and local-context YAML,
+then build and validate the collection. Do not reset existing services to
+repair this unrelated access failure.

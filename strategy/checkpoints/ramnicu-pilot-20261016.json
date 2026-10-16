@@ -7,7 +7,7 @@
   "nas_status": "isolated_project_created_build_blocked_before_collection",
   "nas_access_checkpoint": {
     "date": "2026-10-16",
-    "status": "dsm_access_recovered_nas_build_context_blocked",
+    "status": "source_transfer_blocked_dsm_https_no_http_response",
     "evidence": "deploy/nas/ramnicu/DSM-ACCESS-20261016.md",
     "default_browser": "Microsoft Edge; exact DSM URL and authenticated desktop verified",
     "browser_connector": "Browser is not available: edge",
@@ -18,6 +18,14 @@
     "project": "valcea-clar-ramnicu-pilot",
     "project_path": "/volume1/docker/valcea-clar-ramnicu-pilot",
     "project_container_count": 0,
+    "source_transfer": {
+      "manifest": "deploy/nas/ramnicu/source-transfer-fc61b24.json",
+      "status": "prepared_locally_not_uploaded",
+      "local_context_compose": "deploy/nas/ramnicu/compose.dsm-local.yml",
+      "checked_at_utc": "2026-10-16T09:13:13Z",
+      "head_probe": "TCP 1.391534s; TLS 5.419031s; HTTP 000; 30.011777s timeout; 0 bytes",
+      "get_probe": "TCP 0.020482s; TLS 5.052842s; HTTP 000; first byte absent; 30.010158s timeout; 0 bytes"
+    },
     "build_failures": ["git executable absent from PATH", "codeload remote archive: invalid tar header", "GitHub .tar.gz remote archive: invalid tar header"],
     "persistent_volume": "ramnicu-evidence declared; creation and writes unverified",
     "verified_collection": false,
@@ -42,5 +50,5 @@
       "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/38871099124"
     ]
   },
-  "next_exact_action": "Unblock source transfer/local NAS build context or import a verified image; verify persistent volume writes, run the one-shot collector, then validate one complete council meeting and one urbanism case including annexes. Keep publication off."
+  "next_exact_action": "Restore a responsive DSM HTTP endpoint or an authorized file-transfer channel to this NAS; upload and extract the verified fc61b24 source archive into the dedicated project, apply compose.dsm-local.yml, build, verify persistent writes and collect. Validate a full council meeting and an urbanism case including annexes before publication; keep publication off."
 }

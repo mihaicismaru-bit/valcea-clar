@@ -14,6 +14,15 @@ sau importa o imagine construita si verificata separat. Nu sterge volumele.
 
 Reteta de mai jos foloseste un checkout local si un director persistent bind:
 
+Pentru proiectul DSM deja creat, varianta `compose.dsm-local.yml` foloseste
+contextul local `.` si pastreaza volumul numit al pilotului. Extrage mai intai
+arhiva verificata descrisa in `source-transfer-fc61b24.json` direct in directorul
+proiectului; inspecteaza destinatia si nu suprascrie fisiere existente. Apoi
+aplica separat YAML-ul local in proiectul `valcea-clar-ramnicu-pilot`.
+Transferul este momentan blocat: DSM incheie TLS, dar nu raspunde HTTP in
+probele HEAD/GET de 30s; vezi ultima sectiune a raportului DSM. Arhiva nu a fost
+incarcata, iar varianta locala nu a fost construita sau rulata pe NAS.
+
 1. Verifica sanatatea NAS-ului, spatiul liber si Container Manager.
 2. Creeaza un director persistent local si verifica scrierea cu UID/GID alese.
 3. Seteaza VALCEA_CLAR_DATA_DIR la calea absoluta a directorului. Seteaza VALCEA_CLAR_UID si VALCEA_CLAR_GID dupa contul de serviciu verificat pe NAS.
