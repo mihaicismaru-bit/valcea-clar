@@ -1,0 +1,170 @@
+{
+  "run_id": "a4c17dfc806d4a47b9c0736245e13a0b",
+  "started_at": "2026-10-16T09:25:04+00:00",
+  "module_id": "administratie/ramnicu-valcea",
+  "mode": "collect_only",
+  "requests": 10,
+  "changed": 2,
+  "errors": [
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/0._Dispozitie_convocare_copy_6.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/1._Proiect_de_hot._rectificare_buget_credite_interne_pe_anul_2026.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/2._Proiect_de_hot._completarea_Retelei_scolare_a_unitatilor_de_invatamant_preuniversitar_de_stat_si_particular_pentru_anul_scolar_2026-2027.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/23.1._Incadrare_in_zona.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/23.2._Reglementari_-_mobilare_urbanistica.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/23.3._Situatia_existenta.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/23._Proiect_de_hot._aprobare_PUZ_si_RLU_Transformare_spatii_birouri_in_locuinte_de_serviciu_Calea_lui_Traian_nr_224-224_A.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://primariavl.ro/documente/2026/disp-attached/3._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_de_noroc_operatorului_economic_GEAR_SLOT_SRL_punct_de_lucru_str._CLT_nr.245A.pdf",
+      "error": "robots.txt disallows collection or could not be verified"
+    }
+  ],
+  "depth_limited": [
+    "https://primariavl.ro/consiliul-local/componenta",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/minutele-sedintelor",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/procese-verbale",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/arhiva-convocari",
+    "https://primariavl.ro/consiliul-local/dezbateri-vl",
+    "https://primariavl.ro/consiliul-local/hotarari-adoptate",
+    "https://primariavl.ro/consiliul-local/rapoartele-consilierilor",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/filarmonica-ion-dumitrescu",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/teatrul-ariel",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/apavil",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/piete-prest",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/eta",
+    "https://primariavl.ro/consiliul-local/declaratii/avere",
+    "https://primariavl.ro/consiliul-local/declaratii/interese",
+    "https://primariavl.ro/consiliul-local/declaratii/interese-personale",
+    "https://primariavl.ro/informatii-publice/urbanism",
+    "https://primariavl.ro/informatii-publice/urbanism/certificate-de-urbanism",
+    "https://primariavl.ro/informatii-publice/urbanism/autorizatii-de-desfiintare",
+    "https://primariavl.ro/informatii-publice/urbanism/autorizatii-de-constructie",
+    "https://primariavl.ro/informatii-publice/urbanism/puz-pud-pug",
+    "https://primariavl.ro/informatii-publice/urbanism/cereri-si-formulare-urbanism",
+    "https://primariavl.ro/mol/hotarari-consiliu-local",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl/11093-consiliul-local-este-convocat-in-sedinta-extraordinara-in-data-de-11-august-2026-ora-10-00-in-sala-de-sedinte-a-primariei-municipiului-ramnicu-valcea",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl/11008-consiliul-local-este-convocat-in-sedinta-ordinara-in-data-de-30-iunie-2026-ora-10-00-in-sala-de-sedinte-a-primariei-municipiului-ramnicu-valcea",
+    "https://primariavl.ro/documente/2026/disp-attached/0._Dispozitie_convocare_copy_3.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/21._Proiect_de_hot._insusire_Raport_informare_si_consultare_public_privind_documentatia_Actualizare_PUG_si_RLU_al_municipiului_etapa_II.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/22._Proiect_de_hot._aprobare_PUZ_si_RLU_Construire_locuinta_unifamiliala_strada__Cella_Delavrancea_nr_42A.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/23._Proiect_de_hot._aprobare_PUZ_si_RLU_Transformare_spatii_birouri_in_locuinte_de_serviciu_Calea_lui_Traian_nr_224-224_A.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/25._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Regina_Maria_bl_J.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/26._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_M.V._Popescu_bl._P2.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/27._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru__Calea_lui_Traian_bl_15.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/28._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_bvd_Tineretului_bl._A11_-3.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/29._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_I_C_Bratianu_bl._A64.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/30._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Mihai_Eminescu_nr_31.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/31._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_Calea_lui_Traian_bl_S9.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/32._Proiect_de_hot._acordare_autorizatie_anuala_functionare_jocuri_de_noroc_slot_machine_operatorului_economic_GEAR_SLOT_SRL_punct_lucru_strada_Petrisor_nr_9.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/33._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_PROJECT_PC_IMPEX_SRL_punct_lucru_strada_Nicolae_Iorga_nr_1.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/34._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_PROJECT_PC_IMPEX_SRL_punct_lucru_strada_CLT_nr.186.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/35._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_PROJECT_PC_IMPEX_SRL_punct_lucru_strada_Maior_V._Popescu_bloc_P2.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/36._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_PROJECT_PC_IMPEX_SRL_punct_lucru_strada_Mihai_Eminescu_nr.39.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/37._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_JOLLYGAMES_SRL_punct_lucru_strada_Ferdinand_nr.38.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/38._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_pariuri_in_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Regina_Maria_bl_J.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/39._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_pariuri_in_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Maior_V_Popescu_bl_P2.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/40._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_pariuri_in_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_Calea_lui_Traian_bl_15.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/41._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_pariuri_in_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_bvd_Tineretului_bl_A11-3.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/42._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_pariuri_in_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_I_C_Bratianu_bl_A64.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/43._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_noroc_pariuri_in_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Mihai_Eminescu_nr_31.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/44._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_pariuri_cota_fixa_operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_Calea_lui_Traian_bl_S9.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/45._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_pariuri_in_cota_fixa_operatorului_economic_Baum_SRL_punct_lucru_strada_Nicolae_Iorga_bl_A17_-1.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/46._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_pariuri_in_cota_fixa_operatorului_economic_Baum_SRL_punct_lucru_strada_CLT_nr.186.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/47._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_pariuri_in_cota_fixa_operatorului_economic_Baum_SRL_punct_lucru_strada_MIhai_Eminescu_nr.39.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/48._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_pariuri_in_cota_fixa_operatorului_economic_Baum_SRL_punct_lucru_strada_Maior_V._Popescu_bl.P2.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/49._Proiect_de_hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului_economic_CELLADA_SRL_punct_lucru_bld._Tineretului_nr.6-8.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/53._Proiect_de_hot._alegere_presedinte_de_sedinta_august_-_octombrie_2026.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/Punct_suplimentar_3_Proiect_de__hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului__economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Stirbei_Voda_nr_5.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/Punct_suplimentar_4_Proiect_de__hot._acordare_autorizatie_anuala_jocuri_de_noroc_pariuri_in_cota_fixa__operatorului_economic_SUPERBET_RETAIL_SA_punct_lucru_strada_Stirbei_Voda.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/Punct_suplimentar_5_Proiect_de__hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului__economic_CARADUNE_GAMES_SRL_punct_lucru_strada_Grigore_Sinescu_nr_2.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/Punct_suplimentar_6_Proiect_de__hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului__economic_CARADUNE_GAMES_SRL_punct_lucru_strada_Florilor_nr_22.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/Punct_suplimentar_7_Proiect_de__hot._acordare_autorizatie_anuala_jocuri_de_noroc_slot_machine_operatorului__economic_CARADUNE_GAMES_SRL_punct_lucru_strada_Lucian_Blaga_nr_1A.pdf",
+    "https://primariavl.ro/consiliul-local/componenta",
+    "https://primariavl.ro/consiliul-local/componenta",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/minutele-sedintelor",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/procese-verbale",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/arhiva-convocari",
+    "https://primariavl.ro/consiliul-local/dezbateri-vl",
+    "https://primariavl.ro/consiliul-local/hotarari-adoptate",
+    "https://primariavl.ro/consiliul-local/rapoartele-consilierilor",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/filarmonica-ion-dumitrescu",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/teatrul-ariel",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/apavil",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/piete-prest",
+    "https://primariavl.ro/consiliul-local/institu%C8%9Bii-subordonate/eta",
+    "https://primariavl.ro/consiliul-local/declaratii/avere",
+    "https://primariavl.ro/consiliul-local/declaratii/interese",
+    "https://primariavl.ro/consiliul-local/declaratii/interese-personale",
+    "https://primariavl.ro/informatii-publice/urbanism",
+    "https://primariavl.ro/informatii-publice/urbanism/certificate-de-urbanism",
+    "https://primariavl.ro/informatii-publice/urbanism/autorizatii-de-desfiintare",
+    "https://primariavl.ro/informatii-publice/urbanism/autorizatii-de-constructie",
+    "https://primariavl.ro/informatii-publice/urbanism/puz-pud-pug",
+    "https://primariavl.ro/informatii-publice/urbanism/cereri-si-formulare-urbanism",
+    "https://primariavl.ro/mol/hotarari-consiliu-local",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl/11173-consiliul-local-este-convocat-in-sedinta-ordinara-in-data-de-30-septembrie-2026-ora-10-00-in-sala-de-sedinte-a-primariei-municipiului-ramnicu-valcea",
+    "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl/11131-consiliul-local-este-convocat-in-sedinta-ordinara-in-data-de-31-august-2026-ora-10-00-in-sala-de-sedinte-a-primariei-municipiului-ramnicu-valcea",
+    "https://primariavl.ro/documente/2026/disp-attached/0._Dispozitie_convocare_copy_6.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/1._Proiect_de_hot._rectificare_buget_credite_interne_pe_anul_2026.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/2._Proiect_de_hot._completarea_Retelei_scolare_a_unitatilor_de_invatamant_preuniversitar_de_stat_si_particular_pentru_anul_scolar_2026-2027.pdf",
+    "https://primariavl.ro/documente/2026/disp-attached/3._Proiect_de_hot._acordare_autorizatie_anuala_de_functionare_jocuri_de_noroc_operatorului_economic_GEAR_SLOT_SRL_punct_de_lucru_str._CLT_nr.245A.pdf",
+    "https://primariavl.ro/consiliul-local/componenta"
+  ],
+  "coverage_requirements": [
+    {
+      "id": "hcl_and_annexes",
+      "status": "requires_live_validation"
+    },
+    {
+      "id": "meetings_minutes_votes_recordings",
+      "status": "requires_inventory"
+    },
+    {
+      "id": "urbanism_consultations_and_plans",
+      "status": "requires_live_validation"
+    },
+    {
+      "id": "construction_demolition_permits_and_certificates",
+      "status": "requires_inventory"
+    },
+    {
+      "id": "current_council_roster",
+      "status": "requires_identity_verification"
+    },
+    {
+      "id": "institution_mayor_all_councillors_social",
+      "status": "requires_identity_verification_and_access_test"
+    }
+  ],
+  "published": 0,
+  "jobs_total": 3,
+  "due_remaining": 0,
+  "extraction_pending": 0,
+  "finished_at": "2026-10-16T09:25:09+00:00",
+  "collection_status": "DEGRADED",
+  "pilot_status": "INCOMPLETE_COVERAGE"
+}

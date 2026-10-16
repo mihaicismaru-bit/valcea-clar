@@ -16,7 +16,7 @@ Reteta de mai jos foloseste un checkout local si un director persistent bind:
 
 Pentru proiectul DSM deja creat, varianta `compose.dsm-local.yml` foloseste
 contextul local `.` si pastreaza volumul numit al pilotului. Extrage mai intai
-arhiva verificata descrisa in `source-transfer-fc61b24.json` direct in directorul
+arhiva verificata descrisa in `source-transfer-676fea8.json` direct in directorul
 proiectului; inspecteaza destinatia si nu suprascrie fisiere existente. Apoi
 aplica separat YAML-ul local in proiectul `valcea-clar-ramnicu-pilot`.
 Transferul este momentan blocat: DSM incheie TLS, dar nu raspunde HTTP in

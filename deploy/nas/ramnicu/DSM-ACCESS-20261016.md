@@ -201,3 +201,36 @@ Resume when DSM serves HTTP again or an authorized file-transfer channel to
 this same NAS is available. Use the verified archive and local-context YAML,
 then build and validate the collection. Do not reset existing services to
 repair this unrelated access failure.
+
+## Further retry and local evidence — approximately 12:28 Europe/Bucharest
+
+DSM remained blank/pending after refreshing in default Edge. Repeated verified
+TLS GET probes still received zero bytes and HTTP 000:
+
+| Timeout | TCP | TLS | Total |
+| --- | --- | --- | --- |
+| 30s | 0.254686s | 0.659917s | 30.005651s |
+| 45s | 0.024857s | 0.502057s | 45.005967s |
+| 30s | 0.040813s | 2.177234s | 30.014443s |
+| 30s | 0.027068s | 1.391397s | 30.005935s |
+
+All probes ended with curl timeout 28 and no first byte. No source transfer,
+new NAS build or NAS collection was possible; existing services were untouched.
+
+While waiting, local real-source collection revealed and fixed the empty-main
+HTML extraction bug. All 15 collector tests pass. A new verified source ZIP
+from `676fea89b7fdbc8d4a167ea4424ded40658ee55c` is prepared; its manifest is
+`source-transfer-676fea8.json`. The old `fc61b24` ZIP is superseded and neither
+ZIP has been uploaded. The local-context YAML remains unchanged and unapplied.
+
+Two local real-source runs and 62 hash-checked original-version entries are
+documented under `strategy/checkpoints/ramnicu-live-20261016/`. These are local
+preflight evidence, not successful NAS deployment or completed coverage.
+The focused meeting/case probe saved 2 HTML parent pages and blocked all 8
+linked PDFs because the site's plaintext robots.txt explicitly disallows
+`/documente/`. Full meeting, urbanism and annex validation remain incomplete.
+
+A conversation heartbeat was created to retry DSM every 15 minutes and resume
+the isolated local build when access returns. It stays quiet while the state is
+unchanged and preserves the no-publication/no-existing-service-changes constraints.
+This is a conversation follow-up, not a NAS collector schedule or publisher.
