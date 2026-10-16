@@ -3,6 +3,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
 COPY administratie /app/administratie
+RUN mkdir -p /data && chown 1000:1000 /data
 USER 1000:1000
 ENTRYPOINT ["python", "-m", "administratie.ramnicu_valcea.collector"]
 CMD ["--data-dir", "/data/ramnicu-valcea"]
