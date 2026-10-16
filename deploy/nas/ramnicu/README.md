@@ -1,6 +1,18 @@
 # Rulare pilot pe Synology
 
-Acest pachet este pregatit pentru instalare, dar nu a fost construit sau executat pe NAS.
+Instalarea a fost incercata pe NAS la 16 octombrie 2026: proiectul izolat exista,
+dar build-ul s-a blocat inainte de pornirea colectorului. Vezi
+[raportul DSM](DSM-ACCESS-20261016.md) pentru sanatate, stocare, inventar si erorile exacte.
+Colectarea reala si persistenta volumului nu sunt inca validate.
+
+`compose.dsm.yml` pastreaza ultima configuratie incercata prin editorul DSM,
+cu sursa fixata la commit si volum Docker numit, separat pe proiect. Este
+experimentala: ruta Git cere un executabil absent pe NAS, iar ambele rute de
+arhiva remote incercate au esuat cu `invalid tar header`. Nu o considera o
+reteta verificata. Pentru reluare, transfera sursa intr-un context local pe NAS
+sau importa o imagine construita si verificata separat. Nu sterge volumele.
+
+Reteta de mai jos foloseste un checkout local si un director persistent bind:
 
 1. Verifica sanatatea NAS-ului, spatiul liber si Container Manager.
 2. Creeaza un director persistent local si verifica scrierea cu UID/GID alese.
