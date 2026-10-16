@@ -234,3 +234,20 @@ A conversation heartbeat was created to retry DSM every 15 minutes and resume
 the isolated local build when access returns. It stays quiet while the state is
 unchanged and preserves the no-publication/no-existing-service-changes constraints.
 This is a conversation follow-up, not a NAS collector schedule or publisher.
+
+## HTTP recovery / expired session — heartbeat 13:28 Europe/Bucharest
+
+The 10:28:36 UTC heartbeat received HTTP 200 from the requested DSM endpoint:
+TCP 0.198243s, TLS 5.158979s, first byte 19.418749s, total 19.419620s.
+Default Edge was refreshed. The old desktop briefly appeared during loading,
+then DSM redirected to `https://mihaicismaru.synology.me:5001/#/signin`
+and displayed `Sign In`. The earlier authenticated session has expired.
+No authentication dialog input was automated. Human sign-in in the existing
+default-browser window is required before inspecting NAS state and transferring
+the source. The heartbeat stays active to resume once that session is available.
+
+The prepared `676fea8` archive was rechecked against the manifest SHA-256 and
+its ZIP CRC passed. Repository HEAD before this checkpoint was `d62d650` with
+no local changes. No upload, extraction, project edit, build or service mutation
+was performed. Publication stays off and annex coverage remains incomplete for
+the independently recorded robots restriction.

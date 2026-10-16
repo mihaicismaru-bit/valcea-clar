@@ -6,7 +6,7 @@
   "destination": "/volume1/docker/valcea-clar-ramnicu-pilot",
   "supersedes": "source-transfer-fc61b24.json",
   "change": "Fix whitespace-only main element hiding visible official-page body text; 15 unit tests passed",
-  "transfer_status": "not_transferred_dsm_https_no_http_response",
+  "transfer_status": "not_transferred_dsm_http_recovered_login_required",
   "local_context_compose": "deploy/nas/ramnicu/compose.dsm-local.yml",
   "publication_enabled": false
 }

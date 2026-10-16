@@ -7,7 +7,7 @@
   "nas_status": "isolated_project_created_build_blocked_before_collection",
   "nas_access_checkpoint": {
     "date": "2026-10-16",
-    "status": "source_transfer_blocked_dsm_https_no_http_response",
+    "status": "dsm_http_recovered_login_required_before_transfer",
     "evidence": "deploy/nas/ramnicu/DSM-ACCESS-20261016.md",
     "default_browser": "Microsoft Edge; exact DSM URL and authenticated desktop verified",
     "browser_connector": "Browser is not available: edge",
@@ -20,9 +20,11 @@
     "project_container_count": 0,
     "source_transfer": {
       "manifest": "deploy/nas/ramnicu/source-transfer-676fea8.json",
-      "status": "prepared_locally_not_uploaded",
+      "status": "prepared_locally_not_uploaded_dsm_login_required",
       "local_context_compose": "deploy/nas/ramnicu/compose.dsm-local.yml",
-      "checked_at_utc": "2026-10-16T09:27:58Z",
+      "checked_at_utc": "2026-10-16T10:28:36Z",
+      "recovery_probe": "HTTP 200; TCP 0.198243s; TLS 5.158979s; first byte 19.418749s; total 19.419620s",
+      "browser_recovery": "DSM refresh reached /#/signin; existing session expired; human sign-in required",
       "retry_get_30s": "HTTP 000; TCP 0.254686s; TLS 0.659917s; no first byte; timeout 30.005651s",
       "retry_get_45s": "HTTP 000; TCP 0.024857s; TLS 0.502057s; no first byte; timeout 45.005967s",
       "latest_get_30s": "HTTP 000; TCP 0.027068s; TLS 1.391397s; no first byte; timeout 30.005935s",
