@@ -22,8 +22,8 @@ HISTORICAL_S5 = (
     "/dosare/open-air-blues-brezoi-2026/",
 )
 ROUTE_PATTERN = re.compile(r"^/(?:[a-z0-9-]+/)+$")
-DEPLOY_ACTION = re.compile(r"^\\s*(?:-\\s*)?uses:\\s*actions/deploy-pages@v4\\s*(?:#.*)?$")
-STEP_LINE = re.compile(r"^\\s{6}-\\s+")
+DEPLOY_ACTION = re.compile(r"^\s*(?:-\s*)?uses:\s*actions/deploy-pages@v4\s*(?:#.*)?$")
+STEP_LINE = re.compile(r"^\s{6}-\s+")
 
 
 def workflow_probe(source: str) -> dict:
