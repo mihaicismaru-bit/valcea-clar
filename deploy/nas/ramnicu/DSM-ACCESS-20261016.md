@@ -251,3 +251,35 @@ its ZIP CRC passed. Repository HEAD before this checkpoint was `d62d650` with
 no local changes. No upload, extraction, project edit, build or service mutation
 was performed. Publication stays off and annex coverage remains incomplete for
 the independently recorded robots restriction.
+
+
+## Resume checkpoint — 2026-10-18 08:51 UTC
+
+The user reported signing in and later explicitly requested continuation. This
+does not establish the current session state. DSM HTTP availability recovered;
+the latest unauthenticated GET returned HTTP 200 in 0.363186 seconds.
+
+Repeated window inventories had returned no targetable windows. On explicit
+continuation, launching msedge.exe returned an Edge New tab window (id 68664).
+Capturing that returned window stopped Computer Use with the exact guard:
+
+> Computer Use has been stopped for this turn because it could not determine the current browser URL on Windows with enough confidence to enforce policy.
+
+The same capture failure recurred at the 08:36 UTC heartbeat. Work stopped as
+required by the tool; no bypass or authentication automation was attempted.
+This is an external browser-control blocker, not evidence of a NAS fault.
+Current DSM authentication, health, inventory and persistent writes remain
+unverified; the earlier NAS observations are dated 2026-10-16.
+
+Repository HEAD before this checkpoint was b8f83c4. The source ZIP still matches
+manifest SHA-256 332d728ce5bd846d33f138521103e9ddf7a16d9d4a1a181a199dc2c5c405b21e.
+It has not been uploaded or extracted. The local-context compose has not been
+applied, no successful NAS image build or collection has occurred, and no
+existing service/data/security settings were changed during these retries.
+Publication remains disabled; full meeting and urbanism annex validation remain
+blocked independently by the documented /documente/ robots exclusion.
+
+Resume only through a controllable Edge DSM session or another explicitly
+authorized access channel to the same NAS. Inspect the destination and current
+NAS inventory before transfer/build; do not treat HTTP 200 as authentication or
+collector validation. The quiet retry automation remains active.
