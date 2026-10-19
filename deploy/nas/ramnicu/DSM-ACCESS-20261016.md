@@ -283,3 +283,21 @@ Resume only through a controllable Edge DSM session or another explicitly
 authorized access channel to the same NAS. Inspect the destination and current
 NAS inventory before transfer/build; do not treat HTTP 200 as authentication or
 collector validation. The quiet retry automation remains active.
+
+
+## Browser recovery — 2026-10-19 07:21 UTC
+
+The DSM availability probe returned HTTP 200 in 0.773911 seconds. A new Edge
+window (id 2689770) was targetable and its state could be captured successfully.
+A separate tab was opened to https://mihaicismaru.synology.me:5001/ without
+changing existing user tabs. DSM loaded Acasa - Synology NAS and redirected to
+/#/signin, showing the Sign In form. The URL-control guard no longer blocked
+this window. Current blocker: a human must sign in to DSM in this tab. No
+authentication form input was automated.
+
+No source upload, extraction, project configuration change, build or collection
+was performed. NAS health/inventory observations remain dated 2026-10-16.
+Publication remains off; existing services/data were untouched. Full meeting
+and urbanism annex validation remain incomplete. Resume after human sign-in;
+inspect NAS state/destination, verify the source manifest, then transfer and
+apply the local-context compose. The quiet heartbeat remains active.

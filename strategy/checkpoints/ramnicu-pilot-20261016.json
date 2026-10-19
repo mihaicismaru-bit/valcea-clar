@@ -7,16 +7,15 @@
   "nas_status": "isolated_project_created_build_blocked_before_collection",
   "nas_access_checkpoint": {
     "date": "2026-10-16",
-    "status": "dsm_http_available_browser_url_guard_blocks_transfer",
+    "status": "browser_control_recovered_dsm_signin_required",
     "evidence": "deploy/nas/ramnicu/DSM-ACCESS-20261016.md",
     "default_browser": "Microsoft Edge; authenticated desktop verified on 2026-10-16 only; current authentication unknown",
     "latest_retry": {
-      "checked_at_utc": "2026-10-18T08:51:16Z",
-      "http_probe": "HTTP 200; total 0.363186s; unauthenticated availability probe only",
-      "browser_observation": "Edge launched successfully on explicit user continuation; returned New tab window id 68664. State capture stopped by Computer Use URL policy guard, repeated at 08:36 UTC.",
-      "exact_blocker": "Computer Use has been stopped for this turn because it could not determine the current browser URL on Windows with enough confidence to enforce policy.",
-      "archive_sha256_rechecked": "332d728ce5bd846d33f138521103e9ddf7a16d9d4a1a181a199dc2c5c405b21e",
-      "repository_head_before_checkpoint": "b8f83c4bad7c488db909b21454950030f2a9cf34",
+      "checked_at_utc": "2026-10-19T07:21:40Z",
+      "http_probe": "HTTP 200; total 0.773911s; availability only",
+      "browser_observation": "New Edge window id 2689770 was targetable. Opened a separate tab to the exact DSM URL. It loaded Acasa - Synology NAS and redirected to /#/signin; Sign In form observed.",
+      "exact_blocker": "DSM authentication required; no authentication dialog input automated",
+      "repository_head_before_checkpoint": "bc0bf58",
       "nas_actions_performed": false,
       "authentication_currently_verified": false,
       "publication_enabled": false
@@ -31,7 +30,7 @@
     "project_container_count": 0,
     "source_transfer": {
       "manifest": "deploy/nas/ramnicu/source-transfer-676fea8.json",
-      "status": "prepared_locally_not_uploaded_browser_url_guard",
+      "status": "prepared_locally_not_uploaded_dsm_signin_required",
       "local_context_compose": "deploy/nas/ramnicu/compose.dsm-local.yml",
       "checked_at_utc": "2026-10-16T10:28:36Z",
       "recovery_probe": "HTTP 200; TCP 0.198243s; TLS 5.158979s; first byte 19.418749s; total 19.419620s",
