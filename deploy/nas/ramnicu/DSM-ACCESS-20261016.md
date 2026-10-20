@@ -301,3 +301,21 @@ Publication remains off; existing services/data were untouched. Full meeting
 and urbanism annex validation remain incomplete. Resume after human sign-in;
 inspect NAS state/destination, verify the source manifest, then transfer and
 apply the local-context compose. The quiet heartbeat remains active.
+
+
+## HTTP recovery; Edge unavailable — 2026-10-20 11:07 UTC
+
+After repeated HTTP 000 timeouts on October 20, the exact DSM URL returned
+HTTP 200 in 7.340605 seconds. This verifies endpoint availability only.
+A targeted browser call for this URL in Microsoft Edge returned
+`Browser is not available: edge`; no current DSM screen or authentication
+was verified. Earlier automatic approval review rejected broad window
+inventory/captures because unrelated private application data could be
+exposed. No such inventory or capture was retried here.
+
+Repository HEAD before this checkpoint: d8912bc0608f41eb2b1cadf84d0f60be736132e5.
+No upload, extraction, compose application, build, collector run or other NAS
+mutation was performed. NAS health and inventory remain verified only as of
+October 16. Persistent writes and full meeting/urbanism annex validation
+remain unverified; the documented robots exclusion remains unresolved.
+Publication remains off and the quiet retry automation remains active.

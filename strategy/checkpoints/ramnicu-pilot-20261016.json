@@ -7,15 +7,15 @@
   "nas_status": "isolated_project_created_build_blocked_before_collection",
   "nas_access_checkpoint": {
     "date": "2026-10-16",
-    "status": "browser_control_recovered_dsm_signin_required",
+    "status": "http_recovered_edge_connector_unavailable",
     "evidence": "deploy/nas/ramnicu/DSM-ACCESS-20261016.md",
     "default_browser": "Microsoft Edge; authenticated desktop verified on 2026-10-16 only; current authentication unknown",
     "latest_retry": {
-      "checked_at_utc": "2026-10-19T07:21:40Z",
-      "http_probe": "HTTP 200; total 0.773911s; availability only",
-      "browser_observation": "New Edge window id 2689770 was targetable. Opened a separate tab to the exact DSM URL. It loaded Acasa - Synology NAS and redirected to /#/signin; Sign In form observed.",
-      "exact_blocker": "DSM authentication required; no authentication dialog input automated",
-      "repository_head_before_checkpoint": "bc0bf58",
+      "checked_at_utc": "2026-10-20T11:07:10Z",
+      "http_probe": "HTTP 200; total 7.340605s; availability only; recovered after repeated HTTP 000 timeouts",
+      "browser_observation": "Targeted cua.getTab for the exact DSM URL in Edge returned Browser is not available: edge. No unrelated application inventory or capture attempted.",
+      "exact_blocker": "Edge browser connector unavailable; current DSM authentication and NAS state unverified. Earlier broad window inventory was rejected by automatic approval review because it could expose private unrelated application metadata.",
+      "repository_head_before_checkpoint": "d8912bc0608f41eb2b1cadf84d0f60be736132e5",
       "nas_actions_performed": false,
       "authentication_currently_verified": false,
       "publication_enabled": false
