@@ -34,7 +34,15 @@
     "restore_verified": true,
     "restore_scope": "Current failed-run database, queue and receipt only; no newly collected documents",
     "offsite_backup": false,
-    "remote_ci": "Windows and Ubuntu matrix configured; not yet verified",
+    "remote_ci": {
+      "module_windows": "passed",
+      "module_ubuntu": "passed",
+      "module_tests_per_platform": 26,
+      "module_run_url": "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/39928920984",
+      "full_unit_suite": "65 passed",
+      "quality_run_url": "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/39928920894",
+      "integration": "Existing CIVORA feed readiness still fails closed with HTTP 404 after all 65 unit tests pass"
+    },
     "previous_evidence": "strategy/checkpoints/ramnicu-pilot-20261016.json"
   },
   "coverage": {
@@ -46,5 +54,6 @@
   "model_adapter": "not_connected_no_API_work_in_this_increment",
   "publication": "not_implemented_or_activated",
   "published": 0,
-  "next_exact_action": "Run deploy/windows/ramnicu/Install.cmd from a normal Windows session on MCLENOVO; verify actual Task Scheduler registration and first real collection through Status.cmd. Then resolve permitted annex access and validate a full council meeting and an urbanism case before model integration."
+  "next_exact_action": "Run deploy/windows/ramnicu/Install.cmd from a normal Windows session on MCLENOVO; verify actual Task Scheduler registration and first real collection through Status.cmd. Then resolve permitted annex access and validate a full council meeting and an urbanism case before model integration.",
+  "code_commit": "4441437fdc2280f195f96de942fd38c2bfc6c4df"
 }
