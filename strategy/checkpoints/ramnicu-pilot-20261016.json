@@ -2,9 +2,9 @@
   "module_id": "administratie/ramnicu-valcea",
   "owner_decision_date": "2026-10-16",
   "repository": "mihaicismaru-bit/valcea-clar",
-  "code_status": "collector_and_agent_contracts_implemented",
+  "code_status": "collector_and_windows_runtime_implemented",
   "execution_mode": "collect_only",
-  "nas_status": "isolated_project_created_build_blocked_before_collection",
+  "nas_status": "abandoned_by_owner_2026-10-23",
   "nas_access_checkpoint": {
     "date": "2026-10-16",
     "status": "http_recovered_edge_connector_unavailable",
@@ -22,9 +22,16 @@
     },
     "browser_connector": "Browser is not available: edge",
     "nas_health": "Storage Manager: Healthy; overview only",
-    "storage": {"volume_1_free": "467.3 GB", "volume_2_free": "2.1 TB"},
+    "storage": {
+      "volume_1_free": "467.3 GB",
+      "volume_2_free": "2.1 TB"
+    },
     "existing_containers": "12 green containers, Up for 1 day; 14 images, 19.1 GB",
-    "preexisting_project_errors": ["fatbelly-home-pilot", "gfp-v01", "civora-romania-runner"],
+    "preexisting_project_errors": [
+      "fatbelly-home-pilot",
+      "gfp-v01",
+      "civora-romania-runner"
+    ],
     "project": "valcea-clar-ramnicu-pilot",
     "project_path": "/volume1/docker/valcea-clar-ramnicu-pilot",
     "project_container_count": 0,
@@ -41,7 +48,11 @@
       "head_probe": "TCP 1.391534s; TLS 5.419031s; HTTP 000; 30.011777s timeout; 0 bytes",
       "get_probe": "TCP 0.020482s; TLS 5.052842s; HTTP 000; first byte absent; 30.010158s timeout; 0 bytes"
     },
-    "build_failures": ["git executable absent from PATH", "codeload remote archive: invalid tar header", "GitHub .tar.gz remote archive: invalid tar header"],
+    "build_failures": [
+      "git executable absent from PATH",
+      "codeload remote archive: invalid tar header",
+      "GitHub .tar.gz remote archive: invalid tar header"
+    ],
     "persistent_volume": "ramnicu-evidence declared; creation and writes unverified",
     "verified_collection": false,
     "council_meeting_with_annexes": "not_validated",
@@ -84,5 +95,6 @@
       "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/38871099124"
     ]
   },
-  "next_exact_action": "When DSM responds, transfer the verified 676fea8 source ZIP into the dedicated NAS project, apply compose.dsm-local.yml, build and verify persistent writes. Resolve the official /documente/ robots exclusion via a permitted official source or collection permission before claiming annex coverage. Validate the complete council meeting and urbanism case; keep publication off."
+  "next_exact_action": "Run deploy/windows/ramnicu/Install.cmd from a normal Windows session on MCLENOVO; verify actual Task Scheduler registration and first real collection through Status.cmd. Then resolve permitted annex access and validate a full council meeting and an urbanism case before model integration.",
+  "current_checkpoint": "strategy/checkpoints/ramnicu-windows-20261023.json"
 }

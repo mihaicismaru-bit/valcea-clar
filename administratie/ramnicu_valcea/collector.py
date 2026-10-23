@@ -9,6 +9,7 @@ import argparse
 from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 import hashlib
+import importlib.util
 from html.parser import HTMLParser
 import json
 import os
@@ -17,6 +18,7 @@ import re
 import shutil
 import sqlite3
 import subprocess
+import sys
 import time
 import unicodedata
 from urllib.error import HTTPError
@@ -215,11 +217,16 @@ class Store:
             title, text, links = page.result()
             status = "EXTRACTED" if len(text.strip()) >= 40 else "NEEDS_REVIEW"
         elif body.startswith(b"%PDF-"):
-            status = "NEEDS_PDF_EXTRACTOR"
+            command = None
             if shutil.which("pdftotext"):
+                command = ["pdftotext", "-layout", str(self.root / blob), "-"]
+            elif importlib.util.find_spec("pypdf") is not None:
+                command = [sys.executable, "-m", "administratie.ramnicu_valcea.pdf_text", str(self.root / blob)]
+            status = "NEEDS_PDF_EXTRACTOR"
+            if command:
                 try:
-                    result = subprocess.run(["pdftotext", "-layout", str(self.root / blob), "-"],
-                                            capture_output=True, timeout=45, check=True)
+                    result = subprocess.run(command, capture_output=True, timeout=45, check=True,
+                                            cwd=Path(__file__).resolve().parents[2])
                     text = result.stdout.decode("utf-8", errors="replace")
                     status = "EXTRACTED" if len(text.strip()) >= 40 else "NEEDS_OCR"
                 except (subprocess.SubprocessError, OSError):

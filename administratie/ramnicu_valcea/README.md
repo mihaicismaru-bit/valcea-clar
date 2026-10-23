@@ -43,3 +43,7 @@ Pilotul nu are cod de publicare și refuză configurația `publication.enabled=t
 Nu există încă un serviciu sau un program zilnic instalat pe NAS. După validare, comanda poate fi pornită de Task Scheduler DSM la 07:00 Europe/Bucharest, cu jurnal și alertare la codul `2`. În jurul ședințelor se poate reduce intervalul numai după validarea surselor. Nu configura simultan un scheduler NAS și unul GitHub pentru același volum/colector.
 
 Arhiva nu este backup. Înainte de funcționare permanentă sunt necesare backup separat și probă de restaurare a SQLite împreună cu `blobs/`, `text/` și `receipts/`.
+
+## Execuție curentă — Windows
+
+Decizia proprietarului din 23 octombrie 2026 înlocuiește NAS-ul cu MCLENOVO. Urmează [instalarea nativă pe Windows](../../deploy/windows/ramnicu/README.md). Starea verificată și blocajele sunt în [checkpointul Windows](../../strategy/checkpoints/ramnicu-windows-20261023.json). Pachetele NAS rămân doar istoric.

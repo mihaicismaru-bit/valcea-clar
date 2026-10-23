@@ -101,7 +101,8 @@ class CollectorTests(unittest.TestCase):
     def test_unreadable_pdf_waits_for_extraction(self):
         store = Store(self.root)
         try:
-            with patch("administratie.ramnicu_valcea.collector.shutil.which", return_value=None):
+            with patch("administratie.ramnicu_valcea.collector.shutil.which", return_value=None), \
+                 patch("administratie.ramnicu_valcea.collector.importlib.util.find_spec", return_value=None):
                 result = store.ingest(DOCUMENT, DOCUMENT, b"%PDF-synthetic-test", "application/pdf", "urbanism", "document")
             self.assertEqual(result["extraction_status"], "NEEDS_PDF_EXTRACTOR")
             self.assertEqual(store.db.execute("SELECT state FROM jobs").fetchone()[0], "WAITING_EXTRACTION")

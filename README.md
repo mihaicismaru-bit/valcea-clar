@@ -32,6 +32,10 @@ The former standalone `newsroom/`, source registry, candidate engine and auto-pu
 
 New institutional agents and their orchestrator are owned by this repository, starting with [Râmnicu Vâlcea](administratie/ramnicu_valcea/README.md). This explicit owner decision supersedes the former presentation-only restriction for the new modules. The first increment is collection and evidence queues; model execution and publication are not activated. The existing CIVORA-to-Pages production route continues until a controlled ownership migration prevents competing writers.
 
+## Windows runtime — owner decision, 23 October 2026
+
+MCLENOVO replaces the NAS as the institutional collection host. The native [Windows package](deploy/windows/ramnicu/README.md) provides daily Task Scheduler installation, versioned collection, verified local evidence backups and restore verification. Model analyses, social collection and the publishing migration remain pending. Current deployment evidence and blockers: [Windows checkpoint](strategy/checkpoints/ramnicu-windows-20261023.json).
+
 ## Editorial continuity
 
 Each canonical public cycle:

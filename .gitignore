@@ -7,3 +7,6 @@ runtime/
 *.sqlite
 *.sqlite-wal
 *.sqlite-shm
+
+.venv/
+*.pyc
