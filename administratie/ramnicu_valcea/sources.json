@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "module_id": "administratie/ramnicu-valcea",
+  "repository": "mihaicismaru-bit/valcea-clar",
+  "mode": "collect_only",
+  "allowed_hosts": ["primariavl.ro", "www.primariavl.ro", "dm.primariavl.ro"],
+  "user_agent": "ValceaClarResearch/0.1 (+https://valceaclar.ro)",
+  "interval_hours": 24,
+  "max_requests": 60,
+  "max_depth": 5,
+  "max_bytes": 20971520,
+  "timeout_seconds": 20,
+  "delay_seconds": 2,
+  "seeds": [
+    {"url": "https://primariavl.ro/", "lane": "discovery", "role": "index", "validation": "indexed_official_source"},
+    {"url": "https://primariavl.ro/hotarari-adoptate", "lane": "consiliu_local", "role": "index", "validation": "indexed_official_source"},
+    {"url": "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl", "lane": "consiliu_local", "role": "index", "validation": "indexed_official_source"},
+    {"url": "https://www.primariavl.ro/index.php?option=com_content&view=article&id=495&Itemid=572", "lane": "urbanism", "role": "index", "validation": "derived_from_indexed_article_requires_live_validation"}
+  ],
+  "coverage_requirements": [
+    {"id": "hcl_and_annexes", "status": "requires_live_validation"},
+    {"id": "meetings_minutes_votes_recordings", "status": "requires_inventory"},
+    {"id": "urbanism_consultations_and_plans", "status": "requires_live_validation"},
+    {"id": "construction_demolition_permits_and_certificates", "status": "requires_inventory"},
+    {"id": "current_council_roster", "status": "requires_identity_verification"},
+    {"id": "institution_mayor_all_councillors_social", "status": "requires_identity_verification_and_access_test"}
+  ],
+  "social_accounts": [],
+  "publication": {"enabled": false, "owner": "existing_site_publication_pipeline", "migration": "required_before_module_publication"}
+}

@@ -1,0 +1,59 @@
+{
+  "module_id": "administratie/ramnicu-valcea",
+  "repository": "mihaicismaru-bit/valcea-clar",
+  "decision_date": "2026-10-23",
+  "execution_host": "MCLENOVO",
+  "runtime": "native Windows / Python 3.12.10",
+  "source_base_commit": "85e34871f8b132357f1c887213a73fbd82ceb6e5",
+  "nas_status": "abandoned_by_owner_existing_data_untouched",
+  "execution_mode": "collect_only",
+  "installation": {
+    "code": "installed_in_local_project_workspace/valcea-clar-windows",
+    "python_environment": ".venv (system-site-packages; no global changes)",
+    "pypdf_version": "6.14.2",
+    "scheduler_task": "ValceaClar-Ramnicu-Daily",
+    "daily_at_local": "07:15",
+    "scheduler_status": "INSTALL_FAILED_NOT_REGISTERED",
+    "scheduler_error": "ERROR: The network address is invalid.",
+    "powershell_probe": "Windows PowerShell file execution blocked by policy; final installer uses Python and schtasks without policy changes",
+    "required_session": "Signed-in Windows user; locked desktop supported",
+    "timezone_observed": "GTB Standard Time"
+  },
+  "validation": {
+    "module_tests": "26 passed in local .venv",
+    "live_run_id": "bc5f62b69190483ba92d2b340d294e4e",
+    "live_started_at": "2026-10-23T08:52:57+00:00",
+    "live_finished_at": "2026-10-23T08:52:59+00:00",
+    "collection_status": "DEGRADED",
+    "attempts": 4,
+    "new_document_versions": 0,
+    "reason": "Session DNS getaddrinfo 11001; robots cannot be reverified; fail closed",
+    "backup_sha256": "b89bce102c3b1ae7a492e804dd4e44bbb2fc50c750fd7c6a75d7ba68c115de48",
+    "backup_manifest_files": 4,
+    "backup_verified": true,
+    "restore_verified": true,
+    "restore_scope": "Current failed-run database, queue and receipt only; no newly collected documents",
+    "offsite_backup": false,
+    "remote_ci": {
+      "module_windows": "passed",
+      "module_ubuntu": "passed",
+      "module_tests_per_platform": 26,
+      "module_run_url": "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/39928920984",
+      "full_unit_suite": "65 passed",
+      "quality_run_url": "https://github.com/mihaicismaru-bit/valcea-clar/actions/runs/39928920894",
+      "integration": "Existing CIVORA feed readiness still fails closed with HTTP 404 after all 65 unit tests pass"
+    },
+    "previous_evidence": "strategy/checkpoints/ramnicu-pilot-20261016.json"
+  },
+  "coverage": {
+    "complete_meeting": false,
+    "urbanism_case_with_annexes": false,
+    "previous_official_robots_exclusion": "/documente/ observed 2026-10-16; no bypass",
+    "social_accounts": "not_verified_or_connected"
+  },
+  "model_adapter": "not_connected_no_API_work_in_this_increment",
+  "publication": "not_implemented_or_activated",
+  "published": 0,
+  "next_exact_action": "Run deploy/windows/ramnicu/Install.cmd from a normal Windows session on MCLENOVO; verify actual Task Scheduler registration and first real collection through Status.cmd. Then resolve permitted annex access and validate a full council meeting and an urbanism case before model integration.",
+  "code_commit": "4441437fdc2280f195f96de942fd38c2bfc6c4df"
+}
