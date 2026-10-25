@@ -319,3 +319,18 @@ mutation was performed. NAS health and inventory remain verified only as of
 October 16. Persistent writes and full meeting/urbanism annex validation
 remain unverified; the documented robots exclusion remains unresolved.
 Publication remains off and the quiet retry automation remains active.
+
+
+## HTTP recovery; Edge still unavailable — 2026-10-25 08:09 UTC
+
+The exact DSM URL returned HTTP 200 in 12.294425 seconds after repeated
+HTTP 000 timeouts observed from October 22 through October 25. A targeted
+cua.getTab call for this URL in Microsoft Edge returned
+`Browser is not available: edge`. Endpoint availability has recovered;
+current authentication, NAS health and inventory remain unverified.
+
+Repository HEAD before this checkpoint: 85e34871f8b132357f1c887213a73fbd82ceb6e5.
+No upload, extraction, compose application, build, collector run or NAS
+mutation was performed. Persistent writes and full meeting/urbanism annex
+validation remain unverified. The /documente/ robots exclusion remains
+unresolved; publication stays off. The quiet retry automation remains active.
