@@ -1,0 +1,19 @@
+{
+  "source_commit": "fc61b24bc36a1f5a3c60a87284a5f6cb4288cf61",
+  "archive": "ramnicu-nas-source-fc61b24.zip",
+  "archive_sha256": "140dfea20a930a8d1f36826fae5de5188dae537886c70406479684990192eda0",
+  "reproduce": "git archive --format=zip --output=ramnicu-nas-source-fc61b24.zip fc61b24bc36a1f5a3c60a87284a5f6cb4288cf61 administratie deploy/nas/ramnicu/Dockerfile",
+  "destination": "/volume1/docker/valcea-clar-ramnicu-pilot",
+  "files": [
+    "administratie/__init__.py",
+    "administratie/ramnicu_valcea/README.md",
+    "administratie/ramnicu_valcea/__init__.py",
+    "administratie/ramnicu_valcea/agents.json",
+    "administratie/ramnicu_valcea/collector.py",
+    "administratie/ramnicu_valcea/sources.json",
+    "deploy/nas/ramnicu/Dockerfile"
+  ],
+  "transfer_status": "not_transferred_dsm_https_no_http_response",
+  "local_context_compose": "deploy/nas/ramnicu/compose.dsm-local.yml",
+  "publication_enabled": false
+}
