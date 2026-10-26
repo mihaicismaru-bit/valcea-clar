@@ -7,20 +7,20 @@
   "nas_status": "abandoned_by_owner_2026-10-23",
   "nas_access_checkpoint": {
     "date": "2026-10-16",
-    "status": "http_recovered_edge_connector_unavailable",
+    "status": "edge_recovered_dsm_signin_required",
     "evidence": "deploy/nas/ramnicu/DSM-ACCESS-20261016.md",
     "default_browser": "Microsoft Edge; authenticated desktop verified on 2026-10-16 only; current authentication unknown",
     "latest_retry": {
-      "checked_at_utc": "2026-10-25T08:09:34Z",
-      "http_probe": "HTTP 200; total 12.294425s; availability only; recovered after repeated HTTP 000 timeouts from 2026-10-22 through 2026-10-25",
-      "browser_observation": "Targeted cua.getTab for the exact DSM URL in Edge returned Browser is not available: edge. No unrelated application inventory or capture attempted.",
-      "exact_blocker": "Edge browser connector unavailable; current DSM authentication and NAS state unverified. Earlier broad window inventory was rejected by automatic approval review because it could expose private unrelated application metadata.",
-      "repository_head_before_checkpoint": "85e34871f8b132357f1c887213a73fbd82ceb6e5",
+      "checked_at_utc": "2026-10-26T08:25:39Z",
+      "http_probe": "HTTP 200; total 0.184068s; endpoint availability only",
+      "browser_observation": "Targeted Edge tab opened exact DSM URL; Acasa - Synology NAS at /#/signin with Sign in to DSM form. No credentials entered.",
+      "exact_blocker": "DSM sign-in required. Current repository records NAS abandoned by owner on October 23 and Windows MCLENOVO runtime as current path; no NAS deployment resumed.",
+      "repository_head_before_checkpoint": "b31ec39c9e9ee2244f686572c98d8026157eb3f0",
       "nas_actions_performed": false,
       "authentication_currently_verified": false,
       "publication_enabled": false
     },
-    "browser_connector": "Browser is not available: edge",
+    "browser_connector": "Edge extension connected; DSM sign-in page verified",
     "nas_health": "Storage Manager: Healthy; overview only",
     "storage": {
       "volume_1_free": "467.3 GB",

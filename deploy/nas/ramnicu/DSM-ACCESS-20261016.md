@@ -334,3 +334,17 @@ No upload, extraction, compose application, build, collector run or NAS
 mutation was performed. Persistent writes and full meeting/urbanism annex
 validation remain unverified. The /documente/ robots exclusion remains
 unresolved; publication stays off. The quiet retry automation remains active.
+
+
+## Edge connector recovered — 2026-10-26 08:25 UTC
+
+HTTP 200 in 0.184068 seconds. Targeted Edge control is available again.
+A dedicated tab reached Acasa - Synology NAS at /#/signin and displayed
+the DSM Sign In form. No credentials entered; authentication and current
+NAS health/inventory remain unverified. No NAS mutation occurred.
+
+The current branch records NAS abandoned by owner on October 23 and
+MCLENOVO native Windows execution as the current path. No transfer/build
+was resumed. Publication stays off and full annex validation is incomplete.
+The earlier request to confirm removal of the stale NAS heartbeat has
+not received a human response; automation remains active.
