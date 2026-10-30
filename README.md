@@ -2,9 +2,13 @@
 
 VÂLCEA CLAR is the standalone static public site served by GitHub Pages. It has no ChatGPT Sites dependency and no CMS bridge.
 
-## Canonical architecture
+## Current publishing status
 
-There is one editorial engine and one public projection:
+As of 30 October 2026, the CIVORA Vâlcea Clar tree is no longer present in its main branch. The public repository's `content/articles.json` is the editorial source for the existing Pages workflows. CIVORA synchronization scripts are retained for reference and are not run by production; do not reactivate them without reconciling ownership and preventing overwrites. Existing article, media and Local Life inputs remain in this repository.
+
+## Historical architecture
+
+The former editorial engine and public projection were:
 
 `sources → mihaicismaru-bit/civora → CIVORA canonical live feed → mihaicismaru-bit/valcea-clar → GitHub Pages → valceaclar.ro`
 
@@ -28,9 +32,9 @@ There is one editorial engine and one public projection:
 
 The former standalone `newsroom/`, source registry, candidate engine and auto-publisher have been removed. Do not recreate editorial execution in this repository; editorial changes belong in CIVORA.
 
-## Editorial continuity
+## Historical editorial continuity
 
-Each canonical public cycle:
+Before the source was moved, each canonical public cycle:
 
 1. reads the current CIVORA feed;
 2. refuses malformed, empty or domain-mismatched input;
@@ -58,4 +62,4 @@ python3 -m http.server 8000 -d _site
 
 ## Production
 
-GitHub Pages is the production host for `valceaclar.ro`. The canonical sync workflow owns routine deploys. The manual Pages workflow remains only as a recovery path.
+GitHub Pages is the production host for `valceaclar.ro`. The existing scheduled and manual workflows build the repository's current editorial projection, verify the site and deploy with public readback. Editorial updates use reviewed changes to `content/articles.json`; do not run the retired CIVORA sync against the local source.
