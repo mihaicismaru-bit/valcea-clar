@@ -1,9 +1,37 @@
 {
-  "updated_local": "2026-10-10T18:46:07.114023Z",
-  "canonical_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/live-feed.json",
+  "updated_local": "2026-10-30T11:46:00+02:00",
+  "canonical_source": "mihaicismaru-bit/valcea-clar/content/articles.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
+    {
+      "id": "ramnicu-piata-volanta-nord-program-noiembrie-2026",
+      "section": "UTIL",
+      "priority": 2000001,
+      "headline": "Piața volantă din Nord: programul anunțat de Primărie pentru noiembrie",
+      "dek": "Primăria anunță că piața de lângă Rotondă va funcționa lunea, miercurea și sâmbăta, între 8:00 și 14:00, din luna noiembrie.",
+      "paragraphs": [
+        "Locuitorii cartierului Nord din Râmnicu Vâlcea vor putea cumpăra produse agroalimentare și flori din piața volantă amenajată lângă Rotondă, pe durata lucrărilor la Piața Nord. Din noiembrie, programul anunțat de Primărie este luni, miercuri și sâmbătă, între orele 8:00 și 14:00.",
+        "În informarea publicată pe 20 octombrie, Primăria arată că piața volantă urma să se deschidă pe 24 octombrie și să funcționeze până la finalizarea lucrărilor la incinta Pieței Nord. În octombrie, intervalul anunțat era 7:00–14:00.",
+        "Potrivit administrației locale, Piețe Prest organizează piața temporară și asigură mobilierul necesar comercianților. Lucrările de la Piața Nord urmăresc și conformarea clădirii la cerințele privind securitatea la incendiu.",
+        "Programul de mai sus este cel comunicat de Primărie; informarea nu precizează o dată pentru încheierea lucrărilor. Vom actualiza articolul dacă autoritățile anunță modificări."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Râmnicu Vâlcea — informarea din 20 octombrie 2026",
+          "url": "https://primariavl.ro/acasa/actualitate/11230-pana-la-reabilitarea-pietei-nord-locuitorii-cartierului-vor-putea-cumpara-fructe-legume-si-flori-dintr-o-piata-volanta-deschisa-trei-zile-pe-saptamana",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-10-30T11:46:00+02:00",
+      "image": null,
+      "canonical_source": "VÂLCEA CLAR",
+      "canonical_path": "/stiri/ramnicu-piata-volanta-nord-program-noiembrie-2026/",
+      "editorial_product": "service_news",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active"
+    },
     {
       "id": "valcea-intrerupere-curent-2026-10-24-daesti",
       "section": "UTIL",
@@ -28,9 +56,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-24-daesti/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-11-horezu",
@@ -56,9 +84,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-11-horezu/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-23-stroesti",
@@ -84,9 +112,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-23-stroesti/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-22-cernisoara",
@@ -112,9 +140,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-22-cernisoara/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-21-cernisoara",
@@ -140,9 +168,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-21-cernisoara/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-16-dragasani",
@@ -168,9 +196,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-16-dragasani/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-15-ladesti",
@@ -196,9 +224,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-15-ladesti/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-14-ramnicu-valcea",
@@ -224,9 +252,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-14-ramnicu-valcea/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "valcea-intrerupere-curent-2026-10-13-glavile",
@@ -252,9 +280,9 @@
       "canonical_source": "CIVORA",
       "canonical_path": "/stiri/valcea-intrerupere-curent-2026-10-13-glavile/",
       "editorial_product": "service_news",
-      "archive_only": false,
-      "active_now": true,
-      "archive_status": "active"
+      "archive_only": true,
+      "active_now": false,
+      "archive_status": "archived"
     },
     {
       "id": "a1-cisnadie-boita-inchidere-dn7-20261005",
@@ -3557,6 +3585,9 @@
     }
   ],
   "current_story_ids": [
+    "ramnicu-piata-volanta-nord-program-noiembrie-2026"
+  ],
+  "archive_story_ids": [
     "valcea-intrerupere-curent-2026-10-24-daesti",
     "valcea-intrerupere-curent-2026-10-11-horezu",
     "valcea-intrerupere-curent-2026-10-23-stroesti",
@@ -3565,9 +3596,7 @@
     "valcea-intrerupere-curent-2026-10-16-dragasani",
     "valcea-intrerupere-curent-2026-10-15-ladesti",
     "valcea-intrerupere-curent-2026-10-14-ramnicu-valcea",
-    "valcea-intrerupere-curent-2026-10-13-glavile"
-  ],
-  "archive_story_ids": [
+    "valcea-intrerupere-curent-2026-10-13-glavile",
     "a1-cisnadie-boita-inchidere-dn7-20261005",
     "caineni-sef-serviciu-alimentare-apa-20261005",
     "weekend-clar-20261003",
@@ -3660,5 +3689,5 @@
     "luminos-fest-zavoi-20260815",
     "scm-valcea-slatina-20260815"
   ],
-  "currentness_source": "https://raw.githubusercontent.com/mihaicismaru-bit/civora/main/valcea-clar/site/runtime/stiri/manifest.json"
+  "currentness_source": "mihaicismaru-bit/valcea-clar/content/articles.json"
 }

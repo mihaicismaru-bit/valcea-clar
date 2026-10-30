@@ -14,8 +14,6 @@ jobs:
           python-version: '3.12'
       - name: Unit tests
         run: python3 -m unittest discover -s tests -v
-      - name: Reconcile current canonical CIVORA feed
-        run: python3 scripts/sync_civora.py
       - name: Build static site
         run: python3 scripts/build.py
       - name: Validate historical projection contract
@@ -56,10 +54,12 @@ jobs:
           python3 - <<'PY'
           import json
           from pathlib import Path
-          state=json.loads(Path('sync/civora_state.json').read_text(encoding='utf-8'))
+          doc=json.loads(Path('content/articles.json').read_text(encoding='utf-8'))
           home=Path('_site/index.html').read_text(encoding='utf-8')
-          expected=f"/stiri/{state['lead_story_id']}/"
-          if expected not in home:
-              raise SystemExit(f'canonical lead missing from projection: {expected}')
-          print('CANONICAL PROJECTION PASS', state['lead_story_id'], state['story_count'])
+          ids=doc.get('current_story_ids', [])
+          if ids and f'/stiri/{ids[0]}/' not in home:
+              raise SystemExit(f'current lead missing from projection: {ids[0]}')
+          if not ids and 'data-current-story-count="0"' not in home:
+              raise SystemExit('empty current projection not shown')
+          print('EDITORIAL PROJECTION PASS', len(ids), 'current stories')
           PY
