@@ -46,6 +46,10 @@ class EvidencePublicationTest(unittest.TestCase):
         self.assertEqual([a['id'] for a in doc['articles']], ['test-article', 'other'])
         self.assertEqual(doc['current_story_ids'], ['test-article', 'other'])
         self.assertEqual(prepare(self.root, self.out, self.review, self.root / 'next.json'), 'already-present')
+        self.item['id'] = 'another-article'
+        self.write_review()
+        with self.assertRaises(ValueError):
+            prepare(self.root, self.out, self.review, self.root / 'next.json')
 
     def test_missing_evidence_or_unreviewed_article_fails(self):
         self.item['paragraphs'][0]['source_excerpt'] = 'afirmatie care nu exista in document'
