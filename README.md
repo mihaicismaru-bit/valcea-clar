@@ -19,4 +19,6 @@ python3 scripts/enrich_metadata.py
 python3 scripts/verify.py
 ```
 
+Pentru un PDF local, `python scripts/extract_pdf.py document.pdf --output text.json` extrage textul pe pagini; paginile scanate folosesc OCR românesc. Sunt necesare `pypdf`, `pdftoppm` și fie Tesseract cu limba română, fie Windows cu OCR românesc activ. Textul OCR poate conține erori și trebuie comparat cu paginile originale. Comanda citește documentul fără a-l publica.
+
 Publicarea este completă numai după verificarea directă a paginii articolului, a primei pagini, a arhivei, a Local Life și a media. La nevoie, revenirea se face prin revert și o versiune Pages precedentă verificată, ținând cont de modificările apărute ulterior.
