@@ -99,6 +99,8 @@ def prepare(snapshot: Path, projection: Path, reviewed: Path, output: Path):
         if existing.get('evidence_sha256') == row['sha']:
             return 'already-present'
         raise ValueError('article id already exists with a different source version')
+    if any(x.get('evidence_sha256') == row['sha'] for x in articles):
+        raise ValueError('source version is already used by another article')
     story = {'id': story_id, 'section': item['section'], 'priority': item.get('priority', 2000001),
              'headline': item['headline'], 'dek': item['dek'],
              'paragraphs': [p['text'] for p in paragraphs],
