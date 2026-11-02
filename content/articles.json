@@ -1,9 +1,37 @@
 {
-  "updated_local": "2026-10-30T11:46:00+02:00",
+  "updated_local": "2026-11-02T09:04:16+02:00",
   "canonical_source": "mihaicismaru-bit/valcea-clar/content/articles.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
+    {
+      "id": "ramnicu-consiliu-proiecte-jocuri-noroc-28-octombrie-2026",
+      "section": "ADMINISTRAȚIE",
+      "priority": 2000001,
+      "headline": "Râmnicu Vâlcea: 15 proiecte pentru jocuri de noroc pe agenda ședinței din 28 octombrie",
+      "dek": "Lista publicată de Primărie pentru ședința din 28 octombrie include 6 proiecte pentru pariuri și 9 pentru slot machine.",
+      "paragraphs": [
+        "Consiliul Local Râmnicu Vâlcea a avut pe ordinea de zi a ședinței convocate pentru 28 octombrie 15 proiecte privind autorizarea unor puncte de jocuri de noroc, potrivit listei publicate de Primărie. Dintre acestea, 6 se refereau la pariuri în cotă fixă și 9 la slot machine.",
+        "Lista cuprinde cereri pentru puncte de lucru din mai multe zone ale municipiului, inclusiv pe bulevardul Dem Rădulescu și pe străzile Marin Preda și Lucian Blaga.",
+        "Documentul Primăriei este o convocare cu proiecte de hotărâre. El nu consemnează rezultatul voturilor și nu arată care dintre autorizații au fost acordate; aceste informații trebuie urmărite în hotărârile și procesul-verbal al ședinței."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Râmnicu Vâlcea",
+          "url": "https://primariavl.ro/consiliul-local/%C8%99edin%C8%9Be-consiliul-local/convocari-si-proiecte-hcl/11234-consiliul-local-este-convocat-in-sedinta-ordinara-in-data-de-28-octombrie-2026-ora-10-00-in-sala-de-sedinte-a-primariei-municipiului-ramnicu-valcea",
+          "tier": "T1"
+        }
+      ],
+      "published": "2026-11-02T09:04:16+02:00",
+      "image": null,
+      "canonical_source": "VÂLCEA CLAR",
+      "canonical_path": "/stiri/ramnicu-consiliu-proiecte-jocuri-noroc-28-octombrie-2026/",
+      "editorial_product": "service_news",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active",
+      "evidence_sha256": "c577088b863262e9325024287b3791e9038ddcc1ac2d22770901395564668810"
+    },
     {
       "id": "ramnicu-piata-volanta-nord-program-noiembrie-2026",
       "section": "UTIL",
@@ -3585,6 +3613,7 @@
     }
   ],
   "current_story_ids": [
+    "ramnicu-consiliu-proiecte-jocuri-noroc-28-octombrie-2026",
     "ramnicu-piata-volanta-nord-program-noiembrie-2026"
   ],
   "archive_story_ids": [
