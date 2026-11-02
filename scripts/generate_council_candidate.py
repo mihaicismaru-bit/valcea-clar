@@ -33,7 +33,7 @@ def candidate(snapshot, url, sha, meeting):
         raise ValueError('unsupported gambling proposal mix')
     evidence='Proiect de hotărâre: Acordare autorizație de funcționare jocuri de noroc'
     short_day=f'{meeting.day} {MONTHS[meeting.month-1]}'
-    return {'id':f'ramnicu-consiliu-proiecte-jocuri-noroc-{meeting.isoformat()}',
+    return {'id':f'ramnicu-consiliu-proiecte-jocuri-noroc-{meeting.day}-{MONTHS[meeting.month-1]}-{meeting.year}',
             'source_url':url,'source_sha256':sha,'editorially_verified':False,
             'section':'ADMINISTRAȚIE','headline':f'Râmnicu Vâlcea: {len(gambling)} proiecte pentru jocuri de noroc pe agenda ședinței din {short_day}',
             'dek':f'Lista publicată de Primărie pentru ședința din {short_day} include {len(betting)} proiecte pentru pariuri și {len(slots)} pentru slot machine.',
