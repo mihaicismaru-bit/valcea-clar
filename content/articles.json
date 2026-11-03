@@ -1,9 +1,77 @@
 {
-  "updated_local": "2026-11-02T09:04:16+02:00",
+  "updated_local": "2026-11-03T15:55:27+02:00",
   "canonical_source": "mihaicismaru-bit/valcea-clar/content/articles.json",
   "canonical_schema_version": "2.3",
   "presentation_order": "freshness_first_then_source_priority",
   "articles": [
+    {
+      "id": "ramnicu-valcea-autorizatii-construire-noiembrie-2026",
+      "section": "ADMINISTRAȚIE",
+      "priority": 2000002,
+      "headline": "Râmnicu Vâlcea: 11 autorizații de construire la început de noiembrie",
+      "dek": "Locuințe pe Busuiocului și Căminului, branșamente și o casetă luminoasă. Lista completă a autorizațiilor din noiembrie publicate în registrul Primăriei la 3 noiembrie.",
+      "paragraphs": [
+        "Un ansamblu de opt locuințe cuplate pe strada Căminului și un imobil de locuințe colective, împreună cu locuințe cuplate, pe Intrarea Busuiocului apar între lucrările autorizate la începutul lunii noiembrie în Râmnicu Vâlcea.",
+        "La verificarea din 3 noiembrie 2026, ora 15:53, registrul public al Primăriei cuprinde 11 autorizații de construire emise în luna în curs: numerele 814–824, toate cu data de 3 noiembrie. Lista de mai jos acoperă înregistrările publicate pentru intervalul 1–3 noiembrie; nu reprezintă bilanțul întregii luni.",
+        "Sunt patru autorizații pentru construcții de locuințe, șase pentru lucrări la rețelele electrice și de gaze și una pentru amplasarea unei casete luminoase. O autorizație poate acoperi mai multe locuințe, iar același amplasament poate avea autorizații distincte.",
+        "AC 824 din 03.11.2026 — Intrarea Busuiocului nr. 4A. Construire imobil de locuințe colective D+P+2E+M (C2) și locuințe cuplate D+P+1E+M (C3). Registrul indică POT 33,2% și CUT 1,16. Durata înscrisă: 12 luni.",
+        "AC 823 din 03.11.2026 — Strada Morilor nr. 32. Branșament electric trifazat subteran pentru imobilul CONTINENTE SRL. Durata înscrisă: 12 luni.",
+        "AC 822 din 03.11.2026 — Strada Fețeni nr. 20D. Branșament de gaze naturale pentru imobil. Durata înscrisă: 12 luni.",
+        "AC 821 din 03.11.2026 — Strada Fețeni nr. 20D. Extindere de conductă de gaze naturale. Este o autorizație separată de cea pentru branșament, chiar dacă amplasamentul este același. Durata înscrisă: 12 luni.",
+        "AC 820 din 03.11.2026 — Strada Zăvoieni nr. 14A. Construire locuință parter, foișor și împrejmuire. Registrul indică POT 22,7% și CUT 0,22. Durata înscrisă: 36 de luni.",
+        "AC 819 din 03.11.2026 — Strada Mihai Eminescu nr. 29. Branșament electric trifazat subteran pentru imobil. Durata înscrisă: 12 luni.",
+        "AC 818 din 03.11.2026 — Calea lui Traian nr. 259B1. Branșament electric trifazat subteran pentru obiectivul „Clădire multifuncțională” — VICO STAR SRL. Durata înscrisă: 12 luni.",
+        "AC 817 din 03.11.2026 — Strada Canalului nr. 13. Alimentare cu energie electrică a obiectivului „Hotel — RALUNIC SRL”. În această înregistrare este autorizată lucrarea de alimentare electrică. Durata înscrisă: 12 luni.",
+        "AC 816 din 03.11.2026 — Strada Nicolae Enache nr. 13. Construire locuință individuală P+1E și împrejmuire de teren. Fișa menționează o anexă la autorizație. Registrul indică POT 20% și CUT 0,36. Durata înscrisă: 24 de luni.",
+        "AC 815 din 03.11.2026 — Strada Căminului nr. 25. Construire ansamblu de opt locuințe cuplate, cu regimul de înălțime înscris „P+1+2Eretras”, împrejmuire și totem, acces și sistematizare. Fișa face trimitere la PUZ aprobat prin HCL nr. 101 din 31.03.2022 și la prelungirea valabilității acestuia prin HCL nr. 82 din 25.03.2025. Registrul indică POT 33,3% și CUT 0,78. Durata înscrisă: 24 de luni.",
+        "AC 814 din 03.11.2026 — Strada Prof. Dr. Corneliu Tamaș nr. 4A, parter. Amplasare casetă luminoasă. Durata înscrisă: 36 de luni.",
+        "Duratele sunt preluate din rubrica oficială „Valabilitate (durata execuției)”. Registrul consultat nu precizează data efectivă de începere sau stadiul lucrărilor. Emiterea autorizației, singură, nu confirmă că șantierul a început.",
+        "În notațiile pentru înălțime, D înseamnă demisol, P — parter, E — etaj, iar M — mansardă. POT este procentul de ocupare a terenului, iar CUT este coeficientul de utilizare a terenului. Valorile reproduse sunt cele afișate în registru.",
+        "Verificarea a cuprins registrul oficial pentru anul 2026, din care au fost selectate datele de emitere din noiembrie. Am păstrat separat fiecare număr de autorizație și am omis numele persoanelor fizice din descrieri. Pentru AC 824, 820, 816 și 815, registrul oferă planuri de situație și, după caz, planșe cu fațade; documentele pot fi accesate din sursele de mai jos."
+      ],
+      "sources": [
+        {
+          "name": "Primăria Râmnicu Vâlcea — registrul autorizațiilor de construire, anul 2026 (verificat la 3 noiembrie, ora 15:53)",
+          "url": "https://dm.primariavl.ro/dm/urbanism.nsf/autorizatieconstructieportal?OpenView&Count=50&restricttocategory=2026",
+          "tier": "T1"
+        },
+        {
+          "name": "Primăria Râmnicu Vâlcea — pagina oficială Autorizații de Construcție",
+          "url": "https://primariavl.ro/informatii-publice/urbanism/autorizatii-de-constructie",
+          "tier": "T1"
+        },
+        {
+          "name": "AC 824 — plan de situație atașat în registru: Intrarea Busuiocului nr. 4A",
+          "url": "https://dm.primariavl.ro/dm/urbanism.nsf/0F076A1399AA581CC2258EA30049E17D/$FILE/A02%20-%20Plan%20de%20situatie.pdf",
+          "tier": "T1"
+        },
+        {
+          "name": "AC 820 — plan de situație atașat în registru: strada Zăvoieni nr. 14A",
+          "url": "https://dm.primariavl.ro/dm/urbanism.nsf/5922F54B187FE16DC2258E950039CF39/$FILE/PLAN%20DE%20SITUATIE.pdf",
+          "tier": "T1"
+        },
+        {
+          "name": "AC 816 — plan de situație atașat în registru: strada Nicolae Enache nr. 13",
+          "url": "https://dm.primariavl.ro/dm/urbanism.nsf/FBE1764380AB283DC2258E950046C69D/$FILE/A.02%20Plan%20de%20situatie%20A4.pdf",
+          "tier": "T1"
+        },
+        {
+          "name": "AC 815 — plan de situație atașat în registru: strada Căminului nr. 25",
+          "url": "https://dm.primariavl.ro/dm/urbanism.nsf/EDD2EE1F89CE9885C2258E9900330B1B/$FILE/PLAN%20SITUATIE%20PROPUS.pdf",
+          "tier": "T1"
+        }
+      ],
+      "image": null,
+      "canonical_source": "VÂLCEA CLAR",
+      "canonical_path": "/stiri/ramnicu-valcea-autorizatii-construire-noiembrie-2026/",
+      "editorial_product": "VÂLCEA AZI",
+      "archive_only": false,
+      "active_now": true,
+      "archive_status": "active",
+      "evidence_sha256": "3d6c671a06294d89408e45bd7291689f1d4aab35ab23a5c4d53ce948cfb24068",
+      "evidence_verified_at": "2026-11-03T15:53:26+02:00",
+      "published": "2026-11-03T15:55:27+02:00"
+    },
     {
       "id": "ramnicu-consiliu-proiecte-jocuri-noroc-28-octombrie-2026",
       "section": "ADMINISTRAȚIE",
@@ -3613,6 +3681,7 @@
     }
   ],
   "current_story_ids": [
+    "ramnicu-valcea-autorizatii-construire-noiembrie-2026",
     "ramnicu-consiliu-proiecte-jocuri-noroc-28-octombrie-2026",
     "ramnicu-piata-volanta-nord-program-noiembrie-2026"
   ],
