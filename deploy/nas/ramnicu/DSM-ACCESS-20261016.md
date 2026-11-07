@@ -353,3 +353,8 @@ not received a human response; automation remains active.
 
 The preceding heartbeat returned HTTP 200. Two checks in this heartbeat failed with HTTP 000. The first connection timed out after 10.005 seconds. The confirmation attempt timed out after 25.013 seconds with zero bytes received. DSM availability is currently unverified. Edge verification still awaits the previously requested reconnection and confirmation following the automatic approval rejection. NAS installation and full document validation are incomplete. Publication remains off.
 
+
+## HTTP response recovered — 2026-11-07 15:59 UTC
+
+The availability check returned HTTP 200 after the two timeouts recorded at 15:44 UTC. Edge verification awaits the previously requested reconnection and confirmation. Authenticated NAS inventory, installation and full document validation remain unverified. Publication remains off.
+
