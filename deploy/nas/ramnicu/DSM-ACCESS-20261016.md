@@ -348,3 +348,8 @@ MCLENOVO native Windows execution as the current path. No transfer/build
 was resumed. Publication stays off and full annex validation is incomplete.
 The earlier request to confirm removal of the stale NAS heartbeat has
 not received a human response; automation remains active.
+
+## HTTP access interruption — 2026-11-07 15:44 UTC
+
+The preceding heartbeat returned HTTP 200. Two checks in this heartbeat failed with HTTP 000. The first connection timed out after 10.005 seconds. The confirmation attempt timed out after 25.013 seconds with zero bytes received. DSM availability is currently unverified. Edge verification still awaits the previously requested reconnection and confirmation following the automatic approval rejection. NAS installation and full document validation are incomplete. Publication remains off.
+
